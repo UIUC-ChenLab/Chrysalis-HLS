@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "temp[i][j+yoffset]=Sluma[x][y];",
+            "Faulty Code": "temp[i][j]=Sluma[x][y];"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=temp complete dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=temp cyclic dim=2"
+        }
+    ]
+}

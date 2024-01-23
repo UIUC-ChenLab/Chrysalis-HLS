@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "Sluma_cur[startx+i][starty+j]= Clip1y( rmbflag*rMb[i][j]+((G+h+b+sum+bitoff)>>bitoff) );",
+            "Faulty Code": "Sluma_cur[startx+i][starty+j]= Clip1y( rmbflag*rMb[i][j]+((G+h+b+sum+bitoff)>>32) );"
+        }
+    ]
+}

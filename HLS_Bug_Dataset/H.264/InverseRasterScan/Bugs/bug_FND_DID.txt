@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "return (a%(d/b))*b;",
+            "Faulty Code": "#pragma HLS array_partition variable=a factor=3 complete\nreturn (a%(d/b))*b;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "return (a/(d/b))*c;",
+            "Faulty Code": "#pragma HLS array_partition variable=d dim=2\nreturn (a/(d/b))*c;"
+        }
+    ]
+}

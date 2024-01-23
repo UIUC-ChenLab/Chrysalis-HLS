@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(k=0;k<4;k++)",
+            "Faulty Code": "for(k=0;k<3;k++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "temp[0][0] = (js2 + js0 + 4) >> 3;",
+            "Faulty Code": "temp[0][0] = 0;"
+        }
+    ]
+}

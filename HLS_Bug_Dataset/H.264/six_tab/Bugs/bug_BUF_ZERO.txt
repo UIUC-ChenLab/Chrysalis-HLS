@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "return a-5*b+20*c+20*d-5*e+f;",
+            "Faulty Code": "return a-5*b+20*c+20*d-5*f+f;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int six_tab(int a, int b, int c, int d, int e, int f)",
+            "Faulty Code": "int six_tab(int a, int b = 0, int c, int d, int e, int f)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i=0; i <4; i++)",
+            "Faulty Code": "for (i=0; i <=4; i++)"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "P_A = Sluma[startx][starty-1];",
+            "Faulty Code": "P_A = Sluma[startx+1][starty-1];"
+        }
+    ]
+}

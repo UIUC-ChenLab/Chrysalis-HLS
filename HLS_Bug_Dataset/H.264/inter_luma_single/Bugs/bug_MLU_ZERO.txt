@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(x=0;x<6;x++)",
+            "Faulty Code": "for(x=0;x<5;x++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "G=temp[i+2+xfrac/2][j+2+yfrac/2];",
+            "Faulty Code": "G=0;"
+        }
+    ]
+}

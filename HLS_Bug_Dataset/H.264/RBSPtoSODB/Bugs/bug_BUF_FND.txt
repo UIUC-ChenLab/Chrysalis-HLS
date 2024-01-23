@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "if( nalu->buf[len] & 0x01<<i)",
+            "Faulty Code": "if( nalu->buf[len - 1] & 0x01<<i)"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for(i=0;i<8;i++)",
+            "Faulty Code": "#pragma HLS array_partition variable=nalu->buf factor=3"
+        }
+    ]
+}

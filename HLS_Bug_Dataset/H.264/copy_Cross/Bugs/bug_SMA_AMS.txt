@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void copy_Cross(unsigned char Sluma[PicWidthInSamplesL][FrameHeightInSampleL], int xint, int yint,int xoffset, int yoffset,unsigned char temp[9][9])",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=Sluma"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void copy_Cross(unsigned char Sluma[PicWidthInSamplesL][FrameHeightInSampleL], int xint, int yint,int xoffset, int yoffset,unsigned char temp[9][9])",
+            "Faulty Code": "#pragma HLS INTERFACE s_axilite port=temp"
+        }
+    ]
+}

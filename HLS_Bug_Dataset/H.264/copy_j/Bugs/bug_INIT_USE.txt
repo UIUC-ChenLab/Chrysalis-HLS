@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int i,j;",
+            "Faulty Code": "int i,j=xint;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "temp[i][j]=Sluma[x][y];",
+            "Faulty Code": "temp[i][j]=(short)Sluma[x][y];"
+        }
+    ]
+}

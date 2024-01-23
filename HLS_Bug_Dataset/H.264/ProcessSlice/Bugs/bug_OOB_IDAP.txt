@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for(i=0;i<4;i++)",
+            "Faulty Code": "for(i=0;i<=4;i++)"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void inter_prediction_chroma_subblock_single(",
+            "Faulty Code": "void inter_prediction_chroma_subblock_single(#pragma HLS INTERFACE mode=ap_fifo port=mv)"
+        }
+    ]
+}

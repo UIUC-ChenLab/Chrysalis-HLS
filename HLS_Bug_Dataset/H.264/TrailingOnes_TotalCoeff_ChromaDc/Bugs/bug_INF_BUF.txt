@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(i=0;i<4;i++)",
+            "Faulty Code": "for(i=0;i<=4;i++)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "unsigned int *temp = (unsigned int*)&nalu->buf[offset / 8];",
+            "Faulty Code": "unsigned int *temp = (unsigned int*)&nalu->buf[(offset / 8) + 1];"
+        }
+    ]
+}

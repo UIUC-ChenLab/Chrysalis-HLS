@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "temp[i+xoffset][j]=Sluma[x][y];",
+            "Faulty Code": "temp[i][j]=Sluma[x][y];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "y=Clip3(0,FrameHeightInSampleL-1,yint-2+j+yoffset);",
+            "Faulty Code": "y=Clip3(0,FrameHeightInSampleL-1,yint-2+j-yoffset);"
+        }
+    ]
+}

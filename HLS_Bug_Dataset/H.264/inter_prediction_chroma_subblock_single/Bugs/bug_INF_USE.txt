@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(i=0;i<2;i++)",
+            "Faulty Code": "for(i=0;i<=2;i++)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "temp[x][y]=Schroma[x0][y0];",
+            "Faulty Code": "temp[x][y]=(char)Schroma[x0][y0];"
+        }
+    ]
+}

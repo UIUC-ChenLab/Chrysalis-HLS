@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "ret=u_e(nalu);",
+            "Faulty Code": "#pragma HLS dataflow\nret=u_e(nalu);"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "int s_e(NALU_t* nalu)",
+            "Faulty Code": "int s_e(NALU_t* nalu) {\n#pragma HLS interface mode=ap_fifo port=nalu\n"
+        }
+    ]
+}

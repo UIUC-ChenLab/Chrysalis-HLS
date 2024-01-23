@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int js1,js2,js3,js0; js0=0; js1=0; js2=0; js3=0;",
+            "Faulty Code": "int js1,js2,js3,js0;"
+        }
+    ]
+}

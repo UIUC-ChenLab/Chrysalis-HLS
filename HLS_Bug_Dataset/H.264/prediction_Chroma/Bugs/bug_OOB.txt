@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "h[i]=SChroma[startx-1][starty+i];",
+            "Faulty Code": "h[i]=SChroma[startx][starty+i];"
+        }
+    ]
+}

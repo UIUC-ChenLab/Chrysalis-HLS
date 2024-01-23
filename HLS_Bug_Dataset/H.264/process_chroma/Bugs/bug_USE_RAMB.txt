@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "x0=Clip3(0,PicWidthInSamplesC-1,startblkx+x+xint0+i*2);",
+            "Faulty Code": "x0=Clip3(0,PicWidthInSamplesC-1,startblkx+x+xint0+i*2) & 0xFF;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "Schroma_cur[startblkx+x+i*2][startblky+y+j*2]=Clip1y(flag*rMbC[x+i*2][y+j*2]+...",
+            "Faulty Code": "Schroma_cur[startblkx+rand()%4][startblky+rand()%4]=Clip1y(flag*rMbC[x+i*2][y+j*2]+..."
+        }
+    ]
+}

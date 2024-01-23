@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "int six_tab(int a, int b, int c, int d, int e, int f)\n{\n  return a-5*b+20*c+20*d-5*e+f;\n}",
+            "Faulty Code": "int six_tab(int a, int b, int c, int d, int e, int f)\n{\n  #pragma HLS pipeline\n  return a-5*b+20*c+20*d-5*e+f;\n}"
+        }
+    ]
+}

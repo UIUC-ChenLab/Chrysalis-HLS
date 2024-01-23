@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "temp[i][j]=Sluma[xint-2+i][yint-2+j];",
+            "Faulty Code": "temp[i][j]=Sluma[xint+2-i][yint+2-j];"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=temp complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=temp cyclic dim=1"
+        }
+    ]
+}

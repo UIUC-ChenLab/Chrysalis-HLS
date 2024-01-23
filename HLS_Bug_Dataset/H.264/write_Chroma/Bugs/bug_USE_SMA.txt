@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "SChroma[startx+i][starty+j]=Clip1y((skip==0)*rMb[i][j]+pred[i][j]);",
+            "Faulty Code": "SChroma[startx+i][starty+j]=Clip1y((skip==0)*rMb[i][j]+(char)pred[i][j]);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void write_Chroma(...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=SChroma bram"
+        }
+    ]
+}

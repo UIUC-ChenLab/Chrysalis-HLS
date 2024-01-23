@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned char i;",
+            "Faulty Code": "unsigned char i; // i is not initialized"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void RBSPtoSODB(NALU_t *nalu, int len)",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=nalu->buf"
+        }
+    ]
+}

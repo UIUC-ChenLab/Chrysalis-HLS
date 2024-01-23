@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=predL complete dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=predL complete dim=4"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void predict_intra16x16_luma_NonField(unsigned char predL[16][4][4], unsigned char Sluma[PicWidthInSamplesL][FrameHeightInSampleL] , ...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=predL bram"
+        }
+    ]
+}

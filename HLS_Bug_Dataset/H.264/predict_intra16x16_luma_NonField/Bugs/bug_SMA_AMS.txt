@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=predL complete dim=2",
+            "Faulty Code": "#pragma HLS INTERFACE port=predL bram"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "unsigned char Sluma[PicWidthInSamplesL][FrameHeightInSampleL]",
+            "Faulty Code": "#pragma HLS INTERFACE port=Sluma ap_none"
+        }
+    ]
+}

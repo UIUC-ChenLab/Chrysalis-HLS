@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=temp complete dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=temp complete dim=3"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void copy_H(unsigned char Sluma[PicWidthInSamplesL][FrameHeightInSampleL],int xint, int yint, int yoffset, unsigned char temp[9][9])",
+            "Faulty Code": "void copy_H(unsigned char Sluma[PicWidthInSamplesL][FrameHeightInSampleL],int xint, int yint, int yoffset, unsigned char temp[9][9]) #pragma HLS INTERFACE mode=burst port=Sluma"
+        }
+    ]
+}

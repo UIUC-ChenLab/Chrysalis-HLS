@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int i,j;",
+            "Faulty Code": "int i,j; // Assuming 'i' or 'j' is used before initialization"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "temp[i][j]=Sluma[xint-2+i][yint-2+j];",
+            "Faulty Code": "temp[i][j]=(int)Sluma[xint-2+i][yint-2+j]; // Assuming 'unsigned char' to 'int' sign extension"
+        }
+    ]
+}

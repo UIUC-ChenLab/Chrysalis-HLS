@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for(i=0;i<4;i++)",
+            "Faulty Code": "for(i=0;i<=4;i++)"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=mvCOL complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=mvCOL complete dim=0"
+        }
+    ]
+}

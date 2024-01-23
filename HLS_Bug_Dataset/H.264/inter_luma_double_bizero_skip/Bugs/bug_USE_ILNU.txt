@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "Sluma_cur[startx+i][starty+j]= Clip1y(rmbflag*rMb[i][j]+((Sluma0[x0][y0]+Sluma1[x1][y1]+1)>>1) );",
+            "Faulty Code": "Sluma_cur[startx+i][starty+j]= Clip1y((short)rmbflag*rMb[i][j]+((Sluma0[x0][y0]+Sluma1[x1][y1]+1)>>1) );"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for(i=0;i<4;i++)\n    for(j=0;j<4;j++)",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor(i=0;i<4;i++)\n    for(j=0;j<4;j++)"
+        }
+    ]
+}

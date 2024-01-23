@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "x=Clip3(0,PicWidthInSamplesL-1,xint-2+i);",
+            "Faulty Code": "x=Clip3(0,PicWidthInSamplesL-1,xint-2+i+xoffset);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=4"
+        }
+    ]
+}

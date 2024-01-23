@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(y=0;y<4;y++)",
+            "Faulty Code": "for(y=0;y<=4;y++)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "temp= (a+H*( (k%2)*4+i-3)+V*((k/2)*4+j-3)+16)>>5;",
+            "Faulty Code": "temp= a+H*((k%2)*4+i-3)+V*((k/2)*4+j-3)>>5;"
+        }
+    ]
+}

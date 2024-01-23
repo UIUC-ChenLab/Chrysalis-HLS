@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(x=0;x<6;x++)",
+            "Faulty Code": "for(x=0;x<5;x++) // Incorrect loop unrolling, missing one iteration"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=temp1 complete dim=2",
+            "Faulty Code": "#pragma HLS INTERFACE port=temp1 mode=s_axilite // Incorrect interface mapping for an array"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "temp3c=1<<(3-qPc/6);",
+            "Faulty Code": "temp3c=1<<(3-qPc%6);"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "int coeffDCC_0[4][2];",
+            "Faulty Code": "int coeffDCC_0[2][4];"
+        }
+    ]
+}

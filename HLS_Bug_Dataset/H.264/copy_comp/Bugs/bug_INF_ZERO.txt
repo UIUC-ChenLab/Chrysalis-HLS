@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(i=0;i<9;i++)",
+            "Faulty Code": "for(i=0;i<=9;i++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "x=Clip3(0,PicWidthInSamplesL-1,xint-2+i);",
+            "Faulty Code": "x=Clip3(0,PicWidthInSamplesL-1,xint-2+0);"
+        }
+    ]
+}

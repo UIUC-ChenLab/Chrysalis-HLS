@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "temp0[x+i][y+j]*inter_tab[x][y]",
+            "Faulty Code": "temp0[x+i+1][y+j]*inter_tab[x][y]"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(x=0;x<6;x++)",
+            "Faulty Code": "for(x=0;x<5;x++)"
+        }
+    ]
+}

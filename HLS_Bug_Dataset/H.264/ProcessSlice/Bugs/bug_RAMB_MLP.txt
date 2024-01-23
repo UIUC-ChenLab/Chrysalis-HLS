@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "if(refidx0[x][y]>=0 && refidx1[x][y]>=0)",
+            "Faulty Code": "if(refidx0[y][x]>=0 && refidx1[y][x]>=0)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for(y=0;y<2;y++)\n  for(x=0;x<2;x++)\n  {",
+            "Faulty Code": "for(y=0;y<2;y++)\n  #pragma HLS PIPELINE\n  for(x=0;x<2;x++)\n  {"
+        }
+    ]
+}

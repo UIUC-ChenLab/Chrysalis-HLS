@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if( nalu->buf[len] & 0x01<<i)",
+            "Faulty Code": "if( nalu->buf[len - 1] & 0x01<<i)"
+        }
+    ]
+}

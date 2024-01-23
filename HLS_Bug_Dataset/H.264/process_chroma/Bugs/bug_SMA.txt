@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void process_chroma(..., unsigned char predC_0[4][4][4], ...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=predC_0 bram"
+        }
+    ]
+}

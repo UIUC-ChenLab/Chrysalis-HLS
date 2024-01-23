@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "StorablePicture PIC[MAX_REFERENCE_PICTURES]",
+            "Faulty Code": "StorablePicture* PIC"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "unsigned char predC_0[4][4][4]",
+            "Faulty Code": "unsigned char* predC_0"
+        }
+    ]
+}

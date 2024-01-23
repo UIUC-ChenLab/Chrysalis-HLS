@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "predC[k][i][j]=v[ (k%2)*4+i];",
+            "Faulty Code": "predC[k][i][j]=v[ (k%2)*4+i+4];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "h[i]=SChroma[startx-1][starty+i];",
+            "Faulty Code": "h[i]=SChroma[startx][starty+i];"
+        }
+    ]
+}

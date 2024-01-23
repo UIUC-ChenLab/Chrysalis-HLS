@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "int offset = nalu->bit_offset;",
+            "Faulty Code": "#pragma HLS array_partition variable=nalu->bit_offset dim=1 complete"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "unsigned int *temp = (unsigned int*)&nalu->buf[offset / 8];",
+            "Faulty Code": "#pragma HLS interface port=temp mode=s_axilite"
+        }
+    ]
+}

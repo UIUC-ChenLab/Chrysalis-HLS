@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "unsigned int *temp = (unsigned int*)&nalu->buf[offset / 8];",
+            "Faulty Code": "unsigned int *temp = (unsigned int*)&nalu->buf[(offset / 8) + 4];"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "a = 0; b = 0; c = 0;",
+            "Faulty Code": "int a, b, c;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "y=Clip3(0,FrameHeightInSampleL-1,yint-2+j+yoffset);",
+            "Faulty Code": "y=Clip3(0,FrameHeightInSampleL-1,yint-2+j+(char)yoffset);"
+        }
+    ]
+}

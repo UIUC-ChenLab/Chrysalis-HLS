@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int ret;",
+            "Faulty Code": "int ret = 0;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "return -(ret+1)/2;",
+            "Faulty Code": "return -ret/2;"
+        }
+    ]
+}

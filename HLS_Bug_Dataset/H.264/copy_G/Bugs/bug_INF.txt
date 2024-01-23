@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(i=2;i<6;i++)\n  #pragma HLS UNROLL\n    for(j=2;j<6;j++)\n    {\n      #pragma HLS UNROLL\n      temp[i][j]=Sluma[xint-2+i][yint-2+j];\n    }",
+            "Faulty Code": "for(i=2;i!=6;i++)\n  #pragma HLS UNROLL\n    for(j=2;j!=6;j++)\n    {\n      #pragma HLS UNROLL\n      temp[i][j]=Sluma[xint-2+i][yint-2+j];\n    }"
+        }
+    ]
+}

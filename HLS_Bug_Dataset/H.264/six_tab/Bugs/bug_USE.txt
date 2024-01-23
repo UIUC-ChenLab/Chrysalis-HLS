@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "return a-5*b+20*c+20*d-5*e+f;",
+            "Faulty Code": "return a-(short)5*b+20*c+20*d-(short)5*e+f;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(j=0;j<4;j++)",
+            "Faulty Code": "for(j=0;j<3;j++) // mistakenly unrolled to only 3 iterations"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS UNROLL factor=2 // Incorrectly unrolling a loop that should be pipelined"
+        }
+    ]
+}

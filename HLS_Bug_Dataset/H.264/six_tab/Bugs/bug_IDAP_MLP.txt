@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "int six_tab(int a, int b, int c, int d, int e, int f)",
+            "Faulty Code": "#pragma HLS INTERFACE mode=s_axilite port=a bundle=control\nint six_tab(int a, int b, int c, int d, int e, int f)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "return a-5*b+20*c+20*d-5*e+f;",
+            "Faulty Code": "#pragma HLS PIPELINE\nreturn a-5*b+20*c+20*d-5*e+f;"
+        }
+    ]
+}

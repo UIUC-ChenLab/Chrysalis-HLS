@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "x=Clip3(0,PicWidthInSamplesL-1,xint-2+i);\ny=Clip3(0,FrameHeightInSampleL-1,yint-2+j);",
+            "Faulty Code": "x=Clip3(0,PicWidthInSamplesL,xint-2+i);\ny=Clip3(0,FrameHeightInSampleL,yint-2+j);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=coeffDCC_0 complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=coeffDCC_0 cyclic factor=3 dim=1"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=predC_0 complete dim=3",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=predC_0 complete dim=5"
+        }
+    ]
+}

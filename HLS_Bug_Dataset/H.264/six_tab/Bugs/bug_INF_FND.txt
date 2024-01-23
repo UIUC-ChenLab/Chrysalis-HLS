@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "int six_tab(int a, int b, int c, int d, int e, int f) { return a-5*b+20*c+20*d-5*e+f; }",
+            "Faulty Code": "int six_tab(int a, int b, int c, int d, int e, int f) { while(a) { return a-5*b+20*c+20*d-5*e+f; } }"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "int six_tab(int a, int b, int c, int d, int e, int f) { return a-5*b+20*c+20*d-5*e+f; }",
+            "Faulty Code": "#pragma HLS array_partition variable=a factor=2\nint six_tab(int a, int b, int c, int d, int e, int f) { return a-5*b+20*c+20*d-5*e+f; }"
+        }
+    ]
+}

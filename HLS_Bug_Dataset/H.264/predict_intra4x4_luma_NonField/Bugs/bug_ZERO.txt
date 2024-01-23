@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "s0 = (P_A + P_B + P_C + P_D + 2)>>2;",
+            "Faulty Code": "s0 = 0;"
+        }
+    ]
+}

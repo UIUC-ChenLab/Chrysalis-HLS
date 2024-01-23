@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(j=0;j<4;j++)",
+            "Faulty Code": "for(j=0;;j++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "((Sluma0[x0][y0]+Sluma1[x1][y1]+1)>>1)",
+            "Faulty Code": "((Sluma0[x0][y0]+Sluma1[x1][y1])>>1)"
+        }
+    ]
+}

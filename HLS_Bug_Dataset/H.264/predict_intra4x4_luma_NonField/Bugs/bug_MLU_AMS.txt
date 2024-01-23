@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i=0; i <4; i++)",
+            "Faulty Code": "for (i=0; i <3; i++)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=predL complete dim=2",
+            "Faulty Code": "#pragma HLS INTERFACE port=predL"
+        }
+    ]
+}

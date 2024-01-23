@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "Sluma_cur[startx+i][starty+j]= Clip1y(rmbflag*rMb[i][j]+((Sluma0[x0][y0]+Sluma1[x1][y1]+1)>>1) );",
+            "Faulty Code": "Sluma_cur[startx+i][starty+j]= Clip1y((int)rmbflag*(int)rMb[i][j]+((Sluma0[x0][y0]+Sluma1[x1][y1]+1)>>1) );"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=rMb complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=rMb cyclic dim=1"
+        }
+    ]
+}

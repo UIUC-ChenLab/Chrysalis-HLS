@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=predL4x4 complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=predL4x4 complete dim=3"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "for(i=0;i<4;i++)\n      #pragma HLS PIPELINE"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=lentabDC factor=3"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "unsigned int temp0 = bytes_reverse_32(*temp);",
+            "Faulty Code": "unsigned int temp0 = bytes_reverse_32(temp[i]);"
+        }
+    ]
+}

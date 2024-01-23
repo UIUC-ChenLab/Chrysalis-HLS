@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned char avaimode;",
+            "Faulty Code": "unsigned char avaimode; // avaimode is used uninitialized in the following condition: avaimode=( (mbaddrx*4+x)>0)*2+((mbaddry*4+y)>0);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=predL4x4 complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=predL4x4 complete dim=2"
+        }
+    ]
+}

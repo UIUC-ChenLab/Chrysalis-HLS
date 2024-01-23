@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "Schroma[x0][y0]",
+            "Faulty Code": "Schroma[x0+1][y0]"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=temp complete dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=temp complete dim=3"
+        }
+    ]
+}

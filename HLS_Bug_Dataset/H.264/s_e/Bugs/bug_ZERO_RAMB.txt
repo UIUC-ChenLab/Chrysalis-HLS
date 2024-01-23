@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int ret;",
+            "Faulty Code": "int ret = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "ret=u_e(nalu);",
+            "Faulty Code": "#pragma HLS interface m_axi port=nalu->buf offset=slave\nret=u_e(nalu);"
+        }
+    ]
+}

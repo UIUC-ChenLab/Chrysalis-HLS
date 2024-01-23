@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "unsigned char SChroma[PicWidthInSamplesC][FrameHeightInSampleC]",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=SChroma"
+        }
+    ]
+}

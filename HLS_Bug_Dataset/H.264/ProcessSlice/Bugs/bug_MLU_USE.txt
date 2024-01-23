@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "temp3c=1<<(3-qPc/6);",
+            "Faulty Code": "temp3c=1<<(3-qPc);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "temp2c=4-qPc/6;",
+            "Faulty Code": "temp2c=4-qPc>>6;"
+        }
+    ]
+}

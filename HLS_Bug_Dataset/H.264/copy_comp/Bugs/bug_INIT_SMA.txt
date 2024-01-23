@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int x,y;",
+            "Faulty Code": "int x,y=0;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=temp complete dim=1",
+            "Faulty Code": "#pragma HLS INTERFACE port=temp bram"
+        }
+    ]
+}

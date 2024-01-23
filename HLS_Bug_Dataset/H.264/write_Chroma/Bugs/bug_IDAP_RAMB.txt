@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE rewind",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=SChroma"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "SChroma[startx+i][starty+j]=Clip1y((skip==0)*rMb[i][j]+pred[i][j]);",
+            "Faulty Code": "#pragma HLS INTERFACE mode=m_axi port=SChroma offset=slave"
+        }
+    ]
+}

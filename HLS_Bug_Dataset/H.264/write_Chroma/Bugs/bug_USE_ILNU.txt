@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned char pred[4][4]",
+            "Faulty Code": "signed char pred[4][4]"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE rewind",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        }
+    ]
+}

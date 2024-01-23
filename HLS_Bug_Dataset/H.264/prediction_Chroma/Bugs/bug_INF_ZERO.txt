@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(i=0;i<8;i++)",
+            "Faulty Code": "for(i=0;;i++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "temp[0][0] = (js2 + js0 + 4) >> 3;",
+            "Faulty Code": "temp[0][0] = 0;"
+        }
+    ]
+}

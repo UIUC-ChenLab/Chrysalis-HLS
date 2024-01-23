@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int InverseRasterScan(int a, int b, int c, int d, int e)\n{\n  ...",
+            "Faulty Code": "int InverseRasterScan(int a, int b, int c, int d)\n{\n  int e; // Uninitialized variable\n  ..."
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "return (a/(d/b))*c;",
+            "Faulty Code": "while(1) { return (a/(d/b))*c; } // Infinite loop"
+        }
+    ]
+}

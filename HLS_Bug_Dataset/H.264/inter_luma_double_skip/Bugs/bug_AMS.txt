@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "unsigned char Sluma_cur[PicWidthInSamplesL][FrameHeightInSampleL],",
+            "Faulty Code": "#pragma HLS INTERFACE port=Sluma_cur mode=ap_none"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "temp[i][j]=Sluma[x][y];",
+            "Faulty Code": "temp[j][i]=Sluma[x][y];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=temp complete dim=1",
+            "Faulty Code": "#pragma HLS INTERFACE port=temp ap_none"
+        }
+    ]
+}

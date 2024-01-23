@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "sum0=(sum0+512)>>10;",
+            "Faulty Code": "sum0=((int)sum0+512)>>10;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=temp1 complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=temp1 complete dim=3"
+        }
+    ]
+}

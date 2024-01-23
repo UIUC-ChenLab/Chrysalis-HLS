@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(i=0;i<4;i++)",
+            "Faulty Code": "for(i=0;;i++)"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "Sluma_cur[startx+i][starty+j]=   Clip1y(rmbflag*rMb[i][j]+( ( ((G0+h0+b0+sum0+bitoff0)>>bitoff0)+ ((G1+h1+b1+sum1+bitoff1)>>bitoff1)+1)>>1 )   );",
+            "Faulty Code": "Sluma_cur[startx+i*2][starty+j*2]=   Clip1y(rmbflag*rMb[i][j]+( ( ((G0+h0+b0+sum0+bitoff0)>>bitoff0)+ ((G1+h1+b1+sum1+bitoff1)>>bitoff1)+1)>>1 )   );"
+        }
+    ]
+}

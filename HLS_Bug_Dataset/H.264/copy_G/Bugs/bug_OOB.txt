@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "temp[i][j]=Sluma[xint-2+i][yint-2+j];",
+            "Faulty Code": "temp[i][j]=Sluma[xint-4+i][yint-4+j];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(x=0;x<6;x++)",
+            "Faulty Code": "for(x=0;x<5;x++) // Accidentally unrolled one iteration less"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "//#pragma HLS PIPELINE // Incorrectly commented out or missing pragma"
+        }
+    ]
+}

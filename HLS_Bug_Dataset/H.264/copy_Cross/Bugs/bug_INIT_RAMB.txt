@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned char temp[9][9]",
+            "Faulty Code": "unsigned char temp[9][9]; // temp is not initialized"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "temp[i][j]=Sluma[x][y];",
+            "Faulty Code": "temp[i][j]=Sluma[y][x]; // Incorrect indexing leading to non-consecutive memory access"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=predL complete dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=predL cyclic factor=3 dim=2"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "P_A = Sluma[startx][starty-1];",
+            "Faulty Code": "P_A = Sluma[starty-1][startx];"
+        }
+    ]
+}

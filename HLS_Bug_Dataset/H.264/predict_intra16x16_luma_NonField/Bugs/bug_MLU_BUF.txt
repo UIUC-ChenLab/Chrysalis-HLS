@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "H=v[8]-v[6]+2*(v[9]-v[5])+3*(v[10]-v[4])+4*(v[11]-v[3])+5*(v[12]-v[2])+6*(v[13]-v[1])+7*(v[14]-v[0])+8*(v[15]-X);",
+            "Faulty Code": "H=v[8]-v[7]+2*(v[9]-v[6])+3*(v[10]-v[5])+4*(v[11]-v[4])+5*(v[12]-v[3])+6*(v[13]-v[2])+7*(v[14]-v[1])+8*(v[15]-X);"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "h[i]=Sluma[startx-1][starty+i];",
+            "Faulty Code": "h[i]=Sluma[startx][starty+i];"
+        }
+    ]
+}

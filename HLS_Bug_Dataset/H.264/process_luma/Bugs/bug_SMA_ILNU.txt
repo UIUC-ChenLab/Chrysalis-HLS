@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=coeffACL complete dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=coeffACL complete dim=2 port=coeffACL_bram"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for(i=0;i<4;i++)",
+            "Faulty Code": "#pragma HLS UNROLL\nfor(i=0;i<4;i++)"
+        }
+    ]
+}

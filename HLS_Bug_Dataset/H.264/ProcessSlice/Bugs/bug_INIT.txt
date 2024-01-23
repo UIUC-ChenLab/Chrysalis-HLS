@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned char MbSkipFlag=0;",
+            "Faulty Code": "unsigned char MbSkipFlag;"
+        }
+    ]
+}

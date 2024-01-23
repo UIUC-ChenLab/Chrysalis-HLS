@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(mbaddry=0;mbaddry<FrameHeightInMbs;mbaddry++)",
+            "Faulty Code": "for(mbaddry=0;mbaddry<=FrameHeightInMbs;mbaddry++)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "temp3c=1<<(3-qPc/6);",
+            "Faulty Code": "temp3c=1<<(3-qPc%6);"
+        }
+    ]
+}

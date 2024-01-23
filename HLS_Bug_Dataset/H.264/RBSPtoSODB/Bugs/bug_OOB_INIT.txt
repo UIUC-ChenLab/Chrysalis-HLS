@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if( nalu->buf[len] & 0x01<<i)",
+            "Faulty Code": "if( nalu->buf[len-1] & 0x01<<i)"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned char i;",
+            "Faulty Code": "unsigned char i = 10;"
+        }
+    ]
+}

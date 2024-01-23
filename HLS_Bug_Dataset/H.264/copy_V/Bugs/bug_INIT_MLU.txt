@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int i,j;",
+            "Faulty Code": "int i,j=xoffset;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(i=2;i<6;i++)",
+            "Faulty Code": "for(i=2;i<=6;i++)"
+        }
+    ]
+}

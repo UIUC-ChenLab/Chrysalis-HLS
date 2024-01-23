@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned char rmbflag",
+            "Faulty Code": "unsigned char rmbflag;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "unsigned char Sluma_cur[PicWidthInSamplesL][FrameHeightInSampleL]",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=Sluma_cur"
+        }
+    ]
+}

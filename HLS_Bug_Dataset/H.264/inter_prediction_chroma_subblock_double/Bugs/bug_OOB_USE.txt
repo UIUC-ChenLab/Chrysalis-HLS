@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "temp0[x][y]=Schroma0[x0][y0];",
+            "Faulty Code": "temp0[x+1][y]=Schroma0[x0][y0];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "Schroma_cur[startblkx+x+i*2][startblky+y+j*2]=Clip1y(flag*rMbC[x+i*2][y+j*2]+ ...",
+            "Faulty Code": "Schroma_cur[startblkx+x+i*2][startblky+y+j*2]=Clip1y((signed char)flag*rMbC[x+i*2][y+j*2]+ ..."
+        }
+    ]
+}

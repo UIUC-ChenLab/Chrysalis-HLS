@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "skip*rMb[i][j]+pred[i][j]",
+            "Faulty Code": "skip*(rMb[i][j]+pred[i][j])"
+        }
+    ]
+}

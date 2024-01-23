@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "temp[i+xoffset][j]=Sluma[x][y];",
+            "Faulty Code": "temp[i][j]=Sluma[x][y];"
+        }
+    ]
+}

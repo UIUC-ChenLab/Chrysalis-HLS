@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "P_A = Sluma[startx][starty-1];",
+            "Faulty Code": "P_A = Sluma[startx][starty];"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (j=0; j < 4; j++)",
+            "Faulty Code": "for (j=0; j <= 4; j++)"
+        }
+    ]
+}

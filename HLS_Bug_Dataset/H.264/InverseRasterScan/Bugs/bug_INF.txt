@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "int InverseRasterScan(int a, int b, int c, int d, int e)\n{\n  if(e==0)\n  {\n    return (a%(d/b))*b;\n  }\n  else\n  {\n    return (a/(d/b))*c;\n  }\n  return 0;\n}",
+            "Faulty Code": "int InverseRasterScan(int a, int b, int c, int d, int e)\n{\n  while(e==0)\n  {\n    return (a%(d/b))*b;\n  }\n  while(true)\n  {\n    return (a/(d/b))*c;\n  }\n  return 0;\n}"
+        }
+    ]
+}

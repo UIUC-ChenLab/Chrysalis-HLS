@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if(yfrac0>0 && xfrac0!=2)",
+            "Faulty Code": "if(yfrac0>0 && xfrac0>2)"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for(i=0;i<4;i++)",
+            "Faulty Code": "for(i=0;i<=4;i++)"
+        }
+    ]
+}

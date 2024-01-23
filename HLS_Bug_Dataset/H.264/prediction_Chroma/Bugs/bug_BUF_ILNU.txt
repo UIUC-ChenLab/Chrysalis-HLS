@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "predC[k][i][j]=h[ (k/2)*4+j];",
+            "Faulty Code": "predC[k][i][j]=h[ (k%2)*4+j];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for(i=0;i<2;i++)\n#pragma HLS PIPELINE\nfor(j=0;j<2;j++)\nfor(x=0;x<4;x++)\nfor(y=0;y<4;y++)\n{\npredC[j+i*2][x][y]=temp[i][j];\n}",
+            "Faulty Code": "for(i=0;i<2;i++)\n#pragma HLS UNROLL\nfor(j=0;j<2;j++)\nfor(x=0;x<4;x++)\nfor(y=0;y<4;y++)\n{\npredC[j+i*2][x][y]=temp[i][j];\n}"
+        }
+    ]
+}

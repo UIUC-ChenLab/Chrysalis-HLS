@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int x,y;",
+            "Faulty Code": "signed char x,y;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=temp complete dim=1",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=Sluma offset=slave bundle=gmem0"
+        }
+    ]
+}

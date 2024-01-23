@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(i=0;i<4;i++)",
+            "Faulty Code": "for(i=0;;i++)"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "unsigned int temp0 = bytes_reverse_32(*temp);",
+            "Faulty Code": "unsigned int temp0 = bytes_reverse_32(temp[offset / 8]);"
+        }
+    ]
+}

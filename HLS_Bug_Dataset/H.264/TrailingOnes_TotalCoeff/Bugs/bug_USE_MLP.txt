@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "*TotalCoeff= (cod >>2)+1;",
+            "Faulty Code": "*TotalCoeff= ((signed char)cod >>2)+1;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for(j=0;j<4;j++)",
+            "Faulty Code": "#pragma HLS PIPELINE"
+        }
+    ]
+}

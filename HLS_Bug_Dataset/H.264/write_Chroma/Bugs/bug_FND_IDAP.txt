@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE rewind",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=SChroma factor=3 dim=2"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pred complete dim=1",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=pred"
+        }
+    ]
+}

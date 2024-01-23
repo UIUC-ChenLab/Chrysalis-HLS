@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void RBSPtoSODB(NALU_t *nalu, int len)",
+            "Faulty Code": "#pragma HLS dataflow\nvoid RBSPtoSODB(NALU_t *nalu, int len)"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void RBSPtoSODB(NALU_t *nalu, int len)",
+            "Faulty Code": "#pragma HLS INTERFACE port=nalu bram\nvoid RBSPtoSODB(NALU_t *nalu, int len)"
+        }
+    ]
+}

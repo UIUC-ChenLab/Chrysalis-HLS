@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "temp[0][0] = (js2 + js0 + 4) >> 3;",
+            "Faulty Code": "temp[0][0] = (js2 + js0) >> 3;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for(i=0;i<8;i++) \n      #pragma HLS UNROLL\n      v[i]=SChroma[startx+i][starty-1];",
+            "Faulty Code": "for(i=0;i<8;i+=2) \n      #pragma HLS UNROLL\n      v[i]=SChroma[startx+i][starty-1];"
+        }
+    ]
+}

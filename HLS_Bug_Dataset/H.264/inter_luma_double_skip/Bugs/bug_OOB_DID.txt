@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "temp0[i+2+xoffset0][j+5]",
+            "Faulty Code": "temp0[i+2+xoffset0][j+6]"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=rMb complete dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=rMb complete dim=3"
+        }
+    ]
+}

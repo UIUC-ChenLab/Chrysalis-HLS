@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "Schroma_cur[startblkx+x+i*2][startblky+y+j*2]",
+            "Faulty Code": "Schroma_cur[startblkx+x+i][startblky+y+j]"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "Schroma0[x0][y0]",
+            "Faulty Code": "Schroma0[x0+1][y0]"
+        }
+    ]
+}

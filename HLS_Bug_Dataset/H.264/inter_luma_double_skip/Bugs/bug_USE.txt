@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "sum0=(sum0+512)>>10;",
+            "Faulty Code": "sum0=(sum0+512)>>10"
+        }
+    ]
+}

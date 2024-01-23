@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "h[i]=SChroma[startx-1][starty+i];",
+            "Faulty Code": "h[i]=SChroma[startx][starty+i];"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "js0=0;",
+            "Faulty Code": "int js0;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "for(i=0;i<9;i++)",
+            "Faulty Code": "for(i=0;i<9;i++) // Missing initialization for i"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "temp[i][j]=Sluma[x][y];",
+            "Faulty Code": "temp[i][j]=Sluma[y][x]; // Incorrect index order for Sluma, leading to IDAP issue"
+        }
+    ]
+}

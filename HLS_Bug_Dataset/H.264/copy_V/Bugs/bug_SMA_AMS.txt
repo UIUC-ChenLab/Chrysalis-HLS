@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=temp complete dim=1",
+            "Faulty Code": "#pragma HLS INTERFACE port=temp bram"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void copy_V(unsigned char Sluma[PicWidthInSamplesL][FrameHeightInSampleL],int xint, int yint, int xoffset, unsigned char temp[9][9])",
+            "Faulty Code": "#pragma HLS INTERFACE port=xint ap_none"
+        }
+    ]
+}

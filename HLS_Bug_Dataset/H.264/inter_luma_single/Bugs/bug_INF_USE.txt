@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(i=0;i<4;i++)",
+            "Faulty Code": "for(i=0;i<=4;i++)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "rmbflag*rMb[i][j]",
+            "Faulty Code": "(signed char)rmbflag*rMb[i][j]"
+        }
+    ]
+}

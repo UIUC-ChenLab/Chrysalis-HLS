@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=lentabDC factor=3"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (j=0;j<5;j++)",
+            "Faulty Code": "#pragma HLS unroll factor=3"
+        }
+    ]
+}

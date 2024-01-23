@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=rMb complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=rMb cyclic dim=1"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for(j=0;j<4;j++)",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor(j=0;j<4;j++)"
+        }
+    ]
+}

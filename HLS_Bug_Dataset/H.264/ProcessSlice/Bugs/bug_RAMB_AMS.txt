@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for(i=0;i<4;i++)",
+            "Faulty Code": "for(i=0;i<2;i++)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "unsigned char predC_0[4][4][4];",
+            "Faulty Code": "unsigned char predC_0[2][2][2];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "write_Chroma(predC_0[x+y*2],rMbC_0[x][y],PIC[img->mem_idx].SChroma_0,(mbaddrx*2+x)*4,(mbaddry*2+y)*4,tmpImode==INTERSKIP );",
+            "Faulty Code": "write_Chroma(predC_0[x+y*2],rMbC_1[x][y],PIC[img->mem_idx].SChroma_0,(mbaddrx*2+x)*4,(mbaddry*2+y)*4,tmpImode==INTERSKIP );"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for(i=0;i<4;i++)\n    for(j=0;j<4;j++)",
+            "Faulty Code": "for(i=0;i<2;i++)\n    for(j=0;j<2;j++)"
+        }
+    ]
+}

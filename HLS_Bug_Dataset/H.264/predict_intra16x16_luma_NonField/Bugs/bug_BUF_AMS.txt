@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "h[i]=Sluma[startx-1][starty+i];",
+            "Faulty Code": "h[i]=Sluma[startx][starty+i];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=h dim=1 complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=h ap_none"
+        }
+    ]
+}

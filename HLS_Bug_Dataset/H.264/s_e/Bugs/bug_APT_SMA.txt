@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "int s_e(NALU_t* nalu)",
+            "Faulty Code": "#pragma HLS array_partition variable=nalu type=complete"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int s_e(NALU_t* nalu)",
+            "Faulty Code": "#pragma HLS interface port=nalu"
+        }
+    ]
+}

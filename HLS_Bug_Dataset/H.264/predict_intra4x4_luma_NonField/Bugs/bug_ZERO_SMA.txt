@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "s0 = (P_A + P_B + P_C + P_D + 2)>>2;",
+            "Faulty Code": "s0 = 0;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=predL complete dim=1",
+            "Faulty Code": "#pragma HLS INTERFACE port=predL bram"
+        }
+    ]
+}

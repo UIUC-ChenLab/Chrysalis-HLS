@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "for (j=0;j<5;j++)\n    {\n      #pragma HLS PIPELINE\n      len=lentabDC[i][j];\n      cod=codtabDC[i][j];\n      unsigned char test = (showbits(len,temp0,offset)==cod);\n      a += j * test;\n      b += i * test;\n      c += len * test;\n\n    }"
+        }
+    ]
+}

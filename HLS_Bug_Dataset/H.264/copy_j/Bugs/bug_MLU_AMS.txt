@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "// #pragma HLS UNROLL"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void copy_j(unsigned char Sluma[PicWidthInSamplesL][FrameHeightInSampleL], int xint, int yint, unsigned char temp[9][9])",
+            "Faulty Code": "void copy_j(unsigned char Sluma[PicWidthInSamplesL][FrameHeightInSampleL], int xint, int yint, unsigned char temp[9])"
+        }
+    ]
+}

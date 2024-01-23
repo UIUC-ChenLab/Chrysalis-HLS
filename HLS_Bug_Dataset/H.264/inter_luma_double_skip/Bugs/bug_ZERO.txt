@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "G0=temp0[i+2+xfrac0/2][j+2+yfrac0/2];",
+            "Faulty Code": "G0=0;"
+        }
+    ]
+}

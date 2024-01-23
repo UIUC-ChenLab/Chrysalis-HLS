@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=predC complete dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=predC complete dim=4"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE\n        for(i=0;i<4;i++)\n          for(j=0;j<4;j++)",
+            "Faulty Code": "#pragma HLS UNROLL\n        for(i=0;i<4;i++)\n          for(j=0;j<4;j++)"
+        }
+    ]
+}

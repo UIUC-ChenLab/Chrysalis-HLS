@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "nalu->bit_length=len*8+7-i;",
+            "Faulty Code": "#pragma HLS dataflow\nnalu->bit_length=len*8+7-i;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void RBSPtoSODB(NALU_t *nalu, int len)",
+            "Faulty Code": "void RBSPtoSODB(NALU_t *nalu, int len)\n#pragma HLS INTERFACE mode=ap_fifo port=nalu"
+        }
+    ]
+}

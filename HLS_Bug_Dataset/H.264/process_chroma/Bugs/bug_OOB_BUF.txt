@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "SChroma[startx+i][starty+j]=Clip1y((skip==0)*rMb[i][j]+pred[i][j]);",
+            "Faulty Code": "SChroma[startx+i+1][starty+j]=Clip1y((skip==0)*rMb[i][j]+pred[i][j]);"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "write_Chroma(predC_0[x+y*2],rMbC_0[x][y],PIC[img->mem_idx].SChroma_0,(mbaddrx*2+x)*4,(mbaddry*2+y)*4,tmpImode==INTERSKIP );",
+            "Faulty Code": "write_Chroma(predC_1[x+y*2],rMbC_0[x][y],PIC[img->mem_idx].SChroma_0,(mbaddrx*2+x)*4,(mbaddry*2+y)*4,tmpImode==INTERSKIP );"
+        }
+    ]
+}

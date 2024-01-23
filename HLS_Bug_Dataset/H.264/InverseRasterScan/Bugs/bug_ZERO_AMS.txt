@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "return (a/(d/b))*c;",
+            "Faulty Code": "return 0;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "int InverseRasterScan(int a, int b, int c, int d, int e)",
+            "Faulty Code": "#pragma HLS INTERFACE port=e mode=s_axilite\nint InverseRasterScan(int a, int b, int c, int d, int e)"
+        }
+    ]
+}

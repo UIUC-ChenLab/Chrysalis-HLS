@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "xint0=mv0[i][j][0]>>3;\nyint0=mv0[i][j][1]>>3;\nxfrac0=(mv0[i][j][0]&0x07);\nyfrac0=(mv0[i][j][1]&0x07);",
+            "Faulty Code": "xint0=mv0[i][j][0]>>4;\nyint0=mv0[i][j][1]>>4;\nxfrac0=(mv0[i][j][0]&0x0F);\nyfrac0=(mv0[i][j][1]&0x0F);"
+        }
+    ]
+}

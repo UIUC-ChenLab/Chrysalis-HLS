@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "return (a/(d/b))*c;",
+            "Faulty Code": "while(1){ return (a/(d/b))*c; }"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "if(e==0)",
+            "Faulty Code": "#pragma HLS pipeline\nif(e==0)"
+        }
+    ]
+}

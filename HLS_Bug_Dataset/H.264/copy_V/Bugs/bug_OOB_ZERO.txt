@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "temp[i+xoffset][j]=Sluma[x][y];",
+            "Faulty Code": "temp[i][j]=Sluma[x][y];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "for(i=2;i<6;i++)",
+            "Faulty Code": "for(i=0;i<6;i++)"
+        }
+    ]
+}

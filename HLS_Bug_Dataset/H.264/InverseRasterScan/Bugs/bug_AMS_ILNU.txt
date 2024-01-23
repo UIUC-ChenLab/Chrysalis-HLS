@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "int InverseRasterScan(int a, int b, int c, int d, int e)",
+            "Faulty Code": "#pragma HLS INTERFACE port=a ap_none int InverseRasterScan(int a, int b, int c, int d, int e)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "return (a/(d/b))*c;",
+            "Faulty Code": "#pragma HLS unroll factor=4 return (a/(d/b))*c;"
+        }
+    ]
+}

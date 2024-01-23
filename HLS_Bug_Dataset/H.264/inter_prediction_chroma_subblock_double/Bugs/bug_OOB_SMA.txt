@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "temp0[x][y]=Schroma0[x0][y0];",
+            "Faulty Code": "temp0[x+1][y]=Schroma0[x0][y0];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=mv1 complete dim=1",
+            "Faulty Code": "#pragma HLS INTERFACE port=mv1 bram"
+        }
+    ]
+}

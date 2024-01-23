@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(j=2;j<6;j++)",
+            "Faulty Code": "for(j=2;j<=6;j++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "y=Clip3(0,FrameHeightInSampleL-1,yint-2+j+yoffset);",
+            "Faulty Code": "y=Clip3(0,FrameHeightInSampleL-1,yint-2+j);"
+        }
+    ]
+}

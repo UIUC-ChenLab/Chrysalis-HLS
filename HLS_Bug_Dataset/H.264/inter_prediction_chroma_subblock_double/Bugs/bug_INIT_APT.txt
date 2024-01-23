@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned char temp0[3][3];\n#pragma HLS ARRAY_PARTITION variable=temp0 complete dim=1\n#pragma HLS ARRAY_PARTITION variable=temp0 complete dim=2",
+            "Faulty Code": "unsigned char temp0[3][3];\n// Missing HLS pragmas, potentially leading to unpartitioned array which can cause suboptimal synthesis results."
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=mv0 complete dim=1\n#pragma HLS ARRAY_PARTITION variable=mv0 complete dim=2\n#pragma HLS ARRAY_PARTITION variable=mv0 complete dim=3",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=mv0 type=cyclic dim=1\n#pragma HLS ARRAY_PARTITION variable=mv0 type=cyclic dim=2\n#pragma HLS ARRAY_PARTITION variable=mv0 type=cyclic dim=3\n// Incorrect 'type' specified, should be 'complete' instead of 'cyclic'."
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=rMb complete dim=2",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for(j=0;j<4;j++)",
+            "Faulty Code": "#pragma HLS unroll factor=2\n    for(j=0;j<4;j++)"
+        }
+    ]
+}

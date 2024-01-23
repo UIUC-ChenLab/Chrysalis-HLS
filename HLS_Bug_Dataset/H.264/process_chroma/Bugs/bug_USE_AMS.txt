@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "x0=Clip3(0,PicWidthInSamplesC-1,startblkx+x+xint0+i*2);",
+            "Faulty Code": "x0=Clip3(0,PicWidthInSamplesC,startblkx+x+xint0+i*2);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS PIPELINE rewind",
+            "Faulty Code": "#pragma HLS INTERFACE port=Schroma mode=s_axilite"
+        }
+    ]
+}

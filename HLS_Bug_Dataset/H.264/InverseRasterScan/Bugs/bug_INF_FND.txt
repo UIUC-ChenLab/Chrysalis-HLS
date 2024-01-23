@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if(e==0)",
+            "Faulty Code": "while(e==0)"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "return (a/(d/b))*c;",
+            "Faulty Code": "#pragma HLS array_partition variable=a factor=c complete"
+        }
+    ]
+}

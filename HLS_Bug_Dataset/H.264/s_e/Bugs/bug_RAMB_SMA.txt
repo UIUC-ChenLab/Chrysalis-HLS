@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "int s_e(NALU_t* nalu) {",
+            "Faulty Code": "#pragma HLS interface port=nalu mode=ap_memory int s_e(NALU_t* nalu) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "ret=u_e(nalu);",
+            "Faulty Code": "ret=u_e(&nalu[i]); // Assuming i is some index variable"
+        }
+    ]
+}

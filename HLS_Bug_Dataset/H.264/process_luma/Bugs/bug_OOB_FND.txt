@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "Sluma[startx+i][starty+j]=Clip1y( skip*rMb[i][j]+pred[i][j]);",
+            "Faulty Code": "Sluma[startx+i*2][starty+j*2]=Clip1y( skip*rMb[i][j]+pred[i][j]);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=predL complete dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=predL factor=3 dim=2"
+        }
+    ]
+}

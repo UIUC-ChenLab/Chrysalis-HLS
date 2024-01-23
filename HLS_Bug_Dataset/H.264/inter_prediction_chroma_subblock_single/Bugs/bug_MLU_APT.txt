@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(x=0;x<3;x++)",
+            "Faulty Code": "for(x=0;x<2;x++)"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=mv complete dim=3",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=mv cyclic dim=3"
+        }
+    ]
+}

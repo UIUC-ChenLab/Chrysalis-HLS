@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "temp[i][j]=Sluma[x][y];",
+            "Faulty Code": "temp[i+1][j+1]=Sluma[x][y]; // In function copy_j"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE // Incorrectly nested inside another #pragma HLS PIPELINE in function inter_luma_double_bizero_skip"
+        }
+    ]
+}

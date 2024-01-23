@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(x=0;x<6;x++)",
+            "Faulty Code": "for(x=0;x<5;x++)"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=temp1 complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=temp1 complete dim=3"
+        }
+    ]
+}

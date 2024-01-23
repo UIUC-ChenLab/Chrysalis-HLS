@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "SChroma[startx+i][starty+j]=Clip1y((skip==0)*rMb[i][j]+pred[i][j]);",
+            "Faulty Code": "SChroma[startx+i+1][starty+j]=Clip1y((skip==0)*rMb[i][j]+pred[i][j]);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE rewind",
+            "Faulty Code": "#pragma HLS PIPELINE"
+        }
+    ]
+}

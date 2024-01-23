@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "temp[i][j]=Sluma[xint-2+i][yint-2+j];",
+            "Faulty Code": "temp[i][j]=Sluma[xint+i][yint+j];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "temp[i][j]=Sluma[xint-2+i][yint-2+j];",
+            "Faulty Code": "temp[i][j]=Sluma[(short)xint-2+i][(short)yint-2+j];"
+        }
+    ]
+}

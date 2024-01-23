@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "SChroma[startx+i][starty+j]=Clip1y((skip==0)*rMb[i][j]+pred[i][j]);",
+            "Faulty Code": "SChroma[startx+i][starty+j]=Clip1y((skip==0)*((unsigned char)rMb[i][j])+pred[i][j]);"
+        }
+    ]
+}

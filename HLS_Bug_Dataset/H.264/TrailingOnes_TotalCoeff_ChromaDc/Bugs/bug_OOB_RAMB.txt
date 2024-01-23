@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "unsigned int *temp = (unsigned int*)&nalu->buf[offset / 8];",
+            "Faulty Code": "unsigned int *temp = (unsigned int*)&nalu->buf[offset / 8 + 1];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "unsigned int temp0 = bytes_reverse_32(*temp);",
+            "Faulty Code": "unsigned int temp0 = bytes_reverse_32(temp[i]);"
+        }
+    ]
+}

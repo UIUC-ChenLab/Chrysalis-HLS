@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(mbaddry=0;mbaddry<FrameHeightInMbs;mbaddry++)",
+            "Faulty Code": "for(mbaddry=0;mbaddry<=FrameHeightInMbs;mbaddry++)"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=mvCOL complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=mvCOL type=complete dim=1"
+        }
+    ]
+}

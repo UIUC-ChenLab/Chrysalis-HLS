@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if(ret % 2)",
+            "Faulty Code": "if((ret+1) % 2)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int ret;",
+            "Faulty Code": "int ret = 0;"
+        }
+    ]
+}

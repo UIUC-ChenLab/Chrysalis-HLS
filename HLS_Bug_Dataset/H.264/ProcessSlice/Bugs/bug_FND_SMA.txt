@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=mv0 complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=mv0 complete dim=2"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "unsigned char Sluma_cur[PicWidthInSamplesL][FrameHeightInSampleL]",
+            "Faulty Code": "unsigned char Sluma_cur[FrameHeightInSampleL][PicWidthInSamplesL]"
+        }
+    ]
+}

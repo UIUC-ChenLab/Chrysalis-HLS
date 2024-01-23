@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "int s_e(NALU_t* nalu) { ... }",
+            "Faulty Code": "int s_e(NALU_t* nalu) { #pragma HLS interface m_axi port=nalu depth=10"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "int s_e(NALU_t* nalu) { ... }",
+            "Faulty Code": "int s_e(NALU_t* nalu) { #pragma HLS interface port=nalu mode=ap_none"
+        }
+    ]
+}

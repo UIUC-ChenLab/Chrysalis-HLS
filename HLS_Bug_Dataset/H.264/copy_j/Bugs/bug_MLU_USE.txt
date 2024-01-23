@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(j=0;j<9;j++)",
+            "Faulty Code": "for(j=0;j<8;j++)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "x=Clip3(0,PicWidthInSamplesL-1,xint-2+i);",
+            "Faulty Code": "x=Clip3(0,PicWidthInSamplesL-1,(short)(xint-2+i));"
+        }
+    ]
+}

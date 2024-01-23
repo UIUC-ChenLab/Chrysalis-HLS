@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "nalu->bit_length=len*8+7-i;",
+            "Faulty Code": "nalu->bit_length=0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "if( nalu->buf[len] & 0x01<<i)",
+            "Faulty Code": "if( nalu->buf[i] & 0x01<<i)"
+        }
+    ]
+}

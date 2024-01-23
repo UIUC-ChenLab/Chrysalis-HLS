@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "s0 = (P_A + P_B + P_C + P_D + 2)>>2;",
+            "Faulty Code": "s0 = (int)(P_A + P_B + P_C + P_D + 2)>>2;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i=0; i <4; i++)",
+            "Faulty Code": "for (i=0; i <4; i++) #pragma HLS PIPELINE"
+        }
+    ]
+}

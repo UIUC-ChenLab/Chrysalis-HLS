@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "x=Clip3(0,PicWidthInSamplesL-1,xint-2+i);",
+            "Faulty Code": "x=Clip3(0,PicWidthInSamplesL,xint-2+i);"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "temp[i+xoffset][j]=Sluma[x][y];",
+            "Faulty Code": "temp[i][j]=Sluma[x][y];"
+        }
+    ]
+}

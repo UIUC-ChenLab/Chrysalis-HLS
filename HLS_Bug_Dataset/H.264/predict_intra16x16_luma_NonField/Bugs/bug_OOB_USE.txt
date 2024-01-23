@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "h[i]=Sluma[startx-1][starty+i];",
+            "Faulty Code": "h[i]=Sluma[startx][starty+i];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "tmp=(a+H*(x-7)+V*(y-7)+16)>>5;",
+            "Faulty Code": "tmp=(a+H*(x-7)+V*(y-7))>>5;"
+        }
+    ]
+}

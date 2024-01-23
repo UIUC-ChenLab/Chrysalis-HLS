@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=mvCOL complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=mvCOL complete dim=0"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "LOOP_ZERO_INTRAMODED:for(i=0;i<4;i++)",
+            "Faulty Code": "for(i=0;i<4;i++)"
+        }
+    ]
+}

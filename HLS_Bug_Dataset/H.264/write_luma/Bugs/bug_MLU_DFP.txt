@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(i=0;i<4;i++)",
+            "Faulty Code": "for(i=0;i<3;i++) // MLU: Loop unrolled incorrectly, missing the last iteration"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE rewind",
+            "Faulty Code": "#pragma HLS dataflow // DFP: Incorrect pragma, dataflow should not be used inside nested loops"
+        }
+    ]
+}

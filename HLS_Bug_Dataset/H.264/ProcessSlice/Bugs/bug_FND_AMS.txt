@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=coeffDCC_0 complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=coeffDCC_0 factor=3 dim=1"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void inter_prediction_chroma_subblock_single(",
+            "Faulty Code": "void inter_prediction_chroma_subblock_single(#pragma HLS INTERFACE port=return) "
+        }
+    ]
+}

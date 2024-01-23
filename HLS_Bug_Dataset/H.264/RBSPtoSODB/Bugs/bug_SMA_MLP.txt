@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void RBSPtoSODB(NALU_t *nalu, int len)",
+            "Faulty Code": "#pragma HLS INTERFACE port=nalu bram"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for(i=0;i<8;i++)",
+            "Faulty Code": "#pragma HLS pipeline\n  for(i=0;i<8;i++)"
+        }
+    ]
+}

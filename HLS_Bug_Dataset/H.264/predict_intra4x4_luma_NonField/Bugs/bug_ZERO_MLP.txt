@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "s0 = 128;",
+            "Faulty Code": "s0 = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i=0; i <4; i++)",
+            "Faulty Code": "for (i=0; i <4; i++) { #pragma HLS UNROLL }"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int js1,js2,js3,js0;\n        js0=0;\n        js1=0;\n        js2=0;\n        js3=0;",
+            "Faulty Code": "int js1,js2,js3,js0;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "predC[j+i*2][x][y]=temp[i][j];",
+            "Faulty Code": "predC[j+2*i][x][y]=temp[i][j];"
+        }
+    ]
+}

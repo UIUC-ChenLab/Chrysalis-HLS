@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=rMb complete dim=1",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=rMb"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "unsigned char Sluma0[PicWidthInSamplesL][FrameHeightInSampleL]",
+            "Faulty Code": "#pragma HLS INTERFACE port=Sluma0 mode=ap_none"
+        }
+    ]
+}

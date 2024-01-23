@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=temp complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=temp cyclic factor=2 dim=1"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "temp[x][y]=Schroma[x0][y0];",
+            "Faulty Code": "temp[x][y]=Schroma_cur[x0][y0];"
+        }
+    ]
+}

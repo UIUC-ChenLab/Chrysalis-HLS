@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "SChroma[startx+i][starty+j]=Clip1y((skip==0)*rMb[i][j]+pred[i][j]);",
+            "Faulty Code": "SChroma[startx+i][starty+j]=Clip1y((skip==0)*rMb[i][j-1]+pred[i][j]);"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if(255< x)",
+            "Faulty Code": "if(0< x)"
+        }
+    ]
+}

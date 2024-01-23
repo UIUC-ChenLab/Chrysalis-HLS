@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(x=0;x<6;x++)",
+            "Faulty Code": "for(x=0;x<5;x++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "sum0=(sum0+512)>>10;",
+            "Faulty Code": "sum0=0;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "xint=mv[i][j][0]>>3; yint=mv[i][j][1]>>3;",
+            "Faulty Code": "xint=mv[i][j][0]>>8; yint=mv[i][j][1]>>8;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for(y=0;y<3;y++)\n{\n#pragma HLS UNROLL\nx0=Clip3(0,PicWidthInSamplesC-1,startblkx+x+xint1+i*2);\ny0=Clip3(0,FrameHeightInSampleC-1,startblky+y+yint1+j*2);\ntemp1[x][y]=Schroma1[x0][y0];\n}",
+            "Faulty Code": "for(y=0;y<4;y++)\n{\n#pragma HLS UNROLL\nx0=Clip3(0,PicWidthInSamplesC-1,startblkx+x+xint1+i*2);\ny0=Clip3(0,FrameHeightInSampleC-1,startblky+y+yint1+j*2);\ntemp1[x][y]=Schroma1[x0][y0];\n}"
+        }
+    ]
+}

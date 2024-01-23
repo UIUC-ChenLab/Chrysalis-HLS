@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "v[i]=SChroma[startx+i][starty-1];",
+            "Faulty Code": "v[i]=SChroma[startx+i][FrameHeightInSampleC];"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=predC complete dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=predC complete dim=4"
+        }
+    ]
+}

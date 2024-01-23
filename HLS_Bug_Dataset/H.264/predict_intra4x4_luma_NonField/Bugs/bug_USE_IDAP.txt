@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "s0 = (P_I + P_J + P_K + P_L + 2)>>2;",
+            "Faulty Code": "s0 = (P_I + P_J + P_K + P_L) >> 2;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "P_A = Sluma[startx][starty-1];",
+            "Faulty Code": "P_A = Sluma[starty-1][startx];"
+        }
+    ]
+}

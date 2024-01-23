@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "temp[x+1][y+1]",
+            "Faulty Code": "temp[x][y+2]"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "//#pragma HLS PIPELINE"
+        }
+    ]
+}

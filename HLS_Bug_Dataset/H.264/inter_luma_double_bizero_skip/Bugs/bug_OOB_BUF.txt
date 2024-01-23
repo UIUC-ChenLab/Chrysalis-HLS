@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "x0=Clip3(0,PicWidthInSamplesL-1,xint0+i);",
+            "Faulty Code": "x0=Clip3(0,PicWidthInSamplesL,xint0+i);"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "Sluma_cur[startx+i][starty+j]= Clip1y(rmbflag*rMb[i][j]+((Sluma0[x0][y0]+Sluma1[x1][y1]+1)>>1) );",
+            "Faulty Code": "Sluma_cur[startx+i][starty+j]= Clip1y(rmbflag*rMb[i][j]+((Sluma0[x1][y1]+Sluma1[x0][y0]+1)>>1) );"
+        }
+    ]
+}

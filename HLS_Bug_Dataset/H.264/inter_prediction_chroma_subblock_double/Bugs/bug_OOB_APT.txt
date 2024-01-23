@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "Schroma_cur[startblkx+x+i*2][startblky+y+j*2]=Clip1y(flag*rMbC[x+i*2][y+j*2]+",
+            "Faulty Code": "Schroma_cur[startblkx+x+i*3][startblky+y+j*3]=Clip1y(flag*rMbC[x+i*3][y+j*3]+"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=mv0 complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=mv0 cyclic dim=1"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "x=Clip3(0,PicWidthInSamplesL-1,xint-2+i);",
+            "Faulty Code": "x=xint-2+i;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "y=Clip3(0,FrameHeightInSampleL-1,yint-2+j);",
+            "Faulty Code": "y=(short)yint-2+j;"
+        }
+    ]
+}

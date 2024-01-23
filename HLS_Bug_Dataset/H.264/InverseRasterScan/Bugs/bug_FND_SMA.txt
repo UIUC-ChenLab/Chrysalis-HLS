@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "int InverseRasterScan(int a, int b, int c, int d, int e)",
+            "Faulty Code": "#pragma HLS array_partition variable=b factor=3 complete"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int InverseRasterScan(int a, int b, int c, int d, int e)",
+            "Faulty Code": "#pragma HLS interface port=a bram"
+        }
+    ]
+}

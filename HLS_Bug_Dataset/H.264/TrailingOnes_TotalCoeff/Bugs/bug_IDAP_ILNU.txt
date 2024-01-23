@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "// load nalu->bit_offset and nalu-buf first, because\n  // showbits() does not update them\n  int offset = nalu->bit_offset;\n  unsigned int *temp = (unsigned int*)&nalu->buf[offset / 8];\n  unsigned int temp0 = bytes_reverse_32(*temp);",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=nalu\n// load nalu->bit_offset and nalu-buf first, because\n  // showbits() does not update them\n  int offset = nalu->bit_offset;\n  unsigned int *temp = (unsigned int*)&nalu->buf[offset / 8];\n  unsigned int temp0 = bytes_reverse_32(*temp);"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for(j=0;j<4;j++)\n    {\n    #pragma HLS PIPELINE\n    for(i=0;i<17;i++)",
+            "Faulty Code": "for(j=0;j<4;j++)\n    {\n    #pragma HLS UNROLL\n    for(i=0;i<17;i++)"
+        }
+    ]
+}

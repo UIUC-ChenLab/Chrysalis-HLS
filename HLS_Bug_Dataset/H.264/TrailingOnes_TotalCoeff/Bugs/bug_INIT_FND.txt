@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int a, b, c;\na = 0;\nb = 0;\nc = 0;",
+            "Faulty Code": "int a, b, c;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for(i=0;i<17;i++)",
+            "Faulty Code": "#pragma HLS array_partition variable=codtab factor=5"
+        }
+    ]
+}

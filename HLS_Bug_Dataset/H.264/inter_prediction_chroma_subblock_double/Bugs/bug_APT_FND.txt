@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=mv0 complete dim=3",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=mv0 cyclic dim=3"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=temp0 complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=temp0 block factor=4 dim=1"
+        }
+    ]
+}

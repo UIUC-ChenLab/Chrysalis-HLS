@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "P_A = Sluma[startx][starty-1];",
+            "Faulty Code": "P_A = Sluma[startx][starty];"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=predL complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=predL complete dim=0"
+        }
+    ]
+}

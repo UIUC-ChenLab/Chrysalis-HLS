@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void copy_Cross(unsigned char Sluma[PicWidthInSamplesL][FrameHeightInSampleL], ...)",
+            "Faulty Code": "#pragma HLS interface port=Sluma m_axi"
+        }
+    ]
+}

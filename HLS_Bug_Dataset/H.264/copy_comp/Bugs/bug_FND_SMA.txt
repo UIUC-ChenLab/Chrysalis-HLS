@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=temp complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=temp cyclic factor=3 dim=1"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void copy_comp(unsigned char Sluma[PicWidthInSamplesL][FrameHeightInSampleL],int xint, int yint,unsigned char xfrac, unsigned char yfrac, unsigned char temp[9][9])",
+            "Faulty Code": "#pragma HLS INTERFACE port=temp bram"
+        }
+    ]
+}

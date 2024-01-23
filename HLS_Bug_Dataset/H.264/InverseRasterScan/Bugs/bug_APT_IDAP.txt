@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "int InverseRasterScan(int a, int b, int c, int d, int e)",
+            "Faulty Code": "#pragma HLS array_partition variable=b type=complete"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "int InverseRasterScan(int a, int b, int c, int d, int e)",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=a"
+        }
+    ]
+}

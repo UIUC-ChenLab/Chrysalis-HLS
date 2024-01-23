@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(j=0;j<9;j++)",
+            "Faulty Code": "for(j=0;j<=9;j++)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "temp[i][j]=Sluma[x][y];",
+            "Faulty Code": "temp[i][j]=Sluma[y][x];"
+        }
+    ]
+}

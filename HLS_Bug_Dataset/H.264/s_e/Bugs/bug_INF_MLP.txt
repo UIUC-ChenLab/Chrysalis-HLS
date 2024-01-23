@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if(ret % 2)\n    return (ret+1)/2;\n  else\n    return -(ret+1)/2;",
+            "Faulty Code": "while(ret % 2)\n    return (ret+1)/2;\n  else\n    return -(ret+1)/2;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "ret=u_e(nalu);",
+            "Faulty Code": "#pragma HLS pipeline\n  ret=u_e(nalu);"
+        }
+    ]
+}

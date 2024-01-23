@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void TrailingOnes_TotalCoeff(NALU_t *nalu, unsigned char *TotalCoeff, unsigned char *TrailingZeros, unsigned char nC_range)",
+            "Faulty Code": "#pragma HLS INTERFACE port=TotalCoeff mode=ap_none"
+        }
+    ]
+}

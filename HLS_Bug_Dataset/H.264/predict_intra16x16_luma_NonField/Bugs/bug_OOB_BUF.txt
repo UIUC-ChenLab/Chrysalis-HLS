@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "h[i]=Sluma[startx-1][starty+i];",
+            "Faulty Code": "h[i]=Sluma[startx][starty+i];"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "predL[k][i][j]=v[x];",
+            "Faulty Code": "predL[k][j][i]=v[x];"
+        }
+    ]
+}
