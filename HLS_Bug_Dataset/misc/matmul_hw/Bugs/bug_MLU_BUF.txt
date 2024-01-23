@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "a[i+2*DIM][j] = tmp;",
+            "Faulty Code": "a[i+2*DIM][j+1] = tmp;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "b_copy[k][j] = a[k+DIM][j];",
+            "Faulty Code": "b_copy[k][j] = a[k+2*DIM][j];"
+        }
+    ]
+}

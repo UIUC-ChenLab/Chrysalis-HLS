@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "mat_type tmp = 0;",
+            "Faulty Code": "mat_type tmp;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": " #pragma HLS PIPELINE\n Cache_Row: for(int k = 0; k < DIM; k++)"
+        }
+    ]
+}

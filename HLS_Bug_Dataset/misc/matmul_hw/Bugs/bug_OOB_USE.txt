@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "a[i+2*DIM][j] = tmp;",
+            "Faulty Code": "a[i+3*DIM][j] = tmp;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "tmp += a_row[k] * b_copy[k][j];",
+            "Faulty Code": "tmp += a_row[k] * (int)b_copy[k][j];"
+        }
+    ]
+}

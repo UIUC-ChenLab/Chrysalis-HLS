@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "b_copy[k][j] = a[k+DIM][j];",
+            "Faulty Code": "b_copy[k][j] = a[k][j];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "mat_type tmp = 0;",
+            "Faulty Code": "mat_type tmp;"
+        }
+    ]
+}

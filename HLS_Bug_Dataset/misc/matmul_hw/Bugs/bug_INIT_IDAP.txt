@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "mat_type tmp = 0;",
+            "Faulty Code": "mat_type tmp;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INTERFACE bram port=a",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=a"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "a_row[k] = a[i][k];",
+            "Faulty Code": "a_row[k+1] = a[i][k]; // Incorrectly unrolls loop by accessing k+1 instead of k"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS pipeline // Incorrectly placed inside the if statement"
+        }
+    ]
+}

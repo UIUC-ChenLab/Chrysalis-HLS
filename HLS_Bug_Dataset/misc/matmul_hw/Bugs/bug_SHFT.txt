@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "a[i+2*DIM][j] = tmp;",
+            "Faulty Code": "a[i+(2 << DIM)][j] = tmp;"
+        }
+    ]
+}

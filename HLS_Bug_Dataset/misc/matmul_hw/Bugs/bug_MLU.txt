@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(int k = 0; k < DIM; k++)",
+            "Faulty Code": "for(int k = 0; k < DIM-1; k++)"
+        }
+    ]
+}

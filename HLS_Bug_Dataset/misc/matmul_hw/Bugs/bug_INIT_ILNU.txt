@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "mat_type tmp = 0;",
+            "Faulty Code": "mat_type tmp;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS unroll factor = 4"
+        }
+    ]
+}

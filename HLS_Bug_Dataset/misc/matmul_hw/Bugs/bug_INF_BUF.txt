@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(int i = 0; i < DIM; i++) {",
+            "Faulty Code": "for(int i = 0; i <= DIM; i++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "b_copy[k][j] = a[k+DIM][j];",
+            "Faulty Code": "b_copy[k][j] = a[k][j];"
+        }
+    ]
+}

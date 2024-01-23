@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(int k = 0; k < DIM; k++)\n  a_row[k] = a[i][k];",
+            "Faulty Code": "for(int k = 0; k < DIM - 1; k++)\n  a_row[k] = a[i][k];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for(int k = 0; k < DIM; k++) {\n  b_copy[k][j] = a[k+DIM][j];\n}",
+            "Faulty Code": "for(int k = 0; k < DIM; k++) {\n  b_copy[j][k] = a[j+DIM][k];\n}"
+        }
+    ]
+}

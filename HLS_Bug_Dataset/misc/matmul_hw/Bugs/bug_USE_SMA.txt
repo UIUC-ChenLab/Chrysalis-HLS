@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "tmp += a_row[k] * b_copy[k][j];",
+            "Faulty Code": "tmp += a_row[k] * b_copy[j][k];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS INTERFACE bram port=a",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=a_row"
+        }
+    ]
+}
