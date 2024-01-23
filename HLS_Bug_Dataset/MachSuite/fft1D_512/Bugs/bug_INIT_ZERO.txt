@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "TYPE phi, tmp, phi_x, phi_y;",
+            "Faulty Code": "TYPE phi, tmp, phi_x = 0, phi_y;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "phi = ((-2*PI*reversed8[j]/n)*i);",
+            "Faulty Code": "phi = 0;"
+        }
+    ]
+}

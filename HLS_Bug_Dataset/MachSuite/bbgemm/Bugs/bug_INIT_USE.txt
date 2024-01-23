@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "TYPE temp_x, mul;",
+            "Faulty Code": "TYPE temp_x = 0, mul;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "prod[i_row + j + jj] += mul;",
+            "Faulty Code": "prod[i_row + j + jj] = mul;"
+        }
+    ]
+}

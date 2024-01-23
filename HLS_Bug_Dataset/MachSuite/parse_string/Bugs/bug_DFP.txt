@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "memcpy( arr, s, k );",
+            "Faulty Code": "#pragma HLS dataflow\nmemcpy( arr, s, k );"
+        }
+    ]
+}

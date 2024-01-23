@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "void RELU(TYPE activations[nodes_per_layer], TYPE dactivations[nodes_per_layer], int size) {",
+            "Faulty Code": "#pragma HLS array_partition variable=activations cyclic factor=8\nvoid RELU(TYPE activations[nodes_per_layer], TYPE dactivations[nodes_per_layer], int size) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void RELU(TYPE activations[nodes_per_layer], TYPE dactivations[nodes_per_layer], int size) {",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=activations offset=slave bundle=gmem\nvoid RELU(TYPE activations[nodes_per_layer], TYPE dactivations[nodes_per_layer], int size) {"
+        }
+    ]
+}

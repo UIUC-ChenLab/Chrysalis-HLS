@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "llike[0][s] = init[s] + emission[s*N_TOKENS+obs[0]];",
+            "Faulty Code": "llike[0][s] = init[s + N_STATES/2] + emission[s*N_TOKENS+obs[0]];"
+        }
+    ]
+}

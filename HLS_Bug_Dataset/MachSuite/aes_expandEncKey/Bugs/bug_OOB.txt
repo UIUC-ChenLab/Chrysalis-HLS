@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "exp2 : for(i = 20; i < 32; i += 4) k[i] ^= k[i-4],   k[i+1] ^= k[i-3],\n        k[i+2] ^= k[i-2], k[i+3] ^= k[i-1];",
+            "Faulty Code": "exp2 : for(i = 20; i < 32; i += 4) k[i] ^= k[i-4],   k[i+1] ^= k[i-3],\n        k[i+2] ^= k[i-2], k[i+4] ^= k[i-1]; // Faulty access k[i+4] instead of k[i+3]"
+        }
+    ]
+}

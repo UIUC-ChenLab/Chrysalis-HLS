@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "init_1 : for (i=0; i<BUCKETSIZE; i++) {",
+            "Faulty Code": "#pragma HLS array_partition variable=bucket factor=3 complete\n    init_1 : for (i=0; i<BUCKETSIZE; i++) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void bbgemm(TYPE m1[N], TYPE m2[N], TYPE prod[N]){",
+            "Faulty Code": "#pragma HLS interface axis port=m1\nvoid bbgemm(TYPE m1[N], TYPE m2[N], TYPE prod[N]){"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "temp_x = m1[i_row + k + kk];",
+            "Faulty Code": "temp_x = m1[i_row + j];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while( s[k]!=(char)0 && s[k+1]!=(char)0 && s[k+2]!=(char)0 && !(s[k]=='\\n'  && s[k+1]=='%'     && s[k+2]=='%') ) {",
+            "Faulty Code": "while( s[k]!=(char)0 || s[k+1]!=(char)0 || s[k+2]!=(char)0 || !(s[k]=='\\n'  && s[k+1]=='%'     && s[k+2]=='%') ) {"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "memcpy( arr, s, k );",
+            "Faulty Code": "#pragma HLS dataflow\n    memcpy( arr, s, k );"
+        }
+    ]
+}

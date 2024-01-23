@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "oracle_activations[i] = (TYPE)0.0;",
+            "Faulty Code": "oracle_activations[i] = 0;"
+        }
+    ]
+}

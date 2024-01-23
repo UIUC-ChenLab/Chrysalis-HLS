@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int tmp_begin = rowDelimiters[i];",
+            "Faulty Code": "short tmp_begin = rowDelimiters[i];"
+        }
+    ]
+}

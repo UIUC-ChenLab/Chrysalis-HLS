@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "ecb2 : for (i = 8;--i;){ aes_expandEncKey(ctx->deckey, &rcon); }",
+            "Faulty Code": "ecb2 : for (i = 8; i != 0;){ aes_expandEncKey(ctx->deckey, &rcon); }"
+        }
+    ]
+}

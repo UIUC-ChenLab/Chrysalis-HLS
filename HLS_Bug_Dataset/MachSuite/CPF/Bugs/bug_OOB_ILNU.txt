@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "k = kmpNext[q];",
+            "Faulty Code": "k = kmpNext[q - 1];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "c1 : for(q = 1; q < PATTERN_SIZE; q++){",
+            "Faulty Code": "#pragma HLS unroll factor=4\nc1 : for(q = 1; q < PATTERN_SIZE; q++){"
+        }
+    ]
+}

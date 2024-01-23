@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "void last_step_scan(int bucket[BUCKETSIZE], int sum[SCAN_RADIX])\n{\n    int radixID, i, bucket_indx;\n    last_1:for (radixID=0; radixID<SCAN_RADIX; radixID++) {\n        last_2:for (i=0; i<SCAN_BLOCK; i++) {\n            bucket_indx = radixID * SCAN_BLOCK + i;\n            bucket[bucket_indx] = bucket[bucket_indx] + sum[radixID];\n         }\n    }\n}",
+            "Faulty Code": "void last_step_scan(int bucket[BUCKETSIZE], int sum[SCAN_RADIX])\n{\n    int radixID, i, bucket_indx;\n    #pragma HLS unroll factor=2\n    last_1:for (radixID=0; radixID<SCAN_RADIX; radixID++) {\n        last_2:for (i=0; i<SCAN_BLOCK; i++) {\n            bucket_indx = radixID * SCAN_BLOCK + i;\n            bucket[bucket_indx] = bucket[bucket_indx] + sum[radixID];\n         }\n    }\n}"
+        }
+    ]
+}

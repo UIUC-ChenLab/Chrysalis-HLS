@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "loop1 : for(tid = 0; tid < THREADS; tid++){",
+            "Faulty Code": "loop1 : for(tid = 0; tid < 512; tid++){"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void fft1D_512(TYPE work_x[512], TYPE work_y[512]){",
+            "Faulty Code": "void fft1D_512(TYPE work_x[512], TYPE work_y[512]){\n#pragma HLS INTERFACE port=work_x mode=s_axilite\n#pragma HLS INTERFACE port=work_y mode=s_axilite"
+        }
+    ]
+}

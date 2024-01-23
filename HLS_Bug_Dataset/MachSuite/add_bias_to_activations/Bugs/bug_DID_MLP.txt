@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "void add_bias_to_activations(TYPE biases[nodes_per_layer],",
+            "Faulty Code": "#pragma HLS array_partition dim=2 variable=biases complete"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for( i = 0; i < size; i++){",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

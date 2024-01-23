@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "level_t tmp_level = level[n]+1;",
+            "Faulty Code": "level_t tmp_level = level[n+1];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void bfs(node_t nodes[N_NODES], edge_t edges[N_EDGES], node_index_t starting_node, level_t level[N_NODES], edge_index_t level_counts[N_LEVELS])",
+            "Faulty Code": "void bfs(node_t nodes[N_NODES], edge_t edges[N_EDGES], node_index_t starting_node, level_t level, edge_index_t level_counts[N_LEVELS])"
+        }
+    ]
+}

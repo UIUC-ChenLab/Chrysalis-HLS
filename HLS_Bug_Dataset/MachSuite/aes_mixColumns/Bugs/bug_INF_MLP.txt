@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "mix : for (i = 0; i < 16; i += 4)",
+            "Faulty Code": "mix : for (i = 0; ; i += 4)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "void aes_mixColumns(uint8_t *buf)",
+            "Faulty Code": "void aes_mixColumns(uint8_t *buf) {\n#pragma HLS pipeline\n"
+        }
+    ]
+}

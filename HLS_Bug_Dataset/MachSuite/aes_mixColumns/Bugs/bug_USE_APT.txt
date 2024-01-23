@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "return (x & 0x80) ? ((x << 1) ^ 0x1b) : (x << 1);",
+            "Faulty Code": "return ((int)x & 0x80) ? (((int)x << 1) ^ 0x1b) : ((int)x << 1);"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "void aes_mixColumns(uint8_t *buf)",
+            "Faulty Code": "#pragma HLS array_partition variable=buf type=cyclic factor=4\nvoid aes_mixColumns(uint8_t *buf)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "q_in = 1;",
+            "Faulty Code": "node_index_t q_in;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "level_t tmp_level = level[n]+1;",
+            "Faulty Code": "level_t tmp_level = level[n-1]+1;"
+        }
+    ]
+}

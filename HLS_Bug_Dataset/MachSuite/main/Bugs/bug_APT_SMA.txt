@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "data = malloc(INPUT_SIZE);",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=data cyclic factor=2"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int main(int argc, char **argv)",
+            "Faulty Code": "#pragma HLS interface port=data bram"
+        }
+    ]
+}

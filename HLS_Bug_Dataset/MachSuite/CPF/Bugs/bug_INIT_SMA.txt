@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "kmpNext[0] = 0;",
+            "Faulty Code": "// Missing initialization for kmpNext[0]"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void CPF(char pattern[PATTERN_SIZE], int32_t kmpNext[PATTERN_SIZE]) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=kmpNext bram"
+        }
+    ]
+}

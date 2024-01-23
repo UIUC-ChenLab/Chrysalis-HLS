@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if( argc>1 )\n    in_file = argv[1];",
+            "Faulty Code": "while( argc>1 )\n    in_file = argv[1];"
+        }
+    ]
+}

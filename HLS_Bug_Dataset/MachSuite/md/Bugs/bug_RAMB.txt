@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void md( int n_points[blockSide][blockSide][blockSide],\n         dvector_t force[blockSide][blockSide][blockSide][densityFactor],\n         dvector_t position[blockSide][blockSide][blockSide][densityFactor] )",
+            "Faulty Code": "#pragma HLS interface m_axi port=position offset=slave bundle=gmem\nvoid md( int n_points[blockSide][blockSide][blockSide],\n         dvector_t force[blockSide][blockSide][blockSide][densityFactor],\n         dvector_t position[blockSide][blockSide][blockSide][densityFactor] )"
+        }
+    ]
+}

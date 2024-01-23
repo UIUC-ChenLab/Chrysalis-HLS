@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "TYPE sum = out[i];",
+            "Faulty Code": "TYPE sum;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "Si = nzval[j + i*L] * vec[cols[j + i*L]];",
+            "Faulty Code": "Si = nzval[j + i*L] * vec[cols[j]];"
+        }
+    ]
+}

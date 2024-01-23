@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "level_t tmp_level = level[n]+1;",
+            "Faulty Code": "level_t tmp_level = level[n];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "q_in = 1;",
+            "Faulty Code": "q_in = 0;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "sol[(r*col_size) + c] = temp;",
+            "Faulty Code": "sol[(r*col_size) + c + 1] = temp;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "stencil_label2:for (c=0; c<col_size-2; c++) {",
+            "Faulty Code": "stencil_label2:for (c=0; c<col_size; c++) {"
+        }
+    ]
+}

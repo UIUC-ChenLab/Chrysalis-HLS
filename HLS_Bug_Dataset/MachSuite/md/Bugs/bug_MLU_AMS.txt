@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "loop_grid1_z: for( b1.z=MAX(0,b0.z-1); b1.z<MIN(blockSide,b0.z+2); b1.z++ ) {",
+            "Faulty Code": "loop_grid1_z: for( b1.z=MAX(0,b0.z-1); b1.z<=MIN(blockSide,b0.z+2); b1.z++ ) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void md( int n_points[blockSide][blockSide][blockSide],",
+            "Faulty Code": "#pragma HLS INTERFACE port=n_points mode=s_axilite\nvoid md( int n_points[blockSide][blockSide][blockSide],"
+        }
+    ]
+}

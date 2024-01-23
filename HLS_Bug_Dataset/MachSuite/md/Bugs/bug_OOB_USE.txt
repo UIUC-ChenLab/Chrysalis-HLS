@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "loop_q: for( q_idx=0; q_idx< q_idx_range ; q_idx++ ) {",
+            "Faulty Code": "loop_q: for( q_idx=0; q_idx<= q_idx_range ; q_idx++ ) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "r2inv = 1.0/( dx*dx + dy*dy + dz*dz );",
+            "Faulty Code": "r2inv = 1/( dx*dx + dy*dy + dz*dz );"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "register uint8_t i, a, b, c, d, e;",
+            "Faulty Code": "register uint8_t i = 0, a = 0, b = 0, c = 0, d = 0, e = 0;"
+        }
+    ]
+}

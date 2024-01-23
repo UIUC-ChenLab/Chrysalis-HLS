@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (valid_buffer == BUFFER_A) {",
+            "Faulty Code": "if (valid_buffer == BUFFER_B) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "hist_2 : for(i=0; i<4; i++) {",
+            "Faulty Code": "hist_2 : for(i=0; i<5; i++) {"
+        }
+    ]
+}

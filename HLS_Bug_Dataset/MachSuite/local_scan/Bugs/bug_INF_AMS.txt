@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "local_2 : for (i=1; i<SCAN_BLOCK; i++)",
+            "Faulty Code": "local_2 : for (i=1; i<=SCAN_BLOCK; i++)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void local_scan(int bucket[BUCKETSIZE])",
+            "Faulty Code": "void local_scan(int bucket)"
+        }
+    ]
+}

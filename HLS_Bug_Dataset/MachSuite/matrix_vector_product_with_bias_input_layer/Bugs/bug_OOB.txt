@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "activations[j] += weights[j*input_dimension + i] * input_sample[i];",
+            "Faulty Code": "activations[j] += weights[j*(input_dimension+1) + i] * input_sample[i];"
+        }
+    ]
+}

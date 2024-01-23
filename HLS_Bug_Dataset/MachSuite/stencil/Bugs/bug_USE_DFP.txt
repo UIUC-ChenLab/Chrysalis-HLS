@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "temp = (TYPE)0;",
+            "Faulty Code": "temp += (TYPE)0;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void stencil (TYPE orig[row_size * col_size], TYPE sol[row_size * col_size], TYPE filter[f_size]){",
+            "Faulty Code": "#pragma HLS dataflow\nvoid stencil (TYPE orig[row_size * col_size], TYPE sol[row_size * col_size], TYPE filter[f_size]){"
+        }
+    ]
+}

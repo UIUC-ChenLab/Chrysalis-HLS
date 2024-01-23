@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "loop2 : for(tid = 0; tid < 64; tid++){\n            hi = tid>>3;\n            lo = tid&7;\n            offset = hi*8+lo;\n            smem[0*sx+offset] = DATA_x[tid*8 + 0];\n            smem[4*sx+offset] = DATA_x[tid*8 + 1];\n            smem[1*sx+offset] = DATA_x[tid*8 + 4];\n            smem[5*sx+offset] = DATA_x[tid*8 + 5];\n            smem[2*sx+offset] = DATA_x[tid*8 + 2];\n            smem[6*sx+offset] = DATA_x[tid*8 + 3];\n            smem[3*sx+offset] = DATA_x[tid*8 + 6];\n            smem[7*sx+offset] = DATA_x[tid*8 + 7];\n        }",
+            "Faulty Code": "#pragma HLS unroll factor=2\n        loop2 : for(tid = 0; tid < 64; tid++){\n            hi = tid>>3;\n            lo = tid&7;\n            offset = hi*8+lo;\n            smem[0*sx+offset] = DATA_x[tid*8 + 0];\n            smem[4*sx+offset] = DATA_x[tid*8 + 1];\n            smem[1*sx+offset] = DATA_x[tid*8 + 4];\n            smem[5*sx+offset] = DATA_x(tid*8 + 5];\n            smem[2*sx+offset] = DATA_x[tid*8 + 2];\n            smem[6*sx+offset] = DATA_x[tid*8 + 3];\n            smem[3*sx+offset] = DATA_x[tid*8 + 6];\n            smem[7*sx+offset] = DATA_x[tid*8 + 7];\n        }"
+        }
+    ]
+}

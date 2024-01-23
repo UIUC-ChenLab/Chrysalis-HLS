@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "memcpy( arr, s, k );",
+            "Faulty Code": "for(int i = 0; i < k; i++) arr[i] = s[i + 3]; // Non-consecutive access"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int parse_string(char *s, char *arr, int n) {",
+            "Faulty Code": "int parse_string(volatile char *s, volatile char *arr, int n) { // Incorrect volatile hint for HLS interface"
+        }
+    ]
+}

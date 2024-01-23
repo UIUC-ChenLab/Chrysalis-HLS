@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void matrix_vector_product_with_bias_second_layer(TYPE biases[nodes_per_layer], ...",
+            "Faulty Code": "#pragma HLS INTERFACE port=activations bram"
+        }
+    ]
+}

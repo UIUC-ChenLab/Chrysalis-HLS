@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void last_step_scan(int bucket[BUCKETSIZE], int sum[SCAN_RADIX])",
+            "Faulty Code": "void last_step_scan(int bucket[BUCKETSIZE], int sum[SCAN_RADIX]) { int radixID, i, bucket_indx; /* ... */ }"
+        }
+    ]
+}

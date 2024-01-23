@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "int tmp_end = rowDelimiters[i+1];",
+            "Faulty Code": "int tmp_end = rowDelimiters[N+1];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void spmv(TYPE val[NNZ], int32_t cols[NNZ], int32_t rowDelimiters[N+1], TYPE vec[N], TYPE out[N]){",
+            "Faulty Code": "#pragma HLS INTERFACE port=vec bram\nvoid spmv(TYPE val[NNZ], int32_t cols[NNZ], int32_t rowDelimiters[N+1], TYPE vec[N], TYPE out[N]){"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int reversed[] = {0,4,2,6,1,5,3,7};",
+            "Faulty Code": "int reversed[8] = {0};"
+        }
+    ]
+}

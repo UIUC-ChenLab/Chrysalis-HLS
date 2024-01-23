@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "last_2:for (i=0; i<SCAN_BLOCK; i++)",
+            "Faulty Code": "last_2:for (i=0; ; i++)"
+        }
+    ]
+}

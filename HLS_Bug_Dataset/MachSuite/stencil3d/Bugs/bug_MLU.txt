@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "loop_row : for(k = 1; k < row_size - 1; k++){",
+            "Faulty Code": "loop_row : for(k = 1; k < row_size - 2; k++){"
+        }
+    ]
+}

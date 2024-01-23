@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "void spmv(TYPE val[NNZ], int32_t cols[NNZ], int32_t rowDelimiters[N+1], TYPE vec[N], TYPE out[N]){ ... }",
+            "Faulty Code": "#pragma HLS array_partition variable=val factor=3\nvoid spmv(TYPE val[NNZ], int32_t cols[NNZ], int32_t rowDelimiters[N+1], TYPE vec[N], TYPE out[N]){ ... }"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "spmv_2 : for (j = tmp_begin; j < tmp_end; j++){ Si = val[j] * vec[cols[j]]; sum = sum + Si; }",
+            "Faulty Code": "spmv_2 : for (j = tmp_begin; j < tmp_end; j++){ #pragma HLS unroll factor=4 Si = val[j] * vec[cols[j]]; sum = sum + Si; }"
+        }
+    ]
+}

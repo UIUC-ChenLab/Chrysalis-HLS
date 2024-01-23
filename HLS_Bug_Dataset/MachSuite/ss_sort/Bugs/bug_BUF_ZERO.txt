@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "valid_buffer = BUFFER_B;",
+            "Faulty Code": "valid_buffer = BUFFER_A;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "sum[0] = 0;",
+            "Faulty Code": "sum[1] = 0;"
+        }
+    ]
+}

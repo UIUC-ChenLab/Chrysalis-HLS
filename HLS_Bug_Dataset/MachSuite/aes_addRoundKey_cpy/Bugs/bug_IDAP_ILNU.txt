@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void aes_addRoundKey_cpy(uint8_t *buf, uint8_t *key, uint8_t *cpk)",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=buf\nvoid aes_addRoundKey_cpy(uint8_t *buf, uint8_t *key, uint8_t *cpk)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];",
+            "Faulty Code": "cpkey : while (i--) {\n#pragma HLS unroll factor=4\nbuf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];\n}"
+        }
+    ]
+}

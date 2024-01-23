@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "int write_section_header(int fd) {",
+            "Faulty Code": "int write_section_header(int fd) {\n#pragma HLS INTERFACE port=fd mode=s_axilite"
+        }
+    ]
+}

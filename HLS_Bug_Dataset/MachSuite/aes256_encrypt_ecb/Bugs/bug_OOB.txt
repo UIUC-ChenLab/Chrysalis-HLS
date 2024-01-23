@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ecb1 : for (i = 0; i < sizeof(ctx->key); i++){ ctx->enckey[i] = ctx->deckey[i] = k[i]; }",
+            "Faulty Code": "ecb1 : for (i = 0; i <= sizeof(ctx->key); i++){ ctx->enckey[i] = ctx->deckey[i] = k[i]; }"
+        }
+    ]
+}

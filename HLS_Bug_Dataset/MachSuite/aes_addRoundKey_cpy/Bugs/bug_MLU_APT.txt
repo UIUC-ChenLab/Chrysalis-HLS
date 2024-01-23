@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];",
+            "Faulty Code": "cpkey : for (i = 0; i < 15; i++)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "void aes_addRoundKey_cpy(uint8_t *buf, uint8_t *key, uint8_t *cpk)",
+            "Faulty Code": "#pragma HLS array_partition variable=cpk type=cyclic factor=4\nvoid aes_addRoundKey_cpy(uint8_t *buf, uint8_t *key, uint8_t *cpk)"
+        }
+    ]
+}

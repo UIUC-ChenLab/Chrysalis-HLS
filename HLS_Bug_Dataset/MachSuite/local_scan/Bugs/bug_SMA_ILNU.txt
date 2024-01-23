@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void local_scan(int bucket[BUCKETSIZE])",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=bucket"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "local_2 : for (i=1; i<SCAN_BLOCK; i++){",
+            "Faulty Code": "#pragma HLS UNROLL factor=4\n        local_2 : for (i=1; i<SCAN_BLOCK; i++){"
+        }
+    ]
+}

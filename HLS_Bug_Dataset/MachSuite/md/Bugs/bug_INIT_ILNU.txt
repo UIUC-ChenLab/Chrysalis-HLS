@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "TYPE sum_x = force[b0.x][b0.y][b0.z][p_idx].x;",
+            "Faulty Code": "TYPE sum_x; // Uninitialized variable"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "loop_grid1_x: for( b1.x=MAX(0,b0.x-1); b1.x<MIN(blockSide,b0.x+2); b1.x++ ) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\nloop_grid1_x: for( b1.x=MAX(0,b0.x-1); b1.x<MIN(blockSide,b0.x+2); b1.x++ ) {"
+        }
+    ]
+}

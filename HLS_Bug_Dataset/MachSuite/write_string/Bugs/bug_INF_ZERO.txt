@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while(status==0);",
+            "Faulty Code": "while(status!=0);"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "written = 0;",
+            "Faulty Code": "written = n;"
+        }
+    ]
+}

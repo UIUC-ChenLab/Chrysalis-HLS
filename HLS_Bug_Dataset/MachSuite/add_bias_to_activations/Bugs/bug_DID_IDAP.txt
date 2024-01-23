@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "void add_bias_to_activations(TYPE biases[nodes_per_layer], TYPE activations[nodes_per_layer], int size) {",
+            "Faulty Code": "#pragma HLS array_partition variable=biases dim=2 complete"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void add_bias_to_activations(TYPE biases[nodes_per_layer], TYPE activations[nodes_per_layer], int size) {",
+            "Faulty Code": "#pragma HLS interface mode=s_axilite port=activations"
+        }
+    ]
+}

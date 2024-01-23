@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "assert(fd>1 && \"Invalid file descriptor\");",
+            "Faulty Code": "while(fd<=1); // Infinite loop if fd <= 1"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "int write_section_header(int fd) {",
+            "Faulty Code": "#pragma HLS dataflow\nint write_section_header(int fd) {"
+        }
+    ]
+}

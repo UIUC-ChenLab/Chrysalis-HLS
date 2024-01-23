@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "int write_string(int fd, char *arr, int n) {",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=arr\nint write_string(int fd, char *arr, int n) {"
+        }
+    ]
+}

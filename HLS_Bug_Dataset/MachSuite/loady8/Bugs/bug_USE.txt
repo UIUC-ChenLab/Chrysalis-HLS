@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "void loady8(TYPE a_y[], TYPE x[], int offset, int sx){",
+            "Faulty Code": "void loady8(signed char a_y[], unsigned char x[], int offset, int sx){"
+        }
+    ]
+}

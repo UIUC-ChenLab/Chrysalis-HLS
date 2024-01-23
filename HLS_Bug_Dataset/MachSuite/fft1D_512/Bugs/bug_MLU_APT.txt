@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "work_x[3*stride+tid] = data_x[reversed[3]];",
+            "Faulty Code": "work_x[3*stride+tid] = data_x[reversed[4]];"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "TYPE smem[8*8*9];",
+            "Faulty Code": "TYPE smem[8*8*8];"
+        }
+    ]
+}

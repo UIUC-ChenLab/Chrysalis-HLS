@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "TYPE sum_x = force[b0.x][b0.y][b0.z][p_idx].x;",
+            "Faulty Code": "TYPE sum_x = 0;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void md( int n_points[blockSide][blockSide][blockSide], dvector_t force[blockSide][blockSide][blockSide][densityFactor], dvector_t position[blockSide][blockSide][blockSide][densityFactor] )",
+            "Faulty Code": "void md( int n_points[blockSide][blockSide][blockSide], dvector_t force[blockSide], dvector_t position[blockSide][blockSide][blockSide][densityFactor] )"
+        }
+    ]
+}

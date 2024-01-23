@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "temp = (TYPE)0;",
+            "Faulty Code": "temp = (TYPE)ZERO;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void stencil (TYPE orig[row_size * col_size], TYPE sol[row_size * col_size], TYPE filter[f_size])",
+            "Faulty Code": "#pragma HLS INTERFACE port=orig mode=s_axilite\nvoid stencil (TYPE orig[row_size * col_size], TYPE sol[row_size * col_size], TYPE filter[f_size])"
+        }
+    ]
+}

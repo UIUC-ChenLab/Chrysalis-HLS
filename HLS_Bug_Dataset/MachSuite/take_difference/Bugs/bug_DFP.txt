@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void take_difference(TYPE net_outputs[possible_outputs], TYPE solutions[possible_outputs], TYPE output_difference[possible_outputs], TYPE dactivations[possible_outputs]) {",
+            "Faulty Code": "#pragma HLS dataflow \nvoid take_difference(TYPE net_outputs[possible_outputs], TYPE solutions[possible_outputs], TYPE output_difference[possible_outputs], TYPE dactivations[possible_outputs]) {"
+        }
+    ]
+}

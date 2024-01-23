@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "loop_neighbors: for( e=tmp_begin; e<tmp_end; e++ ) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\n    loop_neighbors: for( e=tmp_begin; e<tmp_end; e++ ) {"
+        }
+    ]
+}

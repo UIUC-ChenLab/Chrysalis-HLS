@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "while( s[k]!=(char)0 && s[k+1]!=(char)0 && s[k+2]!=(char)0",
+            "Faulty Code": "while( s[k]!=(char)0 && s[k+1]!=(char)0)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int k;",
+            "Faulty Code": "int k = 0;"
+        }
+    ]
+}

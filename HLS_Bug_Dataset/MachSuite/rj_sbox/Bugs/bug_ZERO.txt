@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "sb = y = gf_mulinv(x);",
+            "Faulty Code": "uint8_t y = 0, sb = gf_mulinv(x);"
+        }
+    ]
+}

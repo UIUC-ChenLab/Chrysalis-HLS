@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for ( i = 0; i < row_size; ++i)",
+            "Faulty Code": "for ( i = 0; i <= row_size; ++i)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "temp_x = m1[i_row + k + kk];",
+            "Faulty Code": "temp_x = m1[i_row + k];"
+        }
+    ]
+}

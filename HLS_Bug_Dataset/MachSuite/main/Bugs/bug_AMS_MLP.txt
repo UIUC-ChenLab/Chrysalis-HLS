@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "input_to_data(in_fd, data);",
+            "Faulty Code": "#pragma HLS INTERFACE port=data mode=ap_none"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "run_benchmark( data );",
+            "Faulty Code": "#pragma HLS PIPELINE\nrun_benchmark( data );"
+        }
+    ]
+}

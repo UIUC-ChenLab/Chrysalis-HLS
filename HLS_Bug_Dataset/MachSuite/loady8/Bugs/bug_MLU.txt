@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "a_y[7] = x[7*sx+offset];",
+            "Faulty Code": "a_y[7] = x[6*sx+offset];"
+        }
+    ]
+}

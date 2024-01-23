@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(i=0; i < input_dimension; i++){",
+            "Faulty Code": "for(i=0; ; i++){"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for(j = 0; j < nodes_per_layer; j++){",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor(j = 0; j < nodes_per_layer; j++){"
+        }
+    ]
+}

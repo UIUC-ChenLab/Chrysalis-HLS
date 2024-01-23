@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "// Unpack and call\n  run_benchmark( data );",
+            "Faulty Code": "// Unpack and call\n  for (int i = 0; i < INPUT_SIZE; i += 2) { run_benchmark(&data[i]); }"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "data = malloc(INPUT_SIZE);",
+            "Faulty Code": "data = malloc(sizeof(int));"
+        }
+    ]
+}

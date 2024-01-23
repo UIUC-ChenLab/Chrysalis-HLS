@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "hist_2 : for(i=0; i<4; i++) {",
+            "Faulty Code": "#pragma HLS array_partition variable=bucket cyclic factor=3\ncyclic_hist_2 : for(i=0; i<4; i++) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void ss_sort(int a[SIZE], int b[SIZE], int bucket[BUCKETSIZE], int sum[SCAN_RADIX]){",
+            "Faulty Code": "#pragma HLS interface port=b bucket=bram\nvoid ss_sort(int a[SIZE], int b[SIZE], int bucket[BUCKETSIZE], int sum[SCAN_RADIX]){"
+        }
+    ]
+}

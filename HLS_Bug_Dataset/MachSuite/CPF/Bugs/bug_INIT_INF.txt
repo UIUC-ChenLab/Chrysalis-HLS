@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "kmpNext[0] = 0;",
+            "Faulty Code": "// kmpNext[0] = 0; // Uninitialized 'kmpNext[0]' leading to INIT error"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "k = kmpNext[q];",
+            "Faulty Code": "k = kmpNext[k]; // Incorrect indexing leading to potential infinite loop (INF error)"
+        }
+    ]
+}

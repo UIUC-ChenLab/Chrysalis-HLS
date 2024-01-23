@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];",
+            "Faulty Code": "cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i] & 0xFF), cpk[16+i] = key[16 + i];"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "void aes_addRoundKey_cpy(uint8_t *buf, uint8_t *key, uint8_t *cpk)",
+            "Faulty Code": "#pragma HLS array_partition variable=cpk type=block factor=16\ncpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];"
+        }
+    ]
+}

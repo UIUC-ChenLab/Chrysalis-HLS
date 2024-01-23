@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "q_in = 1;",
+            "Faulty Code": "node_index_t q_in, q_out;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "loop_queue: for( dummy=0; dummy<N_NODES; dummy++ ) {",
+            "Faulty Code": "loop_queue: while(1) {"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void stencil3d(TYPE C[2], TYPE orig[SIZE], TYPE sol[SIZE]) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=s_axilite bundle=control_bus\nvoid stencil3d(TYPE C[2], TYPE orig[SIZE], TYPE sol[SIZE]) {"
+        }
+    ]
+}

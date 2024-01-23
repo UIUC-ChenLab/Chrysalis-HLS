@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "bucket[bucket_indx] += bucket[bucket_indx-1];",
+            "Faulty Code": "bucket[bucket_indx-1] += bucket[bucket_indx];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "bucket[bucket_indx] += bucket[bucket_indx-1];",
+            "Faulty Code": "bucket[i] += bucket[i-1];"
+        }
+    ]
+}

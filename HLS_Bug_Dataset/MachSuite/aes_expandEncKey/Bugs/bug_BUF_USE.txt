@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "k[3] ^= rj_sbox(k[28]);",
+            "Faulty Code": "k[3] ^= rj_sbox(k[32]);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "*rc = F( *rc);",
+            "Faulty Code": "*rc = F((int8_t)*rc);"
+        }
+    ]
+}

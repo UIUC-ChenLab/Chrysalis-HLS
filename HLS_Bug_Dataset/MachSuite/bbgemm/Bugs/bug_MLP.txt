@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "loopi:for ( i = 0; i < row_size; ++i){",
+            "Faulty Code": "loopi:for ( i = 0; i < row_size; ++i){ #pragma HLS pipeline"
+        }
+    ]
+}

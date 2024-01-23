@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for(j = 0; j < possible_outputs; j++){\n    activations[j] = (TYPE)0.0;\n    for (i = 0; i < nodes_per_layer; i++){\n        activations[j] += weights[j*nodes_per_layer + i] * input_activations[i];\n    }\n}",
+            "Faulty Code": "for(j = 0; j < possible_outputs; j++){\n    #pragma HLS pipeline\n    activations[j] = (TYPE)0.0;\n    for (i = 0; i < nodes_per_layer; i++){\n        #pragma HLS pipeline\n        activations[j] += weights[j*nodes_per_layer + i] * input_activations[i];\n    }\n}"
+        }
+    ]
+}

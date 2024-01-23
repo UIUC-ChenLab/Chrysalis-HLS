@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void run_benchmark( void *vargs ) { ... }",
+            "Faulty Code": "#pragma HLS interface port=args->k bram\nvoid run_benchmark( void *vargs ) { ... }"
+        }
+    ]
+}

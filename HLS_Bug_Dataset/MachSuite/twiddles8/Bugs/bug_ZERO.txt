@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "TYPE phi, tmp, phi_x, phi_y;",
+            "Faulty Code": "TYPE phi = 0, tmp, phi_x, phi_y;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "input_to_data(in_fd, data);",
+            "Faulty Code": "#pragma HLS interface m_axi port=data depth=INPUT_SIZE\ninput_to_data(in_fd, data);"
+        }
+    ]
+}

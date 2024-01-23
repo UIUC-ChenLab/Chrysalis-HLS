@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "loop_q: for( q_idx=0; q_idx< q_idx_range ; q_idx++ )",
+            "Faulty Code": "loop_q: for( q_idx=0; q_idx<= q_idx_range ; q_idx++ )"
+        }
+    ]
+}

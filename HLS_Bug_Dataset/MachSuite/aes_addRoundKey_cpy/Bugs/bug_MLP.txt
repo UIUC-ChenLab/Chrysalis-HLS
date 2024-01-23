@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void aes_addRoundKey_cpy(uint8_t *buf, uint8_t *key, uint8_t *cpk)\n{\n    register uint8_t i = 16;\n\n    cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];\n}",
+            "Faulty Code": "void aes_addRoundKey_cpy(uint8_t *buf, uint8_t *key, uint8_t *cpk)\n{\n    #pragma HLS pipeline\n    register uint8_t i = 16;\n\n    cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];\n}"
+        }
+    ]
+}

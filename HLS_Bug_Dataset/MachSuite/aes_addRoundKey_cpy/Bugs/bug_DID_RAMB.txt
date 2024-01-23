@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "void aes_addRoundKey_cpy(uint8_t *buf, uint8_t *key, uint8_t *cpk)",
+            "Faulty Code": "#pragma HLS array_partition variable=cpk dim=2 complete"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void aes_addRoundKey_cpy(uint8_t *buf, uint8_t *key, uint8_t *cpk)",
+            "Faulty Code": "#pragma HLS interface m_axi port=cpk offset=slave bundle=gmem"
+        }
+    ]
+}

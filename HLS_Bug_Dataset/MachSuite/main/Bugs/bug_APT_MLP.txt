@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "ref = malloc(INPUT_SIZE);",
+            "Faulty Code": "ref = malloc(INPUT_SIZE * sizeof(char)); // Assuming INPUT_SIZE is intended for number of elements, not bytes."
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "// Unpack and call\n  run_benchmark( data );",
+            "Faulty Code": "#pragma HLS pipeline // Incorrect placement, there should be no pipelining directive here\n  run_benchmark( data );"
+        }
+    ]
+}

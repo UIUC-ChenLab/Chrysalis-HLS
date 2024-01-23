@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "i = buf[10]; buf[10] = buf[2]; buf[2] = i;",
+            "Faulty Code": "for(i = buf[10]; buf[10] != buf[2]; buf[2] = i); // accidental infinite loop"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "i = buf[1]; buf[1] = buf[5]; buf[5] = buf[9]; buf[9] = buf[13]; buf[13] = i;",
+            "Faulty Code": "int i = buf[1]; buf[1] = buf[5]; buf[5] = buf[9]; buf[9] = buf[13]; buf[13] = i; // unintended sign extension from uint8_t to int"
+        }
+    ]
+}

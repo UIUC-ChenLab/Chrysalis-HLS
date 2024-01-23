@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "exp1 : for(i = 4; i < 16; i += 4)  k[i] ^= k[i-4],   k[i+1] ^= k[i-3], k[i+2] ^= k[i-2], k[i+3] ^= k[i-1];",
+            "Faulty Code": "exp1 : for(i = 4; i != 16; i += 4)  k[i] ^= k[i-4],   k[i+1] ^= k[i-3], k[i+2] ^= k[i-2], k[i+3] ^= k[i-1];"
+        }
+    ]
+}

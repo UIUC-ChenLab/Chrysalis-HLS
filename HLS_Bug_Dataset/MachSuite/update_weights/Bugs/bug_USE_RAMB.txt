@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "norm = (double)0.0;",
+            "Faulty Code": "norm = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "weights1[i*nodes_per_layer + j] -= (d_weights1[i*nodes_per_layer + j] * learning_rate);",
+            "Faulty Code": "weights1[i + j] -= (d_weights1[i + j] * learning_rate);"
+        }
+    ]
+}

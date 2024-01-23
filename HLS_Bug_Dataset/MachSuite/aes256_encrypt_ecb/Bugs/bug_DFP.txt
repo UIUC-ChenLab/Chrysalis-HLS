@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "aes_addRoundKey_cpy(buf, ctx->enckey, ctx->key);",
+            "Faulty Code": "#pragma HLS dataflow\naes_addRoundKey_cpy(buf, ctx->enckey, ctx->key);"
+        }
+    ]
+}

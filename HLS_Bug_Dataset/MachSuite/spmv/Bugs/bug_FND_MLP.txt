@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "void spmv(TYPE val[NNZ], int32_t cols[NNZ], int32_t rowDelimiters[N+1], TYPE vec[N], TYPE out[N]){",
+            "Faulty Code": "#pragma HLS array_partition variable=val cyclic factor=4"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "spmv_1 : for(i = 0; i < N; i++){",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

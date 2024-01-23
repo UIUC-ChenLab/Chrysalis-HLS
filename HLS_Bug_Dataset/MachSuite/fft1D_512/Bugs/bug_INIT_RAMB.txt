@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "TYPE smem[8*8*9];",
+            "Faulty Code": "TYPE smem[8*8*9]; // Missing initialization could lead to using uninitialized values"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "data_y[0] = work_y[0*stride+tid];",
+            "Faulty Code": "data_y[0] = work_y[tid]; // Non-consecutive access potentially causing RAMB issues"
+        }
+    ]
+}

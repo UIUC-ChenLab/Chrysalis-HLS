@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "activations[i] += weights[i*nodes_per_layer + j] * input_activations[j];",
+            "Faulty Code": "activations[i] += weights[i*(nodes_per_layer+1) + j] * input_activations[j];"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "hist_2 : for(i=0; i<4; i++) {",
+            "Faulty Code": "hist_2 : for(i=0; i<3; i++) {"
+        }
+    ]
+}

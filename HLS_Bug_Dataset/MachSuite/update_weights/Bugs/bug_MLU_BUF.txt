@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(j = 0; j < nodes_per_layer; j++){",
+            "Faulty Code": "for(j = 0; j < nodes_per_layer - 1; j++){"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "weights3[i*possible_outputs + j] -= (d_weights3[i*possible_outputs + j] * learning_rate);",
+            "Faulty Code": "weights3[i*nodes_per_layer + j] -= (d_weights3[i*possible_outputs + j] * learning_rate);"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "TYPE sum = out[i];",
+            "Faulty Code": "TYPE sum = 0;"
+        }
+    ]
+}

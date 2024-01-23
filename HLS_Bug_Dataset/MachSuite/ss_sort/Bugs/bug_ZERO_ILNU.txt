@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "sum[0] = 0;",
+            "Faulty Code": "sum[0] = 1;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "last_2:for (i=0; i<SCAN_BLOCK; i++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\nlast_2:for (i=0; i<SCAN_BLOCK; i++) {"
+        }
+    ]
+}

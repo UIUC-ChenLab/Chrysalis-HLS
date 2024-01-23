@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "work_y[6*stride+tid] = data_y[reversed[6]];",
+            "Faulty Code": "work_y[6*stride+tid] = data_y[reversed[7]];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "sx = 66;",
+            "Faulty Code": "sx = 64;"
+        }
+    ]
+}

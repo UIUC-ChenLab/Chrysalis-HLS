@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for( i = 0; i < size; i++){",
+            "Faulty Code": "for( i = 0; i < size - 1; i++){"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for( i = 0; i < size; i++){",
+            "Faulty Code": "#pragma HLS pipeline\nfor( i = 0; i < size; i++){\n    #pragma HLS pipeline"
+        }
+    ]
+}

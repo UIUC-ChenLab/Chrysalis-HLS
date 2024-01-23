@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "register uint8_t i, a, b, c, d, e;",
+            "Faulty Code": "register uint8_t i, a, b, c, d; uint8_t e;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "e = a ^ b ^ c ^ d;",
+            "Faulty Code": "e = a ^ b ^ c ^ d ^ buf[i + 4];"
+        }
+    ]
+}

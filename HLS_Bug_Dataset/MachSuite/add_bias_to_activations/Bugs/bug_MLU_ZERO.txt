@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for( i = 0; i < size; i++){",
+            "Faulty Code": "for( i = 0; i <= size; i++){"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "activations[i] = activations[i] + biases[i];",
+            "Faulty Code": "activations[i] = 0 + biases[i];"
+        }
+    ]
+}

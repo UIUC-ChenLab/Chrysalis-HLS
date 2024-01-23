@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "k[0] ^= rj_sbox(k[29]) ^ (*rc);",
+            "Faulty Code": "k[32] ^= rj_sbox(k[29]) ^ (*rc);"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "register uint8_t i;",
+            "Faulty Code": "register uint8_t i = 0;"
+        }
+    ]
+}

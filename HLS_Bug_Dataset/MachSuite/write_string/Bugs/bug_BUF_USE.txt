@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "status = write(fd, &arr[written], n-written);",
+            "Faulty Code": "status = write(fd, &arr[written], n);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "written += status;",
+            "Faulty Code": "written += (unsigned int)status;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int k;",
+            "Faulty Code": "int k; // k is declared but not initialized"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "memcpy( arr, s, k );",
+            "Faulty Code": "memcpy( arr, s, k + 1 ); // Incorrect length possibly causing buffer overflow if k == n"
+        }
+    ]
+}

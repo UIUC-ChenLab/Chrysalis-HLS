@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "spmv_2 : for (j = tmp_begin; j < tmp_end; j++){",
+            "Faulty Code": "spmv_2 : for (j = tmp_begin; j <= tmp_end; j++){"
+        }
+    ]
+}

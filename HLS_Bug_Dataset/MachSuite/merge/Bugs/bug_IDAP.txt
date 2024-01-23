@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void merge(TYPE a[SIZE], int start, int m, int stop) {",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=a\nvoid merge(TYPE a[SIZE], int start, int m, int stop) {"
+        }
+    ]
+}

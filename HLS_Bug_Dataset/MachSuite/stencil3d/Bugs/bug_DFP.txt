@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "loop_row : for(k = 1; k < row_size - 1; k++){",
+            "Faulty Code": "#pragma HLS dataflow\n                loop_row : for(k = 1; k < row_size - 1; k++){"
+        }
+    ]
+}

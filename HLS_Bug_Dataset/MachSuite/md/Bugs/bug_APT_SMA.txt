@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "dvector_t force[blockSide][blockSide][blockSide][densityFactor]",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=force dim=4"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void md( int n_points[blockSide][blockSide][blockSide], ... )",
+            "Faulty Code": "#pragma HLS interface port=n_points bram"
+        }
+    ]
+}

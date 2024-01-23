@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void get_delta_matrix_weights1(TYPE delta_weights1[input_dimension*nodes_per_layer], ...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=delta_weights1 mode=ap_none"
+        }
+    ]
+}

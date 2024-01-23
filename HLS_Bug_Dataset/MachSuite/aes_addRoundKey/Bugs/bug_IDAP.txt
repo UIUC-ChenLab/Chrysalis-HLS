@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void aes_addRoundKey(uint8_t *buf, uint8_t *key)",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=buf\n#pragma HLS interface mode=ap_fifo port=key\nvoid aes_addRoundKey(uint8_t *buf, uint8_t *key)"
+        }
+    ]
+}

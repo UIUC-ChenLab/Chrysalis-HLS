@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "bucket[bucket_indx] += bucket[bucket_indx-1];",
+            "Faulty Code": "bucket[bucket_indx+1] += bucket[bucket_indx];"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "local_2 : for (i=1; i<SCAN_BLOCK; i++){",
+            "Faulty Code": "local_2 : for (i=1; i<=SCAN_BLOCK; i++){"
+        }
+    ]
+}

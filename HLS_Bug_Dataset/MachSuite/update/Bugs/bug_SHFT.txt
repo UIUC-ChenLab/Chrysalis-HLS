@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "bucket_indx = ((a[blockID * ELEMENTSPERBLOCK + i] >> exp) & 0x3)*NUMOFBLOCKS + blockID;",
+            "Faulty Code": "bucket_indx = ((a[blockID * ELEMENTSPERBLOCK + i] >> (exp+32)) & 0x3)*NUMOFBLOCKS + blockID;"
+        }
+    ]
+}

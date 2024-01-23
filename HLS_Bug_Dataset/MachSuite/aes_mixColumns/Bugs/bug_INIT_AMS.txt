@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "register uint8_t i, a, b, c, d, e;",
+            "Faulty Code": "register uint8_t i, a, b, c, d; uint8_t e;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void aes_mixColumns(uint8_t *buf)",
+            "Faulty Code": "#pragma HLS INTERFACE port=buf ap_none\nvoid aes_mixColumns(uint8_t *buf)"
+        }
+    ]
+}

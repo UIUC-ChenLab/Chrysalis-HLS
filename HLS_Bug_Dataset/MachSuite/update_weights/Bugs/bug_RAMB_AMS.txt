@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for(i=0; i < input_dimension; i++){ for(j = 0; j < nodes_per_layer; j++){ weights1[i*nodes_per_layer + j] -= (d_weights1[i*nodes_per_layer + j] * learning_rate); ...",
+            "Faulty Code": "#pragma HLS interface m_axi port=weights1 offset=slave bundle=gmem"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "TYPE d_weights1[input_dimension*nodes_per_layer], ...",
+            "Faulty Code": "#pragma HLS interface ap_none port=d_weights1"
+        }
+    ]
+}

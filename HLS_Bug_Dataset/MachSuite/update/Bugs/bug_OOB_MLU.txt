@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "b[bucket[bucket_indx]] = a[a_indx];",
+            "Faulty Code": "b[bucket[bucket_indx] + 1] = a[a_indx];"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "update_2 : for(i=0; i<4; i++) {",
+            "Faulty Code": "update_2 : for(i=0; i<3; i++) {"
+        }
+    ]
+}

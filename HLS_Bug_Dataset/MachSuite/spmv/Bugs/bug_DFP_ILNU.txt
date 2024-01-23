@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void spmv(TYPE val[NNZ], int32_t cols[NNZ], int32_t rowDelimiters[N+1], TYPE vec[N], TYPE out[N])",
+            "Faulty Code": "#pragma HLS dataflow\nvoid spmv(TYPE val[NNZ], int32_t cols[NNZ], int32_t rowDelimiters[N+1], TYPE vec[N], TYPE out[N])"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "spmv_2 : for (j = tmp_begin; j < tmp_end; j++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nspmv_2 : for (j = tmp_begin; j < tmp_end; j++)"
+        }
+    ]
+}

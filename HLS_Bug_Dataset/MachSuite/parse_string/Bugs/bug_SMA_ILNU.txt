@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "int parse_string(char *s, char *arr, int n) {",
+            "Faulty Code": "#pragma HLS interface port=arr bram\nint parse_string(char *s, char *arr, int n) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "k++;",
+            "Faulty Code": "#pragma HLS unroll factor=4\nk++;"
+        }
+    ]
+}

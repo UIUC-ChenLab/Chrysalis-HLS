@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "k[2] ^= rj_sbox(k[31]);",
+            "Faulty Code": "k[2] ^= rj_sbox(k[32]);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for(i = 4; i < 16; i += 4)",
+            "Faulty Code": "#pragma HLS array_partition variable=k factor=5\n    for(i = 4; i < 16; i += 4)"
+        }
+    ]
+}

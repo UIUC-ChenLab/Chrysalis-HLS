@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "char *ref;",
+            "Faulty Code": "char *ref = NULL;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "ref = malloc(INPUT_SIZE);",
+            "Faulty Code": "ref = malloc(INPUT_SIZE / 2);"
+        }
+    ]
+}

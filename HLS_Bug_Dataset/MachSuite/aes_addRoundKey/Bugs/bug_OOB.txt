@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "void aes_addRoundKey(uint8_t *buf, uint8_t *key)\n{\n    register uint8_t i = 16;\n\n    addkey : while (i--) buf[i] ^= key[i];\n}",
+            "Faulty Code": "void aes_addRoundKey(uint8_t *buf, uint8_t *key)\n{\n    register int i = 17;\n\n    addkey : while (i--) buf[i] ^= key[i];\n}"
+        }
+    ]
+}

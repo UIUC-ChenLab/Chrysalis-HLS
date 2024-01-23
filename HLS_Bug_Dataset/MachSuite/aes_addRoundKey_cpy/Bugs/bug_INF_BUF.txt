@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];",
+            "Faulty Code": "cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]);"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];",
+            "Faulty Code": "cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[i] = key[16 + i];"
+        }
+    ]
+}

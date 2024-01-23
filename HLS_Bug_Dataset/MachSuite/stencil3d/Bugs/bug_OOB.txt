@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "sol[INDX(row_size, col_size, k, j, height_size-1)] = orig[INDX(row_size, col_size, k, j, height_size-1)];",
+            "Faulty Code": "sol[INDX(row_size, col_size, k, j, height_size)] = orig[INDX(row_size, col_size, k, j, height_size)];"
+        }
+    ]
+}

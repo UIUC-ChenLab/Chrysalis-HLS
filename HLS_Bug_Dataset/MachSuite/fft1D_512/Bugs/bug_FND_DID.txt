@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "stride = THREADS;",
+            "Faulty Code": "#pragma HLS array_partition variable=work_x cyclic factor=7"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "TYPE smem[8*8*9];",
+            "Faulty Code": "#pragma HLS array_partition variable=smem block factor=8 dim=3"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "min_s = 0;",
+            "Faulty Code": "// min_s = 0; // Uninitialized variable min_s"
+        }
+    ]
+}

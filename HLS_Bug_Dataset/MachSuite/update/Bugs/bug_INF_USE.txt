@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "update_1 : for (blockID = 0; blockID < NUMOFBLOCKS; blockID++) {",
+            "Faulty Code": "update_1 : for (blockID = 0; blockID <= NUMOFBLOCKS; blockID++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "bucket_indx = ((a[blockID * ELEMENTSPERBLOCK + i] >> exp) & 0x3)*NUMOFBLOCKS + blockID;",
+            "Faulty Code": "bucket_indx = ((a[blockID * ELEMENTSPERBLOCK + i] >> exp) & 0xFFFFFFFC)*NUMOFBLOCKS + blockID;"
+        }
+    ]
+}

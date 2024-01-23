@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "void aes_shiftRows(uint8_t *buf) { /* original code without pragmas */ }",
+            "Faulty Code": "void aes_shiftRows(uint8_t *buf) { #pragma HLS unroll factor=4 for (int i = 0; i < 4; i++) { /* faulty loop unrolling */ } }"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "exp1 : for(i = 4; i < 16; i += 4)  k[i] ^= k[i-4],   k[i+1] ^= k[i-3], k[i+2] ^= k[i-2], k[i+3] ^= k[i-1];",
+            "Faulty Code": "exp1 : for(i = 4; i < 16; i += 4)  k[i] ^= k[i-4],   k[i+1] ^= k[i-3], k[i+3] ^= k[i-1]; // Missing k[i+2] ^= k[i-2]"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "k[3] ^= rj_sbox(k[28]);",
+            "Faulty Code": "k[3] ^= rj_sbox(k[31]); // Incorrect index, should be k[28] instead of k[31]"
+        }
+    ]
+}

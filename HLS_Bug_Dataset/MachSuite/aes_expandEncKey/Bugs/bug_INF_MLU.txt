@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "exp1 : for(i = 4; i < 16; i += 4)",
+            "Faulty Code": "exp1 : for(i = 4; i <= 16; i += 4)"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "exp2 : for(i = 20; i < 32; i += 4)",
+            "Faulty Code": "exp2 : for(i = 20; i < 31; i += 4)"
+        }
+    ]
+}

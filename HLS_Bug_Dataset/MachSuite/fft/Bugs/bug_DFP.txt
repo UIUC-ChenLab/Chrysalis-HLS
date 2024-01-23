@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "outer:for(span=FFT_SIZE>>1; span; span>>=1, log++){",
+            "Faulty Code": "#pragma HLS dataflow\nouter:for(span=FFT_SIZE>>1; span; span>>=1, log++){"
+        }
+    ]
+}

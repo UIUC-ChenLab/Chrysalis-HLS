@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void spmv(TYPE val[NNZ], int32_t cols[NNZ], int32_t rowDelimiters[N+1], TYPE vec[N], TYPE out[N]){ ... }",
+            "Faulty Code": "#pragma HLS interface m_axi port=val offset=slave bundle=gmem\n#pragma HLS interface m_axi port=cols offset=slave bundle=gmem\n#pragma HLS interface m_axi port=rowDelimiters offset=slave bundle=gmem\n#pragma HLS interface m_axi port=vec offset=slave bundle=gmem\n#pragma HLS interface m_axi port=out offset=slave bundle=gmem\nvoid spmv(TYPE val[NNZ], int32_t cols[NNZ], int32_t rowDelimiters[N+1], TYPE vec[N], TYPE out[N]){ ... }"
+        }
+    ]
+}

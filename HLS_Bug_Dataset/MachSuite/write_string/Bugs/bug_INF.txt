@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while(written<n) { status = write(fd, &arr[written], n-written); assert(status>=0 && \"Write failed\"); written += status; }",
+            "Faulty Code": "while(written<=n) { status = write(fd, &arr[written], n-written); assert(status>=0 && \"Write failed\"); written += status; }"
+        }
+    ]
+}

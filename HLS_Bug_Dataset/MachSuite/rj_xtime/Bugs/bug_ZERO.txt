@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "return (x & 0x80) ? ((x << 1) ^ 0x1b) : (x << 1);",
+            "Faulty Code": "uint8_t result = 0; return (x & 0x80) ? ((result = x << 1) ^ 0x1b) : (result = x << 1);"
+        }
+    ]
+}

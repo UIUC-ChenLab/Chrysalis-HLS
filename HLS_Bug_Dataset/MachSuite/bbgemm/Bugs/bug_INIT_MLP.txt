@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "TYPE temp_x, mul;",
+            "Faulty Code": "TYPE temp_x, mul = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "loopi:for ( i = 0; i < row_size; ++i){",
+            "Faulty Code": "#pragma HLS pipeline\nloopi:for ( i = 0; i < row_size; ++i){"
+        }
+    ]
+}

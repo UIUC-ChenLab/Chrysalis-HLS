@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void RELU(TYPE activations[nodes_per_layer], TYPE dactivations[nodes_per_layer], int size) {",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=activations offset=slave bundle=gmem0"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for( i = 0; i < size; i++) {",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        }
+    ]
+}

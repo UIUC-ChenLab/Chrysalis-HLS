@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "Si = nzval[j + i*L] * vec[cols[j + i*L]];",
+            "Faulty Code": "Si = nzval[j + i*L] * vec[cols[j + (i+1)*L]];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "ellpack_2 : for (j=0; j<L; j++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\nellpack_2 : for (j=0; j<L; j++) {"
+        }
+    ]
+}

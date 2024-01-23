@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "ellpack_2 : for (j=0; j<L; j++) {",
+            "Faulty Code": "ellpack_2 : for (j=0; j<L-1; j++) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "ellpack_1 : for (i=0; i<N; i++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\nellpack_1 : for (i=0; i<N; i++) {"
+        }
+    ]
+}

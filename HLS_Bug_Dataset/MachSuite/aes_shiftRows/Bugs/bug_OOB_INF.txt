@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "i = buf[10]; buf[10] = buf[2]; buf[2] = i;",
+            "Faulty Code": "i = buf[16]; buf[16] = buf[2]; buf[2] = i;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "j = buf[14]; buf[14] = buf[6]; buf[6]  = j;",
+            "Faulty Code": "for(; buf[6] != j; ) { buf[14] = buf[6]; }"
+        }
+    ]
+}

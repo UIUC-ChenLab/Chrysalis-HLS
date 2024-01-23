@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if( (level_counts[horizon+1]=cnt)==0 )",
+            "Faulty Code": "if( (level_counts[horizon+1]=cnt)==0 && horizon+1 < N_LEVELS )"
+        }
+    ]
+}

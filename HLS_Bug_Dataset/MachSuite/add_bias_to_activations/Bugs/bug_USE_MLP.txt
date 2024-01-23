@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "activations[i] = activations[i] + biases[i];",
+            "Faulty Code": "activations[i] = activations[i] + (char)biases[i];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for( i = 0; i < size; i++){",
+            "Faulty Code": "#pragma HLS pipeline\nfor( i = 0; i < size; i++){"
+        }
+    ]
+}

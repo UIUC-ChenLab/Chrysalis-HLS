@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "void last_step_scan(int bucket[BUCKETSIZE], int sum[SCAN_RADIX])",
+            "Faulty Code": "#pragma HLS array_partition variable=bucket complete\nvoid last_step_scan(int bucket[BUCKETSIZE], int sum[SCAN_RADIX])"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void ss_sort(int a[SIZE], int b[SIZE], int bucket[BUCKETSIZE], int sum[SCAN_RADIX])",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=a\nvoid ss_sort(int a[SIZE], int b[SIZE], int bucket[BUCKETSIZE], int sum[SCAN_RADIX])"
+        }
+    ]
+}

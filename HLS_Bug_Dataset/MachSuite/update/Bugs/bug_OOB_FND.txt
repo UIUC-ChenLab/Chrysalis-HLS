@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "b[bucket[bucket_indx]] = a[a_indx];",
+            "Faulty Code": "b[bucket[bucket_indx]++] = a[a_indx];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "update_2 : for(i=0; i<4; i++) {",
+            "Faulty Code": "#pragma HLS array_partition variable=bucket factor=5\ncyclic\nupdate_2 : for(i=0; i<4; i++) {"
+        }
+    ]
+}

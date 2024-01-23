@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];",
+            "Faulty Code": "cpkey : while (i--) { #pragma HLS pipeline \n buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i]; }"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];",
+            "Faulty Code": "cpkey : #pragma HLS unroll factor=4 \n while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];"
+        }
+    ]
+}

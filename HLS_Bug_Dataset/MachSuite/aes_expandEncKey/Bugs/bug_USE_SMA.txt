@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "k[0] ^= rj_sbox(k[29]) ^ (*rc);",
+            "Faulty Code": "k[0] ^= rj_sbox((int)k[29]) ^ (*rc);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void aes_expandEncKey(uint8_t *k, uint8_t *rc)",
+            "Faulty Code": "#pragma HLS INTERFACE port=bram storage_type=ram_1p variable=k\nvoid aes_expandEncKey(uint8_t k[32], uint8_t *rc)"
+        }
+    ]
+}

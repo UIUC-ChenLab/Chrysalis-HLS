@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "y = (y<<1)|(y>>7); sb ^= y;  y = (y<<1)|(y>>7); sb ^= y;\ny = (y<<1)|(y>>7); sb ^= y;  y = (y<<1)|(y>>7); sb ^= y;",
+            "Faulty Code": "y = (y<<1)|(y>>7); sb ^= y;  y = (y<<1)|(y>>7); sb ^= y;\ny = (y<<1)|(y>>7); sb ^= y;"
+        }
+    ]
+}

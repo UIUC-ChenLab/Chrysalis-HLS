@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "sum[0] = 0;",
+            "Faulty Code": "sum[1] = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "bucket_indx = ((a[blockID * ELEMENTSPERBLOCK + i] >> exp) & 0x3)*NUMOFBLOCKS + blockID;",
+            "Faulty Code": "bucket_indx = ((a[blockID * ELEMENTSPERBLOCK + i] >> exp) & 0xFFFFFFFF)*NUMOFBLOCKS + blockID;"
+        }
+    ]
+}

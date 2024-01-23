@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "stride = THREADS;",
+            "Faulty Code": "stride = 0;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "sx = 66;",
+            "Faulty Code": "#pragma HLS array_partition variable=smem factor=10"
+        }
+    ]
+}

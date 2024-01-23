@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "bucket[bucket_indx] = bucket[bucket_indx] + sum[radixID];",
+            "Faulty Code": "bucket[bucket_indx] = 0 + sum[radixID];"
+        }
+    ]
+}

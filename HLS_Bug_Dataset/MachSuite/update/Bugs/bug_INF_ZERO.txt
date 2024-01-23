@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "update_1 : for (blockID = 0; blockID < NUMOFBLOCKS; blockID++) {",
+            "Faulty Code": "update_1 : for (blockID = 0; ; blockID++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "blockID = 0;",
+            "Faulty Code": "blockID = -1;"
+        }
+    ]
+}

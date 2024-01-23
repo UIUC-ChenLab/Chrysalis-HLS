@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "norm += weights1[i*nodes_per_layer + j]*weights1[i*nodes_per_layer + j];",
+            "Faulty Code": "norm += weights1[i]*weights1[i];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void update_weights(TYPE weights1[input_dimension*nodes_per_layer],",
+            "Faulty Code": "void update_weights(TYPE weights1[input_dimension],"
+        }
+    ]
+}

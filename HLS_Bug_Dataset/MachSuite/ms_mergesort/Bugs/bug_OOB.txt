@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "merge_label2 : for(j=m+1; j<=stop; j++){ temp[m+1+stop-j] = a[j]; }",
+            "Faulty Code": "merge_label2 : for(j=m+1; j<stop; j++){ temp[m+1+stop-j] = a[j]; }"
+        }
+    ]
+}

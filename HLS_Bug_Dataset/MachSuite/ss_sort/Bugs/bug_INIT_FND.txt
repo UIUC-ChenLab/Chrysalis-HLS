@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int valid_buffer=0;",
+            "Faulty Code": "int valid_buffer;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "last_2:for (i=0; i<SCAN_BLOCK; i++) {",
+            "Faulty Code": "#pragma HLS array_partition variable=bucket factor=10\ncyclic\nlast_2:for (i=0; i<SCAN_BLOCK; i++) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];",
+            "Faulty Code": "cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[17+i] = key[17 + i];"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];",
+            "Faulty Code": "cpkey : for (i = 0; i < 15; i++)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];"
+        }
+    ]
+}

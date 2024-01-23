@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "void soft_max(TYPE net_outputs[possible_outputs], TYPE activations[possible_outputs]) {",
+            "Faulty Code": "void soft_max(TYPE net_outputs[possible_outputs], TYPE activations[possible_outputs]) { #pragma HLS unroll factor=2"
+        }
+    ]
+}

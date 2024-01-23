@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "void local_scan(int bucket[BUCKETSIZE])",
+            "Faulty Code": "void local_scan(int bucket[BUCKETSIZE] = {0})"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void local_scan(int bucket[BUCKETSIZE])",
+            "Faulty Code": "#pragma HLS interface m_axi port=bucket"
+        }
+    ]
+}

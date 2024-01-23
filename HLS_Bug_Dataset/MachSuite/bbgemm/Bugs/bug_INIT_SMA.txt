@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "TYPE temp_x, mul;",
+            "Faulty Code": "TYPE temp_x = 0, mul;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void bbgemm(TYPE m1[N], TYPE m2[N], TYPE prod[N])",
+            "Faulty Code": "#pragma HLS INTERFACE port=prod bram\nvoid bbgemm(TYPE m1[N], TYPE m2[N], TYPE prod[N])"
+        }
+    ]
+}

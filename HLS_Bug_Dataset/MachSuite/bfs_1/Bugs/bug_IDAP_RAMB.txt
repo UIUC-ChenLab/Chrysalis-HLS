@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void bfs(node_t nodes[N_NODES], edge_t edges[N_EDGES], ...",
+            "Faulty Code": "#pragma HLS interface ap_fifo port=nodes\nvoid bfs(node_t nodes[N_NODES], edge_t edges[N_EDGES], ..."
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "level_t tmp_level = level[n]+1;",
+            "Faulty Code": "level[tmp_dst] = level[n]+1;"
+        }
+    ]
+}

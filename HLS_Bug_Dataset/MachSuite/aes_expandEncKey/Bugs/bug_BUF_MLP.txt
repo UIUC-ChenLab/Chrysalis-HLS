@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "k[i+3] ^= k[i-1];",
+            "Faulty Code": "k[i+3] ^= k[i+1];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "exp1 : for(i = 4; i < 16; i += 4)  k[i] ^= k[i-4],   k[i+1] ^= k[i-3],\n        k[i+2] ^= k[i-2], k[i+3] ^= k[i-1];",
+            "Faulty Code": "exp1 : for(i = 4; i < 16; i += 4) {\n#pragma HLS pipeline\n        k[i] ^= k[i-4];   k[i+1] ^= k[i-3];\n        k[i+2] ^= k[i-2]; k[i+3] ^= k[i-1];\n        }"
+        }
+    ]
+}

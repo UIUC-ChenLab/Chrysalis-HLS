@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void ellpack(TYPE nzval[N*L], int32_t cols[N*L], TYPE vec[N], TYPE out[N])",
+            "Faulty Code": "#pragma HLS interface port=vec ap_none"
+        }
+    ]
+}

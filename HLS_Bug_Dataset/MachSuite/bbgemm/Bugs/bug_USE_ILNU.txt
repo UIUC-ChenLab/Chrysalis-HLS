@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "TYPE temp_x, mul;",
+            "Faulty Code": "int temp_x, mul;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "loopk:for (k = 0; k < block_size; ++k){",
+            "Faulty Code": "#pragma HLS unroll factor=4\nloopk:for (k = 0; k < block_size; ++k){"
+        }
+    ]
+}

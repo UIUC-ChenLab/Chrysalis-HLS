@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "output_difference[i] = (((net_outputs[i]) - solutions[i]) * -1.0) * dactivations[i];",
+            "Faulty Code": "output_difference[i] = (((net_outputs[i]) - solutions[i]) * -1) * dactivations[i];"
+        }
+    ]
+}

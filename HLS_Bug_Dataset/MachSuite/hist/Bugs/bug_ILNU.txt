@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "hist_2 : for(i=0; i<4; i++) {",
+            "Faulty Code": "#pragma HLS unroll factor=2\n        hist_2 : for(i=0; i<4; i++) {"
+        }
+    ]
+}

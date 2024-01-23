@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "TYPE sum, Si;",
+            "Faulty Code": "int sum, Si;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "spmv_2 : for (j = tmp_begin; j < tmp_end; j++){",
+            "Faulty Code": "#pragma HLS pipeline\n        spmv_2 : for (j = tmp_begin; j < tmp_end; j++){"
+        }
+    ]
+}

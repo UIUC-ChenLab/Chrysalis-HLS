@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "loopjj:for (jj = 0; jj < row_size; jj += block_size){",
+            "Faulty Code": "#pragma HLS array_partition variable=m1 cyclic factor=block_size\ntype m1[N], TYPE m2[N], TYPE prod[N]){"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void bbgemm(TYPE m1[N], TYPE m2[N], TYPE prod[N]){",
+            "Faulty Code": "#pragma HLS INTERFACE port=m1 bram\nvoid bbgemm(TYPE m1, TYPE m2[N], TYPE prod[N]){"
+        }
+    ]
+}

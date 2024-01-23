@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "r2inv = 1.0/( dx*dx + dy*dy + dz*dz );",
+            "Faulty Code": "r2inv = 1/( dx*dx + dy*dy + dz*dz );"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void md( int n_points[blockSide][blockSide][blockSide], ... )",
+            "Faulty Code": "void md( int n_points, ... )"
+        }
+    ]
+}

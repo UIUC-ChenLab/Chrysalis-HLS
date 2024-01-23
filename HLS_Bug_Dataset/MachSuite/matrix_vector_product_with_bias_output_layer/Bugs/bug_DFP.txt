@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void matrix_vector_product_with_bias_output_layer(TYPE biases[possible_outputs],\n                                                 TYPE weights[nodes_per_layer*possible_outputs],\n                                                 TYPE activations[possible_outputs],\n                                                 TYPE input_activations[nodes_per_layer]){\n    int i, j;\n    for(j = 0; j < possible_outputs; j++){\n        activations[j] = (TYPE)0.0;\n        for (i = 0; i < nodes_per_layer; i++){\n            activations[j] += weights[j*nodes_per_layer + i] * input_activations[i];\n        }\n    }\n    add_bias_to_activations(biases, activations, possible_outputs);\n}",
+            "Faulty Code": "void matrix_vector_product_with_bias_output_layer(TYPE biases[possible_outputs],\n                                                 TYPE weights[nodes_per_layer*possible_outputs],\n                                                 TYPE activations[possible_outputs],\n                                                 TYPE input_activations[nodes_per_layer]){\n    #pragma HLS dataflow\n    int i, j;\n    for(j = 0; j < possible_outputs; j++){\n        activations[j] = (TYPE)0.0;\n        for (i = 0; i < nodes_per_layer; i++){\n            activations[j] += weights[j*nodes_per_layer + i] * input_activations[i];\n        }\n    }\n    add_bias_to_activations(biases, activations, possible_outputs);\n}"
+        }
+    ]
+}

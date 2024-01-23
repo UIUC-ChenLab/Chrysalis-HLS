@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "ellpack_2 : for (j=0; j<L; j++) {",
+            "Faulty Code": "ellpack_2 : for (j=0; j<L-1; j++) {"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void ellpack(TYPE nzval[N*L], int32_t cols[N*L], TYPE vec[N], TYPE out[N])",
+            "Faulty Code": "#pragma HLS dataflow\nvoid ellpack(TYPE nzval[N*L], int32_t cols[N*L], TYPE vec[N], TYPE out[N])"
+        }
+    ]
+}

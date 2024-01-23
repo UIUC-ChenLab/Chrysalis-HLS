@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "loop_j : for( j = 0; j < maxNeighbors; j++){",
+            "Faulty Code": "#pragma HLS dataflow\nloop_j : for( j = 0; j < maxNeighbors; j++){"
+        }
+    ]
+}

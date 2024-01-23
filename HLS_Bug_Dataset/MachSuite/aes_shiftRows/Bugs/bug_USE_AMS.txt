@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "i = buf[1]; buf[1] = buf[5];",
+            "Faulty Code": "i = buf[1]; buf[1] = buf[5] & 0xFF;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void aes_shiftRows(uint8_t *buf)",
+            "Faulty Code": "void aes_shiftRows(uint8_t buf[16])"
+        }
+    ]
+}

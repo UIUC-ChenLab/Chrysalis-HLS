@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void last_step_scan(int bucket[BUCKETSIZE], int sum[SCAN_RADIX])",
+            "Faulty Code": "#pragma HLS INTERFACE port=bram mode=s_axilite variable=sum"
+        }
+    ]
+}

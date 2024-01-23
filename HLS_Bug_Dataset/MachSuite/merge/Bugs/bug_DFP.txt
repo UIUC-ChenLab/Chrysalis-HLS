@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "merge_label3 : for(k=start; k<=stop; k++){",
+            "Faulty Code": "#pragma HLS dataflow\nmerge_label3 : for(k=start; k<=stop; k++){"
+        }
+    ]
+}

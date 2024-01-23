@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "FFT8(data_x, data_y);",
+            "Faulty Code": "#pragma HLS dataflow\nFFT8(data_x, data_y);"
+        }
+    ]
+}

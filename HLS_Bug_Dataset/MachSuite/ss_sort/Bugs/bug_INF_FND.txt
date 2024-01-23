@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "sort_1 : for (exp=0; exp<32; exp+=2) {",
+            "Faulty Code": "sort_1 : for (exp=0; exp<32; exp--) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "hist_2 : for(i=0; i<4; i++) {",
+            "Faulty Code": "#pragma HLS array_partition variable=bucket cyclic factor=5\n        hist_2 : for(i=0; i<4; i++) {"
+        }
+    ]
+}

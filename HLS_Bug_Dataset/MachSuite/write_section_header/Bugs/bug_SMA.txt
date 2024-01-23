@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "int write_section_header(int fd) { ... }",
+            "Faulty Code": "#pragma HLS interface port=fd bram\nint write_section_header(int fd) { ... }"
+        }
+    ]
+}

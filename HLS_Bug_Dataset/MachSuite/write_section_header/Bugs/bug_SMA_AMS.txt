@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "int write_section_header(int fd) {",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=fd\nint write_section_header(int fd) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "return 0;",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=return_value\nreturn 0;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void get_delta_matrix_weights3(TYPE delta_weights3[nodes_per_layer*possible_outputs],\n                               TYPE output_difference[possible_outputs],\n                               TYPE last_activations[nodes_per_layer]) {\n    int i, j;\n    for( i = 0; i < nodes_per_layer; i++) {\n        for( j = 0; j < possible_outputs; j++) {\n            delta_weights3[i*possible_outputs + j] = last_activations[i] * output_difference[j];\n        }\n    }\n}",
+            "Faulty Code": "void get_delta_matrix_weights3(TYPE delta_weights3[nodes_per_layer*possible_outputs],\n                               TYPE output_difference[possible_outputs],\n                               TYPE last_activations[nodes_per_layer]) {\n    int i, j;\n    #pragma HLS pipeline\n    for( i = 0; i < nodes_per_layer; i++) {\n        #pragma HLS pipeline\n        for( j = 0; j < possible_outputs; j++) {\n            delta_weights3[i*possible_outputs + j] = last_activations[i] * output_difference[j];\n        }\n    }\n}"
+        }
+    ]
+}

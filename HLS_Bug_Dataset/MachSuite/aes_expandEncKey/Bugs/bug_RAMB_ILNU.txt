@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "k[i+2] ^= k[i-2], k[i+3] ^= k[i-1];",
+            "Faulty Code": "k[i+2] ^= k[i+1], k[i+3] ^= k[i];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "exp1 : for(i = 4; i < 16; i += 4)",
+            "Faulty Code": "#pragma HLS unroll factor=2\nexp1 : for(i = 4; i < 16; i += 4)"
+        }
+    ]
+}

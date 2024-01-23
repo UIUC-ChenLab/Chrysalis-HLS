@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "temp_x = m1[i_row + k + kk];",
+            "Faulty Code": "temp_x = m1[i_row + k + kk + 1];"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "loopk:for (k = 0; k < block_size; ++k){",
+            "Faulty Code": "loopk:for (k = 0; k < block_size - 1; ++k){"
+        }
+    ]
+}

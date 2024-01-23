@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "bucket[bucket_indx] += bucket[bucket_indx-1];",
+            "Faulty Code": "bucket[bucket_indx] += bucket[bucket_indx];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "local_2 : for (i=1; i<SCAN_BLOCK; i++){",
+            "Faulty Code": "#pragma HLS pipeline\n        local_2 : for (i=1; i<SCAN_BLOCK; i++){"
+        }
+    ]
+}

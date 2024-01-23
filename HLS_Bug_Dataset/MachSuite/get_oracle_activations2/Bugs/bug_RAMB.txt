@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void get_oracle_activations2(TYPE weights3[nodes_per_layer*possible_outputs], ...)",
+            "Faulty Code": "#pragma HLS interface m_axi port=weights3 offset=slave bundle=gmem\nvoid get_oracle_activations2(TYPE weights3[nodes_per_layer*possible_outputs], ...)"
+        }
+    ]
+}

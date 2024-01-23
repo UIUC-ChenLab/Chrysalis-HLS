@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void add_bias_to_activations(TYPE biases[nodes_per_layer], TYPE activations[nodes_per_layer], int size) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid add_bias_to_activations(TYPE biases[nodes_per_layer], TYPE activations[nodes_per_layer], int size) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for( i = 0; i < size; i++){",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor( i = 0; i < size; i++){"
+        }
+    ]
+}

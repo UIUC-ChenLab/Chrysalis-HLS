@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void md( int n_points[blockSide][blockSide][blockSide],\n         dvector_t force[blockSide][blockSide][blockSide][densityFactor],\n         dvector_t position[blockSide][blockSide][blockSide][densityFactor] )",
+            "Faulty Code": "#pragma HLS INTERFACE port=n_points mode=s_axilite\n#pragma HLS INTERFACE port=force mode=s_axilite\n#pragma HLS INTERFACE port=position mode=s_axilite\nvoid md( int n_points[blockSide][blockSide][blockSide],\n         dvector_t force[blockSide][blockSide][blockSide][densityFactor],\n         dvector_t position[blockSide][blockSide][blockSide][densityFactor] )"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "register uint8_t i;",
+            "Faulty Code": "register uint8_t i = 0;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void aes_expandEncKey(uint8_t *k, uint8_t *rc)",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=k\nvoid aes_expandEncKey(uint8_t k[32], uint8_t *rc)"
+        }
+    ]
+}

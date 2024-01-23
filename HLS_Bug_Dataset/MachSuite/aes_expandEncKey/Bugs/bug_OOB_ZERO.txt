@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "k[1] ^= rj_sbox(k[30]);",
+            "Faulty Code": "k[32] ^= rj_sbox(k[1]);"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "*rc = F( *rc);",
+            "Faulty Code": "*rc = 0;"
+        }
+    ]
+}

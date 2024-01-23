@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void get_delta_matrix_weights3(TYPE delta_weights3[nodes_per_layer*possible_outputs], ...",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=delta_weights3\nvoid get_delta_matrix_weights3(TYPE delta_weights3[nodes_per_layer*possible_outputs], ..."
+        }
+    ]
+}

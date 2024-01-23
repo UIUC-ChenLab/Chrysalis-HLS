@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "k[i+3] ^= k[i-1];",
+            "Faulty Code": "#pragma HLS array_partition variable=k factor=3 complete\n    k[i+3] ^= k[i-1];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "exp2 : for(i = 20; i < 32; i += 4) k[i] ^= k[i-4],   k[i+1] ^= k[i-3],\n        k[i+2] ^= k[i-2], k[i+3] ^= k[i-1];",
+            "Faulty Code": "exp2 : for(i = 20; i < 32; i += 4) {\n    #pragma HLS pipeline\n    k[i] ^= k[i-4],   k[i+1] ^= k[i-3],\n    k[i+2] ^= k[i-2], k[i+3] ^= k[i-1];\n    #pragma HLS pipeline\n}"
+        }
+    ]
+}

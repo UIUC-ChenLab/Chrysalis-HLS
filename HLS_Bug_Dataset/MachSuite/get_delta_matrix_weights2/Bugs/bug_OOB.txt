@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "delta_weights2[i*nodes_per_layer + j] = last_activations[i] * output_difference[j];",
+            "Faulty Code": "delta_weights2[i*nodes_per_layer + j] = last_activations[j] * output_difference[i];"
+        }
+    ]
+}

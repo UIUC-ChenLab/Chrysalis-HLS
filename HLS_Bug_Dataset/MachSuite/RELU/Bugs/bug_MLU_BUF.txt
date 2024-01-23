@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for( i = 0; i < size; i++) {",
+            "Faulty Code": "for( i = 0; i < size - 1; i++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "dactivations[i] = activations[i]*(1.0-activations[i]);",
+            "Faulty Code": "dactivations[i] = activations[i + size/2]*(1.0-activations[i]);"
+        }
+    ]
+}

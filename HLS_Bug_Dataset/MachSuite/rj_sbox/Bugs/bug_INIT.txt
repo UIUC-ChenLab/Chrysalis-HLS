@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "sb = y = gf_mulinv(x);",
+            "Faulty Code": "uint8_t y, sb; // Missing initialization of 'sb' and 'y'"
+        }
+    ]
+}

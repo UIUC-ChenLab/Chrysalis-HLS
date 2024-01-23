@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "TYPE delx, dely, delz, r2inv;",
+            "Faulty Code": "TYPE delx = 0, dely = 0, delz = 0, r2inv = 0;"
+        }
+    ]
+}

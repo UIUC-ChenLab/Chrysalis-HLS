@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "level[starting_node] = 0;",
+            "Faulty Code": "level[starting_node] = MAX_LEVEL;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "level_t tmp_level = level[n]+1;",
+            "Faulty Code": "level_t tmp_level = level[n];"
+        }
+    ]
+}

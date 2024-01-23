@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];",
+            "Faulty Code": "cpkey : for (int j = 0; j < 15; j++)  buf[j] ^= (cpk[j] = key[j]), cpk[16+j] = key[16 + j];"
+        }
+    ]
+}

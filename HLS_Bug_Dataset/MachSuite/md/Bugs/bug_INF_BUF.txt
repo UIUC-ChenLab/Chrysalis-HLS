@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "loop_q: for( q_idx=0; q_idx< q_idx_range ; q_idx++ ) {",
+            "Faulty Code": "loop_q: for( q_idx=0; q_idx<= q_idx_range ; q_idx++ ) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "q = *(base_q + q_idx);",
+            "Faulty Code": "q = *(base_q + q_idx + densityFactor);"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "for(i=0; i < possible_outputs; i++) {\n    net_outputs[i] = exp(-activations[i])/sum;\n}",
+            "Faulty Code": "#pragma HLS dataflow\nfor(i=0; i < possible_outputs; i++) {\n    net_outputs[i] = exp(-activations[i])/sum;\n}"
+        }
+    ]
+}

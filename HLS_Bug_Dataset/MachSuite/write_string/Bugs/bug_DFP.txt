@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "status = write(fd, &arr[written], n-written);",
+            "Faulty Code": "#pragma HLS dataflow\nstatus = write(fd, &arr[written], n-written);"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "twiddles:for(j=1; j < 8; j++){",
+            "Faulty Code": "#pragma HLS pipeline\ntwiddles:for(j=1; j < 8; j++){"
+        }
+    ]
+}

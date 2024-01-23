@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void RELU(TYPE activations[nodes_per_layer], TYPE dactivations[nodes_per_layer], int size) {",
+            "Faulty Code": "void RELU(TYPE activations[nodes_per_layer], TYPE dactivations[nodes_per_layer], int size) {\n    #pragma HLS pipeline"
+        }
+    ]
+}

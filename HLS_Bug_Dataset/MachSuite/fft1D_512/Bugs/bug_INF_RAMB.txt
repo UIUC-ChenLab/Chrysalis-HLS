@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(tid = 0; tid < THREADS; tid++)",
+            "Faulty Code": "for(tid = 0; tid <= THREADS; tid++)"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "data_x[1] = work_x[1*stride+tid];",
+            "Faulty Code": "data_x[1] = work_x[tid];"
+        }
+    ]
+}

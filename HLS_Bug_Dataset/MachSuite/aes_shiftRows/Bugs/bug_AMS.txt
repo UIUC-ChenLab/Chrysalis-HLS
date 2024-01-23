@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void aes_shiftRows(uint8_t *buf)",
+            "Faulty Code": "#pragma HLS INTERFACE port=buf mode=ap_none"
+        }
+    ]
+}

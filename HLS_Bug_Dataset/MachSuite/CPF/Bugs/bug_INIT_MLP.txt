@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "k = 0;",
+            "Faulty Code": "int32_t k, q;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "c1 : for(q = 1; q < PATTERN_SIZE; q++){",
+            "Faulty Code": "#pragma HLS pipeline\nc1 : for(q = 1; q < PATTERN_SIZE; q++){"
+        }
+    ]
+}

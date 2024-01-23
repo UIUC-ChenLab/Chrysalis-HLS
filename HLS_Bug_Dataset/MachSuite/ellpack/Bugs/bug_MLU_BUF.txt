@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "ellpack_2 : for (j=0; j<L; j++) {",
+            "Faulty Code": "ellpack_2 : for (j=0; j<L-1; j++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "Si = nzval[j + i*L] * vec[cols[j + i*L]];",
+            "Faulty Code": "Si = nzval[j + i*L] * vec[cols[j + (i+1)*L]];"
+        }
+    ]
+}

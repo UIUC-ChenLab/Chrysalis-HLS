@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "data_y[0] = DATA_y[tid*8 + 0];",
+            "Faulty Code": "data_y[0] = DATA_y[tid*8 + 8];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "phi = ((-2*PI*reversed8[j]/n)*i);",
+            "Faulty Code": "phi = ((-2*PI*reversed8[j]/n)*(short)i);"
+        }
+    ]
+}

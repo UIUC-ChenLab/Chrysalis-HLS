@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "bucket_indx = ((a[a_indx] >> exp) & 0x3)*NUMOFBLOCKS + blockID + 1;",
+            "Faulty Code": "bucket_indx = ((a[a_indx] >> exp) & 0x3)*NUMOFBLOCKS + blockID;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "bucket_indx = ((a[blockID * ELEMENTSPERBLOCK + i] >> exp) & 0x3)*NUMOFBLOCKS + blockID;",
+            "Faulty Code": "bucket_indx = ((a[blockID * ELEMENTSPERBLOCK + i] >> exp) & 0x3)*NUMOFBLOCKS + blockID + 1;"
+        }
+    ]
+}

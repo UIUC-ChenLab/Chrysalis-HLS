@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void hist(int bucket[BUCKETSIZE], int a[SIZE], int exp)",
+            "Faulty Code": "void hist(int bucket[BUCKETSIZE], int a[SIZE], int exp) { int blockID, i, bucket_indx, a_indx; // other variables not initialized"
+        }
+    ]
+}

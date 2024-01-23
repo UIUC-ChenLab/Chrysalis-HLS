@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "status = write(fd, &arr[written], n-written);",
+            "Faulty Code": "status = write(fd, &arr[written+1], n-written);"
+        }
+    ]
+}

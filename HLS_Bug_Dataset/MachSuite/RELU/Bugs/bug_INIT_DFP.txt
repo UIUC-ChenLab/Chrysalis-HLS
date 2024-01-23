@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void RELU(TYPE activations[nodes_per_layer], TYPE dactivations[nodes_per_layer], int size) {\n    int i;\n    for( i = 0; i < size; i++) {\n        dactivations[i] = activations[i]*(1.0-activations[i]);\n        activations[i] = 1.0/(1.0+exp(-activations[i]));\n    }\n}",
+            "Faulty Code": "void RELU(TYPE activations[nodes_per_layer], TYPE dactivations[nodes_per_layer], int size) {\n    int i;\n    TYPE uninitialized_variable;\n    for( i = 0; i < size; i++) {\n        dactivations[i] = uninitialized_variable*(1.0-activations[i]); // Using uninitialized_variable instead of activations[i]\n        activations[i] = 1.0/(1.0+exp(-activations[i]));\n    }\n}"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void RELU(TYPE activations[nodes_per_layer], TYPE dactivations[nodes_per_layer], int size) {\n    int i;\n    for( i = 0; i < size; i++) {\n        dactivations[i] = activations[i]*(1.0-activations[i]);\n        activations[i] = 1.0/(1.0+exp(-activations[i]));\n    }\n}",
+            "Faulty Code": "void RELU(TYPE activations[nodes_per_layer], TYPE dactivations[nodes_per_layer], int size) {\n    int i;\n    #pragma HLS dataflow // Incorrect placement of dataflow pragma\n    for( i = 0; i < size; i++) {\n        dactivations[i] = activations[i]*(1.0-activations[i]);\n        activations[i] = 1.0/(1.0+exp(-activations[i]));\n    }\n}"
+        }
+    ]
+}

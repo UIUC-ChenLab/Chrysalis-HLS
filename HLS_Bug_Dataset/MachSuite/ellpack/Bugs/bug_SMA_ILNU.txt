@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void ellpack(TYPE nzval[N*L], int32_t cols[N*L], TYPE vec[N], TYPE out[N])",
+            "Faulty Code": "#pragma HLS INTERFACE port=nzval bram"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "ellpack_2 : for (j=0; j<L; j++) {",
+            "Faulty Code": "#pragma HLS UNROLL factor=4\n    ellpack_2 : for (j=0; j<L; j++) {"
+        }
+    ]
+}

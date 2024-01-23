@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void ss_sort(int a[SIZE], int b[SIZE], int bucket[BUCKETSIZE], int sum[SCAN_RADIX]){",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=sum\nvoid ss_sort(int a[SIZE], int b[SIZE], int bucket[BUCKETSIZE], int sum[SCAN_RADIX]){"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void update(int b[SIZE], int bucket[BUCKETSIZE], int a[SIZE], int exp)",
+            "Faulty Code": "#pragma HLS INTERFACE port=b mode=s_axilite\nvoid update(int b[SIZE], int bucket[BUCKETSIZE], int a[SIZE], int exp)"
+        }
+    ]
+}

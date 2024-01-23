@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(i=0; i < input_dimension; i++){",
+            "Faulty Code": "for(i=0; i <= input_dimension; i++){"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "norm += weights1[i*nodes_per_layer + j]*weights1[i*nodes_per_layer + j];",
+            "Faulty Code": "norm += (int)(weights1[i*nodes_per_layer + j]*weights1[i*nodes_per_layer + j]);"
+        }
+    ]
+}

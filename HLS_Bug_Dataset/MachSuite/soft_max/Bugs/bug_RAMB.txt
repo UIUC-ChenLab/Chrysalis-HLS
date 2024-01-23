@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void soft_max(TYPE net_outputs[possible_outputs], TYPE activations[possible_outputs]) {",
+            "Faulty Code": "void soft_max(TYPE net_outputs[possible_outputs], TYPE activations[possible_outputs]) {\n#pragma HLS interface m_axi port=activations"
+        }
+    ]
+}

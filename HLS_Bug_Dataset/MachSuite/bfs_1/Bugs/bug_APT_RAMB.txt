@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "node_index_t queue[N_NODES];",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=queue"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "level_t tmp_level = level[n]+1;",
+            "Faulty Code": "level_t tmp_level = level[n+1];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "loopi:for ( i = 0; i < row_size; ++i){",
+            "Faulty Code": "loopi:for ( i = 0; i <= row_size; ++i){"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void bbgemm(TYPE m1[N], TYPE m2[N], TYPE prod[N]){",
+            "Faulty Code": "void bbgemm(TYPE m1, TYPE m2[N], TYPE prod[N]){"
+        }
+    ]
+}

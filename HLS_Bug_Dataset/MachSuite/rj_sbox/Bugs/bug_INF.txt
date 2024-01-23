@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "\"\"\"uint8_t rj_sbox(uint8_t x)\n{\n   uint8_t y, sb;\n\n   sb = y = gf_mulinv(x);\n   y = (y<<1)|(y>>7); sb ^= y;  y = (y<<1)|(y>>7); sb ^= y;\n   y = (y<<1)|(y>>7); sb ^= y;  y = (y<<1)|(y>>7); sb ^= y;\n\n   return (sb ^ 0x63);\n}\"\"\"",
+            "Faulty Code": "\"\"\"uint8_t rj_sbox(uint8_t x)\n{\n   uint8_t y, sb;\n\n   sb = y = gf_mulinv(x);\n   while(1){\n       y = (y<<1)|(y>>7); sb ^= y;\n   }\n   return (sb ^ 0x63);\n}\"\"\""
+        }
+    ]
+}

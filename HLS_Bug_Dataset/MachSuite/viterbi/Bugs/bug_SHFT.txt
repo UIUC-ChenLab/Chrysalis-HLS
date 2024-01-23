@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "min_p = llike[t-1][prev] + transition[prev*N_STATES+curr] + emission[curr*N_TOKENS+obs[t]];",
+            "Faulty Code": "min_p = llike[t-1][prev] + transition[prev*N_STATES+curr] + emission[curr*N_TOKENS+(obs[t] << (32 - N_TOKENS))];"
+        }
+    ]
+}

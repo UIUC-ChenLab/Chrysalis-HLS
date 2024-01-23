@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "loop_queue: for( dummy=0; dummy<N_NODES; dummy++ ) {  // Typically while(not_empty(queue)){",
+            "Faulty Code": "loop_queue: for( dummy=0; ; dummy++ ) {  // Typically while(not_empty(queue)){"
+        }
+    ]
+}

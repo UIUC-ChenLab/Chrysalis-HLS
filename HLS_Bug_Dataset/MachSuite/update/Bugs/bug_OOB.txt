@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "b[bucket[bucket_indx]] = a[a_indx];",
+            "Faulty Code": "b[bucket[bucket_indx]++] = a[a_indx];"
+        }
+    ]
+}

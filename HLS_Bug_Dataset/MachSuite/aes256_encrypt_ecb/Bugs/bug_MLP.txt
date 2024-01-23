@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "ecb3 : for(i = 1, rcon = 1; i < 14; ++i)",
+            "Faulty Code": "ecb3 : for(i = 1, rcon = 1; i < 14; ++i) { #pragma HLS pipeline"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "merge(a, from, mid, to);",
+            "Faulty Code": "#pragma HLS dataflow\nmerge(a, from, mid, to);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "i = buf[1]; buf[1] = buf[5]; buf[5] = buf[9]; buf[9] = buf[13]; buf[13] = i;",
+            "Faulty Code": "i = buf[1]; buf[1] = buf[5]; buf[5] = buf[9]; buf[9] = buf[14]; buf[14] = i;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void aes_shiftRows(uint8_t *buf)",
+            "Faulty Code": "#pragma HLS INTERFACE port=buf bram\nvoid aes_shiftRows(uint8_t buf[16])"
+        }
+    ]
+}

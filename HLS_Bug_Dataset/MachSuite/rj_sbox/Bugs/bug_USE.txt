@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "y = (y<<1)|(y>>7);",
+            "Faulty Code": "y = ((int8_t)y<<1)|((int8_t)y>>7);"
+        }
+    ]
+}

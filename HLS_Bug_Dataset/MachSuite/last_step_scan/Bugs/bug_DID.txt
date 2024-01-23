@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "int bucket[BUCKETSIZE], int sum[SCAN_RADIX]",
+            "Faulty Code": "#pragma HLS array_partition dim=3 variable=bucket complete"
+        }
+    ]
+}

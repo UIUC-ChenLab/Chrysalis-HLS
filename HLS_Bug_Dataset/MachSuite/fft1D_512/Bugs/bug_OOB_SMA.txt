@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "work_x[7*stride+tid] = data_x[reversed[7]];",
+            "Faulty Code": "work_x[8*stride+tid] = data_x[reversed[7]];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void fft1D_512(TYPE work_x[512], TYPE work_y[512])",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=work_x\nvoid fft1D_512(TYPE work_x[512], TYPE work_y[512])"
+        }
+    ]
+}

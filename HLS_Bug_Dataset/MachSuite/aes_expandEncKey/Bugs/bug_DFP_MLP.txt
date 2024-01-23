@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void aes_expandEncKey(uint8_t *k, uint8_t *rc)",
+            "Faulty Code": "#pragma HLS dataflow\nvoid aes_expandEncKey(uint8_t *k, uint8_t *rc)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "exp1 : for(i = 4; i < 16; i += 4)  k[i] ^= k[i-4],   k[i+1] ^= k[i-3],\n        k[i+2] ^= k[i-2], k[i+3] ^= k[i-1];",
+            "Faulty Code": "exp1 : for(i = 4; i < 16; i += 4)  { #pragma HLS pipeline\n    k[i] ^= k[i-4],   k[i+1] ^= k[i-3],\n    k[i+2] ^= k[i-2], k[i+3] ^= k[i-1];\n}"
+        }
+    ]
+}

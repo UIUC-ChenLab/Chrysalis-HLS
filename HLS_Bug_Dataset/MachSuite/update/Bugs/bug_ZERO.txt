@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int i, blockID, bucket_indx, a_indx;",
+            "Faulty Code": "int i = 0, blockID = 0, bucket_indx = 0, a_indx = 0;"
+        }
+    ]
+}

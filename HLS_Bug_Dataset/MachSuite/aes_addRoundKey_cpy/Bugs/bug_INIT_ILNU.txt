@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "register uint8_t i = 16;",
+            "Faulty Code": "register uint8_t i;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];",
+            "Faulty Code": "#pragma HLS unroll factor=4\ncpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "middle:for(j=0;j<col_size;j++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\n        middle:for(j=0;j<col_size;j++) {"
+        }
+    ]
+}

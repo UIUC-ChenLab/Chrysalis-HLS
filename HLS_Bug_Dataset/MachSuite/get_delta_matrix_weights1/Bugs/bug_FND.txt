@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "void get_delta_matrix_weights1(TYPE delta_weights1[input_dimension*nodes_per_layer], TYPE output_difference[nodes_per_layer], TYPE last_activations[input_dimension])",
+            "Faulty Code": "#pragma HLS array_partition variable=delta_weights1 factor=7"
+        }
+    ]
+}

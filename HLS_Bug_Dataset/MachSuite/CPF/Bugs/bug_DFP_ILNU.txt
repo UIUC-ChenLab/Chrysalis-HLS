@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void CPF(char pattern[PATTERN_SIZE], int32_t kmpNext[PATTERN_SIZE]) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid CPF(char pattern[PATTERN_SIZE], int32_t kmpNext[PATTERN_SIZE]) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "c2 : while(k > 0 && pattern[k] != pattern[q]){",
+            "Faulty Code": "#pragma HLS unroll factor=4\nc2 : while(k > 0 && pattern[k] != pattern[q]){"
+        }
+    ]
+}

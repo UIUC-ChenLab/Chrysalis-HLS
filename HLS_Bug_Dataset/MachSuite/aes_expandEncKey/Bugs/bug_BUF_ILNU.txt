@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "k[0] ^= rj_sbox(k[29]) ^ (*rc);",
+            "Faulty Code": "k[0] ^= rj_sbox(k[32]) ^ (*rc);"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "exp1 : for(i = 4; i < 16; i += 4)  k[i] ^= k[i-4],   k[i+1] ^= k[i-3], k[i+2] ^= k[i-2], k[i+3] ^= k[i-1];",
+            "Faulty Code": "#pragma HLS UNROLL factor=2\nexp1 : for(i = 4; i < 16; i += 4)  k[i] ^= k[i-4],   k[i+1] ^= k[i-3], k[i+2] ^= k[i-2], k[i+3] ^= k[i-1];"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void RELU(TYPE activations[nodes_per_layer], TYPE dactivations[nodes_per_layer], int size) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=activations mode=ap_none"
+        }
+    ]
+}

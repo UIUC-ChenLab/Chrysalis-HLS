@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "temp = (TYPE)0;",
+            "Faulty Code": "TYPE temp;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "temp = (TYPE)0;",
+            "Faulty Code": "temp = (TYPE)1;"
+        }
+    ]
+}

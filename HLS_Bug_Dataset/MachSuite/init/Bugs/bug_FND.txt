@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "void init(int bucket[BUCKETSIZE])",
+            "Faulty Code": "#pragma HLS array_partition variable=bucket factor=3 complete\nvoid init(int bucket[BUCKETSIZE])"
+        }
+    ]
+}

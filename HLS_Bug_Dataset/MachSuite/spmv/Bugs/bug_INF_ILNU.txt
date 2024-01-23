@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "spmv_1 : for(i = 0; i < N; i++)",
+            "Faulty Code": "spmv_1 : for(i = 0; ; i++)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "spmv_2 : for (j = tmp_begin; j < tmp_end; j++)",
+            "Faulty Code": "#pragma HLS unroll factor = 4\n        spmv_2 : for (j = tmp_begin; j < tmp_end; j++)"
+        }
+    ]
+}

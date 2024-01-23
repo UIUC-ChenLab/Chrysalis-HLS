@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "hist_2 : for(i=0; i<4; i++) {",
+            "Faulty Code": "#pragma HLS array_partition variable=bucket factor=3\ncyclic partitioning\nhist_2 : for(i=0; i<4; i++) {"
+        }
+    ]
+}

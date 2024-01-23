@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "bucket_indx = ((a[a_indx] >> exp) & 0x3)*NUMOFBLOCKS + blockID + 1;",
+            "Faulty Code": "bucket_indx = ((a[a_indx] >> exp) & 0x3)*NUMOFBLOCKS + blockID - 1;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void hist(int bucket[BUCKETSIZE], int a[SIZE], int exp)",
+            "Faulty Code": "void hist(int bucket[BUCKETSIZE], int a[SIZE], int exp) #pragma HLS interface mode=ap_fifo port=a"
+        }
+    ]
+}

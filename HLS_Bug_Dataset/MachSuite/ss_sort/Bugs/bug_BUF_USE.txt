@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "bucket_indx = ((a[a_indx] >> exp) & 0x3)*NUMOFBLOCKS + blockID + 1;",
+            "Faulty Code": "bucket_indx = ((a[a_indx] >> exp) & 0x3)*NUMOFBLOCKS + blockID;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "sum[radixID] = sum[radixID-1] + bucket[bucket_indx];",
+            "Faulty Code": "sum[radixID] = sum[radixID-1] + (short)bucket[bucket_indx];"
+        }
+    ]
+}

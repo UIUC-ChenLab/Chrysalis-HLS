@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "k = kmpNext[q];",
+            "Faulty Code": "k = kmpNext[k];"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "kmpNext[q] = k;",
+            "Faulty Code": "kmpNext[q+1] = k;"
+        }
+    ]
+}

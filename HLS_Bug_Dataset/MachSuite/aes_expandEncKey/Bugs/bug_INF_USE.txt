@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "exp1 : for(i = 4; i < 16; i += 4)",
+            "Faulty Code": "exp1 : for(i = 4; i >= 16; i += 4)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "y = (y<<1)|(y>>7);",
+            "Faulty Code": "y = (y<<1)|(y>>8);"
+        }
+    ]
+}

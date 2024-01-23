@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void aes_addRoundKey_cpy(uint8_t *buf, uint8_t *key, uint8_t *cpk)",
+            "Faulty Code": "void aes_addRoundKey_cpy(uint8_t *buf, uint8_t *key, uint8_t *cpk) #pragma HLS interface axis port=buf"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];",
+            "Faulty Code": "cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i+1]), cpk[16+i] = key[17 + i];"
+        }
+    ]
+}

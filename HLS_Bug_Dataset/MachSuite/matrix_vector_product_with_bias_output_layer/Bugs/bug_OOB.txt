@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "void add_bias_to_activations(TYPE biases[nodes_per_layer], \n                               TYPE activations[nodes_per_layer],\n                               int size) {\n    int i;\n    for( i = 0; i < size; i++){\n        activations[i] = activations[i] + biases[i];\n    }\n}",
+            "Faulty Code": "void add_bias_to_activations(TYPE biases[possible_outputs], \n                               TYPE activations[possible_outputs],\n                               int size) {\n    int i;\n    for( i = 0; i < size; i++){\n        activations[i] = activations[i] + biases[i];\n    }\n}"
+        }
+    ]
+}

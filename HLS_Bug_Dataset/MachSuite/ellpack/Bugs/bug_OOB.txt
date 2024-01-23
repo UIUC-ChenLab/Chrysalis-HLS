@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "Si = nzval[j + i*L] * vec[cols[j + i*L]];",
+            "Faulty Code": "Si = nzval[j + i*L] * vec[cols[j + i*(L+1)]];"
+        }
+    ]
+}

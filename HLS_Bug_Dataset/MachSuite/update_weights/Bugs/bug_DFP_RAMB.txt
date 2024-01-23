@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void update_weights(TYPE weights1[input_dimension*nodes_per_layer], ...",
+            "Faulty Code": "#pragma HLS dataflow\nvoid update_weights(TYPE weights1[input_dimension*nodes_per_layer], ..."
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "weights1[i*nodes_per_layer + j] -= (d_weights1[i*nodes_per_layer + j] * learning_rate);",
+            "Faulty Code": "weights1[i + j] -= (d_weights1[i + j] * learning_rate);"
+        }
+    ]
+}

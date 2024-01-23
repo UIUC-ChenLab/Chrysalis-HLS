@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];",
+            "Faulty Code": "cpkey : while (i--)  buf[16+i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void aes_addRoundKey_cpy(uint8_t *buf, uint8_t *key, uint8_t *cpk) {\n    register uint8_t i = 16;\n\n    cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];\n}",
+            "Faulty Code": "void aes_addRoundKey_cpy(uint8_t *buf, uint8_t *key, uint8_t *cpk) {\n    #pragma HLS interface m_axi port=cpk offset=slave\n    register uint8_t i = 16;\n\n    cpkey : while (i--)  buf[i] ^= (cpk[i] = key[i]), cpk[16+i] = key[16 + i];\n}"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "Si = nzval[j + i*L] * vec[cols[j + i*L]];",
+            "Faulty Code": "Si = nzval[j + i*L] * vec[cols[j + (i+1)*L]];"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "void ellpack(TYPE nzval[N*L], int32_t cols[N*L], TYPE vec[N], TYPE out[N])",
+            "Faulty Code": "#pragma HLS array_partition variable=nzval dim=3 complete"
+        }
+    ]
+}

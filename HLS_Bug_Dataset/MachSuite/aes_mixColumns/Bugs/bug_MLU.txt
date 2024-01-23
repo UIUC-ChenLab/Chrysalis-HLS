@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "mix : for (i = 0; i < 16; i += 4)",
+            "Faulty Code": "mix : for (i = 0; i < 15; i += 4)"
+        }
+    ]
+}

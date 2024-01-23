@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void aes_addRoundKey_cpy(uint8_t *buf, uint8_t *key, uint8_t *cpk)",
+            "Faulty Code": "#pragma HLS interface m_axi port=buf offset=slave bundle=gmem\n#pragma HLS interface m_axi port=key offset=slave bundle=gmem\n#pragma HLS interface m_axi port=cpk offset=slave bundle=gmem\nvoid aes_addRoundKey_cpy(uint8_t *buf, uint8_t *key, uint8_t *cpk)"
+        }
+    ]
+}

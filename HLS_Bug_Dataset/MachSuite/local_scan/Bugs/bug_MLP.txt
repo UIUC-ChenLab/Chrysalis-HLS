@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void local_scan(int bucket[BUCKETSIZE]) { /*...*/ }",
+            "Faulty Code": "void local_scan(int bucket[BUCKETSIZE]) {\n    #pragma HLS pipeline\n    int radixID, i, bucket_indx;\n    local_1 : for (radixID=0; radixID<SCAN_RADIX; radixID++) {\n        #pragma HLS pipeline\n        local_2 : for (i=1; i<SCAN_BLOCK; i++){\n            bucket_indx = radixID*SCAN_BLOCK + i;\n            bucket[bucket_indx] += bucket[bucket_indx-1];\n        }\n    }\n}"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "jidx = NL[i*maxNeighbors + j];",
+            "Faulty Code": "jidx = NL[i*(maxNeighbors+1) + j];"
+        }
+    ]
+}

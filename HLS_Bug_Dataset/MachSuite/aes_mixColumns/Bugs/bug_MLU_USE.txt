@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "mix : for (i = 0; i < 16; i += 4)",
+            "Faulty Code": "mix : for (i = 0; i < 16; i += 5)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "return (x & 0x80) ? ((x << 1) ^ 0x1b) : (x << 1);",
+            "Faulty Code": "return (x & 0x80) ? ((int)(x << 1) ^ 0x1b) : (x << 1);"
+        }
+    ]
+}

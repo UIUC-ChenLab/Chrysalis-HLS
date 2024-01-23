@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "TYPE sum = out[i];",
+            "Faulty Code": "TYPE sum = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "ellpack_2 : for (j=0; j<L; j++) {",
+            "Faulty Code": "#pragma HLS pipeline\n    ellpack_2 : for (j=0; j<L; j++) {"
+        }
+    ]
+}

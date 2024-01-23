@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "spmv_2 : for (j = tmp_begin; j < tmp_end; j++)",
+            "Faulty Code": "spmv_2 : for (j = tmp_begin; j <= tmp_end; j++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "sum = 0;",
+            "Faulty Code": "sum = Si;"
+        }
+    ]
+}

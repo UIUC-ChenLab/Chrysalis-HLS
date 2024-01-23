@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "written += status;",
+            "Faulty Code": "written++;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "status = write(fd, &arr[written], n-written);",
+            "Faulty Code": "status = write(fd, arr, n); // Incorrectly writes from the start of the array each time"
+        }
+    ]
+}

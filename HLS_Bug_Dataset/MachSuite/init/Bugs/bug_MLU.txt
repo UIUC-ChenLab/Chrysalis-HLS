@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "init_1 : for (i=0; i<BUCKETSIZE; i++) {",
+            "Faulty Code": "init_1 : for (i=0; i<BUCKETSIZE-1; i++) {"
+        }
+    ]
+}

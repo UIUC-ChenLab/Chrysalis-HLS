@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void soft_max(TYPE net_outputs[possible_outputs], TYPE activations[possible_outputs]) {",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=net_outputs\n#pragma HLS interface mode=ap_fifo port=activations\nvoid soft_max(TYPE net_outputs[possible_outputs], TYPE activations[possible_outputs]) {"
+        }
+    ]
+}

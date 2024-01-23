@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "norm = 0.0;",
+            "Faulty Code": "double norm;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for(i=0; i < input_dimension; i++){\n    for(j = 0; j < nodes_per_layer; j++){",
+            "Faulty Code": "for(i=0; i < input_dimension; i++){\n    #pragma HLS pipeline\n    for(j = 0; j < nodes_per_layer; j++){\n        #pragma HLS pipeline"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void add_bias_to_activations(TYPE biases[nodes_per_layer], TYPE activations[nodes_per_layer], int size) {",
+            "Faulty Code": "#pragma HLS interface m_axi port=biases offset=slave bundle=gmem\n#pragma HLS interface m_axi port=activations offset=slave bundle=gmem\nvoid add_bias_to_activations(TYPE biases[nodes_per_layer], TYPE activations[nodes_per_layer], int size) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int i;",
+            "Faulty Code": "int i = size;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "dactivations[i] = activations[i]*(1.0-activations[i]);",
+            "Faulty Code": "dactivations[i] = activations[i+size]*(1.0-activations[i]);"
+        }
+    ]
+}

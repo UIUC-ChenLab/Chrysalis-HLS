@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "sum[0] = 0;",
+            "Faulty Code": "// sum[0] = 0;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void ss_sort(int a[SIZE], int b[SIZE], int bucket[BUCKETSIZE], int sum[SCAN_RADIX]){",
+            "Faulty Code": "void ss_sort(int a[SIZE], int b[SIZE], int bucket[BUCKETSIZE], int sum[SCAN_RADIX]){\n#pragma HLS INTERFACE port=bram storage_type=ram_1d variable=bucket"
+        }
+    ]
+}

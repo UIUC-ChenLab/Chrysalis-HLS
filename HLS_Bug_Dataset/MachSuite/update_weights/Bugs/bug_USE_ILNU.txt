@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "norm += weights1[i*nodes_per_layer + j]*weights1[i*nodes_per_layer + j];",
+            "Faulty Code": "norm += weights1[i*nodes_per_layer + j]*(int)weights1[i*nodes_per_layer + j];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for(i=0; i < nodes_per_layer; i++){\n    for(j = 0; j < nodes_per_layer; j++){\n        weights2[i*nodes_per_layer + j] -= (d_weights2[i*nodes_per_layer + j] * learning_rate);\n        norm += weights2[i*nodes_per_layer + j]*weights2[i*nodes_per_layer + j];\n    }\n}",
+            "Faulty Code": "for(i=0; i < nodes_per_layer; i++){\n    #pragma HLS unroll factor=4\n    for(j = 0; j < nodes_per_layer; j++){\n        weights2[i*nodes_per_layer + j] -= (d_weights2[i*nodes_per_layer + j] * learning_rate);\n        norm += weights2[i*nodes_per_layer + j]*weights2[i*nodes_per_layer + j];\n    }\n}"
+        }
+    ]
+}

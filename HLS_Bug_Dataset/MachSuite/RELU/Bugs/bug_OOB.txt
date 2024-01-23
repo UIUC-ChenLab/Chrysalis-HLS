@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for( i = 0; i < size; i++) {\n    dactivations[i] = activations[i]*(1.0-activations[i]);\n    activations[i] = 1.0/(1.0+exp(-activations[i]));\n}",
+            "Faulty Code": "for( i = 0; i <= size; i++) {\n    dactivations[i] = activations[i]*(1.0-activations[i]);\n    activations[i] = 1.0/(1.0+exp(-activations[i]));\n}"
+        }
+    ]
+}

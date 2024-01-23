@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "edge_index_t cnt;",
+            "Faulty Code": "edge_index_t cnt = level_counts[horizon+1];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "data_y[7] = work_y[7*stride+tid];",
+            "Faulty Code": "data_y[8] = work_y[7*stride+tid];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "smem[0*sx+offset] = DATA_x[tid*8 + 0];",
+            "Faulty Code": "smem[0*65+offset] = DATA_x[tid*8 + 0];"
+        }
+    ]
+}

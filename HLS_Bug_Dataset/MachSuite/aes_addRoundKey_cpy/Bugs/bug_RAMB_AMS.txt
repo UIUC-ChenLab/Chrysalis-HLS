@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void aes_addRoundKey_cpy(uint8_t *buf, uint8_t *key, uint8_t *cpk)",
+            "Faulty Code": "void aes_addRoundKey_cpy(uint8_t *buf, uint8_t *key, uint8_t *cpk) {\n#pragma HLS interface m_axi port=buf\n#pragma HLS interface m_axi port=key\n#pragma HLS interface m_axi port=cpk\n}"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void aes_addRoundKey_cpy(uint8_t *buf, uint8_t *key, uint8_t *cpk)",
+            "Faulty Code": "void aes_addRoundKey_cpy(uint8_t *buf, uint8_t *key, uint8_t *cpk) {\n#pragma HLS interface ap_none port=buf\n}"
+        }
+    ]
+}

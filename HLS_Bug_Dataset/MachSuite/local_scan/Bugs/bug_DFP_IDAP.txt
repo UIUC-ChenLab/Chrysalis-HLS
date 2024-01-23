@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void local_scan(int bucket[BUCKETSIZE]) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid local_scan(int bucket[BUCKETSIZE]) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void local_scan(int bucket[BUCKETSIZE]) {",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=bucket\nvoid local_scan(int bucket[BUCKETSIZE]) {"
+        }
+    ]
+}
