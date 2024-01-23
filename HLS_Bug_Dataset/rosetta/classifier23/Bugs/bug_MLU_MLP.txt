@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "coord[8] = 0;\n  coord[9] = 0;\n  coord[10] = 0;\n  coord[11] = 0;",
+            "Faulty Code": "coord[8] = 0;\n  coord[9] = 0;\n  coord[11] = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "int classifier23( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev ){",
+            "Faulty Code": "#pragma HLS pipeline\nint classifier23( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev ){"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for(int ct=0;ct<2;ct++){\n#pragma HLS unroll",
+            "Faulty Code": "for(int ct=0;ct<2;ct++){\n#pragma HLS pipeline"
+        }
+    ]
+}

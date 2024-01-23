@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "I[WINDOW_SIZE-1][2*WINDOW_SIZE-1] = IMG1_data[y][x];",
+            "Faulty Code": "I[WINDOW_SIZE][2*WINDOW_SIZE-1] = IMG1_data[y][x];"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "SII[0][0] = 0;\n  SII[0][1] = 0;\n  SII[1][0] = 0;\n  SII[1][1] = 0;",
+            "Faulty Code": "SII[0][0] = 0;\n  SII[0][1] = 0;\n  SII[1][0] = 0;"
+        }
+    ]
+}

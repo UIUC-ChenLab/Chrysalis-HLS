@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "LutInFixed inLut = (LutInFixed)exponent;",
+            "Faulty Code": "LutInFixed inLut = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

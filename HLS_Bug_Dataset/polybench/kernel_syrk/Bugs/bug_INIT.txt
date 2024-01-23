@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "DATA_TYPE POLYBENCH_2D(C,NI,NI,ni,ni),",
+            "Faulty Code": "DATA_TYPE C[NI][NI]; // Assuming C is not initialized prior to this function call"
+        }
+    ]
+}

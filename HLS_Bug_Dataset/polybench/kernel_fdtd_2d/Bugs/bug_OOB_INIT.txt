@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ey[0][j] = _fict_[t];",
+            "Faulty Code": "ey[0][_PB_NY] = _fict_[t];"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "ey[i][j] = ey[i][j] - 0.5*(hz[i][j]-hz[i-1][j]);",
+            "Faulty Code": "ey[i][j] = uninitialized_variable - 0.5*(hz[i][j]-hz[i-1][j]);"
+        }
+    ]
+}

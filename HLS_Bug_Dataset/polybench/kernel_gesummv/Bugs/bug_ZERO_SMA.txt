@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "tmp[i] = 0;",
+            "Faulty Code": "tmp[i] = SOME_NON_ZERO_VALUE;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "DATA_TYPE POLYBENCH_1D(y,N,n)",
+            "Faulty Code": "#pragma HLS interface port=y bram"
+        }
+    ]
+}

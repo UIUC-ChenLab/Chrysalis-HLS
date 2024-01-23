@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "buf.insert_pixel(tmp,0,2);",
+            "Faulty Code": "buf.insert_pixel(0,0,2);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "#pragma HLS pipeline II=1\n      #pragma HLS pipeline II=1"
+        }
+    ]
+}

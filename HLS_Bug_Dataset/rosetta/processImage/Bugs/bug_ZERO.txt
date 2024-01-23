@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "SII[0][0] = 0; SII[0][1] = 0; SII[1][0] = 0; SII[1][1] = 0;",
+            "Faulty Code": "SII[0][0] = 0; SII[0][1] = 1; SII[1][0] = 1; SII[1][1] = 0;"
+        }
+    ]
+}

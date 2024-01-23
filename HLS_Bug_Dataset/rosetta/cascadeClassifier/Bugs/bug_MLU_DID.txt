@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=coord complete dim=1"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "stage_sum+= s1[8] + s1[9] + s1[10] + s1[11] + s1[12] + s1[13] + s1[14] + s1[15];",
+            "Faulty Code": "stage_sum+= s1[8] + s1[9] + s1[10] + s1[11] + s1[12] + s1[13] + s1[14];"
+        }
+    ]
+}

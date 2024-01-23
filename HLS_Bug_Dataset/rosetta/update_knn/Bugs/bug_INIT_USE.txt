@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int max_dist_id = K_CONST+1;",
+            "Faulty Code": "int max_dist_id;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "int dist = 0;",
+            "Faulty Code": "int dist;"
+        }
+    ]
+}

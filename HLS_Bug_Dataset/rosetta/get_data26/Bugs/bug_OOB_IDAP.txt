@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint18_t a;",
+            "Faulty Code": "uint18_t a = aa[513]; // If ROWS*COLS <= 513, this would be out-of-bounds"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=aa"
+        }
+    ]
+}

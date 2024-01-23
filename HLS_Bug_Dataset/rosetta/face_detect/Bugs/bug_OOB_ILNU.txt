@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "L[WINDOW_SIZE-2][x] = IMG1_data[y][x];",
+            "Faulty Code": "L[WINDOW_SIZE-1][x] = IMG1_data[y][x];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "SetIj: for( j = 0; j < 2*WINDOW_SIZE-1; j++){\n#pragma HLS unroll\nSetIi: for( i = 0; i < WINDOW_SIZE; i++ ){",
+            "Faulty Code": "SetIj: for( j = 0; j < 2*WINDOW_SIZE-1; j++){\n#pragma HLS unroll factor=2\nSetIi: for( i = 0; i < WINDOW_SIZE; i++ ){"
+        }
+    ]
+}

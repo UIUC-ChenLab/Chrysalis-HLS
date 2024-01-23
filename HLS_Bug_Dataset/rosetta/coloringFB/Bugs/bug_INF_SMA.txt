@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "COLORING_FB_INIT_ROW: for ( bit16 i = 0; i < MAX_X; i++)",
+            "Faulty Code": "COLORING_FB_INIT_ROW: for ( bit16 i = 0; i <= MAX_X; i++)"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void coloringFB(bit16 counter,  bit16 size_pixels, Pixel pixels[], bit8 frame_buffer[MAX_X][MAX_Y])",
+            "Faulty Code": "#pragma HLS INTERFACE port=frame_buffer bram"
+        }
+    ]
+}

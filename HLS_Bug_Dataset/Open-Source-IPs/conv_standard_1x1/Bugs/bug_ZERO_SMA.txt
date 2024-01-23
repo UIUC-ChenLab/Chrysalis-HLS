@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "FIX_32_12 tmp[DEPTH];",
+            "Faulty Code": "FIX_32_12 tmp[DEPTH] = {0};"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=top cyclic dim=1 factor=16",
+            "Faulty Code": "#pragma HLS INTERFACE port=top bram"
+        }
+    ]
+}

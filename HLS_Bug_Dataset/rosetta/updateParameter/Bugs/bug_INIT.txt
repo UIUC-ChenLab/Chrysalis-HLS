@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "FeatureType param[NUM_FEATURES], FeatureType grad[NUM_FEATURES]",
+            "Faulty Code": "FeatureType param[NUM_FEATURES]; // Missing initialization, grad is correctly passed as an argument"
+        }
+    ]
+}

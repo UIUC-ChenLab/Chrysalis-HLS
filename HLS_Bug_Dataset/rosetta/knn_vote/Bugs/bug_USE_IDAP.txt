@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "label_list[r-1] = i / (PAR_FACTOR / 10);",
+            "Faulty Code": "label_list[r-1] = i / (PAR_FACTOR / 10); // potential unintended sign extension if PAR_FACTOR is not a multiple of 10"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS pipeline II=2 // Incorrect II for the sequential access pattern expected for ap_fifo/axis interfaces"
+        }
+    ]
+}

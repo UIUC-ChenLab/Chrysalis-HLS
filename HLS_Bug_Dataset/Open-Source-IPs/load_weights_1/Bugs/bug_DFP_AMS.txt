@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void load_weights(ap_fixed<12,1,AP_TRN_ZERO,AP_SAT> weight_buf[96][3], hls::stream<int512> &stream512_in)",
+            "Faulty Code": "void load_weights(ap_fixed<12,1,AP_TRN_ZERO,AP_SAT> weight_buf[96][3], hls::stream<int512> &stream512_in) {\n#pragma HLS INTERFACE port=weight_buf mode=s_axilite"
+        }
+    ]
+}

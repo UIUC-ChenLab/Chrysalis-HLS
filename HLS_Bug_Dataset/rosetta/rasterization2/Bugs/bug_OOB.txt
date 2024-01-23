@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "RAST2: for ( bit16 k = 0; k < max_index[0]; k++ )",
+            "Faulty Code": "RAST2: for ( bit16 k = 0; k <= max_index[0]; k++ )"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "grad[i*PAR_FACTOR+j] = (scale * feature[i*PAR_FACTOR+j]);",
+            "Faulty Code": "grad[i*PAR_FACTOR+j] = (FeatureType)(scale * feature[i*PAR_FACTOR+j]);"
+        }
+    ]
+}

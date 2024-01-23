@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int sum0, sum1, sum2, final_sum;",
+            "Faulty Code": "int sum0, sum1, sum2, final_sum = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "coord[0] = II[1][12];\n  coord[1] = II[1][16];\n  coord[2] = II[10][12];\n  coord[3] = II[10][16];\n\n  coord[4] = II[1][12];\n  coord[5] = II[1][14];\n  coord[6] = II[10][12];\n  coord[7] = II[10][14];",
+            "Faulty Code": "coord[0] = II[1][12];\n  coord[1] = II[10][16];\n  coord[2] = II[1][12];\n  coord[3] = II[10][14];\n\n  coord[4] = II[1][16];\n  coord[5] = II[10][12];\n  coord[6] = II[1][14];\n  coord[7] = II[10][12];"
+        }
+    ]
+}

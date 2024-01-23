@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "TENSOR_WEIGHT_X_TMP_INIT: for(int i=0; i<6; i++)",
+            "Faulty Code": "TENSOR_WEIGHT_X_TMP_INIT: for(int i=0; i<5; i++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "TENSOR_WEIGHT_X_ACC_INIT: for(int k =0; k<6; k++)",
+            "Faulty Code": "TENSOR_WEIGHT_X_ACC_INIT: for(int k =0; k<6; k++) acc.val[k] = 0;"
+        }
+    ]
+}

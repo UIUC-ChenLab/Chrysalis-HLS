@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_fixed<12,1,AP_TRN_ZERO,AP_SAT> temp;",
+            "Faulty Code": "ap_fixed<12,1,AP_TRN_ZERO,AP_SAT> temp = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS pipeline // Incorrect: Nested pipeline not allowed"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(int h=0;h<27;h++){",
+            "Faulty Code": "for(int h=0;;h++){"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=weight_buf   dim=3",
+            "Faulty Code": "#pragma HLS INTERFACE port=weight_buf mode=ap_none"
+        }
+    ]
+}

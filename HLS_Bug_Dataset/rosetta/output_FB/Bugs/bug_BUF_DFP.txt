@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "output[i * MAX_Y / 4 + j / 4] = out_FB;",
+            "Faulty Code": "output[i * MAX_Y / 4 + j] = out_FB;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

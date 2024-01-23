@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "for (i2 = 1; i2 < _PB_N; i2++)",
+            "Faulty Code": "for (i2 = 0; i2 < _PB_N; i2++)"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (i1 = 0; i1 < _PB_N; i1++)",
+            "Faulty Code": "for (i1 = 0; i1 < _PB_N; i1+=2)"
+        }
+    ]
+}

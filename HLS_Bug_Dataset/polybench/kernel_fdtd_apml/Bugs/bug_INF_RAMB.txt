@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (iz = 0; iz < _PB_CZ; iz++)",
+            "Faulty Code": "for (iz = 0; iz <= _PB_CZ; iz++)"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "Hz[iz][iy][ix] = (cxmh[ix] /cxph[ix]) * Hz[iz][iy][ix]",
+            "Faulty Code": "Hz[iz+1][iy][ix] = (cxmh[ix] /cxph[ix]) * Hz[iz][iy][ix]"
+        }
+    ]
+}

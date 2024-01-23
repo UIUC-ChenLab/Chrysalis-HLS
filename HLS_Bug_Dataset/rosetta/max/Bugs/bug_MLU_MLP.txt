@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if ( a > b )\n   return a;\nelse \n   return b;",
+            "Faulty Code": "if ( a >= b )\n   return a;\nelse \n   return b;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "int max\n(\n  int a,\n   int b\n)\n{\n if ( a > b )\n   return a;\n else \n   return b;\n}",
+            "Faulty Code": "#pragma HLS pipeline\nint max\n(\n  int a,\n   int b\n)\n{\n if ( a > b )\n   return a;\n else \n   return b;\n}"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "// Compute the difference using XOR\n  WholeDigitType diff = test_inst ^ train_inst;",
+            "Faulty Code": "#pragma HLS dataflow\n  WholeDigitType diff = test_inst ^ train_inst;"
+        }
+    ]
+}

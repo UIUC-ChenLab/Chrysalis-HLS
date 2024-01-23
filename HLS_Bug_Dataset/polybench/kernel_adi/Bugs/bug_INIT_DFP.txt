@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void kernel_adi(int tsteps, int n, DATA_TYPE POLYBENCH_2D(X,N,N,n,n), DATA_TYPE POLYBENCH_2D(A,N,N,n,n), DATA_TYPE POLYBENCH_2D(B,N,N,n,n))",
+            "Faulty Code": "void kernel_adi(int tsteps, int n, DATA_TYPE POLYBENCH_2D(X,N,N,n,n), DATA_TYPE POLYBENCH_2D(A,N,N,n,n), DATA_TYPE POLYBENCH_2D(B,N,N,n,n)) { DATA_TYPE tmp = B[0][0]; // Using B before initialization"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (t = 0; t < _PB_TSTEPS; t++)",
+            "Faulty Code": "#pragma HLS dataflow // Incorrect placement, should not be outside of the compute loops\nfor (t = 0; t < _PB_TSTEPS; t++)"
+        }
+    ]
+}

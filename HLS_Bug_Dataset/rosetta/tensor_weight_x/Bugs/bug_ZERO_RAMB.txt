@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "TENSOR_WEIGHT_X_TMP_INIT: for(int i=0; i<6; i++) tmp.val[i] = 0;",
+            "Faulty Code": "TENSOR_WEIGHT_X_TMP_INIT: for(int i=0; i<6; i++) tmp.val[i] = TENSOR_FILTER[i];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "tmp = tensor_y[r][c];",
+            "Faulty Code": "tmp = tensor_y[c][r];"
+        }
+    ]
+}

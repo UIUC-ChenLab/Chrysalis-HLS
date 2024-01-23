@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for(int h = 1; h <= HEIGH-2; h++){",
+            "Faulty Code": "for(int h = 0; h <= HEIGH-2; h++){"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS dataflow inside the co loop"
+        }
+    ]
+}

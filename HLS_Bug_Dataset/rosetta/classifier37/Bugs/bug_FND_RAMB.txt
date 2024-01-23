@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=coord cyclic factor=4 dim=1"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "int classifier37( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev )",
+            "Faulty Code": "#pragma HLS interface m_axi port=II offset=slave bundle=gmem0"
+        }
+    ]
+}

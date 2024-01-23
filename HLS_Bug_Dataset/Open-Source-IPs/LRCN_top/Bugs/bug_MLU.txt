@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(LSTM_LOOP=0;LSTM_LOOP<15;LSTM_LOOP++){",
+            "Faulty Code": "for(LSTM_LOOP=0;LSTM_LOOP<14;LSTM_LOOP++){"
+        }
+    ]
+}

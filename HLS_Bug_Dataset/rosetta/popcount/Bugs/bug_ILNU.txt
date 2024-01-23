@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "int cnt = 0;\nfor (int i = 0; i < 256; i ++ )\n  cnt = cnt + x[i];",
+            "Faulty Code": "int cnt = 0;\n#pragma HLS unroll factor=4\nfor (int i = 0; i < 256; i ++ )\n  cnt = cnt + x[i];"
+        }
+    ]
+}

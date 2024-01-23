@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "coord[8] = 0;",
+            "Faulty Code": "coord[8] = II[0][0]; // Assuming II[0][0] should have been the initializer"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int classifier42( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev ){",
+            "Faulty Code": "#pragma HLS interface port=stddev bram"
+        }
+    ]
+}

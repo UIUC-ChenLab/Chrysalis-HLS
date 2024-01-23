@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for ( bit16 i = 0; i < MAX_X; i++)",
+            "Faulty Code": "for ( bit16 i = 0; i <= MAX_X; i++)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for ( bit16 j = 0; j < MAX_Y; j++)",
+            "Faulty Code": "#pragma HLS UNROLL factor=4\nfor ( bit16 j = 0; j < MAX_Y; j++)"
+        }
+    ]
+}

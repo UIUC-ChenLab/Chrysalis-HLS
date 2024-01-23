@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "coord[0] = II[0][18];\n  coord[1] = II[0][24];\n  coord[2] = II[11][18];\n  coord[3] = II[11][24];",
+            "Faulty Code": "for (int i = 0; i < 12; i+=4) {\n    coord[i] = II[i][18];\n    coord[i+1] = II[i][24];\n    coord[i+2] = II[11][18];\n    coord[i+3] = II[11][24];\n  }"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "sum0 = (coord[0] - coord[1] - coord[2] + coord[3]) * -4096;",
+            "Faulty Code": "#pragma HLS pipeline\n  sum0 = (coord[0] - coord[1] - coord[2] + coord[3]) * -4096;"
+        }
+    ]
+}

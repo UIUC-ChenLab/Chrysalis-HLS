@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "mean[j] = 0.0;",
+            "Faulty Code": "// mean[j] = 0.0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "stddev[j] = stddev[j] <= eps ? 1.0 : stddev[j];",
+            "Faulty Code": "stddev[j] = stddev[j] <= (int)eps ? 1.0 : stddev[j];"
+        }
+    ]
+}

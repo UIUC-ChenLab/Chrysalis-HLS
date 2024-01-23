@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void Update_layer( int cont_input,  ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> hc_rst[256])",
+            "Faulty Code": "void Update_layer( int cont_input,  ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> hc_rst[256]){\n\tfor(int i = 0; i < 256; i++){\n\t\thc_rst[i] = cont_input * hc_rst[i];\n\t}\n}"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "weight[1][nn][0],    bottom[c+8],",
+            "Faulty Code": "weight[1][nn][0],    bottom[c+0],"
+        }
+    ]
+}

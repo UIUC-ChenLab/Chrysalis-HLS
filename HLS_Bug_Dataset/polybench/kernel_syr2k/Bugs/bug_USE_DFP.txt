@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "C[i][j] += alpha * A[i][k] * B[j][k];",
+            "Faulty Code": "C[i][j] += alpha * ((short)A[i][k]) * B[j][k];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma scop",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

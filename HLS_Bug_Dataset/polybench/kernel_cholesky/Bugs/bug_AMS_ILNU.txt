@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void kernel_cholesky(int n, DATA_TYPE POLYBENCH_1D(p,N,n), DATA_TYPE POLYBENCH_2D(A,N,N,n,n))",
+            "Faulty Code": "#pragma HLS INTERFACE port=p ap_none"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (k = 0; k <= i - 1; ++k)",
+            "Faulty Code": "#pragma HLS UNROLL factor=4\nfor (k = 0; k <= i - 1; ++k)"
+        }
+    ]
+}

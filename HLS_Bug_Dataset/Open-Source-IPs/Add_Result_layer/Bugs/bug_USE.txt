@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "temp.range(11,0)=(*data).range(j*12+11,j*12);",
+            "Faulty Code": "temp.range(11,0)=(*data).range(j*12+11,j*12).to_int();"
+        }
+    ]
+}

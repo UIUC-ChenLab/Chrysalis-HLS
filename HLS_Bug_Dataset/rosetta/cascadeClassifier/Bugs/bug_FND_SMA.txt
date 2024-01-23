@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable=s1 complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=s1 block factor=15 dim=0"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS interface ap_stable port=aa",
+            "Faulty Code": "#pragma HLS interface bram port=aa"
+        }
+    ]
+}

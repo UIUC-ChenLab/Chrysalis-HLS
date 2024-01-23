@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "pos = 1000;",
+            "Faulty Code": "pos = 0;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS array_partition variable=vote_list complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=vote_list cyclic dim=0"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "coord[8] = 0;",
+            "Faulty Code": "coord[8] = II[5][5]; // Assuming II[5][5] should be the initializer, but was set to 0."
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=coord cyclic factor=4 dim=1 // Assuming factor is not divisible by the loop count, which should be 12 in this case."
+        }
+    ]
+}

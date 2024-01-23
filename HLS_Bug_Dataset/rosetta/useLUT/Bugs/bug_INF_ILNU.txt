@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (in < 0)",
+            "Faulty Code": "while (in < 0)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

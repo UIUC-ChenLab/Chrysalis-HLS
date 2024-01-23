@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "FeatureType grad[NUM_FEATURES],",
+            "Faulty Code": "FeatureType grad[NUM_FEATURES]; // Missing initializer, elements are uninitialized"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "FeatureType scale",
+            "Faulty Code": "FeatureType scale = 0; // Incorrectly initialized to zero when it should have a nonzero initializer"
+        }
+    ]
+}

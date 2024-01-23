@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint5_t get_bank(uint10_t addr)\n{\n  #pragma HLS inline\n  return bank_mapping[addr];\n}",
+            "Faulty Code": "uint5_t get_bank(uint10_t addr)\n{\n  #pragma HLS inline\n  uint5_t bank_mapping[32]; // Assuming the size is 32, which is not given in the original code\n  // Some other code that might be initializing bank_mapping\n  return bank_mapping[addr]; // addr can be greater than 31 leading to out-of-bounds access\n}"
+        }
+    ]
+}

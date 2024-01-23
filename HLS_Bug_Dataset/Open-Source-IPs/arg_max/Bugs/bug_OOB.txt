@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for(int i = 0; i < 8801; i++){ if(max < probs[i]){ max  = probs[i]; rst = i; } }",
+            "Faulty Code": "for(int i = 0; i <= 8801; i++){ if(max < probs[i]){ max  = probs[i]; rst = i; } }"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (j = k + 1; j < _PB_N; j++) A[k][j] = A[k][j] / A[k][k];",
+            "Faulty Code": "#pragma HLS pipeline for (j = k + 1; j < _PB_N; j++) A[k][j] = A[k][j] / A[k][k];"
+        }
+    ]
+}

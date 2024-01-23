@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if(final_sum >= (89 * stddev))",
+            "Faulty Code": "while(final_sum >= (89 * stddev))"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS interface port=coord bram"
+        }
+    ]
+}

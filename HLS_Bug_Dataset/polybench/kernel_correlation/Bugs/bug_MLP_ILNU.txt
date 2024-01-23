@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (j1 = 0; j1 < _PB_M-1; j1++)",
+            "Faulty Code": "for (j1 = 0; j1 < _PB_M-1; j1++) { #pragma HLS pipeline"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (j2 = j1+1; j2 < _PB_M; j2++)",
+            "Faulty Code": "for (j2 = j1+1; j2 < _PB_M; j2++) { #pragma HLS unroll factor=4"
+        }
+    ]
+}

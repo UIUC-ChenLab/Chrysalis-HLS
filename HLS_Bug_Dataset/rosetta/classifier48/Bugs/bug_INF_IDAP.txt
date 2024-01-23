@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=coord complete dim=1"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "coord[1] = II[5][19];",
+            "Faulty Code": "coord[1] = II[5][19]; while(1){}"
+        }
+    ]
+}

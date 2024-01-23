@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "coord[0] = II[8][1];",
+            "Faulty Code": "coord[0] = II[21][1];"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "coord[8] = 0;\n  coord[9] = 0;\n  coord[10] = 0;\n  coord[11] = 0;",
+            "Faulty Code": "coord[8] = 0;\n  coord[9] = 0;\n  coord[10] = 0;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "pixel_t k = TENSOR_FILTER[i];",
+            "Faulty Code": "int k = TENSOR_FILTER[i];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS data_pack variable=tmp",
+            "Faulty Code": "#pragma HLS interface port=tmp mode=ap_fifo"
+        }
+    ]
+}

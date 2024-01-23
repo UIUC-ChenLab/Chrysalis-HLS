@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_fixed<12,1,AP_TRN_ZERO,AP_SAT> temp;",
+            "Faulty Code": "ap_fixed<12,1,AP_TRN_ZERO,AP_SAT> temp = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "if(top[i]<0) top[i]=0;",
+            "Faulty Code": "if(top[i]<0) top[i]=0x8000;"
+        }
+    ]
+}

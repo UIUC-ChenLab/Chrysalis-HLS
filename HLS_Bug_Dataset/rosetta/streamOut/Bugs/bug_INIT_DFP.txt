@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "VectorFeatureType tmp_theta = 0;",
+            "Faulty Code": "VectorFeatureType tmp_theta;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

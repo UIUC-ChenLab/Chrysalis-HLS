@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS STREAM variable=stream512_out depth=16",
+            "Faulty Code": "#pragma HLS array_partition variable=stream512_out type=complete"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

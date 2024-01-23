@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "int min\n(\n  int a,\n  int b\n)\n{\n  if ( a < b )\n    return a;\n  else \n    return b;\n}",
+            "Faulty Code": "int find_min_value(int* array, int size)\n{\n  int min_val = INT_MAX;\n  for (int i = 0; i <= size; ++i) // Error here: loop should be i < size\n  {\n    min_val = min(min_val, array[i]); // Potential out-of-bounds access due to loop error\n  }\n  return min_val;\n}\n\nint min\n(\n  int a,\n  int b\n)\n{\n  if ( a < b )\n    return a;\n  else \n    return b;\n}"
+        }
+    ]
+}

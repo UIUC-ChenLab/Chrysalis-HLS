@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "DATA_TYPE POLYBENCH_2D(clf,CYM+1,CXM+1,cym+1,cxm+1),",
+            "Faulty Code": "DATA_TYPE clf[CYM+1][CXM+1]; // Missing initialization"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "DATA_TYPE POLYBENCH_2D(Ax,CZ+1,CYM+1,cz+1,cym+1),",
+            "Faulty Code": "#pragma HLS INTERFACE port=Ax ap_none"
+        }
+    ]
+}

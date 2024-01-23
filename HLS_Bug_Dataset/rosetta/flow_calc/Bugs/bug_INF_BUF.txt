@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "FLOW_OUTER: for(int r=0; r<MAX_HEIGHT; r++)",
+            "Faulty Code": "FLOW_OUTER: for(int r=0; r<=MAX_HEIGHT; r++)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "outputs[r][c].x = (vel_pixel_t)buf[0];",
+            "Faulty Code": "outputs[r][c].x = (vel_pixel_t)buf[1];"
+        }
+    ]
+}

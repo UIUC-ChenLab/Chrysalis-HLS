@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(int cii=0;cii<16;cii+=2){",
+            "Faulty Code": "for(int cii=0;cii<14;cii+=2){"
+        }
+    ]
+}

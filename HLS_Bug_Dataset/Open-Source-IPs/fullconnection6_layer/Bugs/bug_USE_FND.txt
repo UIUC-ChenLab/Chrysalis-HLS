@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "temp.range(11,0)=stream_temp.range((j+k)*12+11,(j+k)*12);",
+            "Faulty Code": "temp.range(11,0)=stream_temp.range((j+k)*16+11,(j+k)*16);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=top dim=1 cyclic factor=8",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=top dim=1 cyclic factor=7"
+        }
+    ]
+}

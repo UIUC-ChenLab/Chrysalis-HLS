@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int j=0; j<3; j++)",
+            "Faulty Code": "for (int j=0; j<=3; j++)"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(int ii=0;ii<32;ii++)",
+            "Faulty Code": "for(int ii=0;ii<31;ii++)"
+        }
+    ]
+}

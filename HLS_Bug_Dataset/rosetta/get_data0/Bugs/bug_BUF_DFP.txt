@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "case 0: a = aa[19 ]; break;",
+            "Faulty Code": "case 0: a = aa[19 + ROWS*COLS/2]; break;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

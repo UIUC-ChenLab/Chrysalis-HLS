@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "FIX_WT weight_buf[DEPTH];",
+            "Faulty Code": "FIX_WT weight_buf[DEPTH]; // The array is not initialized and may contain garbage values."
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=bottom cyclic dim=1 factor=16",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=bottom cyclic dim=4 factor=16 // Error: 'dim=4' exceeds the array dimensions."
+        }
+    ]
+}

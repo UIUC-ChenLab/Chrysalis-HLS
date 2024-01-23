@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "default: a = 0; break;",
+            "Faulty Code": "default: a = 0xFFFFFFFF; break;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

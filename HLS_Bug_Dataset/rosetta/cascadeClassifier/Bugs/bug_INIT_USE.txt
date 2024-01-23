@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int stage_sum=0;",
+            "Faulty Code": "int stage_sum;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "sum1 = (coord[4] - coord[5] - coord[6] + coord[7]) * weights_array1[haar_counter]; ",
+            "Faulty Code": "sum1 = (coord[4] - coord[5] - coord[6] + coord[7]) * (int)weights_array1[haar_counter];"
+        }
+    ]
+}

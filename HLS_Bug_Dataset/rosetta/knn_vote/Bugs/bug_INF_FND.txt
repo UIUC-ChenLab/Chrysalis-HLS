@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "INSERT: for (int r = K_CONST ;r > 0; r -- )",
+            "Faulty Code": "INSERT: for (int r = K_CONST ;r >= 0; r -- )"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable=vote_list complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=vote_list cyclic factor=3 dim=1"
+        }
+    ]
+}

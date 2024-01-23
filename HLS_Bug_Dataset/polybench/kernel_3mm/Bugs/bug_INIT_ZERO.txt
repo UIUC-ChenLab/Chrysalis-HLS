@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "E[i][j] = 0;",
+            "Faulty Code": "DATA_TYPE temp; E[i][j] = temp;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "F[i][j] = 0;",
+            "Faulty Code": "F[i][j] = some_nonzero_initial_value;"
+        }
+    ]
+}

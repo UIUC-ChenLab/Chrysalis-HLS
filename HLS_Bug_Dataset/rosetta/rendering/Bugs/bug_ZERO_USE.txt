@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "bit16 pixel_cntr = 0;",
+            "Faulty Code": "bit16 pixel_cntr;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "return (pi0 >= 0 && pi1 >= 0 && pi2 >= 0);",
+            "Faulty Code": "return (pi0 > 0 && pi1 > 0 && pi2 > 0);"
+        }
+    ]
+}

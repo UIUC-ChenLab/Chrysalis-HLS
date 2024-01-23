@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "tensor_t tmp_tensor = tensors[r][c];",
+            "Faulty Code": "tensor_t tmp_tensor = tensors[r+1][c];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "outputs[r][c].x = (vel_pixel_t)buf[0];",
+            "Faulty Code": "outputs[r].x = (vel_pixel_t)buf[0];"
+        }
+    ]
+}

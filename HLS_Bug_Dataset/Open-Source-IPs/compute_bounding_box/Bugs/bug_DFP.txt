@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "for(int m = 1; m <= h; m++){ for(int n = 1 ;n <= w; n++){ conf_box1 = (FIX_32_25)1 / ((FIX_32_25)1 + my_exp_fix(-FM_buf2[4][m][n])); if(conf_box1 > conf_thresh){ conf_thresh = conf_box1; conf_j = 0; conf_m = m; conf_n = n; } } }",
+            "Faulty Code": "#pragma HLS dataflow for(int m = 1; m <= h; m++){ for(int n = 1 ;n <= w; n++){ conf_box1 = (FIX_32_25)1 / ((FIX_32_25)1 + my_exp_fix(-FM_buf2[4][m][n])); if(conf_box1 > conf_thresh){ conf_thresh = conf_box1; conf_j = 0; conf_m = m; conf_n = n; } } }"
+        }
+    ]
+}

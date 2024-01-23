@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void kernel_seidel_2d(int tsteps, int n, DATA_TYPE POLYBENCH_2D(A,N,N,n,n))",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=A"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void kernel_seidel_2d(int tsteps, int n, DATA_TYPE POLYBENCH_2D(A,N,N,n,n))",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=n"
+        }
+    ]
+}

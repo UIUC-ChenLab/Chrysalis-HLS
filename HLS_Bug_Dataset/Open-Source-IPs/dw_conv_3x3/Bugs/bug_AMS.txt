@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void CONV_3x3_group(FIX_FM bottom[DEPTH][HEIGH][WIDTH], FIX_FM top[DEPTH][HEIGH][WIDTH], FIX_WT weights[DEPTH][3][3])",
+            "Faulty Code": "#pragma HLS INTERFACE port=bottom mode=ap_none"
+        }
+    ]
+}

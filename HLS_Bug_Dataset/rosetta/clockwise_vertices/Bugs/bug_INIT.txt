@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "bit8 tmp_x, tmp_y;",
+            "Faulty Code": "bit8 tmp_x, tmp_y = triangle_2d->y0;"
+        }
+    ]
+}

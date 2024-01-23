@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "final_sum = sum0 + sum1 + sum2;",
+            "Faulty Code": "final_sum = sum0 + sum1 + sum2 + 0;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS interface port=coord mode=ap_none"
+        }
+    ]
+}

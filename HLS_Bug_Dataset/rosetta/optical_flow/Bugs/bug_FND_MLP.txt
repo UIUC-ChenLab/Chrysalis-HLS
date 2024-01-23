@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS STREAM variable=gradient_z depth=max_width*4",
+            "Faulty Code": "#pragma HLS STREAM variable=gradient_z depth=max_width*5"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "for (int i = 0; i < 4; i ++ ) #pragma HLS pipeline II=1"
+        }
+    ]
+}

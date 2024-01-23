@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "if (r<MAX_HEIGHT && c<MAX_WIDTH)\n        smallbuf[4] = (pixel_t)(frame[r][c]);",
+            "Faulty Code": "if (r<MAX_HEIGHT && c<MAX_WIDTH)\n        smallbuf[c%5] = (pixel_t)(frame[r][c]);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "#pragma HLS pipeline II=1\n#pragma HLS pipeline"
+        }
+    ]
+}

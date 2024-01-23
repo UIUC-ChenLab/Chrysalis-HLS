@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "IMG1_data[i][j] =  Data[(i*y_ratio)>>16][(j*x_ratio)>>16];",
+            "Faulty Code": "IMG1_data[j][i] =  Data[(j*y_ratio)>>16][(i*x_ratio)>>16];"
+        }
+    ]
+}

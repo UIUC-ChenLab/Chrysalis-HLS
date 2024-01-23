@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for(int h=0;h<55;h++)\n\tfor(int w=0;w<55;w++){\n#pragma HLS pipeline\n\t\tfor(int co=0;co<96;co++){\n#pragma HLS unroll\n\t\t\ttop[co][h][w]=bias_buf[co];\n\t\t}\n\t}",
+            "Faulty Code": "for(int h=0;h<55;h++)\n\tfor(int w=0;w<55;w++){\n\t\tfor(int co=0;co<96;co++){\n#pragma HLS pipeline\n#pragma HLS unroll\n\t\t\ttop[co][h][w]=bias_buf[co];\n\t\t}\n\t}"
+        }
+    ]
+}

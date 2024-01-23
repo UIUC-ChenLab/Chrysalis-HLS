@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (j = 0; j < _PB_NY; j++)\n\ttmp[i] = tmp[i] + A[i][j] * x[j];",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (j = 0; j < _PB_NY; j++)\n\ttmp[i] = tmp[i] + A[i][j] * x[j];"
+        }
+    ]
+}

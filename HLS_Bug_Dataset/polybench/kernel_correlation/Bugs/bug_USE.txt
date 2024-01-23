@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "stddev[j] = sqrt_of_array_cell(stddev, j);",
+            "Faulty Code": "stddev[j] = (int)sqrt_of_array_cell(stddev, j);"
+        }
+    ]
+}

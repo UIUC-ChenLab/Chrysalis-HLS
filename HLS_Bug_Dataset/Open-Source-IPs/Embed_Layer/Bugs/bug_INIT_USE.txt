@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_fixed<12,1,AP_TRN_ZERO,AP_SAT> temp;",
+            "Faulty Code": "ap_fixed<12,1,AP_TRN_ZERO,AP_SAT> temp = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "temp.range(11,0)=(*data).range((ii)*12+11,(ii)*12);",
+            "Faulty Code": "temp.range(11,0)=(*data).range((ii+1)*12-1,(ii)*12);"
+        }
+    ]
+}

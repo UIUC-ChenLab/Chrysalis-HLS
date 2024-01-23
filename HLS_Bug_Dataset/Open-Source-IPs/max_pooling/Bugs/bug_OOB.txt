@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "buf_out[ch][i][j] = max(buf_in[ch][i*2+1][j*2+1], buf_in[ch][i*2+1][j*2+2], buf_in[ch][i*2+2][j*2+1], buf_in[ch][i*2+2][j*2+2]);",
+            "Faulty Code": "buf_out[ch][i][j] = max(buf_in[ch][i*2+1][j*2+1], buf_in[ch][i*2+1][j*2+2], buf_in[ch][i*2+2][j*2+1], buf_in[ch][i*2+2][j*2+3]);"
+        }
+    ]
+}

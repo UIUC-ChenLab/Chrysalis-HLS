@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void LSTMFC_loop_stream_reader(ap_int<512> *data, hls::stream<int512> &stream512_out)",
+            "Faulty Code": "void LSTMFC_loop_stream_reader(ap_int<512> *data, hls::stream<int512> &stream512_out)\n#pragma HLS INTERFACE port=data bram"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS pipeline II=2"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "case 0: a = aa[9  ]; break;",
+            "Faulty Code": "case 0: a = aa[ROWS*COLS/2 + 9]; break;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "uint18_t get_data2(int offset, uint18_t aa[ROWS*COLS])",
+            "Faulty Code": "#pragma HLS pipeline \nuint18_t get_data2(int offset, uint18_t aa[ROWS*COLS])"
+        }
+    ]
+}

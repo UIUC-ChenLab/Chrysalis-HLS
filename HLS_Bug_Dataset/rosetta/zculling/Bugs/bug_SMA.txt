@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "// Content of called function\nvoid output_FB(bit8 frame_buffer[MAX_X][MAX_Y], bit32 output[NUM_FB])\n{\n  #pragma HLS INLINE\n  bit32 out_FB = 0;\n  OUTPUT_FB_ROW: for ( bit16 i = 0; i < MAX_X; i++)\n  {\n    #pragma HLS PIPELINE II=1\n    OUTPUT_FB_COL: for ( bit16 j = 0; j < MAX_Y; j = j + 4)\n    {\n      out_FB( 7,  0) = frame_buffer[i][j + 0];\n      out_FB(15,  8) = frame_buffer[i][j + 1];\n      out_FB(23, 16) = frame_buffer[i][j + 2];\n      out_FB(31, 24) = frame_buffer[i][j + 3];\n      output[i * MAX_Y / 4 + j / 4] = out_FB;\n    }\n  }\n}",
+            "Faulty Code": "// Content of called function\nvoid output_FB(bit8 frame_buffer[MAX_X][MAX_Y], bit32 output[NUM_FB])\n{\n  #pragma HLS INTERFACE port=output mode=bram\n  #pragma HLS INLINE\n  bit32 out_FB = 0;\n  OUTPUT_FB_ROW: for ( bit16 i = 0; i < MAX_X; i++)\n  {\n    #pragma HLS PIPELINE II=1\n    OUTPUT_FB_COL: for ( bit16 j = 0; j < MAX_Y; j = j + 4)\n    {\n      out_FB( 7,  0) = frame_buffer[i][j + 0];\n      out_FB(15,  8) = frame_buffer[i][j + 1];\n      out_FB(23, 16) = frame_buffer[i][j + 2];\n      out_FB(31, 24) = frame_buffer[i][j + 3];\n      output[i * MAX_Y / 4 + j / 4] = out_FB;\n    }\n  }\n}"
+        }
+    ]
+}

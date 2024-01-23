@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "tmp[i][j] += alpha * A[i][k] * B[k][j];",
+            "Faulty Code": "tmp[i][j] += alpha * A[i][k] * (int)B[k][j];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "DATA_TYPE POLYBENCH_2D(tmp,NI,NJ,ni,nj)",
+            "Faulty Code": "#pragma HLS INTERFACE port=tmp mode=ap_none"
+        }
+    ]
+}

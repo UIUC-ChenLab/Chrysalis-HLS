@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "sum2 = (coord[8] - coord[9] - coord[10] + coord[11]) * weights_array2[haar_counter];",
+            "Faulty Code": "sum2 = (coord[8] - coord[9] - coord[12] + coord[13]) * weights_array2[haar_counter];"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#include \"haar_dataEWC_with_partitioning.h\"",
+            "Faulty Code": "#pragma HLS array_partition variable=weights_array2 dim=1"
+        }
+    ]
+}

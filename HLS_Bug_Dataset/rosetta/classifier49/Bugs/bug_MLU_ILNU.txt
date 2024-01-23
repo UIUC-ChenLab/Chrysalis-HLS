@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "coord[0] = II[10][1];\n  coord[1] = II[10][19];\n  coord[2] = II[12][1];\n  coord[3] = II[12][19];",
+            "Faulty Code": "coord[0] = II[10][1];\n  coord[1] = II[10][19];\n  coord[2] = II[12][1];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "beta[0] = 1;",
+            "Faulty Code": "beta[0] = 0;"
+        }
+    ]
+}

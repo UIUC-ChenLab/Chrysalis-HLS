@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "training_instance[i * D_VECTOR_SIZE + j].range(DTYPE_TWIDTH-1, 0) = tmp_data.range((j+1)*DTYPE_TWIDTH-1, j*DTYPE_TWIDTH);",
+            "Faulty Code": "training_instance[i * D_VECTOR_SIZE + j] = tmp_data.range((j+1)*DTYPE_TWIDTH-1, j*DTYPE_TWIDTH);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=training_instance factor=3"
+        }
+    ]
+}

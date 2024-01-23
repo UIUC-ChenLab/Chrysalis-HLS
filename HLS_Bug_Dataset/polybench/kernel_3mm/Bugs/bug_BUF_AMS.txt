@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "E[i][j] += A[i][k] * B[k][j];",
+            "Faulty Code": "E[i][j] += A[k][i] * B[k][j];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "DATA_TYPE POLYBENCH_2D(E,NI,NJ,ni,nj),",
+            "Faulty Code": "#pragma HLS INTERFACE port=E ap_none"
+        }
+    ]
+}

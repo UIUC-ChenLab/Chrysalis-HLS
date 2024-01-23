@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "acc.val[component] += tmp.val[component]*TENSOR_FILTER[i];",
+            "Faulty Code": "acc.val[component] += tmp.val[component]*(int)TENSOR_FILTER[i];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "#pragma HLS pipeline inside the TENSOR_WEIGHT_X_TMP_OUTER loop"
+        }
+    ]
+}

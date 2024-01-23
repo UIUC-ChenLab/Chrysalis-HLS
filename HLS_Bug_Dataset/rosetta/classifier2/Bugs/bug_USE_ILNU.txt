@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "sum0 = (coord[0] - coord[1] - coord[2] + coord[3]) * -4096;",
+            "Faulty Code": "sum0 = ((short)(coord[0] - coord[1] - coord[2] + coord[3])) * -4096;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

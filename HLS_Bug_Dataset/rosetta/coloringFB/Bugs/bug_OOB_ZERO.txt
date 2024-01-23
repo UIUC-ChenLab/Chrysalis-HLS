@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "frame_buffer[ pixels[i].x ][ pixels[i].y ] = pixels[i].color;",
+            "Faulty Code": "frame_buffer[ pixels[i].x + 1 ][ pixels[i].y ] = pixels[i].color;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "frame_buffer[i][j] = 0;",
+            "Faulty Code": "frame_buffer[i][j] = pixels[0].color;"
+        }
+    ]
+}

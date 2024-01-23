@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "sum2 = (coord[8] - coord[9] - coord[10] + coord[11]) * 0;",
+            "Faulty Code": "sum2 = (coord[8] - coord[9] - coord[10] + coord[11]) * someNonZeroValue;"
+        }
+    ]
+}

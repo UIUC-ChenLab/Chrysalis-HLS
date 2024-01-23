@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS array_partition variable=grad cyclic factor=unroll_factor",
+            "Faulty Code": "#pragma HLS unroll factor=unroll_factor"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "DOT_INNER: for(int j = 0; j < PAR_FACTOR; j++)",
+            "Faulty Code": "DOT_INNER: for(int j = 0; j <= PAR_FACTOR; j++)"
+        }
+    ]
+}

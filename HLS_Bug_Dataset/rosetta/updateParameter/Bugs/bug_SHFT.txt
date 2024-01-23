@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "param[i*PAR_FACTOR+j] += scale * grad[i*PAR_FACTOR+j];",
+            "Faulty Code": "param[i*PAR_FACTOR+j] += scale * grad[(i*PAR_FACTOR+j) << (32 - PAR_FACTOR)];"
+        }
+    ]
+}

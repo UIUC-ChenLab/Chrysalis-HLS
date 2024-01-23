@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "C[i][j] += alpha * A[i][k] * B[j][k];",
+            "Faulty Code": "C[i][j] += alpha * A[i][k] * (int)B[j][k];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (j = 0; j < _PB_NI; j++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (j = 0; j < _PB_NI; j++)"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "uint5_t get_bank(uint10_t addr) {",
+            "Faulty Code": "uint5_t get_bank(uint10_t addr) {\n  #pragma HLS INTERFACE port=addr mode=ap_none"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void Update_layer( int cont_input,  ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> hc_rst[256]){",
+            "Faulty Code": "#pragma HLS INTERFACE port=cont_input bram"
+        }
+    ]
+}

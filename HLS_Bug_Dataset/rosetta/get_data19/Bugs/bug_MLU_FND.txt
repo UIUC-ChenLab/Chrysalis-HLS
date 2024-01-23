@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "case 22:a = aa[581]; break;",
+            "Faulty Code": "case 22:a = aa[582]; break;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS array_partition variable=aa factor=10"
+        }
+    ]
+}

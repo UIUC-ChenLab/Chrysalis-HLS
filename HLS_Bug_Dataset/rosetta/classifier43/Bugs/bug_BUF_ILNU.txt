@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "coord[1] = II[3][6];",
+            "Faulty Code": "coord[1] = II[14][6];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

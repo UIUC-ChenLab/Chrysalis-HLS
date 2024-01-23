@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "static uint18_t coord[12];",
+            "Faulty Code": "static int coord[12];"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "sum0 = (coord[0] - coord[1] - coord[2] + coord[3]) * weights_array0[haar_counter];",
+            "Faulty Code": "sum0 = (coord[0] - coord[1] - coord[2]) * weights_array0[haar_counter];"
+        }
+    ]
+}

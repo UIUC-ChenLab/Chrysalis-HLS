@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "label_list[r-1] = i / (PAR_FACTOR / 10);",
+            "Faulty Code": "label_list[r-1] = (char)(i / (PAR_FACTOR / 10));"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "LabelType max_vote;",
+            "Faulty Code": "#pragma HLS interface port=ap_none variable=max_vote"
+        }
+    ]
+}

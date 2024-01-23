@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=bottom cyclic dim=1 factor=16",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=bottom complete dim=1"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void CONV_3x3_group(FIX_FM bottom[DEPTH][HEIGH][WIDTH], FIX_FM top[DEPTH][HEIGH][WIDTH], FIX_WT weights[DEPTH][3][3])",
+            "Faulty Code": "void CONV_3x3_group(FIX_FM bottom[DEPTH][HEIGH][WIDTH], FIX_FM top[DEPTH][HEIGH][WIDTH], FIX_WT weights[DEPTH][3][3]) { #pragma HLS INTERFACE port=bottom mode=s_axilite"
+        }
+    ]
+}

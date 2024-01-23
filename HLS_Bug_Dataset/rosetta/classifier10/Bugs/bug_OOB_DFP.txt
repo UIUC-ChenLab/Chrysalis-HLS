@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "coord[0] = II[4][6];",
+            "Faulty Code": "coord[0] = II[32][6];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

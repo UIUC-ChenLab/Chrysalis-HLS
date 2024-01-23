@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "data[301050].range(LSTM_LOOP*32+31,LSTM_LOOP*32)=caption[LSTM_LOOP].range(31,0);",
+            "Faulty Code": "data[301050].range(LSTM_LOOP*32+31,LSTM_LOOP*32)=caption[LSTM_LOOP];"
+        }
+    ]
+}

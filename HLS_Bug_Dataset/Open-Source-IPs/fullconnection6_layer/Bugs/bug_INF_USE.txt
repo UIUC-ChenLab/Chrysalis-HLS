@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(int i=0;i<256;i+=32)",
+            "Faulty Code": "for(int i=0;i<256;i--)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "top[i+j+k]=temp;",
+            "Faulty Code": "top[i+j+k]=static_cast<ap_fixed<TOTAL_B,5,AP_TRN_ZERO,AP_SAT>>(temp.range(15,0));"
+        }
+    ]
+}

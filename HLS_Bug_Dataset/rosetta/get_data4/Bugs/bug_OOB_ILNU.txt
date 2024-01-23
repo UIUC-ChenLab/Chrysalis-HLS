@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "case 10:a = aa[346]; break;",
+            "Faulty Code": "case 10:a = aa[365]; break;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

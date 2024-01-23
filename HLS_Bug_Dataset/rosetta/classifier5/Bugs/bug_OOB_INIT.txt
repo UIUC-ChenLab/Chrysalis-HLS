@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "coord[1] = II[5][18];",
+            "Faulty Code": "coord[1] = II[5][20];"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "int sum0, sum1, sum2, final_sum;",
+            "Faulty Code": "int sum0, sum1, sum2, final_sum = 0;"
+        }
+    ]
+}

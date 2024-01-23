@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "case 26:a = aa[613]; break;",
+            "Faulty Code": "case 26:a = aa[613];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if(c<MAX_WIDTH)",
+            "Faulty Code": "if(c<=MAX_WIDTH)"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

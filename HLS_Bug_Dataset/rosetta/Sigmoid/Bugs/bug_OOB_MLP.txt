@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return lut[index];",
+            "Faulty Code": "return lut[index + 1];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "FeatureType Sigmoid(FeatureType exponent)",
+            "Faulty Code": "#pragma HLS pipeline\nFeatureType Sigmoid(FeatureType exponent)"
+        }
+    ]
+}

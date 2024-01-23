@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "IdxFixed index;",
+            "Faulty Code": "IdxFixed index; // index is not initialized and is used in conditional operations below"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "return lut[index];",
+            "Faulty Code": "return lut; // Incorrectly returning the entire array instead of an array element"
+        }
+    ]
+}

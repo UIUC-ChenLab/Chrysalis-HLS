@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "for(int co = 0; co < 16; co++){\n#pragma HLS unroll\ntop[co][h][w] += weight_buf[co] * bottom[co][h+i-1][w+j-1];\n}",
+            "Faulty Code": "for(int co = 0; co < 16; co++){\n#pragma HLS unroll\ntop[co][h][w] = weight_buf[co] * bottom[co][h+i-1][w+j-1];\n}"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "void load_weights(FIX_WT weight_buf[DEPTH],\nFIX_WT weights[DEPTH][3][3],\nint i, int j)\n{\n#pragma HLS ARRAY_PARTITION variable=weights dim=1 factor=16\n\nfor(int coo = 0; coo < 16; coo++){\n#pragma HLS unroll\nweight_buf[coo] = weights[coo][i][j];\n}\n}",
+            "Faulty Code": "void load_weights(FIX_WT weight_buf[DEPTH],\nFIX_WT weights[DEPTH][3][3],\nint i, int j)\n{\n#pragma HLS ARRAY_PARTITION variable=weights dim=1 factor=16\n\nfor(int coo = 0; coo < 16; coo++){\n#pragma HLS unroll\nweight_buf[coo] = (FIX_WT)(char)weights[coo][i][j];\n}\n}"
+        }
+    ]
+}

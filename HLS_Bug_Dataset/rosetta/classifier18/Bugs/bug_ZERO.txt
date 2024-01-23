@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "final_sum = sum0 + sum1 + sum2;",
+            "Faulty Code": "final_sum = sum0 + sum1 + 0;"
+        }
+    ]
+}

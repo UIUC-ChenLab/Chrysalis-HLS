@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (i = 1; i<= _PB_N - 2; i++)",
+            "Faulty Code": "for (i = 1; i<= _PB_N; i++)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "A[i][j] = (A[i-1][j-1] + A[i-1][j] + A[i-1][j+1] + A[i][j-1] + A[i][j] + A[i][j+1] + A[i+1][j-1] + A[i+1][j] + A[i+1][j+1])/9.0;",
+            "Faulty Code": "A[i][j] = (A[i][j-1] + A[i][j] + A[i][j+1] + A[i+1][j-1] + A[i+1][j] + A[i+1][j+1])/6.0;"
+        }
+    ]
+}

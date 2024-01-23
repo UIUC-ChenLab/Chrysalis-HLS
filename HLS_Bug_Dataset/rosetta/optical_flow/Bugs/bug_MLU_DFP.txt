@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < 4; i ++ )\n  smallbuf[i] = buf[i+1][c];",
+            "Faulty Code": "for (int i = 0; i < 5; i ++ )\n  smallbuf[i] = buf[i+1][c];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS dataflow inside gradient_xy_calc function"
+        }
+    ]
+}

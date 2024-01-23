@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "diff[j][i][cnt] = sum_tang[j][i];",
+            "Faulty Code": "diff[i][j][cnt] = sum_tang[j][i];"
+        }
+    ]
+}

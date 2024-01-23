@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "pi0 = (x - triangle_2d.x0) * (triangle_2d.y1 - triangle_2d.y0) - (y - triangle_2d.y0) * (triangle_2d.x1 - triangle_2d.x0);",
+            "Faulty Code": "pi0 = (x - triangle_2d.x3) * (triangle_2d.y1 - triangle_2d.y0) - (y - triangle_2d.y0) * (triangle_2d.x1 - triangle_2d.x0);"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "int pi0, pi1, pi2;",
+            "Faulty Code": "int pi0, pi1, pi2 = 0;"
+        }
+    ]
+}

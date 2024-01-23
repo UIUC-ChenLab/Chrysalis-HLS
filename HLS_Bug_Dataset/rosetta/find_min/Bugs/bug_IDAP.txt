@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "bit8 find_min( bit8 in0, bit8 in1, bit8 in2 )",
+            "Faulty Code": "#pragma HLS interface mode=s_axilite port=in0 port=in1 port=in2"
+        }
+    ]
+}

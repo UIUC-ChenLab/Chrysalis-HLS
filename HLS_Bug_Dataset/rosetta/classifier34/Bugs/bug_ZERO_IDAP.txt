@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int sum0, sum1, sum2, final_sum;",
+            "Faulty Code": "int sum0 = 0, sum1 = 0, sum2 = 0, final_sum = 0;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=coord"
+        }
+    ]
+}

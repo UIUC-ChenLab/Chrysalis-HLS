@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "tmp_theta.range((j+1)*FTYPE_TWIDTH-1, j*FTYPE_TWIDTH) = theta_local[i * F_VECTOR_SIZE + j].range(FTYPE_TWIDTH-1, 0);",
+            "Faulty Code": "tmp_theta.range((j+1)*FTYPE_TWIDTH-1, j*FTYPE_TWIDTH) = theta_local[i * (F_VECTOR_SIZE+1) + j].range(FTYPE_TWIDTH-1, 0);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void streamOut(FeatureType theta_local[NUM_FEATURES], VectorFeatureType theta[NUM_FEATURES / F_VECTOR_SIZE])",
+            "Faulty Code": "void streamOut(FeatureType theta_local, VectorFeatureType theta[NUM_FEATURES / F_VECTOR_SIZE])"
+        }
+    ]
+}

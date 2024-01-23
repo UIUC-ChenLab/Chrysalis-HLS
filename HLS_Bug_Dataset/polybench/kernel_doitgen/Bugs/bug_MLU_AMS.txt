@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (p = 0; p < _PB_NP; p++)",
+            "Faulty Code": "for (p = 0; p <= _PB_NP; p++)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "DATA_TYPE POLYBENCH_3D(sum,NR,NQ,NP,nr,nq,np)",
+            "Faulty Code": "#pragma HLS INTERFACE port=sum mode=ap_none"
+        }
+    ]
+}

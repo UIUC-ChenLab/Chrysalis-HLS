@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int rat = 0;",
+            "Faulty Code": "int rat = 0; // rat should be initialized to a ratio value, not zero"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo // Incorrect 'mode' specified for the Data array, leading to incorrect data access pattern"
+        }
+    ]
+}

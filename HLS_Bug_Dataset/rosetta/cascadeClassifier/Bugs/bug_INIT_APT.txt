@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int sum0 =0;\n  int sum1 =0;\n  int sum2 =0;\n  int final_sum =0;",
+            "Faulty Code": "int sum0, sum1, sum2, final_sum;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=coord type=complete dim=0"
+        }
+    ]
+}

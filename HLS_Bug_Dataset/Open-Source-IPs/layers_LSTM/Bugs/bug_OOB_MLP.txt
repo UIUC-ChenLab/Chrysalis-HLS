@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "top[n+8+nn]+=compute_engine_LSTM_loop(",
+            "Faulty Code": "top[n+16+nn]+=compute_engine_LSTM_loop("
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for(int c=0;c<256;c+=8){",
+            "Faulty Code": "#pragma HLS pipeline \n for(int c=0;c<256;c+=8){"
+        }
+    ]
+}

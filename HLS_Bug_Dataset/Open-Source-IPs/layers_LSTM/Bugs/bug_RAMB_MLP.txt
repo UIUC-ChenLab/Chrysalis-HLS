@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=weight dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=weight dim=1 cyclic factor=8"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS pipeline\n#pragma HLS pipeline"
+        }
+    ]
+}

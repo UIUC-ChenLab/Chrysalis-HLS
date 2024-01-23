@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for ( bit16 i = 0; i < size_pixels; i++)",
+            "Faulty Code": "for ( bit16 i = 0; i <= size_pixels; i++)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "COLORING_FB_INIT_COL: for ( bit16 j = 0; j < MAX_Y; j++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nCOLORING_FB_INIT_COL: for ( bit16 j = 0; j < MAX_Y; j++)"
+        }
+    ]
+}

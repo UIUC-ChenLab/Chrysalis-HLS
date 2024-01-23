@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS array_partition factor=3"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void read_data(VectorDataType  data[NUM_FEATURES / D_VECTOR_SIZE],",
+            "Faulty Code": "#pragma HLS interface port=data mode=ap_none"
+        }
+    ]
+}

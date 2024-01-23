@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "coord[0] = II[18][7];",
+            "Faulty Code": "coord[0] = II[30][7];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "int classifier23( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev ){",
+            "Faulty Code": "int classifier23( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev ){\n#pragma HLS interface m_axi port=II offset=slave"
+        }
+    ]
+}

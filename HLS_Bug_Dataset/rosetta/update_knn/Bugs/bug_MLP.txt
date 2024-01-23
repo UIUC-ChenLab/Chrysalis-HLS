@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "FIND_MAX_DIST: for ( int k = 0; k < K_CONST; ++k )",
+            "Faulty Code": "#pragma HLS pipeline\nFIND_MAX_DIST: for ( int k = 0; k < K_CONST; ++k )"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "output[i * MAX_Y / 4 + j / 4] = out_FB;",
+            "Faulty Code": "output[i * (MAX_Y / 4) + j] = out_FB;"
+        }
+    ]
+}

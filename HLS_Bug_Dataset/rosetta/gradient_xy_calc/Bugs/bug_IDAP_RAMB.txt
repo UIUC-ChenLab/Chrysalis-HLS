@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void gradient_xy_calc(input_t frame[MAX_HEIGHT][MAX_WIDTH], ...)",
+            "Faulty Code": "#pragma HLS interface port=frame mode=ap_fifo\nvoid gradient_xy_calc(input_t frame[MAX_HEIGHT][MAX_WIDTH], ...)"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void gradient_xy_calc(input_t frame[MAX_HEIGHT][MAX_WIDTH], ...)",
+            "Faulty Code": "#pragma HLS interface m_axi port=frame offset=slave\nvoid gradient_xy_calc(input_t frame[MAX_HEIGHT][MAX_WIDTH], ...)"
+        }
+    ]
+}

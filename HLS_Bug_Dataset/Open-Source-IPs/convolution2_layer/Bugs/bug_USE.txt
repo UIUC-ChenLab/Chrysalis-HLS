@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "bias_buff[0][coo].range(11,0)=stream_temp.range(coo*24+11,coo*24);",
+            "Faulty Code": "bias_buff[0][coo].range(11,0)=stream_temp.range(coo*24+11,coo*24).to_int();"
+        }
+    ]
+}

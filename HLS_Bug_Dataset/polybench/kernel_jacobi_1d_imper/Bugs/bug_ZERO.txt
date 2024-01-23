@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "B[i] = 0.33333 * (A[i-1] + A[i] + A[i + 1]);",
+            "Faulty Code": "B[i] = 0 * (A[i-1] + A[i] + A[i + 1]);"
+        }
+    ]
+}

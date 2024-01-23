@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "coord[1] = II[8][20];",
+            "Faulty Code": "coord[1] = II[8][WINDOW_SIZE];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS interface port=coord mode=ap_memory"
+        }
+    ]
+}

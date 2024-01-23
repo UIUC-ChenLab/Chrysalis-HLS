@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "static int counter = 0;",
+            "Faulty Code": "int counter;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "Initialize1i:\n  for ( i = 0; i < WINDOW_SIZE ; i++ ){\n  #pragma HLS unroll\n    Initialize1j:\n    for ( j = 0; j < 2*WINDOW_SIZE; j++ ){\n    #pragma HLS unroll",
+            "Faulty Code": "Initialize1i:\n  for ( i = 0; i < WINDOW_SIZE - 1 ; i++ ){\n  #pragma HLS unroll\n    Initialize1j:\n    for ( j = 0; j < 2*WINDOW_SIZE - 1; j++ ){\n    #pragma HLS unroll"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "return offset_mapping[addr];",
+            "Faulty Code": "return offset_mapping[addr + 512];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS interface port=offset_mapping mode=ap_none"
+        }
+    ]
+}

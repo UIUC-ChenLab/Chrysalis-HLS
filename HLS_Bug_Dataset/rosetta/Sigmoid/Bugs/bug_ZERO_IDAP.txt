@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "FeatureType useLUT(FeatureType in)",
+            "Faulty Code": "FeatureType useLUT(FeatureType in = 0)"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=lut"
+        }
+    ]
+}

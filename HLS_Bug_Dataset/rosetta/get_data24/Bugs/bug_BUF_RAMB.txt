@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "case 0: a = aa[31 ]; break;",
+            "Faulty Code": "case 0: a = aa[ROWS*COLS/2 + 31]; break;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS interface port=aa mode=m_axi"
+        }
+    ]
+}

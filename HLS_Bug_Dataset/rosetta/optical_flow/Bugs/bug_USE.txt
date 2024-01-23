@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "frame1_a[r][c] = ((input_t)(buf(7 ,  0)) >> 8);",
+            "Faulty Code": "frame1_a[r][c] = (input_t)buf(7 ,  0);"
+        }
+    ]
+}

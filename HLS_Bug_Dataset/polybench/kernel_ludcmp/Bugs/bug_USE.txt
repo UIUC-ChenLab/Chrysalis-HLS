@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "w = w - A[i+1][k] * A[k][j];",
+            "Faulty Code": "w = w - A[i+1][k] * (int)A[k][j];"
+        }
+    ]
+}

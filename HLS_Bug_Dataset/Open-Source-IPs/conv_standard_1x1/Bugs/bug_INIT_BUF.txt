@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "FIX_32_12 tmp[DEPTH];",
+            "Faulty Code": "FIX_32_12 tmp[DEPTH]; // Missing initialization loop for tmp"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "for(int co = 0; co < 16; co+=16) {",
+            "Faulty Code": "for(int co = 0; co < DEPTH; co+=16) { // Should iterate over 16, but DEPTH is used which might be different"
+        }
+    ]
+}

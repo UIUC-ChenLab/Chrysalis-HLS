@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void kernel_jacobi_1d_imper(int tsteps, int n, DATA_TYPE POLYBENCH_1D(A,N,n), DATA_TYPE POLYBENCH_1D(B,N,n))",
+            "Faulty Code": "#pragma HLS INTERFACE port=A ap_none"
+        }
+    ]
+}

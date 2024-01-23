@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "x[i] = c[i];",
+            "Faulty Code": "x[i] = c[i + n/2]; // Assuming 'c' is a split buffer"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "x[i] = x[i] - A[i][j] * x[j];",
+            "Faulty Code": "x[i] = x[i] - A[i][j] * (short)x[j]; // Assuming 'DATA_TYPE' is int and inadvertently casting to 'short' leading to sign extension"
+        }
+    ]
+}

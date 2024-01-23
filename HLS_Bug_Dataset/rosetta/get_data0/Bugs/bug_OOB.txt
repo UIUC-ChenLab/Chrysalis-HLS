@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint18_t get_data0(int offset, uint18_t aa[ROWS*COLS])\n{\n  #pragma HLS inline\n  uint18_t a;\n  switch (offset)\n  {\n    case 0: a = aa[19 ]; break;\n    case 1: a = aa[29 ]; break;\n    case 2: a = aa[52 ]; break;\n    case 3: a = aa[100]; break;\n    case 4: a = aa[132]; break;\n    case 5: a = aa[161]; break;\n    case 6: a = aa[193]; break;\n    case 7: a = aa[220]; break;\n    case 8: a = aa[239]; break;\n    case 9: a = aa[253]; break;\n    case 10:a = aa[284]; break;\n    case 11:a = aa[309]; break;\n    case 12:a = aa[362]; break;\n    case 13:a = aa[385]; break;\n    case 14:a = aa[396]; break;\n    case 15:a = aa[447]; break;\n    case 16:a = aa[448]; break;\n    case 17:a = aa[449]; break;\n    case 18:a = aa[451]; break;\n    case 19:a = aa[466]; break;\n    case 20:a = aa[492]; break;\n    case 21:a = aa[531]; break;\n    case 22:a = aa[562]; break;\n    default: a = 0; break;\n  };\n\n  return a;\n}",
+            "Faulty Code": "uint18_t get_data0(int offset, uint18_t aa[ROWS*COLS])\n{\n  #pragma HLS inline\n  uint18_t a;\n  switch (offset)\n  {\n    case 0: a = aa[19 ]; break;\n    case 1: a = aa[29 ]; break;\n    case 2: a = aa[52 ]; break;\n    case 3: a = aa[100]; break;\n    case 4: a = aa[132]; break;\n    case 5: a = aa[161]; break;\n    case 6: a = aa[193]; break;\n    case 7: a = aa[220]; break;\n    case 8: a = aa[239]; break;\n    case 9: a = aa[253]; break;\n    case 10:a = aa[284]; break;\n    case 11:a = aa[309]; break;\n    case 12:a = aa[362]; break;\n    case 13:a = aa[385]; break;\n    case 14:a = aa[396]; break;\n    case 15:a = aa[447]; break;\n    case 16:a = aa[512]; break;\n    case 17:a = aa[449]; break;\n    case 18:a = aa[451]; break;\n    case 19:a = aa[466]; break;\n    case 20:a = aa[492]; break;\n    case 21:a = aa[531]; break;\n    case 22:a = aa[562]; break;\n    default: a = 0; break;\n  };\n\n  return a;\n}"
+        }
+    ]
+}

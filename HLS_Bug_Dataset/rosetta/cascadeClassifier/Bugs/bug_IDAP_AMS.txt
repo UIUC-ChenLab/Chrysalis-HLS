@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS array_partition variable=values complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=values cyclic dim=0"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS interface port=coord"
+        }
+    ]
+}

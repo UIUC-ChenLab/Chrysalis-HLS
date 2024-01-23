@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(int i=0;i<96;i+=32){",
+            "Faulty Code": "for(int i=0;i<=96;i+=32){"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void load_weights(ap_fixed<12,1,AP_TRN_ZERO,AP_SAT> weight_buf[96][3], hls::stream<int512> &stream512_in)",
+            "Faulty Code": "void load_weights(ap_fixed<12,1,AP_TRN_ZERO,AP_SAT> weight_buf[96][3], hls::stream<int512> &stream512_in) {\n#pragma HLS INTERFACE bram port=weight_buf"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "#pragma HLS unroll factor=8",
+            "Faulty Code": "#pragma HLS unroll factor=7"
+        }
+    ]
+}

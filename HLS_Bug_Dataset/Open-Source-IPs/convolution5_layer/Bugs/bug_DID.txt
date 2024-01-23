@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=bottom dim=2 cyclic factor=16",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=bottom dim=3 cyclic factor=16"
+        }
+    ]
+}

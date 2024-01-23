@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS array_partition factor=3 dim=2"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "imageScalerL1: for ( i = 0 ; i < IMAGE_HEIGHT ; i++ ){",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

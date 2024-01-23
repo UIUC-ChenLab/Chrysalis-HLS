@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "void load_weights(FIX_WT weight_buf[DEPTH], FIX_WT weights[DEPTH][3][3], int i, int j)",
+            "Faulty Code": "void load_weights(char weight_buf[DEPTH], FIX_WT weights[DEPTH][3][3], int i, int j)"
+        }
+    ]
+}

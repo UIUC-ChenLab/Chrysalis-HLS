@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "DATA_TYPE POLYBENCH_3D(Bza,CZ+1,CYM+1,CXM+1,cz+1,cym+1,cxm+1)",
+            "Faulty Code": "DATA_TYPE POLYBENCH_3D(Bza,CZ+1,CYM+1,CXM+1,0,cym+1,cxm+1)"
+        }
+    ]
+}

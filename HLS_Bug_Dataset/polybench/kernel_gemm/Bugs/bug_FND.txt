@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (k = 0; k < _PB_NK; ++k)",
+            "Faulty Code": "#pragma HLS array_partition variable=B factor=5 dim=2"
+        }
+    ]
+}

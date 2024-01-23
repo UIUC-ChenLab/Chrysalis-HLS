@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "max_min[4] = max_min[1] - max_min[0];",
+            "Faulty Code": "max_min[4] = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "triangle_2d_same->z  = triangle_2d.z ;",
+            "Faulty Code": "#pragma HLS pipeline\ntriangle_2d_same->z  = triangle_2d.z ;"
+        }
+    ]
+}

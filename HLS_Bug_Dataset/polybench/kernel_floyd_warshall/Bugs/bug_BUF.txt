@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "path[i][j] = path[i][j] < path[i][k] + path[k][j] ? path[i][j] : path[i][k] + path[k][j];",
+            "Faulty Code": "path[i][j] = path[i][j] < path[j][k] + path[k][i] ? path[i][j] : path[j][k] + path[k][i];"
+        }
+    ]
+}

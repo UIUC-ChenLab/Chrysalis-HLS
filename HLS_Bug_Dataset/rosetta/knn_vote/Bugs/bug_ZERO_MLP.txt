@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "pos = 1000;",
+            "Faulty Code": "pos = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "for (int r = 0; r < K_CONST; r ++) { #pragma HLS pipeline"
+        }
+    ]
+}

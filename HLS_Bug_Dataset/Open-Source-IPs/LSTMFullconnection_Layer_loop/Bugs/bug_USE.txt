@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "weight[0][i][j].range(3,0)=stream_temp.range( (i*8+j)*8+3,(i*8+j)*8);",
+            "Faulty Code": "weight[0][i][j].range(3,0)=stream_temp.range( (i*8+j)*8+4,(i*8+j)*8);"
+        }
+    ]
+}

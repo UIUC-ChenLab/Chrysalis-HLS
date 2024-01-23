@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable=stream512_out depth=16",
+            "Faulty Code": "#pragma HLS STREAM variable=stream512_out depth=16 dim=2"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

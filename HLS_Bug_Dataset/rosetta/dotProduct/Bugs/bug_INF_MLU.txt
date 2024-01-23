@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "DOT: for (int i = 0; i < NUM_FEATURES / PAR_FACTOR; i++)",
+            "Faulty Code": "DOT: for (int i = 0; i <= NUM_FEATURES / PAR_FACTOR; i++)"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "DOT_INNER: for(int j = 0; j < PAR_FACTOR; j++)",
+            "Faulty Code": "DOT_INNER: for(int j = 0; j <= PAR_FACTOR; j++)"
+        }
+    ]
+}

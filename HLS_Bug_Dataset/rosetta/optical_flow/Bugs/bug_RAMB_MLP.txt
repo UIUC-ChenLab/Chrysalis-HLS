@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS STREAM variable=frame3_a depth=default_depth",
+            "Faulty Code": "#pragma HLS interface port=frame3_a mode=m_axi"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

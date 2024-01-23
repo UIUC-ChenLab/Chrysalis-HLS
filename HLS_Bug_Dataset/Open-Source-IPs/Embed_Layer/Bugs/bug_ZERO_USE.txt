@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_fixed<12,1,AP_TRN_ZERO,AP_SAT> temp;",
+            "Faulty Code": "ap_fixed<12,1,AP_TRN_ZERO,AP_SAT> temp = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "if (word_input < 0 || word_input >= 8801) { printf(\"illegal input\\n\"); return; }",
+            "Faulty Code": "if ((unsigned int)word_input < 0 || word_input >= 8801) { printf(\"illegal input\\n\"); return; }"
+        }
+    ]
+}

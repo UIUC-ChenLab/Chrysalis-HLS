@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (k = 0; k < _PB_NK; ++k)",
+            "Faulty Code": "for (k = 0; k < _PB_NK - 1; ++k)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "E[i][j] += A[i][k] * B[k][j];",
+            "Faulty Code": "E[i][j] += (unsigned)A[i][k] * B[k][j];"
+        }
+    ]
+}

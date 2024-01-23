@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "DATA_TYPE POLYBENCH_2D(A,NX,NY,nx,ny),",
+            "Faulty Code": "#pragma HLS array_partition variable=A dim=3"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "DATA_TYPE POLYBENCH_1D(q,NX,nx),",
+            "Faulty Code": "#pragma HLS interface port=q mode=ap_fifo"
+        }
+    ]
+}

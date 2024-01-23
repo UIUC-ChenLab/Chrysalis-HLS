@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=weight_buf   dim=3",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=weight_buf   dim=3 cyclic factor=2"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void convolution2_layer(ap_fixed <TOTAL_B,12,AP_TRN_ZERO,AP_SAT>  bottom[2][48][31][31], hls::stream<int512> &stream512_in, ap_fixed <TOTAL_B,9,AP_TRN_ZERO,AP_SAT> padded_rst[256][15][15])",
+            "Faulty Code": "void convolution2_layer(ap_fixed <TOTAL_B,12,AP_TRN_ZERO,AP_SAT>  bottom[2][48][31][31], hls::stream<int512> &stream512_in, ap_fixed <TOTAL_B,9,AP_TRN_ZERO,AP_SAT> padded_rst[256][15][15]) #pragma HLS INTERFACE port=padded_rst ap_none"
+        }
+    ]
+}

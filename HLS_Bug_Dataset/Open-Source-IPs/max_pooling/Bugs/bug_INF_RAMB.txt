@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(int i = 0; i < 10; i++) {",
+            "Faulty Code": "for(int i = 0; i <= 10; i++) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=buf_in cyclic dim=1 factor=16",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=buf_in complete dim=1 factor=16"
+        }
+    ]
+}

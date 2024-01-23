@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "bit8 tmp_x, tmp_y;",
+            "Faulty Code": "bit8 tmp_x = 0, tmp_y;"
+        }
+    ]
+}

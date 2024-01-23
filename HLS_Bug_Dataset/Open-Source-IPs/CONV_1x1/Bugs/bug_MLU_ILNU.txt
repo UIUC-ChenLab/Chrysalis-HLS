@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(int co = 0; co < 16; co+=16) {",
+            "Faulty Code": "for(int co = 0; co < 16; co+=8) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS unroll",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

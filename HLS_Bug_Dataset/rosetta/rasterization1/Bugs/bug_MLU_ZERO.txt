@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "max_min[4] = max_min[1] - max_min[0];",
+            "Faulty Code": "max_min[4] = 0;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "if ( check_clockwise( triangle_2d ) < 0 )\n    clockwise_vertices( &triangle_2d );",
+            "Faulty Code": "if ( check_clockwise( triangle_2d ) )\n    clockwise_vertices( &triangle_2d );"
+        }
+    ]
+}

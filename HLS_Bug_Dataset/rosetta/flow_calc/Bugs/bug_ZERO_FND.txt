@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "buf[0] = numer0 / denom;\nbuf[1] = numer1 / denom;",
+            "Faulty Code": "buf[0] = 0;\nbuf[1] = 0;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=buf factor=3"
+        }
+    ]
+}

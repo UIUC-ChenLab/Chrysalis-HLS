@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void projection ( Triangle_3D triangle_3d, Triangle_2D *triangle_2d, bit2 angle )",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=triangle_2d"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void projection ( Triangle_3D triangle_3d, Triangle_2D *triangle_2d, bit2 angle )",
+            "Faulty Code": "#pragma HLS INTERFACE s_axilite port=triangle_3d"
+        }
+    ]
+}

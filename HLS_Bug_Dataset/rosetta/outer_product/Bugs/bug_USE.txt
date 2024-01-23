@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "gradient_t grad = gradient[r][c];",
+            "Faulty Code": "gradient_t grad = (gradient_t)gradient[r][c];"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void clockwise_vertices( Triangle_2D *triangle_2d )",
+            "Faulty Code": "#pragma HLS interface port=bram mode=s_axilite triangle_2d\nvoid clockwise_vertices( Triangle_2D *triangle_2d )"
+        }
+    ]
+}

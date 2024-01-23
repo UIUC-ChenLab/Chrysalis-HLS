@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "coord[1] = II[9][21];",
+            "Faulty Code": "coord[1] = II[9][12];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=coord"
+        }
+    ]
+}

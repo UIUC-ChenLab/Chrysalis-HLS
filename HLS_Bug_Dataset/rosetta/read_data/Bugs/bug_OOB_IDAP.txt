@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "VectorFeatureType tmp_data = data[i];",
+            "Faulty Code": "VectorFeatureType tmp_data = data[i * D_VECTOR_SIZE];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "#pragma HLS pipeline II=1 rewind"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint18_t get_data8(int offset, uint18_t aa[ROWS*COLS])\n{\n  #pragma HLS inline\n  uint18_t a;\n\n  switch (offset)\n  {\n    case 0:a = aa[0]; break;\n    default: a = 0; break;\n  };\n  return a;\n}",
+            "Faulty Code": "uint18_t get_data8(int offset, uint18_t aa[ROWS*COLS])\n{\n  #pragma HLS inline\n  uint18_t a;\n\n  switch (offset)\n  {\n    case 0:a = aa[625]; break; // Out-of-bounds since array index should be within 0 to ROWS*COLS-1 which is 0 to 624\n    default: a = 0; break;\n  };\n  return a;\n}"
+        }
+    ]
+}

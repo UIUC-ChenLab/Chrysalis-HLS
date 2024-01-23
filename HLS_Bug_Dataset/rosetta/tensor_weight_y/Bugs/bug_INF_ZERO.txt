@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "TENSOR_WEIGHT_Y_OUTER: for(int r=0; r<MAX_HEIGHT+1; r++)",
+            "Faulty Code": "TENSOR_WEIGHT_Y_OUTER: for(int r=0; r<=MAX_HEIGHT; r++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "const pixel_t TENSOR_FILTER[] = {0.3243, 0.3513, 0.3243};",
+            "Faulty Code": "const pixel_t TENSOR_FILTER[] = {0, 0, 0};"
+        }
+    ]
+}

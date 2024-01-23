@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "coord[8] = 0; coord[9] = 0; coord[10] = 0; coord[11] = 0;",
+            "Faulty Code": "int coord[12];"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=coord type=complete dim=1"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for( int training_id = 0; training_id < NUM_TRAINING; training_id ++ )",
+            "Faulty Code": "for( int training_id = 0; training_id <= NUM_TRAINING; training_id ++ )"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable=grad cyclic factor=unroll_factor",
+            "Faulty Code": "#pragma HLS array_partition variable=grad cyclic factor=unroll_factor+1"
+        }
+    ]
+}

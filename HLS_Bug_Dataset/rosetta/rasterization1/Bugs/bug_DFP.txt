@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "if ( check_clockwise( triangle_2d ) < 0 )\n    clockwise_vertices( &triangle_2d );",
+            "Faulty Code": "#pragma HLS dataflow\nif ( check_clockwise( triangle_2d ) < 0 )\n    clockwise_vertices( &triangle_2d );"
+        }
+    ]
+}

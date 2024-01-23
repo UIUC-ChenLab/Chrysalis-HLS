@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=bottom dim=1 cyclic factor=8",
+            "Faulty Code": "#pragma HLS ARRAY_RESHAPE variable=bottom dim=1 cyclic factor=8"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void LSTMFC_stream_wrapper(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> bottom[1000], ap_int<512> *data, ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> top[1024])",
+            "Faulty Code": "void LSTMFC_stream_wrapper(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> bottom[1000], ap_int<512> *data, ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> top)"
+        }
+    ]
+}

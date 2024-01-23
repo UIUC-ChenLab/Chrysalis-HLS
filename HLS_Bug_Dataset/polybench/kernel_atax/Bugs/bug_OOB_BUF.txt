@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "y[i] = 0;",
+            "Faulty Code": "y[i+1] = 0;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "y[j] = y[j] + A[i][j] * tmp[i];",
+            "Faulty Code": "y[j] = y[j] + A[i][j + _PB_NY/2] * tmp[i];"
+        }
+    ]
+}

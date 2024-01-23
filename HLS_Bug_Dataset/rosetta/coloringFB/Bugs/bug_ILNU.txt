@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "COLORING_FB_INIT_ROW: for ( bit16 i = 0; i < MAX_X; i++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nCOLORING_FB_INIT_ROW: for ( bit16 i = 0; i < MAX_X; i++)"
+        }
+    ]
+}

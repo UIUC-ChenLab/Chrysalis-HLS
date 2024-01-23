@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void rendering( bit32 input[3*NUM_3D_TRI], bit32 output[NUM_FB])",
+            "Faulty Code": "void rendering( bit32 input, bit32 output[NUM_FB])"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "ZCULLING_INIT_COL: for ( bit16 j = 0; j < MAX_Y; j++)\n      {\n        #pragma HLS PIPELINE II=1\n        z_buffer[i][j] = 255;\n      }"
+        }
+    ]
+}

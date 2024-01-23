@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "y[i] = 0;",
+            "Faulty Code": "y[i] = i;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "tmp[i] = tmp[i] + A[i][j] * x[j];",
+            "Faulty Code": "tmp[i] = tmp[i] + A[i][j] * (short)x[j];"
+        }
+    ]
+}

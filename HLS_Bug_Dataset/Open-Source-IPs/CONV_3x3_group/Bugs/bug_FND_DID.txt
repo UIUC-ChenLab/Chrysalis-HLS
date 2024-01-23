@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=bottom cyclic dim=1 factor=16",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=bottom cyclic dim=1 factor=15"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=weights dim=1 factor=16",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=weights dim=4 factor=16"
+        }
+    ]
+}

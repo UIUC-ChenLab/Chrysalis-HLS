@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void computeGradient(\n    FeatureType grad[NUM_FEATURES],\n    DataType    feature[NUM_FEATURES],\n    FeatureType scale)\n{\n  #pragma HLS INLINE\n  const int unroll_factor = PAR_FACTOR;\n  #pragma HLS array_partition variable=grad cyclic factor=unroll_factor\n  #pragma HLS array_partition variable=feature cyclic factor=unroll_factor\n  GRAD: for (int i = 0; i < NUM_FEATURES / PAR_FACTOR; i++)\n  {\n    #pragma HLS PIPELINE II=1\n    GRAD_INNER: for (int j = 0; j < PAR_FACTOR; j++)\n      grad[i*PAR_FACTOR+j] = (scale * feature[i*PAR_FACTOR+j]);\n  }\n}",
+            "Faulty Code": "void computeGradient(\n    FeatureType grad[NUM_FEATURES],\n    DataType    feature[NUM_FEATURES],\n    FeatureType scale)\n{\n  #pragma HLS INLINE\n  #pragma HLS dataflow\n  const int unroll_factor = PAR_FACTOR;\n  #pragma HLS array_partition variable=grad cyclic factor=unroll_factor\n  #pragma HLS array_partition variable=feature cyclic factor=unroll_factor\n  GRAD: for (int i = 0; i < NUM_FEATURES / PAR_FACTOR; i++)\n  {\n    #pragma HLS PIPELINE II=1\n    GRAD_INNER: for (int j = 0; j < PAR_FACTOR; j++)\n      grad[i*PAR_FACTOR+j] = (scale * feature[i*PAR_FACTOR+j]);\n  }\n}"
+        }
+    ]
+}

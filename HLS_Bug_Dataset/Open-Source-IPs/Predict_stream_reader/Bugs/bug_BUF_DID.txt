@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "stream512_out.write(data[i]);",
+            "Faulty Code": "stream512_out.write(data[PREDICT_LENGTH/2 + i]);"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable=stream512_out depth=16",
+            "Faulty Code": "#pragma HLS array_partition variable=data dim=2 complete"
+        }
+    ]
+}

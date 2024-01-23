@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_fixed<12,1,AP_TRN_ZERO,AP_SAT> weight[2][8][8];",
+            "Faulty Code": "ap_fixed<8,1,AP_TRN_ZERO,AP_SAT> weight[2][8][8];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=bottom dim=1 cyclic factor=8",
+            "Faulty Code": "#pragma HLS INTERFACE port=bottom"
+        }
+    ]
+}

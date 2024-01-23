@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "smallbuf[i] = buf[i+1][c];",
+            "Faulty Code": "smallbuf[i] = buf[i][c];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable=buf complete dim=1",
+            "Faulty Code": "#pragma HLS array_partition variable=buf cyclic factor=4 dim=1"
+        }
+    ]
+}

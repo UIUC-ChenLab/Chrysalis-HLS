@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outer_product[r][c] = out;",
+            "Faulty Code": "outer_product[r+1][c] = out;"
+        }
+    ]
+}

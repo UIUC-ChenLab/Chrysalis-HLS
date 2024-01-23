@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint5_t get_offset(uint10_t addr) { #pragma HLS inline return offset_mapping[addr]; }",
+            "Faulty Code": "int get_offset(uint10_t addr) { #pragma HLS inline return offset_mapping[addr]; }"
+        }
+    ]
+}

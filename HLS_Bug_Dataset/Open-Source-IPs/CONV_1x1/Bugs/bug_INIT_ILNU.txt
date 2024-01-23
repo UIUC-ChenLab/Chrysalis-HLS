@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "FIX_32_12 tmp[DEPTH];",
+            "Faulty Code": "FIX_32_12 tmp[DEPTH]; // Potential use of uninitialized variable 'tmp' since it is not initialized here."
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS unroll",
+            "Faulty Code": "#pragma HLS unroll factor=2 // Incorrect unroll factor for non-innermost loop"
+        }
+    ]
+}

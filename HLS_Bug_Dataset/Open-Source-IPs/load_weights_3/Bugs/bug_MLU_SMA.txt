@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(int cii=0;cii<16;cii+=2){",
+            "Faulty Code": "for(int cii=0;cii<16;cii+=1){"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void load_weights_3(ap_fixed<12,1,AP_TRN_ZERO,AP_SAT>  weight_buf[2][24][16],",
+            "Faulty Code": "void load_weights_3(ap_fixed<12,1,AP_TRN_ZERO,AP_SAT>  weight_buf[2][24][16], #pragma HLS interface port=bram"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "coord[11] = 0;",
+            "Faulty Code": "// coord[11] = 0;  // This line is commented out, hence the omission of one iteration"
+        }
+    ]
+}

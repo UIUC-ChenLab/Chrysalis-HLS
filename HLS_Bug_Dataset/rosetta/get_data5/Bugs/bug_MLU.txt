@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "case 23:a = aa[571]; break;",
+            "Faulty Code": "case 23:a = aa[571];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "for(int coo=0;coo<16;coo++)",
+            "Faulty Code": "for(int coo=0;coo<32;coo++)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for(int w=0;w<27;w++)",
+            "Faulty Code": "for(int w=0;w<27;w++) {\n#pragma HLS pipeline"
+        }
+    ]
+}

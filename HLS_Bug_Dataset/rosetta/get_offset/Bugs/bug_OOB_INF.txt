@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return offset_mapping[addr];",
+            "Faulty Code": "return offset_mapping[addr % 32];"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "uint5_t get_offset(uint10_t addr)",
+            "Faulty Code": "uint5_t get_offset(uint10_t addr) // assuming this function is called in a loop with incorrect termination condition leading to an infinite loop"
+        }
+    ]
+}

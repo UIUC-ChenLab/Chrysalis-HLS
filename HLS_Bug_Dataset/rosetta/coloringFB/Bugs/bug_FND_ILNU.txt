@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=frame_buffer dim=2 factor=3"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "COLORING_FB_INIT_COL: for ( bit16 j = 0; j < MAX_Y; j++)",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

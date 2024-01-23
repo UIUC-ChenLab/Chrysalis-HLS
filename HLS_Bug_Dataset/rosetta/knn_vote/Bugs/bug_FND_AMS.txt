@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable=min_distance_list complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=min_distance_list factor=5 dim=0"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "LabelType knn_vote( int knn_set[PAR_FACTOR * K_CONST] )",
+            "Faulty Code": "#pragma HLS interface port=knn_set ap_none"
+        }
+    ]
+}

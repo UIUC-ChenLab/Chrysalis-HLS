@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "frame_buffer[ pixels[i].x ][ pixels[i].y ] = pixels[i].color;",
+            "Faulty Code": "frame_buffer[ pixels[i].y ][ pixels[i].x ] = pixels[i].color;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=frame_buffer factor=15 dim=2"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "sum0 = (coord[0] - coord[1] - coord[2] + coord[3]) * weights_array0[haar_counter];",
+            "Faulty Code": "sum0 = (coord[0] - coord[1] - coord[2] + coord[13]) * weights_array0[haar_counter];"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "Stages: for ( i = 3; i < 25; i++ ){",
+            "Faulty Code": "Stages: for ( i = 3; i < 25; ){"
+        }
+    ]
+}

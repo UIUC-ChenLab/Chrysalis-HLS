@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "tmp[iz][iy] = (cymh[iy] / cyph[iy]) * Bza[iz][iy][ix] - (ch / cyph[iy]) * clf[iz][iy];",
+            "Faulty Code": "tmp[iz][iy] = (cymh[iy] / cyph[iy]) * Bza[iz][iy][_PB_CXM] - (ch / cyph[iy]) * clf[iz][iy];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "DATA_TYPE POLYBENCH_2D(clf,CYM+1,CXM+1,cym+1,cxm+1),",
+            "Faulty Code": "DATA_TYPE POLYBENCH_2D(clf,CYM+1,CXM,cym+1,cxm),"
+        }
+    ]
+}

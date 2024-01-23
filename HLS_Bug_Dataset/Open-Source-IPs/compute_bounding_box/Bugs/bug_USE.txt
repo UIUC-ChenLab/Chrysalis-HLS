@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "conf_m = m;",
+            "Faulty Code": "conf_m = (short)m;"
+        }
+    ]
+}

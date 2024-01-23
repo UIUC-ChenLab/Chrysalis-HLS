@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "output[i * MAX_Y / 4 + j / 4] = out_FB;",
+            "Faulty Code": "output[i * (MAX_Y / 4) + j] = out_FB;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void output_FB(bit8 frame_buffer[MAX_X][MAX_Y], bit32 output[NUM_FB])",
+            "Faulty Code": "void output_FB(bit8 frame_buffer[MAX_X][MAX_Y], bit32 output[NUM_FB]) { #pragma HLS interface m_axi port=output mode=read_write }"
+        }
+    ]
+}

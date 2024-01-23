@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "buf_out[ch][i][j] = max(buf_in[ch][i*2+1][j*2+1], buf_in[ch][i*2+1][j*2+2], buf_in[ch][i*2+2][j*2+1], buf_in[ch][i*2+2][j*2+2]);",
+            "Faulty Code": "buf_out[ch][i][j] = max(buf_in[ch][i*2][j*2], buf_in[ch][i*2][j*2+1], buf_in[ch][i*2+1][j*2], buf_in[ch][i*2+1][j*2+1]);"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=buf_in cyclic dim=1 factor=16",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=buf_in complete dim=1"
+        }
+    ]
+}

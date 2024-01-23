@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS array_partition variable=_II complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=_II complete"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "stage_sum = s1[0] + s1[1] + s1[2] + s1[3] + s1[4] + s1[5] + s1[6] + s1[7];",
+            "Faulty Code": "stage_sum = s1[0] + s1[1] + s1[2] + s1[3] + s1[4] + s1[5] + s1[6];"
+        }
+    ]
+}

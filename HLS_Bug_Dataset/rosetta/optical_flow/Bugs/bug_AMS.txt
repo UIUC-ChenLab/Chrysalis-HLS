@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "// Content of called function\nvoid outer_product(gradient_t gradient[MAX_HEIGHT][MAX_WIDTH],\n     outer_t outer_product[MAX_HEIGHT][MAX_WIDTH])\n{\n  OUTER_OUTER: for(int r=0; r<MAX_HEIGHT; r++)\n  {\n    OUTER_INNER: for(int c=0; c<MAX_WIDTH; c++)\n    {\n      #pragma HLS pipeline II=1\n      gradient_t grad = gradient[r][c];\n      ...",
+            "Faulty Code": "// Content of called function\nvoid outer_product(gradient_t gradient[MAX_HEIGHT][MAX_WIDTH],\n     outer_t outer_product[MAX_HEIGHT][MAX_WIDTH])\n{\n  #pragma HLS interface port=gradient ap_none\n  OUTER_OUTER: for(int r=0; r<MAX_HEIGHT; r++)\n  {\n    OUTER_INNER: for(int c=0; c<MAX_WIDTH; c++)\n    {\n      #pragma HLS pipeline II=1\n      gradient_t grad = gradient[r][c];\n      ..."
+        }
+    ]
+}

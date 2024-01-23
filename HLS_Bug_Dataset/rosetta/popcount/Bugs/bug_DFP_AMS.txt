@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "int popcount(WholeDigitType x) {",
+            "Faulty Code": "#pragma HLS dataflow\nint popcount(WholeDigitType x) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "int popcount(WholeDigitType x) {",
+            "Faulty Code": "#pragma HLS interface port=ap_none\nint popcount(WholeDigitType x) {"
+        }
+    ]
+}

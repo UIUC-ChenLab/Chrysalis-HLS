@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "FIX_32_4 conf_thresh = 0.0;",
+            "Faulty Code": "FIX_32_4 conf_thresh = 0;"
+        }
+    ]
+}

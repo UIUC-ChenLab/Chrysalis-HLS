@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "cnt = cnt + x[i];",
+            "Faulty Code": "cnt = cnt + x[i+128]; // Assuming x is a 256-bit bitset"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "int popcount(WholeDigitType x) { ... }",
+            "Faulty Code": "#pragma HLS dataflow\nint popcount(WholeDigitType x) { ... }"
+        }
+    ]
+}

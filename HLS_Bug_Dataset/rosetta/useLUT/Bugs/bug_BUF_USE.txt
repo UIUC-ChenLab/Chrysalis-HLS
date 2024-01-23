@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "return lut[index];",
+            "Faulty Code": "return lut[index + LUT_SIZE/2];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "index = (IdxFixed)LUT_SIZE - (IdxFixed)(((TmpFixed)in) << (LUTIN_TWIDTH - LUTIN_IWIDTH));",
+            "Faulty Code": "index = (IdxFixed)LUT_SIZE - ((TmpFixed)in) << (LUTIN_TWIDTH - LUTIN_IWIDTH);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "case 15:a = aa[415]; break;",
+            "Faulty Code": "/* Missing case 15, manual loop unrolling omits one iteration */"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "uint18_t get_data3(int offset, uint18_t aa[ROWS*COLS])",
+            "Faulty Code": "uint18_t get_data3(int offset, int16_t aa[ROWS*COLS])"
+        }
+    ]
+}

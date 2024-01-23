@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS array_partition variable=param cyclic factor=unroll_factor",
+            "Faulty Code": "#pragma HLS interface port=param mode=bram"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS unroll factor=unroll_factor"
+        }
+    ]
+}

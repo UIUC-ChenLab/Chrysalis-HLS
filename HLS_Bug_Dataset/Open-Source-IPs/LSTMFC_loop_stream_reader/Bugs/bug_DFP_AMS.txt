@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void LSTMFC_loop_stream_reader(ap_int<512> *data, hls::stream<int512> &stream512_out)",
+            "Faulty Code": "void LSTMFC_loop_stream_reader(ap_int<512> *data, hls::stream<int512> &stream512_out) #pragma HLS interface port=data mode=s_axilite"
+        }
+    ]
+}

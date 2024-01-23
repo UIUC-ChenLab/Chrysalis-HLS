@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "int classifier48( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev )",
+            "Faulty Code": "int classifier48( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev ) {\n#pragma HLS interface m_axi port=II mode=read"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS interface port=coord bram"
+        }
+    ]
+}

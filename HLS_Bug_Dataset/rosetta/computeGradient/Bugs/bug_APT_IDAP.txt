@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS array_partition variable=grad cyclic factor=unroll_factor",
+            "Faulty Code": "#pragma HLS array_partition variable=grad complete factor=unroll_factor"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=grad"
+        }
+    ]
+}

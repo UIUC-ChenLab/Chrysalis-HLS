@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for(int i=0;i<PREDICT_LENGTH;i++)",
+            "Faulty Code": "for(int i=0;i<=PREDICT_LENGTH;i++)"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS STREAM variable=stream512_out depth=16",
+            "Faulty Code": "#pragma HLS array_partition variable=data type=complete"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "bit32 out_FB = 0;",
+            "Faulty Code": "bit32 out_FB;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=frame_buffer"
+        }
+    ]
+}

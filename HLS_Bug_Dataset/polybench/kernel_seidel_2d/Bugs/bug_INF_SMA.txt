@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (t = 0; t <= _PB_TSTEPS - 1; t++)",
+            "Faulty Code": "for (t = 0; t <= _PB_TSTEPS; t++)"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void kernel_seidel_2d(int tsteps, int n, DATA_TYPE POLYBENCH_2D(A,N,N,n,n))",
+            "Faulty Code": "#pragma HLS INTERFACE port=A bram"
+        }
+    ]
+}

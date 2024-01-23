@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "data = data + word_input*8;",
+            "Faulty Code": "data = data + word_input*32; // MLU error: incorrect factor in manual loop unrolling"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS pipeline // MLP error: Nested within another pipeline pragma"
+        }
+    ]
+}

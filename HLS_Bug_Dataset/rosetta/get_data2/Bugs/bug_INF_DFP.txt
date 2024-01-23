@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "default: a = 0; break;",
+            "Faulty Code": "default: ; // Missing 'a = 0;' could lead to an infinite loop if 'a' is used as a loop condition later in the code."
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS dataflow // Placed inside the get_data2 function which does not contain a dataflow region."
+        }
+    ]
+}

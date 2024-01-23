@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "int classifier39( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev ){",
+            "Faulty Code": "int classifier39( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev ){ while(1){}"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS interface port=coord mode=ap_none"
+        }
+    ]
+}

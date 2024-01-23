@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "bit16 pixel_cntr = 0;",
+            "Faulty Code": "bit16 pixel_cntr;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void output_FB(bit8 frame_buffer[MAX_X][MAX_Y], bit32 output[NUM_FB])",
+            "Faulty Code": "void output_FB(bit8 frame_buffer, bit32 output[NUM_FB])"
+        }
+    ]
+}

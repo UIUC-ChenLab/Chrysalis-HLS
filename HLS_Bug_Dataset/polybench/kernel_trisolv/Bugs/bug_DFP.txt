@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "x[i] = x[i] - A[i][j] * x[j];",
+            "Faulty Code": "#pragma HLS dataflow\n      x[i] = x[i] - A[i][j] * x[j];"
+        }
+    ]
+}

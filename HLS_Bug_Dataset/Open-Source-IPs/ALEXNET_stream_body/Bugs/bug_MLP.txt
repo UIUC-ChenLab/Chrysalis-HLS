@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "convolution1_layer(image,stream512_in,padded_rst_1);",
+            "Faulty Code": "#pragma HLS pipeline\nconvolution1_layer(image,stream512_in,padded_rst_1);"
+        }
+    ]
+}

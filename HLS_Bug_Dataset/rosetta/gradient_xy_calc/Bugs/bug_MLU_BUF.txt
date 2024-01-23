@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "for (int i = 0; i < 4; i ++ )\n          buf[i][c] = smallbuf[i];",
+            "Faulty Code": "for (int i = 0; i < 5; i ++ )\n          buf[i][c] = smallbuf[i];"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < 5; i ++ )\n          window.insert_pixel(smallbuf[i],i,4);",
+            "Faulty Code": "for (int i = 0; i < 4; i ++ )\n          window.insert_pixel(smallbuf[i],i,4);"
+        }
+    ]
+}

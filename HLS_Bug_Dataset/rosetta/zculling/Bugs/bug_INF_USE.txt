@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for ( bit16 j = 0; j < MAX_Y; j++)",
+            "Faulty Code": "for ( bit16 j = 0; j <= MAX_Y; j++)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "bit8 color = 100;",
+            "Faulty Code": "bit16 color = 100;"
+        }
+    ]
+}

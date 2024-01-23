@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "uint5_t get_bank(uint10_t addr) { ... }",
+            "Faulty Code": "uint5_t get_bank(uint10_t addr) {\n    #pragma HLS interface m_axi port=bank_mapping\n    return bank_mapping[addr];\n}"
+        }
+    ]
+}

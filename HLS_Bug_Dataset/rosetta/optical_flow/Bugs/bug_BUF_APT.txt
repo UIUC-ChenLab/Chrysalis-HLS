@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "frame3_a[r][c] = ((input_t)(buf(23, 16)) >> 8);",
+            "Faulty Code": "frame3_b[r][c] = ((input_t)(buf(23, 16)) >> 8);"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS array_partition variable=buf complete dim=1",
+            "Faulty Code": "#pragma HLS array_partition variable=buf cyclic dim=1"
+        }
+    ]
+}

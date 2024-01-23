@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "output[i * MAX_Y / 4 + j / 4] = out_FB;",
+            "Faulty Code": "output[i * MAX_Y + j] = out_FB;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS interface port=output mode=m_axi"
+        }
+    ]
+}

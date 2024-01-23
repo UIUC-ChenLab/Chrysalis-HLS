@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(int i=0;i<PREDICT_LENGTH;i++)",
+            "Faulty Code": "for(int i=0;i<PREDICT_LENGTH-1;i++)"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable=stream512_out depth=16",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=stream512_out depth=16"
+        }
+    ]
+}

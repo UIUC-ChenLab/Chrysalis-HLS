@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "READ_TRAINING_DATA: for (int i = 0; i < NUM_FEATURES / D_VECTOR_SIZE; i ++ )",
+            "Faulty Code": "READ_TRAINING_DATA: for (int i = 0; i <= NUM_FEATURES / D_VECTOR_SIZE; i ++ )"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "training_instance[i * D_VECTOR_SIZE + j].range(DTYPE_TWIDTH-1, 0) = tmp_data.range((j+1)*DTYPE_TWIDTH-1, j*DTYPE_TWIDTH);",
+            "Faulty Code": "training_instance[i * D_VECTOR_SIZE + j].range(DTYPE_TWIDTH-1, 0) = (DataType)tmp_data.range((j+1)*DTYPE_TWIDTH-1, j*DTYPE_TWIDTH);"
+        }
+    ]
+}

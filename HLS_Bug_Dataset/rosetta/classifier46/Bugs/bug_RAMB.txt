@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "int classifier46( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev )",
+            "Faulty Code": "int classifier46( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev ) {\n#pragma HLS interface m_axi port=II offset=slave bundle=gmem\n}"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "frame_buffer[ pixels[i].x ][ pixels[i].y ] = pixels[i].color;",
+            "Faulty Code": "frame_buffer[ i ][ pixels[i].y ] = pixels[i].color;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS PIPELINE II=1\n#pragma HLS PIPELINE II=1"
+        }
+    ]
+}

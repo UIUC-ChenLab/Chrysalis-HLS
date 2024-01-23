@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void kernel_durbin(int n, DATA_TYPE POLYBENCH_2D(y,N,N,n,n), DATA_TYPE POLYBENCH_2D(sum,N,N,n,n), DATA_TYPE POLYBENCH_1D(alpha,N,n), DATA_TYPE POLYBENCH_1D(beta,N,n), DATA_TYPE POLYBENCH_1D(r,N,n), DATA_TYPE POLYBENCH_1D(out,N,n))",
+            "Faulty Code": "#pragma HLS interface m_axi port=sum offset=slave bundle=gmem"
+        }
+    ]
+}

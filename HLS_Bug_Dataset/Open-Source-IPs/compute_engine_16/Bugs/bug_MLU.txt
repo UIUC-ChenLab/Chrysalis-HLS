@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "add11 = add6 + add7;",
+            "Faulty Code": "add11 = add6 + add6;"
+        }
+    ]
+}

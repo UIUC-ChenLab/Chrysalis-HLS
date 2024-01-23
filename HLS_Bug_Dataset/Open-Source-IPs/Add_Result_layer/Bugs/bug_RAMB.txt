@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void Add_Result_layer(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> gate_input_t[1024], ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> xcstatic_rst[1024], ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> Wxc_tm1[1024], ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> Whc_tm1[1024],ap_int<512> *  data )",
+            "Faulty Code": "#pragma HLS interface m_axi port=data offset=slave bundle=gmem0"
+        }
+    ]
+}

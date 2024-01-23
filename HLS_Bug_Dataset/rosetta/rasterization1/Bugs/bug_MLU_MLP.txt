@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "max_min[4] = max_min[1] - max_min[0];",
+            "Faulty Code": "max_min[5] = max_min[1] - max_min[0];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

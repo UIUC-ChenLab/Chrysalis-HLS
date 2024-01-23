@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "GRAD: for (int i = 0; i < NUM_FEATURES / PAR_FACTOR; i++)",
+            "Faulty Code": "GRAD: for (int i = 0; i <= NUM_FEATURES / PAR_FACTOR; i++)"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "grad[i*PAR_FACTOR+j] = (scale * feature[i*PAR_FACTOR+j]);",
+            "Faulty Code": "grad[i*(PAR_FACTOR+1)+j] = (scale * feature[i*(PAR_FACTOR+1)+j]);"
+        }
+    ]
+}

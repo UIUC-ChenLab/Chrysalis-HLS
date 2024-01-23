@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=bottom cyclic dim=1 factor=16",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=bottom complete dim=1"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for(int co = 0; co < 16; co+=16) {",
+            "Faulty Code": "for(int co = 0; co < 16; co+=8) {"
+        }
+    ]
+}

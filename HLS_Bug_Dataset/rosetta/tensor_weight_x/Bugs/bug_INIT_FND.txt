@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "tensor_t tmp;",
+            "Faulty Code": "tensor_t tmp = tensor_y[r][c];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=buf factor=2"
+        }
+    ]
+}

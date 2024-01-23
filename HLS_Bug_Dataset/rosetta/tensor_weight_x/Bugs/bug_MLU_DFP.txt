@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void tensor_weight_x(tensor_t tensor_y[MAX_HEIGHT][MAX_WIDTH], tensor_t tensor[MAX_HEIGHT][MAX_WIDTH])",
+            "Faulty Code": "#pragma HLS dataflow void tensor_weight_x(tensor_t tensor_y[MAX_HEIGHT][MAX_WIDTH], tensor_t tensor[MAX_HEIGHT][MAX_WIDTH])"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "TENSOR_WEIGHT_X_OUTER: for(int r=0; r<MAX_HEIGHT; r++)",
+            "Faulty Code": "TENSOR_WEIGHT_X_OUTER: for(int r=0; r<=MAX_HEIGHT; r++)"
+        }
+    ]
+}

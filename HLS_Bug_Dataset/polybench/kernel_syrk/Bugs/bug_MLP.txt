@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = 0; i < _PB_NI; i++)\n    for (j = 0; j < _PB_NI; j++)\n      for (k = 0; k < _PB_NJ; k++)\n\t  C[i][j] += alpha * A[i][k] * A[j][k];",
+            "Faulty Code": "for (i = 0; i < _PB_NI; i++) {\n    #pragma HLS pipeline\n    for (j = 0; j < _PB_NI; j++) {\n        #pragma HLS pipeline\n        for (k = 0; k < _PB_NJ; k++) {\n\t    C[i][j] += alpha * A[i][k] * A[j][k];\n        }\n    }\n}"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "image[i][j][k+kk].range(15,0)=stream_word.range(kk*16+15,kk*16);",
+            "Faulty Code": "image[i][j][k+kk].range(15,0)=stream_word.range(kk*16+7,kk*16);"
+        }
+    ]
+}

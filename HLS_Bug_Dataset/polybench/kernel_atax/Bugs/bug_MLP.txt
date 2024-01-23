@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (j = 0; j < _PB_NY; j++)\n\ty[j] = y[j] + A[i][j] * tmp[i];",
+            "Faulty Code": "for (j = 0; j < _PB_NY; j++) {\n\t#pragma HLS pipeline\n\ty[j] = y[j] + A[i][j] * tmp[i];\n}"
+        }
+    ]
+}

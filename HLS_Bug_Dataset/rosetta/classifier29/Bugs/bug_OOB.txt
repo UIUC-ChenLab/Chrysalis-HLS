@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "coord[2] = II[18][6];\n  coord[3] = II[18][9];",
+            "Faulty Code": "coord[2] = II[19][6];\n  coord[3] = II[19][9];"
+        }
+    ]
+}

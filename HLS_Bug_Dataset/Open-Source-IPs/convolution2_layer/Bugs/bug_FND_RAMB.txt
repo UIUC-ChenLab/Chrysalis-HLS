@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=weight_buf   dim=3",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=weight_buf cyclic dim=3 factor=15"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "padded_rst[ii+i][h+1][w+1]=max_engine_2(top[0][ii+i][h*2][w*2],  top[0][ii+i][h*2][w*2+1],  top[0][ii+i][h*2][w*2+2], ...);",
+            "Faulty Code": "padded_rst[ii+i][h+1][w+1]=max_engine_2(top[0][ii+i][h][w*2],  top[0][ii+i][h][w*2+1],  top[0][ii+i][h][w*2+2], ...);"
+        }
+    ]
+}

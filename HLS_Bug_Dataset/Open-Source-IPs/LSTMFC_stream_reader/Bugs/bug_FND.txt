@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "void LSTMFC_stream_reader(ap_int<512> *data, hls::stream<int512> &stream512_out)",
+            "Faulty Code": "void LSTMFC_stream_reader(ap_int<512> *data, hls::stream<int512> &stream512_out)\n{\n#pragma HLS STREAM variable=stream512_out depth=16\n#pragma HLS array_partition variable=data factor=3000\n\tfor(int i=0;i<LSTMFC_LENGTH;i++)\n\t{\n#pragma HLS pipeline\n\t\tstream512_out.write(data[i]);\n\t}\n}"
+        }
+    ]
+}

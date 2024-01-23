@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS array_partition variable=min_distance_list complete dim=0",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=min_distance_list"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int pos = 1000;",
+            "Faulty Code": "#pragma HLS interface port=pos bram"
+        }
+    ]
+}

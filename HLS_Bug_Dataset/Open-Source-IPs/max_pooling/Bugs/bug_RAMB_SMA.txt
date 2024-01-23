@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=buf_in cyclic dim=1 factor=16",
+            "Faulty Code": "#pragma HLS INTERFACE port=buf_in mode=m_axi"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void max_pooling(FIX_FM buf_in[16][22][42], FIX_FM buf_out[16][10][20])",
+            "Faulty Code": "void max_pooling(FIX_FM buf_in, FIX_FM buf_out[16][10][20])"
+        }
+    ]
+}

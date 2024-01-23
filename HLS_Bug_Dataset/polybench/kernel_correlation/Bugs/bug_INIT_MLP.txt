@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "mean[j] = 0.0;",
+            "Faulty Code": "// mean[j] = 0.0; (This initialization is commented out, leading to use of uninitialized variable)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = 0; i < _PB_N; i++)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (i = 0; i < _PB_N; i++) (Incorrect placement of '#pragma HLS pipeline')"
+        }
+    ]
+}

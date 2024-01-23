@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=top dim=1 cyclic factor=8",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=top dim=1 cyclic factor=10"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS pipeline\n#pragma HLS pipeline"
+        }
+    ]
+}

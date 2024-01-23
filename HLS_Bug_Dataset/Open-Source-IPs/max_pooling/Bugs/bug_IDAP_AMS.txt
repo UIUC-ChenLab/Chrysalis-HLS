@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=buf_in cyclic dim=1 factor=16",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=buf_in"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void max_pooling(FIX_FM buf_in[16][22][42], FIX_FM buf_out[16][10][20])",
+            "Faulty Code": "#pragma HLS INTERFACE port=buf_in mode=s_axilite"
+        }
+    ]
+}

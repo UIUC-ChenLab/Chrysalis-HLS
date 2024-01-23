@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void LSTMFC_stream_reader(ap_int<512> *data, hls::stream<int512> &stream512_out)",
+            "Faulty Code": "void LSTMFC_stream_reader(ap_int<512> *data, hls::stream<int512> &stream512_out) {\n#pragma HLS interface port=data mode=m_axi\n#pragma HLS STREAM variable=stream512_out depth=16\n\tfor(int i=0;i<LSTMFC_LENGTH;i++)\n\t{\n#pragma HLS pipeline\n\t\tstream512_out.write(data[i]);\n\t}\n}"
+        }
+    ]
+}

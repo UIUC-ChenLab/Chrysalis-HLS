@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "IMG1_data[i][j] =  Data[(i*y_ratio)>>16][(j*x_ratio)>>16];",
+            "Faulty Code": "IMG1_data[i][j] =  Data[(i*y_ratio)>>16][j];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "unsigned char Data[IMAGE_HEIGHT][IMAGE_WIDTH],",
+            "Faulty Code": "#pragma HLS interface port=Data mode=bram"
+        }
+    ]
+}

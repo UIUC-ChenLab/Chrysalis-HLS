@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=aa"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "uint18_t aa[ROWS*COLS]",
+            "Faulty Code": "#pragma HLS interface port=a"
+        }
+    ]
+}

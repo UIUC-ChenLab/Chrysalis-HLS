@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "smallbuf[4] = (pixel_t)(frame[r][c]);",
+            "Faulty Code": "smallbuf[4] = frame[r][c]; // Unintended sign extension might occur here if input_t is of a larger signed type and pixel_t is unsigned"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "#pragma HLS unroll factor=4 // Incorrectly placed and non-innermost loop unroll without full inner loop unrolling"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=coord complete dim=2"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "coord[8] = 0; coord[9] = 0; coord[10] = 0; coord[11] = 0;",
+            "Faulty Code": "coord[8] = 0; coord[9] = 0; coord[10] = 0;"
+        }
+    ]
+}

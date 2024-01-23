@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int sum0, sum1, sum2, final_sum;",
+            "Faulty Code": "int sum0, sum1, sum2, final_sum = 0;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if(final_sum >= (-78 * stddev))",
+            "Faulty Code": "while(final_sum >= (-78 * stddev))"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 1; i < _PB_NX; i++)\n\tfor (j = 0; j < _PB_NY; j++)\n\t  ey[i][j] = ey[i][j] - 0.5*(hz[i][j]-hz[i-1][j]);",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (i = 1; i < _PB_NX; i++)\n\tfor (j = 0; j < _PB_NY; j++)\n\t  ey[i][j] = ey[i][j] - 0.5*(hz[i][j]-hz[i-1][j]);"
+        }
+    ]
+}

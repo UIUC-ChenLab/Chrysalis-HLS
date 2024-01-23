@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "FLOW_OUTER: for(int r=0; r<MAX_HEIGHT; r++)",
+            "Faulty Code": "FLOW_OUTER: for(int r=0; r<MAX_HEIGHT-1; r++)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "x[i] = x[i] - A[i][j] * x[j];",
+            "Faulty Code": "#pragma HLS interface m_axi port=A offset=slave\nx[i] = x[i] - A[i][j] * x[j];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (j = 0; j <= i - 1; j++)",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (j = 0; j <= i - 1; j++)"
+        }
+    ]
+}

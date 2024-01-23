@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < NUM_FEATURES / F_VECTOR_SIZE; i ++ )",
+            "Faulty Code": "for (int i = 0; i <= NUM_FEATURES / F_VECTOR_SIZE; i ++ )"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int j = 0; j < F_VECTOR_SIZE; j ++ )",
+            "Faulty Code": "for (int j = 0; j <= F_VECTOR_SIZE; j ++ )"
+        }
+    ]
+}

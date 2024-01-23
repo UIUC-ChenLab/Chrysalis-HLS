@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "coord[2] = II[12][1];",
+            "Faulty Code": "coord[2] = II[10][1];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "sum2 = (coord[8] - coord[9] - coord[10] + coord[11]) * 0;",
+            "Faulty Code": "sum2 = (coord[8] - coord[9] - coord[10] + coord[11]) * 4096;"
+        }
+    ]
+}

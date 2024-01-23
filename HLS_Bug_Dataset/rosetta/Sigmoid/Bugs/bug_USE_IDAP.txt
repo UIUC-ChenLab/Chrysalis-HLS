@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "LutInFixed inLut = (LutInFixed)exponent;",
+            "Faulty Code": "LutInFixed inLut = (LutInFixed)(int)exponent;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "return lut[index];",
+            "Faulty Code": "return lut[(int)index];"
+        }
+    ]
+}

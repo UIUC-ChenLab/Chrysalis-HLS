@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "TENSOR_WEIGHT_Y_TMP_OUTER: for(int i=0; i<3; i++)",
+            "Faulty Code": "#pragma HLS unroll factor=2\nTENSOR_WEIGHT_Y_TMP_OUTER: for(int i=0; i<3; i++)"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "TENSOR_WEIGHT_Y_ACC_INIT: for(int k =0; k<6; k++)\n        acc.val[k] = 0;",
+            "Faulty Code": "TENSOR_WEIGHT_Y_ACC_INIT: for(int k =0; k<5; k++)\n        acc.val[k] = 0;"
+        }
+    ]
+}

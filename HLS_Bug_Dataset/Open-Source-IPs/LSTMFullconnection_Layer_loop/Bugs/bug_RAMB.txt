@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void LSTMFullconnection_Layer_loop(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> bottom[256], hls::stream<int512> &stream512_in, ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> top[1024])",
+            "Faulty Code": "void LSTMFullconnection_Layer_loop(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> bottom[256], hls::stream<int512> &stream512_in, ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> top[1024]) {\n#pragma HLS interface m_axi port=bottom offset=slave bundle=gmem\n#pragma HLS interface m_axi port=top offset=slave bundle=gmem"
+        }
+    ]
+}

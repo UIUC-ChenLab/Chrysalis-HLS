@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "FeatureType result = 0;",
+            "Faulty Code": "FeatureType result;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "FeatureType dotProduct(FeatureType param[NUM_FEATURES], DataType feature[NUM_FEATURES])",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=result"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int r = K_CONST ;r > 0; r -- )",
+            "Faulty Code": "for (int r = K_CONST - 1;r > 0; r -- )"
+        }
+    ]
+}

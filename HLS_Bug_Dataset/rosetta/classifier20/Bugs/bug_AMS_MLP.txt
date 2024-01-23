@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "int classifier20( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev )",
+            "Faulty Code": "#pragma HLS interface port=return_value mode=ap_none"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "coord[0] = II[0][18];",
+            "Faulty Code": "#pragma HLS pipeline\ncoord[0] = II[0][18];"
+        }
+    ]
+}

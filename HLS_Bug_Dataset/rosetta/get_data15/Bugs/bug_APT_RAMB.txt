@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=aa"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS interface m_axi port=aa offset=slave"
+        }
+    ]
+}

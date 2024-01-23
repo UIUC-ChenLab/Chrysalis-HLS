@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "coord[8] = 0;",
+            "Faulty Code": "int coord[12]; // Removed 'static' keyword, now 'coord[8]' is uninitialized"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "coord[1] = II[8][20];",
+            "Faulty Code": "coord[1] = II[20][8]; // Incorrectly copying from the wrong index, swapped indices"
+        }
+    ]
+}

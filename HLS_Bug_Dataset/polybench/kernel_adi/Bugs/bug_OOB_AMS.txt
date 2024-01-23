@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "X[i1][_PB_N-1] = X[i1][_PB_N-1] / B[i1][_PB_N-1];",
+            "Faulty Code": "X[i1][_PB_N] = X[i1][_PB_N] / B[i1][_PB_N-1];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "X[i1][i2] = X[i1][i2] - X[i1][i2-1] * A[i1][i2] / B[i1][i2-1];",
+            "Faulty Code": "#pragma HLS INTERFACE port=return ap_none"
+        }
+    ]
+}

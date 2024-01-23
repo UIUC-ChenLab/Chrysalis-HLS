@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void clockwise_vertices( Triangle_2D *triangle_2d )",
+            "Faulty Code": "#pragma HLS dataflow\nvoid clockwise_vertices( Triangle_2D *triangle_2d )"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void clockwise_vertices( Triangle_2D *triangle_2d )",
+            "Faulty Code": "#pragma HLS interface port=triangle_2d mode=bram\nvoid clockwise_vertices( Triangle_2D *triangle_2d )"
+        }
+    ]
+}

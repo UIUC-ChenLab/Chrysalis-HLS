@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int i = 0; i < 4; i ++ )",
+            "Faulty Code": "for (int i = 0; i <= 4; i ++ )"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "gradient_x[r-2][c-2] = x_grad/12;",
+            "Faulty Code": "gradient_x[r-2][c-2] = (int)x_grad/12;"
+        }
+    ]
+}

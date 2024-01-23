@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "s[j] = s[j] + r[i] * A[i][j];",
+            "Faulty Code": "s[j] = s[j] + (short)r[i] * A[i][j];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = 0; i < _PB_NX; i++)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (i = 0; i < _PB_NX; i++)"
+        }
+    ]
+}

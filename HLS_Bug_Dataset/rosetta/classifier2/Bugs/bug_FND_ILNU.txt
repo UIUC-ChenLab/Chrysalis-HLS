@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=coord cyclic factor=5 dim=1"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "int classifier2( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev )...",
+            "Faulty Code": "#pragma HLS unroll factor=2\nint classifier2( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev )..."
+        }
+    ]
+}

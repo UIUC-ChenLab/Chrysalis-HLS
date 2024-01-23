@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "E[i][j] = 0;",
+            "Faulty Code": "E[i][j] = NON_ZERO_INIT_VALUE;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma scop",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

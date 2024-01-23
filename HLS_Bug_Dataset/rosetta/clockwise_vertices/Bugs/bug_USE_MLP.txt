@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "bit8 tmp_x, tmp_y;",
+            "Faulty Code": "int tmp_x, tmp_y;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "void clockwise_vertices( Triangle_2D *triangle_2d )",
+            "Faulty Code": "void clockwise_vertices( Triangle_2D *triangle_2d ) { #pragma HLS pipeline"
+        }
+    ]
+}

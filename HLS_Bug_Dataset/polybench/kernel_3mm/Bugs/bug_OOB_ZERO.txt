@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (j = 0; j < _PB_NJ; j++)",
+            "Faulty Code": "for (j = 0; j <= _PB_NJ; j++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "E[i][j] = 0;",
+            "Faulty Code": "E[i][j] = SOME_NON_ZERO_VALUE;"
+        }
+    ]
+}

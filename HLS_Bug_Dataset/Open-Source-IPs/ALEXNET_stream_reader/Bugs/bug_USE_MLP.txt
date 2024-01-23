@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "void ALEXNET_stream_reader(ap_int<512> *data, hls::stream<int512> &stream512_out)",
+            "Faulty Code": "void ALEXNET_stream_reader(int *data, hls::stream<int512> &stream512_out)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "for(int j=0; j<2; j++) {\n#pragma HLS pipeline"
+        }
+    ]
+}

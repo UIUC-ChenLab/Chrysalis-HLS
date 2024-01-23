@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_int<512> stream_temp=stream512_in.read();",
+            "Faulty Code": "ap_int<512> stream_temp;"
+        }
+    ]
+}

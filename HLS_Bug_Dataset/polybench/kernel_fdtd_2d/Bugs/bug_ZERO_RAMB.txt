@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ey[0][j] = _fict_[t];",
+            "Faulty Code": "ey[0][j] = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (i = 1; i < _PB_NX; i++)\n\tfor (j = 0; j < _PB_NY; j++)\n\t  ey[i][j] = ey[i][j] - 0.5*(hz[i][j]-hz[i-1][j]);",
+            "Faulty Code": "for (i = 0; i < _PB_NX; i+=2)\n\tfor (j = 0; j < _PB_NY; j++)\n\t  ey[i][j] = ey[i][j] - 0.5*(hz[i+1][j]-hz[i][j]);"
+        }
+    ]
+}

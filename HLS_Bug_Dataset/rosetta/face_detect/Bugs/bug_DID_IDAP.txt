@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS array_partition variable=II complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=II complete dim=2"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "imageScalerL1: for ( i = 0 ; i < IMAGE_HEIGHT ; i++ ){",
+            "Faulty Code": "imageScalerL1: for ( i = 0 ; i < IMAGE_HEIGHT ; i+=2 ){"
+        }
+    ]
+}

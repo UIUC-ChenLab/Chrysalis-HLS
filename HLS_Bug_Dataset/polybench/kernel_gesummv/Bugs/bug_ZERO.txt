@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "y[i] = alpha * tmp[i] + beta * y[i];",
+            "Faulty Code": "y[i] = 0;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "coord[8] = 0;",
+            "Faulty Code": "int coord[12]; // Missing static and initialization"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "coord[1] = II[4][24];",
+            "Faulty Code": "coord[1] = II[13][24]; // Incorrect index used"
+        }
+    ]
+}

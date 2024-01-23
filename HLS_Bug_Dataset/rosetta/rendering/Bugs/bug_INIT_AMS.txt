@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "bit16 size_fragment;",
+            "Faulty Code": "bit16 size_fragment = size_fragment;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void coloringFB(bit16 counter, bit16 size_pixels, Pixel pixels[], bit8 frame_buffer[MAX_X][MAX_Y])",
+            "Faulty Code": "#pragma HLS INTERFACE port=frame_buffer mode=ap_none"
+        }
+    ]
+}

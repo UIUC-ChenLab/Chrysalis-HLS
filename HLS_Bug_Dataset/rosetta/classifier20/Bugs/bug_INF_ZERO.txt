@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "coord[8] = 0;",
+            "Faulty Code": "coord[8] = some_nonzero_value;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if(final_sum >= (-84 * stddev))",
+            "Faulty Code": "while(final_sum >= (-84 * stddev))"
+        }
+    ]
+}

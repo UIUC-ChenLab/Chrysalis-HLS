@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "DATA_TYPE POLYBENCH_2D(A,N,N,n,n)",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=A"
+        }
+    ]
+}

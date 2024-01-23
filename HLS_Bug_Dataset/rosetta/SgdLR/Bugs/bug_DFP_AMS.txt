@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS dataflow // Incorrect placement, should not be inside the TRAINING_INST loop"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void SgdLR( VectorDataType data[NUM_FEATURES * NUM_TRAINING / D_VECTOR_SIZE], ... )",
+            "Faulty Code": "#pragma HLS interface port=data mode=ap_none // Incorrect mapping of array 'data' to scalar interface"
+        }
+    ]
+}

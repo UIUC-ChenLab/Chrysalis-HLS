@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (k = 0; k < _PB_NK; ++k)",
+            "Faulty Code": "for (k = 0; k <= _PB_NK; ++k)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "/* G := E*F */\n  for (i = 0; i < _PB_NI; i++)",
+            "Faulty Code": "#pragma HLS pipeline\n/* G := E*F */\n  for (i = 0; i < _PB_NI; i++)"
+        }
+    ]
+}

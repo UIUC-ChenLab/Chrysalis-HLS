@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "coord[11] = 0;",
+            "Faulty Code": "coord[10] = 0; // Missing coord[11] initialization"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS dataflow // Incorrectly placed, should not be here"
+        }
+    ]
+}

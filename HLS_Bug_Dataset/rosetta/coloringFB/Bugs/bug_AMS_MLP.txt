@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void coloringFB(bit16 counter,  bit16 size_pixels, Pixel pixels[], bit8 frame_buffer[MAX_X][MAX_Y])",
+            "Faulty Code": "void coloringFB(bit16 counter,  bit16 size_pixels, Pixel pixels, bit8 frame_buffer)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS PIPELINE II=1\n#pragma HLS PIPELINE II=1"
+        }
+    ]
+}

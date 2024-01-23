@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "C[i][j] *= beta;",
+            "Faulty Code": "C[i][j + 1] *= beta;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (k = 0; k < _PB_NJ; k++)",
+            "Faulty Code": "for (k = 0; k < _PB_NJ - 1; k++)"
+        }
+    ]
+}

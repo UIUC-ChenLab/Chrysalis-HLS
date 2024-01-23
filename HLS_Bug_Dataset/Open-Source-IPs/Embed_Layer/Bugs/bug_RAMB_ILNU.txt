@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "data = data + word_input*8;",
+            "Faulty Code": "data = data + word_input*32;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS unroll factor=16"
+        }
+    ]
+}

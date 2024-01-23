@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "tmp = buf.getval(i,c);",
+            "Faulty Code": "tmp = buf.getval(i+1,c);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "pixel_t k = TENSOR_FILTER[i];",
+            "Faulty Code": "int k = TENSOR_FILTER[i];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (p = 0; p < _PB_NP; p++)",
+            "Faulty Code": "for (p = 0; p < _PB_NR; p++)"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (s = 0; s < _PB_NP; s++)",
+            "Faulty Code": "for (s = 0; s <= _PB_NP; s++)"
+        }
+    ]
+}

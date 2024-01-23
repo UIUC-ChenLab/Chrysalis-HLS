@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void rendering( bit32 input[3*NUM_3D_TRI], bit32 output[NUM_FB])",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=input"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "OUTPUT_FB_ROW: for ( bit16 i = 0; i < MAX_X; i++)",
+            "Faulty Code": "#pragma HLS UNROLL factor=2\n  OUTPUT_FB_ROW: for ( bit16 i = 0; i < MAX_X; i++)"
+        }
+    ]
+}

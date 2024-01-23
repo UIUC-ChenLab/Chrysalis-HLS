@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "frame3_b[r][c] = ((input_t)(buf(23, 16)) >> 8);",
+            "Faulty Code": "frame3_a[r][c] = ((input_t)(buf(23, 16)) >> 8); // Incorrectly copying to frame3_a instead of frame3_b"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "TENSOR_WEIGHT_X_TMP_INIT: for(int i=0; i<6; i++)\n          tmp.val[i] = 0;",
+            "Faulty Code": "TENSOR_WEIGHT_X_TMP_INIT: for(int i=0; i<6; i++)\n          tmp.val[i] = 1; // Incorrectly initializing to 1 instead of 0"
+        }
+    ]
+}

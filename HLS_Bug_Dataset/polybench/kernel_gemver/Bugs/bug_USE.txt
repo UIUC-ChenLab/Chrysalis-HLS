@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "x[i] = x[i] + beta * A[j][i] * y[j];",
+            "Faulty Code": "x[i] = x[i] + beta * A[j][i] * (short)y[j];"
+        }
+    ]
+}

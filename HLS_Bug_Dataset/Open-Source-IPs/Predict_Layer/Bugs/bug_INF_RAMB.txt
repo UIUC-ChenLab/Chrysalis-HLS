@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(int i=0;i<8800;i+=40)",
+            "Faulty Code": "for(int i=0;;i+=40)"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=top dim=1 cyclic factor=8",
+            "Faulty Code": "#pragma HLS ARRAY_RESHAPE variable=top dim=1 cyclic factor=8"
+        }
+    ]
+}

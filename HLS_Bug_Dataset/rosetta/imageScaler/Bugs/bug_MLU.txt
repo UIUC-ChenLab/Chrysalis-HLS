@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "imageScalerL1: for ( i = 0 ; i < IMAGE_HEIGHT ; i++ ){",
+            "Faulty Code": "imageScalerL1: for ( i = 0 ; i <= IMAGE_HEIGHT ; i++ ){"
+        }
+    ]
+}

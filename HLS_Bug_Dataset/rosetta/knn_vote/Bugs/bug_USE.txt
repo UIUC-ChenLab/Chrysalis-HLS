@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "label_list[r-1] = i / (PAR_FACTOR / 10);",
+            "Faulty Code": "label_list[r-1] = (char)(i / (PAR_FACTOR / 10));"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "for (i2 = 1; i2 < _PB_N; i2++)",
+            "Faulty Code": "for (i2 = 0; i2 < _PB_N; i2++)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "X[i1][_PB_N-i2-2] = (X[i1][_PB_N-2-i2] - X[i1][_PB_N-2-i2-1] * A[i1][_PB_N-i2-3]) / B[i1][_PB_N-3-i2];",
+            "Faulty Code": "X[i1][_PB_N-i2-2] = (X[i1][_PB_N-2-i2] - (int)(X[i1][_PB_N-2-i2-1] * A[i1][_PB_N-i2-3])) / B[i1][_PB_N-3-i2];"
+        }
+    ]
+}

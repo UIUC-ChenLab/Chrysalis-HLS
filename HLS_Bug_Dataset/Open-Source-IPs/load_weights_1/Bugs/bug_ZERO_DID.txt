@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_int<512> stream_temp=stream512_in.read();",
+            "Faulty Code": "ap_int<512> stream_temp=0;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=weight_buf dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=weight_buf dim=3"
+        }
+    ]
+}

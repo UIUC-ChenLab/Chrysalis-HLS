@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=coord"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "coord[0] = II[3][0];",
+            "Faulty Code": "#pragma HLS interface m_axi port=II offset=slave"
+        }
+    ]
+}

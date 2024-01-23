@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "tmp = buf.getval(i,c);",
+            "Faulty Code": "tmp = buf.getval(2-i,c);"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS data_pack variable=buf.val[0]",
+            "Faulty Code": "#pragma HLS array_partition variable=buf.val dim=2"
+        }
+    ]
+}

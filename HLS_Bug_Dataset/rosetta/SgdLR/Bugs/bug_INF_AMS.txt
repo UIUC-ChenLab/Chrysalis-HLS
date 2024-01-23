@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "TRAINING_INST: for( int training_id = 0; training_id < NUM_TRAINING; training_id ++ )",
+            "Faulty Code": "TRAINING_INST: for( int training_id = 0; training_id <= NUM_TRAINING; training_id ++ )"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS array_partition variable=label_local cyclic factor=L_VECTOR_SIZE",
+            "Faulty Code": "#pragma HLS interface port=label_local mode=ap_none"
+        }
+    ]
+}

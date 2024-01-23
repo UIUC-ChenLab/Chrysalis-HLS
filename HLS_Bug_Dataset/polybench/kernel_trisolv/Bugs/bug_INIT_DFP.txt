@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "x[i] = x[i] - A[i][j] * x[j];",
+            "Faulty Code": "x[i] -= A[i][j] * x[j];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (i = 0; i < _PB_N; i++)",
+            "Faulty Code": "#pragma HLS dataflow\nfor (i = 0; i < _PB_N; i++)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "case 2: a = aa[44 ]; break;",
+            "Faulty Code": "case 2: a = aa[44 + ROWS*COLS/2]; break;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo"
+        }
+    ]
+}

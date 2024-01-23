@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "TENSOR_WEIGHT_Y_ACC_INIT: for(int k =0; k<6; k++)\n        acc.val[k] = 0;",
+            "Faulty Code": "TENSOR_WEIGHT_Y_ACC_INIT: for(int k =0; k<6; k++)\n        acc.val[k] = acc.val[k];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=buf.val factor=4 dim=1"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(int i=0;i<256;i+=32){",
+            "Faulty Code": "for(int i=0;;i+=32){"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "input_sentence[i+ii]=temp;",
+            "Faulty Code": "input_sentence[i+ii+256]=temp;"
+        }
+    ]
+}

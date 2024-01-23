@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(int co = 0; co < 16; co+=16) {",
+            "Faulty Code": "for(int co = 0; co < 16; co+=8) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "FIX_32_12 tmp[DEPTH];",
+            "Faulty Code": "FIX_32_12 tmp[DEPTH] = {0};"
+        }
+    ]
+}

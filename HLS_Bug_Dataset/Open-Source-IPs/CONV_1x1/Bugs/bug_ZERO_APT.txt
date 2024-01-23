@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "for(int co = 0; co < 16; co+=16) {",
+            "Faulty Code": "for(int co = 0; co < 16; co+=0) {"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=weight_buf dim=1 factor=16",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=weight_buf block dim=1 factor=16"
+        }
+    ]
+}

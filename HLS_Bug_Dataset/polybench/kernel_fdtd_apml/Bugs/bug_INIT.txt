@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "DATA_TYPE POLYBENCH_2D(clf,CYM+1,CXM+1,cym+1,cxm+1),",
+            "Faulty Code": "DATA_TYPE clf[CZ+1][CYM+1]; // Assuming that CZ+1 is the correct dimension and it's uninitialized"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(int h = 1; h <= HEIGH-2; h++)",
+            "Faulty Code": "for(int h = 1; h != HEIGH-1; h++)"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS dataflow inside the inner for-loop"
+        }
+    ]
+}

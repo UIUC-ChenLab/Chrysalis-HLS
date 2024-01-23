@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for(int ii=0;ii<48;ii+=16)\n    for(int h=0;h<27;h++)\n        for(int w=0;w<27;w++)\n#pragma HLS pipeline\n            for(int i=0;i<16;i++){\n#pragma HLS unroll\n                padded_rst[0][ii+i][h+2][w+2]=...",
+            "Faulty Code": "for(int ii=0;ii<48;ii+=16)\n    for(int h=0;h<27;h++)\n        for(int w=0;w<27;w++)\n#pragma HLS pipeline\n            for(int i=0;i<16;i++){\n#pragma HLS unroll factor=4\n                padded_rst[0][ii+i][h+2][w+2]=..."
+        }
+    ]
+}

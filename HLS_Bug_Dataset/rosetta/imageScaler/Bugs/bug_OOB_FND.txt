@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "IMG1_data[i][j] = Data[(i*y_ratio)>>16][(j*x_ratio)>>16];",
+            "Faulty Code": "IMG1_data[i][j] = Data[i][j];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS array_partition factor=3"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "x[i] = c[i];",
+            "Faulty Code": "DATA_TYPE tmp = x[i]; // uninitialized variable 'tmp' is being used"
+        }
+    ]
+}

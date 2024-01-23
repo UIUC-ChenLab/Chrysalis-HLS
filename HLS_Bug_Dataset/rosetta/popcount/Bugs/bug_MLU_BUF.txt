@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < 256; i ++ )",
+            "Faulty Code": "for (int i = 0; i <= 256; i ++ )"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "cnt = cnt + x[i];",
+            "Faulty Code": "cnt = cnt + x[i + 256]; // assuming x has a larger size, e.g., 512"
+        }
+    ]
+}

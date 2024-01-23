@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "FIND_MAX_DIST: for ( int k = 0; k < K_CONST; ++k )",
+            "Faulty Code": "FIND_MAX_DIST: for ( int k = 0; k <= K_CONST; ++k )"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < 256; i ++ )",
+            "Faulty Code": "for (int i = 0; i <= 256; i ++ )"
+        }
+    ]
+}

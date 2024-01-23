@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "FIX_32_12 mul0, mul1, mul2,  mul3,  mul4,  mul5,  mul6,  mul7;",
+            "Faulty Code": "FIX_16_4 mul0, mul1, mul2,  mul3,  mul4,  mul5,  mul6,  mul7;"
+        }
+    ]
+}

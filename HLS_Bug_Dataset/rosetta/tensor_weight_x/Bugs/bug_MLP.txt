@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "TENSOR_WEIGHT_X_TMP_INNER: for(int component=0; component<6; component++)\n          {\n            #pragma HLS pipeline\n            acc.val[component] += tmp.val[component]*TENSOR_FILTER[i];\n          }"
+        }
+    ]
+}

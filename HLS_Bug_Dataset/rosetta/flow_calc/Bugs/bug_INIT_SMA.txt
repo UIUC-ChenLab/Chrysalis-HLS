@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "static outer_pixel_t buf[2];",
+            "Faulty Code": "outer_pixel_t buf[2];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void flow_calc(tensor_t tensors[MAX_HEIGHT][MAX_WIDTH], velocity_t outputs[MAX_HEIGHT][MAX_WIDTH])",
+            "Faulty Code": "#pragma HLS interface port=outputs mode=ap_memory"
+        }
+    ]
+}

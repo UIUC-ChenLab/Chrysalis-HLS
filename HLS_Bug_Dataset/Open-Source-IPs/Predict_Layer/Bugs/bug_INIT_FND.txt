@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_fixed<12,1,AP_TRN_ZERO,AP_SAT> temp;",
+            "Faulty Code": "ap_fixed<12,1,AP_TRN_ZERO,AP_SAT> temp = 0;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=top dim=1 cyclic factor=8",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=top dim=1 cyclic factor=7"
+        }
+    ]
+}

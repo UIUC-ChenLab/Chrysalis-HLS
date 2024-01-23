@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint18_t a;",
+            "Faulty Code": "uint18_t a = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

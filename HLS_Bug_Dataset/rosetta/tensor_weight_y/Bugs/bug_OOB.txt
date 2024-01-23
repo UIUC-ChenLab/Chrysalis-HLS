@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "TENSOR_WEIGHT_Y_OUTER: for(int r=0; r<MAX_HEIGHT+1; r++)",
+            "Faulty Code": "TENSOR_WEIGHT_Y_OUTER: for(int r=0; r<=MAX_HEIGHT; r++)"
+        }
+    ]
+}

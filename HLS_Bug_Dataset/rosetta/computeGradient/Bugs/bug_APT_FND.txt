@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS array_partition variable=feature cyclic factor=unroll_factor",
+            "Faulty Code": "#pragma HLS array_partition variable=feature complete factor=unroll_factor"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "GRAD: for (int i = 0; i < NUM_FEATURES / PAR_FACTOR; i++)",
+            "Faulty Code": "GRAD: for (int i = 0; i <= NUM_FEATURES / PAR_FACTOR; i++)"
+        }
+    ]
+}

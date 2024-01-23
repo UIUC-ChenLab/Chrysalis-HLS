@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "OUTPUT_FB_COL: for ( bit16 j = 0; j < MAX_Y; j = j + 4)",
+            "Faulty Code": "#pragma HLS array_partition variable=frame_buffer dim=2 factor=3"
+        }
+    ]
+}

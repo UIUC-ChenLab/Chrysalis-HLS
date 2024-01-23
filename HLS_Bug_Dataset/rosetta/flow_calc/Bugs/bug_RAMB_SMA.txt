@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "tensor_t tmp_tensor = tensors[r][c];",
+            "Faulty Code": "#pragma HLS interface m_axi port=tensors offset=slave"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "static outer_pixel_t buf[2];",
+            "Faulty Code": "#pragma HLS interface port=buf bram"
+        }
+    ]
+}

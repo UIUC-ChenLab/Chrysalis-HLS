@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "default: a = 0; break;",
+            "Faulty Code": "default: a; break;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "uint18_t get_data18(int offset, uint18_t aa[ROWS*COLS])",
+            "Faulty Code": "#pragma HLS array_partition type=block variable=aa factor=10"
+        }
+    ]
+}

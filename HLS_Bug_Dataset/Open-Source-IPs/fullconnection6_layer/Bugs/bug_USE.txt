@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "temp.range(11,0)=stream_temp.range((j+k)*12+11,(j+k)*12);",
+            "Faulty Code": "top[i+j+k]=stream_temp.range((j+k)*12+11,(j+k)*12);"
+        }
+    ]
+}

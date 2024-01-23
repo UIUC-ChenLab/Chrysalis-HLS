@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int mean;",
+            "Faulty Code": "int mean = 0;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static int s1[16];",
+            "Faulty Code": "static int s1[16] = {0};"
+        }
+    ]
+}

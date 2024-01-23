@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "output[i * MAX_Y / 4 + j / 4] = out_FB;",
+            "Faulty Code": "output[i * MAX_Y + j] = out_FB;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

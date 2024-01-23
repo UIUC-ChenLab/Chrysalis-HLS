@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "case 19:a = aa[436]; break;",
+            "Faulty Code": "case 19:a = aa[500]; break;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS pipeline\n#pragma HLS inline"
+        }
+    ]
+}

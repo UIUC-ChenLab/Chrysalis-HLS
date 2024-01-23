@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint18_t a;",
+            "Faulty Code": "int a;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

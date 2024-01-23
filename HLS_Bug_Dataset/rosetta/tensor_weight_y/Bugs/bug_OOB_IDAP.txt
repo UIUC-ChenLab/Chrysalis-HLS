@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if(r<MAX_HEIGHT)",
+            "Faulty Code": "if(r<=MAX_HEIGHT)"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS data_pack variable=tmp",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=tmp"
+        }
+    ]
+}

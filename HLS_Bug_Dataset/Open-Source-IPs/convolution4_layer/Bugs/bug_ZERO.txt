@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "top[0][co+coo][1+h][1+w]=bias_buf[0][coo];",
+            "Faulty Code": "top[0][co+coo][1+h][1+w]=0;"
+        }
+    ]
+}

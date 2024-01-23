@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (i = 0; i < _PB_NY; i++)",
+            "Faulty Code": "for (i = 0; i <= _PB_NY; i++)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "y[j] = y[j] + A[i][j] * tmp[i];",
+            "Faulty Code": "y[j] = y[j] + A[i][j] * tmp[j];"
+        }
+    ]
+}

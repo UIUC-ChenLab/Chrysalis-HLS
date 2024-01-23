@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < NUM_FEATURES / PAR_FACTOR; i++)",
+            "Faulty Code": "for (int i = 0; i <= NUM_FEATURES / PAR_FACTOR; i++)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS array_partition variable=grad cyclic factor=unroll_factor",
+            "Faulty Code": "#pragma HLS interface port=grad mode=ap_none"
+        }
+    ]
+}

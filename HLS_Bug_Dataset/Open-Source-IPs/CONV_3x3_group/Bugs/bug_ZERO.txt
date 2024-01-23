@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "void CONV_3x3_group(FIX_FM bottom[DEPTH][HEIGH][WIDTH], FIX_FM top[DEPTH][HEIGH][WIDTH], FIX_WT weights[DEPTH][3][3]) {",
+            "Faulty Code": "void CONV_3x3_group(FIX_FM bottom[DEPTH][HEIGH][WIDTH], FIX_FM top[DEPTH][HEIGH][WIDTH] = {{0}}, FIX_WT weights[DEPTH][3][3]) {"
+        }
+    ]
+}

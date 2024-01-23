@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(t = 0; t < _PB_TMAX; t++)",
+            "Faulty Code": "for(t = 0; t <= _PB_TMAX; t++)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "ey[i][j] = ey[i][j] - 0.5*(hz[i][j]-hz[i-1][j]);",
+            "Faulty Code": "ey[i][j] = ey[i][j] - 0.5*((unsigned int)hz[i][j]-(unsigned int)hz[i-1][j]);"
+        }
+    ]
+}

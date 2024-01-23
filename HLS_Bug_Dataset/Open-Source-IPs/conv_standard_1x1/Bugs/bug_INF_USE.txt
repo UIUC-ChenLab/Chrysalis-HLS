@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(int h = 1; h <= HEIGH-2; h++) {",
+            "Faulty Code": "for(int h = 1; h < HEIGH; h++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "for(int co = 0; co < 16; co+=16) {",
+            "Faulty Code": "for(int co = 0; co < DEPTH; co+=16) {"
+        }
+    ]
+}

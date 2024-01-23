@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ey[i][j] = ey[i][j] - 0.5*(hz[i][j]-hz[i-1][j]);",
+            "Faulty Code": "ey[i][j] = ey[i][j] - 0.5*((short)(hz[i][j]-hz[i-1][j]));"
+        }
+    ]
+}

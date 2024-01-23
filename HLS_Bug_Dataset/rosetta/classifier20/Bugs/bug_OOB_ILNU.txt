@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "coord[0] = II[0][18];",
+            "Faulty Code": "coord[0] = II[0][WINDOW_SIZE];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS unroll factor = 4"
+        }
+    ]
+}

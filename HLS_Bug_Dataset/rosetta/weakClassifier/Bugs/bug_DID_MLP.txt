@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#include \"haar_dataEWC_with_partitioning.h\"",
+            "Faulty Code": "#pragma HLS array_partition variable=weights_array0 dim=1 complete // Incorrect 'dim' value for a 1-dimensional array"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "# pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS pipeline // Incorrectly placed inside the weakClassifier function without any loops"
+        }
+    ]
+}

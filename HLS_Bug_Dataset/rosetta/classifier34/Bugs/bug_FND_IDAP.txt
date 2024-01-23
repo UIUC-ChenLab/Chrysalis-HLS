@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=coord cyclic factor=5 dim=1"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "int classifier34( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev ){",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=II"
+        }
+    ]
+}

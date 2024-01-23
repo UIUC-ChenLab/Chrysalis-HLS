@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "gradient_t acc;\n      acc.x = 0;\n      acc.y = 0;\n      acc.z = 0;",
+            "Faulty Code": "gradient_t acc;"
+        }
+    ]
+}

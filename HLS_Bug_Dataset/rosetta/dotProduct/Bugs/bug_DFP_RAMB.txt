@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "FeatureType term = param[i*PAR_FACTOR+j] * feature[i*PAR_FACTOR+j];",
+            "Faulty Code": "FeatureType term = param[j] * feature[j];"
+        }
+    ]
+}

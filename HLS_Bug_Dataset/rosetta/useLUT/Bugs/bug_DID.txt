@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "return lut[index];",
+            "Faulty Code": "#pragma HLS array_partition variable=lut dim=2 complete\n  return lut[index];"
+        }
+    ]
+}

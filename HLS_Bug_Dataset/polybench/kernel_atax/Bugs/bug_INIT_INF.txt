@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "y[i] = 0;",
+            "Faulty Code": "// y[i] = 0; // Uninitialized 'y' array"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (j = 0; j < _PB_NY; j++)",
+            "Faulty Code": "for (j = 0; j <= _PB_NY; j++) // Off-by-one error leading to infinite loop if _PB_NY is the maximum integer value"
+        }
+    ]
+}

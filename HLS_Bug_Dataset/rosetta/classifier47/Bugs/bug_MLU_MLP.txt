@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "coord[1] = II[1][12];",
+            "Faulty Code": "coord[1] = II[1][13];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

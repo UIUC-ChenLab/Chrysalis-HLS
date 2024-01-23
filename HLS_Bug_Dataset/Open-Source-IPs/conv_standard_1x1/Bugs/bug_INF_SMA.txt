@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(int h = 1; h <= HEIGH-2; h++){",
+            "Faulty Code": "for(int h = 1; h != HEIGH-2; h++){"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void CONV_1x1(FIX_FM bottom[DEPTH][HEIGH][WIDTH],",
+            "Faulty Code": "#pragma HLS INTERFACE port=bottom bram"
+        }
+    ]
+}

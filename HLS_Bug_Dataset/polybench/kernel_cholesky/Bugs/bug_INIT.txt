@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "x = A[i][i];",
+            "Faulty Code": "DATA_TYPE x;"
+        }
+    ]
+}

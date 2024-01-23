@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint5_t get_offset(uint10_t addr) {",
+            "Faulty Code": "uint5_t get_offset(uint10_t addr=0) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "for (int i = 0; i < 32; i++) { #pragma HLS pipeline"
+        }
+    ]
+}

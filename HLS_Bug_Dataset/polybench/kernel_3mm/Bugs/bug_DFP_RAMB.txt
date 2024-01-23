@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "/* E := A*B */\n  for (i = 0; i < _PB_NI; i++)\n    for (j = 0; j < _PB_NJ; j++)\n      {\n\tE[i][j] = 0;\n\tfor (k = 0; k < _PB_NK; ++k)\n\t  E[i][j] += A[i][k] * B[k][j];\n      }",
+            "Faulty Code": "#pragma HLS dataflow\n/* E := A*B */\n  for (i = 0; i < _PB_NI; i++)\n    for (j = 0; j < _PB_NJ; j++)\n      {\n\tE[i][j] = 0;\n\tfor (k = 0; k < _PB_NK; ++k)\n\t  E[i][j] += A[i][k] * B[k][j];\n      }"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "/* G := E*F */\n  for (i = 0; i < _PB_NI; i++)\n    for (j = 0; j < _PB_NL; j++)\n      {\n\tG[i][j] = 0;\n\tfor (k = 0; k < _PB_NJ; ++k)\n\t  G[i][j] += E[i][k] * F[k][j];\n      }",
+            "Faulty Code": "#pragma HLS interface m_axi port=E depth=NI*NJ\n#pragma HLS interface m_axi port=F depth=NJ*NL\n/* G := E*F */\n  for (i = 0; i < _PB_NI; i++)\n    for (j = 0; j < _PB_NL; j++)\n      {\n\tG[i][j] = 0;\n\tfor (k = 0; k < _PB_NJ; ++k)\n\t  G[i][j] += E[i][k] * F[k][j];\n      }"
+        }
+    ]
+}

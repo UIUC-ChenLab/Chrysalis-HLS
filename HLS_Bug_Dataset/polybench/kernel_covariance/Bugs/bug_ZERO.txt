@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "mean[j] = 0.0;",
+            "Faulty Code": "mean[j] = data[0][j];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "coord[0] = II[8][1];",
+            "Faulty Code": "while(1) { coord[0] = II[8][1]; }"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=coord"
+        }
+    ]
+}

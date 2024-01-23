@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "coord[8] = 0;",
+            "Faulty Code": "coord[8] = II[0][0]; // assuming that II[0][0] should have been the correct initializer"
+        }
+    ]
+}

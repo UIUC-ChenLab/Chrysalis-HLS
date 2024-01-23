@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "case 22:a = aa[619]; break;",
+            "Faulty Code": "case 22:a = aa[ROWS*COLS]; break;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "for (i = 0; i <= _PB_MAXGRID - 1; i++)\n\tpath[0][i] = mean[0][i];",
+            "Faulty Code": "for (i = 0; i <= _PB_MAXGRID - 1; i++)\n\tpath[0][i] = path[0][i-1] + mean[0][i];"
+        }
+    ]
+}

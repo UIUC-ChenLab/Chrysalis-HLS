@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "FeatureType Sigmoid(FeatureType exponent)\n{\n  #pragma HLS INLINE\n  if (exponent > 4)\n    return 1.0;\n  else if (exponent < -4)\n    return 0.0;\n  else\n  {\n    LutInFixed inLut = (LutInFixed)exponent;\n    return useLUT(inLut);\n  }\n}",
+            "Faulty Code": "FeatureType Sigmoid(FeatureType exponent)\n{\n  #pragma HLS INLINE\n  #pragma HLS dataflow\n  if (exponent > 4)\n    return 1.0;\n  else if (exponent < -4)\n    return 0.0;\n  else\n  {\n    LutInFixed inLut = (LutInFixed)exponent;\n    return useLUT(inLut);\n  }\n}"
+        }
+    ]
+}

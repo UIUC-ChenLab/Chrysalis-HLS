@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "max_min[4] = max_min[1] - max_min[0];",
+            "Faulty Code": "max_min[3] = max_min[1] - max_min[0];"
+        }
+    ]
+}

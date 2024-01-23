@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "FIX_32_12 tmp[DEPTH];",
+            "Faulty Code": "FIX_32_12 tmp[DEPTH] = {0};"
+        }
+    ]
+}

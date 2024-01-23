@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "acc.val[k] = 0;",
+            "Faulty Code": "acc.val[k] = some_non_zero_value;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "tmp = outer[r][c];",
+            "Faulty Code": "tmp = (outer_t)outer[r][c];"
+        }
+    ]
+}

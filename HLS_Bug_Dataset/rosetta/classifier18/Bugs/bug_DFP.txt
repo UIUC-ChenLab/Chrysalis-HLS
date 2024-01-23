@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "int classifier18( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev )",
+            "Faulty Code": "#pragma HLS dataflow\nint classifier18( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev )"
+        }
+    ]
+}

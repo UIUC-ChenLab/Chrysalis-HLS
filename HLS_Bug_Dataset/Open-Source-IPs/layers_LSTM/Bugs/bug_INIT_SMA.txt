@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "mul0=weight0*bot0;",
+            "Faulty Code": "ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> mul0;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void Embed_Layer(int word_input, ap_int<512> *  data, ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> input_sentence[256])",
+            "Faulty Code": "void Embed_Layer(int word_input, ap_int<512> *  data, ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> input_sentence[256])\n{\n#pragma HLS INTERFACE bram port=input_sentence\n"
+        }
+    ]
+}

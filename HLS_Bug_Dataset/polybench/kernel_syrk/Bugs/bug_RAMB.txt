@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void kernel_syrk(int ni, int nj, DATA_TYPE alpha, DATA_TYPE beta, DATA_TYPE POLYBENCH_2D(C,NI,NI,ni,ni), DATA_TYPE POLYBENCH_2D(A,NI,NJ,ni,nj))",
+            "Faulty Code": "#pragma HLS interface m_axi port=A offset=slave bundle=gmem0"
+        }
+    ]
+}

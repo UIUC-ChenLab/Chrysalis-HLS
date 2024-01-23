@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int sum0, sum1, sum2, final_sum;",
+            "Faulty Code": "int sum0, sum1, sum2, final_sum = final_sum;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "if(final_sum >= (24 * stddev))",
+            "Faulty Code": "if((short)final_sum >= (24 * stddev))"
+        }
+    ]
+}

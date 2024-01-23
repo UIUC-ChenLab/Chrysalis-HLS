@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static outer_pixel_t buf[2];",
+            "Faulty Code": "static outer_pixel_t buf[2] = {1, 1};"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=buf dim=3"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma endscop",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (j2 = j1+1; j2 < _PB_M; j2++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (j2 = j1+1; j2 < _PB_M; j2++)"
+        }
+    ]
+}

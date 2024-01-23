@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int pi0, pi1, pi2;",
+            "Faulty Code": "bit8 pi0, pi1, pi2;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "return (pi0 >= 0 && pi1 >= 0 && pi2 >= 0);",
+            "Faulty Code": "#pragma HLS unroll factor=2\nreturn (pi0 >= 0 && pi1 >= 0 && pi2 >= 0);"
+        }
+    ]
+}

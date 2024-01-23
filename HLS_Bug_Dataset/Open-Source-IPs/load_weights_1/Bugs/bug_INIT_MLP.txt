@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_int<512> stream_temp=stream512_in.read();",
+            "Faulty Code": "ap_int<512> stream_temp;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS pipeline // inside the i loop"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint18_t a;",
+            "Faulty Code": "uint18_t a = aa[0];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "uint18_t get_data12(int offset, uint18_t aa[ROWS*COLS])",
+            "Faulty Code": "uint18_t get_data12(int offset, uint18_t aa) #pragma HLS interface port=ap_none"
+        }
+    ]
+}

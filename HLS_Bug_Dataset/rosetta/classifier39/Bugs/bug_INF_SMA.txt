@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if(final_sum >= (-210 * stddev))",
+            "Faulty Code": "if(final_sum = (-210 * stddev))"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "static int coord[12];",
+            "Faulty Code": "#pragma HLS interface port=bram mode=s_axilite variable=coord"
+        }
+    ]
+}

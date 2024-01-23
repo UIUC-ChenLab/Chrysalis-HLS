@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void kernel_covariance(int m, int n, DATA_TYPE float_n, DATA_TYPE POLYBENCH_2D(data,M,N,m,n), DATA_TYPE POLYBENCH_2D(symmat,M,M,m,m), DATA_TYPE POLYBENCH_1D(mean,M,m))",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=mean"
+        }
+    ]
+}

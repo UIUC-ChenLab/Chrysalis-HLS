@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "y[j] = y[j] + A[i][j] * tmp[i];",
+            "Faulty Code": "y[j + _PB_NY/2] = y[j + _PB_NY/2] + A[i][j] * tmp[i];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (i = 0; i < _PB_NY; i++)\n    y[i] = 0;",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=y offset=slave bundle=gmem\nfor (i = 0; i < _PB_NY; i++)\n    y[i] = 0;"
+        }
+    ]
+}

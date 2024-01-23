@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for(int coo=0;coo<16;coo+=2){",
+            "Faulty Code": "for(int coo=0;coo<16;coo++){"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS unroll",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

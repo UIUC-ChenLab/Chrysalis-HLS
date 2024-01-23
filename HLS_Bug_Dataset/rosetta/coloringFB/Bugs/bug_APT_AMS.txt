@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=frame_buffer dim=2"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void coloringFB(bit16 counter,  bit16 size_pixels, Pixel pixels[], bit8 frame_buffer[MAX_X][MAX_Y])",
+            "Faulty Code": "#pragma HLS interface port=frame_buffer mode=ap_none"
+        }
+    ]
+}

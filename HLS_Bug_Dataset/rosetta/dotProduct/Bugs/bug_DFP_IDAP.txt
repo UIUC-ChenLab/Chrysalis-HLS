@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "FeatureType dotProduct(FeatureType param[NUM_FEATURES], DataType feature[NUM_FEATURES])",
+            "Faulty Code": "FeatureType dotProduct(FeatureType param[NUM_FEATURES], DataType feature[NUM_FEATURES]) { #pragma HLS interface mode=ap_fifo port=param"
+        }
+    ]
+}

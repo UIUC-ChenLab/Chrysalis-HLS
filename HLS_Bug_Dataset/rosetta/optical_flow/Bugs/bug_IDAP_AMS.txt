@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable=frame1_a depth=default_depth",
+            "Faulty Code": "#pragma HLS INTERFACE port=frame1_a mode=s_axilite"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void optical_flow(frames_t   frames[MAX_HEIGHT][MAX_WIDTH],\n                  velocity_t outputs[MAX_HEIGHT][MAX_WIDTH])",
+            "Faulty Code": "#pragma HLS INTERFACE port=outputs mode=ap_none"
+        }
+    ]
+}

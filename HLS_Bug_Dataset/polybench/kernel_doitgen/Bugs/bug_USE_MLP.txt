@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "sum[r][q][p] = sum[r][q][p] + A[r][q][s] * C4[s][p];",
+            "Faulty Code": "sum[r][q][p] = sum[r][q][p] + A[r][q][s] * (short)C4[s][p];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (q = 0; q < _PB_NQ; q++)  {",
+            "Faulty Code": "#pragma HLS pipeline\nfor (q = 0; q < _PB_NQ; q++)  {"
+        }
+    ]
+}

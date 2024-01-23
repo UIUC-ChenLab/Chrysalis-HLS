@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "top[coo+2][h][w] += weight_buf[coo+2][cii]*bottom[cii][h*4+i][w*4+j];",
+            "Faulty Code": "top[coo+2][h][w] += weight_buf[coo+2][cii]*bottom[cii][h*4+i+11][w*4+j+11];"
+        }
+    ]
+}

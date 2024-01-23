@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_fixed<12,1,AP_TRN_ZERO,AP_SAT> weight[2][8][8];",
+            "Faulty Code": "ap_fixed<12,1,AP_TRN_ZERO,AP_SAT> weight[2][8][8] = {0};"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void fullconnection6_layer(ap_fixed <TOTAL_B,6,AP_TRN_ZERO,AP_SAT> bottom[256][6][6], hls::stream<int512> &stream512_in, ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> top[256])",
+            "Faulty Code": "void fullconnection6_layer(ap_fixed <TOTAL_B,6,AP_TRN_ZERO,AP_SAT> bottom[256][6][6], hls::stream<int512> &stream512_in, ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> top[256]) { #pragma HLS INTERFACE port=top ap_none }"
+        }
+    ]
+}

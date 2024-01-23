@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "coord[0] = II[3][0];",
+            "Faulty Code": "coord[0] = II[3][0]; coord[1] = II[3][0]; // Mistakenly copied the same assignment to coord[1]"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS unroll factor=6 // Incorrectly unrolled with wrong factor, correct would be complete unrolling"
+        }
+    ]
+}

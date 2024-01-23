@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS PIPELINE"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < NUM_FEATURES / PAR_FACTOR; i++)",
+            "Faulty Code": "for (int i = 0; i <= NUM_FEATURES / PAR_FACTOR; i++)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "coord[1] = II[5][19];",
+            "Faulty Code": "coord[1] = II[5][WINDOW_SIZE];"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if(final_sum >= (-322 * stddev))",
+            "Faulty Code": "while(final_sum >= (-322 * stddev))"
+        }
+    ]
+}

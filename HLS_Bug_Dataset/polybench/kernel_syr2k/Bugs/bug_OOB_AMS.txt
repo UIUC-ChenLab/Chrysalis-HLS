@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (i = 0; i < _PB_NI; i++)",
+            "Faulty Code": "for (i = 0; i <= _PB_NI; i++)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "DATA_TYPE POLYBENCH_2D(C,NI,NI,ni,ni),",
+            "Faulty Code": "#pragma HLS INTERFACE port=C mode=ap_none"
+        }
+    ]
+}

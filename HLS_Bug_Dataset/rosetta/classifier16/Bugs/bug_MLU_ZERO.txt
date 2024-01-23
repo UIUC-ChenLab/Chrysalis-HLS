@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "coord[8] = 0;",
+            "Faulty Code": "coord[8] = II[20][20]; // Assuming II[20][20] should be the initializer but was wrongly set to 0"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "coord[3] = II[17][22];",
+            "Faulty Code": "coord[2] = II[17][22]; // Incorrectly assigning II[17][22] to coord[2] instead of coord[3], thus omitting the assignment for coord[2]"
+        }
+    ]
+}

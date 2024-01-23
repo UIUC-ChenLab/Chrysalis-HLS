@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "x[i] = c[i];",
+            "Faulty Code": "x[i] = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "x[i] = x[i] / A[i][i];",
+            "Faulty Code": "x[i] = (int)(x[i] / A[i][i]);"
+        }
+    ]
+}

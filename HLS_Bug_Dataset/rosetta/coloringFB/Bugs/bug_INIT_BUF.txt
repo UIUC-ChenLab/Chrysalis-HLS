@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "frame_buffer[i][j] = 0;",
+            "Faulty Code": "frame_buffer[i][j] = frame_buffer[i][j]; // Uninitialized read"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "frame_buffer[ pixels[i].x ][ pixels[i].y ] = pixels[i].color;",
+            "Faulty Code": "frame_buffer[ pixels[i].x ][ pixels[i].y ] = frame_buffer[ pixels[i].x ][ pixels[i].y ]; // Copying from the same buffer"
+        }
+    ]
+}

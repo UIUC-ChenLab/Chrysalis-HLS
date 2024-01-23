@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "s[i] = 0;",
+            "Faulty Code": "s[i] = -1;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "s[j] = s[j] + r[i] * A[i][j];",
+            "Faulty Code": "s[j] = s[j] + (short)r[i] * A[i][j];"
+        }
+    ]
+}

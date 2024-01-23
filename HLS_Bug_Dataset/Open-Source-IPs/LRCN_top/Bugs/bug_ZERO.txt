@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "c_tm1[cnt]=(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> )0;",
+            "Faulty Code": "c_tm1[cnt]=(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> )1;"
+        }
+    ]
+}

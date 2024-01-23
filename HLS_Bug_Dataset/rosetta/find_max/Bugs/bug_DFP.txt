@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "bit8 find_max( bit8 in0, bit8 in1, bit8 in2 )",
+            "Faulty Code": "#pragma HLS dataflow\nbit8 find_max( bit8 in0, bit8 in1, bit8 in2 )"
+        }
+    ]
+}

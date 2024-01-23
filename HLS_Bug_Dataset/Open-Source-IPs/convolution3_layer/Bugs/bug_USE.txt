@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "top[ct][co+coo][1+h][1+w]+=compute_engine_3(...);",
+            "Faulty Code": "top[ct][co+coo][1+h][1+w]+=weight_buf[ct][coo][cii] * (ap_int<16>)bottom[ci+cii][h+i][w+j];"
+        }
+    ]
+}

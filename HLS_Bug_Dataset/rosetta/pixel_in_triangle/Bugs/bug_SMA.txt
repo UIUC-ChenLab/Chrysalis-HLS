@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "bit1 pixel_in_triangle( bit8 x, bit8 y, Triangle_2D triangle_2d )",
+            "Faulty Code": "#pragma HLS interface port=bram mode=s_axilite"
+        }
+    ]
+}

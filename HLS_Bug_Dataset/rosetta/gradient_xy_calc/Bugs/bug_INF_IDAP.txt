@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "GRAD_XY_OUTER: for(int r=0; r<MAX_HEIGHT+2; r++)",
+            "Faulty Code": "GRAD_XY_OUTER: for(int r=0; r<=MAX_HEIGHT+2; r++)"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=frame"
+        }
+    ]
+}

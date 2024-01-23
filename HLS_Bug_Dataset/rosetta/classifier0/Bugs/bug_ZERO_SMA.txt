@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "final_sum = sum0 + sum1 + sum2;",
+            "Faulty Code": "final_sum = sum0 + sum1 + sum2; // sum2 is incorrectly initialized to 0 as it is multiplied by 0"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS interface port=coord bram"
+        }
+    ]
+}

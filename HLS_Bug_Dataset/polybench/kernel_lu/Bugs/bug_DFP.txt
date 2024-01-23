@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (j = k + 1; j < _PB_N; j++)\n    A[k][j] = A[k][j] / A[k][k];",
+            "Faulty Code": "#pragma HLS dataflow\nfor (j = k + 1; j < _PB_N; j++)\n    A[k][j] = A[k][j] / A[k][k];"
+        }
+    ]
+}

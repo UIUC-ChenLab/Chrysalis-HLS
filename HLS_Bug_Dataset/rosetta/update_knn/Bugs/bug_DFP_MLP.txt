@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void update_knn( WholeDigitType test_inst, WholeDigitType train_inst, int min_distances[K_CONST] ) {",
+            "Faulty Code": "#pragma HLS dataflow void update_knn( WholeDigitType test_inst, WholeDigitType train_inst, int min_distances[K_CONST] ) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "FIND_MAX_DIST: for ( int k = 0; k < K_CONST; ++k )",
+            "Faulty Code": "#pragma HLS pipeline FIND_MAX_DIST: for ( int k = 0; k < K_CONST; ++k ) { #pragma HLS pipeline"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "default: a = 0; break;",
+            "Faulty Code": "default: a = 0xFFFF; break;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "uint18_t get_data4(int offset, uint18_t aa[ROWS*COLS])",
+            "Faulty Code": "uint18_t get_data4(int offset, uint18_t aa) #pragma HLS INTERFACE port=aa ap_none"
+        }
+    ]
+}

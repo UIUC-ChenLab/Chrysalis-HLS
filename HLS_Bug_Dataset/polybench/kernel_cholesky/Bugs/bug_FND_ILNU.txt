@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (j = i + 1; j < _PB_N; ++j)",
+            "Faulty Code": "#pragma HLS array_partition variable=A factor=3\for (j = i + 1; j < _PB_N; ++j)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (j = 0; j <= i - 1; ++j)",
+            "Faulty Code": "#pragma HLS unroll factor=2\n    for (j = 0; j <= i - 1; ++j)"
+        }
+    ]
+}

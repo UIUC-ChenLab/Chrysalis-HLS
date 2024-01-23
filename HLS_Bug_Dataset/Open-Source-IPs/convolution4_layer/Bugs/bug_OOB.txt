@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "weight_buf[ct][coo][23] , bottom[ct][ci+23][h+i][w+j]",
+            "Faulty Code": "weight_buf[ct][coo][24] , bottom[ct][ci+24][h+i][w+j]"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=frame_buffer dim=3"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "frame_buffer[ pixels[i].x ][ pixels[i].y ] = pixels[i].color;",
+            "Faulty Code": "frame_buffer[ pixels[i].y ][ pixels[i].x ] = pixels[i].color;"
+        }
+    ]
+}

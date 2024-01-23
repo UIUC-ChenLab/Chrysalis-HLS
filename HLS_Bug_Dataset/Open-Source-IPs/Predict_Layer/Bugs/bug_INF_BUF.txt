@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(int i=0;i<8800;i+=40)",
+            "Faulty Code": "for(int i=0;;i+=40)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "temp.range(11,0)=stream_temp.range((j+k)*12+11,(j+k)*12);",
+            "Faulty Code": "temp.range(11,0)=stream_temp.range((j+k)*12+11,(j+k+1)*12);"
+        }
+    ]
+}

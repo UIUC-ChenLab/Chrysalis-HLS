@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void Add_Result_layer(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> gate_input_t[1024], ...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=gate_input_t mode=ap_none"
+        }
+    ]
+}

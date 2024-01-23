@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(int co = 0; co < 16; co++){",
+            "Faulty Code": "for(int co = 0; co <= 16; co++){"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "top[co][h][w] += weight_buf[co] * bottom[co][h+i-1][w+j-1];",
+            "Faulty Code": "top[co][h][w] += weight_buf[co] * (int)bottom[co][h+i-1][w+j-1];"
+        }
+    ]
+}

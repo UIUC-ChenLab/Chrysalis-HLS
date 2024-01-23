@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "IMG1_data[i][j] =  Data[(i*y_ratio)>>16][(j*x_ratio)>>16];",
+            "Faulty Code": "IMG1_data[i][j] =  Data[(i*y_ratio)>>16][(j*x_ratio)>>16 + 1];"
+        }
+    ]
+}

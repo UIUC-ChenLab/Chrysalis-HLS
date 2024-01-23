@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "FeatureType Sigmoid(FeatureType exponent)",
+            "Faulty Code": "#pragma HLS interface port=bram FeatureType Sigmoid(FeatureType exponent)"
+        }
+    ]
+}

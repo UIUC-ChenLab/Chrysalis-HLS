@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "output[i * MAX_Y / 4 + j / 4] = out_FB;",
+            "Faulty Code": "output[i * MAX_Y + j] = out_FB;"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "static bit8 z_buffer[MAX_X][MAX_Y];",
+            "Faulty Code": "bit8 z_buffer[MAX_X][MAX_Y];"
+        }
+    ]
+}

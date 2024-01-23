@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint18_t a;",
+            "Faulty Code": "uint18_t a = a;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "case 2: a = aa[73 ]; break;",
+            "Faulty Code": "case 2: a = aa[173]; break;"
+        }
+    ]
+}

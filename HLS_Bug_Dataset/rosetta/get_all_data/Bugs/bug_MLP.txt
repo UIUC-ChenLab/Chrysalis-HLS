@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int i = 0; i < 12; i ++ )\n  {\n    #pragma HLS unroll\n    output[i] = data_from_banks[bank[i]];\n  }",
+            "Faulty Code": "#pragma HLS pipeline\nfor (int i = 0; i < 12; i ++ )\n  {\n    #pragma HLS unroll\n    output[i] = data_from_banks[bank[i]];\n  }"
+        }
+    ]
+}

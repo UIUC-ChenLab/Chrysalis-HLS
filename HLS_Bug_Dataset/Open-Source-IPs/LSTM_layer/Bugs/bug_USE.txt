@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "c_tm1[i] = cont_input * (ft*c_tm1[i]) + it*gt;",
+            "Faulty Code": "c_tm1[i] = cont_input * (ft*(int)c_tm1[i]) + it*gt;"
+        }
+    ]
+}

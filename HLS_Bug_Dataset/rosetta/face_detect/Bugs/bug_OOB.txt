@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "L[WINDOW_SIZE-2][x] = IMG1_data[y][x];",
+            "Faulty Code": "L[WINDOW_SIZE-1][x] = IMG1_data[y][x];"
+        }
+    ]
+}

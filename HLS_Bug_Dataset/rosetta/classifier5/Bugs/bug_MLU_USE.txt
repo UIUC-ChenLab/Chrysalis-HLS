@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "coord[6] = II[21][6];",
+            "Faulty Code": "coord[6] = II[21][5];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "if(final_sum >= (407 * stddev))",
+            "Faulty Code": "if(final_sum >= (407 * (short)stddev))"
+        }
+    ]
+}

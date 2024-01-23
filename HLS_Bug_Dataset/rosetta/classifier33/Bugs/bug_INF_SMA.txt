@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "coord[8] = 0;",
+            "Faulty Code": "while(coord[8] == 0){}"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "static int coord[12];",
+            "Faulty Code": "#pragma HLS interface port=bram variable=coord"
+        }
+    ]
+}

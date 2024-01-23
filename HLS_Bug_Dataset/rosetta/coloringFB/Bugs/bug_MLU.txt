@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "COLORING_FB_INIT_COL: for ( bit16 j = 0; j < MAX_Y; j++)",
+            "Faulty Code": "COLORING_FB_INIT_COL: for ( bit16 j = 0; j < MAX_Y - 1; j++)"
+        }
+    ]
+}

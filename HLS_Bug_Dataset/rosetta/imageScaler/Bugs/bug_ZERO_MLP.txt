@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int x_ratio = (int)((w1<<16)/w2) +1;",
+            "Faulty Code": "int x_ratio = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "imageScalerL1: for ( i = 0 ; i < IMAGE_HEIGHT ; i++ ){ #pragma HLS pipeline"
+        }
+    ]
+}

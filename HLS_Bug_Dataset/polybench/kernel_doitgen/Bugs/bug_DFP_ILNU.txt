@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (p = 0; p < _PB_NP; p++) {",
+            "Faulty Code": "#pragma HLS dataflow\nfor (p = 0; p < _PB_NP; p++) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (s = 0; s < _PB_NP; s++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (s = 0; s < _PB_NP; s++)"
+        }
+    ]
+}

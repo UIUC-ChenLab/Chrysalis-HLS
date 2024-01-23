@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "s[i] = 0;",
+            "Faulty Code": "s[i] = some_nonzero_initial_value;"
+        }
+    ]
+}

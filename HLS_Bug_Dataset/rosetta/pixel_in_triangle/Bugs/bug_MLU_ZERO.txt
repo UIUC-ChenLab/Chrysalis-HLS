@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "return (pi0 >= 0 && pi1 >= 0 && pi2 >= 0);",
+            "Faulty Code": "return (pi0 >= 0 && pi1 >= 0); // Missing pi2 check"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int pi0, pi1, pi2;",
+            "Faulty Code": "int pi0 = 0, pi1 = 0, pi2 = 0; // Incorrectly initialized to zero"
+        }
+    ]
+}

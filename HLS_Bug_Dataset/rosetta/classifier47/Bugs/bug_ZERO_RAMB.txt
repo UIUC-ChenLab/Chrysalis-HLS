@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "coord[8] = 0;",
+            "Faulty Code": "coord[8] = II[15][15];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "coord[0] = II[1][8];",
+            "Faulty Code": "coord[0] = II[1][15];"
+        }
+    ]
+}

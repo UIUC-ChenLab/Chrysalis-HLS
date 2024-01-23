@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "// Find the max distance\n  FIND_MAX_DIST: for ( int k = 0; k < K_CONST; ++k )",
+            "Faulty Code": "#pragma HLS unroll factor=4\n  // Find the max distance\n  FIND_MAX_DIST: for ( int k = 0; k < K_CONST; ++k )"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void update_knn( WholeDigitType test_inst, WholeDigitType train_inst, int min_distances[K_CONST] )",
+            "Faulty Code": "#pragma HLS interface port=min_distances bram\nvoid update_knn( WholeDigitType test_inst, WholeDigitType train_inst, int min_distances[K_CONST] )"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "TENSOR_WEIGHT_X_INNER: for(int c=0; c<MAX_WIDTH+1; c++)",
+            "Faulty Code": "TENSOR_WEIGHT_X_INNER: for(int c=0; c<MAX_WIDTH; c++)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "frame1_a[r][c] = ((input_t)(buf(7 ,  0)) >> 8);",
+            "Faulty Code": "frame1_a[r][c] = ((input_t)(buf(7 ,  0)));"
+        }
+    ]
+}

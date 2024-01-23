@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "tmp[i][j] += alpha * A[i][k] * B[k][j];",
+            "Faulty Code": "tmp[i][j] += alpha * A[i][k] * B[j][k]; // Incorrect access of B"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma scop\n  /* D := alpha*A*B*C + beta*D */",
+            "Faulty Code": "#pragma HLS dataflow\n  /* D := alpha*A*B*C + beta*D */ // Incorrect placement of dataflow pragma"
+        }
+    ]
+}

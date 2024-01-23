@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "sum2 = (coord[8] - coord[9] - coord[10] + coord[11]) * 0;",
+            "Faulty Code": "sum2 = (coord[8] - coord[9] - coord[10] + coord[11]) * 1;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if(final_sum >= (71 * stddev))",
+            "Faulty Code": "while(final_sum >= (71 * stddev))"
+        }
+    ]
+}

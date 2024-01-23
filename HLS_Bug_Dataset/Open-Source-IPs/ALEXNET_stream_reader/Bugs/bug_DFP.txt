@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void ALEXNET_stream_reader(ap_int<512> *data, hls::stream<int512> &stream512_out) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid ALEXNET_stream_reader(ap_int<512> *data, hls::stream<int512> &stream512_out) {"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "DATA_TYPE POLYBENCH_3D(A,NR,NQ,NP,nr,nq,np),",
+            "Faulty Code": "#pragma HLS INTERFACE port=A mode=ap_none"
+        }
+    ]
+}

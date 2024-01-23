@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "top[co][h][w] += weight_buf[co] * bottom[co][h+i-1][w+j-1];",
+            "Faulty Code": "top[co][h][w] += weight_buf[co] * bottom[co][h-1][w+j-1];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "for(int co = 0; co < 16; co++){",
+            "Faulty Code": "for(int co = 0; co < 16; co++){ weight_buf[co] = 0; }"
+        }
+    ]
+}

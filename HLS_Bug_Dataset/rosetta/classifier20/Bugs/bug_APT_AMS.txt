@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=coord cyclic dim=0"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "static int coord[12];",
+            "Faulty Code": "#pragma HLS interface port=coord mode=ap_none"
+        }
+    ]
+}

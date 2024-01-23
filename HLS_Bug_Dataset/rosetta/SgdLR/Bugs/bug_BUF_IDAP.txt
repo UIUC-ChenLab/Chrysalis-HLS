@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "param[i*PAR_FACTOR+j] += scale * grad[i*PAR_FACTOR+j];",
+            "Faulty Code": "param[i+j] += scale * grad[i+j];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS array_partition variable=param cyclic factor=unroll_factor",
+            "Faulty Code": "#pragma HLS array_partition variable=param complete"
+        }
+    ]
+}

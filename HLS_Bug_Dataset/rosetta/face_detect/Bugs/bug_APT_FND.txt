@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS array_partition variable=II complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=II type=complete dim=0"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable=s2 complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=s2 complete factor=27"
+        }
+    ]
+}

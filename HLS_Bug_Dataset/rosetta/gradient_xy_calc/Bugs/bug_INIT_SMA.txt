@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "static pixel_t buf[5][MAX_WIDTH];",
+            "Faulty Code": "pixel_t buf[5][MAX_WIDTH];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "pixel_t gradient_x[MAX_HEIGHT][MAX_WIDTH], pixel_t gradient_y[MAX_HEIGHT][MAX_WIDTH]",
+            "Faulty Code": "#pragma HLS interface port=gradient_x bram \n#pragma HLS interface port=gradient_y bram"
+        }
+    ]
+}

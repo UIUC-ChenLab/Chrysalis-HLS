@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void Predict_stream_reader(ap_int<512> *data, hls::stream<int512> &stream512_out)",
+            "Faulty Code": "void Predict_stream_reader(ap_int<512> *data, hls::stream<int512> &stream512_out, int &read_count)"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS array_partition variable=data factor=10"
+        }
+    ]
+}

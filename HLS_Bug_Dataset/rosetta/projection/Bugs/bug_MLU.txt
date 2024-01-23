@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "triangle_2d->z  = triangle_3d.z0 / 3 + triangle_3d.z1 / 3 + triangle_3d.z2 / 3;",
+            "Faulty Code": "triangle_2d->z  = triangle_3d.z0 / 2 + triangle_3d.z1 / 2;"
+        }
+    ]
+}

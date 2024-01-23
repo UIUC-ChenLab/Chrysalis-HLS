@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "for(int co = 0; co < 16; co+=16) {",
+            "Faulty Code": "for(int co = 0; co < 16; co+=0) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ALLOCATION instances=compute_engine_16 limit=8 function",
+            "Faulty Code": "#pragma HLS INTERFACE port=weight_buf mode=m_axi"
+        }
+    ]
+}

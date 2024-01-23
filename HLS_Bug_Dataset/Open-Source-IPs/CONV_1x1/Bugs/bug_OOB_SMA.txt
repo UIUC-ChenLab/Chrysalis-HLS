@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for(int h = 1; h <= HEIGH-2; h++){",
+            "Faulty Code": "for(int h = 1; h <= HEIGH; h++){"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ALLOCATION instances=compute_engine_16 limit=8 function",
+            "Faulty Code": "#pragma HLS INTERFACE port=weight_buf"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (i = 0; i < _PB_NY; i++)",
+            "Faulty Code": "for (i = 0; i <= _PB_NY; i++)"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "for (i = 0; i < _PB_NY; i++)\n    y[i] = 0;",
+            "Faulty Code": "for (i = 0; i < _PB_NY; i++)\n    y[i] = y[i - 1];"
+        }
+    ]
+}

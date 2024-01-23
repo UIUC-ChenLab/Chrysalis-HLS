@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=weight dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=weight dim=1 complete"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "stream_temp=stream512_in.read();",
+            "Faulty Code": "stream_temp=stream512_in.read(i);"
+        }
+    ]
+}

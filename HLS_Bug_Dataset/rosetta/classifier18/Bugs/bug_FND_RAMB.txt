@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=coord factor=3 dim=1"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "coord[0] = II[8][10];\n  coord[1] = II[8][16];\n  coord[2] = II[18][10];\n  coord[3] = II[18][16];\n\n  coord[4] = II[8][12];\n  coord[5] = II[8][14];\n  coord[6] = II[18][12];\n  coord[7] = II[18][14];",
+            "Faulty Code": "coord[0] = II[8][10];\n  coord[1] = II[10][8];\n  coord[2] = II[12][18];\n  coord[3] = II[14][8];\n\n  coord[4] = II[16][18];\n  coord[5] = II[18][16];\n  coord[6] = II[20][8];\n  coord[7] = II[22][18];"
+        }
+    ]
+}

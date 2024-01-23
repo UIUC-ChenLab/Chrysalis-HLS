@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=top cyclic dim=2 factor=16",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=top cyclic dim=2 factor=128"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for(int h=0;h<27;h++){\n\t\t\t\tfor(int w=0;w<27;w++){\n#pragma HLS pipeline",
+            "Faulty Code": "for(int h=0;h<27;h+=2){\n\t\t\t\tfor(int w=0;w<27;w+=2){\n#pragma HLS pipeline"
+        }
+    ]
+}

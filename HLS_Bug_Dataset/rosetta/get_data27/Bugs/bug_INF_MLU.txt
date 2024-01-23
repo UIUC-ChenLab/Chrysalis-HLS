@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "default: a = 0; break;",
+            "Faulty Code": "default: a = 0; /* missing break; */"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "case 12:a = aa[592]; break;",
+            "Faulty Code": "case 12:a = aa[569]; break;"
+        }
+    ]
+}

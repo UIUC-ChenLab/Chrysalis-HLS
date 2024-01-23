@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint18_t get_data21(int offset, uint18_t aa[ROWS*COLS])",
+            "Faulty Code": "uint18_t get_data21(int offset, uint18_t aa[20])"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "uint18_t get_data21(int offset, uint18_t aa[ROWS*COLS])",
+            "Faulty Code": "uint18_t get_data21(int offset, uint18_t aa) #pragma HLS interface port=ap_none"
+        }
+    ]
+}

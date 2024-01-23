@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "COLORING_FB_INIT_COL: for ( bit16 j = 0; j < MAX_Y; j++)\n        frame_buffer[i][j] = 0;",
+            "Faulty Code": "COLORING_FB_INIT_COL: for ( bit16 j = 0; j < MAX_Y; j++)\n        frame_buffer[i][j];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS PIPELINE II=2"
+        }
+    ]
+}

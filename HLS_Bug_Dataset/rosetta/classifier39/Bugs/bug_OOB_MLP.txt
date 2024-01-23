@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "coord[1] = II[1][6];",
+            "Faulty Code": "coord[1] = II[1][WINDOW_SIZE];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "int classifier39( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev ){",
+            "Faulty Code": "#pragma HLS pipeline\nint classifier39( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev ){"
+        }
+    ]
+}

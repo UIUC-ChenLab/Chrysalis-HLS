@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if(c<MAX_WIDTH)",
+            "Faulty Code": "if(c<=MAX_WIDTH)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "GRAD_WEIGHT_X_OUTER: for(int r=0; r<MAX_HEIGHT; r++)",
+            "Faulty Code": "#pragma HLS unroll factor=2 \nGRAD_WEIGHT_X_OUTER: for(int r=0; r<MAX_HEIGHT; r++)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "param[i*PAR_FACTOR+j] += scale * grad[i*PAR_FACTOR+j];",
+            "Faulty Code": "param[i*PAR_FACTOR+j+1] += scale * grad[i*PAR_FACTOR+j];"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "FeatureType gradient[NUM_FEATURES];",
+            "Faulty Code": "FeatureType gradient[NUM_FEATURES] = {0};"
+        }
+    ]
+}

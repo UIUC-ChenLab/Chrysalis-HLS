@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "FeatureType grad[NUM_FEATURES],",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=grad"
+        }
+    ]
+}

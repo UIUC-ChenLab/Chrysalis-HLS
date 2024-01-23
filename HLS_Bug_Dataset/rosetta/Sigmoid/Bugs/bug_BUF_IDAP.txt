@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "return lut[index];",
+            "Faulty Code": "return lut[index + LUT_SIZE/2];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo"
+        }
+    ]
+}

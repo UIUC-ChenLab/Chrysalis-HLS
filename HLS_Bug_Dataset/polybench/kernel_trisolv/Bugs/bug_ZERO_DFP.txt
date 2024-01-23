@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "x[i] = c[i];",
+            "Faulty Code": "x[i] = 0;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (i = 0; i < _PB_N; i++)\n    {\n      x[i] = c[i];\n      for (j = 0; j <= i - 1; j++)\n        x[i] = x[i] - A[i][j] * x[j];\n      x[i] = x[i] / A[i][i];\n    }",
+            "Faulty Code": "#pragma HLS dataflow\nfor (i = 0; i < _PB_N; i++)\n    {\n      x[i] = c[i];\n      for (j = 0; j <= i - 1; j++)\n        x[i] = x[i] - A[i][j] * x[j];\n      x[i] = x[i] / A[i][i];\n    }"
+        }
+    ]
+}

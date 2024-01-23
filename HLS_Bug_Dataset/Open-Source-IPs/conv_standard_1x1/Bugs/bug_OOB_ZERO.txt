@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for(int h = 1; h <= HEIGH-2; h++){",
+            "Faulty Code": "for(int h = 1; h <= HEIGH; h++){"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "top[co+coo][h][w] += tmp[coo];",
+            "Faulty Code": "top[co+coo][h][w] = tmp[coo];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "sum0 = (coord[0] - coord[1] - coord[2] + coord[3]) * -4096;",
+            "Faulty Code": "sum0 = (coord[0] - coord[1] - coord[2] + coord[3]) * 4096;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS interface port=II mode=ap_fifo"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(int i=0;i<1024;i+=8)",
+            "Faulty Code": "for(int i=0;;i+=8)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "temp.range(11,0)=(*data).range((ii)*12+11,(ii)*12);",
+            "Faulty Code": "temp.range(11,0)=(*data).range((ii+1)*12+11,(ii+1)*12);"
+        }
+    ]
+}

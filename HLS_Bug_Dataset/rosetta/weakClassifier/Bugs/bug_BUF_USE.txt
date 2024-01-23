@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "sum0 = (coord[0] - coord[1] - coord[2] + coord[3]) * weights_array0[haar_counter];",
+            "Faulty Code": "sum0 = (coord[8] - coord[9] - coord[10] + coord[11]) * weights_array0[haar_counter];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "int t = tree_thresh_array[haar_counter] * stddev;",
+            "Faulty Code": "unsigned int t = tree_thresh_array[haar_counter] * stddev;"
+        }
+    ]
+}

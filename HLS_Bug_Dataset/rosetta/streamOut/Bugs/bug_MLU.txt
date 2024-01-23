@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "STREAM_OUT: for (int i = 0; i < NUM_FEATURES / F_VECTOR_SIZE; i ++ )",
+            "Faulty Code": "STREAM_OUT: for (int i = 0; i <= NUM_FEATURES / F_VECTOR_SIZE; i ++ )"
+        }
+    ]
+}

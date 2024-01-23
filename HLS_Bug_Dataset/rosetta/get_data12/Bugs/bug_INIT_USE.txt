@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint18_t a;",
+            "Faulty Code": "uint18_t a = aa[0];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "default: a = 0; break;",
+            "Faulty Code": "default: a = 0xFFFF; break;"
+        }
+    ]
+}

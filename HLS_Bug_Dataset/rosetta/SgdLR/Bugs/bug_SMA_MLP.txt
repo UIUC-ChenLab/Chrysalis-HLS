@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void SgdLR( VectorDataType data[NUM_FEATURES * NUM_TRAINING / D_VECTOR_SIZE], ... )",
+            "Faulty Code": "void SgdLR( VectorDataType *data, ... ) #pragma HLS interface port=data mode=bram"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

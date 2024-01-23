@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "max_index[0] = (max_min[1] - max_min[0]) * (max_min[3] - max_min[2]);",
+            "Faulty Code": "max_index[0] = (bit16)(max_min[1] - max_min[0]) * (max_min[3] - max_min[2]);"
+        }
+    ]
+}

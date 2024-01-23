@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "output[i * MAX_Y / 4 + j / 4] = out_FB;",
+            "Faulty Code": "output[i * (MAX_Y / 4) + j] = out_FB;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "OUTPUT_FB_COL: for ( bit16 j = 0; j < MAX_Y; j = j + 4)",
+            "Faulty Code": "OUTPUT_FB_COL: for ( bit16 j = 0; j <= MAX_Y; j = j + 4)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "DATA_TYPE POLYBENCH_1D(out,N,n)",
+            "Faulty Code": "#pragma HLS interface port=bram int POLYBENCH_1D(out,N,n)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 0; i <= k - 1; i++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (i = 0; i <= k - 1; i++)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "hls::stream<int512> stream512;",
+            "Faulty Code": "hls::stream<int512> stream512; // Assuming stream512 is used before initialization"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=top dim=1 cyclic factor=8",
+            "Faulty Code": "#pragma HLS unroll factor=4 // Incorrectly placed and without specifying the loop"
+        }
+    ]
+}

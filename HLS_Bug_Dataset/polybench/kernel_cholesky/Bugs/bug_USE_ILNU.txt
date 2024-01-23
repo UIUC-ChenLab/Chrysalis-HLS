@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "p[i] = 1.0 / sqrt(x);",
+            "Faulty Code": "p[i] = 1 / sqrt(x);"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (j = 0; j <= i - 1; ++j)",
+            "Faulty Code": "#pragma HLS unroll factor=4\n    for (j = 0; j <= i - 1; ++j)"
+        }
+    ]
+}

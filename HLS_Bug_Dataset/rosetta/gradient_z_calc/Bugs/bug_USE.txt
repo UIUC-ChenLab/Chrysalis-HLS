@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "gradient_z[r][c] =((pixel_t)(frame1[r][c]*GRAD_WEIGHTS[0] + frame2[r][c]*GRAD_WEIGHTS[1] + frame3[r][c]*GRAD_WEIGHTS[2] + frame4[r][c]*GRAD_WEIGHTS[3] + frame5[r][c]*GRAD_WEIGHTS[4]))/12;",
+            "Faulty Code": "gradient_z[r][c] =((pixel_t)((int)frame1[r][c]*GRAD_WEIGHTS[0] + (int)frame2[r][c]*GRAD_WEIGHTS[1] + (int)frame3[r][c]*GRAD_WEIGHTS[2] + (int)frame4[r][c]*GRAD_WEIGHTS[3] + (int)frame5[r][c]*GRAD_WEIGHTS[4]))/12;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "DATA_TYPE eps = 0.1f;",
+            "Faulty Code": "DATA_TYPE eps = 0.0f;"
+        }
+    ]
+}

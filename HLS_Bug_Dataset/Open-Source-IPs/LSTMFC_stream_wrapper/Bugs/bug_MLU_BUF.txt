@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(int i=0;i<LSTMFC_LENGTH;i++)",
+            "Faulty Code": "for(int i=0;i<LSTMFC_LENGTH-1;i++)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "stream512_out.write(data[i]);",
+            "Faulty Code": "stream512_out.write(data[i+LSTMFC_LENGTH/2]);"
+        }
+    ]
+}

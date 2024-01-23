@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "weight_buf[ct][coo][cii+1].range(11,0)=stream_temp.range((cii+(ct*16)+1)*12+11,(cii+(ct*16)+1)*12);",
+            "Faulty Code": "weight_buf[ct][coo][cii+1].range(11,0)=stream_temp.range((cii+(ct*8)+1)*12+11,(cii+(ct*8)+1)*12);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "sum[i+1][k] = sum[i][k] + r[k-i-1] * y[i][k-1];",
+            "Faulty Code": "sum[i+1][k] = sum[i][k] + r[k-i-1] * y[k-i-1][i];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "y[k][k] = alpha[k];",
+            "Faulty Code": "#pragma HLS interface port=ap_none variable=y"
+        }
+    ]
+}

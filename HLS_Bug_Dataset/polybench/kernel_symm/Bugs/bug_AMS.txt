@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "DATA_TYPE POLYBENCH_2D(C,NI,NJ,ni,nj),",
+            "Faulty Code": "#pragma HLS INTERFACE port=C mode=ap_none"
+        }
+    ]
+}

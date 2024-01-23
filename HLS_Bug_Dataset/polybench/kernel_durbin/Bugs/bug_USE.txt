@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "alpha[k] = -sum[k][k] * beta[k];",
+            "Faulty Code": "alpha[k] = (int)(-sum[k][k] * beta[k]);"
+        }
+    ]
+}

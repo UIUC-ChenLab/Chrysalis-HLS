@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "case 0: a = aa[33 ]; break;",
+            "Faulty Code": "case 0: a = aa[338]; break;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "for (int i = 0; i < 20; i++) { #pragma HLS pipeline"
+        }
+    ]
+}

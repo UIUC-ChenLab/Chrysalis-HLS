@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "bit1 pixel_in_triangle( bit8 x, bit8 y, Triangle_2D triangle_2d )",
+            "Faulty Code": "#pragma HLS interface m_axi port=triangle_2d depth=3\nbit1 pixel_in_triangle( bit8 x, bit8 y, Triangle_2D triangle_2d )"
+        }
+    ]
+}

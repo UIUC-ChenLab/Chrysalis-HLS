@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "frame_buffer[i][j] = 0;",
+            "Faulty Code": "bit8 temp = frame_buffer[i][j]; // Uninitialized read"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "frame_buffer[ pixels[i].x ][ pixels[i].y ] = pixels[i].color;",
+            "Faulty Code": "frame_buffer[ (bit8)pixels[i].x ][ (bit8)pixels[i].y ] = (bit16)pixels[i].color;"
+        }
+    ]
+}

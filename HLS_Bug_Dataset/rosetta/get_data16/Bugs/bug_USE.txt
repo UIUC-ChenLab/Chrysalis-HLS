@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint18_t get_data16(int offset, uint18_t aa[ROWS*COLS])",
+            "Faulty Code": "int16_t get_data16(int offset, uint16_t aa[ROWS*COLS])"
+        }
+    ]
+}

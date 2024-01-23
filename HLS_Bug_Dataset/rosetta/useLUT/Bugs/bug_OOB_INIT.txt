@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return lut[index];",
+            "Faulty Code": "return lut[index + 1];"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "IdxFixed index;",
+            "Faulty Code": "IdxFixed index = 0;"
+        }
+    ]
+}

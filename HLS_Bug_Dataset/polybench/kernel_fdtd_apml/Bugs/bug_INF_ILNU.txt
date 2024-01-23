@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (iz = 0; iz < _PB_CZ; iz++)",
+            "Faulty Code": "for (iz = 0; iz <= _PB_CZ; iz++)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (iy = 0; iy < _PB_CYM; iy++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (iy = 0; iy < _PB_CYM; iy++)"
+        }
+    ]
+}

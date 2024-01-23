@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "buf.insert_pixel(tmp,0,2);",
+            "Faulty Code": "buf.insert_pixel(tmp,0,0); // Incorrectly initializing the last two arguments to zero"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS array_partition variable=buf complete dim=1",
+            "Faulty Code": "#pragma HLS array_partition variable=buf cyclic dim=1 // 'cyclic' is incorrectly used instead of 'complete'"
+        }
+    ]
+}

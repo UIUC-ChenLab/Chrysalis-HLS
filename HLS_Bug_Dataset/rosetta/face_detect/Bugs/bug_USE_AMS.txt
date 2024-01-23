@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int x_ratio = (int)((w1<<16)/w2) +1;",
+            "Faulty Code": "int x_ratio = (w1<<16)/w2 +1;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "int result;",
+            "Faulty Code": "#pragma HLS INTERFACE port=result ap_none"
+        }
+    ]
+}

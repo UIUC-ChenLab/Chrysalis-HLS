@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "case 24:a = aa[596]; break;",
+            "Faulty Code": "case 24:a = aa[600]; break;"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint18_t a;",
+            "Faulty Code": "uint18_t a = aa[0];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "triangle_2d->z  = triangle_3d.z0 / 3 + triangle_3d.z1 / 3 + triangle_3d.z2 / 3;",
+            "Faulty Code": "triangle_2d->z  = triangle_3d.z0 / 2 + triangle_3d.z1 / 2 + triangle_3d.z2 / 2;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

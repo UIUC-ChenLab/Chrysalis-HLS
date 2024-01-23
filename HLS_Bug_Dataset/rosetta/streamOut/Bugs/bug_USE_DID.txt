@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "VectorFeatureType tmp_theta = 0;",
+            "Faulty Code": "VectorFeatureType tmp_theta;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "#pragma HLS array_partition dim=2"
+        }
+    ]
+}

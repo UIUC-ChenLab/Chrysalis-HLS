@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void DigitRec(WholeDigitType global_training_set[NUM_TRAINING / 2], WholeDigitType global_test_set[NUM_TEST], LabelType global_results[NUM_TEST], int run) { ... }",
+            "Faulty Code": "void DigitRec(WholeDigitType global_training_set[NUM_TRAINING / 2], WholeDigitType global_test_set[NUM_TEST], LabelType global_results[NUM_TEST], int run) { \n#pragma HLS interface port=global_training_set m_axi mode=read \n#pragma HLS interface port=global_test_set m_axi mode=read \n#pragma HLS interface port=global_results m_axi mode=write ... }"
+        }
+    ]
+}

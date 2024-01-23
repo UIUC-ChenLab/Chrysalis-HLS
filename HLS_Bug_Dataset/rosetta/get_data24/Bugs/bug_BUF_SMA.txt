@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "case 7: a = aa[227]; break;",
+            "Faulty Code": "case 7: a = aa[227 + ROWS*COLS/2]; break;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "uint18_t get_data24(int offset, uint18_t aa[ROWS*COLS])",
+            "Faulty Code": "#pragma HLS interface port=aa mode=bram"
+        }
+    ]
+}

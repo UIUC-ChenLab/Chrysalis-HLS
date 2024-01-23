@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "sum2 = (coord[8] - coord[9] - coord[10] + coord[11]) * 0;",
+            "Faulty Code": "sum2 = (coord[8] - coord[9] - coord[10] + coord[11]) * -4096;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int classifier25( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev ){",
+            "Faulty Code": "#pragma HLS interface port=stddev bram\nint classifier25( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev ){"
+        }
+    ]
+}

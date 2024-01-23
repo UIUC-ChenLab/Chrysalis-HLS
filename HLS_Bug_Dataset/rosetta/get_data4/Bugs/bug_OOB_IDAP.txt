@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "case 10:a = aa[346]; break;",
+            "Faulty Code": "case 10:a = aa[350]; break;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo"
+        }
+    ]
+}

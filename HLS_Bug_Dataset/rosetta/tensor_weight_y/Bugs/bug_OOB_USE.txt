@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if(r<MAX_HEIGHT)",
+            "Faulty Code": "if(r<=MAX_HEIGHT)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "pixel_t k = TENSOR_FILTER[i];",
+            "Faulty Code": "int k = TENSOR_FILTER[i];"
+        }
+    ]
+}

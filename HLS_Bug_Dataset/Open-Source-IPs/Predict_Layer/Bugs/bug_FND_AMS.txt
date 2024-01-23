@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=top dim=1 cyclic factor=8",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=top dim=1 cyclic factor=7"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void Predict_Layer(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> bottom[256] , hls::stream<int512> &stream512_in,  ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> top [8801])",
+            "Faulty Code": "void Predict_Layer(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> bottom[256] , hls::stream<int512> &stream512_in,  ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> top [8801]) { #pragma HLS INTERFACE port=top ap_none"
+        }
+    ]
+}

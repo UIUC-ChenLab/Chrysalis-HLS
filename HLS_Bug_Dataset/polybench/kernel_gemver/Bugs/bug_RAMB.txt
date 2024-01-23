@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "DATA_TYPE POLYBENCH_2D(A,N,N,n,n),",
+            "Faulty Code": "#pragma HLS interface m_axi port=A offset=slave"
+        }
+    ]
+}

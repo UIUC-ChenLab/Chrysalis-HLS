@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "FeatureType gradient[NUM_FEATURES];",
+            "Faulty Code": "FeatureType gradient[NUM_FEATURES]; // Missing initialization, leading to potential use of uninitialized values"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS array_partition variable=param cyclic factor=unroll_factor",
+            "Faulty Code": "#pragma HLS interface port=param mode=m_axi // Incorrect interface pragma leading to potential non-burst AXI read/write"
+        }
+    ]
+}

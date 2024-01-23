@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "default: a = 0; break;",
+            "Faulty Code": "default: a = aa[0];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

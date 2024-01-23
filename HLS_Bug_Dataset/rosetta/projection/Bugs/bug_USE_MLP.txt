@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "triangle_2d->z  = triangle_3d.z0 / 3 + triangle_3d.z1 / 3 + triangle_3d.z2 / 3;",
+            "Faulty Code": "triangle_2d->z  = ((int)triangle_3d.z0) / 3 + ((int)triangle_3d.z1) / 3 + ((int)triangle_3d.z2) / 3;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "IdxFixed index;",
+            "Faulty Code": "IdxFixed index = 0;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "FeatureType useLUT(FeatureType in) { ... }",
+            "Faulty Code": "FeatureType useLUT(FeatureType in = 0) { ... }"
+        }
+    ]
+}

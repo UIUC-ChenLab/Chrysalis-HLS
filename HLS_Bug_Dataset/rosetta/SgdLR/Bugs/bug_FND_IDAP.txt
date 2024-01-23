@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable=param cyclic factor=unroll_factor",
+            "Faulty Code": "#pragma HLS array_partition variable=param cyclic factor=3"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS PIPELINE II=1 mode=ap_fifo"
+        }
+    ]
+}

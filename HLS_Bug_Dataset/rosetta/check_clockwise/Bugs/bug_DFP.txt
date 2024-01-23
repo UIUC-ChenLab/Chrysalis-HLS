@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "int check_clockwise( Triangle_2D triangle_2d )",
+            "Faulty Code": "#pragma HLS dataflow\nint check_clockwise( Triangle_2D triangle_2d )"
+        }
+    ]
+}

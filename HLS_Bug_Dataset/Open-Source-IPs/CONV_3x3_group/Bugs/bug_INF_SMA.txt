@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(int h = 1; h <= HEIGH-2; h++) {",
+            "Faulty Code": "for(int h = 1; h < HEIGH; h++) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=weight_buf complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=weight_buf bram"
+        }
+    ]
+}

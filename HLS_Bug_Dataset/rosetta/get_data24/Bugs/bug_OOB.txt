@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint18_t get_data24(int offset, uint18_t aa[ROWS*COLS])\n{\n  #pragma HLS inline\n  uint18_t a;\n\n  switch (offset)\n  {\n    case 0: a = aa[31 ]; break;\n    case 1: a = aa[84 ]; break;\n    case 2: a = aa[113]; break;\n    case 3: a = aa[116]; break;\n    case 4: a = aa[129]; break;\n    case 5: a = aa[158]; break;\n    case 6: a = aa[182]; break;\n    case 7: a = aa[227]; break;\n    case 8: a = aa[276]; break;\n    case 9: a = aa[380]; break;\n    case 10:a = aa[404]; break;\n    case 11:a = aa[460]; break;\n    case 12:a = aa[470]; break;\n    case 13:a = aa[493]; break;\n    case 14:a = aa[494]; break;\n    case 15:a = aa[503]; break;\n    case 16:a = aa[514]; break;\n    case 17:a = aa[566]; break;\n    case 18:a = aa[580]; break;\n    case 19:a = aa[602]; break;\n    case 20:a = aa[617]; break;\n    default: a = 0; break;\n  };\n  return a;\n}",
+            "Faulty Code": "uint18_t get_data24(int offset, uint18_t aa[ROWS*COLS])\n{\n  #pragma HLS inline\n  uint18_t a;\n\n  switch (offset)\n  {\n    case 0: a = aa[31 ]; break;\n    case 1: a = aa[84 ]; break;\n    case 2: a = aa[113]; break;\n    case 3: a = aa[116]; break;\n    case 4: a = aa[129]; break;\n    case 5: a = aa[158]; break;\n    case 6: a = aa[182]; break;\n    case 7: a = aa[227]; break;\n    case 8: a = aa[276]; break;\n    case 9: a = aa[380]; break;\n    case 10:a = aa[404]; break;\n    case 11:a = aa[460]; break;\n    case 12:a = aa[470]; break;\n    case 13:a = aa[493]; break;\n    case 14:a = aa[494]; break;\n    case 15:a = aa[503]; break;\n    case 16:a = aa[514]; break;\n    case 17:a = aa[566]; break;\n    case 18:a = aa[580]; break;\n    case 19:a = aa[602]; break;\n    case 20:a = aa[621]; break;\n    default: a = 0; break;\n  };\n  return a;\n}"
+        }
+    ]
+}

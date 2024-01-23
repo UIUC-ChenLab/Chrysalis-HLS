@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=weight dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=weight dim=1 cyclic factor=2"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void Predict_Layer(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> bottom[256] , hls::stream<int512> &stream512_in,  ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> top [8801])",
+            "Faulty Code": "void Predict_Layer(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> bottom[256] , hls::stream<int512> &stream512_in,  ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> top[1024])"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for(int i=0;i<WORD_LENGTH;i++)\n\t{\n#pragma HLS pipeline\n\t\tstream512_out.write(data[i]);\n\t}",
+            "Faulty Code": "for(int i=0;i<=WORD_LENGTH;i++)\n\t{\n#pragma HLS pipeline\n\t\tstream512_out.write(data[i]);\n\t}"
+        }
+    ]
+}

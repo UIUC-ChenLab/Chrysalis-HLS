@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "tmp[i][j] += alpha * A[i][k] * B[k][j];",
+            "Faulty Code": "tmp[i][k] += alpha * A[i][k] * B[k][j];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "D[i][j] *= beta;",
+            "Faulty Code": "D[i][j] *= (int)beta;"
+        }
+    ]
+}

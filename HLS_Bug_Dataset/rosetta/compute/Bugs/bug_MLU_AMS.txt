@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "UPDATE: for (int i = 0; i < NUM_FEATURES / PAR_FACTOR; i++)",
+            "Faulty Code": "UPDATE: for (int i = 0; i <= NUM_FEATURES / PAR_FACTOR; i++)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS array_partition variable=param cyclic factor=unroll_factor",
+            "Faulty Code": "#pragma HLS interface port=param mode=s_axilite"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "if ( a > b )",
+            "Faulty Code": "if ( a_buf[SIZE/2 + i] > b_buf[i] )"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "return a;",
+            "Faulty Code": "return (short)a;"
+        }
+    ]
+}

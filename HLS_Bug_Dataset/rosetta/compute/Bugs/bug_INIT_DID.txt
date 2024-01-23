@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "FeatureType gradient[NUM_FEATURES];",
+            "Faulty Code": "FeatureType gradient[NUM_FEATURES] = {0};"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS array_partition variable=param cyclic factor=unroll_factor",
+            "Faulty Code": "#pragma HLS array_partition variable=param cyclic factor=unroll_factor dim=2"
+        }
+    ]
+}

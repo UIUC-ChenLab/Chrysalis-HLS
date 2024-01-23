@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "coord[0] = II[0][18];",
+            "Faulty Code": "#pragma HLS pipeline\ncoord[0] = II[0][18];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "coord[4] = II[0][20];",
+            "Faulty Code": "#pragma HLS unroll factor=2\ncoord[4] = II[0][20];"
+        }
+    ]
+}

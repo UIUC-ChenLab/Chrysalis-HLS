@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "frame_buffer[ pixels[i].x ][ pixels[i].y ] = pixels[i].color;",
+            "Faulty Code": "frame_buffer[ pixels[i].y ][ pixels[i].x ] = pixels[i].color;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "RAST2: for ( bit16 k = 0; k < max_index[0]; k++ )",
+            "Faulty Code": "RAST2: for ( bit16 k = 0; k <= max_index[0]; k++ )"
+        }
+    ]
+}

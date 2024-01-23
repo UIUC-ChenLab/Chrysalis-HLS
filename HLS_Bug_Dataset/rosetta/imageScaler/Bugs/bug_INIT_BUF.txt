@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int rat = 0;",
+            "Faulty Code": "int rat;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "IMG1_data[i][j] =  Data[(i*y_ratio)>>16][(j*x_ratio)>>16];",
+            "Faulty Code": "IMG1_data[i][j] =  Data[(i*y_ratio)>>16][(j*x_ratio)>>16]; if (j >= IMAGE_WIDTH / 2) IMG1_data[i][j] = Data[(i*y_ratio)>>16][((j-IMAGE_WIDTH/2)*x_ratio)>>16];"
+        }
+    ]
+}

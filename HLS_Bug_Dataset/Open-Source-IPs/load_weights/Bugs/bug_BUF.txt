@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "weight_buf[coo] = weights[coo][i][j];",
+            "Faulty Code": "weight_buf[coo] = weights[coo + DEPTH/2][i][j];"
+        }
+    ]
+}

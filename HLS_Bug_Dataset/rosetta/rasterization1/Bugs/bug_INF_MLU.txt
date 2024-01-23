@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if ( check_clockwise( triangle_2d ) == 0 )\n    return 1;",
+            "Faulty Code": "while ( check_clockwise( triangle_2d ) == 0 );"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "max_index[0] = (max_min[1] - max_min[0]) * (max_min[3] - max_min[2]);",
+            "Faulty Code": "max_index[0] = (max_min[1] - max_min[0]) * (max_min[3] - max_min[2] - 1);"
+        }
+    ]
+}

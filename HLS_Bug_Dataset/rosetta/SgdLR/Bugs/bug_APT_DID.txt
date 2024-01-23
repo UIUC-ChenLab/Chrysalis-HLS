@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS array_partition variable=grad cyclic factor=unroll_factor",
+            "Faulty Code": "#pragma HLS array_partition variable=grad complete factor=unroll_factor"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS array_partition variable=label_local cyclic factor=L_VECTOR_SIZE",
+            "Faulty Code": "#pragma HLS array_partition variable=label_local cyclic dim=2 factor=L_VECTOR_SIZE"
+        }
+    ]
+}

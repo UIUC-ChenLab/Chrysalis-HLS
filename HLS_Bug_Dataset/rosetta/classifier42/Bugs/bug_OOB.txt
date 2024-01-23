@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "coord[0] = II[4][18];",
+            "Faulty Code": "coord[0] = II[4][WINDOW_SIZE];"
+        }
+    ]
+}

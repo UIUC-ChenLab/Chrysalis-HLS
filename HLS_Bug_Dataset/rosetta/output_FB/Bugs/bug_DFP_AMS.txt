@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void output_FB(bit8 frame_buffer[MAX_X][MAX_Y], bit32 output[NUM_FB])",
+            "Faulty Code": "void output_FB(bit8 frame_buffer[MAX_X][MAX_Y], bit32 output)"
+        }
+    ]
+}

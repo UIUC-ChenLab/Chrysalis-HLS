@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS interface port=aa mode=s_axilite"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS unroll factor=5"
+        }
+    ]
+}

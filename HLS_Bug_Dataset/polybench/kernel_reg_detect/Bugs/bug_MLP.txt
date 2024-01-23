@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (cnt = 0; cnt <= _PB_LENGTH - 1; cnt++)\n    diff[j][i][cnt] = sum_tang[j][i];",
+            "Faulty Code": "#pragma HLS pipeline\nfor (cnt = 0; cnt <= _PB_LENGTH - 1; cnt++)\n    diff[j][i][cnt] = sum_tang[j][i];"
+        }
+    ]
+}

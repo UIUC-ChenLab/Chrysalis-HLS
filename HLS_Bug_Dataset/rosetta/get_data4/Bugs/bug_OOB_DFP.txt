@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint18_t aa[ROWS*COLS]",
+            "Faulty Code": "uint18_t aa[ROWS*COLS]; // Assuming ROWS*COLS < 594"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

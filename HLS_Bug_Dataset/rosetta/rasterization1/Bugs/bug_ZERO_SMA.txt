@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "bit8 tmp_x, tmp_y;",
+            "Faulty Code": "bit8 tmp_x = 0, tmp_y = 0;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "bit16 max_index[]",
+            "Faulty Code": "#pragma HLS INTERFACE port=bram storage_type=ram_1p latency=1 variable=max_index"
+        }
+    ]
+}

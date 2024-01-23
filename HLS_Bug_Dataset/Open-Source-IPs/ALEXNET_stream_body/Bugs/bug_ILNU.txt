@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=image dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=image dim=2 cyclic factor=4"
+        }
+    ]
+}

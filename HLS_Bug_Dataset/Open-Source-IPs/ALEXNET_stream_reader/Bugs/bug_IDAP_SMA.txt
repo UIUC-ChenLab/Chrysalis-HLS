@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable=stream512_out depth=16",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=stream512_out"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void ALEXNET_stream_reader(ap_int<512> *data, hls::stream<int512> &stream512_out)",
+            "Faulty Code": "void ALEXNET_stream_reader(ap_int<512> data, hls::stream<int512> &stream512_out)"
+        }
+    ]
+}

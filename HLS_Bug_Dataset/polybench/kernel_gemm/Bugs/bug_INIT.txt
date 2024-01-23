@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "C[i][j] *= beta;",
+            "Faulty Code": "DATA_TYPE temp = C[i][j]; C[i][j] = temp * beta;"
+        }
+    ]
+}

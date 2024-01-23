@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "for(int ch = 0; ch < 16; ch++) {",
+            "Faulty Code": "for(int ch = 0; ch <= 16; ch++) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS unroll",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

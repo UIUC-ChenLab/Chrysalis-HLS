@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "TENSOR_WEIGHT_X_INNER: for(int c=0; c<MAX_WIDTH+1; c++)",
+            "Faulty Code": "TENSOR_WEIGHT_X_INNER: for(int c=0; c<=MAX_WIDTH; c++)"
+        }
+    ]
+}

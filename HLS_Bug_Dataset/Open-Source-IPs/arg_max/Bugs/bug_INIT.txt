@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> max = -31;",
+            "Faulty Code": "ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> max;"
+        }
+    ]
+}

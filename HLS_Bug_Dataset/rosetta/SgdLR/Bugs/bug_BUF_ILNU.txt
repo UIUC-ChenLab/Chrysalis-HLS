@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "param[i*PAR_FACTOR+j] += scale * grad[i*PAR_FACTOR+j];",
+            "Faulty Code": "param[i*PAR_FACTOR+j] += scale * grad[(i+1)*PAR_FACTOR+j];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

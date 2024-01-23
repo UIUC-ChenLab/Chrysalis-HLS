@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void optical_flow(frames_t frames[MAX_HEIGHT][MAX_WIDTH], velocity_t outputs[MAX_HEIGHT][MAX_WIDTH]) { ... }",
+            "Faulty Code": "void optical_flow(frames_t frames[MAX_HEIGHT][MAX_WIDTH], velocity_t outputs[MAX_HEIGHT][MAX_WIDTH]) { #pragma HLS interface m_axi port=frames offset=slave ... #pragma HLS interface m_axi port=outputs offset=slave ... }"
+        }
+    ]
+}

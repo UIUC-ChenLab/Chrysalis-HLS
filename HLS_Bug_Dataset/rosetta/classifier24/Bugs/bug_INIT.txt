@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "coord[6] = II[19][5];",
+            "Faulty Code": "coord[6] = II[19][13]; // Assuming a typo where 13 is used instead of 5."
+        }
+    ]
+}

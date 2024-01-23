@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void read_data(VectorDataType  data[NUM_FEATURES / D_VECTOR_SIZE], DataType training_instance[NUM_FEATURES])",
+            "Faulty Code": "void read_data(VectorDataType  data[NUM_FEATURES / D_VECTOR_SIZE], DataType training_instance[NUM_FEATURES]) { #pragma HLS INTERFACE m_axi port=data offset=slave bundle=gmem"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void rendering( bit32 input[3*NUM_3D_TRI], bit32 output[NUM_FB])",
+            "Faulty Code": "void rendering( bit32 input[3*NUM_3D_TRI], bit32 output[NUM_FB]){\n#pragma HLS INTERFACE mode=ap_fifo port=output"
+        }
+    ]
+}

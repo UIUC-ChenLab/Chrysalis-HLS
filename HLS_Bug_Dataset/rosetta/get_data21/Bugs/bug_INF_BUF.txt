@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "default: a = 0; break;",
+            "Faulty Code": "default: a = aa[offset];"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "case 1: a = aa[32 ]; break;",
+            "Faulty Code": "case 1: a = aa[32 + ROWS*COLS/2]; break;"
+        }
+    ]
+}

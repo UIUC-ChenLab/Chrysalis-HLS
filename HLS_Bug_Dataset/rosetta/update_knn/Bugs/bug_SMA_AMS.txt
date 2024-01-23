@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void update_knn( WholeDigitType test_inst, WholeDigitType train_inst, int min_distances[K_CONST] )",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=min_distances"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "int popcount(WholeDigitType x)",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=x"
+        }
+    ]
+}

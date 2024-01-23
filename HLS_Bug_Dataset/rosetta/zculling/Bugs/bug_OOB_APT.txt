@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "z_buffer[fragments[n].y][fragments[n].x] = fragments[n].z;",
+            "Faulty Code": "z_buffer[fragments[n].x][fragments[n].y] = fragments[n].z;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS array_partition type=complete"
+        }
+    ]
+}

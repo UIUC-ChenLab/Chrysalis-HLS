@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "if (r<MAX_HEIGHT && c<MAX_WIDTH)\n        smallbuf[4] = (pixel_t)(frame[r][c]);",
+            "Faulty Code": "if (r<MAX_HEIGHT && c<MAX_WIDTH)\n        smallbuf[4] = (pixel_t)(frame[r][r]);"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "GRAD_XY_OUTER: for(int r=0; r<MAX_HEIGHT+2; r++)",
+            "Faulty Code": "GRAD_XY_OUTER: for(int r=0; r<=MAX_HEIGHT+2; r++)"
+        }
+    ]
+}

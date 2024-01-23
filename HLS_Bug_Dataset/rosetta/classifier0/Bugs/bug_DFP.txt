@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "coord[0] = II[4][6];",
+            "Faulty Code": "#pragma HLS dataflow\ncoord[0] = II[4][6];"
+        }
+    ]
+}

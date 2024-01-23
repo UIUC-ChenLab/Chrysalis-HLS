@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "temp.range(11,0)=(*data).range((ii)*12+11,(ii)*12);",
+            "Faulty Code": "temp.range(12,0)=(*data).range((ii)*12+11,(ii)*12);"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "data++;",
+            "Faulty Code": "data += 2;"
+        }
+    ]
+}

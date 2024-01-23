@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "coord[6] = II[14][5];",
+            "Faulty Code": "coord[6] = II[14][20];"
+        }
+    ]
+}

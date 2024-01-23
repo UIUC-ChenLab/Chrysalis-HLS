@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = 0; i <= k - 1; i++)",
+            "Faulty Code": "for (i = 0; i < k - 1; i++)"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma scop",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

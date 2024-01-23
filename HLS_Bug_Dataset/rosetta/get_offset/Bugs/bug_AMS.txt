@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "uint5_t get_offset(uint10_t addr) {\n  #pragma HLS inline\n  return offset_mapping[addr];\n}",
+            "Faulty Code": "uint5_t get_offset(uint10_t addr) {\n  #pragma HLS interface port=ap_none\n  return offset_mapping[addr];\n}"
+        }
+    ]
+}

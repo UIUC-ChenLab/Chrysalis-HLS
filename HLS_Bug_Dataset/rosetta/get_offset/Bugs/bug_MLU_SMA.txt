@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "return offset_mapping[addr];",
+            "Faulty Code": "#pragma HLS interface port=offset_mapping bram"
+        }
+    ]
+}

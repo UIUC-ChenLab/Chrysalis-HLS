@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "top[co][h][w] += weight_buf[co] * bottom[co][h+i-1][w+j-1];",
+            "Faulty Code": "top[co][h+i-1][w+j-1] += weight_buf[co] * bottom[co][h+i-1][w+j-1];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS unroll",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

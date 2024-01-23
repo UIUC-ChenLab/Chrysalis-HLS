@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "STREAM_OUT: for (int i = 0; i < NUM_FEATURES / F_VECTOR_SIZE; i ++ )",
+            "Faulty Code": "STREAM_OUT: for (int i = 0; i <= NUM_FEATURES / F_VECTOR_SIZE; i ++ )"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

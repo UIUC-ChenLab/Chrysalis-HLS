@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "top[n+nn]+=compute_engine_6(",
+            "Faulty Code": "top[n+nn+1]+=compute_engine_6("
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(int c=0;c<256 ;c+=16)",
+            "Faulty Code": "for(int c=0;c<256 ;c+=8)"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "FIX_32_4 conf_box1 = 0.0;",
+            "Faulty Code": "FIX_32_4 conf_box1;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=min_distances"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "int popcount(WholeDigitType x)",
+            "Faulty Code": "#pragma HLS interface port=x mode=m_axi"
+        }
+    ]
+}

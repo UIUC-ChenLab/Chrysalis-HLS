@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return lut[index];",
+            "Faulty Code": "return lut[index + 1];"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void update_knn( WholeDigitType test_inst, WholeDigitType train_inst, int min_distances[K_CONST] )",
+            "Faulty Code": "#pragma HLS interface m_axi port=min_distances mode=read_write\nvoid update_knn( WholeDigitType test_inst, WholeDigitType train_inst, int min_distances[K_CONST] )"
+        }
+    ]
+}

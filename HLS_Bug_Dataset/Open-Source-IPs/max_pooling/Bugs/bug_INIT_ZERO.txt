@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void max_pooling(FIX_FM buf_in[16][22][42], FIX_FM buf_out[16][10][20])",
+            "Faulty Code": "void max_pooling(FIX_FM buf_in[16][22][42], FIX_FM buf_out[16][10][20] = {{0}})"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "buf_out[ch][i][j] = max(buf_in[ch][i*2+1][j*2+1], buf_in[ch][i*2+1][j*2+2], buf_in[ch][i*2+2][j*2+1], buf_in[ch][i*2+2][j*2+2]);",
+            "Faulty Code": "FIX_FM max_val = 0; buf_out[ch][i][j] = max(max_val, buf_in[ch][i*2+1][j*2+1], buf_in[ch][i*2+1][j*2+2], buf_in[ch][i*2+2][j*2+1], buf_in[ch][i*2+2][j*2+2]);"
+        }
+    ]
+}

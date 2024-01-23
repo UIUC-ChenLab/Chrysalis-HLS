@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "if(final_sum >= (-284 * stddev))",
+            "Faulty Code": "if((short)final_sum >= (-284 * stddev))"
+        }
+    ]
+}

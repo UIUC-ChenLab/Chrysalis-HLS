@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "hls::stream<int512> stream512;",
+            "Faulty Code": "hls::stream<ap_int<512>> stream512;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=bottom dim=1 cyclic factor=8",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=bottom dim=1 cyclic factor=7"
+        }
+    ]
+}

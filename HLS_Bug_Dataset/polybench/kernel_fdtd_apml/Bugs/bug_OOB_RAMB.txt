@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "tmp[iz][iy] = (cymh[iy] / cyph[iy]) * Bza[iz][iy][_PB_CXM] - (ch / cyph[iy]) * clf[iz][iy];",
+            "Faulty Code": "tmp[iz][iy] = (cymh[iy] / cyph[iy+1]) * Bza[iz][iy][_PB_CXM] - (ch / cyph[iy+1]) * clf[iz][iy];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "Hz[iz][iy][ix] = (cxmh[ix] /cxph[ix]) * Hz[iz][iy][ix]\n\t\t+ (mui * czp[iz] / cxph[ix]) * tmp[iz][iy]\n\t\t- (mui * czm[iz] / cxph[ix]) * Bza[iz][iy][ix];",
+            "Faulty Code": "Hz[iz][ix][iy] = (cxmh[iy] /cxph[iy]) * Hz[iz][ix][iy]\n\t\t+ (mui * czp[iz] / cxph[iy]) * tmp[iz][ix]\n\t\t- (mui * czm[iz] / cxph[iy]) * Bza[iz][ix][iy];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=data depth=32"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void read_data(VectorDataType  data[NUM_FEATURES / D_VECTOR_SIZE], ...",
+            "Faulty Code": "#pragma HLS INTERFACE port=training_instance mode=ap_none"
+        }
+    ]
+}

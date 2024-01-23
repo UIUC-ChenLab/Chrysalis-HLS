@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(int cii=0;cii<16;cii+=2){",
+            "Faulty Code": "for(int cii=0;cii<=16;cii+=2){"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "stream_temp=stream512_in.read();",
+            "Faulty Code": "stream_temp=0;"
+        }
+    ]
+}

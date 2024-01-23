@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "coord[2] = II[17][13];",
+            "Faulty Code": "// Missing code for coord[2], manual loop unrolling error"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "coord[1] = II[11][22];",
+            "Faulty Code": "coord[1] = II[11][13]; // Copying from the wrong part of the buffer"
+        }
+    ]
+}

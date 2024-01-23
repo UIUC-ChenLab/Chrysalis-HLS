@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "coord[0] = II[5][9];",
+            "Faulty Code": "coord[0] = II[15][9];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "sum0 = (coord[0] - coord[1] - coord[2] + coord[3]) * -4096;",
+            "Faulty Code": "sum0 = (coord[0] - coord[1] - coord[2] + coord[3]) * 4096;"
+        }
+    ]
+}

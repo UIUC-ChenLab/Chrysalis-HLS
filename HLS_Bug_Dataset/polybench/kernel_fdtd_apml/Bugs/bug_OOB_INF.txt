@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "clf[iz][iy] = Ex[iz][iy][_PB_CXM] - Ex[iz][iy+1][_PB_CXM] + Ry[iz][iy] - Ey[iz][iy][_PB_CXM];",
+            "Faulty Code": "clf[iz][iy] = Ex[iz][iy][_PB_CXM+1] - Ex[iz][iy+1][_PB_CXM+1] + Ry[iz][iy] - Ey[iz][iy][_PB_CXM+1];"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (ix = 0; ix < _PB_CXM; ix++)",
+            "Faulty Code": "for (ix = 0; ix <= _PB_CXM; ix++)"
+        }
+    ]
+}

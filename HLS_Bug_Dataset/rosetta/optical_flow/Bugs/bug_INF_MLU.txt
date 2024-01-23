@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "GRAD_WEIGHT_X_INNER: for(int c=0; c<MAX_WIDTH+3; c++)",
+            "Faulty Code": "GRAD_WEIGHT_X_INNER: for(int c=0; c<=MAX_WIDTH+3; c++)"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "TENSOR_WEIGHT_X_ACC_INIT: for(int k =0; k<6; k++)",
+            "Faulty Code": "TENSOR_WEIGHT_X_ACC_INIT: for(int k =0; k<5; k++)"
+        }
+    ]
+}

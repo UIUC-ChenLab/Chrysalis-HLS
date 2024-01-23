@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int sum0, sum1, sum2, final_sum;",
+            "Faulty Code": "int sum0, sum1, sum2, final_sum = 0;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "static int coord[12];",
+            "Faulty Code": "static int coord[12]; #pragma HLS interface port=bram"
+        }
+    ]
+}

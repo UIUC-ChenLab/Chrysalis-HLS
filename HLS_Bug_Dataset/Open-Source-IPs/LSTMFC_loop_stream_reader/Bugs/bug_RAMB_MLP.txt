@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "stream512_out.write(data[i]);",
+            "Faulty Code": "stream512_out.write(data[i * 512]);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "for(int j = 0; j < 2; j++) { #pragma HLS pipeline"
+        }
+    ]
+}

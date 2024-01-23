@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS data_pack variable=tmp",
+            "Faulty Code": "#pragma HLS array_partition variable=tmp factor=5"
+        }
+    ]
+}

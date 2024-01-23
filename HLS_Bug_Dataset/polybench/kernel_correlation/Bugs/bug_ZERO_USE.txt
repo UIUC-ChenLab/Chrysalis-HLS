@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "DATA_TYPE eps = 0.1f;",
+            "Faulty Code": "DATA_TYPE eps = 0.0f;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "stddev[j] = sqrt_of_array_cell(stddev, j);",
+            "Faulty Code": "stddev[j] = (int)sqrt_of_array_cell(stddev, j);"
+        }
+    ]
+}

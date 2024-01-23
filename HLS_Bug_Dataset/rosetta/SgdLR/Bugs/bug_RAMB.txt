@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "// Content of called function\nvoid read_data(VectorDataType  data[NUM_FEATURES / D_VECTOR_SIZE], \n               DataType        training_instance[NUM_FEATURES])\n{\n  #pragma HLS INLINE\n\n  READ_TRAINING_DATA: for (int i = 0; i < NUM_FEATURES / D_VECTOR_SIZE; i ++ )\n  {\n    #pragma HLS pipeline II=1\n    VectorFeatureType tmp_data = data[i];\n    READ_TRAINING_DATA_INNER: for (int j = 0; j < D_VECTOR_SIZE; j ++ )\n      training_instance[i * D_VECTOR_SIZE + j].range(DTYPE_TWIDTH-1, 0) = tmp_data.range((j+1)*DTYPE_TWIDTH-1, j*DTYPE_TWIDTH);\n  }\n}",
+            "Faulty Code": "// Content of called function\nvoid read_data(VectorDataType  data[NUM_FEATURES / D_VECTOR_SIZE], \n               DataType        training_instance[NUM_FEATURES])\n{\n  #pragma HLS INLINE\n  #pragma HLS INTERFACE port=data mode=m_axi\n\n  READ_TRAINING_DATA: for (int i = 0; i < NUM_FEATURES / D_VECTOR_SIZE; i ++ )\n  {\n    #pragma HLS pipeline II=1\n    VectorFeatureType tmp_data = data[i];\n    READ_TRAINING_DATA_INNER: for (int j = 0; j < D_VECTOR_SIZE; j ++ )\n      training_instance[i * D_VECTOR_SIZE + j].range(DTYPE_TWIDTH-1, 0) = tmp_data.range((j+1)*DTYPE_TWIDTH-1, j*DTYPE_TWIDTH);\n  }\n}"
+        }
+    ]
+}

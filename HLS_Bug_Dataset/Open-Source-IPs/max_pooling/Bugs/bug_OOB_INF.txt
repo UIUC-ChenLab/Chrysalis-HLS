@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "buf_in[ch][i*2+2][j*2+2]",
+            "Faulty Code": "buf_in[ch][i*2+2][j*2+3]"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for(int j = 0; j < 20; j++) {",
+            "Faulty Code": "for(int j = 0; j <= 20; j++) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "stddev[j] = stddev[j] <= eps ? 1.0 : stddev[j];",
+            "Faulty Code": "stddev[j] = stddev[j] <= eps ? 1 : stddev[j];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "DATA_TYPE POLYBENCH_2D(symmat,M,M,m,m),",
+            "Faulty Code": "#pragma HLS interface port=symmat mode=ap_none"
+        }
+    ]
+}

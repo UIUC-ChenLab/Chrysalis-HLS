@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if(c<MAX_WIDTH) { tmp = y_filt[r][c]; }",
+            "Faulty Code": "if(c<=MAX_WIDTH) { tmp = y_filt[r][c]; }"
+        }
+    ]
+}

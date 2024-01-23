@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int t, i, j, cnt;",
+            "Faulty Code": "int t, i, j; unsigned int cnt;"
+        }
+    ]
+}

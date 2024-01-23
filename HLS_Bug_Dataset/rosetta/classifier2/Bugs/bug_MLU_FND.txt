@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "coord[0] = II[9][3];\n  coord[1] = II[9][21];\n  coord[2] = II[18][3];\n  coord[3] = II[18][21];\n  coord[4] = II[12][3];\n  coord[5] = II[12][21];\n  coord[6] = II[15][3];\n  coord[7] = II[15][21];",
+            "Faulty Code": "coord[0] = II[9][3];\n  coord[2] = II[18][3];\n  coord[3] = II[18][21];\n  coord[4] = II[12][3];\n  coord[5] = II[12][21];\n  coord[6] = II[15][3];\n  coord[7] = II[15][21];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=coord complete dim=1"
+        }
+    ]
+}

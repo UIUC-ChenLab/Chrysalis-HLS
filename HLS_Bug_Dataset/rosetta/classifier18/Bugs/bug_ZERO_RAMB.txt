@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "sum2 = (coord[8] - coord[9] - coord[10] + coord[11]) * 0;",
+            "Faulty Code": "sum2 = (coord[8] - coord[9] - coord[10] + coord[11]) * 1;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "coord[0] = II[8][10];\n  coord[1] = II[8][16];\n  coord[2] = II[18][10];\n  coord[3] = II[18][16];",
+            "Faulty Code": "coord[0] = II[8][10];\n  coord[1] = II[8][11];\n  coord[2] = II[18][10];\n  coord[3] = II[18][11];"
+        }
+    ]
+}

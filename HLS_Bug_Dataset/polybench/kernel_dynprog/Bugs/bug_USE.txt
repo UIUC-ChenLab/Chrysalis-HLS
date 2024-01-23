@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "DATA_TYPE out_l = 0;",
+            "Faulty Code": "int out_l = 0;"
+        }
+    ]
+}

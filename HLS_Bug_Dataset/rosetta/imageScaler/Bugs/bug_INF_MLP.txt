@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "int x_ratio = (int)((w1<<16)/w2) +1;",
+            "Faulty Code": "int x_ratio = (int)((w1<<16)/w2);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "for (x=0; x < w2; x++) { #pragma HLS pipeline // Nested pipeline pragma"
+        }
+    ]
+}

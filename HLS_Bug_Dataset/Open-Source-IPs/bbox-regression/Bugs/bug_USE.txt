@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "conf_box1 = (FIX_32_25)1 / ((FIX_32_25)1 + my_exp_fix(-FM_buf2[4][m][n]));",
+            "Faulty Code": "conf_box1 = 1 / (1 + my_exp_fix(-FM_buf2[4][m][n]));"
+        }
+    ]
+}

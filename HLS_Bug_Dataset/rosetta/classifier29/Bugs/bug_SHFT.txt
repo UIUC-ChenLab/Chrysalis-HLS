@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "sum1 = (coord[4] - coord[5] - coord[6] + coord[7]) * 8192;",
+            "Faulty Code": "sum1 = (coord[4] - coord[5] - coord[6] + coord[7]) << 14;"
+        }
+    ]
+}

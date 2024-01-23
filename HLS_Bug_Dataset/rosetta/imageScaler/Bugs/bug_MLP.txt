@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "imageScalerL1: for ( i = 0 ; i < IMAGE_HEIGHT ; i++ ){ #pragma HLS pipeline"
+        }
+    ]
+}

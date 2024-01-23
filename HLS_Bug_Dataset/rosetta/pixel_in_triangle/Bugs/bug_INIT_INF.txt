@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int pi0, pi1, pi2;",
+            "Faulty Code": "int pi0, pi1, pi2 = 0;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "return (pi0 >= 0 && pi1 >= 0 && pi2 >= 0);",
+            "Faulty Code": "while (pi0 >= 0 && pi1 >= 0 && pi2 >= 0);"
+        }
+    ]
+}

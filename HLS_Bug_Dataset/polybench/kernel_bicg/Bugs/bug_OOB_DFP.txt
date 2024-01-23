@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (j = 0; j < _PB_NY; j++)",
+            "Faulty Code": "for (j = 0; j <= _PB_NY; j++)"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma scop",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

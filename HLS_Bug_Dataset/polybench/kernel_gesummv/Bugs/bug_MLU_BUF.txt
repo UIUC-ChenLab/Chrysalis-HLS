@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (j = 0; j < _PB_N; j++)",
+            "Faulty Code": "for (j = 0; j < _PB_N-1; j++)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "y[i] = B[i][j] * x[j] + y[i];",
+            "Faulty Code": "y[i] = B[j][i] * x[j] + y[i];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "TRAINING_INST: for( int training_id = 0; training_id < NUM_TRAINING; training_id ++ )",
+            "Faulty Code": "TRAINING_INST: for( int training_id = 0; training_id <= NUM_TRAINING; training_id ++ )"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void streamOut(FeatureType theta_local[NUM_FEATURES], VectorFeatureType theta[NUM_FEATURES / F_VECTOR_SIZE])",
+            "Faulty Code": "#pragma HLS interface port=theta_local bram"
+        }
+    ]
+}

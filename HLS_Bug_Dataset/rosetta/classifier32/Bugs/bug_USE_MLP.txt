@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "sum1 = (coord[4] - coord[5] - coord[6] + coord[7]) * 8192;",
+            "Faulty Code": "sum1 = ((short)(coord[4] - coord[5] - coord[6] + coord[7])) * 8192;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "int classifier32( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev ){",
+            "Faulty Code": "#pragma HLS pipeline\nint classifier32( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev ){"
+        }
+    ]
+}

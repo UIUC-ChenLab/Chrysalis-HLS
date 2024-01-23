@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for(int i=0;i<8800;i+=40)",
+            "Faulty Code": "for(int i=0;i<=8800;i+=40)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS unroll factor=8",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

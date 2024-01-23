@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "coord[1] = II[1][24];",
+            "Faulty Code": "coord[1] = II[1][24]; coord[2] = II[16][18];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "sum0 = (coord[0] - coord[1] - coord[2] + coord[3]) * -4096;",
+            "Faulty Code": "sum0 = (coord[0] - coord[1] - coord[2] + coord[3]) * 4096;"
+        }
+    ]
+}

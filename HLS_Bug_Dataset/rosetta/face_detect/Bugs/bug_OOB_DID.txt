@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "L[WINDOW_SIZE-2][x] = IMG1_data[y][x];",
+            "Faulty Code": "L[WINDOW_SIZE-1][x] = IMG1_data[y][x];"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS array_partition variable=II complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=II complete dim=2"
+        }
+    ]
+}

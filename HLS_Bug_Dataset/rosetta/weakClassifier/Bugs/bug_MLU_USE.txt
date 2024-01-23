@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "sum2 = (coord[8] - coord[9] - coord[10] + coord[11]) * weights_array2[haar_counter];",
+            "Faulty Code": "sum2 = (coord[8] - coord[9] - coord[10]) * weights_array2[haar_counter];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "int t = tree_thresh_array[haar_counter] * stddev;",
+            "Faulty Code": "int t = (short)tree_thresh_array[haar_counter] * stddev;"
+        }
+    ]
+}

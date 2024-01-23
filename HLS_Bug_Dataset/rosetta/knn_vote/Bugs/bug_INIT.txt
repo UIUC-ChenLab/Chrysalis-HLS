@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "LabelType max_vote; max_vote = 0;",
+            "Faulty Code": "LabelType max_vote;"
+        }
+    ]
+}

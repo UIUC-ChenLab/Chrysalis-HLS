@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma scop",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "DATA_TYPE POLYBENCH_1D(_fict_,TMAX,tmax)",
+            "Faulty Code": "#pragma HLS interface port=bram mode=s_axilite variable=_fict_"
+        }
+    ]
+}

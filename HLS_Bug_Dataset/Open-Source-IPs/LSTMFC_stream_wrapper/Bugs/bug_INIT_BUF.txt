@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void LSTMFC_stream_wrapper(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> bottom[1000], ap_int<512> *data, ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> top[1024])",
+            "Faulty Code": "void LSTMFC_stream_wrapper(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> bottom[1000], ap_int<512> *data, ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> top[1024]) { ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> uninitializedVar; // Use of uninitialized variable here }"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "LSTMFC_stream_reader(data, stream512);",
+            "Faulty Code": "LSTMFC_stream_reader(data + LSTMFC_LENGTH/2, stream512); // Incorrect offset, reading from the wrong half of the buffer"
+        }
+    ]
+}

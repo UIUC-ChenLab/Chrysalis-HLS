@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (j = 1; j <= _PB_N - 2; j++)",
+            "Faulty Code": "for (j = 1; j < _PB_N - 2; j++)"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (i = 1; i<= _PB_N - 2; i++)",
+            "Faulty Code": "#pragma HLS dataflow\nfor (i = 1; i<= _PB_N - 2; i++)"
+        }
+    ]
+}

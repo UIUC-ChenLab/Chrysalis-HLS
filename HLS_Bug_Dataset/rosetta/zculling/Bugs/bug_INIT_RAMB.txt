@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "static bit8 z_buffer[MAX_X][MAX_Y];",
+            "Faulty Code": "bit8 z_buffer[MAX_X][MAX_Y];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS PIPELINE"
+        }
+    ]
+}

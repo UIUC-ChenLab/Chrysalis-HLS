@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "tmp[i][j] = 0;",
+            "Faulty Code": "// tmp[i][j] = 0; // Unintialized 'tmp' variable is used"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (k = 0; k < _PB_NK; ++k)",
+            "Faulty Code": "#pragma HLS unroll factor=4 // Incorrectly placed, should be inside the innermost loop \nfor (k = 0; k < _PB_NK; ++k)"
+        }
+    ]
+}

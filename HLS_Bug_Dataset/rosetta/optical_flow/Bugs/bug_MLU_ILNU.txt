@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(int c=0; c<MAX_WIDTH+2; c++)",
+            "Faulty Code": "for(int c=0; c<MAX_WIDTH+1; c++)"
+        }
+    ]
+}

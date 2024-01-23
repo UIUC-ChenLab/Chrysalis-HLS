@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "coord[0] = II[5][5];",
+            "Faulty Code": "#pragma HLS pipeline\n            coord[0] = II[5][5];"
+        }
+    ]
+}

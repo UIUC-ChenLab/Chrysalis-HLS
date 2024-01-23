@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "stream512_out.write(data[i]);",
+            "Faulty Code": "stream512_out.write(data[i+1]);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> bottom[1000]",
+            "Faulty Code": "ap_int <TOTAL_B> bottom[1000]"
+        }
+    ]
+}

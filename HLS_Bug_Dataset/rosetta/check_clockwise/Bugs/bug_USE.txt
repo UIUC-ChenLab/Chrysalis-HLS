@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int cw;",
+            "Faulty Code": "short cw;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "max_min[4] = max_min[1] - max_min[0];",
+            "Faulty Code": "max_min[5] = max_min[1] - max_min[0];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "max_index[0] = (max_min[1] - max_min[0]) * (max_min[3] - max_min[2]);",
+            "Faulty Code": "#pragma HLS unroll factor=2\nmax_index[0] = (max_min[1] - max_min[0]) * (max_min[3] - max_min[2]);"
+        }
+    ]
+}

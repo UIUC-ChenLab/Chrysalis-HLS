@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS array_partition variable=buf complete dim=1",
+            "Faulty Code": "#pragma HLS array_partition variable=buf cyclic dim=1"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS array_partition variable=smallbuf complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=smallbuf complete dim=2"
+        }
+    ]
+}

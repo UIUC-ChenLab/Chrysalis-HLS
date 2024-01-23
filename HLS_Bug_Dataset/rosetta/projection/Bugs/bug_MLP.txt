@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void projection ( Triangle_3D triangle_3d, Triangle_2D *triangle_2d, bit2 angle )",
+            "Faulty Code": "void projection ( Triangle_3D triangle_3d, Triangle_2D *triangle_2d, bit2 angle ) #pragma HLS pipeline"
+        }
+    ]
+}

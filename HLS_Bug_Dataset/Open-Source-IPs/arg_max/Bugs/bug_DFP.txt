@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "int arg_max(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT>  probs[8801]){",
+            "Faulty Code": "#pragma HLS dataflow\nint arg_max(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT>  probs[8801]){"
+        }
+    ]
+}

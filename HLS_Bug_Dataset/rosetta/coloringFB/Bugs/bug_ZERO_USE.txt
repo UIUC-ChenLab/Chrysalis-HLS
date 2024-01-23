@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "frame_buffer[i][j] = 0;",
+            "Faulty Code": "frame_buffer[i][j] = -1;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "frame_buffer[ pixels[i].x ][ pixels[i].y ] = pixels[i].color;",
+            "Faulty Code": "frame_buffer[ (bit16)(pixels[i].x) ][ (bit16)(pixels[i].y) ] = (bit8)(pixels[i].color);"
+        }
+    ]
+}

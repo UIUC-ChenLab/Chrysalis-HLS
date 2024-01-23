@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "return lut[index];",
+            "Faulty Code": "#pragma HLS array_partition dim=2 complete\n  return lut[index];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS dataflow\n#pragma HLS INLINE"
+        }
+    ]
+}

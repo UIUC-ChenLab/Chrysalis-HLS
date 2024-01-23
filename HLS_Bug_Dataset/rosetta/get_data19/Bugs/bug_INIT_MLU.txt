@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint18_t a;",
+            "Faulty Code": "uint18_t a = aa[0]; // Incorrectly initializes 'a' with the first element of 'aa' array, which might not be the desired value for cases where 'offset' is not covered by the switch statement."
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "case 22:a = aa[581]; break;",
+            "Faulty Code": "case 22:a = aa[580]; break; // 'aa[581]' is the correct array element, but 'aa[580]' is accessed, missing the intended iteration."
+        }
+    ]
+}

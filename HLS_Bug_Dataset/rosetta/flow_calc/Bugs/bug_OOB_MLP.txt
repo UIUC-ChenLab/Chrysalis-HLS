@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if(r>=2 && r<MAX_HEIGHT-2 && c>=2 && c<MAX_WIDTH-2)",
+            "Faulty Code": "if(r>=2 && r<=MAX_HEIGHT-2 && c>=2 && c<=MAX_WIDTH-2)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "#pragma HLS pipeline II=1\n#pragma HLS pipeline II=1"
+        }
+    ]
+}

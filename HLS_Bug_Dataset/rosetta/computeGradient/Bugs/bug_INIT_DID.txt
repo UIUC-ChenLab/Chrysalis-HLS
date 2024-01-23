@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "FeatureType grad[NUM_FEATURES]",
+            "Faulty Code": "FeatureType grad[NUM_FEATURES]; // Assuming 'grad' array is not initialized elsewhere before used here"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS array_partition variable=grad cyclic factor=unroll_factor",
+            "Faulty Code": "#pragma HLS array_partition variable=grad cyclic factor=unroll_factor dim=2 // 'dim' should be 1 since 'grad' is a 1-dimensional array"
+        }
+    ]
+}

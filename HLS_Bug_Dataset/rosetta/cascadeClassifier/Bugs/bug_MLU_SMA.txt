@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < WINDOW_SIZE; i ++ )",
+            "Faulty Code": "for (int i = 0; i <= WINDOW_SIZE; i ++ )"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS interface port=coord"
+        }
+    ]
+}

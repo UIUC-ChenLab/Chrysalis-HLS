@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "if(final_sum >= (-210 * stddev))",
+            "Faulty Code": "if(final_sum >= (-210 * (unsigned)stddev))"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=coord cyclic dim=0"
+        }
+    ]
+}

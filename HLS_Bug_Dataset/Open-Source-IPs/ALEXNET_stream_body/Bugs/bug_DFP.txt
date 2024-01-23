@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "convolution3_layer(padded_rst_2,stream512_in,padded_rst_3);",
+            "Faulty Code": "#pragma HLS dataflow\n convolution3_layer(padded_rst_2,stream512_in,padded_rst_3);"
+        }
+    ]
+}

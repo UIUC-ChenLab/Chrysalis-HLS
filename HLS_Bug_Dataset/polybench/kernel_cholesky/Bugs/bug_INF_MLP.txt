@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (j = 0; j <= i - 1; ++j)",
+            "Faulty Code": "for (j = 0; j < i; ++j)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (k = 0; k <= i - 1; ++k)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (k = 0; k <= i - 1; ++k)"
+        }
+    ]
+}

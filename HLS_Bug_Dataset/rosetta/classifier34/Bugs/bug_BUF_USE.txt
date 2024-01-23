@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "coord[1] = II[8][24];",
+            "Faulty Code": "coord[1] = II[8][0];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "if(final_sum >= (-284 * stddev))",
+            "Faulty Code": "if(final_sum >= (-284 * (unsigned int)stddev))"
+        }
+    ]
+}

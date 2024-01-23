@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "param[i*PAR_FACTOR+j] += scale * grad[i*PAR_FACTOR+j];",
+            "Faulty Code": "param[(i+1)*PAR_FACTOR+j] += scale * grad[i*PAR_FACTOR+j];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return lut[index];",
+            "Faulty Code": "return lut[index + 1];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "index = (IdxFixed)LUT_SIZE - (IdxFixed)(((TmpFixed)in) << (LUTIN_TWIDTH - LUTIN_IWIDTH));",
+            "Faulty Code": "#pragma HLS array_partition variable=lut factor=3"
+        }
+    ]
+}

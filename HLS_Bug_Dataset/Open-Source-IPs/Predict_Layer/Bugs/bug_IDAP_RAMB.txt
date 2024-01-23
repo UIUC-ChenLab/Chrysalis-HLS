@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS unroll"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "top[i+j+k]=temp;",
+            "Faulty Code": "top[i+j]=temp;"
+        }
+    ]
+}

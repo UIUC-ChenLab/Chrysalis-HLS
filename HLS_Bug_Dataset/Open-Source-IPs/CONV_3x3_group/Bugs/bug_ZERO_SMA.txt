@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "void CONV_3x3_group(FIX_FM bottom[DEPTH][HEIGH][WIDTH],",
+            "Faulty Code": "void CONV_3x3_group(FIX_FM bottom[DEPTH][HEIGH][WIDTH] = {0},"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=weight_buf complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=weight_buf bram"
+        }
+    ]
+}

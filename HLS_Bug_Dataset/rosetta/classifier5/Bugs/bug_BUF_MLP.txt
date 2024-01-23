@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "coord[2] = II[21][6];",
+            "Faulty Code": "coord[2] = II[5][6];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "int classifier5( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev ){",
+            "Faulty Code": "int classifier5( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev ){\n#pragma HLS pipeline"
+        }
+    ]
+}

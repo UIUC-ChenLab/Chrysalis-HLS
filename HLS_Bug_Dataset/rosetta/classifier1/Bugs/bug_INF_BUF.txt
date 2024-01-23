@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "coord[1] = II[4][18];",
+            "Faulty Code": "coord[1] = II[4][10];"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if(final_sum >= (50 * stddev))",
+            "Faulty Code": "while(final_sum >= (50 * stddev))"
+        }
+    ]
+}

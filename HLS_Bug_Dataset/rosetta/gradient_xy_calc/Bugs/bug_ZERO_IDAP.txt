@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "smallbuf[4] = (pixel_t)(frame[r][c]);",
+            "Faulty Code": "smallbuf[4] = 0;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS array_partition variable=smallbuf complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=smallbuf complete dim=1"
+        }
+    ]
+}

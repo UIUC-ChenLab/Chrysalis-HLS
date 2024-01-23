@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (ix = 0; ix < _PB_CXM; ix++)",
+            "Faulty Code": "for (ix = 0; ix <= _PB_CXM; ix++)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (iy = 0; iy < _PB_CYM; iy++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (iy = 0; iy < _PB_CYM; iy++)"
+        }
+    ]
+}

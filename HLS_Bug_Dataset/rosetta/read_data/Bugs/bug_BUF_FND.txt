@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "VectorFeatureType tmp_data = data[i];",
+            "Faulty Code": "VectorFeatureType tmp_data = data[i + NUM_FEATURES / D_VECTOR_SIZE];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "#pragma HLS array_partition factor=3"
+        }
+    ]
+}

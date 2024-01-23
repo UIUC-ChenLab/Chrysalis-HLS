@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "s[i] = 0;",
+            "Faulty Code": "s[i] = SOME_NON_ZERO_VALUE;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma scop",
+            "Faulty Code": "#pragma HLS INTERFACE port=s mode=ap_none"
+        }
+    ]
+}

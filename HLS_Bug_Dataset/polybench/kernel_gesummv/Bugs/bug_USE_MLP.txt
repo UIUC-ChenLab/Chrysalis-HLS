@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "tmp[i] = A[i][j] * x[j] + tmp[i];",
+            "Faulty Code": "tmp[i] = A[i][j] * (short)x[j] + tmp[i];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma scop",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

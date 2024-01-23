@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void rendering( bit32 input[3*NUM_3D_TRI], bit32 output[NUM_FB])",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=angle"
+        }
+    ]
+}

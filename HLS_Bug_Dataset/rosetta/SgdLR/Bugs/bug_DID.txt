@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS array_partition variable=label_local cyclic factor=L_VECTOR_SIZE",
+            "Faulty Code": "#pragma HLS array_partition variable=label_local dim=2 cyclic factor=L_VECTOR_SIZE"
+        }
+    ]
+}

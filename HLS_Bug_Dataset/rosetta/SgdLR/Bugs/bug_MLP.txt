@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void compute(FeatureType theta_local[NUM_FEATURES], \n             LabelType training_label,\n             DataType training_instance[NUM_FEATURES])\n{\n  // array for storing gradient\n  FeatureType gradient[NUM_FEATURES];\n\n  // step size\n  FeatureType step = STEP_SIZE;\n\n  // do dot product with the parameter vector\n  FeatureType dot = dotProduct(theta_local, training_instance);\n  // do sigmoid function\n  FeatureType prob = Sigmoid(dot);\n  // compute gradient\n  computeGradient(gradient, training_instance, (prob-training_label));\n  // update the param vector\n  updateParameter(theta_local, gradient, -step);\n}",
+            "Faulty Code": "void compute(FeatureType theta_local[NUM_FEATURES], \n             LabelType training_label,\n             DataType training_instance[NUM_FEATURES])\n{\n  #pragma HLS pipeline // Incorrect placement\n  // array for storing gradient\n  FeatureType gradient[NUM_FEATURES];\n\n  // step size\n  FeatureType step = STEP_SIZE;\n\n  // do dot product with the parameter vector\n  FeatureType dot = dotProduct(theta_local, training_instance);\n  // do sigmoid function\n  FeatureType prob = Sigmoid(dot);\n  // compute gradient\n  computeGradient(gradient, training_instance, (prob-training_label));\n  // update the param vector\n  updateParameter(theta_local, gradient, -step);\n}"
+        }
+    ]
+}

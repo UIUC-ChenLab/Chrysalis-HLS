@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (j1 = 0; j1 < _PB_M-1; j1++)",
+            "Faulty Code": "for (j1 = 0; j1 <= _PB_M-1; j1++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "DATA_TYPE eps = 0.1f;",
+            "Faulty Code": "DATA_TYPE eps = 0.0f;"
+        }
+    ]
+}

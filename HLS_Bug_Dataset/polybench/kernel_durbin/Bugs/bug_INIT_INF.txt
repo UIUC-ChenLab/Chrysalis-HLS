@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "beta[0] = 1;",
+            "Faulty Code": "// Missing initialization of beta[0], potentially leading to use of an uninitialized variable."
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (k = 1; k < _PB_N; k++)",
+            "Faulty Code": "for (k = 1; k <= _PB_N; k++) // Off-by-one error can cause an infinite loop if _PB_N is not a constant and computed at runtime."
+        }
+    ]
+}

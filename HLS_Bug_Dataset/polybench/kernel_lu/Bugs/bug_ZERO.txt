@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "A[k][j] = A[k][j] / A[k][k];",
+            "Faulty Code": "A[k][j] = A[k][j] / 0;"
+        }
+    ]
+}

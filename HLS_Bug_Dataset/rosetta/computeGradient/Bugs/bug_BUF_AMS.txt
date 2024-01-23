@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "grad[i*PAR_FACTOR+j] = (scale * feature[i*PAR_FACTOR+j]);",
+            "Faulty Code": "grad[(i+1)*PAR_FACTOR+j] = (scale * feature[i*PAR_FACTOR+j]);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS array_partition variable=grad cyclic factor=unroll_factor",
+            "Faulty Code": "#pragma HLS interface port=grad mode=ap_none"
+        }
+    ]
+}

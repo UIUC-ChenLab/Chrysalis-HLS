@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (r >= 2 && r < MAX_HEIGHT)",
+            "Faulty Code": "if (r >= 2)"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=buf.val factor=4"
+        }
+    ]
+}

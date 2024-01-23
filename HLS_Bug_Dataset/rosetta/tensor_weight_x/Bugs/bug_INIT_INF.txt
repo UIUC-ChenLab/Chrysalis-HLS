@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "tensor_t tmp;",
+            "Faulty Code": "tensor_t tmp = buf.getval(0, 2);"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "TENSOR_WEIGHT_X_INNER: for(int c=0; c<MAX_WIDTH+1; c++)",
+            "Faulty Code": "TENSOR_WEIGHT_X_INNER: for(int c=0; c<=MAX_WIDTH; c++)"
+        }
+    ]
+}

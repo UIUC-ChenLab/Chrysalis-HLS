@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=weight dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=weight dim=1 complete"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "top[n+nn]+=compute_engine_LSTM_loop(...);",
+            "Faulty Code": "top[i+j+k]=temp;"
+        }
+    ]
+}

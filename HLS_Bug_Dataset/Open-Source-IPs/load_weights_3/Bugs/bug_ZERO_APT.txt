@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "void load_weights_3(ap_fixed<12,1,AP_TRN_ZERO,AP_SAT>  weight_buf[2][24][16],",
+            "Faulty Code": "void load_weights_3(ap_fixed<12,1,AP_TRN_ZERO,AP_SAT>  weight_buf[2][24][16] = {},"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=weight_buf  dim=3",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=weight_buf  type=cyclic dim=3"
+        }
+    ]
+}

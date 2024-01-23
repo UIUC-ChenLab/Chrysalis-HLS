@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "top[i+j]=0;",
+            "Faulty Code": "top[i+j];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void Embed_Layer(int word_input, ap_int<512> *  data, ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> input_sentence[256])",
+            "Faulty Code": "void Embed_Layer(int word_input, ap_int<512> *  data, ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> input_sentence[256]) { #pragma HLS INTERFACE s_axilite port=input_sentence bundle=control_bus }"
+        }
+    ]
+}

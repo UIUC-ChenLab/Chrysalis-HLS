@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "grad[i*PAR_FACTOR+j] = (scale * feature[i*PAR_FACTOR+j]);",
+            "Faulty Code": "grad[i*PAR_FACTOR+j] = ((int)scale * feature[i*PAR_FACTOR+j]);"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS unroll factor=unroll_factor"
+        }
+    ]
+}

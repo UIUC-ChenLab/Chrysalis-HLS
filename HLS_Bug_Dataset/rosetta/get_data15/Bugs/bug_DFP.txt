@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "uint18_t get_data15(int offset, uint18_t aa[ROWS*COLS])",
+            "Faulty Code": "#pragma HLS dataflow\nuint18_t get_data15(int offset, uint18_t aa[ROWS*COLS])"
+        }
+    ]
+}

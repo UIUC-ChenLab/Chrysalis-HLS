@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS array_partition variable=data_from_banks complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=data_from_banks cyclic dim=0"
+        }
+    ]
+}

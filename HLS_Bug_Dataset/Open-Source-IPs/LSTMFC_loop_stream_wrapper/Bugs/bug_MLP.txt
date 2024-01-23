@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void LSTMFC_loop_stream_reader(ap_int<512> *data, hls::stream<int512> &stream512_out)",
+            "Faulty Code": "void LSTMFC_loop_stream_reader(ap_int<512> *data, hls::stream<int512> &stream512_out)\n{\n#pragma HLS pipeline\n    for(int i=0;i<LSTMFC_LOOP_LENGTH;i++)\n    {\n    #pragma HLS pipeline\n        stream512_out.write(data[i]);\n    }\n}"
+        }
+    ]
+}

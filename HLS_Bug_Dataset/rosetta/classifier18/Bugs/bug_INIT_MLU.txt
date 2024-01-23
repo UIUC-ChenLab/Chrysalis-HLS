@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "coord[8] = 0;",
+            "Faulty Code": "int coord[12]; // Missing initialization for coord[8], leading to use of uninitialized variable."
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "coord[3] = II[18][16];",
+            "Faulty Code": "// Missing coord[3] = II[18][16]; due to incorrect manual loop unrolling, resulting in omission of one iteration."
+        }
+    ]
+}

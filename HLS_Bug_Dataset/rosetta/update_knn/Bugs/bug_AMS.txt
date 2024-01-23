@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void update_knn( WholeDigitType test_inst, WholeDigitType train_inst, int min_distances[K_CONST] )",
+            "Faulty Code": "#pragma HLS INTERFACE port=min_distances mode=ap_none"
+        }
+    ]
+}

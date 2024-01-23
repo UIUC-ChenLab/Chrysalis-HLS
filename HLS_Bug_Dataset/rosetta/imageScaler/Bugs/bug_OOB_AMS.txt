@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "IMG1_data[i][j] =  Data[(i*y_ratio)>>16][(j*x_ratio)>>16];",
+            "Faulty Code": "IMG1_data[i][j] =  Data[(i*y_ratio)>>16][j];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "unsigned char IMG1_data[IMAGE_HEIGHT][IMAGE_WIDTH]",
+            "Faulty Code": "#pragma HLS INTERFACE port=IMG1_data mode=ap_none"
+        }
+    ]
+}

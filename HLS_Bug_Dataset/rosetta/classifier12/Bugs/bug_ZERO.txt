@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "coord[0] = II[2][0];",
+            "Faulty Code": "coord[0] = 0;"
+        }
+    ]
+}

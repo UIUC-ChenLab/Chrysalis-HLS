@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int t, i, j;",
+            "Faulty Code": "int t, i, j = 0;"
+        }
+    ]
+}

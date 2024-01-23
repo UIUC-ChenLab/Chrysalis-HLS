@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void kernel_mvt(int n, DATA_TYPE POLYBENCH_1D(x1,N,n), DATA_TYPE POLYBENCH_1D(x2,N,n), DATA_TYPE POLYBENCH_1D(y_1,N,n), DATA_TYPE POLYBENCH_1D(y_2,N,n), DATA_TYPE POLYBENCH_2D(A,N,N,n,n))",
+            "Faulty Code": "#pragma HLS interface m_axi port=A offset=slave bundle=gmem"
+        }
+    ]
+}

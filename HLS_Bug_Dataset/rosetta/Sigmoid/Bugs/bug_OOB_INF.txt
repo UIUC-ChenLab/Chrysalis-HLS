@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return lut[index];",
+            "Faulty Code": "return lut[index + 1];"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (exponent > 4)",
+            "Faulty Code": "while (exponent > 4)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "top[n+nn]+=compute_engine_6(...);",
+            "Faulty Code": "top[n+nn]+=compute_engine_6(weight[0][nn][7], bottom[c+16][h][w]);"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if(top[i]<0) top[i]=0;",
+            "Faulty Code": "if(top[i]<0) top[i]=1;"
+        }
+    ]
+}

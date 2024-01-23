@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=weight_buf  dim=3",
+            "Faulty Code": "#pragma HLS INTERFACE port=weight_buf"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for(int ct=0;ct<2;ct++){",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=weight_buf dim=1 factor=16",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=weight_buf dim=1 complete"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=bottom"
+        }
+    ]
+}

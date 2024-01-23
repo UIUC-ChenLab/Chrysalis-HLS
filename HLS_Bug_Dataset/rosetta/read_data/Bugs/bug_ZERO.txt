@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "VectorFeatureType tmp_data = data[i];",
+            "Faulty Code": "VectorFeatureType tmp_data = 0;"
+        }
+    ]
+}

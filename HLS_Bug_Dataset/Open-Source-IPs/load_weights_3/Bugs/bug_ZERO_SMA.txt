@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_fixed<12,1,AP_TRN_ZERO,AP_SAT>  weight_buf[2][24][16]",
+            "Faulty Code": "ap_fixed<12,1,AP_TRN_ZERO,AP_SAT>  weight_buf[2][24][16] = {0};"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<int512> &stream512_in",
+            "Faulty Code": "#pragma HLS INTERFACE port=stream512_in mode=s_axilite"
+        }
+    ]
+}

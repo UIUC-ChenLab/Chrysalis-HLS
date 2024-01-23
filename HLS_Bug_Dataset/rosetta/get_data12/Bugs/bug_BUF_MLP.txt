@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "case 1: a = aa[39 ]; break;",
+            "Faulty Code": "case 1: a = aa[ROWS*COLS/2 + 39]; break;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

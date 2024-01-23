@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS interface port=aa mode=axis"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS interface port=a mode=bram"
+        }
+    ]
+}

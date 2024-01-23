@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "DATA_TYPE POLYBENCH_2D(sum,N,N,n,n),",
+            "Faulty Code": "#pragma HLS array_partition variable=sum dim=3"
+        }
+    ]
+}

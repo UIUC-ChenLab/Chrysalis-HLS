@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int rat = 0;",
+            "Faulty Code": "int rat;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "int x_ratio = (int)((w1<<16)/w2) +1;",
+            "Faulty Code": "int x_ratio = (w1<<16)/w2 +1;"
+        }
+    ]
+}

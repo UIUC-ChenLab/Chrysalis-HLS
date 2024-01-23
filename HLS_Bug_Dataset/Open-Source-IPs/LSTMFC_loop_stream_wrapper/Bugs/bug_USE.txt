@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "void LSTMFC_loop_stream_wrapper(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> bottom[256], ...)",
+            "Faulty Code": "void LSTMFC_loop_stream_wrapper(ap_int <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> bottom[256], ...)"
+        }
+    ]
+}

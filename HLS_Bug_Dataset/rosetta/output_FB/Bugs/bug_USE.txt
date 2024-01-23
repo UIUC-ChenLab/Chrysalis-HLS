@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "out_FB( 7,  0) = frame_buffer[i][j + 0];",
+            "Faulty Code": "out_FB( 7,  0) = (bit8)frame_buffer[i][j + 0];"
+        }
+    ]
+}

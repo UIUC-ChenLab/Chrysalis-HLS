@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "READ_TRAINING_DATA: for (int i = 0; i < NUM_FEATURES / D_VECTOR_SIZE; i ++ )",
+            "Faulty Code": "READ_TRAINING_DATA: for (int i = 0; i < NUM_FEATURES / D_VECTOR_SIZE; i += 2 )"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void read_data(VectorDataType  data[NUM_FEATURES / D_VECTOR_SIZE], DataType training_instance[NUM_FEATURES])",
+            "Faulty Code": "#pragma HLS interface m_axi port=training_instance offset=slave bundle=gmem0"
+        }
+    ]
+}

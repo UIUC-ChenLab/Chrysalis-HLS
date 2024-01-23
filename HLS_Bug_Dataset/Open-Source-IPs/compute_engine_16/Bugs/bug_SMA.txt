@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "FIX_32_12 compute_engine_16(FIX_WT w0,  FIX_FM b0, ...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=w0 bram"
+        }
+    ]
+}

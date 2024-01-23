@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int cnt = 0;",
+            "Faulty Code": "int cnt = -1;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "cnt = cnt + x[i];",
+            "Faulty Code": "cnt = cnt + (char)x[i];"
+        }
+    ]
+}

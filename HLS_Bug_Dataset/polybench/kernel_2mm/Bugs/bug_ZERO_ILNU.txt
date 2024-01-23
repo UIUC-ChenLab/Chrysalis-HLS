@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "tmp[i][j] = 0;",
+            "Faulty Code": "tmp[i][j] = alpha;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (k = 0; k < _PB_NK; ++k)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (k = 0; k < _PB_NK; ++k)"
+        }
+    ]
+}

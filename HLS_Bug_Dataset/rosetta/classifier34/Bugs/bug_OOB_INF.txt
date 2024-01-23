@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "coord[1] = II[8][24];",
+            "Faulty Code": "coord[1] = II[8][25];"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "sum2 = (coord[8] - coord[9] - coord[10] + coord[11]) * 0;",
+            "Faulty Code": "while(1) { sum2 = (coord[8] - coord[9] - coord[10] + coord[11]) * 0; }"
+        }
+    ]
+}

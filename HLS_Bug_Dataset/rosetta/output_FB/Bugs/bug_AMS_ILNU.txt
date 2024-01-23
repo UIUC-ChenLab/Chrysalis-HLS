@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void output_FB(bit8 frame_buffer[MAX_X][MAX_Y], bit32 output[NUM_FB])",
+            "Faulty Code": "void output_FB(bit8 frame_buffer, bit32 output[NUM_FB])"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

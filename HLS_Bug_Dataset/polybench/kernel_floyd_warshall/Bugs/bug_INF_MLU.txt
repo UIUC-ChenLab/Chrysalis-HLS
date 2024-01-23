@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (k = 0; k < _PB_N; k++)",
+            "Faulty Code": "for (k = 0; k <= _PB_N; k++)"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (j = 0; j < _PB_N; j++)",
+            "Faulty Code": "for (j = 0; j < _PB_N-1; j++)"
+        }
+    ]
+}

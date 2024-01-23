@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for(int h = 1; h <= HEIGH-2; h++) {",
+            "Faulty Code": "for(int h = 1; h < HEIGH; h++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "for(int coo = 0; coo < 16; coo++) {",
+            "Faulty Code": "for(int coo = 0; coo <= 16; coo++) {"
+        }
+    ]
+}

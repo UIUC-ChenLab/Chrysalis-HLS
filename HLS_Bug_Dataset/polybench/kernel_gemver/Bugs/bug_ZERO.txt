@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "for (i = 0; i < _PB_N; i++)\n    x[i] = x[i] + z[i];",
+            "Faulty Code": "for (i = 0; i < _PB_N; i++)\n    x[i] = 0 + z[i];"
+        }
+    ]
+}

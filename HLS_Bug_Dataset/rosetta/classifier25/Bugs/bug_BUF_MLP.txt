@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "coord[1] = II[3][24];",
+            "Faulty Code": "coord[1] = II[3][25];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "sum0 = (coord[0] - coord[1] - coord[2] + coord[3]) * -4096;",
+            "Faulty Code": "#pragma HLS pipeline\nsum0 = (coord[0] - coord[1] - coord[2] + coord[3]) * -4096;"
+        }
+    ]
+}

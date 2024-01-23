@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i2 = 0; i2 < _PB_N-2; i2++)",
+            "Faulty Code": "for (i2 = 0; i2 < _PB_N-1; i2++)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i1 = 0; i1 < _PB_N; i1++)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (i1 = 0; i1 < _PB_N; i1++)"
+        }
+    ]
+}

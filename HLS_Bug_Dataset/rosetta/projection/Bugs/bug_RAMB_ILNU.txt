@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void projection ( Triangle_3D triangle_3d, Triangle_2D *triangle_2d, bit2 angle )",
+            "Faulty Code": "void projection ( Triangle_3D triangle_3d, Triangle_2D *triangle_2d, bit2 angle ) { #pragma HLS INTERFACE m_axi port=triangle_2d"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

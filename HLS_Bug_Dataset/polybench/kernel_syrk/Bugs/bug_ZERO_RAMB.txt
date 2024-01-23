@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "C[i][j] *= beta;",
+            "Faulty Code": "C[i][j] = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (i = 0; i < _PB_NI; i++)\n    for (j = 0; j < _PB_NI; j++)",
+            "Faulty Code": "#pragma HLS interface m_axi port=C offset=slave\nfor (i = 0; i < _PB_NI; i++)\n    for (j = 0; j < _PB_NI; j++)"
+        }
+    ]
+}

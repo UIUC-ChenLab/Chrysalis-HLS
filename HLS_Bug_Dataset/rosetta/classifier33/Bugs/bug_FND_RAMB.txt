@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=coord cyclic factor=3 dim=1"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "coord[0] = II[1][1];\n  coord[1] = II[1][7];\n  coord[2] = II[16][1];\n  coord[3] = II[16][7];",
+            "Faulty Code": "#pragma HLS interface m_axi port=II offset=slave\n  coord[0] = II[1][1];\n  coord[1] = II[1][7];\n  coord[2] = II[16][1];\n  coord[3] = II[16][7];"
+        }
+    ]
+}

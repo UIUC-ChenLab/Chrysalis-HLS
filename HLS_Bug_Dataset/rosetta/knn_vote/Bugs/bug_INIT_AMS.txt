@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "min_distance_list[i] = 256;",
+            "Faulty Code": "min_distance_list[i];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS array_partition variable=vote_list complete dim=0",
+            "Faulty Code": "#pragma HLS interface port=vote_list mode=ap_none"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "coord[1] = II[2][24];",
+            "Faulty Code": "coord[1] = II[2][25];"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if(final_sum >= (375 * stddev))",
+            "Faulty Code": "if(final_sum >= (375 * stddev);"
+        }
+    ]
+}

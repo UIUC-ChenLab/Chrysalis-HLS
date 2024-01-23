@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "for(int cii=0;cii<24;cii++){",
+            "Faulty Code": "for(int cii=0;cii<12;cii++){"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "weight_buf[ct][coo+1][cii].range(11,0)=stream_temp.range((coo+(ct*16)+1)*12+11,(coo+(ct*16)+1)*12);",
+            "Faulty Code": "weight_buf[ct][coo+1][cii]=0;"
+        }
+    ]
+}

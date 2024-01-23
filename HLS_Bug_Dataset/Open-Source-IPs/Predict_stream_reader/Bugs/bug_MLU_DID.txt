@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(int i=0;i<PREDICT_LENGTH;i++)",
+            "Faulty Code": "for(int i=0;i<PREDICT_LENGTH-1;i++)"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable=stream512_out depth=16",
+            "Faulty Code": "#pragma HLS array_partition variable=stream512_out dim=2"
+        }
+    ]
+}

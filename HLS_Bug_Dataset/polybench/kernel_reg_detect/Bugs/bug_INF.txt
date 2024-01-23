@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (t = 0; t < _PB_NITER; t++)",
+            "Faulty Code": "for (t = 0; t <= _PB_NITER; t++)"
+        }
+    ]
+}

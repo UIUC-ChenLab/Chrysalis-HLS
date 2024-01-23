@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "sum0 = (coord[0] - coord[1] - coord[2] + coord[3]) * -4096;",
+            "Faulty Code": "sum0 = (coord[0] - coord[1] - coord[2] + coord[3]) * -4096L;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "int classifier44( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev ){ ... }",
+            "Faulty Code": "#pragma HLS dataflow\nint classifier44( int_II II[WINDOW_SIZE][WINDOW_SIZE], int stddev ){ ... }"
+        }
+    ]
+}

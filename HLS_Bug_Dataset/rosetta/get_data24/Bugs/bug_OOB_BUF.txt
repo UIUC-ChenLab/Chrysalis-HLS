@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint18_t get_data24(int offset, uint18_t aa[ROWS*COLS])",
+            "Faulty Code": "uint18_t get_data24(int offset, uint18_t aa[ROWS*COLS]) // Assuming ROWS*COLS < 603"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "case 9: a = aa[380]; break;",
+            "Faulty Code": "case 9: a = aa[380 + ROWS*COLS/2]; break; // Incorrectly indexing the second half of the buffer"
+        }
+    ]
+}

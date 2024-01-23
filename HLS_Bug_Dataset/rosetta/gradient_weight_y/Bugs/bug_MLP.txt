@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "GRAD_WEIGHT_Y_ACC: for(int i=0; i<7; i++)",
+            "Faulty Code": "GRAD_WEIGHT_Y_ACC: for(int i=0; i<7; i++) { #pragma HLS pipeline }"
+        }
+    ]
+}

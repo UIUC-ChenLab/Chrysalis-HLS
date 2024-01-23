@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if(final_sum >= (375 * stddev))",
+            "Faulty Code": "if(final_sum >= (375 * stddev)); // The semicolon here creates an empty statement, causing the following code block to execute unconditionally"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "sum2 = (coord[8] - coord[9] - coord[10] + coord[11]) * 0;",
+            "Faulty Code": "sum2 = (coord[8] - coord[9] - coord[10] + coord[11]) * stddev; // Assuming stddev was meant to be used here instead of 0, otherwise sum2 will always be 0"
+        }
+    ]
+}

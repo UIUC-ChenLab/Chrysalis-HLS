@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(int m = 1; m <= h; m++)...",
+            "Faulty Code": "for(int m = 1; ; m++)..."
+        }
+    ]
+}

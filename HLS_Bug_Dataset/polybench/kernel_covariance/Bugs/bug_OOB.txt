@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (i = 0; i < _PB_N; i++)\n        symmat[j1][j2] += data[i][j1] * data[i][j2];",
+            "Faulty Code": "for (i = 0; i <= _PB_N; i++)\n        symmat[j1][j2] += data[i][j1] * data[i][j2];"
+        }
+    ]
+}

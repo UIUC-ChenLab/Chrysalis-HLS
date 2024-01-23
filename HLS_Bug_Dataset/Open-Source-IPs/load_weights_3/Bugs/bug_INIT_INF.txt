@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_int<512> stream_temp;",
+            "Faulty Code": "ap_int<512> stream_temp; // Missing initialization, should have been 'ap_int<512> stream_temp = 0;'"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for(int coo=0;coo<24;coo++){",
+            "Faulty Code": "for(int coo=0;coo<=24;coo++){ // '<=' makes the loop one iteration too many, causing an infinite loop if coo is unsigned"
+        }
+    ]
+}

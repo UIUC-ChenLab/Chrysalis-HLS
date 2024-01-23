@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma scop",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "tmp[i] = tmp[i] + A[i][j] * x[j];",
+            "Faulty Code": "#pragma HLS interface m_axi port=A offset=slave"
+        }
+    ]
+}

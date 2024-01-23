@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int x_ratio = (int)((w1<<16)/w2) +1;",
+            "Faulty Code": "int x_ratio = (int)((w1<<16)/w2);"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS interface port=IMG1_data mode=m_axi"
+        }
+    ]
+}

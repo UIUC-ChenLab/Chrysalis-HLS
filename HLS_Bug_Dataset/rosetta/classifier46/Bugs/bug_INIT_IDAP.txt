@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "coord[8] = 0;",
+            "Faulty Code": "int coord[12]; // Missing static keyword, coord array elements are uninitialized"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS interface port=II mode=ap_fifo // Incorrect mode for 2D array access"
+        }
+    ]
+}

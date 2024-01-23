@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS array_partition variable=param cyclic factor=unroll_factor",
+            "Faulty Code": "#pragma HLS array_partition variable=param dim=2 factor=unroll_factor"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "param[i*PAR_FACTOR+j] += scale * grad[i*PAR_FACTOR+j];",
+            "Faulty Code": "param[i*PAR_FACTOR] += scale * grad[i*PAR_FACTOR];"
+        }
+    ]
+}

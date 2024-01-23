@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "E[i][j] += A[i][k] * B[k][j];",
+            "Faulty Code": "E[i][j] += A[k][i] * B[k][j];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "G[i][j] = 0;",
+            "Faulty Code": "G[i][j] = 1;"
+        }
+    ]
+}

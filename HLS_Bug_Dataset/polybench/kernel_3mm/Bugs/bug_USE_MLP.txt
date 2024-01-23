@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "E[i][j] += A[i][k] * B[k][j];",
+            "Faulty Code": "E[i][j] += ((short)A[i][k]) * B[k][j];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (k = 0; k < _PB_NJ; ++k) G[i][j] += E[i][k] * F[k][j];",
+            "Faulty Code": "#pragma HLS PIPELINE\nfor (k = 0; k < _PB_NJ; ++k) G[i][j] += E[i][k] * F[k][j];"
+        }
+    ]
+}

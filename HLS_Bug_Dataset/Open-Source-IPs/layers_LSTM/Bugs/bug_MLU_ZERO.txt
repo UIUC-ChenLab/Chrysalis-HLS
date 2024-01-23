@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "#pragma HLS unroll factor=8",
+            "Faulty Code": "#pragma HLS unroll factor=7"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "top[i+j]=0;",
+            "Faulty Code": "top[i+j]=1;"
+        }
+    ]
+}

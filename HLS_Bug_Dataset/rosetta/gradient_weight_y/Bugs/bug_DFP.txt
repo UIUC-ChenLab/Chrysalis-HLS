@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "GRAD_WEIGHT_Y_OUTER: for(int r=0; r<MAX_HEIGHT+3; r++)",
+            "Faulty Code": "#pragma HLS dataflow\nGRAD_WEIGHT_Y_OUTER: for(int r=0; r<MAX_HEIGHT+3; r++)"
+        }
+    ]
+}

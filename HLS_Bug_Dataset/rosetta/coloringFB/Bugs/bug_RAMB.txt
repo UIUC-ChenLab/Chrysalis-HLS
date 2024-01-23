@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void coloringFB(bit16 counter, bit16 size_pixels, Pixel pixels[], bit8 frame_buffer[MAX_X][MAX_Y])",
+            "Faulty Code": "void coloringFB(bit16 counter, bit16 size_pixels, Pixel pixels[], bit8 frame_buffer[MAX_X][MAX_Y]){\n#pragma HLS interface m_axi port=frame_buffer\n  ... \n}"
+        }
+    ]
+}

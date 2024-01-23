@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "bit8 find_min( bit8 in0, bit8 in1, bit8 in2 )",
+            "Faulty Code": "#pragma HLS INTERFACE port=return ap_none"
+        }
+    ]
+}

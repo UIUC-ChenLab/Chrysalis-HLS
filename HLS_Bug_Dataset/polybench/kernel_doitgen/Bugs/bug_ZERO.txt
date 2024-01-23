@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "sum[r][q][p] = 0;",
+            "Faulty Code": "sum[r][q][p] = 1;"
+        }
+    ]
+}

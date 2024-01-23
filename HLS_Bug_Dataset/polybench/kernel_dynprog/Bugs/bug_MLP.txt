@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (k = i + 1; k <= j-1; k++)\n\tsum_c[i][j][k] = sum_c[i][j][k - 1] + c[i][k] + c[k][j];",
+            "Faulty Code": "#pragma HLS pipeline\n\tfor (k = i + 1; k <= j-1; k++)\n\t\tsum_c[i][j][k] = sum_c[i][j][k - 1] + c[i][k] + c[k][j];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "stddev[j] = stddev[j] <= eps ? 1.0 : stddev[j];",
+            "Faulty Code": "stddev[j] = stddev[j] <= eps ? 1 : stddev[j];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (j1 = 0; j1 < _PB_M-1; j1++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (j1 = 0; j1 < _PB_M-1; j1++)"
+        }
+    ]
+}

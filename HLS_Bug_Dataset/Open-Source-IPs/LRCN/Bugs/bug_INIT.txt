@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "for(int cnt=0;cnt<256;cnt++) { c_tm1[cnt]=(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> )0; hc_rst[cnt]=(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> )0; }",
+            "Faulty Code": "for(int cnt=0;cnt<256;cnt++) { c_tm1[cnt]=(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> )0; }"
+        }
+    ]
+}

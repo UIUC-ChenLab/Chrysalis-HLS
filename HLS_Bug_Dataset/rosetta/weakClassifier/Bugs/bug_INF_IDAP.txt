@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "# pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS interface mode=axis port=coord"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "int t = tree_thresh_array[haar_counter] * stddev;",
+            "Faulty Code": "while(1) { /* Some incorrect code leading to an infinite loop */ }"
+        }
+    ]
+}

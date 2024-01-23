@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "hls::stream<int512> stream512;",
+            "Faulty Code": "hls::stream<ap_int<512>> stream512;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void LSTMFC_stream_wrapper(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> bottom[1000], ap_int<512> *data, ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> top[1024])",
+            "Faulty Code": "void LSTMFC_stream_wrapper(ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> bottom[1000], ap_int<512> data[24000], ap_fixed <TOTAL_B,5,AP_TRN_ZERO,AP_SAT> top[1024])"
+        }
+    ]
+}

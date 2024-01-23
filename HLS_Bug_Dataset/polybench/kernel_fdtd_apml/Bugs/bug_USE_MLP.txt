@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "tmp[iz][iy] = (cymh[iy] / cyph[iy]) * Bza[iz][iy][ix] - (ch / cyph[iy]) * clf[iz][iy];",
+            "Faulty Code": "tmp[iz][iy] = (cymh[iy] >> cyph[iy]) * Bza[iz][iy][ix] - (ch >> cyph[iy]) * clf[iz][iy];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (ix = 0; ix < _PB_CXM; ix++)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (ix = 0; ix < _PB_CXM; ix++)"
+        }
+    ]
+}

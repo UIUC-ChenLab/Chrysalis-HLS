@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "FeatureType gradient[NUM_FEATURES];",
+            "Faulty Code": "FeatureType gradient[NUM_FEATURES]; // Missing initialization"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS PIPELINE II=1 // Should be inside the loops to ensure data is read/written in a sequential order"
+        }
+    ]
+}

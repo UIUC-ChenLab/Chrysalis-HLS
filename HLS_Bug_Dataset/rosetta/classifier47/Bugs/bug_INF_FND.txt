@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if(final_sum >= (123 * stddev))",
+            "Faulty Code": "while(final_sum >= (123 * stddev))"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable=coord complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=coord block factor=5 dim=1"
+        }
+    ]
+}

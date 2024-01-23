@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "DATA_TYPE POLYBENCH_2D(y,N,N,n,n),",
+            "Faulty Code": "#pragma HLS array_partition variable=y dim=3"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (k = 1; k < _PB_N; k++)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (k = 1; k < _PB_N; k++)"
+        }
+    ]
+}

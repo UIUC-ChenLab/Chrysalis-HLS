@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void kernel_adi(int tsteps, int n, DATA_TYPE POLYBENCH_2D(X,N,N,n,n), DATA_TYPE POLYBENCH_2D(A,N,N,n,n), DATA_TYPE POLYBENCH_2D(B,N,N,n,n))",
+            "Faulty Code": "#pragma HLS INTERFACE port=n bram"
+        }
+    ]
+}

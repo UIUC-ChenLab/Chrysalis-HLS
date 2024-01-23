@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void max_pooling(FIX_FM buf_in[16][22][42], FIX_FM buf_out[16][10][20])",
+            "Faulty Code": "void max_pooling(FIX_FM buf_in, FIX_FM buf_out[16][10][20]) #pragma HLS INTERFACE bram port=buf_in"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS pipeline\n\t\t\t#pragma HLS pipeline"
+        }
+    ]
+}

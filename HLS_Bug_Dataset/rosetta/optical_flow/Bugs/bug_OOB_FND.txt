@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "gradient_x[r-2][c-2] = x_grad/12;",
+            "Faulty Code": "gradient_x[r][c] = x_grad/12;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable=smallbuf complete dim=0",
+            "Faulty Code": "#pragma HLS array_partition variable=smallbuf factor=2 dim=0"
+        }
+    ]
+}

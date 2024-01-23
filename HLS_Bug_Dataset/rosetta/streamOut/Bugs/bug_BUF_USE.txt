@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "tmp_theta.range((j+1)*FTYPE_TWIDTH-1, j*FTYPE_TWIDTH) = theta_local[i * F_VECTOR_SIZE + j].range(FTYPE_TWIDTH-1, 0);",
+            "Faulty Code": "tmp_theta.range((j+1)*FTYPE_TWIDTH-1, j*FTYPE_TWIDTH) = theta_local[(i + 1) * F_VECTOR_SIZE + j].range(FTYPE_TWIDTH-1, 0);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "VectorFeatureType tmp_theta = 0;",
+            "Faulty Code": "VectorFeatureType tmp_theta = -1;"
+        }
+    ]
+}

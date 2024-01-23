@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "default: a = 0; break;",
+            "Faulty Code": "default: a = 0xABCD; break;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS array_partition dim=2"
+        }
+    ]
+}
