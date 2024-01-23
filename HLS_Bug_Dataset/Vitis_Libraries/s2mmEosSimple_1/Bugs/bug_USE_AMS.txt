@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "bool eos = false;",
+            "Faulty Code": "bool eos;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "OUTSIZE_DT* output_size",
+            "Faulty Code": "#pragma HLS INTERFACE port=output_size mode=ap_none"
+        }
+    ]
+}

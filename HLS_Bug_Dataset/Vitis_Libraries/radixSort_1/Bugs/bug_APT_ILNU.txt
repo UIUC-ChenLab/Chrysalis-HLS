@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = digit_location complete dim = 1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = digit_location cyclic dim = 1"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (uint16_t j = 0; j < n; ++j) {",
+            "Faulty Code": "#pragma HLS unroll factor = 4\nfor (uint16_t j = 0; j < n; ++j) {"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint32_t s = 1; s <= maxSymbol + 1; ++s) {",
+            "Faulty Code": "for (uint32_t s = 1; s <= 257; ++s) {"
+        }
+    ]
+}

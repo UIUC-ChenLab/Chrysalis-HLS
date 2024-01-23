@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "endInPackLenStrm << false;",
+            "Faulty Code": "endInPackLenStrm << true;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "adlerStrm << 1;",
+            "Faulty Code": "adlerStrm << -1;"
+        }
+    ]
+}

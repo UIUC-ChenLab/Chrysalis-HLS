@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = digit_histogram complete dim = 1",
+            "Faulty Code": "#pragma HLS UNROLL factor = 4"
+        }
+    ]
+}

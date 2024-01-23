@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<IN_DATAWIDTH> inBuffer = 0;",
+            "Faulty Code": "ap_uint<IN_DATAWIDTH> inBuffer;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<uint16_t>& inSizeStream",
+            "Faulty Code": "#pragma HLS interface port=inSizeStream mode=ap_none"
+        }
+    ]
+}

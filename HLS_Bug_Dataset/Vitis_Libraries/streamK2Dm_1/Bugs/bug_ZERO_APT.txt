@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outEoS << 1;",
+            "Faulty Code": "outEoS << 0;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic variable=out cyclic factor=2"
+        }
+    ]
+}

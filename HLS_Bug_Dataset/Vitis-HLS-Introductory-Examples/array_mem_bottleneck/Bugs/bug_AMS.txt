@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "dout_t array_mem_bottleneck(din_t mem[N]) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=mem mode=ap_none"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "zstdCoreInStream << tmp.data;",
+            "Faulty Code": "zstdCoreInStream << (ap_uint<8 * PARALLEL_BYTE>)tmp.data;"
+        }
+    ]
+}

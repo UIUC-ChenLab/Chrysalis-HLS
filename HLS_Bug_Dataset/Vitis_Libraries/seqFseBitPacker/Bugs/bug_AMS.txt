@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<IntVectorStream_dt<28, 1> >& seqFseWordStream",
+            "Faulty Code": "#pragma HLS INTERFACE port=seqFseWordStream mode=ap_none"
+        }
+    ]
+}

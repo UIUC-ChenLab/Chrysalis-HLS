@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void huffmanProcessingUnit(hls::stream<IntVectorStream_dt<9, 1> >& inStream, hls::stream<IntVectorStream_dt<32, 1> >& outStream) {",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=inStream"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void huffmanProcessingUnit(hls::stream<IntVectorStream_dt<9, 1> >& inStream, hls::stream<IntVectorStream_dt<32, 1> >& outStream) {",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=outValue"
+        }
+    ]
+}

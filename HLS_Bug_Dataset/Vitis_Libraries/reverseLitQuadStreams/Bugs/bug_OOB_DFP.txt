@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<64> litBuffer[c_litBufSize];",
+            "Faulty Code": "litBuffer[wIdx] = prevWord;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "while (true) {",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

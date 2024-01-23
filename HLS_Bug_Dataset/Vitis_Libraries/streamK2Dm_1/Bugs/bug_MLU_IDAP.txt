@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "out << inValue.data;",
+            "Faulty Code": "// Faulty manual loop unrolling, missing statement"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "outEoS << 1;",
+            "Faulty Code": "outEoS << 0;"
+        }
+    ]
+}

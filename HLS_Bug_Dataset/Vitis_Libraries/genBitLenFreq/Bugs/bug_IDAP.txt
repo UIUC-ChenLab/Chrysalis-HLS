@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<DSVectorStream_dt<Codeword, 1> >& outCodes",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=outCodes"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (; matchDone == false;)",
+            "Faulty Code": "for (;;)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INTERFACE ap_ctrl_none port = return",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port = return"
+        }
+    ]
+}

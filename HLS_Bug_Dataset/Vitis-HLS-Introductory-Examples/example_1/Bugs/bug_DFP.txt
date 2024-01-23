@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "buff[i] = a[i];",
+            "Faulty Code": "#pragma HLS dataflow\n        buff[i] = a[i];"
+        }
+    ]
+}

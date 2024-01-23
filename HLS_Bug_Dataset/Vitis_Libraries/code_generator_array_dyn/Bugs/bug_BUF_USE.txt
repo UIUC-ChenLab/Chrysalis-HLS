@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "nptr_extra[fill_idx] = code_val;",
+            "Faulty Code": "nptr[fill_idx] = code_val;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "low = (uint32_t)(-1);",
+            "Faulty Code": "low = (uint16_t)(-1);"
+        }
+    ]
+}

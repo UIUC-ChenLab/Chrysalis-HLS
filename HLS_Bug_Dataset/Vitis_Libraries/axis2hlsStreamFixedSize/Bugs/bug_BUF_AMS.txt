@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "tmpOut = t1.get_data();",
+            "Faulty Code": "tmpOut = t1.get_keep(); // Assuming get_keep() returns a part of the data that should not be used here."
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<STREAMDWIDTH> >& inputStream",
+            "Faulty Code": "#pragma HLS INTERFACE port=inputStream mode=ap_none // Inferred as a scalar interface, but it should be a stream."
+        }
+    ]
+}

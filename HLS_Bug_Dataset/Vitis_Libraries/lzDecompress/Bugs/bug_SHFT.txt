@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "offset = nextValue.range(15, 0);",
+            "Faulty Code": "offset = nextValue.range(31, 16); // Incorrectly shifted to the higher bits which are meant for length_extract"
+        }
+    ]
+}

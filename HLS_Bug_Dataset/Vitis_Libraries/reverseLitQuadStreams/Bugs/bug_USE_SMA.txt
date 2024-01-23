@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "litWcnt += 8;",
+            "Faulty Code": "litWcnt += inVal.range(3, 0); // Assuming litWcnt += 8 bytes for each iteration, but mistakenly using the control signal bits (0-3) which could sign extend"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "ap_uint<64> litBuffer[c_litBufSize];",
+            "Faulty Code": "#pragma HLS INTERFACE port=litBuffer bram // Mapping scalar litBuffer to a BRAM port incorrectly"
+        }
+    ]
+}

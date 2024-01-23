@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t shift = 0; shift < MAX_FREQ_DWIDTH && not_sorted; shift += BITS_PER_LOOP) {",
+            "Faulty Code": "for (uint8_t shift = 0; shift <= MAX_FREQ_DWIDTH && not_sorted; shift += BITS_PER_LOOP) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (inVal.strobe) {",
+            "Faulty Code": "if (inVal.data[0]) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "tOut.keep = -1;",
+            "Faulty Code": "tOut.keep = 0;"
+        }
+    ]
+}

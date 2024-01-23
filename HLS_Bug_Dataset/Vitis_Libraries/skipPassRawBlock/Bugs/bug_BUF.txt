@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outFlagVal.range(1, 1) = (ap_uint<1>)isRawBlk;",
+            "Faulty Code": "outFlagVal.range(0, 0) = (ap_uint<1>)isRawBlk;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "offsetVal = prevOffsets[offsetVal - 1];",
+            "Faulty Code": "offsetVal = prevOffsets[offsetVal];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition factor=2"
+        }
+    ]
+}

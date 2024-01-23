@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "extra_copy = _bitbuffer & ((1 << extra) - 1);",
+            "Faulty Code": "extra_copy = _bitbuffer & ((1 << (extra + 8)) - 1);"
+        }
+    ]
+}

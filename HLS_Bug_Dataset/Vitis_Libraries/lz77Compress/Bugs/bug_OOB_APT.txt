@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint8_t nextMatchCh = local_mem[match_loc % BOOSTER_OFFSET_WINDOW];",
+            "Faulty Code": "uint8_t nextMatchCh = local_mem[match_loc]; // OOB as match_loc can be beyond BOOSTER_OFFSET_WINDOW"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = present_window complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = present_window type=block factor=2 // APT as 'block' is used incorrectly for complete partitioning"
+        }
+    ]
+}

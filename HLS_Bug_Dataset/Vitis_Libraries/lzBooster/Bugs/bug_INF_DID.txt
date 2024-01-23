@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (; nextVal.strobe != 0; ++iIdx) {",
+            "Faulty Code": "for (; nextVal.strobe == 0; ++iIdx) {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable = lclBufStream depth = c_fifo_depth",
+            "Faulty Code": "#pragma HLS STREAM variable = lclBufStream depth = c_fifo_depth dim = 2"
+        }
+    ]
+}

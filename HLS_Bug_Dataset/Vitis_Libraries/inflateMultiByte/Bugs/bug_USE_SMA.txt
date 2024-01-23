@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_axiu<STREAM_WIDTH, 0, 0, 0> tmp = in.read();",
+            "Faulty Code": "ap_axiu<16, 0, 0, 0> tmp = in.read(); // Assuming STREAM_WIDTH is greater than 16 and sign extension occurs when assigning to tmp.data"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<c_parallelBit + PARALLEL_BYTES> > inflateOut(\"inflateOut\");",
+            "Faulty Code": "#pragma HLS INTERFACE port=inflateOut mode=ap_memory // inflateOut is a stream, not a scalar, but is being incorrectly mapped to a memory interface"
+        }
+    ]
+}

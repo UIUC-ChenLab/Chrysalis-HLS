@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "temp = in[i + j];",
+            "Faulty Code": "temp = in[i + j + 1];"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "if ((i + j) < inSize_gmemwidth) outstream << temp;",
+            "Faulty Code": "if ((i + j) >= inSize_gmemwidth) outstream << temp;"
+        }
+    ]
+}

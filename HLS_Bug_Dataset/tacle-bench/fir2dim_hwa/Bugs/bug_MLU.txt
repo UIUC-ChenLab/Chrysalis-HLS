@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for ( i = 0 ; i < COEFFICIENTS ; i++ ){",
+            "Faulty Code": "for ( i = 0 ; i < COEFFICIENTS - 1 ; i++ ){"
+        }
+    ]
+}

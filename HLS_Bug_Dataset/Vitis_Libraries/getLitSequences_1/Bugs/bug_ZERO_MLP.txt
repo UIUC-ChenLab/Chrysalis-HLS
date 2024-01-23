@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "resetDictFlag = true;",
+            "Faulty Code": "resetDictFlag = false;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

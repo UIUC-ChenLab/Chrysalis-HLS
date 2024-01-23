@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (dataSize > 0 && inVal.strobe == 0) outStream << inVal;",
+            "Faulty Code": "if (dataSize >= BLOCK_SIZE && inVal.strobe == 0) outStream << inVal;"
+        }
+    ]
+}

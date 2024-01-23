@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "*poutput = 0 ;",
+            "Faulty Code": "*poutput = 1 ;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS RESOURCE variable=fir2dim_input core=RAM_1P_BRAM",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=fir2dim_input dim=2 complete"
+        }
+    ]
+}

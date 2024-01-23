@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=outStream dim=1"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "outStream[n] << i;",
+            "Faulty Code": "outStream[n].write(i);"
+        }
+    ]
+}

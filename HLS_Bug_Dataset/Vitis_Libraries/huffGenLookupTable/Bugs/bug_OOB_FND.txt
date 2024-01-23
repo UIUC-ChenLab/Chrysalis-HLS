@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "const auto fcw = first_codeword[hfw];",
+            "Faulty Code": "const auto fcw = first_codeword[hfw + 1];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = first_codeword complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = first_codeword cyclic factor=16"
+        }
+    ]
+}

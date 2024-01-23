@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int i = 0; i < SZ; i++) {",
+            "Faulty Code": "for (int i = 0; i <= SZ; i++) {"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "data_t acc = 0.0;",
+            "Faulty Code": "data_t acc;"
+        }
+    ]
+}

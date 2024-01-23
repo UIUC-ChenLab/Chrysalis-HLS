@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "inSeqVal = inSeqStream.read();",
+            "Faulty Code": "#pragma HLS interface m_axi port=inSeqStream depth=32"
+        }
+    ]
+}

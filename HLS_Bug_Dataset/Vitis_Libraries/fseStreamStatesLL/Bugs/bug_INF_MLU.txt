@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while ((bitsInAcc + c_streamWidth < c_accRegWidth) && (byteIndx > -1)) {",
+            "Faulty Code": "while ((bitsInAcc <= c_accRegWidth) && (byteIndx > -1)) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t i = 7; i >= 0; --i) {",
+            "Faulty Code": "for (uint8_t i = 7; i > 0; --i) {"
+        }
+    ]
+}

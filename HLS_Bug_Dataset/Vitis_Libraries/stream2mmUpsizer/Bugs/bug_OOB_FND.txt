@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outBuffer.range((byteIdx + 1) * IN_WIDTH - 1, byteIdx * IN_WIDTH) = inValue;",
+            "Faulty Code": "outBuffer.range((byteIdx + 1) * IN_WIDTH, byteIdx * IN_WIDTH) = inValue;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "const int c_upsizeFactor = OUT_WIDTH / IN_WIDTH;",
+            "Faulty Code": "const int c_upsizeFactor = OUT_WIDTH % IN_WIDTH;"
+        }
+    ]
+}

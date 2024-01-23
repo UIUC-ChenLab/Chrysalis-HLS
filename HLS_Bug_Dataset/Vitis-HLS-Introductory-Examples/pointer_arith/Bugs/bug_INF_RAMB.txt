@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (i = 0; i < 4; i++) {",
+            "Faulty Code": "for (i = 0; i <= 4; i++) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (i = 0; i < 4; i++) {\n    acc += *(d + i + 1);\n    *(d + i) = acc;\n  }",
+            "Faulty Code": "for (i = 0; i < 4; i += 2) {\n    acc += *(d + i + 1);\n    *(d + i) = acc;\n  }"
+        }
+    ]
+}

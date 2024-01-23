@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "bool eos = inStreamEos.read();",
+            "Faulty Code": "bool eos; // Uninitialized variable"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (!eos) outChecksumData[0] = inStream.read();",
+            "Faulty Code": "if (!eos) outChecksumData[1] = inStream.read(); // Wrong buffer index"
+        }
+    ]
+}

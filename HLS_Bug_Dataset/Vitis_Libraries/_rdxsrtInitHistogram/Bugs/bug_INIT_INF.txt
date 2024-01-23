@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "digit_histogram[i] = 0;",
+            "Faulty Code": "ap_uint<SYMBOL_BITS> temp; digit_histogram[i] = temp;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (uint8_t i = 0; i < RADIX; ++i) {",
+            "Faulty Code": "for (uint8_t i = 0; i <= RADIX; ++i) {"
+        }
+    ]
+}

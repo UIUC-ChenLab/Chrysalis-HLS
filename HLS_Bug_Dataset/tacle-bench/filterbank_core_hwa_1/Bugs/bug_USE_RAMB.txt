@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "#pragma HLS INTERFACE bram port=r",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=r depth=256"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS RESOURCE variable=r core=RAM_1P_BRAM",
+            "Faulty Code": "#pragma HLS RESOURCE variable=r core=RAM_2P_BRAM"
+        }
+    ]
+}

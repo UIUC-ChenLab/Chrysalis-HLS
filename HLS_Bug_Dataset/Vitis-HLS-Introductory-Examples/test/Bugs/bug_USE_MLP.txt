@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int result = (A[i] + B[i] + C[i]).to_int();",
+            "Faulty Code": "int result = (A[i] + B[i] + (short)C[i]).to_int();"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "A[i] += B[i] + C[i];\n    B[i] += 5;\n    C[i] += 10;",
+            "Faulty Code": "#pragma HLS pipeline\n    A[i] += B[i] + C[i];\n    B[i] += 5;\n    C[i] += 10;"
+        }
+    ]
+}

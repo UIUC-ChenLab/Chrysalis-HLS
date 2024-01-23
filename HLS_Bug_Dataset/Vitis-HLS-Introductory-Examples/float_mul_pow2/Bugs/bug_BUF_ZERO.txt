@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "prod.fp_num = x_num.fp_num;",
+            "Faulty Code": "prod.fp_num = prod.fp_num;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "prod.bexp = x_num.bexp + n;",
+            "Faulty Code": "prod.bexp = 0 + n;"
+        }
+    ]
+}

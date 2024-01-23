@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "ap_uint<IN_DWIDTH> tmpOut = tempVal.data;",
+            "Faulty Code": "ap_uint<IN_DWIDTH/2> tmpOut = tempVal.data.range(IN_DWIDTH/2-1, 0); // Incorrectly using half of the data range"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=outputStream factor=3 // 'factor' not divisible by 'c_parallelByte'"
+        }
+    ]
+}

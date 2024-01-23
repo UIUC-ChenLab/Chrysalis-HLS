@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS array_partition type=complete dim=1"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "stream<int, 16> inter[2];",
+            "Faulty Code": "#pragma HLS array_partition dim=3"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "outChecksumStream << inChecksumData[0];",
+            "Faulty Code": "outChecksumStream << (int)inChecksumData[0]; // when PARALLEL_BYTE is less than 4, sign extension could be unintended"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void crc32_mm(const ap_uint<PARALLEL_BYTE * 8>* in, ap_uint<32>* crcData, ap_uint<32> inputSize) {",
+            "Faulty Code": "void crc32_mm(const ap_uint<PARALLEL_BYTE * 8> in, ap_uint<32>* crcData, ap_uint<32> inputSize) { // should be a pointer, but scalar passed mistakenly"
+        }
+    ]
+}

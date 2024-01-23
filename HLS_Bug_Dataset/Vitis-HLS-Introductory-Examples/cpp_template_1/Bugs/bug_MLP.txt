@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void cpp_template(int inp, int* out) { /* ... */ }",
+            "Faulty Code": "void cpp_template(int inp, int* out) {\n    #pragma HLS pipeline\n    int out0, out1, out2, out3, out4;\n\n    // Use templated functions to get multiple instances\n    // of the same function.\n    func_with_static<1>(inp, &out0);\n    func_with_static<2>(inp, &out1);\n    func_with_static<3>(inp, &out2);\n    func_with_static<4>(inp, &out3);\n    func_with_static<5>(inp, &out4);\n\n    *out += out0 + out1 + out2 + out3 + out4;\n}"
+        }
+    ]
+}

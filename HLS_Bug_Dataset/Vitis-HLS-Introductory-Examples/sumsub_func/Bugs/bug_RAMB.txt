@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void sumsub_func(din_t* in1, din_t* in2, dint_t* outSum, dint_t* outSub) { /* Correct code */ }",
+            "Faulty Code": "#pragma HLS interface m_axi port=in1 mode=read\n#pragma HLS interface m_axi port=in2 mode=read\n#pragma HLS interface m_axi port=outSum mode=write\n#pragma HLS interface m_axi port=outSub mode=write\nvoid sumsub_func(din_t* in1, din_t* in2, dint_t* outSum, dint_t* outSub) { *outSum = *in1 + *in2; *outSub = *in1 - *in2; }"
+        }
+    ]
+}

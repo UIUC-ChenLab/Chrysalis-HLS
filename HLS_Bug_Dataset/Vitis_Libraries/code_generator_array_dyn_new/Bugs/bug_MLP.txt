@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (uint16_t i = 1; i <= c_maxbits; i++) {\n#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "for (uint16_t i = 1; i <= c_maxbits; i++) {\n    for (uint16_t j = 0; j < some_value; j++) {\n        #pragma HLS PIPELINE II = 1"
+        }
+    ]
+}

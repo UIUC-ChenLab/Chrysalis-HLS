@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "Vect_H[ j ] += H[ i ][ k ] * r[ j - k ];",
+            "Faulty Code": "Vect_H[ j ] += H[ i ][ k ] * (short)r[ j - k ];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INTERFACE bram port=r",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=r"
+        }
+    ]
+}

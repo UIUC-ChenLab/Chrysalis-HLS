@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<ap_uint<PARALLEL_BYTES * 8> >& out",
+            "Faulty Code": "#pragma HLS INTERFACE mode=s_axilite port=out"
+        }
+    ]
+}

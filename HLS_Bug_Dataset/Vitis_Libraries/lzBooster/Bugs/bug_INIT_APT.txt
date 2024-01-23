@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint8_t nextMatchCh = local_mem[match_loc % c_boosterOffsetWindow];",
+            "Faulty Code": "uint8_t nextMatchCh; // Missing initialization from local_mem"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = lclBufStream type = fifo impl = srl",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable = lclBufStream type = wrong_type impl = srl"
+        }
+    ]
+}

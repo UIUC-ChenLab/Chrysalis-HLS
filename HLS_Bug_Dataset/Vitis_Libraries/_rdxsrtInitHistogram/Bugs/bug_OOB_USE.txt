@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "digit_histogram[i] = 0;",
+            "Faulty Code": "digit_histogram[i+1] = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "for (uint8_t i = 0; i < RADIX; ++i) {",
+            "Faulty Code": "for (int i = -1; i < RADIX; ++i) {"
+        }
+    ]
+}

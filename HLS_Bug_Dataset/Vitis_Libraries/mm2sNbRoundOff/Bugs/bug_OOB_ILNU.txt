@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "local_buffer[bIdx][i] = in[mem_read_word_idx + i];",
+            "Faulty Code": "local_buffer[bIdx][i] = in[mem_read_word_idx + i + BURST_SIZE];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        }
+    ]
+}

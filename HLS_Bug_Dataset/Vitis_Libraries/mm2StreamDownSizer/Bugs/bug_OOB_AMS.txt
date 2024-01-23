@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "inBuffer >>= OUT_DATAWIDTH;",
+            "Faulty Code": "inBuffer >>= IN_DATAWIDTH;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "outStream << inBuffer.range(OUT_DATAWIDTH - 1, 0);",
+            "Faulty Code": "outStream.write(inBuffer.range(OUT_DATAWIDTH - 1, 0));"
+        }
+    ]
+}

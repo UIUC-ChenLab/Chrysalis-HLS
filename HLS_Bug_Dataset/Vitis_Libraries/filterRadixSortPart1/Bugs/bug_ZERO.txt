@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "heap[hpLen].frequency = 1;",
+            "Faulty Code": "heap[hpLen].frequency = 0;"
+        }
+    ]
+}

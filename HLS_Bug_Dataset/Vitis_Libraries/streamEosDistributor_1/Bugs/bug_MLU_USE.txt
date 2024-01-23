@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int n = 0; n < SLAVES; n++) {",
+            "Faulty Code": "for (int n = 0; n <= SLAVES; n++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "bool i = inStream.read();",
+            "Faulty Code": "int i = inStream.read(); // assuming bool is 1 bit and int is at least 32 bits, leading to unintended sign extension"
+        }
+    ]
+}

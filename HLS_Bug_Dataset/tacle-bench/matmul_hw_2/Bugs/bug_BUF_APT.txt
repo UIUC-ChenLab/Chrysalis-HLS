@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "tmp += a[i][k] * b[k][j];",
+            "Faulty Code": "tmp += a[k][i] * b[k][j];"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS INTERFACE bram port=a",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=a"
+        }
+    ]
+}

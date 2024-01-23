@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "outStream << in[read_idx + midx];",
+            "Faulty Code": "outStream << in[read_idx + (midx % 2) * (input_size / 2)];"
+        }
+    ]
+}

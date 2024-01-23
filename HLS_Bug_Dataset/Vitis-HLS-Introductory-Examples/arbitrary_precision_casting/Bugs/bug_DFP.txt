@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "return (dout_t)a * (dout_t)b;",
+            "Faulty Code": "#pragma HLS dataflow\nreturn (dout_t)a * (dout_t)b;"
+        }
+    ]
+}

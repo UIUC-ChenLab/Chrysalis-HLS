@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS pipeline"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint32_t i = 0; i < inSize_gmemwidth; i++) {",
+            "Faulty Code": "for (uint32_t i = 0; i <= inSize_gmemwidth; i++) {"
+        }
+    ]
+}

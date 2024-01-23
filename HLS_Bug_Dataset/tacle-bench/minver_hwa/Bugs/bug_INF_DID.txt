@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if ( k == i ) break;",
+            "Faulty Code": "if ( k = i ) break;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS INTERFACE bram port=a",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=a dim=3"
+        }
+    ]
+}

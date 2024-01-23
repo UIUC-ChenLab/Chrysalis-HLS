@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<DSVectorStream_dt<Sequence_dt<MAX_FREQ_DWIDTH>, 1> >& inSeqStream",
+            "Faulty Code": "#pragma HLS INTERFACE port=inSeqStream bram"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "while (!dszDone) {",
+            "Faulty Code": "#pragma HLS UNROLL factor=2\n    while (!dszDone) {"
+        }
+    ]
+}

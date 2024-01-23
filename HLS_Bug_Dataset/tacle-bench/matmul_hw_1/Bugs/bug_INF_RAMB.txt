@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(k = 0; k < MAX_LOOP; k++) {",
+            "Faulty Code": "for(k = 0; k <= MAX_LOOP; k++) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "p_b = &b[k*size];",
+            "Faulty Code": "p_b = &b[k];"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "if (strb < 8) {\n    inLit >>= (8 * (8 - strb));\n}",
+            "Faulty Code": "if (strb < 8) {\n    inLit >>= (8 * (8 - strb % 8));\n}"
+        }
+    ]
+}

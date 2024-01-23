@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "const int factor = c_inputWord / c_outWord;",
+            "Faulty Code": "const int factor = c_inputWord / c_outWord - 1;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = factor"
+        }
+    ]
+}

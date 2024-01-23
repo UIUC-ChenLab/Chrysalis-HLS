@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "temp_array[i] = 0;",
+            "Faulty Code": "temp_array[i_symbolSize] = 0;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS DATAFLOW inside a loop"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "offsetVal = prevOffsets[offsetVal - 1];",
+            "Faulty Code": "offsetVal = prevOffsets[offsetVal];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (uint32_t i = 0; i < inSize; i++) {",
+            "Faulty Code": "for (uint32_t i = 0; i <= inSize; i++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "auto c_size = (i == inSize - 1) && !inSizeMod ? (inputSize % c_parallelByte) : c_parallelByte;",
+            "Faulty Code": "auto c_size = (i == inSize / 2 - 1) && !inSizeMod ? (inputSize % c_parallelByte) : c_parallelByte;"
+        }
+    ]
+}

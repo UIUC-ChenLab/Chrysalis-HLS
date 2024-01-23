@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "buf_out[i] = a_in[i];",
+            "Faulty Code": "buf_out[i+1] = a_in[i];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "void read(A* a_in, A buf_out[NUM]) {",
+            "Faulty Code": "void read(A* a_in, A buf_out[NUM] = {0}) {"
+        }
+    ]
+}

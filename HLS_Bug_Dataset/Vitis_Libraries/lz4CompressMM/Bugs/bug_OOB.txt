@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "input_idx[j] = (i + j) * max_block_size;",
+            "Faulty Code": "input_idx[j] = (i + NUM_BLOCK) * max_block_size;"
+        }
+    ]
+}

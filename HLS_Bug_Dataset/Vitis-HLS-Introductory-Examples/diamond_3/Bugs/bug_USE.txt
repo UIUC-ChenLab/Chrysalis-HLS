@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "outL[j] = inL[j] * 2;",
+            "Faulty Code": "outL[j] = (short)inL[j] * 2;"
+        }
+    ]
+}

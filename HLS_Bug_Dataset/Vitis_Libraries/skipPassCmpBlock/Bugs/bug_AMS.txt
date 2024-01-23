@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void skipPassCmpBlock(hls::stream<IntVectorStream_dt<8, DBYTES> >& inCmpStream, ...",
+            "Faulty Code": "#pragma HLS interface port=inCmpStream ap_none"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < NUMCORES; i++) {",
+            "Faulty Code": "for (int i = 0; i <= NUMCORES; i++) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS STREAM variable = lzData depth = 8",
+            "Faulty Code": "#pragma HLS INTERFACE port=lzData mode=ap_memory"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS interface ap_fifo depth = FFT_LENGTH port = in, out",
+            "Faulty Code": "#pragma HLS array_partition variable=in cyclic dim=2 factor=4 // Incorrect 'dim' value for 1D array"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline II = 1 rewind",
+            "Faulty Code": "#pragma HLS unroll factor=2 // Incorrect loop unrolling without fully unrolling the inner loop first"
+        }
+    ]
+}

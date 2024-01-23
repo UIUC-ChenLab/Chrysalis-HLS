@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (ap_uint<2> checksumType = checksumTypeStrm.read(); checksumType != 3; checksumType = checksumTypeStrm.read()) {",
+            "Faulty Code": "for (ap_uint<2> checksumType = checksumTypeStrm.read(); checksumType <= 3; checksumType = checksumTypeStrm.read()) {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable = endInStrm depth = 4",
+            "Faulty Code": "#pragma HLS STREAM variable = endInStrm depth = 4 dim = 1"
+        }
+    ]
+}

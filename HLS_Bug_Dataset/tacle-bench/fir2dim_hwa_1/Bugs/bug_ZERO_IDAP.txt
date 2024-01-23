@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "*poutput = 0 ;",
+            "Faulty Code": "*poutput = 0xFFFF ;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INTERFACE bram port=fir2dim_output",
+            "Faulty Code": "#pragma HLS INTERFACE ap_fifo port=fir2dim_output"
+        }
+    ]
+}

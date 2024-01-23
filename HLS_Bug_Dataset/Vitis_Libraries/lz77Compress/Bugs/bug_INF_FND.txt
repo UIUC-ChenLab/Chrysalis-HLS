@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (; nextVal.strobe != 0;) {",
+            "Faulty Code": "for (; nextVal.strobe == 0;) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = present_window complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = present_window cyclic factor=3"
+        }
+    ]
+}

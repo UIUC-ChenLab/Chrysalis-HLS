@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "// read huffman table\n    HuffmanCode_dt<MAX_BITS> hfcTable[256]; // use LUTs for implementation as registers\n#pragma HLS aggregate variable = hfcTable\n#pragma HLS BIND_STORAGE variable = hfcTable type = ram_1p impl = lutram",
+            "Faulty Code": "// read huffman table\n    HuffmanCode_dt<MAX_BITS> hfcTable[256]; // use LUTs for implementation as registers\n#pragma HLS INTERFACE m_axi port=hfcTable offset=slave bundle=gmem"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "present_window[++iIdx] = inVal.data[0];",
+            "Faulty Code": "present_window[iIdx++] = inVal.data[0];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (uint16_t l = 0; l < LEFT_BYTES; ++l) {\n#pragma HLS PIPELINE II = 1\n    outValue.data[0].range(7, 0) = lclBufStream.read();\n    outStream << outValue;\n}",
+            "Faulty Code": "for (uint16_t l = 0; l < LEFT_BYTES; ++l) {\n    #pragma HLS PIPELINE II = 1\n    for (int dummy = 0; dummy < 2; ++dummy) {\n        #pragma HLS PIPELINE\n    }\n    outValue.data[0].range(7, 0) = lclBufStream.read();\n    outStream << outValue;\n}"
+        }
+    ]
+}

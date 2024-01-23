@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int n = 0; n < SLAVES; n++) outStream[n] << i;",
+            "Faulty Code": "for (int n = 0; n < SLAVES - 1; n++) outStream[n] << i;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "bool i = inStream.read();",
+            "Faulty Code": "bool i = inStream.read(); bool j = inStream.read(); for (int n = 0; n < SLAVES; n++) outStream[n] << j;"
+        }
+    ]
+}

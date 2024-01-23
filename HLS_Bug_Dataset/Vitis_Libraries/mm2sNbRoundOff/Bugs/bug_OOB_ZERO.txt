@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outStream[pb] << local_buffer[pb][read_idx[pb]];",
+            "Faulty Code": "outStream[pb] << local_buffer[pb][read_idx[pb] + 1];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "input_size[bIdx] = _input_size[bIdx] + (input_idx[bIdx] % c_wordSize);",
+            "Faulty Code": "input_size[bIdx] = _input_size[bIdx];"
+        }
+    ]
+}

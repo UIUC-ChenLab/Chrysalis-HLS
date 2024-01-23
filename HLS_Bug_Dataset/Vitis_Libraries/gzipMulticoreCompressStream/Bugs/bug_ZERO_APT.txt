@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "assert(NUM_BLOCKS == 1 | NUM_BLOCKS == 2 | NUM_BLOCKS == 4 | NUM_BLOCKS == 8);",
+            "Faulty Code": "int checksum = 0; // This should be initialized with a non-zero value if used for checksum computation"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = lz77Tree type = FIFO impl = SRL",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable = lz77Tree type = wrong_type impl = SRL"
+        }
+    ]
+}

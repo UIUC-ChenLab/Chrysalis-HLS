@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "metaVal.data[0] = dataSize;",
+            "Faulty Code": "metaVal.data[0] = (int16_t)dataSize;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void huffmanEncoderStream(hls::stream<IntVectorStream_dt<32, 1> >& inStream,\n                          hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> >& hufCodeInStream,\n                          hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> >& hufCodeOutStream) {",
+            "Faulty Code": "void huffmanEncoderStream(hls::stream<IntVectorStream_dt<32, 1> >& inStream,\n                          hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> >& hufCodeInStream,\n                          hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> >& hufCodeOutStream) {\n#pragma HLS interface port=hufCodeOutStream ap_fifo"
+        }
+    ]
+}

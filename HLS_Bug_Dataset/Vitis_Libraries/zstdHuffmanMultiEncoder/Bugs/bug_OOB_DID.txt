@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "streamSizes[si] = inVal.range(15 + (si * 16) + 4, (si * 16) + 4);",
+            "Faulty Code": "streamSizes[si + 1] = inVal.range(15 + (si * 16) + 4, (si * 16) + 4);"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = streamSizes complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = streamSizes dim=5 complete"
+        }
+    ]
+}

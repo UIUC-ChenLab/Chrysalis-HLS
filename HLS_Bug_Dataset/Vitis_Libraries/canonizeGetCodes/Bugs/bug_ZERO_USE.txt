@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "first_codeword[0] = 0;",
+            "Faulty Code": "first_codeword[0] = 1;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "length = (symCnt == 0) ? 0 : length;",
+            "Faulty Code": "length = (symCnt == 0) ? 0 : (uint8_t)(length & 0xFF);"
+        }
+    ]
+}

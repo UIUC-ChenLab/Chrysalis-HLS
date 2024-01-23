@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "metaVal.strobe = 1;",
+            "Faulty Code": "metaVal.strobe = 0;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "metaVal.data[0] = dataSize;",
+            "Faulty Code": "metaVal.data = dataSize;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint16_t i = 0; i < c_maxLitV + 1; i++) {",
+            "Faulty Code": "for (uint16_t i = 0; i <= c_maxLitV + 1; i++) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "outSeqFreqVal.data[0] = offset_freq[i];",
+            "Faulty Code": "outSeqFreqVal.data[0] = offset_freq[i + 1];"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "length_histogram[length] += (1 + (uint8_t)(is_left_internal & is_right_internal));",
+            "Faulty Code": "length_histogram[length] += (1 + (is_left_internal & is_right_internal));"
+        }
+    ]
+}

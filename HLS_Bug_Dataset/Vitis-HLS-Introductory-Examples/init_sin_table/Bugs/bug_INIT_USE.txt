@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int i;",
+            "Faulty Code": "int i = sin_table[258]; // Using an uninitialized and out-of-bounds value"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "sin(M_PI * (dint_t)(i - 128) / 256.0);",
+            "Faulty Code": "sin(M_PI * (i - 128) / 256.0); // Unintended sign extension when i - 128 becomes negative"
+        }
+    ]
+}

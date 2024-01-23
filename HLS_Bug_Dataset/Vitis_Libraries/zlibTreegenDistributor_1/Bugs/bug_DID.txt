@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "hufCodeStream[i] << hufCodeOut;",
+            "Faulty Code": "#pragma HLS array_partition variable=hufCodeStream dim=1 complete\n            hufCodeStream[i] << hufCodeOut;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint8_t nextMatchCh = local_mem[match_loc % c_boosterOffsetWindow];",
+            "Faulty Code": "uint8_t nextMatchCh = local_mem[match_loc]; // Accidental OOB if match_loc >= c_boosterOffsetWindow"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS STREAM variable = lclBufStream depth = c_fifo_depth",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = local_mem cyclic factor=32 // Incorrect factor leading to APT error"
+        }
+    ]
+}

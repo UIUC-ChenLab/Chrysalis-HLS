@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outChecksumStream << inChecksumData[0];",
+            "Faulty Code": "outChecksumStream << inChecksumData[inputSize];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void s2mm32(hls::stream<ap_uint<32> >& inStream, hls::stream<bool>& inStreamEos, ap_uint<32>* outChecksumData) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=crcData mode=ap_memory storage_type=ram_1p"
+        }
+    ]
+}

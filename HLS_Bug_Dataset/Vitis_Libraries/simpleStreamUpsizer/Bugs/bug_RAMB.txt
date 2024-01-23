@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void simpleStreamUpsizer(hls::stream<ap_uint<IN_WIDTH> >& inStream, ...",
+            "Faulty Code": "#pragma HLS interface m_axi port=inStream depth=32\nvoid simpleStreamUpsizer(hls::stream<ap_uint<IN_WIDTH> >& inStream, ..."
+        }
+    ]
+}

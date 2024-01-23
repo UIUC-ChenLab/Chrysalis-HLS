@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outValue.strobe = 1;",
+            "Faulty Code": "outValue.strobe = 0;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS aggregate variable = litlnTree",
+            "Faulty Code": "#pragma HLS array_partition variable=litlnTree dim=0"
+        }
+    ]
+}

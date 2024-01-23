@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<2> cb_type = (uint8_t)(bitbuffer)&3;",
+            "Faulty Code": "ap_uint<2> cb_type = (int8_t)(bitbuffer)&3;"
+        }
+    ]
+}

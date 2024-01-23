@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "litLen = inSeqVal.data[0].litlen;",
+            "Faulty Code": "litLen = inSeqVal.data[1].litlen;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=outSeqVal.data factor=3"
+        }
+    ]
+}

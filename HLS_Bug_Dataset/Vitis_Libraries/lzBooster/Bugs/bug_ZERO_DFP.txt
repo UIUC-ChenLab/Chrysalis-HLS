@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t match_loc = 0;",
+            "Faulty Code": "uint32_t match_loc = 0xFFFFFFFF;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS STREAM variable = lclBufStream depth = c_fifo_depth",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

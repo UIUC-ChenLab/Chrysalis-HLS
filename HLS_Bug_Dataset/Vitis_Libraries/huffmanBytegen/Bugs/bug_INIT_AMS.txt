@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint16_t inValue = inStream.read();",
+            "Faulty Code": "uint16_t inValue; // uninitialized variable, missing the read from inStream"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INTERFACE ap_ctrl_none port = return",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port = return // incorrect mapping of scalar interface"
+        }
+    ]
+}

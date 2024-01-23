@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS interface ap_fifo depth = FFT_LENGTH port = in, out",
+            "Faulty Code": "#pragma HLS interface ap_fifo depth = FFT_LENGTH port = in"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS interface ap_fifo depth = 1 port = ovflo",
+            "Faulty Code": "#pragma HLS interface bram port = ovflo"
+        }
+    ]
+}

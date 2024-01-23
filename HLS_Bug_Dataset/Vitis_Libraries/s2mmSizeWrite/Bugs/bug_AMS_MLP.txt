@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void s2mmSizeWrite(hls::stream<OUTSIZE_DT>& inSizeStream, ...)",
+            "Faulty Code": "void s2mmSizeWrite(OUTSIZE_DT& inSizeStream, ...)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE\n#pragma HLS PIPELINE"
+        }
+    ]
+}

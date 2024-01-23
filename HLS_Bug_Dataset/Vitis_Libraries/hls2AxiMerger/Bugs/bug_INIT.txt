@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "t1.data = tmp.range(71, 8);",
+            "Faulty Code": "outKStream << t1;"
+        }
+    ]
+}

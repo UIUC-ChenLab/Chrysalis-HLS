@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<2> outFlagVal = 1;",
+            "Faulty Code": "ap_uint<2> outFlagVal;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (isRawBlk) outRawStream << inVal;",
+            "Faulty Code": "if (isRawBlk) outRawStream << 0;"
+        }
+    ]
+}

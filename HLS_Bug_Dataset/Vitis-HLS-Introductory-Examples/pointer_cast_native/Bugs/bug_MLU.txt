@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = 0; i < 4 * (N / 10); ++i) {",
+            "Faulty Code": "for (i = 0; i <= 4 * (N / 10); ++i) {"
+        }
+    ]
+}

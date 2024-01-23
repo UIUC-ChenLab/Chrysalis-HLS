@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline II = 5",
+            "Faulty Code": "#pragma HLS array_partition factor=3"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void diamond(hls::stream<data_t>& vecIn, hls::stream<data_t>& vecOut) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=vecIn mode=ap_none"
+        }
+    ]
+}

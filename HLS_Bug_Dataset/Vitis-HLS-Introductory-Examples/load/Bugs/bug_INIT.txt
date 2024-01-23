@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "dout_t y_aux[N]",
+            "Faulty Code": "dout_t y_aux[N]; // y_aux is not initialized and its elements are used in calculations"
+        }
+    ]
+}

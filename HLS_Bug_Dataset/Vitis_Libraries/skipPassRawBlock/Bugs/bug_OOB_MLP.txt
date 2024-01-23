@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (inVal.range(STB_WIDTH - 1, 0) == 0) break;",
+            "Faulty Code": "if (inVal.range(IN_DWIDTH + STB_WIDTH, 0) == 0) break;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE"
+        }
+    ]
+}

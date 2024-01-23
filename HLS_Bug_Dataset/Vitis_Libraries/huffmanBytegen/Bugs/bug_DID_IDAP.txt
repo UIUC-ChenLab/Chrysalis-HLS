@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=array_codes dim=1 complete"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INTERFACE ap_ctrl_none port = return",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=inStream"
+        }
+    ]
+}

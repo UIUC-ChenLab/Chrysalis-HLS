@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "dout_t pointer_multi(sel_t sel, din_t pos) { ... }",
+            "Faulty Code": "dout_t pointer_multi(sel_t sel, din_t pos) {\n  #pragma HLS pipeline\n  static dout_t a[8] = {1, 2, 3, 4, 5, 6, 7, 8};\n  static dout_t b[8] = {8, 7, 6, 5, 4, 3, 2, 1};\n\n  dout_t *ptr;\n  if (sel)\n    ptr = a;\n  else\n    ptr = b;\n\n  return ptr[pos];\n}"
+        }
+    ]
+}

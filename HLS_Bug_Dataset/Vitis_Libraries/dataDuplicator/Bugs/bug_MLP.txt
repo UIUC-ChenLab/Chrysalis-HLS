@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (auto i = SIZE_DWIDTH, j = 0; i < (DWIDTH + SIZE_DWIDTH); i += incr) {",
+            "Faulty Code": "#pragma HLS pipeline\n    for (auto i = SIZE_DWIDTH, j = 0; i < (DWIDTH + SIZE_DWIDTH); i += incr) {"
+        }
+    ]
+}

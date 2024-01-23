@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "details::loadBitStream(bitbuffer, bits_cntr, inStream, inEos, done);",
+            "Faulty Code": "#pragma HLS dataflow\ndetails::loadBitStream(bitbuffer, bits_cntr, inStream, inEos, done);"
+        }
+    ]
+}

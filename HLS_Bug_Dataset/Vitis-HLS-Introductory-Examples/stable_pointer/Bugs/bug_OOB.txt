@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "void write_process(hls::stream<int>& in, hls::stream<int>& out, int* mem) {\n    int val;\n    static int addr = 0;\n\n    in.read(val);\n    if (addr >= 32)\n        addr = 0;\n    mem[addr] = val;\n    addr++;\n    val = mem[addr - 1];\n    out.write(val);\n}",
+            "Faulty Code": "void write_process(hls::stream<int>& in, hls::stream<int>& out, int* mem) {\n    int val;\n    static int addr = 0;\n\n    in.read(val);\n    if (addr >= 32)\n        addr = 0;\n    mem[addr] = val;\n    addr++;\n    val = mem[addr]; // Out-of-bounds access when addr is 32\n    out.write(val);\n}"
+        }
+    ]
+}

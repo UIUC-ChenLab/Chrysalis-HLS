@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "literal_freq[tCh]++;",
+            "Faulty Code": "literal_freq[tCh+1]++;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = literal_freq type = ram_2p impl = lutram",
+            "Faulty Code": "#pragma HLS array_partition variable=literal_freq type=complete"
+        }
+    ]
+}

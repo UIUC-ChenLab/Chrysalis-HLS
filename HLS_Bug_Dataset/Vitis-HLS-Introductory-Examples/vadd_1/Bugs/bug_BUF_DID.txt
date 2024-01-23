@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "v1_buffer[j] = in1[i + j];",
+            "Faulty Code": "v1_buffer[j] = in1[i + BUFFER_SIZE + j];"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS INTERFACE m_axi port = in1 depth = DATA_SIZE",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port = in1 depth = DATA_SIZE dim = 2"
+        }
+    ]
+}

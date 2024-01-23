@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<IntVectorStream_dt<16, 1> > normTableStream[2];",
+            "Faulty Code": "#pragma HLS INTERFACE port=normTableStream mode=ap_fifo"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (uint16_t i = 0; i < tableSize; ++i) {",
+            "Faulty Code": "#pragma HLS UNROLL factor=4\nfor (uint16_t i = 0; i < tableSize; ++i) {"
+        }
+    ]
+}

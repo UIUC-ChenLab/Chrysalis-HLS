@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (uint16_t inSize = inSizeStream.read(); inSize != 0; inSize = inSizeStream.read()) {",
+            "Faulty Code": "for (uint16_t inSize = inSizeStream.read(); inSize >= 0; inSize = inSizeStream.read()) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "uint16_t outSizeV = (inSize - 1) / c_outWord + 1;",
+            "Faulty Code": "int16_t outSizeV = (inSize - 1) / c_outWord + 1;"
+        }
+    ]
+}

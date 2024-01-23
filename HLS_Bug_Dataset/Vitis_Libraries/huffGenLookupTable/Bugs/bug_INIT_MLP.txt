@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "LCL_Code_t first_codeword[MAX_CODELEN + 1];",
+            "Faulty Code": "LCL_Code_t first_codeword[MAX_CODELEN + 1]; // Missing initialization loop before use"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (uint16_t u = fcw; u < fcw + len; ++u) {",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1 // This pragma is inside the outer loop with its own pipeline pragma"
+        }
+    ]
+}

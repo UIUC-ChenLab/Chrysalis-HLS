@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<32> > adlerStrm;",
+            "Faulty Code": "#pragma HLS INTERFACE port=adlerStrm ap_none"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int i = 0; i < NUMCORES; i++) { ... xf::security::adler32<W>(adlerStrm, inStrm, inPackLenStrm, endInPackLenStrm, outStrm, endOutStrm); ... }",
+            "Faulty Code": "#pragma HLS UNROLL factor=2\nfor (int i = 0; i < NUMCORES; i++) { ... xf::security::adler32<W>(adlerStrm, inStrm, inPackLenStrm, endInPackLenStrm, outStrm, endOutStrm); ... }"
+        }
+    ]
+}

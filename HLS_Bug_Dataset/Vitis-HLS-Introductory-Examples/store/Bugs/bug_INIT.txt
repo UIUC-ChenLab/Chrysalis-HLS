@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void read(A* a_in, A buf_out[NUM]) {",
+            "Faulty Code": "void read(A* a_in, A buf_out[NUM]) { A temp; buf_out[0] = temp; // temp is uninitialized"
+        }
+    ]
+}

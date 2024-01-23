@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void funcC(data_t* in, data_t* out) {\nLoop0:\n    for (data_t i = 0; i < N; i++) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid funcC(data_t* in, data_t* out) {\nLoop0:\n    for (data_t i = 0; i < N; i++) {"
+        }
+    ]
+}

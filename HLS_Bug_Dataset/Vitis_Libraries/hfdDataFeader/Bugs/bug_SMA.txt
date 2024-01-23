@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = bitStream type = ram_t2p impl = bram",
+            "Faulty Code": "#pragma HLS INTERFACE port=bitStream mode=bram"
+        }
+    ]
+}

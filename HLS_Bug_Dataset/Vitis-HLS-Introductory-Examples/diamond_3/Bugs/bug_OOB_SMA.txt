@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int i = 0; i < N / NUM_BLOCKS; i++) {",
+            "Faulty Code": "for (int i = 0; i <= N / NUM_BLOCKS; i++) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void write(hls::burst_maxi<dout_t> RES, dout_t x_aux[N], dout_t y_aux[N]) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=x_aux bram"
+        }
+    ]
+}

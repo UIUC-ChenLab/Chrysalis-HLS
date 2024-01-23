@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outVal.data[0] = inVal.range(OUT_DATAWIDTH - 1, 0);",
+            "Faulty Code": "outVal.data[0] = inVal.range(IN_DATAWIDTH - 1, IN_DATAWIDTH - OUT_DATAWIDTH);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "for (auto inSize = dataSizeStream.read(); inSize > 0; inSize = dataSizeStream.read()) {",
+            "Faulty Code": "for (inSize = dataSizeStream.read(); inSize > 0; inSize = dataSizeStream.read()) {"
+        }
+    ]
+}

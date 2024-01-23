@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS interface m_axi port=outKStream"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (uint32_t i = 0; i < sCnt - 1; i++) {",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

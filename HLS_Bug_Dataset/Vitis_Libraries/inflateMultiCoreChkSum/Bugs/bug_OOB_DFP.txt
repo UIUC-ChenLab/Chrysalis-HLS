@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint8_t i = 0; i < NUM_CORE; i++) {",
+            "Faulty Code": "for (uint8_t i = 0; i <= NUM_CORE; i++) {"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS dataflow disable_start_propagation",
+            "Faulty Code": "#pragma HLS dataflow disable_start_propagation inside the for loop"
+        }
+    ]
+}

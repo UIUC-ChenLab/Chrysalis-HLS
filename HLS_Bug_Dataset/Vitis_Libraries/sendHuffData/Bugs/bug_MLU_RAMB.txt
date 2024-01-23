@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "cnt = inHfVal.strobe - 1;",
+            "Faulty Code": "cnt = inHfVal.strobe;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS interface m_axi port=hfcodeInStream mode=read"
+        }
+    ]
+}

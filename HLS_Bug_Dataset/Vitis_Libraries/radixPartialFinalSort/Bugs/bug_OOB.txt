@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "Symbol<MAX_FREQ_DWIDTH> heap[SYMBOL_SIZE];",
+            "Faulty Code": "Symbol<MAX_FREQ_DWIDTH> heap[SYMBOL_SIZE+1];"
+        }
+    ]
+}

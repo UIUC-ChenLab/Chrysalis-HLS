@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "fseHIdx += fhVal.strobe;",
+            "Faulty Code": "fseHIdx += 2;"
+        }
+    ]
+}

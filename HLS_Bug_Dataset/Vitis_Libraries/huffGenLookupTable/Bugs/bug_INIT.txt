@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "first_codeword[0] = bitlen_histogram[0];",
+            "Faulty Code": "first_codeword[0] = first_codeword[0];"
+        }
+    ]
+}

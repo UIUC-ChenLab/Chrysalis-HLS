@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "} while (!tmpSize.last);",
+            "Faulty Code": "} while (tmpSize.last);"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t sCnt = 1 + ((input_size - 1) / factor);",
+            "Faulty Code": "uint32_t sCnt = ((input_size - 1) / factor);"
+        }
+    ]
+}

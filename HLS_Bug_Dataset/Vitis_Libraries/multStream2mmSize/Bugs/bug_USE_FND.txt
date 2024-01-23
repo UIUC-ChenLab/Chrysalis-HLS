@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint32_t readSizeBytes = 0;",
+            "Faulty Code": "int16_t readSizeBytes = 0;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = write_size dim = 0 complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = write_size dim = 0 factor=3"
+        }
+    ]
+}

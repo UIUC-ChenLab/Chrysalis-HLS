@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "return (dout_t)a * (dout_t)b;",
+            "Faulty Code": "return (dout_t)((int)a * (int)b);"
+        }
+    ]
+}

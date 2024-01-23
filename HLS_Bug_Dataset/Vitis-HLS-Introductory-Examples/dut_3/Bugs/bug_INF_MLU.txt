@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned i = 0; i < N; i++) {",
+            "Faulty Code": "for (unsigned i = 0; i <= N; i++) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned i = 0; i < N; i++) {",
+            "Faulty Code": "for (unsigned i = 0; i < N; i+=2) {"
+        }
+    ]
+}

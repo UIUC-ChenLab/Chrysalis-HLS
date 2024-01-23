@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<DATAWIDTH> dummy = 0;",
+            "Faulty Code": "ap_uint<DATAWIDTH> dummy;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "OUTSIZE_DT* output_size",
+            "Faulty Code": "#pragma HLS INTERFACE port=output_size mode=s_axilite"
+        }
+    ]
+}

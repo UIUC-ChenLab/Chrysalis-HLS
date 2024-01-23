@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void mm2sSimple(const ap_uint<DATAWIDTH>* in, hls::stream<ap_uint<DATAWIDTH> >& outstream, uint32_t inputSize) {",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=in"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void mm2sSimple(const ap_uint<DATAWIDTH>* in, hls::stream<ap_uint<DATAWIDTH> >& outstream, uint32_t inputSize) {",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=outstream"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "xf::compression::lzCompress<M_LEN, MIN_MAT, LZ_MAX_OFFSET_LIM>(inStream, compressdStream, input_size);",
+            "Faulty Code": "xf::compression::lzCompress<M_LEN, MIN_MAT, (1 << (LZ_MAX_OFFSET_LIM + 1))>(inStream, compressdStream, input_size);"
+        }
+    ]
+}

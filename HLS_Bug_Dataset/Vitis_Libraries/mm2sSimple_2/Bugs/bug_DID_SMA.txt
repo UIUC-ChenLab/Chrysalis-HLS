@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition dim=2"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void mm2sSimple(const ap_uint<DATAWIDTH>* in, hls::stream<ap_uint<DATAWIDTH> >& outstream, uint32_t inputSize) {",
+            "Faulty Code": "#pragma HLS interface port=in bram"
+        }
+    ]
+}

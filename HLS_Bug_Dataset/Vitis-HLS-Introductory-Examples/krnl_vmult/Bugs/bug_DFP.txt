@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void krnl_vmult(uint32_t* in1, uint32_t* in2, uint32_t* out, int vSize) {\n    static hls::stream<uint32_t> inStream1(\"input_stream_1\");\n    static hls::stream<uint32_t> inStream2(\"input_stream_2\");\n    static hls::stream<uint32_t> outStream(\"output_stream\");\n#pragma HLS INTERFACE m_axi port = in1 bundle = gmem0 depth = 4096\n#pragma HLS INTERFACE m_axi port = in2 bundle = gmem1 depth = 4096\n#pragma HLS INTERFACE m_axi port = out bundle = gmem0 depth = 4096\n\n#pragma HLS dataflow\n    // dataflow pragma instruct compiler to run following three APIs in parallel\n    read_input(in1, inStream1, vSize);\n    read_input(in2, inStream2, vSize);\n    compute_mult(inStream1, inStream2, outStream, vSize);\n    write_result(out, outStream, vSize);\n}",
+            "Faulty Code": "void krnl_vmult(uint32_t* in1, uint32_t* in2, uint32_t* out, int vSize) {\n    static hls::stream<uint32_t> inStream1(\"input_stream_1\");\n    static hls::stream<uint32_t> inStream2(\"input_stream_2\");\n    static hls::stream<uint32_t> outStream(\"output_stream\");\n#pragma HLS INTERFACE m_axi port = in1 bundle = gmem0 depth = 4096\n#pragma HLS INTERFACE m_axi port = in2 bundle = gmem1 depth = 4096\n#pragma HLS INTERFACE m_axi port = out bundle = gmem0 depth = 4096\n\n    read_input(in1, inStream1, vSize);\n#pragma HLS dataflow\n    read_input(in2, inStream2, vSize);\n    compute_mult(inStream1, inStream2, outStream, vSize);\n    write_result(out, outStream, vSize);\n}"
+        }
+    ]
+}

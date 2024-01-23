@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "T reg(T d) {",
+            "Faulty Code": "T reg(int d) {"
+        }
+    ]
+}

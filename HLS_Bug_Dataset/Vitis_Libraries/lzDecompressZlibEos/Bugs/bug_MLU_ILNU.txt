@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint32_t pIdx = LOW_OFFSET - 1; pIdx > 0; pIdx--) {",
+            "Faulty Code": "for (uint32_t pIdx = LOW_OFFSET - 1; pIdx >= 0; pIdx--) {"
+        }
+    ]
+}

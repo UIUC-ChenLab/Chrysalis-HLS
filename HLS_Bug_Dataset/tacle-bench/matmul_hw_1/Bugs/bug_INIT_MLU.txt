@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "mat_type tmp;",
+            "Faulty Code": "mat_type tmp = 0;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(f = 0; f < MAX_LOOP; f++) {",
+            "Faulty Code": "for(f = 0; f < MAX_LOOP - 1; f++) {"
+        }
+    ]
+}

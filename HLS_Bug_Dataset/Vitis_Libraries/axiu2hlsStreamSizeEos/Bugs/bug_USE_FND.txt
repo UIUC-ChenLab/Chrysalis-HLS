@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint32_t inputSize = tempSize.data;",
+            "Faulty Code": "int inputSize = tempSize.data;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=outputStreamEos factor=3"
+        }
+    ]
+}

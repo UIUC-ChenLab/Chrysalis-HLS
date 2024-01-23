@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t itrLim = 1 + ((output_size - 1) / factor);",
+            "Faulty Code": "uint32_t itrLim = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "uint8_t factor = DATAWIDTH / 8;",
+            "Faulty Code": "int factor = DATAWIDTH / 8;"
+        }
+    ]
+}

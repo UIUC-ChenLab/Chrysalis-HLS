@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < factor / 2; i++) {",
+            "Faulty Code": "for (int i = 0; i <= factor / 2; i++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "Y_accum = i;",
+            "Faulty Code": "Y_accum = (dout_t)i;"
+        }
+    ]
+}

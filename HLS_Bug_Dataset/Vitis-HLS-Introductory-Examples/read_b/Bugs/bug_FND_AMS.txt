@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (int i = 0; i < factor / 2; i++) {",
+            "Faulty Code": "for (int i = 0; i < factor; i++) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void read_b(hls::burst_maxi<din_t> IN, dout_t y_aux[N], din_t factor) {",
+            "Faulty Code": "void read_b(hls::burst_maxi<din_t> IN, dout_t y_aux, din_t factor) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (dataSize > 0 && dataSize < 1 + MIN_BLK_SIZE) rawBlockFlagStream << true;",
+            "Faulty Code": "if (dataSize > 0 && dataSize <= MIN_BLK_SIZE) rawBlockFlagStream << true;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

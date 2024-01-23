@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int16_t normTable[64];",
+            "Faulty Code": "int16_t normTable[64]; // Uninitialized array"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "bitStream = (tableLog - c_fseMinTableLog);",
+            "Faulty Code": "bitStream = 0; // Incorrectly initialized to zero"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "qdma_axis<STREAMDWIDTH, 0, 0, 0> t1 = inAxiStream.read();",
+            "Faulty Code": "qdma_axis<STREAMDWIDTH/2, 0, 0, 0> t1 = inAxiStream.read();"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=readStream dim=2 complete"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<DATAWIDTH> >& readStream",
+            "Faulty Code": "#pragma HLS INTERFACE port=readStream bram"
+        }
+    ]
+}

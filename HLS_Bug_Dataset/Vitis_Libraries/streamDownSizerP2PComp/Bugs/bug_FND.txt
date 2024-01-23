@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "int factor = c_input_word / c_out_word;",
+            "Faulty Code": "int factor = 5; // Assuming c_input_word / c_out_word is not 5 and 5 does not divide sizeOutputV"
+        }
+    ]
+}

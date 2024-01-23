@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "acchbs.range(c_streamWidth - 1, 0) = bitStream[byteIndx--];",
+            "Faulty Code": "acchbs.range(c_streamWidth - 1, 0) = bitStream[byteIndx += c_bsBytes];"
+        }
+    ]
+}

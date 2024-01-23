@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int i = 0; i < SZ; i++) {\n    data_t tmp;\n    tmp = strm_in.read();\n    strm_out.write(tmp);\n}",
+            "Faulty Code": "#pragma HLS pipeline\nfor (int i = 0; i < SZ; i++) {\n    #pragma HLS pipeline\n    data_t tmp;\n    tmp = strm_in.read();\n    strm_out.write(tmp);\n}"
+        }
+    ]
+}

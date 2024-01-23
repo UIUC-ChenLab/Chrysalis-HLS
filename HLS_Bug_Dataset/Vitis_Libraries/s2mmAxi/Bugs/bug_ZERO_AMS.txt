@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t outSize = 0;",
+            "Faulty Code": "uint32_t outSize;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<DATAWIDTH + PARALLEL_BYTES> >& inStream",
+            "Faulty Code": "#pragma HLS INTERFACE port=inStream mode=ap_none"
+        }
+    ]
+}

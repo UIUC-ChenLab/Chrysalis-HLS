@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint8_t nextMatchCh = local_mem[match_loc % BOOSTER_OFFSET_WINDOW];",
+            "Faulty Code": "uint8_t nextMatchCh = local_mem[match_loc];"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "outStream << outValue;",
+            "Faulty Code": "outStream << compare_window;"
+        }
+    ]
+}

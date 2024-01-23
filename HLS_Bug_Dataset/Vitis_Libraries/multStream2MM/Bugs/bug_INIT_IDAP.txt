@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint32_t base_addr[NUM_BLOCK];",
+            "Faulty Code": "uint32_t base_addr[NUM_BLOCK]; // Missing initialization, should be initialized like base_addr[vid] = output_idx[vid] / c_wordSize;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable = outStreamV depth = c_depthOutStreamV",
+            "Faulty Code": "#pragma HLS STREAM variable = outStreamV depth = c_depthOutStreamV // 'mode' is not specified, default mode may not be intended one for this context"
+        }
+    ]
+}

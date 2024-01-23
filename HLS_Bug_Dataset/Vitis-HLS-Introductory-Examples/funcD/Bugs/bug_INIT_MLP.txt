@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void funcD(data_t* in1, data_t* in2, data_t* out) {",
+            "Faulty Code": "void funcD(data_t* in1, data_t* in2, data_t* out) { data_t temp;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS pipeline\n        #pragma HLS pipeline"
+        }
+    ]
+}

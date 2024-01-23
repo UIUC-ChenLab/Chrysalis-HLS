@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<c_parallelBit> lowValueReg = regHistory[0][(read_idx + 0) % c_regHistSize];",
+            "Faulty Code": "ap_uint<c_parallelBit> lowValueReg = regHistory[0][read_idx];"
+        }
+    ]
+}

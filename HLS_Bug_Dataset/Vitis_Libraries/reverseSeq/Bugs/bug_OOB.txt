@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "rIdx = memReadBegin[rsi];",
+            "Faulty Code": "rIdx = memReadBegin[rsi+1]; // Incorrectly accessing the next index which is out of bounds"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint16_t min, max = 0;",
+            "Faulty Code": "uint16_t min = 0, max = 0;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = count",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = count dim=2"
+        }
+    ]
+}

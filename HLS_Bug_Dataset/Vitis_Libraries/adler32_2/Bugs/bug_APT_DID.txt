@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS STREAM variable = adlerStrm depth = 4",
+            "Faulty Code": "#pragma HLS array_partition variable=adlerStrm type=block factor=4 dim=1"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable = endOutStrm depth = 4",
+            "Faulty Code": "#pragma HLS array_partition variable=endOutStrm type=cyclic factor=2 dim=2"
+        }
+    ]
+}

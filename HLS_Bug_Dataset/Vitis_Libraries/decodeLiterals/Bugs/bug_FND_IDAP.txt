@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 2",
+            "Faulty Code": "#pragma HLS PIPELINE II = 2.5"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "litDecodeInStream.read()",
+            "Faulty Code": "#pragma HLS interface port=litDecodeInStream mode=ap_memory"
+        }
+    ]
+}

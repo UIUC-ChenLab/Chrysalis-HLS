@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "length_histogram[j + 1] += 2;",
+            "Faulty Code": "length_histogram[j + 1] += 2u;"
+        }
+    ]
+}

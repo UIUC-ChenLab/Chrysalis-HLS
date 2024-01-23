@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "nextMatchCh = local_mem[match_loc % c_boosterOffsetWindow];",
+            "Faulty Code": "nextMatchCh = local_mem[(match_loc + c_boosterOffsetWindow / 2) % c_boosterOffsetWindow];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS STREAM variable = lclBufStream depth = c_fifo_depth",
+            "Faulty Code": "#pragma HLS STREAM variable = local_mem depth = c_fifo_depth"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "sin_table[i] = (din1_t)(32768.0 * real_val);",
+            "Faulty Code": "sin_table[i] = (int)(32768.0 * real_val);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void init_sin_table(din1_t sin_table[256]) {",
+            "Faulty Code": "#pragma HLS interface port=ap_none sin_table"
+        }
+    ]
+}

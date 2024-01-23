@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void pointer_arith(dio_t *d) { ... }",
+            "Faulty Code": "void pointer_arith(dio_t *d) {\n  #pragma HLS interface m_axi port=d offset=slave\n  ... \n}"
+        }
+    ]
+}

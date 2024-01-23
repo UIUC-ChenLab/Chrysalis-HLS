@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "first_codeword[i] = (first_codeword[i - 1] + length_histogram[i - 1]) << 1;",
+            "Faulty Code": "first_codeword[i] = (first_codeword[i] + length_histogram[i - 1]) << 1;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hfc.data[0].codeword = (length == 0 || symCnt == 0) ? (uint16_t)0 : (uint16_t)out_reversed;",
+            "Faulty Code": "hfc.data.codeword = (length == 0 || symCnt == 0) ? (uint16_t)0 : (uint16_t)out_reversed;"
+        }
+    ]
+}

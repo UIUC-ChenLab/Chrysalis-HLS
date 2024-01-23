@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint8_t vid = 0; vid < NUM_BLOCKS; vid++) {\n#pragma HLS UNROLL\n    read_idx[vid] = input_idx[vid] / c_wordSize;\n    input_size[vid] = _input_size[vid];\n    read_size[vid] = 0;\n    is_pending.range(vid, vid) = 1;\n}",
+            "Faulty Code": "for (uint8_t vid = 0; vid <= NUM_BLOCKS; vid++) {\n#pragma HLS UNROLL\n    read_idx[vid] = input_idx[vid] / c_wordSize;\n    input_size[vid] = _input_size[vid];\n    read_size[vid] = 0;\n    is_pending.range(vid, vid) = 1;\n}"
+        }
+    ]
+}

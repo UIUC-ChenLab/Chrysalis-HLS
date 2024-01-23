@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "sha_info_count_lo = 0L;",
+            "Faulty Code": "long sha_info_count_lo;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "sha_info_digest[1] = 0xefcdab89L;",
+            "Faulty Code": "sha_info_digest[1] = 0xefcdab89;"
+        }
+    ]
+}

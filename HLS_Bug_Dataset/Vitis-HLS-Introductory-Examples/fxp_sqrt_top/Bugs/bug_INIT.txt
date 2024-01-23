@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_int<QW + 2> s;",
+            "Faulty Code": "ap_int<QW + 2> s = 0;"
+        }
+    ]
+}

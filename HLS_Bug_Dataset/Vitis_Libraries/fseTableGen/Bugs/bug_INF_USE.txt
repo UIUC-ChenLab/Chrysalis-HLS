@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (inVal.strobe == 0) break;",
+            "Faulty Code": "if (inVal.strobe != 0) break;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "normTable[63] = maxSymbol;",
+            "Faulty Code": "normTable[63] = (int8_t)maxSymbol;"
+        }
+    ]
+}

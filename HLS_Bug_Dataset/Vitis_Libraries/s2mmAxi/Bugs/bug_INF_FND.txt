@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "last = inData.range(PARALLEL_BYTES - 1, 0) == 0;",
+            "Faulty Code": "last = inData.range(PARALLEL_BYTES - 1, 0) != 0;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition factor=3"
+        }
+    ]
+}

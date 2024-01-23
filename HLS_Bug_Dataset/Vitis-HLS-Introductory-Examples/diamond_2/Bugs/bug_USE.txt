@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "for (data_t i = 0; i < N; i++) {",
+            "Faulty Code": "for (int i = 0; i < N; i++) {"
+        }
+    ]
+}

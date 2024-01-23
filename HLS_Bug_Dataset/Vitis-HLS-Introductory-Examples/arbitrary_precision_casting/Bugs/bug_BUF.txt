@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "return (dout_t)a * (dout_t)b;",
+            "Faulty Code": "return (dout_t)(a.high, a.low) * (dout_t)(b.high, b.low);"
+        }
+    ]
+}

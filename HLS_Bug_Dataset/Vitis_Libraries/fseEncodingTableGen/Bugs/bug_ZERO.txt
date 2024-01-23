@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "intm[maxSymbol + 1] = tableSize + 1;",
+            "Faulty Code": "intm[maxSymbol + 1] = 0;"
+        }
+    ]
+}

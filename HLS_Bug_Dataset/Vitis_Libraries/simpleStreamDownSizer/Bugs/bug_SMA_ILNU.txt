@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<IN_DATAWIDTH> >& inStream",
+            "Faulty Code": "#pragma HLS INTERFACE port=bram mode=hls::stream<ap_uint<IN_DATAWIDTH> >& inStream"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        }
+    ]
+}

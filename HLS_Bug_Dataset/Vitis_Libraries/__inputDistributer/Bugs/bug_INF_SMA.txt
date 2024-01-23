@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (true) {",
+            "Faulty Code": "while (dataSize >= 0) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "metaVal.data[0] = dataSize;",
+            "Faulty Code": "#pragma HLS interface port=metaVal.data"
+        }
+    ]
+}

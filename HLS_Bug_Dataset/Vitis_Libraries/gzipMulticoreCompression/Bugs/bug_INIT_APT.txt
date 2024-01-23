@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<SIZE_DWIDTH> inSize = 0;",
+            "Faulty Code": "ap_uint<SIZE_DWIDTH> inSize;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = lz77Tree type = FIFO impl = SRL",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable = lz77Tree type = FOO impl = SRL"
+        }
+    ]
+}

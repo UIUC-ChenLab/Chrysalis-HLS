@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outEos << 0;",
+            "Faulty Code": "outEos.write(2); // This could be an off by one error, assuming the stream only writes 0 or 1"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable = axi2HlsStrm depth = 32",
+            "Faulty Code": "#pragma HLS STREAM variable = axi2HlsStrm depth = 32 dim = 2 // Incorrect dim specified, should be dim=1 for scalar streams"
+        }
+    ]
+}

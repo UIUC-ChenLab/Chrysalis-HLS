@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "void pass(int tmp3[128], int tmp2[128], int tmp1[128], int b[128]) {\n    for (int i = 0; i < 128; i++) {\n        b[i] = tmp1[i];\n        tmp2[i] = tmp3[i];\n    }\n}",
+            "Faulty Code": "void pass(int tmp3[128], int tmp2[128], int tmp1[128], int b[128]) {\n    #pragma HLS unroll factor=4\n    for (int i = 0; i < 128; i++) {\n        b[i] = tmp1[i];\n        tmp2[i] = tmp3[i];\n    }\n}"
+        }
+    ]
+}

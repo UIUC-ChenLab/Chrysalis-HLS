@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1 (missing, should be before the for loop 'tgndst_litDist')"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1 (repeated inside the while loop 'tgndst_bitlen', creating multi-level pipelining)"
+        }
+    ]
+}

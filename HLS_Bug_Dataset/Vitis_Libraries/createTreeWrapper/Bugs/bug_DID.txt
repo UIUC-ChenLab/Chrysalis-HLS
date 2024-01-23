@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = temp_array type = ram_t2p impl = bram",
+            "Faulty Code": "#pragma HLS array_partition variable=temp_array dim=2 complete"
+        }
+    ]
+}

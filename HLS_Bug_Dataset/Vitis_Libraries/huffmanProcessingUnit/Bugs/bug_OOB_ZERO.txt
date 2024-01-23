@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outValue.data[0].range(7, 0) = inValue;",
+            "Faulty Code": "outValue.data[1].range(7, 0) = inValue;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outValue.strobe = 1;",
+            "Faulty Code": "outValue.strobe = 0;"
+        }
+    ]
+}

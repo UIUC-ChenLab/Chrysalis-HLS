@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (dataSize > 0 && inVal.strobe == 0) outStream << inVal;",
+            "Faulty Code": "if (dataSize > BLOCK_SIZE && inVal.strobe == 0) outStream << inVal;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "// indicate if more data than minimum block size\nif (dataSize > MIN_BLK_SIZE && rawFlagNotSent) {\n    rawBlockFlagStream << false;\n    rawFlagNotSent = false;\n}",
+            "Faulty Code": "// indicate if more data than minimum block size\nif (dataSize > MIN_BLK_SIZE && rawFlagNotSent) {\n    rawBlockFlagStream << true;\n    rawFlagNotSent = false;\n}"
+        }
+    ]
+}

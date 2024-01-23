@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint16_t maxCharSize = normTable[63] + 1;",
+            "Faulty Code": "uint16_t maxCharSize = normTable[64] + 1;"
+        }
+    ]
+}

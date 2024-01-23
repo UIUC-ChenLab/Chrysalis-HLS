@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint32_t pending_words = (pending_bytes - 1) / c_wordSize + 1;",
+            "Faulty Code": "int pending_words = (pending_bytes - 1) / c_wordSize + 1;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE"
+        }
+    ]
+}

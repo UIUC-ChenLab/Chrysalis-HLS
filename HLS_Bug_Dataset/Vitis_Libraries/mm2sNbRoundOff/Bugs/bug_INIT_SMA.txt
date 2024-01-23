@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "terminate_all = 1;",
+            "Faulty Code": "ap_uint<NUM_BLOCKS> terminate_all;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = local_buffer dim = 1 complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=local_buffer bram"
+        }
+    ]
+}

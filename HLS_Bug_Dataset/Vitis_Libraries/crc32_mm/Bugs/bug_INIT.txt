@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "bool eos = inStreamEos.read();",
+            "Faulty Code": "bool eos; // Uninitialized variable, should be initialized with the read value from inStreamEos"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void pass(int a[128], int tmp1[128]) {\n    for (int i = 0; i < 128; i++) {\n        tmp1[i] = a[i];\n    }\n}",
+            "Faulty Code": "void pass(int a[128], int tmp1[128]) {\n    int i;\n    for (i = 0; i < 128; i++) {\n        tmp1[i] = a[i];\n    }\n    // Uninitialized variable access\n    int uninitialized_var;\n    tmp1[0] = uninitialized_var;\n}"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint16_t fseNextStateTable[256];",
+            "Faulty Code": "int16_t fseNextStateTable[256];"
+        }
+    ]
+}

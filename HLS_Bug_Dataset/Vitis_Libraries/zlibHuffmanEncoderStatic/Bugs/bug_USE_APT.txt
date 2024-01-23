@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint16_t tOffset = 0;",
+            "Faulty Code": "int tOffset = 0;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS STREAM variable = hufCodeStream depth = 4",
+            "Faulty Code": "#pragma HLS array_partition variable = hufCodeStream type = cyclic"
+        }
+    ]
+}

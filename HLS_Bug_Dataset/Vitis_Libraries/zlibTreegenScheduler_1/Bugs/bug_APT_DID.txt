@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition type=block dim=1"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "is_pending.range(i, i) = 1;",
+            "Faulty Code": "#pragma HLS array_partition variable=is_pending dim=2"
+        }
+    ]
+}

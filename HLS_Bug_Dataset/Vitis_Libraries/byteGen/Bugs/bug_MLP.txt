@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "while ((dynamic_curInSize < nlen + ndist) || (copy != 0)) {\n#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "while ((dynamic_curInSize < nlen + ndist) || (copy != 0)) {\n#pragma HLS PIPELINE II = 1\n#pragma HLS PIPELINE II = 1"
+        }
+    ]
+}

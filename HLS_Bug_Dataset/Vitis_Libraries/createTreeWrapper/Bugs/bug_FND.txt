@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = temp_array type = ram_t2p impl = bram",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=temp_array cyclic factor=3 dim=1"
+        }
+    ]
+}

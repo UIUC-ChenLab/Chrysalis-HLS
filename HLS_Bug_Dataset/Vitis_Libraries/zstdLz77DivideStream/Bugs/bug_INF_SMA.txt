@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (encodedValue.strobe == 0) {",
+            "Faulty Code": "if (encodedValue.strobe != 0) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<IntVectorStream_dt<32, 1> >& inStream",
+            "Faulty Code": "hls::stream<IntVectorStream_dt<32, 1> > inStream"
+        }
+    ]
+}

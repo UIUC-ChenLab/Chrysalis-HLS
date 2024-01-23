@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "for (int n = 0; n < SLAVES; n++) outStream[n] << i;",
+            "Faulty Code": "for (int n = SLAVES/2; n < SLAVES; n++) outStream[n] << i;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for (int n = 0; n < SLAVES; n++) outStream[n] << i;",
+            "Faulty Code": "#pragma HLS array_partition variable=outStream factor=3 complete"
+        }
+    ]
+}

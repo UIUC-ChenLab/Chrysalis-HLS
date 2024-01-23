@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint8_t i = 0; i < NUM_BLOCK; ++i) {",
+            "Faulty Code": "for (uint8_t i = 0; i <= NUM_BLOCK; ++i) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = digit_histogram complete dim = 1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = digit_histogram cyclic factor=15 dim = 1"
+        }
+    ]
+}

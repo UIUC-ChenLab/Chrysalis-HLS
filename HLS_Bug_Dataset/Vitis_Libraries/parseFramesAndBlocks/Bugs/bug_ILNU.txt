@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int i = 0; i < bs2Write; i += c_parallelByte) {",
+            "Faulty Code": "#pragma HLS unroll partial factor=2\nfor (int i = 0; i < bs2Write; i += c_parallelByte) {"
+        }
+    ]
+}

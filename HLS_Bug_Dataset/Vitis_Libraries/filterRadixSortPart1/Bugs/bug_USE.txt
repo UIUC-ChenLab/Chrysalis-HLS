@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "auto cf = ((n == 256) ? (ap_uint<MAX_FREQ_DWIDTH>)1 : curFreq.data[0]);",
+            "Faulty Code": "auto cf = ((n == 256) ? 1 : curFreq.data[0]);"
+        }
+    ]
+}

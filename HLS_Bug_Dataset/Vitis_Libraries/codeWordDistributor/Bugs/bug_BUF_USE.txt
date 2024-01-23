@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outStreamMaxCode1 << maxCode;",
+            "Faulty Code": "outStreamMaxCode2 << maxCode;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "for (uint8_t i = 0; i < 2; i++) {",
+            "Faulty Code": "for (int i = 0; i < 2; i++) {"
+        }
+    ]
+}

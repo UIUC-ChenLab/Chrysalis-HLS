@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS STREAM variable = normTableStream depth = 128",
+            "Faulty Code": "#pragma HLS INTERFACE port=normTableStream mode=m_axi"
+        }
+    ]
+}

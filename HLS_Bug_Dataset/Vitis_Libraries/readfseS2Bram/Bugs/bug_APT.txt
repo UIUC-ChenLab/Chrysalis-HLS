@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "void readfseS2Bram(uint8_t* fseHdrBuf, ...",
+            "Faulty Code": "#pragma HLS array_partition variable=fseHdrBuf type=complete"
+        }
+    ]
+}

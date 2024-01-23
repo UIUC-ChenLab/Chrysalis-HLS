@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = heap type = ram_t2p impl = bram",
+            "Faulty Code": "#pragma HLS INTERFACE port=heap mode=ap_none"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (uint16_t i = 0; i < i_symbolSize; ++i) {",
+            "Faulty Code": "for (uint16_t i = 0; i < i_symbolSize; ++i) {\n#pragma HLS PIPELINE"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outVal.strobe = 1;",
+            "Faulty Code": "outVal.strobe = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS interface port=inStream mode=m_axi"
+        }
+    ]
+}

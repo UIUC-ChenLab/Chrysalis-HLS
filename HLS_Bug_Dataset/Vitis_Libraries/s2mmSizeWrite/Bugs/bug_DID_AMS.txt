@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition dim=3"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void s2mmSizeWrite(hls::stream<OUTSIZE_DT>& inSizeStream, ...",
+            "Faulty Code": "#pragma HLS interface port=compressedSize mode=ap_none"
+        }
+    ]
+}

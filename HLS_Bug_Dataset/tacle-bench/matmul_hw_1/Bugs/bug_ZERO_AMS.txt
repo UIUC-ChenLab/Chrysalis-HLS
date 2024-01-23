@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "tmp = 0;",
+            "Faulty Code": "tmp;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INTERFACE ap_none port=size",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=c"
+        }
+    ]
+}

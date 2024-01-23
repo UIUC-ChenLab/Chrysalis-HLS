@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "a[ k ][ j ] = a[ r ][ j ];",
+            "Faulty Code": "a[ r ][ j ] = a[ r ][ j ];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INTERFACE bram port=a",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=a"
+        }
+    ]
+}

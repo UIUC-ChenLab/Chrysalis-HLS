@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS dataflow disable_start_propagation",
+            "Faulty Code": "#pragma HLS dataflow disable_start_propagation\n        details::simpleDownSizer<PARALLEL_BYTES, c_parallelBit, 16>(axi2HlsStrm[i], hlsDownStream[i], hlsEos[i]);"
+        }
+    ]
+}

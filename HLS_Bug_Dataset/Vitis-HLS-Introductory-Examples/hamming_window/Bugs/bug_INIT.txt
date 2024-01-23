@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "hamming_rom_init(window_coeff);",
+            "Faulty Code": "// hamming_rom_init(window_coeff);"
+        }
+    ]
+}

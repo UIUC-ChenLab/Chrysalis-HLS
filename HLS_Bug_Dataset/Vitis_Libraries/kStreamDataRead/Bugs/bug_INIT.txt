@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_axiu<32, 0, 0, 0> tmpSize;",
+            "Faulty Code": "ap_axiu<32, 0, 0, 0> tmpSize = inKStreamSize.read();"
+        }
+    ]
+}

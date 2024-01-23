@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "endInPackLenStrm << false;\n        endInPackLenStrm << true;",
+            "Faulty Code": "endInPackLenStrm << false;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS STREAM variable = adlerStrm depth = 4",
+            "Faulty Code": "#pragma HLS STREAM variable = adlerStrm depth = 4 type=complete"
+        }
+    ]
+}

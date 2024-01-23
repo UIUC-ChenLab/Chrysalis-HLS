@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (true) {\n#pragma HLS PIPELINE II = 1\nqdma_axis<STREAMDWIDTH, 0, 0, 0> t1 = inAxiStream.read();\nap_uint<STREAMDWIDTH> tmp = t1.get_data();\noutStream << tmp;\nif (t1.get_last()) {\nbreak;\n}\n}",
+            "Faulty Code": "while (true) {\n#pragma HLS PIPELINE II = 1\nqdma_axis<STREAMDWIDTH, 0, 0, 0> t1 = inAxiStream.read();\nap_uint<STREAMDWIDTH> tmp = t1.get_data();\noutStream << tmp;\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (dataSize > 0 && inVal.strobe == 0) outStream << inVal;",
+            "Faulty Code": "if (dataSize >= 0 && inVal.strobe == 0) outStream << inVal;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "uint32_t dataSize = 0;",
+            "Faulty Code": "int dataSize = 0;"
+        }
+    ]
+}

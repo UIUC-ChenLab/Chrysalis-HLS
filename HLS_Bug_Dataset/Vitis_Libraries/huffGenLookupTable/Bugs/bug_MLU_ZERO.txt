@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "first_codeword[0] = bitlen_histogram[0];",
+            "Faulty Code": "first_codeword[0] = 0;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint16_t u = fcw; u < fcw + len; ++u) {",
+            "Faulty Code": "for (uint16_t u = fcw; u <= fcw + len; ++u) {"
+        }
+    ]
+}

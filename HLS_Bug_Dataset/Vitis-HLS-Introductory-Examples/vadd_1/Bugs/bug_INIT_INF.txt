@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned int v1_buffer[BUFFER_SIZE];",
+            "Faulty Code": "unsigned int v1_buffer[BUFFER_SIZE] = {0};"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int j = 0; j < chunk_size; j++) {",
+            "Faulty Code": "for (int j = 0; j <= chunk_size; j++) {"
+        }
+    ]
+}

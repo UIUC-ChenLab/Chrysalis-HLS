@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (read_flag) inVal = lz77InTree[j].read();",
+            "Faulty Code": "if (read_flag) inVal = lz77InTree[(j + NUM_BLOCK / 2) % NUM_BLOCK].read();"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (auto i = 0; i < NUM_TREEGEN; i++) {\n        lz77OutTree[i] << inVal;\n    }",
+            "Faulty Code": "for (auto i = 0; i < NUM_TREEGEN; i += 2) {\n        lz77OutTree[i] << inVal;\n    }"
+        }
+    ]
+}

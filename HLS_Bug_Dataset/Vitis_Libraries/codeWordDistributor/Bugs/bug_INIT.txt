@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "auto maxCode = inStreamMaxCode.read();",
+            "Faulty Code": "ap_uint<c_tgnSymbolBits> maxCode; // Missing initialization with a read from inStreamMaxCode"
+        }
+    ]
+}

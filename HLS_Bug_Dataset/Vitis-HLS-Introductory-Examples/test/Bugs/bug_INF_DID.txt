@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "int result = (A[i] + B[i] + C[i]).to_int();",
+            "Faulty Code": "while(1) { A[i] += B[i] + C[i]; } // Infinite loop by mistake"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = A type = RAM_2P impl = BRAM",
+            "Faulty Code": "#pragma HLS array_partition variable=A dim=3 // Incorrect 'dim' value for a 1D array"
+        }
+    ]
+}

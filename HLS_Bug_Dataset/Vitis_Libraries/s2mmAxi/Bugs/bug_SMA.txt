@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void s2mmAxi(ap_uint<DATAWIDTH>* out, ...",
+            "Faulty Code": "#pragma HLS INTERFACE port=out mode=ap_fifo"
+        }
+    ]
+}

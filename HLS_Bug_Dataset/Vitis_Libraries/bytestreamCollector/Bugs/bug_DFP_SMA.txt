@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS DATAFLOW"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "bscMetaStream << (uint16_t)litStreamCnt;",
+            "Faulty Code": "#pragma HLS INTERFACE port=bscMetaStream mode=ap_fifo"
+        }
+    ]
+}

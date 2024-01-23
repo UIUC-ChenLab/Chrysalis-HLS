@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "char foo(char inval, char incr) {",
+            "Faulty Code": "char foo(char inval, char incr = 0) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INLINE OFF",
+            "Faulty Code": "#pragma HLS INTERFACE mode=s_axilite port=incr"
+        }
+    ]
+}

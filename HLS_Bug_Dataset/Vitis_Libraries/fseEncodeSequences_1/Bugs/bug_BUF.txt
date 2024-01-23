@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "fseOutWord.data[0] = ((ap_uint<28>)outWordLL << (tableLogOF + tableLogML)) + ((ap_uint<18>)outWordOF << tableLogML) + outWordML + endMark;",
+            "Faulty Code": "fseOutWord.data[0] = ((ap_uint<28>)outWordLL << (tableLogOF + tableLogML)) + ((ap_uint<28>)outWordOF << tableLogML) + outWordML + endMark;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < N / 2; i++) {",
+            "Faulty Code": "for (int i = 0; i < N / 2 - 1; i++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "*ovflo = status.getOvflo() & 0x1;",
+            "Faulty Code": "*ovflo = 0;"
+        }
+    ]
+}

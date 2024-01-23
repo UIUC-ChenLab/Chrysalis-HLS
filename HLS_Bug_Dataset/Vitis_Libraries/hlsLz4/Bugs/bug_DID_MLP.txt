@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable = inStream depth = c_gmemBurstSize",
+            "Faulty Code": "#pragma HLS array_partition variable=inStream dim=3"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

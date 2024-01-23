@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "out[i] = in[i] + in[i + 1];",
+            "Faulty Code": "#pragma HLS INTERFACE mode = m_axi bundle = aximm2 depth = 1025 max_read_burst_length = 128 num_read_outstanding = 256 port = in \n#pragma HLS INTERFACE m_axi port = out bundle = aximm depth = 1024 \nvoid dut(const double* in, // Read-Only Vector 1 \ndouble* out, // Output Result \nint size // Size in integer \n) { \nfor (int i = 0; i < size; i++) { \nout[i] = in[i] + in[i + 1]; \n} \n}"
+        }
+    ]
+}

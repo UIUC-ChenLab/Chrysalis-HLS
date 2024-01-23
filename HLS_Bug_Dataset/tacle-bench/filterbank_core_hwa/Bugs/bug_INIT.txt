@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "for ( j = 0; j < 256; j++ ) { #pragma HLS PIPELINE Vect_Up[j] = 0; }",
+            "Faulty Code": "vec_type Vect_Up[256]; /* no initialization loop for Vect_Up */"
+        }
+    ]
+}

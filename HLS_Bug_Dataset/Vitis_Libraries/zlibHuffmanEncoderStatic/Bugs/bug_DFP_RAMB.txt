@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS DATAFLOW\n#pragma HLS DATAFLOW"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "nextValue = inStream.read();",
+            "Faulty Code": "if (i % 2 == 0) nextValue = inStream.read(); else nextValue.data[0] = inStream.read().data[0];"
+        }
+    ]
+}

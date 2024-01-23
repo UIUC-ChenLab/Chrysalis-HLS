@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable = heapStream depth = 320",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=heapStream depth=320"
+        }
+    ]
+}

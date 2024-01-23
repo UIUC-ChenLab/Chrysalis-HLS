@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < NUM; i++) {",
+            "Faulty Code": "for (int i = 0; i <= NUM; i++) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "run[i] = krnl(bufIn, bufOut, totalNumWords / 16);",
+            "Faulty Code": "#pragma HLS array_partition variable=buf_out factor=10 complete\nvoid read(A* a_in, A buf_out[NUM]) {"
+        }
+    ]
+}

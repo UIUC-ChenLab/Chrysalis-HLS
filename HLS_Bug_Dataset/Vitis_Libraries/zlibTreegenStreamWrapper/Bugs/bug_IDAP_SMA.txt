@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable = lz77SerialTree depth = 4",
+            "Faulty Code": "#pragma HLS STREAM variable = lz77SerialTree depth = 4 port = ap_fifo"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<uint8_t> idxNum(\"idxNum\");",
+            "Faulty Code": "#pragma HLS INTERFACE port=idxNum bram"
+        }
+    ]
+}

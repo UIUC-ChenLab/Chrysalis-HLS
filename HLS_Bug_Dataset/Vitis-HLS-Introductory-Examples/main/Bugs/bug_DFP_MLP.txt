@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void read(A* a_in, A buf_out[NUM]) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid read(A* a_in, A buf_out[NUM]) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int i = 0; i < NUM; i++) {",
+            "Faulty Code": "#pragma HLS pipeline\nfor (int i = 0; i < NUM; i++) {"
+        }
+    ]
+}

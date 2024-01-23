@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint8_t factor = DATAWIDTH / 8;",
+            "Faulty Code": "int factor = DATAWIDTH / 8;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<DATAWIDTH> >& readStream",
+            "Faulty Code": "#pragma HLS INTERFACE port=readStream bram"
+        }
+    ]
+}

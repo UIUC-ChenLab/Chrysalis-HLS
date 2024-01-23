@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "outVal.range((k * 8) + 11, (k * 8) + 4) = outLit.range((rK * 8) + 7, (rK * 8));",
+            "Faulty Code": "outVal.range((k * 8) + 11, (k * 8) + 4) = (uint8_t)outLit.range((rK * 8) + 7, (rK * 8));"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        }
+    ]
+}

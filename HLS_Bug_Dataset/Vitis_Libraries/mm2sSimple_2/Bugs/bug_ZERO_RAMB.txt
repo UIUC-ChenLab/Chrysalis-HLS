@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int i = 0;",
+            "Faulty Code": "int i = 0; // Incorrect if 'i' should be initialized with a nonzero value"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "temp = in[i + j];",
+            "Faulty Code": "temp = in[rand() % inputSize]; // 'rand()' introduces random access which is incorrect for 'm_axi'"
+        }
+    ]
+}

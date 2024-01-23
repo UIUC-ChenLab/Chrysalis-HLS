@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "Symbol<MAX_FREQ_DWIDTH> heap[SYMBOL_SIZE];",
+            "Faulty Code": "#pragma HLS INTERFACE port=heap bram"
+        }
+    ]
+}

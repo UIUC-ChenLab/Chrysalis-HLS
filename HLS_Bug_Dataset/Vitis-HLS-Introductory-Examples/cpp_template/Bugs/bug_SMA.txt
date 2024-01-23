@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void cpp_template(data_t a, data_t b, data_t& dout) {",
+            "Faulty Code": "#pragma HLS interface port=dout bram"
+        }
+    ]
+}

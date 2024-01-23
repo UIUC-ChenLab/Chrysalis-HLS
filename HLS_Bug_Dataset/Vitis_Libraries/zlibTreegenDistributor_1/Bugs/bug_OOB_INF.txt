@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "hufCodeStream[i] << hufCodeOut;",
+            "Faulty Code": "hufCodeStream[i + 1] << hufCodeOut;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (hufCodeOut.data[0].bitlen == 0) break;",
+            "Faulty Code": "if (hufCodeOut.data[0].bitlen != 0) break;"
+        }
+    ]
+}

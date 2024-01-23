@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "tmp += a[i][k] * b[k][j];",
+            "Faulty Code": "tmp += a[k][i] * b[j][k];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for(int j = 0; j < Z; j++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\n\t\tfor(int j = 0; j < Z; j++) {"
+        }
+    ]
+}

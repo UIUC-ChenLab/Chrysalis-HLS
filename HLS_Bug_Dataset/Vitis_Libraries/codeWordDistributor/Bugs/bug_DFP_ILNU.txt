@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "while (isEOBlocks.read() == false) {",
+            "Faulty Code": "#pragma HLS dataflow\nwhile (isEOBlocks.read() == false) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (uint8_t i = 0; i < 2; i++) {",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (uint8_t i = 0; i < 2; i++) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "hufWeights[i + 1] = 0;",
+            "Faulty Code": "hufWeights[i] = 0;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for (uint8_t i = 1; i < c_outByte; ++i) {",
+            "Faulty Code": "for (uint8_t i = 0; i < c_outByte; ++i) {"
+        }
+    ]
+}

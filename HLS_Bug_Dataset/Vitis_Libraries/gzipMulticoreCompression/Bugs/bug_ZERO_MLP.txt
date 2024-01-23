@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<17> inSize = inputSize.read();",
+            "Faulty Code": "ap_uint<17> inSize = 0; // Incorrectly initialized to zero"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS pipeline // Incorrectly placed without II = 1"
+        }
+    ]
+}

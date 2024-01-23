@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "uint8_t match_length = outValue.data[0].range(15, 8);",
+            "Faulty Code": "uint8_t match_length = outValue.data[0].range(16, 8); // Incorrect range, shifts by an out-of-bounds amount"
+        }
+    ]
+}

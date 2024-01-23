@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "hls::fft<config1>(xn, xk, &fft_status, &fft_config);",
+            "Faulty Code": "fft_config = 0; hls::fft<config1>(xn, xk, &fft_status, &fft_config);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "static int addr = 0;",
+            "Faulty Code": "static int addr;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (addr >= 32) addr = 0;",
+            "Faulty Code": "if (addr > 32) addr = 0;"
+        }
+    ]
+}

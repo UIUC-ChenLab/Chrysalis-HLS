@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "symbol[0][11] = bl11Code[ap_uint<8>(parallelAcc[0].range(10, 0))];",
+            "Faulty Code": "symbol[0][11] = bl11Code[ap_uint<8>(parallelAcc[0].range(9, 0))];"
+        }
+    ]
+}

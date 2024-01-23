@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS STREAM variable = downStream depth = c_thriceNumBlocks",
+            "Faulty Code": "#pragma HLS array_partition variable=downStream cyclic factor=5"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable = checksumStream depth = c_defaultDepth",
+            "Faulty Code": "#pragma HLS interface port=checksumStream mode=ap_fifo"
+        }
+    ]
+}

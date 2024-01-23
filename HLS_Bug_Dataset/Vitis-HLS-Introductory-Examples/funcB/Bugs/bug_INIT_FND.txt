@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void funcB(data_t* in, data_t* out) {",
+            "Faulty Code": "void funcB(data_t* in, data_t* uninitialized_array) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS array_partition variable=out factor=10"
+        }
+    ]
+}

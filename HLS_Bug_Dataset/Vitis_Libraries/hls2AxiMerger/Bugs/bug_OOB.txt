@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "tmp = outDataStream[i].read();",
+            "Faulty Code": "tmp = outDataStream[NUM_CORE].read();"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint16_t decSize[4];",
+            "Faulty Code": "uint16_t decSize[4]; // decSize array elements are not initialized before use"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = bsacc complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = bsacc cyclic factor=3 // 'factor' is not divisible by the array size 'c_maxCodeLen + 1'"
+        }
+    ]
+}

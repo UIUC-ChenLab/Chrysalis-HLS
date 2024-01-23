@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int buff[127];",
+            "Faulty Code": "int buff[127] = {0};"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void Double_pass(int tmp2[128], int tmp1[128], int tmp4[128], int tmp5[128]) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=tmp1 bram\nvoid Double_pass(int tmp2[128], int tmp1[128], int tmp4[128], int tmp5[128]) {"
+        }
+    ]
+}

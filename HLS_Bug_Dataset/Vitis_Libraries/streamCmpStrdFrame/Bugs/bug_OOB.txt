@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outVal.data[0] = strdBlockHeader.range(7, 0);",
+            "Faulty Code": "outVal.data[3] = strdBlockHeader.range(7, 0);"
+        }
+    ]
+}

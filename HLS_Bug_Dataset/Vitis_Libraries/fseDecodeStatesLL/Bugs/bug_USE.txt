@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint32_t extVal = bsWord & (((uint64_t)1 << extBit) - 1);",
+            "Faulty Code": "int32_t extVal = bsWord & (((uint64_t)1 << extBit) - 1);"
+        }
+    ]
+}

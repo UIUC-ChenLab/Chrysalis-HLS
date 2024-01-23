@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "for (uint16_t i = c_tree_depth - 1; i > max_bit_len; --i) {",
+            "Faulty Code": "for (int i = c_tree_depth - 1; i > max_bit_len; --i) {"
+        }
+    ]
+}

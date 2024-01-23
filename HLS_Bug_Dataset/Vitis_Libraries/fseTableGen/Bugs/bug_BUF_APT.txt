@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "normTableStream[1] << outVal;",
+            "Faulty Code": "normTableStream[0] << outVal;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = normTable type = ram_1p impl = lutram",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable = normTable type = ram_t2p impl = lutram"
+        }
+    ]
+}

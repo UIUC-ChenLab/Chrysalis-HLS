@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "bool resetDictFlag = true;",
+            "Faulty Code": "bool resetDictFlag;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS UNROLL FACTOR = 2"
+        }
+    ]
+}

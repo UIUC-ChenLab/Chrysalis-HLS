@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t i = 0; i < RADIX; ++i) {",
+            "Faulty Code": "for (uint8_t i = 0; i <= RADIX; ++i) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL FACTOR = 2",
+            "Faulty Code": "#pragma HLS UNROLL FACTOR = 3"
+        }
+    ]
+}

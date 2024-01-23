@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "xrt::run run[3];",
+            "Faulty Code": "#pragma HLS INTERFACE port=run mode=axis"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "auto bufOut = xrt::bo(device, vector_size_bytes, krnl.group_id(1));",
+            "Faulty Code": "#pragma HLS INTERFACE port=bufOut mode=ap_none"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void kStreamRead(hls::stream<ap_axiu<DATAWIDTH, 0, 0, 0> >& inKStream, hls::stream<ap_uint<DATAWIDTH> >& readStream, uint32_t input_size) {",
+            "Faulty Code": "#pragma HLS dataflow void kStreamRead(hls::stream<ap_axiu<DATAWIDTH, 0, 0, 0> >& inKStream, hls::stream<ap_uint<DATAWIDTH> >& readStream, uint32_t input_size) {"
+        }
+    ]
+}

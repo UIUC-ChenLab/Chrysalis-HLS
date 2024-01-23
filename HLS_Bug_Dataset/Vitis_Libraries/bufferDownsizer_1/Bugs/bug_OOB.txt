@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outVal = inVal.range(23, 8);",
+            "Faulty Code": "outVal = inVal.range(31, 16); // Accidentally read beyond the 24-bit boundary of inVal"
+        }
+    ]
+}

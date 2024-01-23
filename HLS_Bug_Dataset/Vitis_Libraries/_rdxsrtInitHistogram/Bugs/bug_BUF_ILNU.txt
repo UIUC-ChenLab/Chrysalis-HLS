@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "digit_histogram[i] = 0;",
+            "Faulty Code": "digit_histogram[RADIX / 2 + i] = 0;"
+        }
+    ]
+}

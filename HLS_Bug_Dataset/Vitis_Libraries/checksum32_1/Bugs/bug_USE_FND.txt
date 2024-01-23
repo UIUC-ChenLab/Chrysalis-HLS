@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "endInStrm << false;",
+            "Faulty Code": "endInStrm.write(false);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS STREAM variable = endOutStrm depth = 4",
+            "Faulty Code": "#pragma HLS STREAM variable = endOutStrm depth = 3"
+        }
+    ]
+}

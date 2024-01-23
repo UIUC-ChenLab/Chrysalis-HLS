@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "dout_t out_accum = 0;",
+            "Faulty Code": "dout_t out_accum;"
+        }
+    ]
+}

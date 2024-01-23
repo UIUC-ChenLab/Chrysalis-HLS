@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "while (!last) {",
+            "Faulty Code": "#pragma HLS dataflow\nwhile (!last) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (auto i = 0; i < BURST_SIZE; i++) {",
+            "Faulty Code": "#pragma HLS unroll factor = 4\nfor (auto i = 0; i < BURST_SIZE; i++) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (byteIdx == c_upsizeFactor) {",
+            "Faulty Code": "if (byteIdx >= c_upsizeFactor) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outSizeStream << (sizeWrite * c_wordSize);",
+            "Faulty Code": "outSizeStream << 0;"
+        }
+    ]
+}

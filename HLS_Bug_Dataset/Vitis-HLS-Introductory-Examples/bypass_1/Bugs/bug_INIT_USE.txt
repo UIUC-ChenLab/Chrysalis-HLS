@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void bypass(int tmp1[128], int tmp2[128], int tmp3[128]) {",
+            "Faulty Code": "void bypass(int tmp1[128], int tmp2[128], int tmp3[128]) { int uninitialized_var; tmp3[0] = uninitialized_var; // Faulty initialization}"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "tmp3[i] = tmp1[i] + tmp2[i];",
+            "Faulty Code": "tmp3[i] = (short)tmp1[i] + tmp2[i]; // Faulty sign extension if tmp1[i] is negative"
+        }
+    ]
+}

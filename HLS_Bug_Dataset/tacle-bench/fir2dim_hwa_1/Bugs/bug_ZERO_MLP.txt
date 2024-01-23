@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "*poutput = 0 ;",
+            "Faulty Code": "*poutput = some_nonzero_value ;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "for ( i = 0 ; i < COEFFICIENTS ; i++ ) { #pragma HLS PIPELINE"
+        }
+    ]
+}

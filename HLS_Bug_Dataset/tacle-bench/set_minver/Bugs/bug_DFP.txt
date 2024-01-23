@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void set_minver(mat_type minver_hw[DIM][DIM]) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid set_minver(mat_type minver_hw[DIM][DIM]) {"
+        }
+    ]
+}

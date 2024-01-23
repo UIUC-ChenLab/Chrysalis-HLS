@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "huffTable[u].symbol = i;",
+            "Faulty Code": "huffTable[u + 256].symbol = i;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "nextCode += (bitlen_histogram[i] << (i - 1));",
+            "Faulty Code": "nextCode += (bitlen_histogram[i] << (accuracyLog - i));"
+        }
+    ]
+}

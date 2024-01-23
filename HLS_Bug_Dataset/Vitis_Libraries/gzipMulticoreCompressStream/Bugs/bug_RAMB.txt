@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "// Content of called function\nvoid bufferDownsizer(hls::stream<ap_uint<IN_DATAWIDTH + SIZE_DWIDTH> >& inStream,\n                     hls::stream<IntVectorStream_dt<OUT_DATAWIDTH, 1> >& outStream) {\n    constexpr int16_t c_factor = IN_DATAWIDTH / OUT_DATAWIDTH;\n    constexpr int16_t c_outWord = OUT_DATAWIDTH / 8;\n    IntVectorStream_dt<OUT_DATAWIDTH, 1> outVal;\n\n...",
+            "Faulty Code": "// Content of called function\nvoid bufferDownsizer(hls::stream<ap_uint<IN_DATAWIDTH + SIZE_DWIDTH> >& inStream,\n                     hls::stream<IntVectorStream_dt<OUT_DATAWIDTH, 1> >& outStream) {\n    #pragma HLS interface port=inStream mode=m_axi\n    constexpr int16_t c_factor = IN_DATAWIDTH / OUT_DATAWIDTH;\n    constexpr int16_t c_outWord = OUT_DATAWIDTH / 8;\n    IntVectorStream_dt<OUT_DATAWIDTH, 1> outVal;\n\n..."
+        }
+    ]
+}

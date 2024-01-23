@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable = lclBufStream depth = c_fifo_depth",
+            "Faulty Code": "#pragma HLS array_partition variable = local_mem dim = 3"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<32> > lclBufStream(\"lclBufStream\");",
+            "Faulty Code": "#pragma HLS interface port=lclBufStream mode=ap_none"
+        }
+    ]
+}

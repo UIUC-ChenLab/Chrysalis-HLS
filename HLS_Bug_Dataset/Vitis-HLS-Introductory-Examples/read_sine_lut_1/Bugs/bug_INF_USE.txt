@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int k=0;k<4*LUTSIZE;k++) {",
+            "Faulty Code": "for (int k=0;k<=4*LUTSIZE;k++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "adr      = -lsb;",
+            "Faulty Code": "adr      = -(signed)lsb;"
+        }
+    ]
+}

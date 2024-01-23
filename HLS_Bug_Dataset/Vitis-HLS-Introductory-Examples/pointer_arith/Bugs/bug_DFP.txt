@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void pointer_arith(dio_t *d) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid pointer_arith(dio_t *d) {"
+        }
+    ]
+}

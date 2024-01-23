@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "sha_info_data[count++] = 0x80;",
+            "Faulty Code": "sha_info_data[count] = 0x80;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for (i = 0; i < 16; ++i) { W[i] = sha_info_data[i]; }",
+            "Faulty Code": "#pragma HLS array_partition variable=W factor=10 complete\nfor (i = 0; i < 16; ++i) { W[i] = sha_info_data[i]; }"
+        }
+    ]
+}

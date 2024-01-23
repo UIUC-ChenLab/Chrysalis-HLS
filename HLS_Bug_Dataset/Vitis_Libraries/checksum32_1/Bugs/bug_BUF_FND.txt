@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "endInStrm << false;",
+            "Faulty Code": "endOutStrm << false;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS STREAM variable = endInPackLenStrm depth = 4",
+            "Faulty Code": "#pragma HLS STREAM variable = endInPackLenStrm depth = 3"
+        }
+    ]
+}

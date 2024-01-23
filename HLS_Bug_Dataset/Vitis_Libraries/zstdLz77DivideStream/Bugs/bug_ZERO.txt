@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outLitVal.strobe = 1;",
+            "Faulty Code": "outLitVal.strobe = 0;"
+        }
+    ]
+}

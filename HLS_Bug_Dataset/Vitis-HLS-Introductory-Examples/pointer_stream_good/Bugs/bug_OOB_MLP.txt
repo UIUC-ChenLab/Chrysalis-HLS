@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "acc += *(d_i + 1);",
+            "Faulty Code": "acc += *(d_i + 4);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "void pointer_stream_good(volatile dout_t *d_o, volatile din_t *d_i) {",
+            "Faulty Code": "#pragma HLS pipeline \nvoid pointer_stream_good(volatile dout_t *d_o, volatile din_t *d_i) {"
+        }
+    ]
+}

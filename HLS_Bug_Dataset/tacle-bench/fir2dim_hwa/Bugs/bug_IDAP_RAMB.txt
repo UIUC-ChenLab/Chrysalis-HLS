@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INTERFACE bram port=fir2dim_input",
+            "Faulty Code": "#pragma HLS INTERFACE ap_fifo port=fir2dim_input"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS RESOURCE variable=fir2dim_output core=RAM_1P_BRAM",
+            "Faulty Code": "#pragma HLS RESOURCE variable=fir2dim_output core=RAM_2P_BRAM"
+        }
+    ]
+}

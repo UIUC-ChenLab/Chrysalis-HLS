@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "loop_continue = (inVal.strobe != 0);",
+            "Faulty Code": "buffer_upsizer_main:\nwhile (loop_continue) {\n#pragma HLS PIPELINE II = 1\nlast = false;\nif (byteIdx == c_upsizeFactor) {\n// append valid bytes count to output packet\noutStream << outVal;\nbyteIdx = 0;\n}\noutVal >>= IN_WIDTH;\noutVal.range(c_outWidth - 1, c_outWidth - IN_WIDTH) = inVal.data[0];\n++byteIdx;\nif (inVal.strobe != 0) {\ninVal = inStream.read();\nsizeCntr += c_inBytes;\n}\n}"
+        }
+    ]
+}

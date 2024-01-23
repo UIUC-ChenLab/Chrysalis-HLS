@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "while (bits_cntr < 32 && (done == false)) {",
+            "Faulty Code": "while (bits_cntr <= 32 && (done == false)) {"
+        }
+    ]
+}

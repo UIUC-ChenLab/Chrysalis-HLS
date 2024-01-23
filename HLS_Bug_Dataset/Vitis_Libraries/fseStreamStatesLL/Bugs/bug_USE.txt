@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "bswOF = acchbs >> (bitsInAcc - ofSymBits);",
+            "Faulty Code": "bswOF = (int)(acchbs >> (bitsInAcc - ofSymBits));"
+        }
+    ]
+}

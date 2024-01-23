@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (uint8_t i = 0; (i < RADIX - 1) && not_sorted; ++i) {",
+            "Faulty Code": "for (uint8_t i = 0; (i <= RADIX) && not_sorted; ++i) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void radixSort_1(Symbol<MAX_FREQ_DWIDTH>* heap, uint16_t n) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=heap mode=ap_none"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void Double_pass(int tmp2[128], int tmp1[128], int tmp4[128], int tmp5[128]) {",
+            "Faulty Code": "#pragma HLS interface m_axi port=tmp4 depth=128\n#pragma HLS interface m_axi port=tmp5 depth=128\nvoid Double_pass(int tmp2[128], int tmp1[128], int tmp4[128], int tmp5[128]) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int i = 0; i < 128; i++) {\n        tmp4[i] = tmp1[i];\n        tmp5[i] = tmp2[i];\n    }",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (int i = 0; i < 128; i++) {\n        tmp4[i] = tmp1[i];\n        tmp5[i] = tmp2[i];\n    }"
+        }
+    ]
+}

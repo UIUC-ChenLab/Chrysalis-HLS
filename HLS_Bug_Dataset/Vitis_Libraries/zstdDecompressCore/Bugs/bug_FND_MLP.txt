@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS STREAM variable = outputStream depth = c_inStreamDepth",
+            "Faulty Code": "#pragma HLS STREAM variable = outputStream depth = c_minStreamDepth"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "do {\n#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "do {\n#pragma HLS PIPELINE II = 1\n#pragma HLS PIPELINE II = 1"
+        }
+    ]
+}

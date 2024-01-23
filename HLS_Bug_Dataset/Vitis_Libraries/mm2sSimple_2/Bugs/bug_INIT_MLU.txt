@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<DATAWIDTH> temp;",
+            "Faulty Code": "ap_uint<DATAWIDTH> temp = 0;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (; i < allignedwidth * BURST_SIZE; i += BURST_SIZE) {",
+            "Faulty Code": "for (; i <= allignedwidth * BURST_SIZE; i += BURST_SIZE) {"
+        }
+    ]
+}

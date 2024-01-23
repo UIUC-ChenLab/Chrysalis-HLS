@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = present_window complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = present_window cyclic"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable = lclBufStream depth = c_fifo_depth",
+            "Faulty Code": "#pragma HLS STREAM variable = lclBufStream depth = c_fifo_depth dim = 2"
+        }
+    ]
+}

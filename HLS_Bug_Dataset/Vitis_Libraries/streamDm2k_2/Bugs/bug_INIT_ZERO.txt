@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint32_t num = 0;",
+            "Faulty Code": "uint32_t num;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "inData.keep = -1;",
+            "Faulty Code": "inData.keep = 0;"
+        }
+    ]
+}

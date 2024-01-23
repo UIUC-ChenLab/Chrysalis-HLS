@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (uint32_t i = 0; i < (input_size - LEFT_BYTES); i++) {",
+            "Faulty Code": "for (uint32_t i = 0; i <= (input_size - LEFT_BYTES); i++) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = distStream type = FIFO impl = URAM",
+            "Faulty Code": "#pragma HLS INTERFACE port=distStream mode=m_axi offset=slave bundle=gmem0"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outValue.strobe = 1;",
+            "Faulty Code": "outValue.strobe = 0;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS dataflow // Incorrect placement inside a loop"
+        }
+    ]
+}

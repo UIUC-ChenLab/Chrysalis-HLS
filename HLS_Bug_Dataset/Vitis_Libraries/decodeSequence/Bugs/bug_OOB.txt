@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "prevOffsets[2] = prevOffsets[1];\nprevOffsets[1] = prevOffsets[0];\nprevOffsets[0] = 0;",
+            "Faulty Code": "prevOffsets[3] = prevOffsets[2];\nprevOffsets[2] = prevOffsets[1];\nprevOffsets[1] = prevOffsets[0];\nprevOffsets[0] = 0;"
+        }
+    ]
+}

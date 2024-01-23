@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS interface ap_fifo depth = FFT_LENGTH port = in, out",
+            "Faulty Code": "#pragma HLS interface ap_hs port = in, out"
+        }
+    ]
+}

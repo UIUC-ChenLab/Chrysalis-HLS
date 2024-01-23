@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "p_b = &b[k*size];",
+            "Faulty Code": "p_b = &b[k*MAX_SIZE];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INTERFACE ap_none port=size",
+            "Faulty Code": "#pragma HLS INTERFACE s_axilite port=size bundle=control"
+        }
+    ]
+}

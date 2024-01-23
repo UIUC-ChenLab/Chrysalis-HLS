@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void s2mmSizeWrite(hls::stream<OUTSIZE_DT>& inSizeStream, ...",
+            "Faulty Code": "#pragma HLS interface port=compressedSize mode=bram"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (auto z = 0; z < (numItr - 1) * blckNum; z++) {",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

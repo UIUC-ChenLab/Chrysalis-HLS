@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<4> j = i % NUM_BLOCK;",
+            "Faulty Code": "int j = i % NUM_BLOCK;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (uint16_t k = 0; k < c_litDistCodeCnt; k++) {",
+            "Faulty Code": "#pragma HLS pipeline\nfor (uint16_t k = 0; k < c_litDistCodeCnt; k++) {"
+        }
+    ]
+}

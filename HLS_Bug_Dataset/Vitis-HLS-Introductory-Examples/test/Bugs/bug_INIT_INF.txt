@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "A[i] += B[i] + C[i];",
+            "Faulty Code": "int result = A[i]; // A[i] is uninitialized"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "int test(int i) { ... return result; }",
+            "Faulty Code": "int test(int i) { while(1); // Infinite loop }"
+        }
+    ]
+}

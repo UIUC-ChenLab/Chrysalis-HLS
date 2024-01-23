@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void read_b(hls::burst_maxi<din_t> IN, dout_t y_aux[N], din_t factor) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=y_aux mode=bram"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void read_b(hls::burst_maxi<din_t> IN, dout_t y_aux[N], din_t factor) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=factor mode=ap_fifo"
+        }
+    ]
+}

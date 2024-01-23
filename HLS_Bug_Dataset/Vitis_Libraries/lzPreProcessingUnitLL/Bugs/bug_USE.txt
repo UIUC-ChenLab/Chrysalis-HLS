@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "l_matchloc = litCount - offset;",
+            "Faulty Code": "l_matchloc = (SIZE_DT)litCount - (int)offset;"
+        }
+    ]
+}

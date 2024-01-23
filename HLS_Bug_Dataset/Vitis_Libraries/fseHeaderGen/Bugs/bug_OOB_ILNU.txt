@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "normTable[0] = inVal.data[0];",
+            "Faulty Code": "normTable[64] = inVal.data[0];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void fseEncodeLitHeader(hls::stream<IntVectorStream_dt<4, 1> >& hufWeightStream, ...",
+            "Faulty Code": "#pragma HLS interface m_axi port=hufWeights offset=slave bundle=gmem0"
+        }
+    ]
+}

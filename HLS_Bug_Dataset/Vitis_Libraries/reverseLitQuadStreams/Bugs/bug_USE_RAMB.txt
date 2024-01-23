@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = litBuffer type = ram_t2p impl = bram",
+            "Faulty Code": "#pragma HLS INTERFACE port = litBuffer mode = m_axi"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "rwInc = (~rwInc) + 1;",
+            "Faulty Code": "rwInc = ~rwInc + 1;"
+        }
+    ]
+}

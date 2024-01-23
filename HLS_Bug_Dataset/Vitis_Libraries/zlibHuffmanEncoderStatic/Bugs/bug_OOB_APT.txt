@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint16_t code_s = lit_code_fixed[lcode + c_literals + 1];",
+            "Faulty Code": "uint16_t code_s = lit_code_fixed[lcode];"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS STREAM variable = encodedOutStream depth = 4",
+            "Faulty Code": "#pragma HLS array_partition variable=encodedOutStream type=complete"
+        }
+    ]
+}

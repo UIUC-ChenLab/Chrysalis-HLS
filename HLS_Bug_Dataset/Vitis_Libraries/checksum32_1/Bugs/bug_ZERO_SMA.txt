@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "adlerStrm << 1;",
+            "Faulty Code": "adlerStrm << 0;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS STREAM variable = endInStrm depth = 4",
+            "Faulty Code": "#pragma HLS INTERFACE port=endInStrm bram"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "terminate_all = 1;",
+            "Faulty Code": "terminate_all = 0;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<DATAWIDTH> > outStream[NUM_BLOCKS]",
+            "Faulty Code": "#pragma HLS INTERFACE port=outStream mode=ap_none"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "temp = in[i + j];",
+            "Faulty Code": "temp = in[i + j * c_word_size];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS INTERFACE port=in mode=ap_none"
+        }
+    ]
+}

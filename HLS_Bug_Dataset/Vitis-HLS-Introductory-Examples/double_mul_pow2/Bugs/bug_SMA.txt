@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "double double_mul_pow2(double x, int16_t n) {",
+            "Faulty Code": "#pragma HLS interface port=x bram"
+        }
+    ]
+}

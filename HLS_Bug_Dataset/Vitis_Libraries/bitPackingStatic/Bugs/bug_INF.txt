@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (inValue = inStream.read(); inValue.strobe != 0; inValue = inStream.read()) {",
+            "Faulty Code": "for (inValue = inStream.read(); inValue.strobe == 0; inValue = inStream.read()) {"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INTERFACE axis port = A\n#pragma HLS INTERFACE axis port = B",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port = A\n#pragma HLS INTERFACE ap_none port = B"
+        }
+    ]
+}

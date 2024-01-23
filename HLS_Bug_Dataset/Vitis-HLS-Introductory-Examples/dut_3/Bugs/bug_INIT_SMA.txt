@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int sum = 0;",
+            "Faulty Code": "int sum;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS interface axis port = in",
+            "Faulty Code": "#pragma HLS interface bram port = sum"
+        }
+    ]
+}

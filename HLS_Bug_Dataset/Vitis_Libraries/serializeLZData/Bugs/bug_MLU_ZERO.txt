@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t s = 0; s < c_seqFreqCnt; ++s) {",
+            "Faulty Code": "for (uint8_t s = 0; s <= c_seqFreqCnt; ++s) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "seqVal.strobe = 0;",
+            "Faulty Code": "seqVal.strobe = 1;"
+        }
+    ]
+}

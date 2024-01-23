@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=eos_tmp factor=3 dim=1"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (uint16_t k = 0; k < c_litDistCodeCnt; k++) {",
+            "Faulty Code": "#pragma HLS UNROLL factor=4"
+        }
+    ]
+}

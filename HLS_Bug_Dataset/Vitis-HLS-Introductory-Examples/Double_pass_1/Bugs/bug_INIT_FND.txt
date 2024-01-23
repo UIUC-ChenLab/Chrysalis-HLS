@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int buff[127];",
+            "Faulty Code": "int buff[127]; // Error: buff is declared but not initialized before its first use"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for (int i = 0; i < 128; i++) {",
+            "Faulty Code": "#pragma HLS array_partition variable=buff factor=15 complete // Error: factor is not divisible by loop count (128)"
+        }
+    ]
+}

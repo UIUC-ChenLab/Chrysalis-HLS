@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "uint8_t countSetBits(ap_uint<DWIDTH> val) {\n    uint8_t cnt = 0;\n    for (uint8_t i = 0; i < DWIDTH; ++i) {\n#pragma HLS UNROLL\n        cnt += val.range(i, i);\n    }\n    return cnt;\n}",
+            "Faulty Code": "uint8_t countSetBits(ap_uint<DWIDTH> val) {\n#pragma HLS dataflow\n    uint8_t cnt = 0;\n    for (uint8_t i = 0; i < DWIDTH; ++i) {\n#pragma HLS UNROLL\n        cnt += val.range(i, i);\n    }\n    return cnt;\n}"
+        }
+    ]
+}

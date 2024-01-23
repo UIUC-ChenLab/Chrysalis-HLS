@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = parent type = ram_2p impl = lutram",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = parent dim = 3"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "DSVectorStream_dt<Symbol<MAX_FREQ_DWIDTH>, 1> hpVal;",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=hpVal"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "read_input(in1, inStream1, vSize);",
+            "Faulty Code": "read_input(in2, inStream1, vSize);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS INTERFACE m_axi port = in1 bundle = gmem0 depth = 4096",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port = in1 bundle = gmem0 depth = 4095"
+        }
+    ]
+}

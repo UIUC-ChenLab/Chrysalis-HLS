@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if ((is_left_internal || is_right_internal)) {",
+            "Faulty Code": "if ((left[i] == INTERNAL_NODE || right[i] == INTERNAL_NODE)) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 2"
+        }
+    ]
+}

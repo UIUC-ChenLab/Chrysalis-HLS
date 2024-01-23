@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void _rdxsrtInitHistogram(ap_uint<SYMBOL_BITS> digit_histogram[RADIX]) {",
+            "Faulty Code": "void _rdxsrtInitHistogram(ap_uint<SYMBOL_BITS> digit_histogram[RADIX]) { #pragma HLS interface mode=ap_fifo port=digit_histogram"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

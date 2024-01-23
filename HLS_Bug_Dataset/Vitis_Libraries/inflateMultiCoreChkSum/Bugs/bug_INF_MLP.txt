@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < NUMCORES; i++) {",
+            "Faulty Code": "for (int i = 0; ; i++) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "xf::security::adler32<W>(adlerStrm, inStrm, inPackLenStrm, endInPackLenStrm, outStrm, endOutStrm);",
+            "Faulty Code": "#pragma HLS pipeline\nxf::security::adler32<W>(adlerStrm, inStrm, inPackLenStrm, endInPackLenStrm, outStrm, endOutStrm);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "accHuff >>= 16;",
+            "Faulty Code": "accHuff = 0;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = bsacc complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = bsacc dim=0"
+        }
+    ]
+}

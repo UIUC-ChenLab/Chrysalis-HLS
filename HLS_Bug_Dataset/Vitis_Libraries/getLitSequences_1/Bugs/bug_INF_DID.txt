@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (true) {",
+            "Faulty Code": "while (inStream.read().strobe != 0) {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = present_window complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = present_window complete dim=2"
+        }
+    ]
+}

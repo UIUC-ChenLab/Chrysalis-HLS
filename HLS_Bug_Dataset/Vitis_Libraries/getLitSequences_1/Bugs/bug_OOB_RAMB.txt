@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint8_t local_mem[BOOSTER_OFFSET_WINDOW];",
+            "Faulty Code": "uint8_t local_mem[BOOSTER_OFFSET_WINDOW - 1]; // Incorrect array size leading to OOB"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS RESOURCE variable = dict core = XPM_MEMORY uram",
+            "Faulty Code": "#pragma HLS RESOURCE variable = dict core = RAMB18E1 // Using a non-burst capable BRAM resource"
+        }
+    ]
+}

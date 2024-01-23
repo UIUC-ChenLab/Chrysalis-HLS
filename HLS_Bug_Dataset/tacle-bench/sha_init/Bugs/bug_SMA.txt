@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void sha_init () { ... }",
+            "Faulty Code": "#pragma HLS interface port=sha_info_digest bram\nvoid sha_init () { ... }"
+        }
+    ]
+}

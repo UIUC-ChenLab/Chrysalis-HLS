@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "inputWindow >>= DWIDTH;",
+            "Faulty Code": "inputWindow >>= DWIDTH + 1;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t out_len = 0;",
+            "Faulty Code": "uint32_t out_len;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "outValue = local_buf[match_loc % HISTORY_SIZE];",
+            "Faulty Code": "outValue = local_buf[i];"
+        }
+    ]
+}

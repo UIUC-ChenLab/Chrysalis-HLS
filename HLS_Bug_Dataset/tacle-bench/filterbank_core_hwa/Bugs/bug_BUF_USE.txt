@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "Vect_Up[ j * 8 ] = Vect_Dn[ j ];",
+            "Faulty Code": "Vect_Up[ j ] = Vect_Dn[ j * 8 ];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "Vect_H[ j ] += H[ i ][ k ] * r[ j - k ];",
+            "Faulty Code": "Vect_H[ j ] += H[ i ][ k ] * (short)r[ j - k ];"
+        }
+    ]
+}

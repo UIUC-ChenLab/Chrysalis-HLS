@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "stateVal = oftFSETable[fseStateOF]; // offset",
+            "Faulty Code": "stateVal = oftFSETable[fseStateOF & (TABLE_SIZE - 1)]; // offset with bitwise AND for safety"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "void huffmanProcessingUnit(hls::stream<IntVectorStream_dt<9, 1> >& inStream, hls::stream<IntVectorStream_dt<32, 1> >& outStream) {",
+            "Faulty Code": "#pragma HLS array_partition variable=extra_lbits factor=4"
+        }
+    ]
+}

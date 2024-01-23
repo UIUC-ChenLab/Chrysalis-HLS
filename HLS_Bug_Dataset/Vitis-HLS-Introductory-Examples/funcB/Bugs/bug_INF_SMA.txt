@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < N; i++) {",
+            "Faulty Code": "for (int i = 0; i <= N; i++) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void funcB(data_t* in, data_t* out) {",
+            "Faulty Code": "void funcB(data_t in, data_t* out) {"
+        }
+    ]
+}

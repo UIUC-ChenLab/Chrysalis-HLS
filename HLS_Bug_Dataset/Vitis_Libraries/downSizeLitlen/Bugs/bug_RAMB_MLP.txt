@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "outSeqStream << outSeqVal;",
+            "Faulty Code": "#pragma HLS interface m_axi port=outSeqStream depth=32"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE"
+        }
+    ]
+}

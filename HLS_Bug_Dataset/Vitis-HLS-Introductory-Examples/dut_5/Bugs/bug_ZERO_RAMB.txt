@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int t;",
+            "Faulty Code": "int t = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "t = in[i] + 1;",
+            "Faulty Code": "t = in[i != 512 ? i : 0] + 1;"
+        }
+    ]
+}

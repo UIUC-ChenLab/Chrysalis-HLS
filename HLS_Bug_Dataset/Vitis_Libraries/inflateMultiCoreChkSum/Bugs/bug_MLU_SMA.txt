@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=NUM_CORE-1"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<32> > chkSum[NUM_CORE + 1];",
+            "Faulty Code": "#pragma HLS INTERFACE port=chkSum bram"
+        }
+    ]
+}

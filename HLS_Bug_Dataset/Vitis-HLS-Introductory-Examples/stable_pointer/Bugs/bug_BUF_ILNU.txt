@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "RES.write(x_aux[N - N / 2 + i] - y_aux[N - N / 2 + i] / N);",
+            "Faulty Code": "RES.write(x_aux[i] - y_aux[N - N / 2 + i] / N);"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int i = 0; i < NUM; i++) {\n    buf_out[i] = a_in[i];\n}",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (int i = 0; i < NUM; i++) {\n    buf_out[i] = a_in[i];\n}"
+        }
+    ]
+}

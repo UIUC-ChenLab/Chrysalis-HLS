@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "hls::stream<ap_uint<c_dwidth> > checksumStream(\"checksumStream\");",
+            "Faulty Code": "hls::stream<ap_uint<c_dwidth/2> > checksumStream(\"checksumStream\");"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = lz77Tree type = FIFO impl = SRL",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable = lz77Tree type = FIFO impl = wrong_type"
+        }
+    ]
+}

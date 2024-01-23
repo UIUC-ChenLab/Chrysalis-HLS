@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void discardBitStream(bitBufferType& bitbuffer, ap_uint<6>& bits_cntr, ap_uint<6> n_bits) {\n    bitbuffer >>= n_bits;\n    bits_cntr -= n_bits;\n}",
+            "Faulty Code": "void discardBitStream(bitBufferType& bitbuffer, ap_uint<6>& bits_cntr, ap_uint<6> n_bits) {\n    #pragma HLS pipeline\n    bitbuffer >>= n_bits;\n    bits_cntr -= n_bits;\n}"
+        }
+    ]
+}

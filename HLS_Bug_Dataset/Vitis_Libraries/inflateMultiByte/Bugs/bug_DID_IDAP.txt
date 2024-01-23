@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable = axi2HlsStrm depth = 32",
+            "Faulty Code": "#pragma HLS array_partition variable = axi2HlsStrm dim = 2"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void inflateMultiByte(hls::stream<ap_axiu<16, 0, 0, 0> >& inaxistream, hls::stream<ap_axiu<PARALLEL_BYTES * 8, 0, 0, 0> >& outaxistream)",
+            "Faulty Code": "#pragma HLS interface port=inaxistream mode=s_axilite"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "inputWindow.range((validBytes + c_parallelByte) * 8 - 1, validBytes * 8) = input;",
+            "Faulty Code": "inputWindow.range((validBytes + c_parallelByte) * 8, validBytes * 8) = input;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t metabuf = (blockSize << 8) + ((uint8_t)blockType);",
+            "Faulty Code": "uint32_t metabuf = 0;"
+        }
+    ]
+}

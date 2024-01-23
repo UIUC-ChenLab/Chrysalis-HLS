@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<DATAWIDTH + PARALLEL_BYTES> inData = inStream.read();",
+            "Faulty Code": "ap_uint<DATAWIDTH + PARALLEL_BYTES> inData;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void s2mmAxi(ap_uint<DATAWIDTH>* out, ...",
+            "Faulty Code": "void s2mmAxi(uint32_t out, ..."
+        }
+    ]
+}

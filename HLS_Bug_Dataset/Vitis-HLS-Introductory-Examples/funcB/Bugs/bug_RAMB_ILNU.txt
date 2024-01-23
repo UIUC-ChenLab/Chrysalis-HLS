@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void funcB(data_t* in, data_t* out) {",
+            "Faulty Code": "void funcB(data_t* in, data_t* out) { #pragma HLS interface m_axi port=out"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

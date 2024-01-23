@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (readFlag) lit.range(2 * c_streamWidth - 1, c_streamWidth) = litDecodeInStream.read();",
+            "Faulty Code": "if (readFlag) lit.range(c_streamWidth - 1, 0) = litDecodeInStream.read();"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = c_outByte / c_inputByte"
+        }
+    ]
+}

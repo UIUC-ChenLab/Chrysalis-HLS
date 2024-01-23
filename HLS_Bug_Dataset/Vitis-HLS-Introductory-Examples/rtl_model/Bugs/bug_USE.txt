@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "void rtl_model(data_t a1, data_t a2, data_t a3, data_t a4, data_t b1, data_t b2, data_t b3, data_t b4, data_t& z1, data_t& z2, data_t& z3, data_t& z4) {",
+            "Faulty Code": "void rtl_model(int a1, int a2, int a3, int a4, unsigned int b1, unsigned int b2, unsigned int b3, unsigned int b4, int& z1, int& z2, int& z3, int& z4) {"
+        }
+    ]
+}

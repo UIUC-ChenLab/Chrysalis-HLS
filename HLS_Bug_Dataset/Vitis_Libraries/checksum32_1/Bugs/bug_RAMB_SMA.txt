@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS STREAM variable = endInStrm depth = 4",
+            "Faulty Code": "#pragma HLS interface port=endInStrm mode=m_axi"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<32> > adlerStrm;",
+            "Faulty Code": "ap_uint<32> adlerStrm;"
+        }
+    ]
+}

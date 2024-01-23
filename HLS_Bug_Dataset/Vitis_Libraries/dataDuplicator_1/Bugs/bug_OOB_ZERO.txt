@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "checksumSizeStream << c_size;",
+            "Faulty Code": "checksumSizeStream << inValue.range(c_size * 8 - 1, 0);"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "checksumSizeStream << 0;",
+            "Faulty Code": "checksumSizeStream << inputSize;"
+        }
+    ]
+}

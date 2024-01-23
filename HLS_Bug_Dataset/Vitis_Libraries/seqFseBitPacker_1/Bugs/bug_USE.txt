@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "auto fseWord = (ap_uint<128>)seqFseWord.data[0];",
+            "Faulty Code": "auto fseWord = seqFseWord.data[0];"
+        }
+    ]
+}

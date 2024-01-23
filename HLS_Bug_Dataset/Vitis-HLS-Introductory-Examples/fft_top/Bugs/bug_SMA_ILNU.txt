@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS interface ap_fifo depth = 1 port = ovflo",
+            "Faulty Code": "#pragma HLS interface bram port = ovflo"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int i = 0; i < FFT_LENGTH; i++) { out[i] = in[i]; }",
+            "Faulty Code": "#pragma HLS unroll factor = 4\nfor (int i = 0; i < FFT_LENGTH; i++) { out[i] = in[i]; }"
+        }
+    ]
+}

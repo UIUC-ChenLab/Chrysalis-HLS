@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outVal.range(c_outWidth - 1, c_outWidth - IN_WIDTH) = inVal.data[0];",
+            "Faulty Code": "outVal.range(c_outWidth - 1, c_outWidth - IN_WIDTH) = inVal.data[byteIdx];"
+        }
+    ]
+}

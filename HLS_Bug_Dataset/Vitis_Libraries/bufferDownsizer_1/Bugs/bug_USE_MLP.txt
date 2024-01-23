@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "auto outSizeV = ((inSize - 1) / c_outWord) + 1;",
+            "Faulty Code": "auto outSizeV = ((int8_t)inSize - 1) / c_outWord + 1;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1\n#pragma HLS PIPELINE II = 1"
+        }
+    ]
+}

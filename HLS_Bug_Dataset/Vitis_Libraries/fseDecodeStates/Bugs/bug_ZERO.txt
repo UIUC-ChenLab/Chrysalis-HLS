@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "FSEDecode_t sqdState = OFFSET_CALC;",
+            "Faulty Code": "FSEDecode_t sqdState = LITLEN;"
+        }
+    ]
+}

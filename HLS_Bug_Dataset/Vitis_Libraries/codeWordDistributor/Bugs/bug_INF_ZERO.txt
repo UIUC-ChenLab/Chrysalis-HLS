@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (isEOBlocks.read() == false) {",
+            "Faulty Code": "while (isEOBlocks.read() != true) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "for (uint16_t j = 0; j < hctMeta[i]; j++) {",
+            "Faulty Code": "for (uint16_t j = 0; j <= hctMeta[i]; j++) {"
+        }
+    ]
+}

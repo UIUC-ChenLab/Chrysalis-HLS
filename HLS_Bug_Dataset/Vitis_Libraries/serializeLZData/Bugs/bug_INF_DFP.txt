@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (; seqVal.strobe > 0; seqVal = seqStream[cIdx].read()) {",
+            "Faulty Code": "for (; seqVal.strobe >= 0; seqVal = seqStream[cIdx].read()) {"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS DATAFLOW inside the loop"
+        }
+    ]
+}

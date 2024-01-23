@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (i < 32) { // fill distance codes\nbl5Code[1][i] = i;\n}",
+            "Faulty Code": "if (i < 32) { // fill distance codes\nbl5Code[1][32] = i; // OOB: Incorrect index, should be 'i'\n}"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<SYMBOL_SIZE> left = 0;",
+            "Faulty Code": "ap_uint<SYMBOL_SIZE> left;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = parent type = ram_2p impl = lutram",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable = parent type = ram_1wnr impl = lutram"
+        }
+    ]
+}

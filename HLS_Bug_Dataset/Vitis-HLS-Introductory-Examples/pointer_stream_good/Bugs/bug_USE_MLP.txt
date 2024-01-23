@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "din_t acc = 0;",
+            "Faulty Code": "int acc = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "void pointer_stream_good(volatile dout_t *d_o, volatile din_t *d_i) {",
+            "Faulty Code": "void pointer_stream_good(volatile dout_t *d_o, volatile din_t *d_i) { #pragma HLS pipeline"
+        }
+    ]
+}

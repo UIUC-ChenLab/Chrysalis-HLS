@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "a[ k ][ i ] = a[ k ][ k ];",
+            "Faulty Code": "a[ k ][ i ] = a[ i ][ k ];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "for (i = 0; i < DIM; i++) { #pragma HLS PIPELINE"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "data_t t = in[i] * 3;",
+            "Faulty Code": "int t = in[i] * 3;"
+        }
+    ]
+}

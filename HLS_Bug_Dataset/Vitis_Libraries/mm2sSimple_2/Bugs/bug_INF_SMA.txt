@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (; i < allignedwidth * BURST_SIZE; i += BURST_SIZE) {",
+            "Faulty Code": "for (; i <= allignedwidth * BURST_SIZE; i += BURST_SIZE) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void mm2sSimple(const ap_uint<DATAWIDTH>* in, hls::stream<ap_uint<DATAWIDTH> >& outstream, uint32_t inputSize) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=in mode=ap_fifo\nvoid mm2sSimple(const ap_uint<DATAWIDTH>* in, hls::stream<ap_uint<DATAWIDTH> >& outstream, uint32_t inputSize) {"
+        }
+    ]
+}

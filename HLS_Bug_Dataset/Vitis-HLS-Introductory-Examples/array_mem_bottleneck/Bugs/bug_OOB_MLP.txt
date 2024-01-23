@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "sum += mem[i] + mem[i - 1] + mem[i - 2];",
+            "Faulty Code": "sum += mem[i] + mem[i + 1] + mem[i + 2];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = 2; i < N; ++i)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (i = 2; i < N; ++i)"
+        }
+    ]
+}

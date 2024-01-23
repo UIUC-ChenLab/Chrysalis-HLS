@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void write_process(hls::stream<int>& in, hls::stream<int>& out, int* mem) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid write_process(hls::stream<int>& in, hls::stream<int>& out, int* mem) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int i = 0; i < N / 2; i++) {",
+            "Faulty Code": "#pragma HLS pipeline\nfor (int i = 0; i < N / 2; i++) {"
+        }
+    ]
+}

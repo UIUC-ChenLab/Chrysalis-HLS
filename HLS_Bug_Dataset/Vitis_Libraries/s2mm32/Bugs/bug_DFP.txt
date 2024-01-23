@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void s2mm32(hls::stream<ap_uint<32> >& inStream, hls::stream<bool>& inStreamEos, ap_uint<32>* outChecksumData) {\n    bool eos = inStreamEos.read();\n    if (!eos) outChecksumData[0] = inStream.read();\n    inStreamEos.read();\n}",
+            "Faulty Code": "void s2mm32(hls::stream<ap_uint<32> >& inStream, hls::stream<bool>& inStreamEos, ap_uint<32>* outChecksumData) {\n    #pragma HLS dataflow\n    bool eos = inStreamEos.read();\n    if (!eos) outChecksumData[0] = inStream.read();\n    inStreamEos.read();\n}"
+        }
+    ]
+}

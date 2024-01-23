@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (e-- > 0)",
+            "Faulty Code": "while (e-- >= 0)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "uc = c;",
+            "Faulty Code": "uc = (INT32)(char)c;"
+        }
+    ]
+}

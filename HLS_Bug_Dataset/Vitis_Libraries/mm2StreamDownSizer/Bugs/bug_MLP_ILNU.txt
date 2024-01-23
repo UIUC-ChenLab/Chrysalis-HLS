@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS pipeline"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (uint16_t itr = 0; itr < outSizeV; itr++) {\n#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS unroll factor = 8\nfor (uint16_t itr = 0; itr < outSizeV; itr++) {"
+        }
+    ]
+}

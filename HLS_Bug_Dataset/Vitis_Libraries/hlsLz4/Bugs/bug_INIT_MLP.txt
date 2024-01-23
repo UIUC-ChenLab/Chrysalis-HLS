@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "hls::stream<uint32_t> compressedSize[NUM_BLOCK];",
+            "Faulty Code": "hls::stream<uint32_t> compressedSize[NUM_BLOCK]; // Missing initialization of streams"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS pipeline // Incorrectly using pipeline instead of dataflow"
+        }
+    ]
+}

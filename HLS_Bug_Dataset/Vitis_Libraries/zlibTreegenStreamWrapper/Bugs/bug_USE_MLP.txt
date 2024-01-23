@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "auto prev_freq = heap[0].frequency;",
+            "Faulty Code": "Digit prev_freq = heap[0].frequency;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1 nested=true"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "input_size[bIdx] = _input_size[bIdx] + (input_idx[bIdx] % c_wordSize);",
+            "Faulty Code": "input_size[bIdx] = 0;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = local_buffer dim = 1 complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = local_buffer dim = 1 factor=3"
+        }
+    ]
+}

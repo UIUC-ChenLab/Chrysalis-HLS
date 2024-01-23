@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<32> >& checksumInitStrm",
+            "Faulty Code": "#pragma HLS interface port=checksumInitStrm mode=ap_none"
+        }
+    ]
+}

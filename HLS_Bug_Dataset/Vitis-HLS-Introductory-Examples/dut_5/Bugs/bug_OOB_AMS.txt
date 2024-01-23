@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "t = in[i];",
+            "Faulty Code": "t = in[i + 1];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INTERFACE m_axi port = out bundle = aximm depth = 1024",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port = out"
+        }
+    ]
+}

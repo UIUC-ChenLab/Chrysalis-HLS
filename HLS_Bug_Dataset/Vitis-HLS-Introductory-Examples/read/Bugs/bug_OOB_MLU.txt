@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int i = 0; i < NUM; i++) {",
+            "Faulty Code": "for (int i = 0; i <= NUM; i++) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < NUM; i++) {",
+            "Faulty Code": "for (int i = 0; i < NUM; i += 2) { buf_out[i] = a_in[i]; buf_out[i+1] = a_in[i+1]; }"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int n = 0; n < SLAVES; n++) outStream[n] << i;",
+            "Faulty Code": "for (int n = 0; n <= SLAVES; n++) outStream[n] << i;"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "bool i = inStream.read();",
+            "Faulty Code": "bool i; inStream.read(i);"
+        }
+    ]
+}

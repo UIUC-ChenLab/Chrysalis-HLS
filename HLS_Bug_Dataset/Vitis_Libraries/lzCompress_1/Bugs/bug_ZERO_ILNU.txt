@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static bool resetDictFlag = true;",
+            "Faulty Code": "static bool resetDictFlag = false;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL FACTOR = 2",
+            "Faulty Code": "#pragma HLS UNROLL FACTOR = 4"
+        }
+    ]
+}

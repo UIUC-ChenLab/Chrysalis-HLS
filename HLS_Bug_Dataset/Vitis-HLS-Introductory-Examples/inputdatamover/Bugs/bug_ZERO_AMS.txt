@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "config->setSch(0x2AB);",
+            "Faulty Code": "config->setSch(0);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void inputdatamover(bool direction, config_t* config, cmpxDataIn in[FFT_LENGTH], cmpxDataIn out[FFT_LENGTH])",
+            "Faulty Code": "#pragma HLS INTERFACE port=out mode=ap_none"
+        }
+    ]
+}

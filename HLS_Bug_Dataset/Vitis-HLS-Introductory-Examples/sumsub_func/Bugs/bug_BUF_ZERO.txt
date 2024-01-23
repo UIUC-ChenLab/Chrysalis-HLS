@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "*outSum = *in1 + *in2;",
+            "Faulty Code": "*outSum = *(in1 + 1) + *in2;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "*outSub = *in1 - *in2;",
+            "Faulty Code": "int tmp = 0; *outSub = *in1 - tmp;"
+        }
+    ]
+}

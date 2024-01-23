@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void process(dout_t x_aux[N], dout_t y_aux[N], din_t factor) {",
+            "Faulty Code": "#pragma HLS interface port=x_aux mode=ap_none\n#pragma HLS interface port=y_aux mode=ap_none\nvoid process(dout_t x_aux[N], dout_t y_aux[N], din_t factor) {"
+        }
+    ]
+}

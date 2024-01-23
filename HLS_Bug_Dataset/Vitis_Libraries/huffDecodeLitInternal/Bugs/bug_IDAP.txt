@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<IntVectorStream_dt<c_BSWidth, 1> > huffBitStream(\"huffBitStream\");",
+            "Faulty Code": "#pragma HLS INTERFACE mode=axis port=huffBitStream"
+        }
+    ]
+}

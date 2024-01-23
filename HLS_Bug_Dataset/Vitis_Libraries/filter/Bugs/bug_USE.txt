@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "heap[hpLen].value = smLen = n;",
+            "Faulty Code": "heap[hpLen].value = smLen = (int16_t)n;"
+        }
+    ]
+}

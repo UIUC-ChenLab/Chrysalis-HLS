@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "void zlibTreegenScheduler(hls::stream<IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> > lz77InTree[NUM_BLOCK], ...",
+            "Faulty Code": "while (is_pending) { ... } // This loop can become infinite if is_pending never becomes false."
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "while (1) { #pragma HLS PIPELINE II = 1 ... if (hufCodeOut.data[0].bitlen == 0) break; } // Nested pipeline pragma inside an infinite loop"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (rden)\n    *dataout = buffer[AddrR];\n\nif (wren)\n    buffer[addrW] = datain;",
+            "Faulty Code": "if (rden)\n    *dataout = buffer[AddrR % NWORDS];\n\nif (wren)\n    buffer[addrW % NWORDS] = datain;"
+        }
+    ]
+}

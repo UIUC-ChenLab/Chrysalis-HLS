@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "acc += *(d_i + 2);",
+            "Faulty Code": "acc += *(d_i + 4);"
+        }
+    ]
+}

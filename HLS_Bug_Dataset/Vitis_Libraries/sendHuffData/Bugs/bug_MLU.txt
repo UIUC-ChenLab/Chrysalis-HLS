@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "outHufVal.data[0] = inHfVal.data[idx++];",
+            "Faulty Code": "outHufVal.data[0] = inHfVal.data[++idx];"
+        }
+    ]
+}

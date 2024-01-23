@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = normTable type = ram_1p impl = lutram",
+            "Faulty Code": "#pragma HLS array_partition variable = normTable dim = 3"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (uint8_t i = 1; i < 64; ++i) {\n#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS unroll factor = 2\nfor (uint8_t i = 1; i < 64; ++i) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (inVal.range(STB_WIDTH - 1, 0) == 0) break;",
+            "Faulty Code": "if (inVal.range(STB_WIDTH, 0) == 0) break;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "if (isRawBlk) outRawStream << inVal;",
+            "Faulty Code": "outRawStream << inVal;"
+        }
+    ]
+}

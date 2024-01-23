@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=length_histogram factor=3"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void computeBitLength(ap_uint<SYMBOL_BITS>* parent, ...",
+            "Faulty Code": "#pragma HLS interface port=child_depth mode=ap_none"
+        }
+    ]
+}

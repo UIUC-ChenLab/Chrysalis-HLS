@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t i = inIdxNum.read(); i != 0xFF; i = inIdxNum.read()) {",
+            "Faulty Code": "for (uint8_t i = inIdxNum.read(); i <= 0xFF; i = inIdxNum.read()) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hufCodeStream[i] << hufCodeOut;",
+            "Faulty Code": "hufCodeStream[i].write(hufCodeOut);"
+        }
+    ]
+}

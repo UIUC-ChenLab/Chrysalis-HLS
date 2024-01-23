@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void example(hls::stream<packet>& A, hls::stream<packet>& B) {\n#pragma HLS INTERFACE axis port = A\n#pragma HLS INTERFACE axis port = B\n\n    packet tmp = A.read();\n    tmp.data = tmp.data + 5;\n    B.write(tmp);\n}",
+            "Faulty Code": "void example(hls::stream<packet>& A, hls::stream<packet>& B) {\n#pragma HLS INTERFACE axis port = A\n#pragma HLS INTERFACE axis port = B\n#pragma HLS dataflow\n    packet tmp = A.read();\n    tmp.data = tmp.data + 5;\n    B.write(tmp);\n}"
+        }
+    ]
+}

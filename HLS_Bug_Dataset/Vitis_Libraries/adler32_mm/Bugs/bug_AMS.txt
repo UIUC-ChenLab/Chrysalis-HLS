@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void adler32_mm(const ap_uint<PARALLEL_BYTE * 8>* in, ap_uint<32>* adlerData, ap_uint<32> inputSize) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=adlerData mode=ap_none"
+        }
+    ]
+}

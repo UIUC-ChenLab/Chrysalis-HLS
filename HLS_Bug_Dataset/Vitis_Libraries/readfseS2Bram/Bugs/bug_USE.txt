@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "fseHdrBuf[fseHIdx + 1] = fhVal.data[1];",
+            "Faulty Code": "fseHdrBuf[(int8_t)fseHIdx + 1] = fhVal.data[1];"
+        }
+    ]
+}

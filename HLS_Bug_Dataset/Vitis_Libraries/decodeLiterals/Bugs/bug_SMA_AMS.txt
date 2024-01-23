@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<IN_BYTES * 8> >& litDecodeInStream",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=litDecodeInStream"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<IntVectorStream_dt<OUT_BYTES * 8, 1> >& literalStream",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=literalStream"
+        }
+    ]
+}

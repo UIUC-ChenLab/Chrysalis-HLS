@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint16_t offs[c_maxbits + 1];",
+            "Faulty Code": "uint16_t offs[c_maxbits + 1]; // Not initialized, could lead to reading uninitialized values when used before being set"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE REGION",
+            "Faulty Code": "#pragma HLS dataflow // Incorrectly placed, should not be used here as there is no concurrent task execution structure in this function"
+        }
+    ]
+}

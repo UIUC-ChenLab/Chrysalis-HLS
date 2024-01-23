@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=outputStreamEos factor=3 dim=1"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "outputStreamEos << false;",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=outputStreamEos"
+        }
+    ]
+}

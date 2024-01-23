@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "output_size[0] = outSize.read();",
+            "Faulty Code": "#pragma HLS INTERFACE port=output_size mode=bram"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "    #pragma HLS PIPELINE"
+        }
+    ]
+}

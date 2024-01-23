@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "outStream << orig_input_data[block_stride * bIdx + i + j];",
+            "Faulty Code": "#pragma HLS INTERFACE port=orig_input_data mode=m_axi\noutStream << orig_input_data[block_stride * bIdx + i + j];"
+        }
+    ]
+}

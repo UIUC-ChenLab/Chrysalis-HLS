@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t i = 0; i < NUM_BLOCK; i++) {",
+            "Faulty Code": "for (uint8_t i = 0; i <= NUM_BLOCK; i++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static uint8_t treeIdx = 0;",
+            "Faulty Code": "static uint8_t treeIdx;"
+        }
+    ]
+}

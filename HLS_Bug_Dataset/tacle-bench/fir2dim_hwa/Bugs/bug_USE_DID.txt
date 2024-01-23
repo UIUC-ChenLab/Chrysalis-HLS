@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int k, f, i;",
+            "Faulty Code": "short k, f, i;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS INTERFACE bram port=fir2dim_input",
+            "Faulty Code": "#pragma HLS array_partition variable=fir2dim_input dim=3"
+        }
+    ]
+}

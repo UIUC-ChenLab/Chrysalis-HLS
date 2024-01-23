@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "decompressSize << uncompressSize.data;",
+            "Faulty Code": "decompressSize << uncompressSize.data.range(32, 0);"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "while (inValue.last == false) {",
+            "Faulty Code": "#pragma HLS dataflow\nwhile (inValue.last == false) {"
+        }
+    ]
+}

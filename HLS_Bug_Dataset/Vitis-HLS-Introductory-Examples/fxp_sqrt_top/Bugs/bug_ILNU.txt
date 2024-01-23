@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "// Non-restoring square-root algorithm\nfor (int i = 0; i <= ROOT_PREC; i++) {",
+            "Faulty Code": "#pragma HLS unroll factor=2\n// Non-restoring square-root algorithm\nfor (int i = 0; i <= ROOT_PREC; i++) {"
+        }
+    ]
+}

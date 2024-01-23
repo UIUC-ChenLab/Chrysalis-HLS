@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable = inStream depth = 32",
+            "Faulty Code": "#pragma HLS array_partition variable=inStream dim=0"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void crc32_mm(const ap_uint<PARALLEL_BYTE * 8>* in, ap_uint<32>* crcData, ap_uint<32> inputSize) {",
+            "Faulty Code": "void crc32_mm(const ap_uint<PARALLEL_BYTE * 8>* in, ap_uint<32>* crcData, ap_uint<32> inputSize) {\n#pragma HLS interface m_axi port=crcData offset=slave"
+        }
+    ]
+}

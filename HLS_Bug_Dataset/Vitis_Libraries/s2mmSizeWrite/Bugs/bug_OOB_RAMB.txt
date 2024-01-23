@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (TUSR_DWIDTH != 0) compressedSize[idx + 1] = inSizeStream.read();",
+            "Faulty Code": "if (TUSR_DWIDTH != 0) compressedSize[idx] = inSizeStream.read();"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "idx += 2;",
+            "Faulty Code": "idx++;"
+        }
+    ]
+}

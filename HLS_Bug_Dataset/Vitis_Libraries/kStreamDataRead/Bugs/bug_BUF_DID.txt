@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "tmp = inKStream.read();",
+            "Faulty Code": "tmp = inKStream.read(); // Assuming 'inKStream' is a buffer that has been split and 'tmp' is being read from the wrong half"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=tmp dim=2 // 'tmp' is a scalar, not an array, and hence 'dim' is incorrect"
+        }
+    ]
+}

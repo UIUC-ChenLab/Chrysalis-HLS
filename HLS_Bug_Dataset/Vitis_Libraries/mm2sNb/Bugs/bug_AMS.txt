@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = local_buffer dim = 1 complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=local_buffer mode=ap_none"
+        }
+    ]
+}

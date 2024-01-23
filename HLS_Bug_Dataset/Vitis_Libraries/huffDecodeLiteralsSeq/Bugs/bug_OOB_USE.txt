@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "cmpSize[3] = remSize - (6 + cmpSize[0] + cmpSize[1] + cmpSize[2]);",
+            "Faulty Code": "cmpSize[4] = remSize - (6 + cmpSize[0] + cmpSize[1] + cmpSize[2]);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "cmpSize[1] = accHuff;",
+            "Faulty Code": "cmpSize[1] = (uint16_t)accHuff.range(31, 16);"
+        }
+    ]
+}

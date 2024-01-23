@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "outVal.data[0].range(19, 0) = nBits;",
+            "Faulty Code": "outVal.data[0] = nBits;"
+        }
+    ]
+}

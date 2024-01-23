@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (nextValue.strobe == 0) {",
+            "Faulty Code": "if (nextValue.strobe != 0) {"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS STREAM variable = encodedOutStream depth = 4",
+            "Faulty Code": "#pragma HLS array_partition variable=extra_lbits type=complete"
+        }
+    ]
+}

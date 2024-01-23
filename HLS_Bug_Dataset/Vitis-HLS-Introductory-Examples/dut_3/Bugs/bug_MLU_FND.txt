@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned i = 0; i < N; i++) {",
+            "Faulty Code": "for (unsigned i = 0; i <= N; i++) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS interface axis port = in",
+            "Faulty Code": "#pragma HLS array_partition variable=in factor=3"
+        }
+    ]
+}

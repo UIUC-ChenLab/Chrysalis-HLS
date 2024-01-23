@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "p_b = &b[k*size];",
+            "Faulty Code": "p_b = &b[k*MAX_SIZE];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "tmp += *p_a++ * *p_b++;",
+            "Faulty Code": "tmp += (short)(*p_a++) * *p_b++;"
+        }
+    ]
+}

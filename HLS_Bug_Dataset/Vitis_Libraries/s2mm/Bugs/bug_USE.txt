@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "void s2mm(hls::stream<ap_uint<DATAWIDTH> >& inStream, ap_uint<DATAWIDTH>* out, hls::stream<uint32_t>& inStreamSize) {",
+            "Faulty Code": "void s2mm(hls::stream<int>& inStream, int* out, hls::stream<uint32_t>& inStreamSize) {"
+        }
+    ]
+}

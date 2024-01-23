@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "val = val * 11;",
+            "Faulty Code": "val = val * 0x7FFFFFFF;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

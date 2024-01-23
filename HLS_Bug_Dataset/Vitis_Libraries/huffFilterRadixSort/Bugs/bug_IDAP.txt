@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "// internal streams\nhls::stream<DSVectorStream_dt<Symbol<MAX_FREQ_DWIDTH>, 1> > intlHeapStream[c_maxSftLim - 1];\n#pragma HLS STREAM variable = intlHeapStream depth = 32",
+            "Faulty Code": "// internal streams\nhls::stream<DSVectorStream_dt<Symbol<MAX_FREQ_DWIDTH>, 1> > intlHeapStream[c_maxSftLim - 1];\n#pragma HLS INTERFACE mode=s_axilite port=intlHeapStream"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "endInPackLenStrm << true;",
+            "Faulty Code": "endInPackLenStrm << endInPackLenStrm.read();"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<32> > adlerStrm;",
+            "Faulty Code": "#pragma HLS interface port=adlerStrm bram"
+        }
+    ]
+}

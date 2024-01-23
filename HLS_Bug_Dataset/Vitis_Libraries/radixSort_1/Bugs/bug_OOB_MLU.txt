@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "heap[digit_location[digit]] = prev_sorting[j];",
+            "Faulty Code": "heap[digit_location[digit] + 1] = prev_sorting[j];"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t i = 0; (i < RADIX - 1) && not_sorted; ++i) {",
+            "Faulty Code": "for (uint8_t i = 0; (i <= RADIX - 1) && not_sorted; ++i) {"
+        }
+    ]
+}

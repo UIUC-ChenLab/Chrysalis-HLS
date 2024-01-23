@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outStream[vid] << in[rIdx + midx];",
+            "Faulty Code": "outStream[vid] << in[rIdx - midx];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE off",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS aggregate variable = litlnTree",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable = litlnTree"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS STREAM variable = hufCodeStream depth = 4",
+            "Faulty Code": "#pragma HLS INTERFACE port=hufCodeStream mode=ap_none"
+        }
+    ]
+}

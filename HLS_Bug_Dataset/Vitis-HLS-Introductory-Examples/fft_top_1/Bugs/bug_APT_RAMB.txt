@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS interface ap_fifo depth = FFT_LENGTH port = in, out",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=in"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void read(A* a_in, A buf_out[NUM]) {\nREAD:\n    for (int i = 0; i < NUM; i++) {\n        buf_out[i] = a_in[i];\n    }\n}",
+            "Faulty Code": "#pragma HLS interface m_axi port=a_in offset=slave bundle=gmem\nvoid read(A* a_in, A buf_out[NUM]) {\nREAD:\n    for (int i = 0; i < NUM; i+=2) {\n        buf_out[i] = a_in[i];\n        buf_out[i+1] = a_in[i+3]; // Incorrect access pattern, skipping one element and potentially reading out-of-bounds\n    }\n}"
+        }
+    ]
+}

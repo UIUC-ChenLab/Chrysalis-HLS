@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "void double_pass(int a[128], int b[128], int tmp1[128], int tmp2[128]) {",
+            "Faulty Code": "void double_pass(short a[128], int b[128], int tmp1[128], int tmp2[128]) {"
+        }
+    ]
+}

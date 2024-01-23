@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS dataflow // (Incorrect placement inside the for loop)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<64> >& inStream",
+            "Faulty Code": "ap_uint<64> inStream // (Array value mapped to scalar interface)"
+        }
+    ]
+}

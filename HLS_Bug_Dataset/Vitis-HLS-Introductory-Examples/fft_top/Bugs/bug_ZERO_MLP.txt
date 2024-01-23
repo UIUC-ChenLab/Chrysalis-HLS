@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "config->setSch(0x2AB);",
+            "Faulty Code": "config->setSch(0);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint32_t midx = 0; midx < burstSize; midx++) {",
+            "Faulty Code": "for (uint32_t midx = 0; midx <= burstSize; midx++) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = read_idx dim = 0 complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = read_idx factor=3 dim = 0 complete"
+        }
+    ]
+}

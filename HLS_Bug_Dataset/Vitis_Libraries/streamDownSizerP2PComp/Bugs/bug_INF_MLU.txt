@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int size = inStreamSize.read(); size != 0; size = inStreamSize.read()) {",
+            "Faulty Code": "for (int size = inStreamSize.read(); size <= 0; size = inStreamSize.read()) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "int idx = i % factor;",
+            "Faulty Code": "int idx = (i + 1) % factor;"
+        }
+    ]
+}

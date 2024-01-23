@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<bool>& rawBlockFlagStream",
+            "Faulty Code": "#pragma HLS interface port=rawBlockFlagStream bram"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (dataSize > 0 && dataSize < 1 + MIN_BLK_SIZE) rawBlockFlagStream << true;",
+            "Faulty Code": "if (dataSize > 0 && dataSize < BLOCK_SIZE / 2) rawBlockFlagStream << true;"
+        }
+    ]
+}

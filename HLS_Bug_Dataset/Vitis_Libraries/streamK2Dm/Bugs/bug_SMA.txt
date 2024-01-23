@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "outEoS << 0;",
+            "Faulty Code": "#pragma HLS interface port=outEoS mode=bram"
+        }
+    ]
+}

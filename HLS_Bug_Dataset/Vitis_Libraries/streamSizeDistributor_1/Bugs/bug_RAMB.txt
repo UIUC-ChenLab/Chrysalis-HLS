@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void streamSizeDistributor(hls::stream<uint32_t>& inStream, hls::stream<uint32_t> outStream[SLAVES]) {\n    do {\n        uint32_t i = inStream.read();\n        for (int n = 0; n < SLAVES; n++) {\n#pragma HLS UNROLL\n            outStream[n] << i;\n        }\n        if (i == 0) break;\n    } while (1);\n}",
+            "Faulty Code": "void streamSizeDistributor(hls::stream<uint32_t>& inStream, hls::stream<uint32_t> outStream[SLAVES]) {\n#pragma HLS interface port=outStream mode=m_axi\n    do {\n        uint32_t i = inStream.read();\n        for (int n = 0; n < SLAVES; n++) {\n#pragma HLS UNROLL\n            outStream[n] << i;\n        }\n        if (i == 0) break;\n    } while (1);\n}"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (fhVal.strobe == 0) break;",
+            "Faulty Code": "// if (fhVal.strobe == 0) break;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "seqCnt = lzMeta;",
+            "Faulty Code": "seqCnt = (uint16_t)(int16_t)lzMeta;"
+        }
+    ]
+}

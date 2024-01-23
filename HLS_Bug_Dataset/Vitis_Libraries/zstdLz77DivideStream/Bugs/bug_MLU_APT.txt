@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint16_t i = 0; i < c_maxCodeLL + 1; i++) {",
+            "Faulty Code": "for (uint16_t i = 0; i < c_maxCodeLL; i++) {"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = literal_freq type = ram_2p impl = lutram",
+            "Faulty Code": "#pragma HLS array_partition variable=literal_freq type=complete"
+        }
+    ]
+}

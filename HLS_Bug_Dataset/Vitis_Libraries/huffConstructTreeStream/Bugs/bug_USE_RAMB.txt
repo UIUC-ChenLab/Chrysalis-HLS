@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "symbol_bits[sorted[k].value] = length;",
+            "Faulty Code": "symbol_bits[sorted[k].value] = (ap_uint<4>)length;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II = 3",
+            "Faulty Code": "#pragma HLS pipeline II = 3"
+        }
+    ]
+}

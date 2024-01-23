@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "Vect_Dn[ j ] = Vect_H[ j * 8 ];",
+            "Faulty Code": "Vect_Dn[ j ] = Vect_H[ j ]; /* Assuming a split buffer where the second half should be used */"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS INTERFACE bram port=F",
+            "Faulty Code": "#pragma HLS array_partition variable=F dim=3 /* 'dim' value should be 1 or 2 for a 2D array */"
+        }
+    ]
+}

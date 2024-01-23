@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "while (inValue.last == false)",
+            "Faulty Code": "do { ... } while (inValue.last == false); // Assuming 'do while' was incorrectly used causing one extra iteration"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<SIZE_DT>& decompressSize",
+            "Faulty Code": "#pragma HLS INTERFACE port=decompressSize mode=ap_none"
+        }
+    ]
+}

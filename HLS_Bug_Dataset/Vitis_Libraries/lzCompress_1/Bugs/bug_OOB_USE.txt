@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint8_t m = 0; m < MATCH_LEN - 1; m++) {",
+            "Faulty Code": "for (uint8_t m = 0; m <= MATCH_LEN; m++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "dictWriteValue.range(c_dictEleWidth - 1, MATCH_LEN * 8) = currIdx;",
+            "Faulty Code": "dictWriteValue.range(c_dictEleWidth, MATCH_LEN * 8) = (int32_t)currIdx;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = normTable type = ram_1p impl = lutram",
+            "Faulty Code": "#pragma HLS array_partition variable=normTable type=complete dim=1"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=normTable dim=2"
+        }
+    ]
+}

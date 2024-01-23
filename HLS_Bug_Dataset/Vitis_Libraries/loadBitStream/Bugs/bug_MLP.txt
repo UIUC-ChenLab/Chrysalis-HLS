@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void loadBitStream(bitBufferType& bitbuffer,\n                   ap_uint<6>& bits_cntr,\n                   hls::stream<ap_uint<16> >& inStream,\n                   hls::stream<bool>& inEos,\n                   bool& done) {\n#pragma HLS INLINE off\n    while (bits_cntr < 32 && (done == false)) {\n    loadBitStream:\n        uint16_t tmp_dt = (uint16_t)inStream.read();\n        bitbuffer += (bitBufferType)(tmp_dt) << bits_cntr;\n        done = inEos.read();\n        bits_cntr += 16;\n    }\n}",
+            "Faulty Code": "void loadBitStream(bitBufferType& bitbuffer,\n                   ap_uint<6>& bits_cntr,\n                   hls::stream<ap_uint<16> >& inStream,\n                   hls::stream<bool>& inEos,\n                   bool& done) {\n#pragma HLS INLINE off\n#pragma HLS pipeline\n    while (bits_cntr < 32 && (done == false)) {\n    loadBitStream:\n        uint16_t tmp_dt = (uint16_t)inStream.read();\n        bitbuffer += (bitBufferType)(tmp_dt) << bits_cntr;\n        done = inEos.read();\n        bits_cntr += 16;\n    }\n}"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<IntVectorStream_dt<32, 1> > encodedOutStream(\"encodedOutStream\");",
+            "Faulty Code": "IntVectorStream_dt<32, 1> encodedOutStream;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE"
+        }
+    ]
+}

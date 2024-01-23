@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (ap_uint<9> i = 0; i < c_maxCodeLL + 1; ++i) {",
+            "Faulty Code": "for (ap_uint<9> i = 0; i <= c_maxCodeLL; ++i) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "outSeqFreqVal.data[0] = getMLCode<8>(outSeqVal.data[0].matlen);",
+            "Faulty Code": "outSeqFreqVal.data[0] = getMLCode<8>(outSeqVal.data[1].matlen);"
+        }
+    ]
+}

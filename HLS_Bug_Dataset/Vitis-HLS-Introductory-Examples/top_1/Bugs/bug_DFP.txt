@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void top(char inval1, char inval2, char inval3, char* outval1, char* outval2, char* outval3) {",
+            "Faulty Code": "#pragma HLS dataflow void top(char inval1, char inval2, char inval3, char* outval1, char* outval2, char* outval3) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_none port=inter"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "stream<int, 16> inter[2];",
+            "Faulty Code": "stream<short, 16> inter[2];"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (uint8_t i = 0; i < c_numBlocks; i++) {\n#pragma HLS UNROLL\n    xf::compression::details::bufferDownsizer<c_dwidth, 8, c_size_dwidth>(distStream[i], downStream[i]);\n}",
+            "Faulty Code": "for (uint8_t i = 0; i < c_numBlocks; i++) {\n#pragma HLS PIPELINE\n#pragma HLS UNROLL\n    xf::compression::details::bufferDownsizer<c_dwidth, 8, c_size_dwidth>(distStream[i], downStream[i]);\n}"
+        }
+    ]
+}

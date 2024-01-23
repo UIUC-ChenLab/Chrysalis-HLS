@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if ( k == i ) break;",
+            "Faulty Code": "if ( k = i ) break;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "for ( j = 0; j < DIM; j++ ) {\n#pragma HLS PIPELINE\n..."
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void outputdatamover(hls::stream<status_t>& status_in_strm, bool* ovflo, hls::stream<cmpxDataOut>& in_strm, hls::stream<cmpxDataOut>& out)",
+            "Faulty Code": "#pragma HLS INTERFACE port=ovflo bram"
+        }
+    ]
+}

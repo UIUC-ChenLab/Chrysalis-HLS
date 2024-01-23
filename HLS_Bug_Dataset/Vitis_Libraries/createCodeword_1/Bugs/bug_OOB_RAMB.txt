@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint16_t i = 1; i <= cur_maxBits; ++i) {",
+            "Faulty Code": "for (uint16_t i = 1; i <= MAX_LEN; ++i) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "LCL_Code_t first_codeword[MAX_LEN + 1];",
+            "Faulty Code": "LCL_Code_t first_codeword[cur_maxBits];"
+        }
+    ]
+}

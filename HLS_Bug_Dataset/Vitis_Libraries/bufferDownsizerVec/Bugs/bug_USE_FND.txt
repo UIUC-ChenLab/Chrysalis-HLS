@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<OUT_DATAWIDTH> outReg = inVal.range(c_outDataHigh, SIZE_DWIDTH);",
+            "Faulty Code": "int outReg = inVal.range(c_outDataHigh, SIZE_DWIDTH);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION factor=3"
+        }
+    ]
+}

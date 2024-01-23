@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "Digit digit = (val.frequency >> shift) & (RADIX - 1);",
+            "Faulty Code": "Digit digit = val.frequency >> shift & (RADIX - 1);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t sizeOutputV = (size - 1) / c_out_word + 1;",
+            "Faulty Code": "uint32_t sizeOutputV = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "for (int j = 0; j < factor; j++) { #pragma HLS PIPELINE II = 1"
+        }
+    ]
+}

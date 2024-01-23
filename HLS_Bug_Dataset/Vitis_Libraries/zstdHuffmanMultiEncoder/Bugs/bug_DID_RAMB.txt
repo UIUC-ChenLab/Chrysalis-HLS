@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = streamSizes complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = streamSizes complete dim=2"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = hfcTable type = ram_2p impl = lutram",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable = hfcTable type = m_axi port=hfcTable"
+        }
+    ]
+}

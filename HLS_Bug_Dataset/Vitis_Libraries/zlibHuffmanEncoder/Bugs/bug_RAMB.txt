@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "// Content of called function\nvoid huffmanProcessingUnit(hls::stream<IntVectorStream_dt<9, 1> >& inStream,\n                           hls::stream<IntVectorStream_dt<32, 1> >& outStream) {",
+            "Faulty Code": "// Content of called function\nvoid huffmanProcessingUnit(hls::stream<IntVectorStream_dt<9, 1> >& inStream,\n                           hls::stream<IntVectorStream_dt<32, 1> >& outStream) {\n#pragma HLS interface port=outStream mode=m_axi"
+        }
+    ]
+}

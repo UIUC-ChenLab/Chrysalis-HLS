@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<c_hf4cWidth> v44[2] = {0, 0};",
+            "Faulty Code": "ap_uint<c_hf4cWidth> v44[1] = {0};"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "v44[k] = ((ap_uint<c_hf4cWidth>)vec1[(2 * k) + 1] << blen1[2 * k]) + vec1[2 * k];",
+            "Faulty Code": "v44[k] = ((ap_uint<c_hf4cWidth>)vec1[(2 * k)] << blen1[(2 * k) + 1]) + vec1[(2 * k) + 1];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<SYMBOL_BITS> digit_histogram[RADIX], digit_location[RADIX];",
+            "Faulty Code": "int digit_histogram[RADIX], digit_location[RADIX];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (uint8_t i = 0; i < NUM_BLOCK; i++) {",
+            "Faulty Code": "#pragma HLS UNROLL factor=2\n        for (uint8_t i = 0; i < NUM_BLOCK; i++) {"
+        }
+    ]
+}

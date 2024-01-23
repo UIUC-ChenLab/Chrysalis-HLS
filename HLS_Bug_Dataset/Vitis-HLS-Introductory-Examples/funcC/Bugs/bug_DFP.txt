@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "out[i] = in[i] * 2;",
+            "Faulty Code": "#pragma HLS dataflow\n        out[i] = in[i] * 2;"
+        }
+    ]
+}

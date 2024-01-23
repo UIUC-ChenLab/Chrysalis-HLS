@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS interface port=out mode=bram"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "qdma_axis<STREAMDWIDTH, 0, 0, 0> t1 = inAxiStream.read();",
+            "Faulty Code": "qdma_axis<STREAMDWIDTH, 0, 0, 0> t1; // Missing initialization from inAxiStream.read()"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (t1.get_last()) { break; }",
+            "Faulty Code": "if (t1.get_last() == false) { break; } // Incorrectly breaks loop on non-last, causing an infinite loop"
+        }
+    ]
+}

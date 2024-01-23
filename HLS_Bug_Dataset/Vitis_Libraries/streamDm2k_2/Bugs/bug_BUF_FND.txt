@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "inData.keep = -1;",
+            "Faulty Code": "inData.keep = num;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for (auto b = 0; b < inputModSize; b++) {",
+            "Faulty Code": "for (auto b = 0; b <= inputModSize; b++) {"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "out.write(in1.read() + in2.read());",
+            "Faulty Code": "#pragma HLS dataflow\n        out.write(in1.read() + in2.read());"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "is_pending.range(vid, vid) = (pendingBytes > 0) ? 1 : 0;",
+            "Faulty Code": "is_pending.range(vid, vid) = (pendingBytes > 0) ? 1 : 1;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outSizeStream[vid] << (input_size[vid] - read_size[vid]);",
+            "Faulty Code": "outSizeStream[vid] << 0;"
+        }
+    ]
+}

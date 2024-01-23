@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned int j = 0; j < NUM_BLOCKS; j++)",
+            "Faulty Code": "for (unsigned int j = 0; j <= NUM_BLOCKS; j++)"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS dataflow inside any loop"
+        }
+    ]
+}

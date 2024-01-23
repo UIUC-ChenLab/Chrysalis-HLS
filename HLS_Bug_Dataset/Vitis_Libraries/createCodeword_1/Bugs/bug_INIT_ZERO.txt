@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "first_codeword[0] = 0;",
+            "Faulty Code": "// first_codeword[0] = 0;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "hfc.data[0].bitlength = (symCnt == 0 && k == 0) ? 1 : length;",
+            "Faulty Code": "hfc.data[0].bitlength = (symCnt == 0 && k == 0) ? 0 : length;"
+        }
+    ]
+}

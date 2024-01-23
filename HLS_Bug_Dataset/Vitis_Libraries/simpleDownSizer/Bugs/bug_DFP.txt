@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void simpleDownSizer(hls::stream<ap_uint<PARALLEL_BYTES + DATAWIDTH> >& inStream,\n                     hls::stream<ap_uint<OUTWIDTH> >& outStream,\n                     hls::stream<bool>& outEos) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid simpleDownSizer(hls::stream<ap_uint<PARALLEL_BYTES + DATAWIDTH> >& inStream,\n                     hls::stream<ap_uint<OUTWIDTH> >& outStream,\n                     hls::stream<bool>& outEos) {"
+        }
+    ]
+}

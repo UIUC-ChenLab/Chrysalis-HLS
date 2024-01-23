@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "seqVal.strobe = 0;",
+            "Faulty Code": "seqVal.strobe = 1;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (i != cIdx) { seqStream[i].read(); }",
+            "Faulty Code": "if (i == cIdx) { seqStream[i].read(); }"
+        }
+    ]
+}

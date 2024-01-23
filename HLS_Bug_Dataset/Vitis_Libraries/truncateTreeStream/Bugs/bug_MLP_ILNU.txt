@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS pipeline"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (uint16_t i = c_lengthHistogram - 1; i > max_bit_len; --i) {",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

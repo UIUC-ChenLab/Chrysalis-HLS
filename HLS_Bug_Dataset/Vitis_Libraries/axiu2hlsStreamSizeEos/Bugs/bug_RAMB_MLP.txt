@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (uint32_t j = 0; j < inputSize; j += c_parallelByte) {",
+            "Faulty Code": "for (uint32_t j = 0; j < inputSize; j++) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "for (ap_axiu<32, 0, 0, 0> tempSize = inSizeStream.read(); tempSize.data != 0; tempSize = inSizeStream.read()) { #pragma HLS PIPELINE II = 1"
+        }
+    ]
+}

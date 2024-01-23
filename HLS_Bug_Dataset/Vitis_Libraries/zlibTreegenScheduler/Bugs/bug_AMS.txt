@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> > lz77InTree[NUM_BLOCK],",
+            "Faulty Code": "#pragma HLS INTERFACE port=lz77InTree mode=ap_none"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable = litsymbolStream depth = c_intlStreamDepth",
+            "Faulty Code": "#pragma HLS array_partition variable=litsymbolStream dim=1"
+        }
+    ]
+}

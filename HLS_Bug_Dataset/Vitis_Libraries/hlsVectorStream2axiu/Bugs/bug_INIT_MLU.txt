@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_axiu<OUT_DWIDTH, 0, 0, 0> tOut;",
+            "Faulty Code": "ap_axiu<OUT_DWIDTH, 0, 0, 0> tOut; // tOut is not initialized here"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "} while (!last);",
+            "Faulty Code": "} while (last); // Incorrectly using 'while (last)' would omit the last iteration"
+        }
+    ]
+}

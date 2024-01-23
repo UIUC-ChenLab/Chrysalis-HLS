@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outValue.data[0].range(23, 16) = inValue;",
+            "Faulty Code": "outValue.data[0].range(23, 16) = nextValue.data[0];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=outValue.data factor=3"
+        }
+    ]
+}

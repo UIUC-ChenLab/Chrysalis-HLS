@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<DSVectorStream_dt<Codeword, 1> >& outStreamCode1,",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=outStreamCode1"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (uint8_t i = 0; i < 2; i++) {",
+            "Faulty Code": "#pragma HLS unroll factor=2 for (uint8_t i = 0; i < 2; i++) {"
+        }
+    ]
+}

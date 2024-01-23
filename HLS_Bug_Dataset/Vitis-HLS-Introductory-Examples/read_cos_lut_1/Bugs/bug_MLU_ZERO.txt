@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int k=0;k<4*LUTSIZE;k++) {",
+            "Faulty Code": "for (int k=0;k<=4*LUTSIZE;k++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if (lsb==0) lut_word = 0;",
+            "Faulty Code": "if (lsb==0) lut_word = 1;"
+        }
+    ]
+}

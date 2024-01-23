@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "inputWindow.range((idxVal + PARALLEL_BYTE) * 8 - 1, idxVal * 8) = inValue.data[0];",
+            "Faulty Code": "inputWindow.range((idxVal) * 8 - 1, (idxVal - PARALLEL_BYTE) * 8) = inValue.data[0];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "inputWindow >>= shiftCnt * 8;",
+            "Faulty Code": "inputWindow >>= shiftCnt;"
+        }
+    ]
+}

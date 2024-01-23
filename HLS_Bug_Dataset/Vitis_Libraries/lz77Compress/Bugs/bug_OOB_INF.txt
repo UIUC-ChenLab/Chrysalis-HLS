@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint8_t nextMatchCh = local_mem[match_loc % BOOSTER_OFFSET_WINDOW];",
+            "Faulty Code": "uint8_t nextMatchCh = local_mem[match_loc];"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (uint32_t i = 0; i < (input_size - LEFT_BYTES); i++) {",
+            "Faulty Code": "for (uint32_t i = 0; i <= (input_size - LEFT_BYTES); i++) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint16_t maxSymbol;",
+            "Faulty Code": "uint16_t maxSymbol = 0;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "normTableStream[0] << outVal;\nnormTableStream[1] << outVal;",
+            "Faulty Code": "normTableStream[0].write(outVal);\nnormTableStream[1].write(outVal);"
+        }
+    ]
+}

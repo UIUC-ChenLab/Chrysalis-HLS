@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outVal.data[k] = hfcTable[tblIdx][inLit.range(7 + (k * 8), k * 8)];",
+            "Faulty Code": "outVal.data[k] = hfcTable[tblIdx + c_hftCount][inLit.range(7 + (k * 8), k * 8)];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<DSVectorStream_dt<HuffmanCode_dt<MAX_BITS>, 1> >& hfCodeStream,",
+            "Faulty Code": "#pragma HLS interface port=hfCodeStream bram"
+        }
+    ]
+}

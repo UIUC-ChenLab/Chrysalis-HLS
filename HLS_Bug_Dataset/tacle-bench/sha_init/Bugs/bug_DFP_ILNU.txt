@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void sha_init () {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid sha_init () {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "sha_info_digest[0] = 0x67452301L;",
+            "Faulty Code": "#pragma HLS unroll factor=3\nsha_info_digest[0] = 0x67452301L;"
+        }
+    ]
+}

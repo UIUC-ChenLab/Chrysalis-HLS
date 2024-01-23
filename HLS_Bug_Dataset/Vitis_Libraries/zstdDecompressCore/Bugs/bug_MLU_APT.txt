@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "} while (last == false);",
+            "Faulty Code": "} while (last != false);"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS STREAM variable = zstdCoreInStream depth = c_inStreamDepth",
+            "Faulty Code": "#pragma HLS STREAM variable = zstdCoreInStream depth = c_minStreamDepth"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t k = 0; k < c_outBytes; ++k) {",
+            "Faulty Code": "for (uint8_t k = 0; k <= c_outBytes; ++k) {"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=outVal.data type=block factor=2"
+        }
+    ]
+}

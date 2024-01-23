@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "ap_uint<IN_WIDTH> inBuffer = 0;",
+            "Faulty Code": "#pragma HLS array_partition variable=inBuffer dim=2 complete // Incorrect 'dim' value for a scalar"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS unroll factor=2 // Unrolling non-innermost loop without full inner loop unrolling"
+        }
+    ]
+}

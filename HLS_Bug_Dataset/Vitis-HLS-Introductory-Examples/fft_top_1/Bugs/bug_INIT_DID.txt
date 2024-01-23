@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "status_t status = status_in_strm.read();",
+            "Faulty Code": "status_t status; // Missing initialization"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS interface ap_fifo depth = FFT_LENGTH port = in, out",
+            "Faulty Code": "#pragma HLS array_partition dim = 2 variable = in // Incorrect 'dim' for a stream"
+        }
+    ]
+}

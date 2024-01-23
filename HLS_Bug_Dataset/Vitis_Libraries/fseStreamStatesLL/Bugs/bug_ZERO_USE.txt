@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t bswLL, bswML, bswOF;",
+            "Faulty Code": "uint32_t bswLL = 0, bswML, bswOF;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "bswOF = acchbs >> (bitsInAcc - ofSymBits);",
+            "Faulty Code": "bswOF = (int)acchbs >> (bitsInAcc - ofSymBits);"
+        }
+    ]
+}

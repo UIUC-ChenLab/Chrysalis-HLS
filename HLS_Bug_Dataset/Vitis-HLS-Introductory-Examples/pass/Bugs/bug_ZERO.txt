@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "void pass(int a[128], int tmp1[128]) {\n    for (int i = 0; i < 128; i++) {\n        tmp1[i] = a[i];\n    }\n}",
+            "Faulty Code": "void pass(int a[128], int tmp1[128]) {\n    int i = 1; // Incorrectly initialized to 1 instead of 0\n    for (; i < 128; i++) {\n        tmp1[i] = a[i];\n    }\n}"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "rIdx = memReadBegin[rsi];",
+            "Faulty Code": "rIdx = seqBuffer[rIdx].getData(); // Incorrectly accessing seqBuffer using rIdx which may be out-of-bounds"
+        }
+    ]
+}

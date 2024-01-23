@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "first_codeword[0] = 0;",
+            "Faulty Code": "first_codeword[1] = 0;"
+        }
+    ]
+}

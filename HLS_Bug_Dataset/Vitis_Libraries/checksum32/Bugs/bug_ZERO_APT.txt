@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "adlerStrm << 1;",
+            "Faulty Code": "adlerStrm << 0;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS STREAM variable = endInPackLenStrm depth = 4",
+            "Faulty Code": "#pragma HLS array_partition variable = endInPackLenStrm type = complete"
+        }
+    ]
+}

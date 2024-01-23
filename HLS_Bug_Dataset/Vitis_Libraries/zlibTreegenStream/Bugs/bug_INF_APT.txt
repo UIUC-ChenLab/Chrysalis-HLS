@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (isEOBlocks.read() == false) {",
+            "Faulty Code": "while (isEOBlocks.read() != false) {"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = digit_location complete dim = 1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = digit_location type=cyclic dim = 1"
+        }
+    ]
+}

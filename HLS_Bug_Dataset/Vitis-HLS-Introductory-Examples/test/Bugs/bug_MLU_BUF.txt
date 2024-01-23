@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "A[i] += B[i] + C[i];",
+            "Faulty Code": "for (int j = 0; j < N-1; j++) A[j] += B[j] + C[j]; // Assuming N is the size of the arrays"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "A[i] += B[i] + C[i];",
+            "Faulty Code": "A[i] += B[i + N/2] + C[i]; // Assuming the buffer B is split and the wrong half is copied"
+        }
+    ]
+}

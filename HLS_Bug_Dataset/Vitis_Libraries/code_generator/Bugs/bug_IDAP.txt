@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void code_generator(uint8_t* weights, ...)",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=weights"
+        }
+    ]
+}

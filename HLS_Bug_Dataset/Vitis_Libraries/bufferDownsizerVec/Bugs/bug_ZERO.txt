@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "IntVectorStream_dt<8, c_outWord> outVal;",
+            "Faulty Code": "IntVectorStream_dt<8, c_outWord> outVal = {0};"
+        }
+    ]
+}

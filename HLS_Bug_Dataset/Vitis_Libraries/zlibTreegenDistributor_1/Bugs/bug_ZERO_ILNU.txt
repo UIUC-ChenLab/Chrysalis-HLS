@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "for (uint8_t i = inIdxNum.read(); i != 0xFF; i = inIdxNum.read()) {",
+            "Faulty Code": "for (uint8_t i = 0; i != 0xFF; i = inIdxNum.read()) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (uint16_t j = 0; j < c_litDistCodeCnt; j++) {",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (uint16_t j = 0; j < c_litDistCodeCnt; j++) {"
+        }
+    ]
+}

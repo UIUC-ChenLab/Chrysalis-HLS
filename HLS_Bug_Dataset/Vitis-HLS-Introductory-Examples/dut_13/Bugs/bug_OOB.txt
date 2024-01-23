@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "static int j;\nfor (int i = 0; i < 128; i++) {\n    j++;\n    tmp1[i] = a[i];\n    tmp2[i] = a[i];\n}",
+            "Faulty Code": "static int j;\nfor (int i = 0; i <= 128; i++) {\n    j++;\n    tmp1[i] = a[i];\n    tmp2[i] = a[i];\n}"
+        }
+    ]
+}

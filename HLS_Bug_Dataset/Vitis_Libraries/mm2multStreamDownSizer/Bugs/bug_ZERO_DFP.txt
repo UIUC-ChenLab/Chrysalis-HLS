@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<IN_DATAWIDTH> inBuffer = 0;",
+            "Faulty Code": "ap_uint<IN_DATAWIDTH> inBuffer;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

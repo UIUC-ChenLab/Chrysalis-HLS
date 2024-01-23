@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "out_memory += count;",
+            "Faulty Code": "out_memory[i] = in_val.data_filed;"
+        }
+    ]
+}

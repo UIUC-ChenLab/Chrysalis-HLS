@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void s2mmAxi(ap_uint<DATAWIDTH>* out,",
+            "Faulty Code": "void s2mmAxi(ap_uint<DATAWIDTH> out,"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS unroll factor = 4"
+        }
+    ]
+}

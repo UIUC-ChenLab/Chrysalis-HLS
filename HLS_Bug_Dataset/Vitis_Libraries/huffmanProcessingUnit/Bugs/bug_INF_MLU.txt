@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (nextValue.strobe == 0) {",
+            "Faulty Code": "if (nextValue.strobe != 0) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "outValue.strobe = 1;",
+            "Faulty Code": "outValue.strobe = 2;"
+        }
+    ]
+}

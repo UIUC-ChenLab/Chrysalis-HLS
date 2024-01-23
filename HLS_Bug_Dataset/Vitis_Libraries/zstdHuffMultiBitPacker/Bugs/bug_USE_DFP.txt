@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<c_hf2cWidth> vec1[PARALLEL_HUFFMAN / 2];",
+            "Faulty Code": "ap_int<c_hf2cWidth> vec1[PARALLEL_HUFFMAN / 2];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

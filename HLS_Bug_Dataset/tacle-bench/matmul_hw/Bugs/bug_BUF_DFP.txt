@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INTERFACE bram port=c",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "tmp += a[i][k] * b[k][j];",
+            "Faulty Code": "tmp += a[k][i] * b[j][k];"
+        }
+    ]
+}

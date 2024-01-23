@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "inBuffer >>= OUT_DATAWIDTH;",
+            "Faulty Code": "inBuffer >>= IN_DATAWIDTH;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "outStream << inBuffer.range(OUT_DATAWIDTH - 1, 0);",
+            "Faulty Code": "outStream << inBuffer.range(IN_DATAWIDTH - 1, IN_DATAWIDTH - OUT_DATAWIDTH);"
+        }
+    ]
+}

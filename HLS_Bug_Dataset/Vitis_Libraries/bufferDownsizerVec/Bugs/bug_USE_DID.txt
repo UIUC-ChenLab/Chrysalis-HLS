@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "outVal.strobe = ((inSize < c_outWord) ? (uint8_t)inSize : c_outWord);",
+            "Faulty Code": "outVal.strobe = ((inSize < c_outWord) ? inSize : c_outWord);"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition dim=2"
+        }
+    ]
+}

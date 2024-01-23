@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (!isRawBlock) outStream << inVal;",
+            "Faulty Code": "if (!isRawBlock) outStrdStream << inVal;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "while (true) { ... }",
+            "Faulty Code": "#pragma HLS unroll factor=2\nwhile (true) { ... }"
+        }
+    ]
+}

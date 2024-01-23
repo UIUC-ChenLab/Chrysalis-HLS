@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void hlsStream2axis(hls::stream<ap_uint<STREAMDWIDTH> >& outputStream, ...",
+            "Faulty Code": "#pragma HLS dataflow\nvoid hlsStream2axis(hls::stream<ap_uint<STREAMDWIDTH> >& outputStream, ..."
+        }
+    ]
+}

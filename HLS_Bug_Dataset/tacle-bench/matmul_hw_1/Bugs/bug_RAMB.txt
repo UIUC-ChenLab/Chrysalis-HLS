@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS INTERFACE bram port=c",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=c depth=32"
+        }
+    ]
+}

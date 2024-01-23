@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out[i] = in[i];",
+            "Faulty Code": "out[i + 1] = in[i];"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "complex<data_in_t> xn[FFT_LENGTH];",
+            "Faulty Code": "complex<data_in_t> xn;"
+        }
+    ]
+}

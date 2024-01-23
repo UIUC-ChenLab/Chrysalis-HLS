@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "lut_word = cos_lut[adr];",
+            "Faulty Code": "adr      = -lsb;\nlut_word = cos_lut[adr];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<c_streamWidth> bsacc[c_maxCodeLen + 1];",
+            "Faulty Code": "ap_uint<c_streamWidth> bsacc[c_maxCodeLen];"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = bsacc complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = bsacc complete dim=2"
+        }
+    ]
+}

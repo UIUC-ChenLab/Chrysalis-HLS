@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "incr_output_index = PARALLEL_BYTES;",
+            "Faulty Code": "incr_output_index = PARALLEL_BYTES - 1;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<SYMBOL_BITS> digit_histogram[RADIX], digit_location[RADIX];",
+            "Faulty Code": "ap_uint<SYMBOL_BITS> digit_histogram[RADIX-1], digit_location[RADIX-1];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS dataflow disable"
+        }
+    ]
+}

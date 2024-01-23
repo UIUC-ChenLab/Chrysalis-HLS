@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "acc += *(d_i + 3);",
+            "Faulty Code": "acc += *(d_i + 4);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "acc += *d_i;",
+            "Faulty Code": "acc += (signed char)*d_i;"
+        }
+    ]
+}

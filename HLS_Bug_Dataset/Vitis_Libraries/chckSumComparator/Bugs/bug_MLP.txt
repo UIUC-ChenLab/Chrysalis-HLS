@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void chckSumComparator(hls::stream<ap_uint<32> >& checkSum1,\n                       hls::stream<ap_uint<32> >& checkSum2,\n                       hls::stream<bool>& output) {\n    auto chk1 = checkSum1.read();\n    auto chk2 = checkSum2.read();\n    output << (chk1 != chk2);\n}",
+            "Faulty Code": "void chckSumComparator(hls::stream<ap_uint<32> >& checkSum1,\n                       hls::stream<ap_uint<32> >& checkSum2,\n                       hls::stream<bool>& output) {\n    #pragma HLS pipeline\n    auto chk1 = checkSum1.read();\n    #pragma HLS pipeline\n    auto chk2 = checkSum2.read();\n    output << (chk1 != chk2);\n}"
+        }
+    ]
+}

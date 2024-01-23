@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS RESOURCE variable=H core=RAM_1P_BRAM",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=H"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INTERFACE bram port=y",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=y"
+        }
+    ]
+}

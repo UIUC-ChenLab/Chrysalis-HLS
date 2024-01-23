@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "qdma_axis<STREAMDWIDTH, 0, 0, 0> t1 = inAxiStream.read();",
+            "Faulty Code": "qdma_axis<STREAMDWIDTH, 0, 0, 0> t1 = inAxiStream.read(); // Assuming inAxiStream could be empty"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<STREAMDWIDTH> >& outStream",
+            "Faulty Code": "#pragma HLS interface port=outStream ap_none"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "RES.write(x_aux[N - N / 2 + i] - y_aux[N - N / 2 + i] / N);",
+            "Faulty Code": "RES.write(x_aux[i] - y_aux[i] / N);"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline II = 1 rewind",
+            "Faulty Code": "#pragma HLS unroll factor = 4"
+        }
+    ]
+}

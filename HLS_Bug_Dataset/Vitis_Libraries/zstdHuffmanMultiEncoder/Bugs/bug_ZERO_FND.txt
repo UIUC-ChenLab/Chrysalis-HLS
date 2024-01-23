@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "HuffmanCode_dt<MAX_BITS> zeroHf;\nzeroHf.code = 0;\nzeroHf.bitlen = 0;",
+            "Faulty Code": "HuffmanCode_dt<MAX_BITS> zeroHf = {0};"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = streamSizes complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = streamSizes cyclic factor=3"
+        }
+    ]
+}

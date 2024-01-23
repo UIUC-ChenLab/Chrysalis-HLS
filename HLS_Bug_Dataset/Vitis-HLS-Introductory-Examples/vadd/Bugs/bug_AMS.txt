@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INTERFACE m_axi port = a offset = slave bundle = gmem max_read_burst_length = 256 max_write_burst_length = 256 depth = 2048",
+            "Faulty Code": "#pragma HLS INTERFACE s_axilite port = a"
+        }
+    ]
+}

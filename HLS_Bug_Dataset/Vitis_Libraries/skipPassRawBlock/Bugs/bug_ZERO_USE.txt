@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<2> outFlagVal = 1;",
+            "Faulty Code": "ap_uint<2> outFlagVal = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "outFlagVal.range(1, 1) = (ap_uint<1>)isRawBlk;",
+            "Faulty Code": "outFlagVal.range(1, 1) = isRawBlk;"
+        }
+    ]
+}

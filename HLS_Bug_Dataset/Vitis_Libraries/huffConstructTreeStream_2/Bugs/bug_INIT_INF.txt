@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<SYMBOL_BITS> count = 0;",
+            "Faulty Code": "ap_uint<SYMBOL_BITS> count;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (length < 0) break;",
+            "Faulty Code": "// if (length < 0) break;"
+        }
+    ]
+}

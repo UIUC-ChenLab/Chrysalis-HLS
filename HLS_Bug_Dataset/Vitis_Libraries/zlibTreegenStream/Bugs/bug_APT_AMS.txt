@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = digit_histogram complete dim = 1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = digit_histogram type=block dim = 1"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS STREAM variable = heapStream depth = 320",
+            "Faulty Code": "#pragma HLS INTERFACE port = heapStream mode=ap_none"
+        }
+    ]
+}

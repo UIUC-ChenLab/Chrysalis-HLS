@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void sfunc3(din_t inrun[N], din_t oval[N]) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid sfunc3(din_t inrun[N], din_t oval[N]) {"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "const uint32_t len = (1 << hfw) >> 1;",
+            "Faulty Code": "const int len = (1 << hfw) >> 1;"
+        }
+    ]
+}

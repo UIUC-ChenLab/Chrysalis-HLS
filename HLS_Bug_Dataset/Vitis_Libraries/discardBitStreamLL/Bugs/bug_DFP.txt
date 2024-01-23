@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void discardBitStreamLL(bitBufferTypeLL& bitbuffer, ap_uint<6>& bits_cntr, ap_uint<6> n_bits) {\n#pragma HLS INLINE off\nbitbuffer >>= n_bits;\nbits_cntr -= n_bits;\n}",
+            "Faulty Code": "void discardBitStreamLL(bitBufferTypeLL& bitbuffer, ap_uint<6>& bits_cntr, ap_uint<6> n_bits) {\n#pragma HLS dataflow\nbitbuffer >>= n_bits;\nbits_cntr -= n_bits;\n}"
+        }
+    ]
+}

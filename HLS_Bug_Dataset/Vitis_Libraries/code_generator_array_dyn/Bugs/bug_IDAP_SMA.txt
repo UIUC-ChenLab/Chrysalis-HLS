@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = count",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = count type=cyclic"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "uint16_t* lens, ap_uint<9> codes, uint32_t* table, uint32_t* table_extra",
+            "Faulty Code": "#pragma HLS INTERFACE port=lens mode=bram"
+        }
+    ]
+}

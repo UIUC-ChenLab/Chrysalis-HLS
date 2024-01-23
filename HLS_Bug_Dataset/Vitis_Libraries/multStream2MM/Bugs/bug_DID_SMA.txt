@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = write_size dim = 0 complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = write_size dim = 1 complete"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void multStream2MM(hls::stream<ap_uint<IN_DATAWIDTH> > inStream[NUM_BLOCK], ...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=inStream mode=ap_fifo"
+        }
+    ]
+}

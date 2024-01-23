@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS DATAFLOW skip_exit_check"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<uint32_t> totalOutSizeStream[NUM_BLOCK]",
+            "Faulty Code": "uint32_t totalOutSizeStream[NUM_BLOCK]"
+        }
+    ]
+}

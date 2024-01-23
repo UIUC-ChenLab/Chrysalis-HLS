@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void read(A* a_in, A buf_out[NUM]) {\nREAD:\n    for (int i = 0; i < NUM; i++) {\n        buf_out[i] = a_in[i];\n    }\n}",
+            "Faulty Code": "void read(A* a_in, A buf_out[NUM]) {\n#pragma HLS INTERFACE m_axi port=a_in offset=slave bundle=gmem\nREAD:\n    for (int i = 0; i < NUM; i+=2) {\n        buf_out[i] = a_in[i + 1];\n    }\n}"
+        }
+    ]
+}

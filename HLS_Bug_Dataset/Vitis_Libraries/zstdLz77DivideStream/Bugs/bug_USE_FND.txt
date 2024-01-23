@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint16_t tOffset = encodedValue.data[0].range(31, 16) + 3 + 1;",
+            "Faulty Code": "int tOffset = encodedValue.data[0].range(31, 16) + 3 + 1;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=literal_freq factor=5"
+        }
+    ]
+}

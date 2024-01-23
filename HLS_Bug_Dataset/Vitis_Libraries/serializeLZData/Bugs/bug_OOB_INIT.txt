@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint8_t s = 0; s < c_seqFreqCnt; ++s) {",
+            "Faulty Code": "for (uint8_t s = 0; s <= c_seqFreqCnt; ++s) {"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "bool rleFlag;",
+            "Faulty Code": "bool rleFlag = rleFlagStream[cIdx].read();"
+        }
+    ]
+}

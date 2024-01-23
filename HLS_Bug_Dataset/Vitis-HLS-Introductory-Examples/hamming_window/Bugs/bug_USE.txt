@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "outdata[i] = (int32_t)window_coeff[i] * (int32_t)indata[i];",
+            "Faulty Code": "outdata[i] = window_coeff[i] * indata[i];"
+        }
+    ]
+}

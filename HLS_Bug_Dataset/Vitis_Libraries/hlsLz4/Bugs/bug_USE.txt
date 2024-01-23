@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "void hlsLz4Core(hls::stream<data_t>& inStream,",
+            "Faulty Code": "void hlsLz4Core(hls::stream<int>& inStream,"
+        }
+    ]
+}

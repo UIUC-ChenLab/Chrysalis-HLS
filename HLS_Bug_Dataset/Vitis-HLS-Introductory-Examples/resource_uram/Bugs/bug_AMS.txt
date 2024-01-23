@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = buffer type = ram_2p impl = uram",
+            "Faulty Code": "#pragma HLS INTERFACE port=buffer mode=ap_none"
+        }
+    ]
+}

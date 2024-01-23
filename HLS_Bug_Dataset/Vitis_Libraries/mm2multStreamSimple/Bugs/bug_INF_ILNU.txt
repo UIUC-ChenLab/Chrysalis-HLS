@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "is_pending.range(vid, vid) = (pendingBytes > 0) ? 1 : 0;",
+            "Faulty Code": "is_pending.range(vid, vid) = 1;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE off",
+            "Faulty Code": "#pragma HLS UNROLL"
+        }
+    ]
+}

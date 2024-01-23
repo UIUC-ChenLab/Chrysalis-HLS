@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS DATAFLOW inside any of the loops"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<IntVectorStream_dt<16, 1> > normTableStream[2];",
+            "Faulty Code": "#pragma HLS INTERFACE port=normTableStream mode=ap_none"
+        }
+    ]
+}

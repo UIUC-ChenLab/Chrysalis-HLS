@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if ((in_count < num_symbols && symFreq <= intermediate_freq) || tree_count == i) {",
+            "Faulty Code": "if ((in_count <= num_symbols && symFreq <= intermediate_freq) || tree_count == i) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "child_depth[num_symbols - 1] = 0;",
+            "Faulty Code": "child_depth[num_symbols - 1] = 1;"
+        }
+    ]
+}

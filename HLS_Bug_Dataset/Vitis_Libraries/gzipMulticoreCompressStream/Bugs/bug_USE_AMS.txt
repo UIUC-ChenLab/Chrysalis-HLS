@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint8_t match_ch = nextMatchCh;",
+            "Faulty Code": "int match_ch = nextMatchCh;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS STREAM variable = coreIdxStreamArr depth = 32",
+            "Faulty Code": "#pragma HLS INTERFACE port=coreIdxStreamArr mode=ap_none"
+        }
+    ]
+}

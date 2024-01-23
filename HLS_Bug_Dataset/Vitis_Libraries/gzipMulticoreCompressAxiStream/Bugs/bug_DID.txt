@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable = lz77PassStream depth = c_bufferFifoDepthSmallBlocks",
+            "Faulty Code": "#pragma HLS STREAM variable = lz77PassStream dim = 1 depth = c_bufferFifoDepthSmallBlocks"
+        }
+    ]
+}

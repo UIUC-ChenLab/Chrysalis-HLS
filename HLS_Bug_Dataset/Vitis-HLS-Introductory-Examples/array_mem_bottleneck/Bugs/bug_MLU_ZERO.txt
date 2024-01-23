@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = 2; i < N; ++i)",
+            "Faulty Code": "for (i = 2; i <= N; ++i)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "dout_t sum = 0;",
+            "Faulty Code": "dout_t sum;"
+        }
+    ]
+}

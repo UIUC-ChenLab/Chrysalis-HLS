@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "auto tmp = arr[i];",
+            "Faulty Code": "int tmp = arr[i];"
+        }
+    ]
+}

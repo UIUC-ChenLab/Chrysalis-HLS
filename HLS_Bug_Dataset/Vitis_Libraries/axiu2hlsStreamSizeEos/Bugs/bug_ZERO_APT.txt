@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "const int c_parallelByte = IN_DWIDTH / 8;",
+            "Faulty Code": "int c_parallelByte = 0;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=outputStreamEos"
+        }
+    ]
+}

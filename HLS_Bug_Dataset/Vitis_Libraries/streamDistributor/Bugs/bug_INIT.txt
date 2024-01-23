@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "bool i = inStream.read();",
+            "Faulty Code": "bool i; // Uninitialized variable"
+        }
+    ]
+}

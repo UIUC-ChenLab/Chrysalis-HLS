@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t outSize = countSetBits<c_keepDWidth>((int)(inValue.keep));",
+            "Faulty Code": "uint32_t outSize = 0;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<uint32_t>& decompressSize",
+            "Faulty Code": "#pragma HLS interface port=decompressSize"
+        }
+    ]
+}

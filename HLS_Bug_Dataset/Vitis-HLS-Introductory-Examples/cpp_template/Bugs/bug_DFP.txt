@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "dout = fibon_s<FIB_N>::fibon_f(a, b);",
+            "Faulty Code": "#pragma HLS dataflow\ndout = fibon_s<FIB_N>::fibon_f(a, b);"
+        }
+    ]
+}

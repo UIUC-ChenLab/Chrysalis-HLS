@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "typedef ap_uint<16> offset_dt;",
+            "Faulty Code": "typedef ap_int<16> offset_dt;"
+        }
+    ]
+}

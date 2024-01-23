@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "auto curFreq = inFreq.read();",
+            "Faulty Code": "IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> curFreq;"
+        }
+    ]
+}

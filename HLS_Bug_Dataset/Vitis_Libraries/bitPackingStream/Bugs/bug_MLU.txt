@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint32_t i = 0; i < localBits_idx; i += 16) {",
+            "Faulty Code": "for (uint32_t i = 0; i <= localBits_idx; i += 16) {"
+        }
+    ]
+}

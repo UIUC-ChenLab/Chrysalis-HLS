@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "adlerStrm << 1;",
+            "Faulty Code": "// adlerStrm << 1; // This line is commented out, not initializing adlerStrm with 1"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t i = 0; i < NUM_CORE; i++) {",
+            "Faulty Code": "for (uint8_t i = 0; i <= NUM_CORE; i++) { // Incorrect loop bounds, unrolls one extra iteration"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "LCL_Code_t out_reversed = first_codeword[length];",
+            "Faulty Code": "LCL_Code_t out_reversed = first_codeword[length + MAX_LEN];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "huffCodes << hfc;",
+            "Faulty Code": "huffCodes.write(hfc);"
+        }
+    ]
+}

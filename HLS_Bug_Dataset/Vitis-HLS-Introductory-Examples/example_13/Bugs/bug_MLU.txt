@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "proc<1>(inter[1], mux_in[1]);",
+            "Faulty Code": "proc<2>(inter[1], mux_in[1]);"
+        }
+    ]
+}

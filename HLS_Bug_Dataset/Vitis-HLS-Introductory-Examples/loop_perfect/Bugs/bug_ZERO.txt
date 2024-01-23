@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if (j == 0) acc = 0;",
+            "Faulty Code": "acc = 0;"
+        }
+    ]
+}

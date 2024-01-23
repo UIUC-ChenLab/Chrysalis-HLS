@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<PARALLEL_BYTES * 8> >& out",
+            "Faulty Code": "#pragma HLS INTERFACE port=out mode=ap_none"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        }
+    ]
+}

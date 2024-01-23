@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS INTERFACE m_axi port = out_r depth = DATA_SIZE",
+            "Faulty Code": "#pragma HLS INTERFACE s_axilite port = out_r depth = DATA_SIZE"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL FACTOR = 2",
+            "Faulty Code": "#pragma HLS UNROLL FACTOR = 4"
+        }
+    ]
+}

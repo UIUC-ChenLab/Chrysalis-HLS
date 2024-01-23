@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "tmp += a[i][k] * b[k][j];",
+            "Faulty Code": "tmp += a[j][k] * b[k][i];"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS INTERFACE bram port=c",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=c dim=3"
+        }
+    ]
+}

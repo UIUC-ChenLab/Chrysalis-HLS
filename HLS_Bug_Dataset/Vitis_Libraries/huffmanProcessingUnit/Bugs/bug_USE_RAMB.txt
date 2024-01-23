@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "outValue.data[0].range(15, 8) = inValue.range(7, 0);",
+            "Faulty Code": "outValue.data[0].range(15, 8) = inValue.range(8, 1);"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "outStream << outValue;",
+            "Faulty Code": "outStream.write(outValue);"
+        }
+    ]
+}

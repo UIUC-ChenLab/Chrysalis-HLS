@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "void read(A* a_in, A buf_out[NUM]) {",
+            "Faulty Code": "void read(A* a_in, A buf_out[NUM]) {\n#pragma HLS array_partition dim=2 complete"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "void write(hls::burst_maxi<dout_t> RES, dout_t x_aux[N], dout_t y_aux[N]) {",
+            "Faulty Code": "void write(hls::burst_maxi<dout_t> RES, dout_t x_aux[N], dout_t y_aux[N]) {\n#pragma HLS unroll factor=2"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < SZ; i++) {\n    data_t tmp;\n    tmp = stream_in.read();\n    regA[i] = A[i] + tmp;\n}",
+            "Faulty Code": "for (int i = 0; stream_in.read(); i++) {\n    data_t tmp;\n    tmp = stream_in.read();\n    regA[i] = A[i] + tmp;\n}"
+        }
+    ]
+}

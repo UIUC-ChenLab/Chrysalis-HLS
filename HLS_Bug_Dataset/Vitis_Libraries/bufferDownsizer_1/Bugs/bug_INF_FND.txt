@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (inSize > 0) {",
+            "Faulty Code": "while (true) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "if (dsize == outSizeV) {",
+            "Faulty Code": "if (dsize % c_factor == 0) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (uint16_t u = fcw; u < fcw + len; ++u) {",
+            "Faulty Code": "for (uint16_t u = fcw; u <= fcw + len; ++u) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = bitlen_histogram complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=bitlen_histogram mode=ap_none"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS STREAM variable = zstdCoreInStream depth = c_inStreamDepth",
+            "Faulty Code": "#pragma HLS interface port=zstdCoreInStream bram"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS pipeline II = 1 // Inside do-while loop"
+        }
+    ]
+}

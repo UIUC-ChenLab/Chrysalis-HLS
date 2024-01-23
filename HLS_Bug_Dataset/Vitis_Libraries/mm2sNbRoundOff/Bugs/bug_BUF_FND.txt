@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "local_buffer[bIdx][i] = in[mem_read_word_idx + i];",
+            "Faulty Code": "local_buffer[bIdx][i] = in[mem_read_word_idx + BURST_SIZE + i];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = local_buffer dim = 1 complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = local_buffer dim = 1 factor=4"
+        }
+    ]
+}

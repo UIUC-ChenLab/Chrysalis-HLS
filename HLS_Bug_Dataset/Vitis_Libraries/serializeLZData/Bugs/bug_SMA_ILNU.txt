@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "seqVal.strobe = 0;",
+            "Faulty Code": "#pragma HLS INTERFACE port=seqVal_strobe m_axi"
+        }
+    ]
+}

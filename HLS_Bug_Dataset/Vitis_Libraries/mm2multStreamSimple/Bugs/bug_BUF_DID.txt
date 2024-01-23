@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outStream[vid] << in[rIdx + midx];",
+            "Faulty Code": "outStream[vid] << in[rIdx - midx];"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = read_idx dim = 0 complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = read_idx dim = 1 complete"
+        }
+    ]
+}

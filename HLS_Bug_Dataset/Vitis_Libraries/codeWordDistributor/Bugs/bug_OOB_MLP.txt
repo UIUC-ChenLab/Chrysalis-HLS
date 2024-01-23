@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint16_t j = 0; j < hctMeta[i]; j++) {",
+            "Faulty Code": "for (uint16_t j = 0; j <= hctMeta[i]; j++) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE"
+        }
+    ]
+}

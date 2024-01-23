@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void sha_init () { ... }",
+            "Faulty Code": "void sha_init () {\n#pragma HLS interface m_axi port=sha_info_digest\n  sha_info_digest[0] = 0x67452301L; ... }"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "void sha_init () { ... }",
+            "Faulty Code": "void sha_init () {\n#pragma HLS unroll\n  sha_info_digest[0] = 0x67452301L; ... }"
+        }
+    ]
+}

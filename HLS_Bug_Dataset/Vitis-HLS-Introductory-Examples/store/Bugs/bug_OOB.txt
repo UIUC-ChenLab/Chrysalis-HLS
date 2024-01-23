@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "void store(hls::stream<vecOf16Words>& in, vecOf16Words* out, int size) {\nLoop_St:\n    for (int i = 0; i < size; i++) {\n#pragma HLS performance target_ti = 32\n#pragma HLS LOOP_TRIPCOUNT max = 32\n        out[i] = in.read();\n    }\n}",
+            "Faulty Code": "void store(hls::stream<vecOf16Words>& in, vecOf16Words* out, int size) {\nLoop_St:\n    for (int i = 0; i <= size; i++) {\n#pragma HLS performance target_ti = 32\n#pragma HLS LOOP_TRIPCOUNT max = 32\n        out[i] = in.read();\n    }\n}"
+        }
+    ]
+}

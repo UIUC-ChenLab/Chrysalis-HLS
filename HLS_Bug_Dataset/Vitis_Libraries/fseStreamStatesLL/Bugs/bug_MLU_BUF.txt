@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "acchbs.range(c_streamWidth - 1, 0) = bitStream[byteIndx--];",
+            "Faulty Code": "acchbs.range(c_streamWidth - 1, 0) = bitStream[--byteIndx];"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t i = 7; i >= 0; --i) {",
+            "Faulty Code": "for (uint8_t i = 7; i > 0; --i) {"
+        }
+    ]
+}

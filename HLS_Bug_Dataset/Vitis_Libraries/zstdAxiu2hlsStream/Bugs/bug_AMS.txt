@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void zstdAxiu2hlsStream(hls::stream<ap_axiu<IN_DWIDTH, 0, 0, 0> >& inStream, hls::stream<IntVectorStream_dt<8, IN_DWIDTH / 8> >& outHlsStream)",
+            "Faulty Code": "#pragma HLS INTERFACE port=outHlsStream mode=ap_none"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outValue.data[0] = 0;",
+            "Faulty Code": "outValue.data[1] = 0;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (nextValue.strobe == 0) { done = true; }",
+            "Faulty Code": "if (nextValue.strobe != 0) { done = true; }"
+        }
+    ]
+}

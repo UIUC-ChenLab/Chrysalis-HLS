@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t k = 0; k < PARALLEL_HUFFMAN / 2; ++k) {",
+            "Faulty Code": "for (uint8_t k = 0; k <= PARALLEL_HUFFMAN / 2; ++k) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hfBitStream << outReg;",
+            "Faulty Code": "#pragma HLS INTERFACE port=hfBitStream mode=ap_none"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void processBitLength(hls::stream<IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> >& frequencies, hls::stream<bool>& isEOBlocks, hls::stream<DSVectorStream_dt<Codeword, 1> >& outCodes, hls::stream<ap_uint<c_tgnSymbolBits> >& maxCodes) {",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_memory port=frequencies"
+        }
+    ]
+}

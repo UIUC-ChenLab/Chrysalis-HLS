@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint8_t s = 0; s < c_seqFreqCnt; ++s) {",
+            "Faulty Code": "for (uint8_t s = 0; s <= c_seqFreqCnt; ++s) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "for (uint8_t m = 0; m < 2; ++m) {",
+            "Faulty Code": "for (int m = 0; m < 2; ++m) {"
+        }
+    ]
+}

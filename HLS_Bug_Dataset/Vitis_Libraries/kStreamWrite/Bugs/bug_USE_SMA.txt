@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<DATAWIDTH> tmp;",
+            "Faulty Code": "int tmp;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<uint32_t>& dataSize",
+            "Faulty Code": "#pragma HLS interface port=axis variable=dataSize"
+        }
+    ]
+}

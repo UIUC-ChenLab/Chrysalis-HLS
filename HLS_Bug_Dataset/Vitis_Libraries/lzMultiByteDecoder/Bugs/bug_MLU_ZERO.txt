@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "outStream << 0;",
+            "Faulty Code": "// outStream << 0;  // Omitting the last iteration by commenting out or deleting"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint16_t output_index = 0;",
+            "Faulty Code": "uint16_t output_index;  // Incorrectly not initializing 'output_index', assuming it will start at zero"
+        }
+    ]
+}

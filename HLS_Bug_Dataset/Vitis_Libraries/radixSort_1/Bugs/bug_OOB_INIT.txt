@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "digit_location[i + 1] = digit_location[i] + digit_histogram[i];",
+            "Faulty Code": "digit_location[i] = digit_location[i - 1] + digit_histogram[i];"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "digit_location[0] = 0;",
+            "Faulty Code": "digit_location[0];"
+        }
+    ]
+}

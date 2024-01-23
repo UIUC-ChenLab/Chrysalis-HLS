@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint16_t i = 0; i < 64; ++i) {",
+            "Faulty Code": "for (uint16_t i = 0; i <= 64; ++i) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "normTable[63] = maxSymbol;",
+            "Faulty Code": "normTable[63] = (int8_t)maxSymbol;"
+        }
+    ]
+}

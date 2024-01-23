@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "constexpr uint16_t c_factor = IN_DATAWIDTH / OUT_DATAWIDTH;",
+            "Faulty Code": "constexpr uint16_t c_factor = 0;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

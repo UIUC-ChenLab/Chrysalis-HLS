@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void cpp_ap_int_arith(dinA_t inA, dinB_t inB, dinC_t inC, dinD_t inD,\n                      dout1_t* out1, dout2_t* out2, dout3_t* out3,\n                      dout4_t* out4) {\n\n    // Basic arithmetic operations\n    *out1 = inA * inB;\n    *out2 = inB + inA;\n    *out3 = inC / inA;\n    *out4 = inD % inA;\n}",
+            "Faulty Code": "void cpp_ap_int_arith(dinA_t inA, dinB_t inB, dinC_t inC, dinD_t inD,\n                      dout1_t* out1, dout2_t* out2, dout3_t* out3,\n                      dout4_t* out4) {\n    #pragma HLS pipeline\n    // Basic arithmetic operations\n    *out1 = inA * inB;\n    #pragma HLS pipeline\n    *out2 = inB + inA;\n    *out3 = inC / inA;\n    *out4 = inD % inA;\n}"
+        }
+    ]
+}

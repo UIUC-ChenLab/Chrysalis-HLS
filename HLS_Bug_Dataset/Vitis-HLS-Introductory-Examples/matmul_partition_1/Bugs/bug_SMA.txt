@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS INTERFACE m_axi port = out_r depth = 256",
+            "Faulty Code": "#pragma HLS INTERFACE bram port = out_r"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "void read(A* a_in, A buf_out[NUM]) {",
+            "Faulty Code": "void read(A* a_in, A buf_out[NUM]) {\n#pragma HLS array_partition variable=buf_out type=cyclic"
+        }
+    ]
+}

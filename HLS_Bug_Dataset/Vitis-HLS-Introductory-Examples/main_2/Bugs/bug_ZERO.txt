@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "std::fill(bo0_map, bo0_map + DATA_SIZE, 0);",
+            "Faulty Code": "std::fill(bo0_map, bo0_map + DATA_SIZE, 1);"
+        }
+    ]
+}

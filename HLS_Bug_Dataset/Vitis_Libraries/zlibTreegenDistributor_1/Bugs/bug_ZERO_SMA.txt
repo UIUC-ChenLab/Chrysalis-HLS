@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "for (uint16_t j = 0; j < c_litDistCodeCnt; j++) {",
+            "Faulty Code": "for (uint16_t j = 1; j < c_litDistCodeCnt; j++) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> > hufCodeStream[NUM_BLOCK],",
+            "Faulty Code": "#pragma HLS INTERFACE port=hufCodeStream mode=s_axilite"
+        }
+    ]
+}

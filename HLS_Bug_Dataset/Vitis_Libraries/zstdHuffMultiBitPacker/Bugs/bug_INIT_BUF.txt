@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint8_t remBits = 0;",
+            "Faulty Code": "uint8_t remBits;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "vec1[k] = ((ap_uint<c_hf2cWidth>)inVal.data[(2 * k) + 1].code << inVal.data[2 * k].bitlen) + inVal.data[2 * k].code;",
+            "Faulty Code": "vec1[k] = ((ap_uint<c_hf2cWidth>)inVal.data[2 * k].code << inVal.data[(2 * k) + 1].bitlen) + inVal.data[(2 * k) + 1].code;"
+        }
+    ]
+}

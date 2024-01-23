@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void crc32(hls::stream<ap_uint<32> >& crcInitStrm,\n           hls::stream<ap_uint<8 * W> >& inStrm,\n           hls::stream<ap_uint<5> >& inPackLenStrm,\n           hls::stream<ap_uint<32> >& outStrm) {\n    hls::stream<bool> endInPackLenStrm;\n    hls::stream<bool> endOutStrm;\n#pragma HLS STREAM variable = endInPackLenStrm depth = 4\n#pragma HLS STREAM variable = endOutStrm depth = 4\n    endInPackLenStrm << false;\n    endInPackLenStrm << true;\n    xf::security::crc32<W>(crcInitStrm, inStrm, inPackLenStrm, endInPackLenStrm, outStrm, endOutStrm);\n    endOutStrm.read();\n    endOutStrm.read();\n}",
+            "Faulty Code": "void crc32(hls::stream<ap_uint<32> >& crcInitStrm,\n           hls::stream<ap_uint<8 * W> >& inStrm,\n           hls::stream<ap_uint<5> >& inPackLenStrm,\n           hls::stream<ap_uint<32> >& outStrm) {\n    hls::stream<bool> endInPackLenStrm;\n    hls::stream<bool> endOutStrm;\n#pragma HLS STREAM variable = endInPackLenStrm depth = 4\n#pragma HLS STREAM variable = endOutStrm depth = 4\n#pragma HLS pipeline\n    endInPackLenStrm << false;\n    endInPackLenStrm << true;\n    xf::security::crc32<W>(crcInitStrm, inStrm, inPackLenStrm, endInPackLenStrm, outStrm, endOutStrm);\n    endOutStrm.read();\n    endOutStrm.read();\n}"
+        }
+    ]
+}

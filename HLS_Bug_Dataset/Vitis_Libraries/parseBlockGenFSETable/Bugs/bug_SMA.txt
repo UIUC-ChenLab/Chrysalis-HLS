@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<bool>& blockValidStream",
+            "Faulty Code": "#pragma HLS INTERFACE port=blockValidStream mode=bram"
+        }
+    ]
+}

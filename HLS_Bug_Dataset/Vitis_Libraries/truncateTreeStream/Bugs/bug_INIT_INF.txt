@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<1> metaIdx = 0;",
+            "Faulty Code": "ap_uint<1> metaIdx;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (; length_histogram[i] != 0;) {",
+            "Faulty Code": "for (; length_histogram[i] > 0;) {"
+        }
+    ]
+}

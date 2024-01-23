@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "if (pos >= 0 & pos < 10)",
+            "Faulty Code": "if (pos >= 0 && pos < 10)"
+        }
+    ]
+}

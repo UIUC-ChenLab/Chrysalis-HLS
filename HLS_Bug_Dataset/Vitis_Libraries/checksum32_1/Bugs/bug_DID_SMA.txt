@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable = endInStrm depth = 4",
+            "Faulty Code": "#pragma HLS STREAM variable = endInStrm dim = 1 depth = 4"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void adler32(hls::stream<ap_uint<W * 8> >& inStrm, ...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=inStrm bram"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS RESOURCE variable=H core=RAM_1P_BRAM",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=H type=cyclic factor=32"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INTERFACE bram port=r",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=r"
+        }
+    ]
+}

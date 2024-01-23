@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "parray = &fir2dim_input[k * ARRAYDIM + f + ARRAY_OFFSET] ;",
+            "Faulty Code": "parray = &fir2dim_input[k * (ARRAYDIM + 1) + f + ARRAY_OFFSET] ;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS RESOURCE variable=fir2dim_input core=RAM_1P_BRAM",
+            "Faulty Code": "#pragma HLS RESOURCE variable=fir2dim_input core=RAM_1P_BRAM dim=3"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "} while (!in_val.last);",
+            "Faulty Code": "} while (in_val.last);"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "count = 0;",
+            "Faulty Code": "count = 1;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<IN_DWIDTH / 8> cntr = 0;",
+            "Faulty Code": "ap_uint<IN_DWIDTH / 8> cntr;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (auto i = 0, j = 0; i < IN_DWIDTH; i += c_maxByteCnt) {",
+            "Faulty Code": "for (auto i = 0, j = 0; i <= IN_DWIDTH; i += c_maxByteCnt) {"
+        }
+    ]
+}

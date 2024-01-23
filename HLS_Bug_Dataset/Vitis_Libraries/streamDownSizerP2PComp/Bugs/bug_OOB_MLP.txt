@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<PACK_WIDTH> tmpValue = inBuffer.range((idx + 1) * PACK_WIDTH - 1, idx * PACK_WIDTH);",
+            "Faulty Code": "ap_uint<PACK_WIDTH> tmpValue = inBuffer.range(idx * PACK_WIDTH - 1, (idx - 1) * PACK_WIDTH);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1 inside another #pragma HLS PIPELINE"
+        }
+    ]
+}

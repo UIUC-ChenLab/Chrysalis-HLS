@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (!done) {",
+            "Faulty Code": "while (true) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<ap_uint<MAX_BITS * PARALLEL_HUFFMAN> >& hfBitStream",
+            "Faulty Code": "hls::stream<ap_uint<MAX_BITS * PARALLEL_HUFFMAN>, 2>& hfBitStream #pragma HLS stream variable=hfBitStream depth=2 dim=1"
+        }
+    ]
+}

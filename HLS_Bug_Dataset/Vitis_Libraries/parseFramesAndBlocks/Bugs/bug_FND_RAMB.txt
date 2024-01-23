@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=inputWindow factor=5 dim=1"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "inputWindow.range((validBytes + c_parallelByte) * 8 - 1, validBytes * 8) = input;",
+            "Faulty Code": "#pragma HLS interface m_axi port=inputWindow depth=32"
+        }
+    ]
+}

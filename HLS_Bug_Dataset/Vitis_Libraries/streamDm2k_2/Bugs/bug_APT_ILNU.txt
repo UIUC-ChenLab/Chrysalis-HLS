@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=inData"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (auto b = 0; b < inputModSize; b++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (auto b = 0; b < inputModSize; b++) {"
+        }
+    ]
+}

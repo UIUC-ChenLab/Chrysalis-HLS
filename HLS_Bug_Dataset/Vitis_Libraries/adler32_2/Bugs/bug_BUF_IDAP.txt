@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "endInPackLenStrm << true;",
+            "Faulty Code": "endOutStrm << true;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "endOutStrm.read();",
+            "Faulty Code": "bool temp = endOutStrm.read();"
+        }
+    ]
+}

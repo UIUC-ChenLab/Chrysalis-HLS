@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "accReg += ((ap_uint<c_accBytes>)inVal << bitsInAcc);",
+            "Faulty Code": "accReg += ((ap_uint<c_accBytes>)inVal << (bitsInAcc % (c_accBytes * 8)));"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        }
+    ]
+}

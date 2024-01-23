@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < BURST_SIZE; i++) {",
+            "Faulty Code": "for (int i = 0; i <= BURST_SIZE; i++) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "out[j + i] = tmp;",
+            "Faulty Code": "out[i] = tmp;"
+        }
+    ]
+}

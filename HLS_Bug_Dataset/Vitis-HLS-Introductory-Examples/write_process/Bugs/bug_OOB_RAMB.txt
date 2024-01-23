@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "val = mem[addr - 1];",
+            "Faulty Code": "val = mem[addr];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (int i = 0; i < N / 2; i++) {",
+            "Faulty Code": "for (int i = 0; i < N; i++) {"
+        }
+    ]
+}

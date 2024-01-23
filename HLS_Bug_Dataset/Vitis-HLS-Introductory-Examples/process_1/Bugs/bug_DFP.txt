@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void process(hls::stream<data_t>& strm_in, hls::stream<data_t>& strm_out) {\n#pragma HLS inline off\n\n    for (int i = 0; i < SZ; i++) { ...",
+            "Faulty Code": "void process(hls::stream<data_t>& strm_in, hls::stream<data_t>& strm_out) {\n#pragma HLS dataflow\n#pragma HLS inline off\n\n    for (int i = 0; i < SZ; i++) { ..."
+        }
+    ]
+}

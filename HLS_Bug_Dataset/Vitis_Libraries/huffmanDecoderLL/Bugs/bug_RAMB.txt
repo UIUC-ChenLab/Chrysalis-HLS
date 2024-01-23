@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void huffmanDecoderLL(hls::stream<ap_uint<16> >& inStream, hls::stream<bool>& inEos, hls::stream<ap_uint<16> >& outStream ... ) {",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=inStream depth=32"
+        }
+    ]
+}

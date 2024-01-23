@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (nextSeq.strobe == 0) break;",
+            "Faulty Code": "if (nextSeq.strobe != 0) break;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<33> extCodeword;",
+            "Faulty Code": "int extCodeword;"
+        }
+    ]
+}

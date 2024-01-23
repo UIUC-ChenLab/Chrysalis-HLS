@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<IntVectorStream_dt<16, 1> > normTableStream[2]",
+            "Faulty Code": "hls::stream<IntVectorStream_dt<16, 1> > normTableStream"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "for (uint16_t i = 0; i < 64; ++i) { #pragma HLS PIPELINE II = 1"
+        }
+    ]
+}

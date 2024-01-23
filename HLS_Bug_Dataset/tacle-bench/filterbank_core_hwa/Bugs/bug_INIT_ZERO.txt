@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "y[ i ] = 0;",
+            "Faulty Code": "// y[ i ] = 0;  // Assuming this line was commented out or omitted"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "Vect_Dn[ j ] = Vect_H[ j * 8 ];",
+            "Faulty Code": "Vect_Dn[ j ] = 0; // Assuming a developer mistakenly initialized Vect_Dn[ j ] to 0 instead of assigning it the intended value from Vect_H"
+        }
+    ]
+}

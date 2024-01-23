@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "is_pending.range(vid, vid) = 1;",
+            "Faulty Code": "is_pending.range(vid, vid) = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1\n#pragma HLS PIPELINE II = 1"
+        }
+    ]
+}

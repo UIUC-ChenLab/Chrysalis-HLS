@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "outChecksumStream << inChecksumData[0];",
+            "Faulty Code": "outChecksumStream << inChecksumData[1];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void crc32_mm(const ap_uint<PARALLEL_BYTE * 8>* in, ap_uint<32>* crcData, ap_uint<32> inputSize) {",
+            "Faulty Code": "void crc32_mm(const ap_uint<PARALLEL_BYTE * 8> in, ap_uint<32>* crcData, ap_uint<32> inputSize) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (int i = 0; i < lbtWrite; readFlag = ((i + c_inputByte) < lbtWrite)) {",
+            "Faulty Code": "for (int i = 0; i < lbtWrite; readFlag = ((i + c_factor) < lbtWrite)) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 2",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1"
+        }
+    ]
+}

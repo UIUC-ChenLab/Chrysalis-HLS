@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void computeBitLength(ap_uint<SYMBOL_BITS>* parent, ...",
+            "Faulty Code": "#pragma HLS INTERFACE port=parent mode=ap_none"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "ap_uint<SYMBOL_SIZE>& left, ...",
+            "Faulty Code": "#pragma HLS INTERFACE port=left mode=axis"
+        }
+    ]
+}

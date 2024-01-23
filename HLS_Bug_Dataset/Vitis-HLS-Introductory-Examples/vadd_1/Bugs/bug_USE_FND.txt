@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "vout_buffer[j] = v1_buffer[j] + v2_buffer[j];",
+            "Faulty Code": "vout_buffer[j] = (short)v1_buffer[j] + (short)v2_buffer[j];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL FACTOR = 2",
+            "Faulty Code": "#pragma HLS UNROLL FACTOR = 3"
+        }
+    ]
+}

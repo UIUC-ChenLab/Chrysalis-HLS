@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "void compute_D(hls::stream<vecOf16Words>& in1, hls::stream<vecOf16Words>& in2,\n               hls::stream<vecOf16Words>& out, int size) {\nLoop_D:\n    for (data_t i = 0; i < size; i++) {\n#pragma HLS performance target_ti = 32\n#pragma HLS LOOP_TRIPCOUNT max = 32\n        out.write(in1.read() + in2.read());\n    }\n}",
+            "Faulty Code": "void compute_D(hls::stream<vecOf16Words>& in1, hls::stream<vecOf16Words>& in2,\n               hls::stream<vecOf16Words>& out, int size) {\nLoop_D:\n    for (data_t i = 0; size <= i--; ) {\n#pragma HLS performance target_ti = 32\n#pragma HLS LOOP_TRIPCOUNT max = 32\n        out.write(in1.read() + in2.read());\n    }\n}"
+        }
+    ]
+}

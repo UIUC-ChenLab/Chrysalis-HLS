@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int vid = 0; vid < NUM_BLOCK; vid++) {",
+            "Faulty Code": "for (int vid = 0; vid < NUM_BLOCK - 1; vid++) {"
+        }
+    ]
+}

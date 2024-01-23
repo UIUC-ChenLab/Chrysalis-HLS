@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS STREAM variable = heapTreeStream depth = 320",
+            "Faulty Code": "#pragma HLS INTERFACE port=heapTreeStream mode=ap_none"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (lens[i] != 0) codeBuffer[offs[lens[i]]++] = (uint16_t)i;",
+            "Faulty Code": "if (lens[i] != 0) codeBuffer[offs[lens[i]]] = (uint16_t)i; offs[lens[i]]++;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out[i] = in1[i] + in2[i] * 2;",
+            "Faulty Code": "out[i] = in1[i + N/2] + in2[i] * 2;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "for (int j = 0; j < N; j++) { #pragma HLS pipeline"
+        }
+    ]
+}

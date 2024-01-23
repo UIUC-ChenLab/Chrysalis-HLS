@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "y[ i ] = 0;",
+            "Faulty Code": "// Faulty initialization is omitted"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INTERFACE bram port=y",
+            "Faulty Code": "#pragma HLS INTERFACE ap_fifo port=y"
+        }
+    ]
+}

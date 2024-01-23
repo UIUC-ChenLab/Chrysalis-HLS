@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (--(count[len]) == 0) {",
+            "Faulty Code": "if (--(count[len])) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "low = (uint32_t)(-1);",
+            "Faulty Code": "low = -1;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "parent[i] = 0;",
+            "Faulty Code": "// parent[i] = 0; // Initialization is missing, leading to use of an uninitialized variable"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if (num_symbols < 3) num_symbols++;",
+            "Faulty Code": "num_symbols = 0; // Incorrectly initialized to zero, should be conditionally incremented"
+        }
+    ]
+}

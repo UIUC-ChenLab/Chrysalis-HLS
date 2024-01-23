@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<ap_uint<W * 8> >& inStrm",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=inStrm"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int i = 0; i < NUMCORES; i++) { ... }",
+            "Faulty Code": "#pragma HLS pipeline\nfor (int i = 0; i < NUMCORES; i++) { ... }"
+        }
+    ]
+}

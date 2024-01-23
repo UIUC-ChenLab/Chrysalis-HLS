@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "while (!uszDone) {\n#pragma HLS PIPELINE II = 1\n    inSeqVal = inSeqStream.read();\n    uszDone = (inSeqVal.strobe == 0);\n    if (inSeqVal.data[0].getMatlen() == 0 && inSeqVal.data[0].getOffset() == 0 && !uszDone) {",
+            "Faulty Code": "while (!uszDone) {\n    inSeqVal = inSeqStream.read();\n    #pragma HLS PIPELINE II = 1\n    uszDone = (inSeqVal.strobe == 0);\n    if (inSeqVal.data[0].getMatlen() == 0 && inSeqVal.data[0].getOffset() == 0 && !uszDone) {"
+        }
+    ]
+}

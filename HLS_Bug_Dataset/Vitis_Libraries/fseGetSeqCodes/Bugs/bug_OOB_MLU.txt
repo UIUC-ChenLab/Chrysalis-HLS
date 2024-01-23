@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (nextSeq.data[0].litlen == 0 && nextSeq.data[0].matlen == 0 && nextSeq.data[0].offset == 0) {",
+            "Faulty Code": "if (nextSeq.data[1].litlen == 0 && nextSeq.data[1].matlen == 0 && nextSeq.data[1].offset == 0) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "extCodeword = (excOF << (mlBits + llBits)) + (excML << llBits) + excLL;",
+            "Faulty Code": "extCodeword = (excOF << (mlBits + llBits)) + (excML << (llBits - 1)) + excLL;"
+        }
+    ]
+}

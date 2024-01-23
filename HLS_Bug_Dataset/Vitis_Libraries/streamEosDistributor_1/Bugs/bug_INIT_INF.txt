@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "bool i = inStream.read();",
+            "Faulty Code": "bool i; // uninitialized variable"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (i == 1) break;",
+            "Faulty Code": "if (i != 1) break; // incorrect condition leads to infinite loop"
+        }
+    ]
+}

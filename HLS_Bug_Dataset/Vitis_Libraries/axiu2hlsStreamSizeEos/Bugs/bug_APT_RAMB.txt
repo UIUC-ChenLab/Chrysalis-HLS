@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=inputAxiStream.data"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "outputStream << tmpOut;",
+            "Faulty Code": "outputStream[j/c_parallelByte] = tmpOut;"
+        }
+    ]
+}

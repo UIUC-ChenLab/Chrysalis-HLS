@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void process_23(hls::stream<int>& in, hls::stream<int>& out) {",
+            "Faulty Code": "#pragma HLS interface port=bram mode=s_axilite"
+        }
+    ]
+}

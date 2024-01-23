@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "match_loc = i - offset - 1;",
+            "Faulty Code": "match_loc = i - (int32_t)offset - 1;"
+        }
+    ]
+}

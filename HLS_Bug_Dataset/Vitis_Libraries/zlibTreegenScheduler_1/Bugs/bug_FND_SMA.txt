@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (uint16_t k = 0; k < c_litDistCodeCnt; k++) {",
+            "Faulty Code": "#pragma HLS array_partition variable=lz77InTree factor=4"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void zlibTreegenScheduler(hls::stream<IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> > lz77InTree[NUM_BLOCK],",
+            "Faulty Code": "#pragma HLS interface port=lz77InTree bram"
+        }
+    ]
+}

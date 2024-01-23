@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_axiu<IN_DWIDTH, 0, 0, 0> tempVal = inputAxiStream.read();",
+            "Faulty Code": "ap_axiu<IN_DWIDTH, 0, 0, 0> tempVal = inputAxiStream.read(); outputStream << tempVal.data.range(IN_DWIDTH-1, 0); // OOB if IN_DWIDTH is not a multiple of 8"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "outputSizeStream << inputSize;",
+            "Faulty Code": "outputSizeStream << (inputSize/2); // BUF error as only half of the inputSize is sent to outputSizeStream"
+        }
+    ]
+}

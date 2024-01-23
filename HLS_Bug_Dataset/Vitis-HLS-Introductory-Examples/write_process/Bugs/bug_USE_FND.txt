@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "RES.write(x_aux[N - N / 2 + i] - y_aux[N - N / 2 + i] / N);",
+            "Faulty Code": "RES.write(x_aux[N - N / 2 + i] - y_aux[N - N / 2 + i] >> N);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for (int i = 0; i < NUM; i++) {",
+            "Faulty Code": "#pragma HLS array_partition factor=3 complete\nfor (int i = 0; i < NUM; i++) {"
+        }
+    ]
+}

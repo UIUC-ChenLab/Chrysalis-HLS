@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned int v1_buffer[BUFFER_SIZE];",
+            "Faulty Code": "unsigned int v1_buffer[BUFFER_SIZE] = {0};"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INTERFACE m_axi port = out_r depth = DATA_SIZE",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port = out_r"
+        }
+    ]
+}

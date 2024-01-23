@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "HuffmanCode_dt<MAX_BITS> zeroHf;\n    zeroHf.code = 0;\n    zeroHf.bitlen = 0;",
+            "Faulty Code": "HuffmanCode_dt<MAX_BITS> zeroHf;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = hfcTable type = ram_2p impl = lutram",
+            "Faulty Code": "#pragma HLS INTERFACE port=hfcTable mode=ap_none"
+        }
+    ]
+}

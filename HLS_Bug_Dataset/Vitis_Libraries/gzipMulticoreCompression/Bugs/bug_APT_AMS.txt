@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS STREAM variable = lz77Tree depth = c_numBlocks",
+            "Faulty Code": "#pragma HLS STREAM variable = lz77Tree depth = c_numBlocks partition type=cyclic"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS STREAM variable = coreStream depth = c_defaultDepth",
+            "Faulty Code": "#pragma HLS INTERFACE port=coreStream mode=ap_none"
+        }
+    ]
+}

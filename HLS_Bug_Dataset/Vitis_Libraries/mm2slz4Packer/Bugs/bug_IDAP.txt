@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void mm2slz4Packer(const ap_uint<DATAWIDTH>* in, ...)",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=in"
+        }
+    ]
+}

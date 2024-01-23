@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "Vect_Up[ j * 8 ] = Vect_Dn[ j ];",
+            "Faulty Code": "Vect_Up[ j ] = Vect_Dn[ j * 8 ];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INTERFACE bram port=r",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=r"
+        }
+    ]
+}

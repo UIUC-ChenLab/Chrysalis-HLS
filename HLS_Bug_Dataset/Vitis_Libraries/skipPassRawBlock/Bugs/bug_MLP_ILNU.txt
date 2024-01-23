@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1 // Inside another pipeline region"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (; inVal.range(STB_WIDTH - 1, 0) > 0; inVal = inRawStream.read()) {",
+            "Faulty Code": "#pragma HLS UNROLL factor=4 // Incorrect unroll factor without fully unrolling the inner loop"
+        }
+    ]
+}

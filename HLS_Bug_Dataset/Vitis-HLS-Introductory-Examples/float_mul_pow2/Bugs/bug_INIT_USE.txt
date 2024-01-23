@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "float_num_t x_num, prod;",
+            "Faulty Code": "float_num_t x_num, prod = {0};"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "prod.bexp = x_num.bexp + n;",
+            "Faulty Code": "prod.bexp = (uint8_t)(x_num.bexp + n);"
+        }
+    ]
+}

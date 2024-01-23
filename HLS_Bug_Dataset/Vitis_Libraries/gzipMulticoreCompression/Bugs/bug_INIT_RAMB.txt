@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<SIZE_DWIDTH> inSize = 0;",
+            "Faulty Code": "ap_uint<SIZE_DWIDTH> inSize;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = distStream type = FIFO impl = BRAM",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable = distStream type = FIFO impl = URAM"
+        }
+    ]
+}

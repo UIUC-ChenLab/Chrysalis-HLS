@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> >& hufSerialCodeStream",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=hufSerialCodeStream"
+        }
+    ]
+}

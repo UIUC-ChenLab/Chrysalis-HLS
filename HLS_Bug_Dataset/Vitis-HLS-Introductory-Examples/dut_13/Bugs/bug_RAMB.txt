@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void dut(int a[128], int b[128], int tmp2[128]) {\n#pragma HLS DATAFLOW\n\n    int tmp1[128], tmp3[128];\n\n    split(a, tmp1, tmp3);\n    pass(tmp3, tmp2, tmp1, b);\n}",
+            "Faulty Code": "void dut(int a[128], int b[128], int tmp2[128]) {\n#pragma HLS INTERFACE m_axi port=a offset=slave\n#pragma HLS INTERFACE m_axi port=b offset=slave\n#pragma HLS INTERFACE m_axi port=tmp2 offset=slave\n#pragma HLS DATAFLOW\n\n    int tmp1[128], tmp3[128];\n\n    split(a, tmp1, tmp3);\n    pass(tmp3, tmp2, tmp1, b);\n}"
+        }
+    ]
+}

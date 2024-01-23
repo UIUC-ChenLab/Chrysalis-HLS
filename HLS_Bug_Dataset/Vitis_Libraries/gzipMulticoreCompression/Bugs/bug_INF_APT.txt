@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (auto inSize = dataSizeStream.read(); inSize > 0; inSize = dataSizeStream.read()) {",
+            "Faulty Code": "for (auto inSize = dataSizeStream.read(); inSize >= 0; inSize = dataSizeStream.read()) {"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = lz77Tree type = FIFO impl = SRL",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable = lz77Tree type = FIFO impl = wrong_type"
+        }
+    ]
+}

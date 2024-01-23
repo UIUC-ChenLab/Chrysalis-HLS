@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out[i] = in[i];",
+            "Faulty Code": "out[i] = in[i + FFT_LENGTH/2];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "config->setSch(0x2AB);",
+            "Faulty Code": "config->setSch(0x2AB << 16);"
+        }
+    ]
+}

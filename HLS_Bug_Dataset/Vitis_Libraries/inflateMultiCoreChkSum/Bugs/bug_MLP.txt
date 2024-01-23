@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "details::simpleDownSizer<PARALLEL_BYTES, c_parallelBit, 16>(axi2HlsStrm[i], hlsDownStream[i], hlsEos[i]);",
+            "Faulty Code": "#pragma HLS pipeline\n        details::simpleDownSizer<PARALLEL_BYTES, c_parallelBit, 16>(axi2HlsStrm[i], hlsDownStream[i], hlsEos[i]);"
+        }
+    ]
+}

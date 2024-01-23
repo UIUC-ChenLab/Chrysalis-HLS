@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS UNROLL factor = 4"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "length_histogram[0] = histVal.data[0];",
+            "Faulty Code": "length_histogram[c_lengthHistogram / 2] = histVal.data[0];"
+        }
+    ]
+}

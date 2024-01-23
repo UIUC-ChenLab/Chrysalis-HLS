@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS STREAM variable = inStream depth = 32",
+            "Faulty Code": "#pragma HLS array_partition variable=inStream factor=10"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void crc32_mm(const ap_uint<PARALLEL_BYTE * 8>* in, ap_uint<32>* crcData, ap_uint<32> inputSize)",
+            "Faulty Code": "#pragma HLS INTERFACE port=crcData bram"
+        }
+    ]
+}

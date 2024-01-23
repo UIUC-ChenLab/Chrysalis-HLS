@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void compute(A buf_in[NUM], A buf_out[NUM], int size) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=buf_in mode=s_axilite\nvoid compute(A buf_in[NUM], A buf_out[NUM], int size) {"
+        }
+    ]
+}

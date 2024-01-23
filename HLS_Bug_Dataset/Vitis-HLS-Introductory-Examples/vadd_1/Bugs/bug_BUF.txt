@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "v1_buffer[j] = in1[i + j];",
+            "Faulty Code": "v1_buffer[j] = in1[i + BUFFER_SIZE/2 + j];"
+        }
+    ]
+}

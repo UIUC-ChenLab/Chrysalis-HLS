@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "prod.bexp = x_num.bexp + n;",
+            "Faulty Code": "prod.bexp = x_num.bexp[n]; // Mistakenly using array access instead of addition"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "else if (n >= 0 && x_num.bexp >= 255 - n) {",
+            "Faulty Code": "else if (n >= 0 && x_num.bexp > 255 - n) { // Mistakenly using '>' instead of '>=' could lead to INF when 'n' is the difference between 'x_num.bexp' and 255"
+        }
+    ]
+}

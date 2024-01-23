@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int count;",
+            "Faulty Code": "int count; // count is declared but not initialized"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uc = c;",
+            "Faulty Code": "uc = 0; // Incorrectly initialized to zero"
+        }
+    ]
+}

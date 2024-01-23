@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void dut(int a[128], int b[128], int tmp3[128]) {",
+            "Faulty Code": "void dut(int a[128], int b[128], int tmp3[128]) {\n#pragma HLS INTERFACE mode=s_axilite port=a\n#pragma HLS INTERFACE mode=s_axilite port=b\n#pragma HLS INTERFACE mode=s_axilite port=tmp3"
+        }
+    ]
+}

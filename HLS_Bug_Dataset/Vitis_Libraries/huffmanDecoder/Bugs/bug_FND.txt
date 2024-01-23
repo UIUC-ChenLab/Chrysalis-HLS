@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS DEPENDENCE false inter variable = codeBuffer",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=codeBuffer factor=10"
+        }
+    ]
+}

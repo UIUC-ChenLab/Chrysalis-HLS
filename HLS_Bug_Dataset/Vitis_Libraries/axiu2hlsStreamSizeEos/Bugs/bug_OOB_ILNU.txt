@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_axiu<IN_DWIDTH, 0, 0, 0> tempVal = inputAxiStream.read();",
+            "Faulty Code": "ap_axiu<IN_DWIDTH, 0, 0, 0> tempVal = inputAxiStream.read(inputSize);"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS unroll factor = c_parallelByte"
+        }
+    ]
+}

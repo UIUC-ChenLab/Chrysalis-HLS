@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint32_t seqMeta = seqMetaStream.read();",
+            "Faulty Code": "uint32_t seqMeta; // seqMeta is declared but not initialized with seqMetaStream.read()"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "uint32_t blockSize = seqMeta >> 8;",
+            "Faulty Code": "int blockSize = seqMeta >> 8; // Incorrectly assuming seqMeta will be sign-extended"
+        }
+    ]
+}

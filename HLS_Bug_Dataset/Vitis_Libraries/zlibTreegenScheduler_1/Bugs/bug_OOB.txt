@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (treeIdx == NUM_TREEGEN) treeIdx = 0;",
+            "Faulty Code": "if (treeIdx >= NUM_TREEGEN) treeIdx = 0;"
+        }
+    ]
+}

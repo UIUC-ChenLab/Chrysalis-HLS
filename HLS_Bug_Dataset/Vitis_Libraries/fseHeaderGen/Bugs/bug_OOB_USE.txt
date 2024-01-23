@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (symbol < maxCharSize && !normTable[symbol]) {",
+            "Faulty Code": "if (!normTable[symbol]) { // symbol may exceed maxCharSize leading to OOB"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "remaining -= (count < 0) ? -count : count;",
+            "Faulty Code": "remaining -= count; // count is int16_t which could lead to unintended sign extension"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "bool eos_tmp[NUM_BLOCK];",
+            "Faulty Code": "bool eos_tmp[NUM_BLOCK]; // Missing initialization"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1 // Incorrectly nested inside another pipeline pragma"
+        }
+    ]
+}

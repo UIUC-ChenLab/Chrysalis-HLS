@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint8_t nextMatchCh = local_mem[match_loc % BOOSTER_OFFSET_WINDOW];",
+            "Faulty Code": "uint8_t nextMatchCh;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS STREAM variable = boosterStream depth = c_litDistCodeDepth",
+            "Faulty Code": "#pragma HLS INTERFACE port=boosterStream bram"
+        }
+    ]
+}

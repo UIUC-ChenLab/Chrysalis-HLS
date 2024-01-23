@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS INTERFACE bram port=c",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=c factor=3 dim=2"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INTERFACE bram port=c",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=c"
+        }
+    ]
+}

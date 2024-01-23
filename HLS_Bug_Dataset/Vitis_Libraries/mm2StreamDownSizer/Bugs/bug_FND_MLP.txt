@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "const int factor = c_inputWord / c_outWord;",
+            "Faulty Code": "const int factor = c_inputWord / c_outWord + 1;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1 inside another #pragma HLS PIPELINE block"
+        }
+    ]
+}

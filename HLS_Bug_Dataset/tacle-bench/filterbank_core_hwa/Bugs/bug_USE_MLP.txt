@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "Vect_H[ j ] += H[ i ][ k ] * r[ j - k ];",
+            "Faulty Code": "Vect_H[ j ] += H[ i ][ k ] * r[ (unsigned char)(j - k) ];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE\n#pragma HLS PIPELINE"
+        }
+    ]
+}

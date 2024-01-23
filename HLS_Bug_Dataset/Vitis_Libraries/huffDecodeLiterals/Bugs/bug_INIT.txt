@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint8_t bitsInAcc = bytesInAcc * 8;",
+            "Faulty Code": "uint8_t bitsInAcc;"
+        }
+    ]
+}

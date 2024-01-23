@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<DSVectorStream_dt<Histogram, 1> >& lengthHistogramStream",
+            "Faulty Code": "hls::stream<Histogram>& lengthHistogramStream"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS unroll factor = 4"
+        }
+    ]
+}

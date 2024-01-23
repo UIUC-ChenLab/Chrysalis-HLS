@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint16_t fseStateLL, fseStateOF, fseStateML;",
+            "Faulty Code": "uint16_t fseStateLL = 0, fseStateOF = 0, fseStateML = 0;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<uint8_t>& litsymbolStream,",
+            "Faulty Code": "#pragma HLS INTERFACE port=litsymbolStream mode=ap_none"
+        }
+    ]
+}

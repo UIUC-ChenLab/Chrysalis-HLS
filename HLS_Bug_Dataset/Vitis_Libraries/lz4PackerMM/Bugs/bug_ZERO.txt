@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t cBlen = 4;",
+            "Faulty Code": "uint32_t cBlen = 0;"
+        }
+    ]
+}

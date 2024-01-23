@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS DATAFLOW inside the demux or proc functions"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INTERFACE mode = ap_ctrl_none port = return",
+            "Faulty Code": "#pragma HLS INTERFACE mode = s_axilite port = inter"
+        }
+    ]
+}

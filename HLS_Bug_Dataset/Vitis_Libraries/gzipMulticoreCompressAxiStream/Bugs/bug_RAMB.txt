@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void huffmanEncoderStatic(hls::stream<IntVectorStream_dt<32, 1> >& inStream, hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> >& outStream) { ... }",
+            "Faulty Code": "void huffmanEncoderStatic(hls::stream<IntVectorStream_dt<32, 1> >& inStream, hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> >& outStream) { #pragma HLS interface port=outStream mode=m_axi ... }"
+        }
+    ]
+}

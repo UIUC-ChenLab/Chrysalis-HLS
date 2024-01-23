@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint8_t m = 0; m < MATCH_LEN - 1; m++) {",
+            "Faulty Code": "for (uint8_t m = 0; m <= MATCH_LEN; m++) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS RESOURCE variable = dict core = XPM_MEMORY uram",
+            "Faulty Code": "#pragma HLS INTERFACE port=dict bram"
+        }
+    ]
+}

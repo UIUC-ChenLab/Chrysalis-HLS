@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "hlsLz4Core<ap_uint<8>, DATAWIDTH, BURST_SIZE, NUM_BLOCK>(inStream[i], outStream[i], outStreamEos[i], compressedSize[i], max_lit_limit, input_size[i], i);",
+            "Faulty Code": "hlsLz4Core<ap_uint<8>, DATAWIDTH, BURST_SIZE, NUM_BLOCK>(inStream[NUM_BLOCK-i-1], outStream[i], outStreamEos[i], compressedSize[i], max_lit_limit, input_size[i], i);"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS STREAM variable = outStream depth = c_gmemBurstSize",
+            "Faulty Code": "#pragma HLS array_partition variable=outStream type=cyclic factor=2"
+        }
+    ]
+}

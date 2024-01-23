@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint32_t inputSize = inSizeStream.read();",
+            "Faulty Code": "uint32_t inputSize;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (uint32_t i = 0; i < inSize; i++) {",
+            "Faulty Code": "for (uint32_t i = 0; i <= inSize; i++) {"
+        }
+    ]
+}

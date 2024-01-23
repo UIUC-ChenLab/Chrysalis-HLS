@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out << inValue.data;",
+            "Faulty Code": "out << inValue.data.range(PARALLEL_BYTES * 4 - 1, 0); // assuming PARALLEL_BYTES * 8 is the total size"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS UNROLL factor=4 // Incorrectly placed, as there are no loops here to unroll"
+        }
+    ]
+}

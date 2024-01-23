@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "out_strm.write(in.read());",
+            "Faulty Code": "out_strm.write(static_cast<cmpxDataIn::value_type>(in.read()));"
+        }
+    ]
+}

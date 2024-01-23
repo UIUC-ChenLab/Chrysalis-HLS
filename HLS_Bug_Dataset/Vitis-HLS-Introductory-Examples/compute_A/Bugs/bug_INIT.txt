@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "vecOf16Words t = in.read();",
+            "Faulty Code": "vecOf16Words t; // Missing initialization from input stream"
+        }
+    ]
+}

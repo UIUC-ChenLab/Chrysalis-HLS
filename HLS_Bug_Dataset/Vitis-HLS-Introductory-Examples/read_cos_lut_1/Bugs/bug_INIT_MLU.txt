@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "lut_word_t  lut_word;",
+            "Faulty Code": "lut_word_t  lut_word; // lut_word is not initialized before being used"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int k=0;k<4*LUTSIZE;k++) {",
+            "Faulty Code": "for (int k=0;k<4*LUTSIZE-1;k++) { // Off by one error, loop unrolls one iteration less"
+        }
+    ]
+}

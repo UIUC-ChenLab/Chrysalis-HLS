@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "is_pending.range(i, i) = (readSizeBytes > 0) ? 1 : 0;",
+            "Faulty Code": "is_pending.range(i, i) = 1;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=NUM_BLOCK-1"
+        }
+    ]
+}

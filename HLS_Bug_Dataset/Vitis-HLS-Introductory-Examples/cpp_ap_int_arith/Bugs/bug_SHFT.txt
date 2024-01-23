@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "*out4 = inD % inA;",
+            "Faulty Code": "*out4 = inD << (inA & (sizeof(inD)*8 - 1));"
+        }
+    ]
+}

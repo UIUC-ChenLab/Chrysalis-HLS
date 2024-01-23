@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (unsigned i = 0; i < N; i++) {\n    auto tmp = arr[i];\n    sum += tmp.foo[0] + tmp.foo[1] + tmp.foo[2] + tmp.bar;\n}",
+            "Faulty Code": "for (unsigned i = 0; i < N; i++) {\n#pragma HLS pipeline\n    auto tmp = arr[i];\n    #pragma HLS pipeline\n    sum += tmp.foo[0] + tmp.foo[1] + tmp.foo[2] + tmp.bar;\n}"
+        }
+    ]
+}

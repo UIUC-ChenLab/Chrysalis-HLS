@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "adlerStrm << 1;",
+            "Faulty Code": "// adlerStrm << 1; (This initialization is missing, leading to reading an uninitialized variable)"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS STREAM variable = endOutStrm depth = 4",
+            "Faulty Code": "#pragma HLS STREAM variable = endOutStrm depth = 4 type=cyclic (Incorrect partition type for a stream)"
+        }
+    ]
+}

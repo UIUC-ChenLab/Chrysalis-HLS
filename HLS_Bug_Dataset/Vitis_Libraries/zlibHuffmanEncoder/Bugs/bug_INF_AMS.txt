@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (nextValue.strobe == 0) {",
+            "Faulty Code": "if (nextValue.strobe != 0) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS STREAM variable = encodedOutStream depth = 4",
+            "Faulty Code": "#pragma HLS INTERFACE port=encodedOutStream mode=ap_none"
+        }
+    ]
+}

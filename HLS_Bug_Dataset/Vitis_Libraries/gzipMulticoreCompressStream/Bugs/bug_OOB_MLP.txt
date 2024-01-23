@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "hls::stream<ap_uint<c_dwidth + c_size_dwidth> > coreStream(\"coreStream\");",
+            "Faulty Code": "hls::stream<ap_uint<c_dwidth + c_size_dwidth> > coreStream[c_numBlocks];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (uint8_t i = 0; i < c_numBlocks; i++) {\n#pragma HLS UNROLL\n...",
+            "Faulty Code": "for (uint8_t i = 0; i < c_numBlocks; i++) {\n#pragma HLS pipeline II=1\n#pragma HLS UNROLL\n..."
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "lut_word_t  lut_word;",
+            "Faulty Code": "lut_word_t  lut_word = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "adr      = -lsb;",
+            "Faulty Code": "adr      = lsb;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "std::fill(bufIn_map, bufIn_map + totalNumWords, 0);",
+            "Faulty Code": "std::fill(bufIn_map, bufIn_map + totalNumWords, some_non_zero_value);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "bufIn_map[i] = (uint32_t)i;",
+            "Faulty Code": "bufIn_map[i] = (int)i;"
+        }
+    ]
+}

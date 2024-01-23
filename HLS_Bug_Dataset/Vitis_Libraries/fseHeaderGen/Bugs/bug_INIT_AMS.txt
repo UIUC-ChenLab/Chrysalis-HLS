@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int16_t normTable[64];",
+            "Faulty Code": "int16_t normTable[64]; // Not initialized, could lead to reading uninitialized values"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "IntVectorStream_dt<8, 2> outVal;",
+            "Faulty Code": "#pragma HLS interface port=outVal ap_none // 'outVal' is an array-like stream but mapped as a scalar interface"
+        }
+    ]
+}

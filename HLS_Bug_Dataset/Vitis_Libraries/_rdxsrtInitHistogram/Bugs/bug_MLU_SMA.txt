@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=15"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void _rdxsrtInitHistogram(ap_uint<SYMBOL_BITS> digit_histogram[RADIX]) {",
+            "Faulty Code": "void _rdxsrtInitHistogram(ap_uint<SYMBOL_BITS>* digit_histogram) { #pragma HLS INTERFACE port=digit_histogram bram"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < lbtWrite; readFlag = ((i + c_inputByte) < lbtWrite)) {",
+            "Faulty Code": "for (int i = 0; i <= lbtWrite; readFlag = ((i + c_inputByte) <= lbtWrite)) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "uint8_t rleLit = tbuf;",
+            "Faulty Code": "int rleLit = tbuf;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_axiu<PARALLEL_BYTES * 8, 0, 0, 0> inValue;",
+            "Faulty Code": "ap_axiu<PARALLEL_BYTES * 8, 0, 0, 0> inValue = dmInStream.read();"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "out << inValue.data;",
+            "Faulty Code": "out << A[inValue.data];"
+        }
+    ]
+}

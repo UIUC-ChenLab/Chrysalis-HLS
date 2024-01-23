@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "p_b = &b[k*size];",
+            "Faulty Code": "p_b = &b[(k%2)*size];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "for(f = 0; f < MAX_LOOP; f++) { #pragma HLS PIPELINE"
+        }
+    ]
+}

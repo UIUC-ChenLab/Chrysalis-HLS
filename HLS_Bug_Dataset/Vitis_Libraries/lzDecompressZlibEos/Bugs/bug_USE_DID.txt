@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "offset = currValue.range(15, 0);",
+            "Faulty Code": "offset = (int16_t)currValue.range(15, 0);"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = prevValue dim = 0 complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = prevValue dim = 1 complete"
+        }
+    ]
+}

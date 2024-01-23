@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "sum = +d_in1;",
+            "Faulty Code": "sum += d_in1;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static dint_t sum;",
+            "Faulty Code": "static dint_t sum = 0;"
+        }
+    ]
+}

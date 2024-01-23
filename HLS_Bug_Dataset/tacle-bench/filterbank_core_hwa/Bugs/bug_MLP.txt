@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for ( j = 0; j < 256; j++ ) {\n\t#pragma HLS PIPELINE\n\tVect_H[j] = 0;\n\tfor ( k = 0; k < 32; k++ ) {\n\t\tif( j - k < 0) break;\n\t\tVect_H[ j ] += H[ i ][ k ] * r[ j - k ];\n\t}\n}",
+            "Faulty Code": "for ( j = 0; j < 256; j++ ) {\n\t#pragma HLS PIPELINE\n\tVect_H[j] = 0;\n\tfor ( k = 0; k < 32; k++ ) {\n\t\t#pragma HLS PIPELINE\n\t\tif( j - k < 0) break;\n\t\tVect_H[ j ] += H[ i ][ k ] * r[ j - k ];\n\t}\n}"
+        }
+    ]
+}

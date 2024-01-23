@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "tmp4[i] = tmp2[i];",
+            "Faulty Code": "tmp4[i] = buff[i];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void pass(int tmp2[128], int tmp4[128]) {",
+            "Faulty Code": "void pass(int tmp2, int tmp4[128]) {"
+        }
+    ]
+}

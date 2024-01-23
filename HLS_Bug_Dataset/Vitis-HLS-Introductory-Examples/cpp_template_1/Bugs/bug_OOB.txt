@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "*out += out0 + out1 + out2 + out3 + out4;",
+            "Faulty Code": "out[5] = out0 + out1 + out2 + out3 + out4;"
+        }
+    ]
+}

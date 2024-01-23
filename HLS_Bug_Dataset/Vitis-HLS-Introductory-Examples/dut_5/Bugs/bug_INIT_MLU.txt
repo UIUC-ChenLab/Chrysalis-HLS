@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int t;",
+            "Faulty Code": "int t = in[i]; // Assuming t should be initialized with in[i]"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < size; i++) {",
+            "Faulty Code": "for (int i = 0; i <= size; i++) { // Incorrectly includes one more iteration"
+        }
+    ]
+}

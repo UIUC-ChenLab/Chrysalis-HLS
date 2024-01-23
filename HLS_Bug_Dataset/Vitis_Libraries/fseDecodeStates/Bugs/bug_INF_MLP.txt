@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (seqCnt) {",
+            "Faulty Code": "while (true) { // seqCnt is never decremented due to a missing --seqCnt or similar"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1 // Incorrectly placed inside another level of pipelining or control structure that shouldn't be pipelined"
+        }
+    ]
+}

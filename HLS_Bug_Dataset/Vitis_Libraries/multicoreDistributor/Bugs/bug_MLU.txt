@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (ap_uint<FREQ_DWIDTH> j = 0; j < outputSize; j += incr) {",
+            "Faulty Code": "for (ap_uint<FREQ_DWIDTH> j = 0; j <= outputSize; j += incr) {"
+        }
+    ]
+}

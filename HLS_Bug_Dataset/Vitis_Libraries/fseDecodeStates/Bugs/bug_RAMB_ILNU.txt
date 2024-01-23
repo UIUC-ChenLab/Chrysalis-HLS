@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS interface m_axi port=prevOffsets"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "matLenStream << matchLenCode;",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

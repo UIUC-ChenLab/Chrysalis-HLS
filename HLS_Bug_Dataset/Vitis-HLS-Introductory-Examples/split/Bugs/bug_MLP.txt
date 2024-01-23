@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void split(int a[128], int tmp1[128], int tmp2[128]) {",
+            "Faulty Code": "void split(int a[128], int tmp1[128], int tmp2[128]) { #pragma HLS pipeline"
+        }
+    ]
+}

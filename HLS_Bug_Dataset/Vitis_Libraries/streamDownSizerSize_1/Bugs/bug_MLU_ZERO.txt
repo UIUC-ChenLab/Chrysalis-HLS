@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (ap_uint<SIZE_DWIDTH> dsize = 0; dsize < outSizeV; ++dsize) {",
+            "Faulty Code": "for (ap_uint<SIZE_DWIDTH> dsize = 0; dsize <= outSizeV; ++dsize) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outVal.strobe = 1;",
+            "Faulty Code": "outVal.strobe = 0;"
+        }
+    ]
+}

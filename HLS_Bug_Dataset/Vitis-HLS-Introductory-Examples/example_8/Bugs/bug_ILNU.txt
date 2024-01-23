@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "void read(A* a_in, A buf_out[NUM]) {",
+            "Faulty Code": "#pragma HLS unroll factor=2\nvoid read(A* a_in, A buf_out[NUM]) {"
+        }
+    ]
+}

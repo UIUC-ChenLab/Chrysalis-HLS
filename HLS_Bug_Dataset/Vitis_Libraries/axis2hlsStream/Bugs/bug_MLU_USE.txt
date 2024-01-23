@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (t1.get_last()) {\n            break;\n        }",
+            "Faulty Code": "// if (t1.get_last()) {\n            break;\n        // }"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<STREAMDWIDTH> tmp = t1.get_data();",
+            "Faulty Code": "int tmp = t1.get_data();"
+        }
+    ]
+}

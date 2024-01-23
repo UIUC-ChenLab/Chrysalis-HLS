@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint32_t outSize = 0;",
+            "Faulty Code": "uint32_t outSize;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1\n#pragma HLS array_partition variable=tmp factor=3"
+        }
+    ]
+}

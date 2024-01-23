@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "sum += tmp2 + tmp1 + tmp0;",
+            "Faulty Code": "sum += (tmp2 << (sizeof(din_t) * 8)) + tmp1 + tmp0;"
+        }
+    ]
+}

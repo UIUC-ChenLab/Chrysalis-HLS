@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "compressedSize[idx] = sizeVal;\n        if (TUSR_DWIDTH != 0) compressedSize[idx + 1] = inSizeStream.read();\n        idx += 2;",
+            "Faulty Code": "compressedSize[idx] = sizeVal;\n        if (TUSR_DWIDTH != 0) compressedSize[idx] = inSizeStream.read();\n        idx += 2;"
+        }
+    ]
+}

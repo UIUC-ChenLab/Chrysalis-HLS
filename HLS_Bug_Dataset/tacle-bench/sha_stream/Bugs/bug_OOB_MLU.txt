@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "sha_info_data[15] = lo_bit_count;",
+            "Faulty Code": "sha_info_data[16] = lo_bit_count;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = 0; i < 16; ++i) { W[i] = sha_info_data[i]; }",
+            "Faulty Code": "for (i = 0; i <= 16; ++i) { W[i] = sha_info_data[i]; }"
+        }
+    ]
+}

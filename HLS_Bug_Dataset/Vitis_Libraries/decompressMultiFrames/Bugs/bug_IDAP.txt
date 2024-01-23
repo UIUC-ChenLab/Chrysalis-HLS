@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable = zstdInStream depth = c_inStreamDepth",
+            "Faulty Code": "#pragma HLS STREAM variable = zstdInStream depth = c_inStreamDepth mode=ap_memory"
+        }
+    ]
+}

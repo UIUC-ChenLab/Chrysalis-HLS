@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS STREAM variable = compressedStream depth = 4",
+            "Faulty Code": "#pragma HLS INTERFACE port=compressedStream mode=ap_none"
+        }
+    ]
+}

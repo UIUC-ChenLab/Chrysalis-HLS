@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void bypass(int tmp1[128], int tmp2[128], int tmp3[128])",
+            "Faulty Code": "#pragma HLS INTERFACE port=tmp3 mode=ap_none\nvoid bypass(int tmp1[128], int tmp2[128], int tmp3)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int i = 0; i < 128; i++) {",
+            "Faulty Code": "#pragma HLS UNROLL factor=8\nfor (int i = 0; i < 128; i++) {"
+        }
+    ]
+}

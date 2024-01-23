@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint8_t extra_lbits[c_length_codes] = {...};",
+            "Faulty Code": "lextra = extra_lbits[lcode];"
+        }
+    ]
+}

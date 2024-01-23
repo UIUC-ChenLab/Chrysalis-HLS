@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint32_t dataSize = 0;",
+            "Faulty Code": "int dataSize = 0;"
+        }
+    ]
+}

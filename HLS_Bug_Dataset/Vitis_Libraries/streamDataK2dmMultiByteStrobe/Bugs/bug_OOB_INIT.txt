@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint32_t outSize = countSetBits<c_keepDWidth>((int)(inValue.keep));",
+            "Faulty Code": "uint32_t outSize = countSetBits<c_keepDWidth>((int)(inValue.keep[PARALLEL_BYTES]));"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_axiu<PARALLEL_BYTES * 8, 0, 0, 0> inValue;",
+            "Faulty Code": "ap_axiu<PARALLEL_BYTES * 8, 0, 0, 0> inValue = dmInStream.read();"
+        }
+    ]
+}

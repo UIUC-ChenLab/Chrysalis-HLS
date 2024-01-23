@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void streamK2Dm(hls::stream<ap_uint<PARALLEL_BYTES * 8> >& out,\n                hls::stream<bool>& outEoS,\n                hls::stream<SIZE_DT>& decompressSize,\n                hls::stream<ap_axiu<PARALLEL_BYTES * 8, 0, 0, 0> >& dmInStream,\n                hls::stream<ap_axiu<AXIWIDTH, 0, 0, 0> >& dmInSizeStream) {",
+            "Faulty Code": "#pragma HLS interface m_axi port=dmInStream mode=read\nvoid streamK2Dm(hls::stream<ap_uint<PARALLEL_BYTES * 8> >& out,\n                hls::stream<bool>& outEoS,\n                hls::stream<SIZE_DT>& decompressSize,\n                hls::stream<ap_axiu<PARALLEL_BYTES * 8, 0, 0, 0> >& dmInStream,\n                hls::stream<ap_axiu<AXIWIDTH, 0, 0, 0> >& dmInSizeStream) {"
+        }
+    ]
+}

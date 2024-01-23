@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "A[i] += B[i] + C[i];",
+            "Faulty Code": "A[i] += B[i] + C[i+1]; // Assuming this is part of a loop, this would be an OOB error, but as MLU is requested, it is considered an unrolling mistake"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = A type = RAM_2P impl = BRAM",
+            "Faulty Code": "#pragma HLS INTERFACE port=A ap_none // Incorrect mapping of array to scalar interface"
+        }
+    ]
+}

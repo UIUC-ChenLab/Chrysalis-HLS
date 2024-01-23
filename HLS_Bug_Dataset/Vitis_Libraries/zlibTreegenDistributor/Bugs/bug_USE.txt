@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "for (uint8_t i = inIdxNum.read(); i != 0xFF; i = inIdxNum.read()) {",
+            "Faulty Code": "for (int i = inIdxNum.read(); i != 0xFF; i = inIdxNum.read()) {"
+        }
+    ]
+}

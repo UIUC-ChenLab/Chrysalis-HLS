@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "uint8_t nextMatchCh = local_mem[match_loc % c_boosterOffsetWindow];",
+            "Faulty Code": "uint8_t nextMatchCh = local_mem[match_loc]; // Incorrect array indexing without modulo operation"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS STREAM variable = lclBufStream depth = c_fifo_depth",
+            "Faulty Code": "#pragma HLS array_partition variable=local_mem cyclic factor=10 // Assuming the loop count is not a multiple of 10"
+        }
+    ]
+}

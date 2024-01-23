@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "hls::stream<IntVectorStream_dt<9, 1> > lz77DownsizedStream[c_numBlocks];",
+            "Faulty Code": "hls::stream<IntVectorStream_dt<9, 1> > lz77DownsizedStream[c_numBlocks - 1];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = strdStream type = FIFO impl = SRL",
+            "Faulty Code": "#pragma HLS INTERFACE port=strdStream bram"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "uint32_t outSize[NUM_BLOCK]) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=outSize mode=ap_fifo"
+        }
+    ]
+}

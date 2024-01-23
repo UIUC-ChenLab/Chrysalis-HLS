@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = digit_location complete dim = 1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = digit_location cyclic dim = 1"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL FACTOR = 2",
+            "Faulty Code": "#pragma HLS UNROLL FACTOR = 5"
+        }
+    ]
+}

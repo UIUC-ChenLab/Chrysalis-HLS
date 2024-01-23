@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t vid = 0; vid < NUM_BLOCKS; vid++) {",
+            "Faulty Code": "for (uint8_t vid = 0; vid <= NUM_BLOCKS; vid++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "outStream[vid] << in[rIdx + midx];",
+            "Faulty Code": "outStream[vid] << in[rIdx + midx + BURST_SIZE];"
+        }
+    ]
+}

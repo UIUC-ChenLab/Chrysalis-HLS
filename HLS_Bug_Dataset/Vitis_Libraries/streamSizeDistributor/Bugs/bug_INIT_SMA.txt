@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint32_t i = inStream.read();",
+            "Faulty Code": "uint32_t i; i = inStream.read();"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void streamSizeDistributor(hls::stream<uint32_t>& inStream, hls::stream<uint32_t> outStream[SLAVES])",
+            "Faulty Code": "void streamSizeDistributor(hls::stream<uint32_t>& inStream, uint32_t outStream[SLAVES])"
+        }
+    ]
+}

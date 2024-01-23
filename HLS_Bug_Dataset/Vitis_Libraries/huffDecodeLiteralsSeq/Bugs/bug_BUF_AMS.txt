@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "accHuff >>= 16;",
+            "Faulty Code": "accHuff <<= 16;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "uint16_t decSize[4];",
+            "Faulty Code": "#pragma HLS INTERFACE port=decSize"
+        }
+    ]
+}

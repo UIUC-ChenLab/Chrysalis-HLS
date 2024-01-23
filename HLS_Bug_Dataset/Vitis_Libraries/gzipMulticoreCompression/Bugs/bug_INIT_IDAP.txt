@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<IN_DATAWIDTH> inVal;",
+            "Faulty Code": "ap_uint<IN_DATAWIDTH> inVal = 0;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable = checksumStream depth = c_defaultDepth",
+            "Faulty Code": "#pragma HLS STREAM variable = checksumStream depth = c_defaultDepth mode=ap_fifo"
+        }
+    ]
+}

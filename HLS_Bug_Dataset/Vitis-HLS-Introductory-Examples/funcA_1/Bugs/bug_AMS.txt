@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void funcA(data_t* in, data_t* out1, data_t* out2) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=in mode=ap_none\n#pragma HLS INTERFACE port=out1 mode=ap_none\n#pragma HLS INTERFACE port=out2 mode=ap_none\nvoid funcA(data_t* in, data_t* out1, data_t* out2) {"
+        }
+    ]
+}

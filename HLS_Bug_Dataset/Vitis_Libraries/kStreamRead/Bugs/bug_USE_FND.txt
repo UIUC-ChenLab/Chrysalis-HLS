@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint32_t sCnt = 1 + ((input_size - 1) / factor);",
+            "Faulty Code": "int32_t sCnt = 1 + ((input_size - 1) / factor);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "uint8_t factor = DATAWIDTH / 8;",
+            "Faulty Code": "uint8_t factor = DATAWIDTH / 7;"
+        }
+    ]
+}

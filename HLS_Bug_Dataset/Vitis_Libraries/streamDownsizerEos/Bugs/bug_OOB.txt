@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<OUT_DATAWIDTH> tmpValue = inBuffer.range((idx + 1) * OUT_DATAWIDTH - 1, idx * OUT_DATAWIDTH);",
+            "Faulty Code": "ap_uint<OUT_DATAWIDTH> tmpValue = inBuffer.range((idx + 1) * c_outWord * c_byteWidth - 1, idx * c_outWord * c_byteWidth);"
+        }
+    ]
+}

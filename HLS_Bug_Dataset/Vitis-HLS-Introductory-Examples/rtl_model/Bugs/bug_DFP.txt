@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void rtl_model(data_t a1, data_t a2, data_t a3, data_t a4, data_t b1, data_t b2,\n               data_t b3, data_t b4, data_t& z1, data_t& z2, data_t& z3,\n               data_t& z4) {\n#pragma HLS inline off\n    z1 = a1 + b1;\n    z2 = a2 + b2;\n    z3 = a3 + b3;\n    z4 = a4 + b4;\n}",
+            "Faulty Code": "void rtl_model(data_t a1, data_t a2, data_t a3, data_t a4, data_t b1, data_t b2,\n               data_t b3, data_t b4, data_t& z1, data_t& z2, data_t& z3,\n               data_t& z4) {\n#pragma HLS inline off\n#pragma HLS dataflow\n    z1 = a1 + b1;\n    z2 = a2 + b2;\n    z3 = a3 + b3;\n    z4 = a4 + b4;\n}"
+        }
+    ]
+}

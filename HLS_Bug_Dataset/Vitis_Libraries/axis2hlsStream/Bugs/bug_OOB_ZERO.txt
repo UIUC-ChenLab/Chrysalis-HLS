@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "qdma_axis<STREAMDWIDTH, 0, 0, 0> t1 = inAxiStream.read();",
+            "Faulty Code": "qdma_axis<STREAMDWIDTH + 1, 0, 0, 0> t1 = inAxiStream.read();"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<STREAMDWIDTH> tmp = t1.get_data();",
+            "Faulty Code": "ap_uint<STREAMDWIDTH> tmp = 0;"
+        }
+    ]
+}

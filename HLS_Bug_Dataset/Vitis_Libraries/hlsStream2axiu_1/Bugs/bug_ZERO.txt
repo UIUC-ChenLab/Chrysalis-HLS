@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if (TUSR_DWIDTH != 0) t1.user = outSize;",
+            "Faulty Code": "if (TUSR_DWIDTH != 0) t1.user = 0;"
+        }
+    ]
+}

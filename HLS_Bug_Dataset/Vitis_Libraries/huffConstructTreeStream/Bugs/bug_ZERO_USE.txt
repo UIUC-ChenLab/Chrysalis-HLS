@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "heap[hpLen].frequency = 1;",
+            "Faulty Code": "heap[hpLen].frequency = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "if (n == 256) {",
+            "Faulty Code": "if (n == 256) { heap[hpLen].value = smLen = n; heap[hpLen].frequency = 1; }"
+        }
+    ]
+}

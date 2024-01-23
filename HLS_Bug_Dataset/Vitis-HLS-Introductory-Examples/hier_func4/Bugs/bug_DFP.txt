@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void hier_func4(din_t A, din_t B, dout_t* C, dout_t* D) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid hier_func4(din_t A, din_t B, dout_t* C, dout_t* D) {"
+        }
+    ]
+}

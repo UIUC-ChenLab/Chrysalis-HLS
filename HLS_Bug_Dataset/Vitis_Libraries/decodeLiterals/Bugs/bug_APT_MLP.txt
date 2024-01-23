@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE II = 2",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=huffDecoderTableLog"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 2",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1"
+        }
+    ]
+}

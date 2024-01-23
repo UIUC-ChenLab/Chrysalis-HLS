@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "pending.range(bIdx, bIdx) = 1;",
+            "Faulty Code": "pending.range(bIdx, bIdx) = 0;"
+        }
+    ]
+}

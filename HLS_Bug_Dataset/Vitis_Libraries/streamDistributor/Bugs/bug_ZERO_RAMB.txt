@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "bool i = inStream.read();",
+            "Faulty Code": "bool i = 0; // Assuming the variable is initialized to zero instead of reading from the stream"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (int n = 0; n < SLAVES; n++) outStream[n] << i;",
+            "Faulty Code": "for (int n = 0; n < SLAVES; n += 2) outStream[n] << i; // Assuming a non-consecutive access pattern"
+        }
+    ]
+}

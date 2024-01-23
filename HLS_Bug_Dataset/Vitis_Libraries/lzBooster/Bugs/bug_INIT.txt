@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint8_t nextMatchCh = local_mem[match_loc % c_boosterOffsetWindow];",
+            "Faulty Code": "uint8_t nextMatchCh;"
+        }
+    ]
+}

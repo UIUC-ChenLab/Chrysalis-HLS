@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (uint8_t i = 0; i < 8; ++i) {\n#pragma HLS UNROLL\n    outVal.data[i] = rbVal.range((i * 8) + 11, (i * 8) + 4);\n}",
+            "Faulty Code": "for (uint8_t i = 0; i < 8; ++i) {\n#pragma HLS PIPELINE\n    outVal.data[i] = rbVal.range((i * 8) + 11, (i * 8) + 4);\n}"
+        }
+    ]
+}

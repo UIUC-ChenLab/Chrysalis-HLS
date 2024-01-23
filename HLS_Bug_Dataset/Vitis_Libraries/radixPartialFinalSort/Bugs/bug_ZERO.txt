@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "hpVal.strobe = 1;",
+            "Faulty Code": "hpVal.strobe = 0;"
+        }
+    ]
+}

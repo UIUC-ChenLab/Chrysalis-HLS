@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if ((status & 1) || (idx == PARALLEL_BYTES)) {",
+            "Faulty Code": "if ((status & 1) || (idx >= PARALLEL_BYTES)) {"
+        }
+    ]
+}

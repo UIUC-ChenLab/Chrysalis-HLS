@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (auto z = 0; z < blckNum; z++) {",
+            "Faulty Code": "for (auto z = 0; z <= blckNum; z++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "idx += 2;",
+            "Faulty Code": "idx += (unsigned int)2;"
+        }
+    ]
+}

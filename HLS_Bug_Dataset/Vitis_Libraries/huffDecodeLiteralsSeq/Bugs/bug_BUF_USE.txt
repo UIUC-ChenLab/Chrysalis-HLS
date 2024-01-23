@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "cmpSize[0] = accHuff;",
+            "Faulty Code": "cmpSize[0] = accHuff.range(31, 16);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "uint8_t byte_0 = acchbs.range(bitcnt - 1, bitcnt - 8);",
+            "Faulty Code": "int8_t byte_0 = acchbs.range(bitcnt - 1, bitcnt - 8);"
+        }
+    ]
+}

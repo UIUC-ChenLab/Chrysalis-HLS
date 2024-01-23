@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "tmp3[i] = tmp1[i] + tmp2[i];",
+            "Faulty Code": "tmp3[i] = (tmp1[i] + tmp2[i]) << (32 - i);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "adr = lsb;",
+            "Faulty Code": "adr = -lsb;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "lut_word = -cos_lut[adr];",
+            "Faulty Code": "lut_word = -(int)cos_lut[adr];"
+        }
+    ]
+}

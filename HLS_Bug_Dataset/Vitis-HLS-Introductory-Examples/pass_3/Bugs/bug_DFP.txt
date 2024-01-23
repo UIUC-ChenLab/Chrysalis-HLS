@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void pass(int tmp2[128], int tmp4[128], int tmp1[128], int tmp5[128]) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid pass(int tmp2[128], int tmp4[128], int tmp1[128], int tmp5[128]) {"
+        }
+    ]
+}

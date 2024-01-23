@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "outVal.range((k * 8) + 11, (k * 8) + 4) = outLit.range((rK * 8) + 7, (rK * 8));",
+            "Faulty Code": "outVal.range((k * 8) + 11, (k * 8) + 4) = outLit.range((rK * 8) + 8, (rK * 8)); // Shift by 8 instead of 7 could exceed bit range"
+        }
+    ]
+}

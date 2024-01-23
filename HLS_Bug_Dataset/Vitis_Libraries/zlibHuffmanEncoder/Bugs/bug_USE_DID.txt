@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "tOffset -= base_dist[dcode];",
+            "Faulty Code": "tOffset -= base_dist[dcode & 0xFF]; // Mistakenly sign-extended"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS aggregate variable = litlnTree",
+            "Faulty Code": "#pragma HLS array_partition variable = litlnTree dim=2 // Incorrect 'dim' value"
+        }
+    ]
+}

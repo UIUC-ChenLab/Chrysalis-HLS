@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable = axi2HlsStrm depth = 32",
+            "Faulty Code": "#pragma HLS array_partition variable=axi2HlsStrm dim=2 complete"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

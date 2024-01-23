@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint8_t pInc = PARALLEL_HUFFMAN;",
+            "Faulty Code": "uint8_t pInc = 0; // Incorrect initialization, should be PARALLEL_HUFFMAN"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1 // Incorrect placement, should not be here as it is within another pipelined loop"
+        }
+    ]
+}

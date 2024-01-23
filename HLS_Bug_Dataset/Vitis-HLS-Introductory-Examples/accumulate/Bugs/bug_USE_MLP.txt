@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "data_t acc = 0.0;",
+            "Faulty Code": "int acc = 0.0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS inline off",
+            "Faulty Code": "for (int i = 0; i < SZ; i++) { #pragma HLS pipeline"
+        }
+    ]
+}

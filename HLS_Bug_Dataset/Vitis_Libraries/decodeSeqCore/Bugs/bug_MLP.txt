@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "while (seqCnt) {\n#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "while (seqCnt) {\n#pragma HLS PIPELINE"
+        }
+    ]
+}

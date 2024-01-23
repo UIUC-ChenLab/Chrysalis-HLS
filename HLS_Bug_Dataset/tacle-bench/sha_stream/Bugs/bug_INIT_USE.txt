@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "INT32 temp, A, B, C, D, E, W[80];",
+            "Faulty Code": "INT32 temp, A, B, C, D, E, W[80]; // temp is declared but not initialized"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "tmp |= (0xFF & *p2++) << 8;",
+            "Faulty Code": "tmp |= (*p2++) << 8; // This code may result in unintended sign extension if *p2 is of type 'char' and it's a negative value"
+        }
+    ]
+}

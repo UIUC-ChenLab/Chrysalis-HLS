@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (std::memcmp(bo_out_map, buf_ref, DATA_SIZE))",
+            "Faulty Code": "if (std::memcmp(bo_out_map, buf_ref, vector_size_bytes))"
+        }
+    ]
+}

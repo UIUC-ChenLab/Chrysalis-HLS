@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (auto z = 0; z < (numItr - 1) * blckNum; z++) {",
+            "Faulty Code": "for (auto z = 0; z <= (numItr - 1) * blckNum; z++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "OUTSIZE_DT sizeVal = inSizeStream.read();",
+            "Faulty Code": "int sizeVal = inSizeStream.read();"
+        }
+    ]
+}

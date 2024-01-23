@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "length_histogram[length] += children;",
+            "Faulty Code": "length_histogram[length + 1] += children;"
+        }
+    ]
+}

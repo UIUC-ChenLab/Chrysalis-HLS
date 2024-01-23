@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "extCodeword = (excOF << (mlBits + llBits)) + (excML << llBits) + excLL;",
+            "Faulty Code": "extCodeword = (excOF << (mlBits + llBits)) + (excML << llBits); // Omission of excLL"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 2 // Incorrect initiation interval factor, not aligning with the loop execution rate"
+        }
+    ]
+}

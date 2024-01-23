@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for ( k = 0 ; k < IMAGEDIM ; k++ ) {",
+            "Faulty Code": "for ( k = 0 ; k <= IMAGEDIM ; k++ ) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=parray factor=5 cyclic"
+        }
+    ]
+}

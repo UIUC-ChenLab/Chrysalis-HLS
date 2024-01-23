@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint16_t i = 1; i <= cur_maxBits; ++i) {",
+            "Faulty Code": "for (uint16_t i = 1; i < cur_maxBits; ++i) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "hfc.data[0].codeword = (length == 0 || symCnt == 0) ? (uint16_t)0 : (uint16_t)out_reversed;",
+            "Faulty Code": "hfc.data[1].codeword = (length == 0 || symCnt == 0) ? (uint16_t)0 : (uint16_t)out_reversed;"
+        }
+    ]
+}

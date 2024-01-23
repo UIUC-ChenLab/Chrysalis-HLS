@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "adlerStrm << 1;",
+            "Faulty Code": "ap_uint<32> uninitializedVar;\nadlerStrm << uninitializedVar;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int i = 0; i < NUMCORES; i++) {",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (int i = 0; i < NUMCORES; i++) {"
+        }
+    ]
+}

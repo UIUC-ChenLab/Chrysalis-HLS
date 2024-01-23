@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS INTERFACE bram port=fir2dim_input",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=fir2dim_input depth=50"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS INTERFACE bram port=fir2dim_output",
+            "Faulty Code": "#pragma HLS INTERFACE s_axilite port=fir2dim_output"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "nptr_extra[fill_idx] = code_val;",
+            "Faulty Code": "nptr[fill_idx] = code_val;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (uint16_t i = 0; i < fill_itr; i++) {",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1\nfor (uint16_t i = 0; i < fill_itr; i++) {"
+        }
+    ]
+}

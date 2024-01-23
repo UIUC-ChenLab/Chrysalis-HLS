@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "FREQ_DT litCount = 0;",
+            "Faulty Code": "FREQ_DT litCount;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = literal_freq type = ram_2p impl = lutram",
+            "Faulty Code": "#pragma HLS INTERFACE port=literal_freq mode=m_axi"
+        }
+    ]
+}

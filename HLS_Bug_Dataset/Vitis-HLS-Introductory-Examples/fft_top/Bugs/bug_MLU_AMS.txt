@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < FFT_LENGTH; i++) {",
+            "Faulty Code": "for (int i = 0; i < FFT_LENGTH - 1; i++) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS interface ap_fifo depth = FFT_LENGTH port = in, out",
+            "Faulty Code": "#pragma HLS interface ap_none port = in, out"
+        }
+    ]
+}

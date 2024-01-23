@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS dataflow\n    compute_add(inStream1, inStream2, outStream, vSize);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS INTERFACE m_axi port = out bundle = gmem0 depth = 4096",
+            "Faulty Code": "#pragma HLS INTERFACE s_axilite port = out bundle = gmem0 depth = 4096"
+        }
+    ]
+}

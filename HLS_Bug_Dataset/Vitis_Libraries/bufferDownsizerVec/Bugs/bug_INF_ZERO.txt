@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (inSize == 0) break;",
+            "Faulty Code": "if (inSize != 0) break;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outVal.strobe = ((inSize < c_outWord) ? (uint8_t)inSize : c_outWord);",
+            "Faulty Code": "outVal.strobe = 0;"
+        }
+    ]
+}

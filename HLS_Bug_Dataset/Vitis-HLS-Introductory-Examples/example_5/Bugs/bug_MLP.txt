@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "for (int i = 0; i < count; ++i) {\n#pragma HLS PIPELINE\n    in_val = in_stream.read();\n    out_memory[i] = in_val.data_filed;\n}"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (; i < allignedwidth * BURST_SIZE; i += BURST_SIZE) {",
+            "Faulty Code": "#pragma HLS array_partition variable=in factor=3\n    for (; i < allignedwidth * BURST_SIZE; i += BURST_SIZE) {"
+        }
+    ]
+}

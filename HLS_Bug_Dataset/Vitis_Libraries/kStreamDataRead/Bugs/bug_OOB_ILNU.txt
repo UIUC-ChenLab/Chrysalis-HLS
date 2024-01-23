@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "tmp = inKStream.read();",
+            "Faulty Code": "tmp = inKStream.read(sCnt); // (incorrect, assumes read function takes an index)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS unroll factor = 4 // (incorrect, should not unroll a loop that is pipelined)"
+        }
+    ]
+}

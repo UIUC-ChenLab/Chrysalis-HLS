@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "heap[digit_location[digit]] = prev_sorting[j];",
+            "Faulty Code": "heap[j] = prev_sorting[j];"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = digit_location complete dim = 1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = digit_location type=cyclic dim = 1"
+        }
+    ]
+}

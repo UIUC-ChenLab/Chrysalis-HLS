@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "details::simpleDownSizer<PARALLEL_BYTES, c_parallelBit, 16>(axi2HlsStrm[i], hlsDownStream[i], hlsEos[i]);",
+            "Faulty Code": "details::simpleDownSizer<PARALLEL_BYTES, c_parallelBit, 16>(axi2HlsStrm[NUM_CORE], hlsDownStream[i], hlsEos[i]);"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void adler32(hls::stream<ap_uint<W * 8> >& inStrm, hls::stream<ap_uint<5> >& inPackLenStrm, hls::stream<ap_uint<32> >& outStrm) {",
+            "Faulty Code": "void adler32(hls::stream<ap_uint<W * 8> >& inStrm, hls::stream<ap_uint<5> >& inPackLenStrm, hls::stream<ap_uint<32> >& outStrm) { #pragma HLS interface mode=ap_fifo port=inStrm"
+        }
+    ]
+}

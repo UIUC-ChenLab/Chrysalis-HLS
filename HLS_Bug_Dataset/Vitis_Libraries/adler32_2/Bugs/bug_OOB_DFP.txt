@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "endInPackLenStrm << true;",
+            "Faulty Code": "endInPackLenStrm << i;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "xf::security::adler32<W>(adlerStrm, inStrm, inPackLenStrm, endInPackLenStrm, outStrm, endOutStrm);",
+            "Faulty Code": "#pragma HLS dataflow\nxf::security::adler32<W>(adlerStrm, inStrm, inPackLenStrm, endInPackLenStrm, outStrm, endOutStrm);"
+        }
+    ]
+}

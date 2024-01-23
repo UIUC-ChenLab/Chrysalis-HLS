@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable = axi2HlsStrm depth = 1024",
+            "Faulty Code": "#pragma HLS array_partition variable=axi2HlsStrm dim=3"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "xf::security::adler32<W>(adlerStrm, inStrm, inPackLenStrm, endInPackLenStrm, outStrm, endOutStrm);",
+            "Faulty Code": "xf::security::adler32<W>(adlerStrm, inStrm, inPackLenStrm, endInPackLenStrm, outStrm, endOutStrm); // Assuming adler32 is accessing 'inStrm' randomly"
+        }
+    ]
+}

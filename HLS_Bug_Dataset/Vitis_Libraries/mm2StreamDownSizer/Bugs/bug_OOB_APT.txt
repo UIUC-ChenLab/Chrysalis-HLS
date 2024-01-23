@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "inBuffer >>= OUT_DATAWIDTH;",
+            "Faulty Code": "inBuffer >>= IN_DATAWIDTH;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=inBuffer"
+        }
+    ]
+}

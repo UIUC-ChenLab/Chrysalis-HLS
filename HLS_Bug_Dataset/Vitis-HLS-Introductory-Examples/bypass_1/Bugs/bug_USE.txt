@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "tmp3[i] = tmp1[i] + tmp2[i];",
+            "Faulty Code": "tmp3[i] = (short)tmp1[i] + (short)tmp2[i];"
+        }
+    ]
+}

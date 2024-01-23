@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint16_t hdrBsLen[3] = {0, 0, 0};",
+            "Faulty Code": "uint16_t hdrBsLen[3]; // Uninitialized, should be set to zeros."
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_RESHAPE variable = fseHdrBuf type = cyclic factor = 2 dim = 1",
+            "Faulty Code": "#pragma HLS ARRAY_RESHAPE variable = fseHdrBuf type = cyclic factor = 2 dim = 2 // Incorrect dimension, dim should be 1 as fseHdrBuf is a 1D array."
+        }
+    ]
+}

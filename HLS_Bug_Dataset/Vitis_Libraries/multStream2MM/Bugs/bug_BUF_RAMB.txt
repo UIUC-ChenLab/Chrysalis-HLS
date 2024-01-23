@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "out[base_idx + j] = inStream[i].read();",
+            "Faulty Code": "out[output_idx[i] + j] = inStream[i].read();"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "outBuffer.range((byteIdx + 1) * IN_WIDTH - 1, byteIdx * IN_WIDTH) = inValue;",
+            "Faulty Code": "outBuffer.range(byteIdx * IN_WIDTH - 1, (byteIdx - 1) * IN_WIDTH) = inValue;"
+        }
+    ]
+}

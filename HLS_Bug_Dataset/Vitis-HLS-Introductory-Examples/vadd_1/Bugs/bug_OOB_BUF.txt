@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if ((i + BUFFER_SIZE) > size) chunk_size = size - i;",
+            "Faulty Code": "if ((i + BUFFER_SIZE) >= size) chunk_size = size - i;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "vout_buffer[j] = v1_buffer[j] + v2_buffer[j];",
+            "Faulty Code": "vout_buffer[j] = v1_buffer[j + BUFFER_SIZE/2] + v2_buffer[j + BUFFER_SIZE/2];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out[outIdx + i] = inData.range(DATAWIDTH + PARALLEL_BYTES - 1, PARALLEL_BYTES);",
+            "Faulty Code": "out[outIdx++] = inData.range(DATAWIDTH + PARALLEL_BYTES - 1, PARALLEL_BYTES);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void s2mmAxi(ap_uint<DATAWIDTH>* out, hls::stream<ap_uint<DATAWIDTH + PARALLEL_BYTES> >& inStream, uint32_t* outputSize)",
+            "Faulty Code": "void s2mmAxi(uint32_t out, hls::stream<ap_uint<DATAWIDTH + PARALLEL_BYTES> >& inStream, uint32_t* outputSize)"
+        }
+    ]
+}

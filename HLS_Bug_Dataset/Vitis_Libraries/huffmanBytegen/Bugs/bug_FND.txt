@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "uint8_t huffmanBytegen(bitBufferType& _bitbuffer, ...)",
+            "Faulty Code": "#pragma HLS array_partition variable=array_codes factor=10"
+        }
+    ]
+}

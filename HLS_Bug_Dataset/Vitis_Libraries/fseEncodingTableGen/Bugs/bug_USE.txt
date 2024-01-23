@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "intm[s] = ivSp + ivInc;",
+            "Faulty Code": "intm[s] = ivSp + (int16_t)ivInc;"
+        }
+    ]
+}

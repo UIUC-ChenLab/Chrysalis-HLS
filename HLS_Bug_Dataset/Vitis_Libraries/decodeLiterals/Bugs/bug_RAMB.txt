@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "lit.range(c_streamWidth - 1, 0) = litDecodeInStream.read();",
+            "Faulty Code": "lit.range(c_streamWidth - 1, 0) = litDecodeInStream.read(); if (readFlag) lit.range(2 * c_streamWidth - 1, c_streamWidth) = litDecodeInStream.read();"
+        }
+    ]
+}

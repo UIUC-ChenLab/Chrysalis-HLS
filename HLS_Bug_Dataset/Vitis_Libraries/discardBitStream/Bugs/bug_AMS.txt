@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void discardBitStream(bitBufferType& bitbuffer, ap_uint<6>& bits_cntr, ap_uint<6> n_bits) { ... }",
+            "Faulty Code": "#pragma HLS INTERFACE port=bitbuffer mode=ap_none"
+        }
+    ]
+}

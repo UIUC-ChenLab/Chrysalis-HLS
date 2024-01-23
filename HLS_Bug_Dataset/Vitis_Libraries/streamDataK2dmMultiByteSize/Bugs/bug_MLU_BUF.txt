@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "while (inValue.last == false) {",
+            "Faulty Code": "do {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "out << inValue.data;",
+            "Faulty Code": "out << inValue.data.range((PARALLEL_BYTES * 8) - 1, 0);"
+        }
+    ]
+}

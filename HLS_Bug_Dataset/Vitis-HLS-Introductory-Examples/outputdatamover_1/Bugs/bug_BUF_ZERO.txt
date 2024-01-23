@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "RES.write(x_aux[N - N / 2 + i] - y_aux[N - N / 2 + i] / N);",
+            "Faulty Code": "RES.write(x_aux[N - N / 4 + i] - y_aux[N - N / 4 + i] / N);"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "*ovflo = status.getOvflo() & 0x1;",
+            "Faulty Code": "*ovflo = status.getOvflo() & 0x0;"
+        }
+    ]
+}

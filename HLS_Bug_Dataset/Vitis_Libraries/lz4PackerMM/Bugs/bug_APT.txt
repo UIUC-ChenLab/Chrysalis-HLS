@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = inStreamV type = FIFO impl = SRL",
+            "Faulty Code": "#pragma HLS array_partition variable = inStreamV type = complete"
+        }
+    ]
+}

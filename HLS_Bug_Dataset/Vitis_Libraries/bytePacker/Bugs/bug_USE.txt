@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint8_t inSize = inVal.range(SIZE_DWIDTH - 1, 0);",
+            "Faulty Code": "int inSize = inVal.range(SIZE_DWIDTH - 1, 0);"
+        }
+    ]
+}

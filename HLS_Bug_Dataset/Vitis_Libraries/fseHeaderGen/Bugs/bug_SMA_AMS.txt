@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<IntVectorStream_dt<16, 1> >& normTableStream",
+            "Faulty Code": "#pragma HLS interface port=normTableStream bram"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "int16_t normTable[64];",
+            "Faulty Code": "#pragma HLS interface port=normTable ap_none"
+        }
+    ]
+}

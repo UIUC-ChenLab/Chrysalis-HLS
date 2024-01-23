@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = normTable type = ram_1p impl = lutram",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable = normTable type = ram_1p impl = dram"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint16_t i = 0; i < freqCnt; ++i) {",
+            "Faulty Code": "for (uint16_t i = 0; i <= freqCnt; ++i) {"
+        }
+    ]
+}

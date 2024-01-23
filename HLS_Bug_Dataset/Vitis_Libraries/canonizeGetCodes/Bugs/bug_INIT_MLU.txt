@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "static bool initBitsMem = true;",
+            "Faulty Code": "static bool initBitsMem;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint16_t i = 1; i <= cur_maxBits; ++i) {",
+            "Faulty Code": "for (uint16_t i = 1; i < cur_maxBits; ++i) {"
+        }
+    ]
+}

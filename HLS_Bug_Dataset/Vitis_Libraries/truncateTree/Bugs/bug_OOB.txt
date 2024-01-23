@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint16_t i = c_tree_depth - 1; i > max_bit_len; --i) {",
+            "Faulty Code": "for (uint16_t i = c_tree_depth; i > max_bit_len; --i) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "hfcIn = hufCodeInStream.read();",
+            "Faulty Code": "hfcIn = hufCodeInStream.read(hfcIn.data[1]);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1 factor=3"
+        }
+    ]
+}

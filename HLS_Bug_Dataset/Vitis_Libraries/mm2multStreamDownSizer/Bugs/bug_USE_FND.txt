@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint16_t outSizeV = (inSize - 1) / c_outWord + 1;",
+            "Faulty Code": "int outSizeV = (inSize - 1) / c_outWord + 1;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "int idx = itr % factor;",
+            "Faulty Code": "#pragma HLS array_partition variable=inBuffer factor=3"
+        }
+    ]
+}

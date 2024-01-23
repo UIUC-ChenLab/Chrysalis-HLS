@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = read_idx dim = 0 complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = read_idx dim = 1 complete"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1\n#pragma HLS PIPELINE II = 1"
+        }
+    ]
+}

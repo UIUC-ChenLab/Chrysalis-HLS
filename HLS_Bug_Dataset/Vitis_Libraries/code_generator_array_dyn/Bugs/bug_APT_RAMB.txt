@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = count",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = count type=cyclic"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "if (is_extra) { nptr_extra[fill_idx] = code_val; } else { nptr[fill_idx] = code_val; }",
+            "Faulty Code": "if (is_extra) { nptr_extra[i] = code_val; } else { nptr[i] = code_val; }"
+        }
+    ]
+}

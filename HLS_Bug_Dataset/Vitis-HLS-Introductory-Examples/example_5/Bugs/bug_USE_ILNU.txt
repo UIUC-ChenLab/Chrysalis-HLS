@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "out_memory[i] = in_val.data_filed;",
+            "Faulty Code": "out_memory[i] = (int)in_val.data_filed;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        }
+    ]
+}

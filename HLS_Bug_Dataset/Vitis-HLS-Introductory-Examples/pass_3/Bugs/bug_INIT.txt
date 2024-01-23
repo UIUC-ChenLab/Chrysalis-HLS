@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int buff[127];",
+            "Faulty Code": "int buff[127]; buff[0] = tmp2[0];"
+        }
+    ]
+}

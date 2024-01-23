@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outValue.data[0].bitlen = lit_blen_fixed[tCh];",
+            "Faulty Code": "outValue.data[0].bitlen = lit_blen_fixed[lcode];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 2 // Incorrect II for the given loop operation"
+        }
+    ]
+}

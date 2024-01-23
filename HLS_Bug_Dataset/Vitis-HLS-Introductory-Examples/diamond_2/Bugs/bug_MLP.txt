@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void diamond(data_t vecIn[N], data_t vecOut[N]) {\n    data_t c1[N], c2[N], c3[N], c4[N];\n#pragma HLS dataflow\n    funcA(vecIn, c1, c2);\n    funcB(c1, c3);\n    funcC(c2, c4);\n    funcD(c3, c4, vecOut);\n}",
+            "Faulty Code": "void diamond(data_t vecIn[N], data_t vecOut[N]) {\n    data_t c1[N], c2[N], c3[N], c4[N];\n#pragma HLS pipeline\n#pragma HLS dataflow\n    funcA(vecIn, c1, c2);\n    funcB(c1, c3);\n    funcC(c2, c4);\n    funcD(c3, c4, vecOut);\n}"
+        }
+    ]
+}

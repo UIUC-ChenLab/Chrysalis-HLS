@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int16_t w = maxSymbol - 1; w > -1; --w) {",
+            "Faulty Code": "for (int16_t w = maxSymbol - 1; w > 0; --w) {"
+        }
+    ]
+}

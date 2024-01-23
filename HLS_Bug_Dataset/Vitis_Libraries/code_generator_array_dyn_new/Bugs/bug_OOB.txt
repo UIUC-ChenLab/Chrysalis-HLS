@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "bl15Codes[ap_uint<8>(firstCode[14])] = i;",
+            "Faulty Code": "bl15Codes[firstCode[14]] = i;"
+        }
+    ]
+}

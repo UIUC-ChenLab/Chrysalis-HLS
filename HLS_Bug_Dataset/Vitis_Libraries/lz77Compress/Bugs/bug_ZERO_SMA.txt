@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static bool resetDictFlag = true;",
+            "Faulty Code": "static bool resetDictFlag = 0;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS STREAM variable = compressedStream depth = 4",
+            "Faulty Code": "#pragma HLS INTERFACE port = compressedStream mode = ap_fifo"
+        }
+    ]
+}

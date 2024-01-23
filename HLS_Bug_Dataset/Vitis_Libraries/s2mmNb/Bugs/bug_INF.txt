@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; (is_pending != 0) && (done == 0); i++) {",
+            "Faulty Code": "for (int i = 0; (is_pending != 0) || (done == 0); i++) {"
+        }
+    ]
+}

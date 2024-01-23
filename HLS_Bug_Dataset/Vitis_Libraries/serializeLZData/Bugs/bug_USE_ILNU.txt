@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "seqVal = seqStream[cIdx].read();",
+            "Faulty Code": "seqVal = (DSVectorStream_dt<SequencePack<MAX_FREQ_DWIDTH, 8>, 1>)seqStream[cIdx].read();"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS UNROLL"
+        }
+    ]
+}

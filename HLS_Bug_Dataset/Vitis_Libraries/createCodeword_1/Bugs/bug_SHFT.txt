@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "out_reversed = out_reversed >> (MAX_LEN - length);",
+            "Faulty Code": "out_reversed = out_reversed >> (MAX_LEN - length - 1);"
+        }
+    ]
+}

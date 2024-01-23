@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = bitlen_vals complete dim = 1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = bitlen_vals cyclic dim = 1"
+        }
+    ]
+}

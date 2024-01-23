@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "lut_word = cos_lut[adr];",
+            "Faulty Code": "lut_word = cos_lut[adr + LUTSIZE]; // Incorrect index, potentially OOB"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "lut_word = -cos_lut[adr];",
+            "Faulty Code": "lut_word = -cos_lut[i]; // Incorrect index, non-consecutive addressing"
+        }
+    ]
+}

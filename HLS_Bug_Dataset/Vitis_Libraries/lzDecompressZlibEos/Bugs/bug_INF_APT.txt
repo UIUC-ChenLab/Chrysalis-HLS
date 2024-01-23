@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (uint32_t i = 0; (eos_flag == false) || (next_states != READ_STATE); i++) {",
+            "Faulty Code": "for (uint32_t i = 0; (eos_flag == false) && (next_states != READ_STATE); i++) {"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = prevValue dim = 0 complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = prevValue dim = 0 cyclic"
+        }
+    ]
+}

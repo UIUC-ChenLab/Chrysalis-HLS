@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "OUTSIZE_DT blckNum = (inputSize - 1) / blckSize + 1;",
+            "Faulty Code": "OUTSIZE_DT blckNum = inputSize / blckSize;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void s2mmSizeWrite(hls::stream<OUTSIZE_DT>& inSizeStream, OUTSIZE_DT* compressedSize, ...",
+            "Faulty Code": "#pragma HLS interface port=compressedSize mode=bram"
+        }
+    ]
+}

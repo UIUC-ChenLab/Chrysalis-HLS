@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void loadBitStreamLL(bitBufferTypeLL& bitbuffer, ...",
+            "Faulty Code": "#pragma HLS interface port=bitbuffer ap_none"
+        }
+    ]
+}

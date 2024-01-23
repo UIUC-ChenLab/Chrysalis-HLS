@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<c_accRegWidth> inputWindow = 0;",
+            "Faulty Code": "ap_uint<c_accRegWidth> inputWindow;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "inputWindow.range((idxVal + PARALLEL_BYTE) * 8 - 1, idxVal * 8) = inValue.data[0];",
+            "Faulty Code": "inputWindow.range(idxVal * 8 - 1, (idxVal - PARALLEL_BYTE) * 8) = inValue.data[0];"
+        }
+    ]
+}

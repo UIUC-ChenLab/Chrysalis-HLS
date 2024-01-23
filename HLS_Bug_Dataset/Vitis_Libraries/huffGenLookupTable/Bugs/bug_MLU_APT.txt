@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t i = 1; i < accuracyLog + 1; ++i) {",
+            "Faulty Code": "for (uint8_t i = 1; i <= accuracyLog; ++i) {"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = bitlen_histogram complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = bitlen_histogram type=block"
+        }
+    ]
+}

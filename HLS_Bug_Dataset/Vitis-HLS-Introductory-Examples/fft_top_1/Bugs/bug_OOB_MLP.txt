@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int i = 0; i < NUM; i++) {",
+            "Faulty Code": "for (int i = 0; i <= NUM; i++) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline II = 1 rewind",
+            "Faulty Code": "#pragma HLS pipeline II = 2"
+        }
+    ]
+}

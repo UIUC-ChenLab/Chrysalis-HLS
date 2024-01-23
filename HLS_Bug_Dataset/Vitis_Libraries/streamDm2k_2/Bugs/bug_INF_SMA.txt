@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (auto i = 0; i < inputAlignedSize; i++) {",
+            "Faulty Code": "for (auto i = 0; i <= inputAlignedSize; i++) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "uint32_t num = 0;",
+            "Faulty Code": "uint32_t num[c_size] = {0};"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<MAX_BITS * PARALLEL_HUFFMAN> >& hfBitStream",
+            "Faulty Code": "ap_uint<MAX_BITS * PARALLEL_HUFFMAN> hfBitStream"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        }
+    ]
+}

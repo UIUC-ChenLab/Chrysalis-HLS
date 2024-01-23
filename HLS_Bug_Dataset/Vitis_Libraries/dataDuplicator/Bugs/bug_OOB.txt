@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (auto i = SIZE_DWIDTH, j = 0; i < (DWIDTH + SIZE_DWIDTH); i += incr) {",
+            "Faulty Code": "for (auto i = SIZE_DWIDTH, j = 0; j < PARALLEL_BYTES; i += incr) {"
+        }
+    ]
+}

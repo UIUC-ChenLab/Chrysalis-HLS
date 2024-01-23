@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "ap_uint<OUT_DATAWIDTH> tmpValue = inBuffer.range((idx + 1) * OUT_DATAWIDTH - 1, idx * OUT_DATAWIDTH);",
+            "Faulty Code": "ap_uint<OUT_DATAWIDTH> tmpValue = inBuffer.range((idx) * OUT_DATAWIDTH - 1, (idx - 1) * OUT_DATAWIDTH);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void mm2multStreamDownSizer(hls::stream<ap_uint<IN_DATAWIDTH> >& inStream,",
+            "Faulty Code": "void mm2multStreamDownSizer(ap_uint<IN_DATAWIDTH>& inStream,"
+        }
+    ]
+}

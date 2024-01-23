@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable = inStreamV depth = 32",
+            "Faulty Code": "#pragma HLS array_partition variable=inStreamV dim=0 complete"
+        }
+    ]
+}

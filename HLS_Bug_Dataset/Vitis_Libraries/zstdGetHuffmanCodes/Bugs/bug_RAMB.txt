@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "huffCodes << hfc;",
+            "Faulty Code": "#pragma HLS INTERFACE port=huffCodes mode=m_axi\nhuffCodes << hfc;"
+        }
+    ]
+}

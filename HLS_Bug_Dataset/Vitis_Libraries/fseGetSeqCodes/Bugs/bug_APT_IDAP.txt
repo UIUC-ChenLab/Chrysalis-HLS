@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "seqCode.strobe = 1;",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=seqCode.data"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "seqCodeStream << seqCode;",
+            "Faulty Code": "#pragma HLS interface mode=s_axilite port=seqCodeStream"
+        }
+    ]
+}

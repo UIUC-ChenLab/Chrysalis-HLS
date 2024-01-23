@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "litBuffer[wIdx] = prevWord;",
+            "Faulty Code": "litBuffer[rIdx] = prevWord;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = litBuffer type = ram_t2p impl = bram",
+            "Faulty Code": "#pragma HLS INTERFACE port=litBuffer mode=bram"
+        }
+    ]
+}

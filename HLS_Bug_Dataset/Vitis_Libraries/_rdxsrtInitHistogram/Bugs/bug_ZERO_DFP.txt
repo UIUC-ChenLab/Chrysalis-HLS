@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "digit_histogram[i] = 0;",
+            "Faulty Code": "digit_histogram[i] = NON_ZERO_VALUE;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

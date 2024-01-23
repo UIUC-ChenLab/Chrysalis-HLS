@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "while (dynamic_curInSize < 19) dynamic_lens[order[dynamic_curInSize++]] = 0;",
+            "Faulty Code": "for (int i = 0; i < 18; i++) dynamic_lens[order[dynamic_curInSize++]] = 0;"
+        }
+    ]
+}

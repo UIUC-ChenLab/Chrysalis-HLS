@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "z4 = a4 + b4;",
+            "Faulty Code": "//z4 = a4 + b4; // Accidentally commented out or omitted"
+        }
+    ]
+}

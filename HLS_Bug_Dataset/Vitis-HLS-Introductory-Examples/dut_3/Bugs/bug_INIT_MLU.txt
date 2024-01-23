@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int sum = 0;",
+            "Faulty Code": "int sum;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned i = 0; i < N; i++) {",
+            "Faulty Code": "for (unsigned i = 0; i <= N; i++) {"
+        }
+    ]
+}

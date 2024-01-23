@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (auto i = 0; i < inputAlignedSize; i++) {",
+            "Faulty Code": "for (auto i = 0; i <= inputAlignedSize; i++) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "inData.keep = -1;",
+            "Faulty Code": "inData.keep[0] = -1;"
+        }
+    ]
+}

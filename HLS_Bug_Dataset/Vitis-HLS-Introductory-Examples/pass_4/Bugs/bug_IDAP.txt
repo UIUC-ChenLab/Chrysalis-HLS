@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void pass(int tmp1[128], int b[128]) {",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=tmp1\nvoid pass(int tmp1[128], int b[128]) {"
+        }
+    ]
+}

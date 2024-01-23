@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<SYMBOL_SIZE> left = 0;",
+            "Faulty Code": "ap_uint<SYMBOL_SIZE> left;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = heap type = ram_t2p impl = bram",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable = heap type = ram_t2p impl = bram\n#pragma HLS AGGREGATE variable = heap"
+        }
+    ]
+}

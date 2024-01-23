@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "outEos << 0;",
+            "Faulty Code": "outEos << (cntr % c_factor);"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "outStream << outVal;",
+            "Faulty Code": "outStream << (dsize == 1 ? inVal.range(15, 0) : outVal);"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void init_sin_table(din1_t sin_table[256]) {\n    int i;\n    for (i = 0; i < 256; i++) {\n        dint_t real_val = sin(M_PI * (dint_t)(i - 128) / 256.0);\n        sin_table[i] = (din1_t)(32768.0 * real_val);\n    }\n}",
+            "Faulty Code": "void init_sin_table(din1_t sin_table[256]) {\n    #pragma HLS dataflow\n    int i;\n    for (i = 0; i < 256; i++) {\n        dint_t real_val = sin(M_PI * (dint_t)(i - 128) / 256.0);\n        sin_table[i] = (din1_t)(32768.0 * real_val);\n    }\n}"
+        }
+    ]
+}

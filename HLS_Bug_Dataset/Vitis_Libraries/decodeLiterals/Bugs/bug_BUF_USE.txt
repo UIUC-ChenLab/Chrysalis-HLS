@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (readFlag) lit.range(2 * c_streamWidth - 1, c_streamWidth) = litDecodeInStream.read();",
+            "Faulty Code": "if (readFlag) lit.range(c_streamWidth - 1, 0) = litDecodeInStream.read();"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "uint8_t hfw1 = (w8t & 0x0F);",
+            "Faulty Code": "int hfw1 = (w8t & 0x0F);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (i < LENGTH_SIZE) length_histogram[i] = 0;",
+            "Faulty Code": "if (i < SYMBOL_SIZE) length_histogram[i] = 0;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS dataflow\n        init_buffers:\n            for (ap_uint<9> i = 0; i < i_symbolSize; ++i) {"
+        }
+    ]
+}

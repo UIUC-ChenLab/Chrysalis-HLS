@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint16_t heapLength = heapLenStream.read();",
+            "Faulty Code": "uint16_t heapLength; // Missing initialization from heapLenStream"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable = heapStream depth = 320",
+            "Faulty Code": "#pragma HLS STREAM variable = heapStream depth = 320 mode=ap_fifo"
+        }
+    ]
+}

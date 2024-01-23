@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outStream[vid] << in[rIdx + midx];",
+            "Faulty Code": "outStream[vid] << in[rIdx + burstSize];"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "outSizeStream[vid] << (input_size[vid] - read_size[vid]);",
+            "Faulty Code": "outSizeStream[vid] << (input_size[vid] / 2);"
+        }
+    ]
+}

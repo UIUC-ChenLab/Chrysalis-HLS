@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (i == 1) break;",
+            "Faulty Code": "if (i != 1) break;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "outStream[n] << i;",
+            "Faulty Code": "outStream[i] << i;"
+        }
+    ]
+}

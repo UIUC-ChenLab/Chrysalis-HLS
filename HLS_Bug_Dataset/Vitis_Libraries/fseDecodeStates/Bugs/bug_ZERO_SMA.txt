@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "FSEDecode_t sqdState = OFFSET_CALC;",
+            "Faulty Code": "FSEDecode_t sqdState = LITLEN;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "ap_uint<LMO_WIDTH>* prevOffsets",
+            "Faulty Code": "#pragma HLS INTERFACE port=prevOffsets bram"
+        }
+    ]
+}

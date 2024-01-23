@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outVal.data[i] = inAxiVal.data.range((i * 8) + 7, i * 8);",
+            "Faulty Code": "outVal.data[i] = inAxiVal.data.range((i + 1) * 8, i * 8);"
+        }
+    ]
+}

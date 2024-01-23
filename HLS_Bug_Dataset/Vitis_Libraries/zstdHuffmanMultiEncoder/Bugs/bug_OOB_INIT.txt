@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "streamSizes[si] = inVal.range(15 + (si * 16) + 4, (si * 16) + 4);",
+            "Faulty Code": "streamSizes[si + 1] = inVal.range(15 + (si * 16) + 4, (si * 16) + 4);"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint8_t strb = inVal.range(3, 0);",
+            "Faulty Code": "uint8_t strb; if (strb < 8) { inLit >>= (8 * (8 - strb)); }"
+        }
+    ]
+}

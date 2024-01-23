@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "heap[digit_location[digit]] = prev_sorting[j];",
+            "Faulty Code": "heap[digit_location[digit] + 1] = prev_sorting[j];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "Digit digit = (val.frequency >> shift) & (RADIX - 1);",
+            "Faulty Code": "Digit digit = (val.frequency >> (shift & (RADIX - 1)));"
+        }
+    ]
+}

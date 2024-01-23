@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "wIdx = (uint16_t)(memReadLimit[wsi] + wInc);",
+            "Faulty Code": "wIdx = (uint16_t)(memReadLimit[wsi]); // Forgot to add wInc which leads to one iteration omission"
+        }
+    ]
+}

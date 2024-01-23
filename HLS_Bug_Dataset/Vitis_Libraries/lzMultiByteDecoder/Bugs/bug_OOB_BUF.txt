@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "regHistory[1][(read_idx + 1) % c_regHistSize]",
+            "Faulty Code": "regHistory[1][(read_idx + 1)]"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "regHistory[1][write_idx % c_regHistSize] = outStreamValue;",
+            "Faulty Code": "regHistory[0][write_idx % c_regHistSize] = outStreamValue;"
+        }
+    ]
+}

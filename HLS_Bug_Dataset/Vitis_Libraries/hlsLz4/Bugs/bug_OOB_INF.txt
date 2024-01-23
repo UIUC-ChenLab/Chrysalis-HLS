@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint8_t i = 0; i < NUM_BLOCK; i++) {",
+            "Faulty Code": "for (uint8_t i = 0; i <= NUM_BLOCK; i++) {"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "xf::compression::lzCompress<M_LEN, MIN_MAT, LZ_MAX_OFFSET_LIM>(inStream, compressdStream, input_size);",
+            "Faulty Code": "xf::compression::lzCompress<M_LEN, MIN_MAT, LZ_MAX_OFFSET_LIM>(inStream, compressdStream, 0);"
+        }
+    ]
+}

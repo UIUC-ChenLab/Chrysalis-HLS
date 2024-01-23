@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "mat_type tmp;",
+            "Faulty Code": "int tmp;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS INTERFACE bram port=a\n#pragma HLS RESOURCE variable=a core=RAM_1P_BRAM",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=a\n#pragma HLS RESOURCE variable=a core=RAM_1P_BRAM"
+        }
+    ]
+}

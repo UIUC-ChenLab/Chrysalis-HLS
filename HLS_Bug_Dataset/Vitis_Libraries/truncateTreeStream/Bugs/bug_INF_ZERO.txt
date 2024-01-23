@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (histVal.strobe == 0) {",
+            "Faulty Code": "if (histVal.strobe != 0) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int max_bit_len = c_maxBitLen[metaIdx++];",
+            "Faulty Code": "int max_bit_len = 0;"
+        }
+    ]
+}

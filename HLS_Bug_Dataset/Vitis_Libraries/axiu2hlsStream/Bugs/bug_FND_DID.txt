@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=val.data factor=3"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "val.strobe = c_maxByteCnt;",
+            "Faulty Code": "#pragma HLS array_partition variable=val.data dim=3"
+        }
+    ]
+}

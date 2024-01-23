@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "acchbs.range(c_streamWidth - 1, 0) = bitStream[byteIndx--];",
+            "Faulty Code": "#pragma HLS interface m_axi port=bitStream offset=direct"
+        }
+    ]
+}

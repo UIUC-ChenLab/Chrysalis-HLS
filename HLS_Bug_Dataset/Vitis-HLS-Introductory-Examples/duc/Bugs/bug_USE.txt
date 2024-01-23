@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "dds_0.process_frame(incr, dds_cos, dds_sin);",
+            "Faulty Code": "dds_0.process_frame((dds_t)incr, dds_cos, dds_sin);"
+        }
+    ]
+}

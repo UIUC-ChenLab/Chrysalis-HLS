@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS RESOURCE variable=H core=RAM_1P_BRAM",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=H type=complete"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS INTERFACE bram port=H",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=H depth=256"
+        }
+    ]
+}

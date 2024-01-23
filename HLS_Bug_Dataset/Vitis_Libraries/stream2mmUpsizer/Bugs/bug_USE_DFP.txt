@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<OUT_WIDTH> outBuffer = 0;",
+            "Faulty Code": "ap_int<OUT_WIDTH> outBuffer = 0;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (bool eos_flag = inStreamEos.read(); eos_flag == false; eos_flag = inStreamEos.read()) {",
+            "Faulty Code": "#pragma HLS DATAFLOW\nfor (bool eos_flag = inStreamEos.read(); eos_flag == false; eos_flag = inStreamEos.read()) {"
+        }
+    ]
+}

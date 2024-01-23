@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint32_t outSize = countSetBits<c_keepDWidth>((int)(inValue.keep));",
+            "Faulty Code": "uint32_t outSize = countSetBits<c_keepDWidth>((int)(inValue.keep[PARALLEL_BYTES]));"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<PARALLEL_BYTES * 8> >& out,",
+            "Faulty Code": "#pragma HLS interface port=out ap_none"
+        }
+    ]
+}

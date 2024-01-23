@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "digit_histogram[i] = 0;",
+            "Faulty Code": "digit_histogram[i + RADIX/2] = 0;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

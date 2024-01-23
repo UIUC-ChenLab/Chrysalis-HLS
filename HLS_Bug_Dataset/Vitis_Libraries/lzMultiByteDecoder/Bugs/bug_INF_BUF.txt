@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (; matchDone == false;) {",
+            "Faulty Code": "for (; matchDone != true;) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "ap_uint<c_parallelBit> lowValueRam = ramHistory[0][(read_idx + 0) % c_ramHistSize];",
+            "Faulty Code": "ap_uint<c_parallelBit> lowValueRam = ramHistory[1][(read_idx + 0) % c_ramHistSize];"
+        }
+    ]
+}

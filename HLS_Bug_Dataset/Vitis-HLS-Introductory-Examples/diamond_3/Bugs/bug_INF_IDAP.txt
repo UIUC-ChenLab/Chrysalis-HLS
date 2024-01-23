@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < N / NUM_BLOCKS; i++) {",
+            "Faulty Code": "for (int i = 0; i <= N / NUM_BLOCKS; i++) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INTERFACE ap_ctrl_chain port = return",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_ctrl_none port=return"
+        }
+    ]
+}

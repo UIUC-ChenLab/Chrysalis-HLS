@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "litFseTable[i] = fseTableStream.read();",
+            "Faulty Code": "litFseTable[i+1] = fseTableStream.read();"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "outValue.data[0] = lit;",
+            "Faulty Code": "outValue.data = lit;"
+        }
+    ]
+}

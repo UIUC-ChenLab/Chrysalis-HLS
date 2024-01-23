@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint8_t k = 0; k < c_outBytes; ++k) {",
+            "Faulty Code": "for (uint8_t k = 0; k <= c_outBytes; ++k) {"
+        }
+    ]
+}

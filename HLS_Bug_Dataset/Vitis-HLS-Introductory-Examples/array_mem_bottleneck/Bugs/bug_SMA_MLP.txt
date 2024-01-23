@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "dout_t array_mem_bottleneck(din_t mem[N]) {",
+            "Faulty Code": "#pragma HLS interface port=mem mode=ap_scalar\n dout_t array_mem_bottleneck(din_t mem[N]) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = 2; i < N; ++i)",
+            "Faulty Code": "#pragma HLS pipeline\n for (i = 2; i < N; ++i) {\n    #pragma HLS pipeline"
+        }
+    ]
+}

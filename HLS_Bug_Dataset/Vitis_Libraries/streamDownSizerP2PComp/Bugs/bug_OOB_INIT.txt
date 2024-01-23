@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<PACK_WIDTH> tmpValue = inBuffer.range((idx + 1) * PACK_WIDTH - 1, idx * PACK_WIDTH);",
+            "Faulty Code": "ap_uint<PACK_WIDTH> tmpValue = inBuffer.range((idx + 2) * PACK_WIDTH - 1, idx * PACK_WIDTH);"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "for (int size = inStreamSize.read(); size != 0; size = inStreamSize.read()) {",
+            "Faulty Code": "int size; for ( ; size != 0; size = inStreamSize.read()) {"
+        }
+    ]
+}

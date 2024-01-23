@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "last = inData.range(PARALLEL_BYTES - 1, 0) == 0;",
+            "Faulty Code": "last = inData.range(PARALLEL_BYTES, 0) == 0;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void s2mmAxi(ap_uint<DATAWIDTH>* out, ...)",
+            "Faulty Code": "void s2mmAxi(uint32_t out, ...)"
+        }
+    ]
+}

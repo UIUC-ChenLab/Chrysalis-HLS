@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (auto inSize = dataSizeStream.read(); inSize > 0; inSize = dataSizeStream.read()) {",
+            "Faulty Code": "for (auto inSize = dataSizeStream.read(); inSize >= 0; inSize = dataSizeStream.read()) {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=outVal.data dim=1"
+        }
+    ]
+}

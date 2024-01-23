@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS STREAM variable = downStream depth = c_thriceNumBlocks",
+            "Faulty Code": "#pragma HLS array_partition variable=downStream factor=10 dim=1"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void zlibHuffmanEncoder(hls::stream<IntVectorStream_dt<9, 1> >& inStream,\n                        hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> >& hufCodeInStream,\n                        hls::stream<IntVectorStream_dt<8, 2> >& huffOutStream) {\n#pragma HLS dataflow\n    hls::stream<IntVectorStream_dt<32, 1> > encodedOutStream(\"encodedOutStream\");\n    hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> > hufCodeStream(\"hufCodeStream\");\n#pragma HLS STREAM variable = encodedOutStream depth = 4\n#pragma HLS STREAM variable = hufCodeStream depth = 4\n\n    xf::compression::details::huffmanProcessingUnit(inStream, encodedOutStream);\n    xf::compression::huffmanEncoderStream(encodedOutStream, hufCodeInStream, hufCodeStream);\n    xf::compression::details::bitPackingStream(hufCodeStream, huffOutStream);\n}",
+            "Faulty Code": "void zlibHuffmanEncoder(hls::stream<IntVectorStream_dt<9, 1> >& inStream,\n                        hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> >& hufCodeInStream,\n                        hls::stream<IntVectorStream_dt<8, 2> >& huffOutStream) {\n    hls::stream<IntVectorStream_dt<32, 1> > encodedOutStream(\"encodedOutStream\");\n    hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> > hufCodeStream(\"hufCodeStream\");\n#pragma HLS STREAM variable = encodedOutStream depth = 4\n#pragma HLS STREAM variable = hufCodeStream depth = 4\n\n#pragma HLS dataflow\n    xf::compression::details::huffmanProcessingUnit(inStream, encodedOutStream);\n    xf::compression::huffmanEncoderStream(encodedOutStream, hufCodeInStream, hufCodeStream);\n    xf::compression::details::bitPackingStream(hufCodeStream, huffOutStream);\n}"
+        }
+    ]
+}

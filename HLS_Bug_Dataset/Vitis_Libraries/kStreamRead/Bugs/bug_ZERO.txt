@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t sCnt = 1 + ((input_size - 1) / factor);",
+            "Faulty Code": "uint32_t sCnt = 0;"
+        }
+    ]
+}

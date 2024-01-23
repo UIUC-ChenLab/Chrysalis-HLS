@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t readBytes = 0;",
+            "Faulty Code": "uint32_t readBytes = 0xFFFFFFFF;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "for (int i = 0; i < bs2Write; i += c_parallelByte) {\n#pragma HLS PIPELINE II = 1"
+        }
+    ]
+}

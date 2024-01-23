@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "// Content of called function\nvoid read(A* a_in, A buf_out[NUM]) {\nREAD:\n    for (int i = 0; i < NUM; i++) {\n        buf_out[i] = a_in[i];\n    }\n}",
+            "Faulty Code": "// Content of called function\nvoid read(A* a_in, A buf_out[NUM]) {\n#pragma HLS ARRAY_PARTITION type=cyclic variable=buf_out\nREAD:\n    for (int i = 0; i < NUM; i++) {\n        buf_out[i] = a_in[i];\n    }\n}"
+        }
+    ]
+}

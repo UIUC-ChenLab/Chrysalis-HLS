@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "prevOffsets[1] = prevOffsets[0];",
+            "Faulty Code": "prevOffsets[ofi] = prevOffsets[0]; // Incorrect use of 'ofi' index, leading to potential non-consecutive memory access"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "offsetStream << offsetVal;",
+            "Faulty Code": "#pragma HLS interface port=offsetStream mode=ap_none // Incorrect interface mode for a stream"
+        }
+    ]
+}

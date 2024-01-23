@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out[i] = in[i];",
+            "Faulty Code": "out[i] = in[i + FFT_LENGTH/2]; // Assuming FFT_LENGTH is even and we wrongly access the second half of the input buffer"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int i = 0; i < FFT_LENGTH; i++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4 // Incorrectly placed outside and before the loop, suggesting partial unrolling of a non-innermost loop"
+        }
+    ]
+}

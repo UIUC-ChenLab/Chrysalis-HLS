@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<32> val = array_codes_extra[lidx1];",
+            "Faulty Code": "ap_uint<32> val = array_codes_extra[lidx1 + 1];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "ap_uint<32> val = array_codes[lidx];",
+            "Faulty Code": "ap_uint<32> val = array_codes[i]; // Assuming 'i' is defined elsewhere and is not bounded to the size of 'array_codes'"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outSeqFreqVal.data[0] = getLLCode<16>(outSeqVal.data[0].litlen);",
+            "Faulty Code": "outSeqFreqVal.data[0] = getLLCode<16>(outLitVal.data[0]);"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = literal_freq type = ram_2p impl = lutram",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = literal_freq type = cyclic factor = 2"
+        }
+    ]
+}

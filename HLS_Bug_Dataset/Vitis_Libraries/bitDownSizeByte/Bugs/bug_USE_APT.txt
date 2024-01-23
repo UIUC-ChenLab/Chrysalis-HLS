@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "accReg += ((ap_uint<c_accBytes>)inVal << bitsInAcc);",
+            "Faulty Code": "accReg += ((int16_t)inVal << bitsInAcc);"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition type=complete"
+        }
+    ]
+}

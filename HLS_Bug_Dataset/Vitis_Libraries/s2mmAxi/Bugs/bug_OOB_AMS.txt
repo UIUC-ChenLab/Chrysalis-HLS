@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out[outIdx + i] = inData.range(DATAWIDTH + PARALLEL_BYTES - 1, PARALLEL_BYTES);",
+            "Faulty Code": "out[outIdx + BURST_SIZE + i] = inData.range(DATAWIDTH + PARALLEL_BYTES - 1, PARALLEL_BYTES);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "outputSize[0] = outSize;",
+            "Faulty Code": "*outputSize = outSize;"
+        }
+    ]
+}

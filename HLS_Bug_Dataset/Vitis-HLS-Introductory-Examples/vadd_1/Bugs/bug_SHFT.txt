@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "vout_buffer[j] = v1_buffer[j] + v2_buffer[j];",
+            "Faulty Code": "vout_buffer[j] = (v1_buffer[j] << (32 - chunk_size)) + v2_buffer[j];"
+        }
+    ]
+}

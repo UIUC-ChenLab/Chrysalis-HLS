@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "local_buffer[bIdx][i] = in[mem_read_word_idx + i];",
+            "Faulty Code": "local_buffer[bIdx][i] = in[mem_read_word_idx + i + 1];"
+        }
+    ]
+}

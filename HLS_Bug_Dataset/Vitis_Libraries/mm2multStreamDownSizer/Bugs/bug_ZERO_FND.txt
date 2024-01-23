@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<IN_DATAWIDTH> inBuffer = 0;",
+            "Faulty Code": "ap_uint<IN_DATAWIDTH> inBuffer;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "const int factor = c_inputWord / c_outWord;",
+            "Faulty Code": "const int factor = 5; // assuming c_inputWord / c_outWord is not a multiple of 5"
+        }
+    ]
+}

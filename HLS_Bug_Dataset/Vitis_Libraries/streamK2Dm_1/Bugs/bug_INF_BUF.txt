@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (inValue.last == false) {",
+            "Faulty Code": "while (inValue.last != false) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "decompressSize << uncompressSize.data;",
+            "Faulty Code": "decompressSize << inValue.data;"
+        }
+    ]
+}

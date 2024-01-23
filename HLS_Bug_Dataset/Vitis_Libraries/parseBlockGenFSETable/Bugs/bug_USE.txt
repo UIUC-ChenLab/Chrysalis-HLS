@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "regeneratedSize = (accRegister.range(63, shiftCnt) & (((uint32_t)1 << regSizeBits) - 1));",
+            "Faulty Code": "regeneratedSize = (accRegister.range(63, shiftCnt) & (((int32_t)1 << regSizeBits) - 1));"
+        }
+    ]
+}

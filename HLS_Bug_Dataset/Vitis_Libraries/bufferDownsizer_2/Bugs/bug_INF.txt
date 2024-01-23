@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (inSize > 0) {\n#pragma HLS PIPELINE II = 1\noutVal.data[0] = inVal.range(OUT_DATAWIDTH + SIZE_DWIDTH - 1, SIZE_DWIDTH);\ninVal >>= OUT_DATAWIDTH;\noutStream << outVal;\ndsize += c_outWord;\nif (dsize == outSizeV) {\ninVal = inStream.read();\ninSize = inVal.range(SIZE_DWIDTH - 1, 0);\ndsize = 0;\noutSizeV = ((inSize - 1) / c_outWord) + 1;\n}\n}",
+            "Faulty Code": "while (inSize > 0) {\n#pragma HLS PIPELINE II = 1\noutVal.data[0] = inVal.range(OUT_DATAWIDTH + SIZE_DWIDTH - 1, SIZE_DWIDTH);\ninVal >>= OUT_DATAWIDTH;\noutStream << outVal;\ndsize += c_outWord;\nif (dsize == outSizeV) {\ninVal = inStream.read();\ninSize = inVal.range(SIZE_DWIDTH - 1, 0);\ndsize = 0;\n}\noutSizeV = ((inSize - 1) / c_outWord) + 1;\n}"
+        }
+    ]
+}

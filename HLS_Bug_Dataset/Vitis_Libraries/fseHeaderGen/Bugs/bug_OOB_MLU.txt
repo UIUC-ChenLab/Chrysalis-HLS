@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint16_t maxCharSize = normTable[63] + 1;",
+            "Faulty Code": "uint16_t maxCharSize = normTable[64] + 1;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t i = 1; i < 64; ++i) {",
+            "Faulty Code": "for (uint8_t i = 1; i <= 64; ++i) {"
+        }
+    ]
+}

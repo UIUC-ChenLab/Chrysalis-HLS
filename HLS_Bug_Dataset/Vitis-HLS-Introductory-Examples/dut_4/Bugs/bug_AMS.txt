@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INTERFACE m_axi port = a_in bundle = gmem0",
+            "Faulty Code": "#pragma HLS INTERFACE s_axilite port = a_in bundle = gmem0"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outValue.data[0].range(15, 8) = inValue.range(7, 0);",
+            "Faulty Code": "outValue.data[0].range(15, 8) = inValue.range(15, 8);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<IntVectorStream_dt<9, 1> >& inStream",
+            "Faulty Code": "hls::stream<IntVectorStream_dt<32, 1> >& inStream"
+        }
+    ]
+}

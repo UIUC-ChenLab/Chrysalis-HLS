@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<1> metaIdx = 0;",
+            "Faulty Code": "ap_uint<1> metaIdx;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "int j = max_bit_len;",
+            "Faulty Code": "short j = max_bit_len;"
+        }
+    ]
+}

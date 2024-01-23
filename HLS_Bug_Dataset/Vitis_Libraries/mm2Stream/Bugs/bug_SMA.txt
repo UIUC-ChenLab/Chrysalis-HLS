@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void mm2Stream(const ap_uint<GMEM_DATAWIDTH>* in, ...",
+            "Faulty Code": "#pragma HLS INTERFACE port=in mode=ap_fifo"
+        }
+    ]
+}

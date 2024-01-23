@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "v1_buffer[j] = in1[i + j];",
+            "Faulty Code": "v1_buffer[j] = in1[i + j + BUFFER_SIZE];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if ((i + BUFFER_SIZE) > size) chunk_size = size - i;",
+            "Faulty Code": "if ((i + BUFFER_SIZE) > size) chunk_size = 0;"
+        }
+    ]
+}

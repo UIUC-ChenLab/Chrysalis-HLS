@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "stream<int, 16> inter[2];",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=inter"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS INTERFACE mode = ap_ctrl_none port = return",
+            "Faulty Code": "#pragma HLS INTERFACE mode = m_axi port = inter"
+        }
+    ]
+}

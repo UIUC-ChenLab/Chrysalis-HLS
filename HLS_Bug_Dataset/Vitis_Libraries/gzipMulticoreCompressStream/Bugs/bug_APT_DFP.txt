@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = lz77Tree type = FIFO impl = SRL",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable = lz77Tree type = FIFO impl = BLOCK"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void lz77Compress(hls::stream<IntVectorStream_dt<8, 1> >& inStream,\n                  hls::stream<IntVectorStream_dt<9, 1> >& lz77OutStream,\n                  hls::stream<IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> >& outTreeStream) {\n    constexpr int c_litDistCodeDepth = 286 + 30 + 4;\n#pragma HLS dataflow\n    hls::stream<IntVectorStream_dt<32, 1> > compressedStream(\"compressedStream\");\n    ...",
+            "Faulty Code": "void lz77Compress(hls::stream<IntVectorStream_dt<8, 1> >& inStream,\n                  hls::stream<IntVectorStream_dt<9, 1> >& lz77OutStream,\n                  hls::stream<IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> >& outTreeStream) {\n    constexpr int c_litDistCodeDepth = 286 + 30 + 4;\n    hls::stream<IntVectorStream_dt<32, 1> > compressedStream(\"compressedStream\");\n#pragma HLS dataflow\n    ..."
+        }
+    ]
+}

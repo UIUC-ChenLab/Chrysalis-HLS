@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint16_t i = c_lengthHistogram - 1; i > max_bit_len; --i) {",
+            "Faulty Code": "for (uint16_t i = c_lengthHistogram; i > max_bit_len; --i) {"
+        }
+    ]
+}

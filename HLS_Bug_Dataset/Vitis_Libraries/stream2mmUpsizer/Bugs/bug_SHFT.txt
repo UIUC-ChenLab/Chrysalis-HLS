@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "outBuffer.range((byteIdx + 1) * IN_WIDTH - 1, byteIdx * IN_WIDTH) = inValue;",
+            "Faulty Code": "outBuffer.range((byteIdx * IN_WIDTH) + IN_WIDTH, byteIdx * IN_WIDTH) = inValue;"
+        }
+    ]
+}

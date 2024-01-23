@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (uint16_t j = 0; j < c_litDistCodeCnt; j++) {",
+            "Faulty Code": "#pragma HLS array_partition variable=hufCodeStream factor=15 cyclic"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (uint8_t i = inIdxNum.read(); i != 0xFF; i = inIdxNum.read()) {",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

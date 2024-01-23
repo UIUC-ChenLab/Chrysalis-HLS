@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint32_t i = 0; i < localBits_idx; i += 16) {",
+            "Faulty Code": "for (uint32_t i = 0; i <= localBits_idx; i += 16) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void huffmanEncoderStatic(hls::stream<IntVectorStream_dt<32, 1> >& inStream,\n                          hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> >& outStream) {",
+            "Faulty Code": "void huffmanEncoderStatic(hls::stream<IntVectorStream_dt<32, 1> >& inStream,\n                          hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> >& outStream) {\n#pragma HLS INTERFACE port=inStream bram"
+        }
+    ]
+}

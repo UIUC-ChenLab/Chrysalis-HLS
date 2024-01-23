@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "out.write_request(0, size * NUM);",
+            "Faulty Code": "out.write_request(0, size * 0);"
+        }
+    ]
+}

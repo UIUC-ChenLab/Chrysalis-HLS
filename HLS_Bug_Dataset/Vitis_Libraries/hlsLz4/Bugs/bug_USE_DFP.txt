@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "for (uint8_t i = 0; i < NUM_BLOCK; i++) {",
+            "Faulty Code": "for (int i = 0; i < NUM_BLOCK; i++) {"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS dataflow inside for (uint8_t i = 0; i < NUM_BLOCK; i++)"
+        }
+    ]
+}

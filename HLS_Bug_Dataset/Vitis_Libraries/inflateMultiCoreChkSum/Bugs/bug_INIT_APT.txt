@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "adlerStrm << 1;",
+            "Faulty Code": "// adlerStrm << 1; // Missing initialization leads to reading an uninitialized value"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = inflateStrm type = fifo impl = BRAM",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable = inflateStrm type = complete impl = BRAM // 'complete' is not a valid type for BIND_STORAGE"
+        }
+    ]
+}

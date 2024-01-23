@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int i = 0; i < bs2Write; i += c_parallelByte)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (int i = 0; i < bs2Write; i += c_parallelByte)"
+        }
+    ]
+}

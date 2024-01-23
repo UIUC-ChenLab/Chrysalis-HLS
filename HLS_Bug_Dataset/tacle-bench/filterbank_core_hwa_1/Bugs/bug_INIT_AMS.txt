@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "y[ i ] = 0;",
+            "Faulty Code": "// y[ i ] = 0; (This line is commented out, which means y[i] is not initialized)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INTERFACE bram port=r",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=r"
+        }
+    ]
+}

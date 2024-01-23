@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void adler32(hls::stream<ap_uint<W * 8> >& inStrm, hls::stream<ap_uint<5> >& inPackLenStrm, hls::stream<ap_uint<32> >& outStrm) {",
+            "Faulty Code": "#pragma HLS dataflow void adler32(hls::stream<ap_uint<W * 8> >& inStrm, hls::stream<ap_uint<5> >& inPackLenStrm, hls::stream<ap_uint<32> >& outStrm) {"
+        }
+    ]
+}

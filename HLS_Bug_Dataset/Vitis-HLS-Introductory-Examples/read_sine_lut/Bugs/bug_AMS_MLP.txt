@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void read_sine_lut( lut_word_t cos_lut[LUTSIZE], const int LUTSIZE )",
+            "Faulty Code": "void read_sine_lut( lut_word_t &cos_lut, const int LUTSIZE )"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int k=0;k<4*LUTSIZE;k++) {",
+            "Faulty Code": "#pragma HLS pipeline\nfor (int k=0;k<4*LUTSIZE;k++) {"
+        }
+    ]
+}

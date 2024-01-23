@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "outCnt += ob;",
+            "Faulty Code": "outCnt = ob;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hfBitStream << outReg;",
+            "Faulty Code": "hfBitStream.write(outReg);"
+        }
+    ]
+}

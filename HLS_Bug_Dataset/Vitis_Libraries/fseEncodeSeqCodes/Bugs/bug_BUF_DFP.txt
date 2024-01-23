@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "fseEncodeSymbol<9, 1>(llCode, fseStateBitsTableLL, fseNextStateTableLL, llPrevStateVal, outWordLL, bitsLL);",
+            "Faulty Code": "fseEncodeSymbol<9, 1>(llCode, fseStateBitsTableML, fseNextStateTableLL, llPrevStateVal, outWordLL, bitsLL);"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

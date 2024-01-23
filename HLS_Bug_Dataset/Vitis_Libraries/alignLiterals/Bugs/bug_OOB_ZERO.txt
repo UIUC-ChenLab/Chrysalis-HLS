@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "inputWindow.range(c_streamWidth - 1, 0) = inValue.data[0];",
+            "Faulty Code": "inputWindow.range(c_streamWidth, 0) = inValue.data[0];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "enum LiteralStates nextState = READ_LITLEN;",
+            "Faulty Code": "enum LiteralStates nextState = 0;"
+        }
+    ]
+}

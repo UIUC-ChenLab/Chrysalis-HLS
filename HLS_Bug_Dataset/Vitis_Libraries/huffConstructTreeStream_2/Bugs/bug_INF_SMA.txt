@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (isEOBlocks.read() == false) {",
+            "Faulty Code": "while (isEOBlocks.read() != true) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = parent type = ram_2p impl = lutram",
+            "Faulty Code": "#pragma HLS INTERFACE port=parent"
+        }
+    ]
+}

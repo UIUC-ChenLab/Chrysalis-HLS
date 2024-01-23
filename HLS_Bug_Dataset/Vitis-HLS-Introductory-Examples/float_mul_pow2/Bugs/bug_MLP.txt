@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "float float_mul_pow2(float x, int8_t n) { /*... function body ...*/ }",
+            "Faulty Code": "#pragma HLS pipeline\nfloat float_mul_pow2(float x, int8_t n) { /*... function body ...*/ }"
+        }
+    ]
+}

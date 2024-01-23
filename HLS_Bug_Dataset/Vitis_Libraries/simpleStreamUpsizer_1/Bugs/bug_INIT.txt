@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<IN_WIDTH> inVal;",
+            "Faulty Code": "ap_uint<IN_WIDTH> inVal = 0;"
+        }
+    ]
+}

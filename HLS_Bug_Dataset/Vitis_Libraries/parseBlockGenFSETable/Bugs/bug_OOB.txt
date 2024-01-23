@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint8_t defDistOffsets[3] = {0, c_maxCharLit + 1, c_maxCharLit + c_maxCharDefOffset + 2};",
+            "Faulty Code": "uint8_t defDistOffsets[3];\n... \nfor (uint8_t i = 0; i <= 3; ++i) {\n    defDistOffsets[i] = ... ; // faulty part, accessing i = 3 is out of bounds\n}"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint16_t decSize[4];",
+            "Faulty Code": "uint16_t decSize[4] = {0};"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint8_t bitcnt = 0;",
+            "Faulty Code": "uint8_t bitcnt;"
+        }
+    ]
+}

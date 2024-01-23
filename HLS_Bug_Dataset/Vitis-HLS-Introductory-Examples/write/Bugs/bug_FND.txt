@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "void write(A buf_in[NUM], A* a_out) {",
+            "Faulty Code": "#pragma HLS array_partition variable=a_out factor=3 block\nvoid write(A buf_in[NUM], A* a_out) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void read(A* a_in, A buf_out[NUM]) {",
+            "Faulty Code": "void read(A* a_in, A buf_out[NUM]) {\n#pragma HLS interface m_axi port=a_in offset=slave"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int i = 0; i < NUM; i++) {\n    buf_out[i] = a_in[i];\n}",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (int i = 0; i < NUM; i++) {\n    buf_out[i] = a_in[i];\n}"
+        }
+    ]
+}

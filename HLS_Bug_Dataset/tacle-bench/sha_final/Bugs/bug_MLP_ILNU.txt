@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = 0; i < 16; ++i) { W[i] = sha_info_data[i]; }",
+            "Faulty Code": "#pragma HLS pipeline\nfor (i = 0; i < 16; ++i) { #pragma HLS pipeline W[i] = sha_info_data[i]; }"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 16; i < 80; ++i) { W[i] = W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16]; }",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (i = 16; i < 80; ++i) { #pragma HLS unroll factor=2 W[i] = W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16]; }"
+        }
+    ]
+}

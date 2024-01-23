@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outVal.strobe = 1;",
+            "Faulty Code": "outVal.strobe = 0;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint16_t u = 0; u < tableSize; ++u) {",
+            "Faulty Code": "for (uint16_t u = 0; u <= tableSize; ++u) {"
+        }
+    ]
+}

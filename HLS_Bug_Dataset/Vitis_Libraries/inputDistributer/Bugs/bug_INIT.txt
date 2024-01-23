@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "IntVectorStream_dt<8, 1> inVal;",
+            "Faulty Code": "IntVectorStream_dt<8, 1> inVal = inStream.read();"
+        }
+    ]
+}

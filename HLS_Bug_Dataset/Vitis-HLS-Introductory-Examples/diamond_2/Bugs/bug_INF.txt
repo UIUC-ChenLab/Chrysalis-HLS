@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "void funcC(data_t* in, data_t* out) {\nLoop0:\n    for (data_t i = 0; i < N; i++) {\n#pragma HLS pipeline rewind\n#pragma HLS unroll factor = 2\n        out[i] = in[i] * 2;\n    }\n}",
+            "Faulty Code": "void funcC(data_t* in, data_t* out) {\nLoop0:\n    for (data_t i = 0; i <= N; i++) {\n#pragma HLS pipeline rewind\n#pragma HLS unroll factor = 2\n        out[i] = in[i] * 2;\n    }\n}"
+        }
+    ]
+}

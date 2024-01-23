@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int size = inStreamSize.read(); size != 0; size = inStreamSize.read()) {",
+            "Faulty Code": "for (int size = inStreamSize.read(); size == 0; size = inStreamSize.read()) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS unroll factor = 4"
+        }
+    ]
+}

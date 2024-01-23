@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "ap_uint<DATAWIDTH> tmp = (eos == true) ? dummy : inStream.read();",
+            "Faulty Code": "#pragma HLS dataflow\n            ap_uint<DATAWIDTH> tmp = (eos == true) ? dummy : inStream.read();"
+        }
+    ]
+}

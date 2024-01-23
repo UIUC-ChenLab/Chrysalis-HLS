@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "parray = &fir2dim_input[k * ARRAYDIM + f + ARRAY_OFFSET] ;",
+            "Faulty Code": "parray = &fir2dim_input[k * IMAGEDIM + f + ARRAY_OFFSET] ;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS INTERFACE bram port=fir2dim_output",
+            "Faulty Code": "#pragma HLS INTERFACE axis port=fir2dim_output"
+        }
+    ]
+}

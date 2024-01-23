@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "ts.A[i] += ts.B[i] + ts.C[i];",
+            "Faulty Code": "for (int j = 0; j < 10; j++) { ts.A[j] += ts.B[j] + ts.C[j]; } // Incorrectly unrolled loop, missing iteration for j = 9"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<33> excLL = litLen & c_bitMask[llBits];",
+            "Faulty Code": "ap_uint<33> excLL = litLen & c_bitMask[llBits - 1];"
+        }
+    ]
+}

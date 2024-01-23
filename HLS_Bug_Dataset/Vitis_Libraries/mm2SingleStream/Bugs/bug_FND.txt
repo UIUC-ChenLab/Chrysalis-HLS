@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "outStream << in[read_idx + midx];",
+            "Faulty Code": "#pragma HLS array_partition factor=3\ngmem_read:\nfor (uint32_t midx = 0; midx < burstSize; midx++) {\n#pragma HLS PIPELINE II = 1\noutStream << in[read_idx + midx];\n}"
+        }
+    ]
+}

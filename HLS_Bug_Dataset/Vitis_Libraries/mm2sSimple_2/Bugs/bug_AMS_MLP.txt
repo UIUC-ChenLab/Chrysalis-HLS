@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void mm2sSimple(const ap_uint<DATAWIDTH>* in, hls::stream<ap_uint<DATAWIDTH> >& outstream, uint32_t inputSize) {",
+            "Faulty Code": "void mm2sSimple(const ap_uint<DATAWIDTH> in, hls::stream<ap_uint<DATAWIDTH> >& outstream, uint32_t inputSize) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "for (uint32_t j = 0; j < BURST_SIZE; j++) {\n#pragma HLS PIPELINE II = 1"
+        }
+    ]
+}

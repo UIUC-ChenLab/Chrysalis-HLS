@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int allignedwidth = inSize_gmemwidth / BURST_SIZE;",
+            "Faulty Code": "int allignedwidth = 0;"
+        }
+    ]
+}

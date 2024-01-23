@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void write(hls::burst_maxi<dout_t> RES, dout_t x_aux[N], dout_t y_aux[N]) {",
+            "Faulty Code": "void write(hls::burst_maxi<dout_t> &RES, dout_t &x_aux, dout_t &y_aux) {"
+        }
+    ]
+}

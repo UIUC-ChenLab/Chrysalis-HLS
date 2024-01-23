@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS pipeline inside the while loop"
+        },
+        {
+            "Error Type": "OOB",
+            "Original Code": "val.data[j++] = tmpVal.range(i + 7, i);",
+            "Faulty Code": "val.data[j++] = tmpVal.range(i + 8, i);"
+        }
+    ]
+}

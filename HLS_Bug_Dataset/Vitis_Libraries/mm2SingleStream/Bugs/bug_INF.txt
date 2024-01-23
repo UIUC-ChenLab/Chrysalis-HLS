@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (uint32_t idx = 0; idx < input_size; idx += c_burstSize) {",
+            "Faulty Code": "for (uint32_t idx = 0; idx <= input_size; idx += c_burstSize) {"
+        }
+    ]
+}

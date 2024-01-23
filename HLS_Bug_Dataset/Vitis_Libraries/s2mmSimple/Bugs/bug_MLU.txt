@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "uint32_t itrLim = 1 + ((output_size - 1) / factor);",
+            "Faulty Code": "uint32_t itrLim = ((output_size - 1) / factor);"
+        }
+    ]
+}

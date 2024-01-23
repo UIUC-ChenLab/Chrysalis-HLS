@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint16_t i = offsets[2]; i < offsets[2] + c_blnCodeCount; ++i) {\n#pragma HLS PIPELINE II = 1\n    auto ldc = Blcodes.read();\n    outCodes[i] = ldc.data[0];\n}",
+            "Faulty Code": "for (uint16_t i = offsets[2]; i <= offsets[2] + c_blnCodeCount; ++i) {\n#pragma HLS PIPELINE II = 1\n    auto ldc = Blcodes.read();\n    outCodes[i] = ldc.data[0];\n}"
+        }
+    ]
+}

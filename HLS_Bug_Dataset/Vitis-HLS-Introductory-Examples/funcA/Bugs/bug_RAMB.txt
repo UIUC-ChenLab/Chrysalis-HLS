@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void funcA(data_t* in, data_t* out1, data_t* out2) {",
+            "Faulty Code": "#pragma HLS interface m_axi port=in offset=slave // Incorrect\nvoid funcA(data_t* in, data_t* out1, data_t* out2) {"
+        }
+    ]
+}

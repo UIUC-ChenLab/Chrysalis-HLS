@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int remaining = tableSize + 1; /* +1 for extra accuracy */",
+            "Faulty Code": "int remaining = 0; /* +1 for extra accuracy */"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS UNROLL factor=4"
+        }
+    ]
+}

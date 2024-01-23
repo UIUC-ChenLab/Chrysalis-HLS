@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (len == max) break;",
+            "Faulty Code": "if (len >= max) break;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "uint32_t* table, uint32_t* table_extra",
+            "Faulty Code": "#pragma HLS INTERFACE port=table_extra bram"
+        }
+    ]
+}

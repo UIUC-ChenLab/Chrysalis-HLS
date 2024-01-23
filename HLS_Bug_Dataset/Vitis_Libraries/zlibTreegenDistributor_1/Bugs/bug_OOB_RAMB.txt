@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint8_t i = inIdxNum.read(); i != 0xFF; i = inIdxNum.read()) {",
+            "Faulty Code": "for (uint8_t i = inIdxNum.read(); i <= NUM_BLOCK; i = inIdxNum.read()) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "hufCodeStream[i] << hufCodeOut;",
+            "Faulty Code": "hufCodeStream[i + 1] << hufCodeOut;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS STREAM variable = checksumStream depth = c_defaultDepth",
+            "Faulty Code": "#pragma HLS INTERFACE port = checksumStream bram"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (uint8_t i = 0; i < c_numBlocks; i++) {\n#pragma HLS UNROLL\n...",
+            "Faulty Code": "for (uint8_t i = 0; i < c_numBlocks; i++) {\n#pragma HLS pipeline\n..."
+        }
+    ]
+}

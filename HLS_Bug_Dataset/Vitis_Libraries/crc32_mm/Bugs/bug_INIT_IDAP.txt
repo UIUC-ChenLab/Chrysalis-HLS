@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "outChecksumStream << inChecksumData[0];",
+            "Faulty Code": "ap_uint<32> uninitialized_var; outChecksumStream << uninitialized_var;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable = inStream depth = 32",
+            "Faulty Code": "#pragma HLS STREAM variable = inStream depth = 32 dim=2"
+        }
+    ]
+}

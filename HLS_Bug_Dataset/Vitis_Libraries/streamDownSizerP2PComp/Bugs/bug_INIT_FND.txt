@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<IN_WIDTH> inBuffer = 0;",
+            "Faulty Code": "ap_uint<IN_WIDTH> inBuffer;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "// Send ouputSize of the module\n        outStreamSize << size;",
+            "Faulty Code": "// Send ouputSize of the module\n        outStreamSize << sizeOutputV;"
+        }
+    ]
+}

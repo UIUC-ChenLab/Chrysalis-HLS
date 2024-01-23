@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void add_kernel(int tmp1[128], int tmp2[128], int tmp3[128]) {",
+            "Faulty Code": "#pragma HLS interface m_axi port=tmp1 offset=slave bundle=gmem0\n#pragma HLS interface m_axi port=tmp2 offset=slave bundle=gmem1\n#pragma HLS interface m_axi port=tmp3 offset=slave bundle=gmem2\nvoid add_kernel(int tmp1[128], int tmp2[128], int tmp3[128]) {"
+        }
+    ]
+}

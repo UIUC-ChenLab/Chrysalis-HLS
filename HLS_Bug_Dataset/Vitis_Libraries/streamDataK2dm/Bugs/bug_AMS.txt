@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void streamDataK2dm(hls::stream<ap_uint<STREAMDWIDTH> >& out,\n                    hls::stream<bool>& bytEos,\n                    hls::stream<uint32_t>& dataSize,\n                    hls::stream<ap_axiu<STREAMDWIDTH, 0, 0, 0> >& dmOutStream) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=out mode=ap_none\nvoid streamDataK2dm(hls::stream<ap_uint<STREAMDWIDTH> >& out,\n                    hls::stream<bool>& bytEos,\n                    hls::stream<uint32_t>& dataSize,\n                    hls::stream<ap_axiu<STREAMDWIDTH, 0, 0, 0> >& dmOutStream) {"
+        }
+    ]
+}

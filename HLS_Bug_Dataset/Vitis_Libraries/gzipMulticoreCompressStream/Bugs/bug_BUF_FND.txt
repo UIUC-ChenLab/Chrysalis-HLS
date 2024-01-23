@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outStream << inVal.data[0];",
+            "Faulty Code": "outStream << inVal.data[1]; // Wrong buffer half used"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS STREAM variable = coreIdxStreamArr depth = 32",
+            "Faulty Code": "#pragma HLS STREAM variable = coreIdxStreamArr depth = 17 // 'depth' not divisible by 2, which is the number of elements in coreIdxStreamArr"
+        }
+    ]
+}

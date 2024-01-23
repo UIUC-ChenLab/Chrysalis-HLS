@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void loop_imperfect(din_t A[N], dout_t B[N]) { /* ... */ }",
+            "Faulty Code": "#pragma HLS interface m_axi port=A offset=slave bundle=gmem\nvoid loop_imperfect(din_t A[N], dout_t B[N]) { /* ... */ }"
+        }
+    ]
+}

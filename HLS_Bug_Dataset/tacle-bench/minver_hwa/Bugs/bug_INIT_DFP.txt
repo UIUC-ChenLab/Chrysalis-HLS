@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int work[ 500 ], i, j, k, iw;",
+            "Faulty Code": "int work[ 500 ], i, j, k, iw = work[k];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "for ( i = 0; i < DIM; i++ ) {",
+            "Faulty Code": "#pragma HLS dataflow\nfor ( i = 0; i < DIM; i++ ) {"
+        }
+    ]
+}

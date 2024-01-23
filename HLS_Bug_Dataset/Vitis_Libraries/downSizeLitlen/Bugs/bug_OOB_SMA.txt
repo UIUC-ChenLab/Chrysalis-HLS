@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "litLen = inSeqVal.data[0].litlen;",
+            "Faulty Code": "litLen = inSeqVal.data[1].litlen;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "outSeqStream << outSeqVal;",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=outSeqVal"
+        }
+    ]
+}

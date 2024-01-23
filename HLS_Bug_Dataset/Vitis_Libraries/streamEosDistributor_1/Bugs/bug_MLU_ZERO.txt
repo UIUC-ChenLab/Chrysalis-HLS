@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int n = 0; n < SLAVES; n++) {",
+            "Faulty Code": "for (int n = 0; n <= SLAVES; n++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if (i == 1) break;",
+            "Faulty Code": "if (i == 0) break;"
+        }
+    ]
+}

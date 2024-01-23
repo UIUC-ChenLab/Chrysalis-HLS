@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS interface port=outDataStream mode=m_axi"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "ap_uint<DATAWIDTH> tmp;",
+            "Faulty Code": "#pragma HLS interface port=tmp mode=bram"
+        }
+    ]
+}

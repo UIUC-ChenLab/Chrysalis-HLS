@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS INTERFACE bram port=a",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=a"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "mat_type tmp;",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=tmp"
+        }
+    ]
+}

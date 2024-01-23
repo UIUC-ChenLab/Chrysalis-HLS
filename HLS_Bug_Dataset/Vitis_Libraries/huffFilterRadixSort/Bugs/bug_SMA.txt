@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<DSVectorStream_dt<Symbol<MAX_FREQ_DWIDTH>, 1> >& heapStream",
+            "Faulty Code": "DSVectorStream_dt<Symbol<MAX_FREQ_DWIDTH>, 1> heapStream[SYMBOL_SIZE]; #pragma HLS interface port=heapStream bram"
+        }
+    ]
+}

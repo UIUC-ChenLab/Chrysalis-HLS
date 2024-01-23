@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS INTERFACE axis port = A\n#pragma HLS INTERFACE axis port = B",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=A offset=slave bundle=gmem\n#pragma HLS INTERFACE m_axi port=B offset=slave bundle=gmem"
+        }
+    ]
+}

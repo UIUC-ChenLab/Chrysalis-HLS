@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "outL[j] = inL[j] + 25;",
+            "Faulty Code": "outL[j] = (char)inL[j] + 25;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS INTERFACE ap_ctrl_chain port = return",
+            "Faulty Code": "#pragma HLS INTERFACE ap_ctrl_chain port = return type=complete"
+        }
+    ]
+}

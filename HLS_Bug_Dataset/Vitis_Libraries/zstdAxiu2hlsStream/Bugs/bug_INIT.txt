@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "outVal.strobe = c_keepDWidth;",
+            "Faulty Code": "IntVectorStream_dt<8, c_keepDWidth> outVal;"
+        }
+    ]
+}

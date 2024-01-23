@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "void write(A buf_in[NUM], A* a_out) {\n    WRITE:\n    for (int k = 0; k < NUM; k++) {\n        a_out[k] = buf_in[k];\n    }\n}",
+            "Faulty Code": "void write(A buf_in[NUM], A* a_out) {\n    #pragma HLS unroll factor=4\n    WRITE:\n    for (int k = 0; k < NUM; k++) {\n        a_out[k] = buf_in[k];\n    }\n}"
+        }
+    ]
+}

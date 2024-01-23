@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < sizeOutputV; i++) {",
+            "Faulty Code": "for (int i = 0; i <= sizeOutputV; i++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "ap_uint<PACK_WIDTH> tmpValue = inBuffer.range((idx + 1) * PACK_WIDTH - 1, idx * PACK_WIDTH);",
+            "Faulty Code": "ap_uint<PACK_WIDTH> tmpValue = inBuffer.range((idx) * PACK_WIDTH - 1, (idx - 1) * PACK_WIDTH);"
+        }
+    ]
+}

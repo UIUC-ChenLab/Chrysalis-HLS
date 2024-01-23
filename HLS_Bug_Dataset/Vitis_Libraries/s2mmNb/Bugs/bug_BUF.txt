@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out[base_idx + j] = local_buffer[i][j];",
+            "Faulty Code": "out[base_idx + j] = local_buffer[i][write_idx[i] + j];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<32> current_array_val = details::reg<ap_uint<32> >(array_codes[lidx]);",
+            "Faulty Code": "ap_uint<32> current_array_val = details::reg<ap_uint<32> >(array_codes[lidx & lit_mask]);"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (bits_cntr < 32 && (done == false)) {",
+            "Faulty Code": "if (bits_cntr <= 32 && (done == false)) {"
+        }
+    ]
+}

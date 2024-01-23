@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "if (i < heapLength) {\n    hpVal = heapStream.read();\n    heap[i] = hpVal.data[0];\n}",
+            "Faulty Code": "if (i < heapLength) {\n    heap[i] = hpVal.data[0];\n}"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "symbol_bits[sorted[k].value] = length;",
+            "Faulty Code": "symbol_bits[k] = length;"
+        }
+    ]
+}

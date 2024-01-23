@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "RES.write(x_aux[i] - y_aux[i]);",
+            "Faulty Code": "RES.write(x_aux[N - N / 2 + i] - y_aux[N - N / 2 + i] / N);"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

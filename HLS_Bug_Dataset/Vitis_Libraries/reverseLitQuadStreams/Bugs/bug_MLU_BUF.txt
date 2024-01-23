@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t si = 0; si < streamCnt + 1; ++si) {",
+            "Faulty Code": "for (uint8_t si = 0; si < streamCnt; ++si) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "rIdx = wIdx + 1;",
+            "Faulty Code": "rIdx = wIdx - 1;"
+        }
+    ]
+}

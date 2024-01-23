@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "HuffmanCode_dt<MAX_BITS> zeroHf;\nzeroHf.code = 0;\nzeroHf.bitlen = 0;",
+            "Faulty Code": "HuffmanCode_dt<MAX_BITS> zeroHf;"
+        }
+    ]
+}

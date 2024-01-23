@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void write(A buf_in[NUM], A* a_out) {",
+            "Faulty Code": "void write(A buf_in[NUM], A* a_out) { A temp; a_out[0] = temp; }"
+        }
+    ]
+}

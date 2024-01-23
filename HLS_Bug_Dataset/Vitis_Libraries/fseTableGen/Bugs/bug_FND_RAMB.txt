@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS STREAM variable = normTableStream depth = 128",
+            "Faulty Code": "#pragma HLS array_partition variable = normTable complete factor=10"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "normTableStream[0] << outVal;",
+            "Faulty Code": "#pragma HLS interface port=normTableStream mode=m_axi"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "long dut(struct A& d) {",
+            "Faulty Code": "#pragma HLS dataflow\nlong dut(struct A& d) {"
+        }
+    ]
+}

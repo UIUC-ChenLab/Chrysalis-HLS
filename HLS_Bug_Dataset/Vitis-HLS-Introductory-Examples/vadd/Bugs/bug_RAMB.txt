@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "burstbuffer[j] = a[i + j];",
+            "Faulty Code": "burstbuffer[j] = a[(i + j) % BURSTBUFFERSIZE];"
+        }
+    ]
+}

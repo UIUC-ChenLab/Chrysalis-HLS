@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "endOutStrm.read();\nendOutStrm.read();",
+            "Faulty Code": "while(1) {\nendOutStrm.read();\n}"
+        }
+    ]
+}

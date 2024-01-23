@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outStream << orig_input_data[block_stride * bIdx + i + j];",
+            "Faulty Code": "outStream << orig_input_data[block_stride * bIdx + i + j + 1];"
+        }
+    ]
+}

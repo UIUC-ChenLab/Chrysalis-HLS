@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "void Double_pass(int tmp2[128], int tmp1[128], int tmp4[128], int tmp5[128]) {",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=buff"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void Double_pass(int tmp2[128], int tmp1[128], int tmp4[128], int tmp5[128]) {",
+            "Faulty Code": "#pragma HLS interface m_axi port=tmp1 mode=read"
+        }
+    ]
+}

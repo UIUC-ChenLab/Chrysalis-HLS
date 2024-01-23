@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "bool i = inStream.read();",
+            "Faulty Code": "bool i = inStream.read(); outStream[0] << inStream.read(); // Assuming SLAVES > 1, this reads the next value from inStream and writes to outStream[0], but misses writing the current value of 'i' to other outStreams."
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void streamDistributor(hls::stream<bool>& inStream, hls::stream<bool> outStream[SLAVES])",
+            "Faulty Code": "void streamDistributor(hls::stream<bool>& inStream, hls::stream<bool> outStream[SLAVES]) { #pragma HLS interface m_axi port=outStream mode=write // Incorrect use of m_axi for stream interface, could lead to random access pattern."
+        }
+    ]
+}

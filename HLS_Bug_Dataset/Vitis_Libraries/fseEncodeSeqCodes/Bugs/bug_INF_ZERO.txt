@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (seqCode = seqCodeStream.read(); seqCode.strobe > 0; seqCode = seqCodeStream.read()) {",
+            "Faulty Code": "for (seqCode = seqCodeStream.read(); seqCode.strobe >= 0; seqCode = seqCodeStream.read()) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<5> fseBitCnt = 0;",
+            "Faulty Code": "ap_uint<5> fseBitCnt;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "hls::stream<IntVectorStream_dt<9, 1> > lz77DownsizedStream[c_numBlocks];",
+            "Faulty Code": "hls::stream<IntVectorStream_dt<9, 1> > lz77DownsizedStream[NUM_BLOCKS];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable = lz77DownsizedStream depth = c_thriceNumBlocks",
+            "Faulty Code": "#pragma HLS STREAM variable = lz77DownsizedStream depth = c_thriceNumBlocks mode=ap_fifo"
+        }
+    ]
+}

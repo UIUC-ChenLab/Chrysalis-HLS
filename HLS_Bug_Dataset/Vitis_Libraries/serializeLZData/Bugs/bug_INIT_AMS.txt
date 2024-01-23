@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "bool rleFlag;",
+            "Faulty Code": "bool rleFlag = rleFlagStream[cIdx].read();"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS INTERFACE port=seqStream mode=ap_none"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "while (inVal.strobe > 0 && dataSize < BLOCK_SIZE) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\nwhile (inVal.strobe > 0 && dataSize < BLOCK_SIZE) {"
+        }
+    ]
+}

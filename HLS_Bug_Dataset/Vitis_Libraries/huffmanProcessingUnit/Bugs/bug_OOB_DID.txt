@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outValue.data[0].range(31, 24) = inValue;",
+            "Faulty Code": "outValue.data[1].range(31, 24) = inValue;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition dim=0"
+        }
+    ]
+}

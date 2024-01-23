@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned i = 0; i < N; i++) {\n    out[i].c = in[i].c;\n    out[i].i = in[i].i;\n}",
+            "Faulty Code": "for (unsigned i = 0; i <= N; i++) {\n    out[i].c = in[i].c;\n    out[i].i = in[i].i;\n}"
+        }
+    ]
+}

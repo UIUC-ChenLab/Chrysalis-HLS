@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void streamEosDistributor(hls::stream<bool>& inStream, hls::stream<bool> outStream[SLAVES]) {\n    do {\n        bool i = inStream.read();\n        for (int n = 0; n < SLAVES; n++) outStream[n] << i;\n        if (i == 1) break;\n    } while (1);\n}",
+            "Faulty Code": "void streamEosDistributor(hls::stream<bool>& inStream, hls::stream<bool> outStream[SLAVES]) {\n    #pragma HLS pipeline\n    do {\n        bool i = inStream.read();\n        #pragma HLS pipeline\n        for (int n = 0; n < SLAVES; n++) outStream[n] << i;\n        if (i == 1) break;\n    } while (1);\n}"
+        }
+    ]
+}

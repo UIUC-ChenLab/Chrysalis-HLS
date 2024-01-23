@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outStrb << ((1 << output_index) - 1);",
+            "Faulty Code": "outStrb << 0;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "ap_uint<c_parallelBit> regHistory[2][c_regHistSize];",
+            "Faulty Code": "#pragma HLS INTERFACE port=regHistory ap_none"
+        }
+    ]
+}

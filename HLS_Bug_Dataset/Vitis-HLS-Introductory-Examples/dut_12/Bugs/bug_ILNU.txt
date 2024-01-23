@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "void split(int a[128], int tmp1[128], int tmp2[128]) {\n    static int j;\n    for (int i = 0; i < 128; i++) {\n        j++;\n        tmp1[i] = a[i];\n        tmp2[i] = a[i];\n    }\n}",
+            "Faulty Code": "void split(int a[128], int tmp1[128], int tmp2[128]) {\n    static int j;\n    #pragma HLS unroll factor=4\n    for (int i = 0; i < 128; i++) {\n        j++;\n        tmp1[i] = a[i];\n        tmp2[i] = a[i];\n    }\n}"
+        }
+    ]
+}

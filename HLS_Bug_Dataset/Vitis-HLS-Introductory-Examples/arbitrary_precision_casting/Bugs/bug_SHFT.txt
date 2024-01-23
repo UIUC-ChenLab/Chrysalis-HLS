@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "return (dout_t)a * (dout_t)b;",
+            "Faulty Code": "return ((dout_t)a << (sizeof(din_t)*8)) * (dout_t)b;"
+        }
+    ]
+}

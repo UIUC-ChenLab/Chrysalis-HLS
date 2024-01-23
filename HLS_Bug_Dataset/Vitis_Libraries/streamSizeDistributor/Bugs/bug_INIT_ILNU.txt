@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint32_t i = inStream.read();",
+            "Faulty Code": "uint32_t i; i = inStream.read();"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int n = 0; n < SLAVES; n++) outStream[n] << i;",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (int n = 0; n < SLAVES; n++) outStream[n] << i;"
+        }
+    ]
+}

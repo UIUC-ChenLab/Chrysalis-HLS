@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (ofi > 0) { prevOffsets[1] = prevOffsets[0]; prevOffsets[0] = offsetVal; }",
+            "Faulty Code": "if (ofi > 1) { prevOffsets[1] = prevOffsets[0]; prevOffsets[0] = offsetVal; }"
+        }
+    ]
+}

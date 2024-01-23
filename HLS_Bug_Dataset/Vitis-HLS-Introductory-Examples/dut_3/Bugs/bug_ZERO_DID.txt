@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int sum = 0;",
+            "Faulty Code": "int sum = 1;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS disaggregate variable = out",
+            "Faulty Code": "#pragma HLS array_partition variable=out dim=2"
+        }
+    ]
+}

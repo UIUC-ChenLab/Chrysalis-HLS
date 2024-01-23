@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint16_t outSizeV = (inSize - 1) / c_outWord + 1;",
+            "Faulty Code": "int outSizeV = (inSize - 1) / c_outWord + 1;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void simpleStreamDownSizer(hls::stream<ap_uint<IN_DATAWIDTH> >& inStream,",
+            "Faulty Code": "void simpleStreamDownSizer(ap_uint<IN_DATAWIDTH> inStream,"
+        }
+    ]
+}

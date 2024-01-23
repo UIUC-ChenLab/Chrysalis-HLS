@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "INT32 lo_bit_count;",
+            "Faulty Code": "INT32 lo_bit_count; // Uninitialized, assuming sha_info_count_lo is not set before used"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "while (m-- > 0)",
+            "Faulty Code": "while (m-- >= 0) // This will cause an off-by-one error leading to an infinite loop"
+        }
+    ]
+}

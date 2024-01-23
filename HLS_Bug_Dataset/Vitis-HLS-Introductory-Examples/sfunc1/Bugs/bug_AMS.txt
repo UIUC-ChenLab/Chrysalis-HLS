@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void sfunc1(const din_t cIter, din_t a[N], din_t b[N], din_t res[N]) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=res mode=s_axilite"
+        }
+    ]
+}

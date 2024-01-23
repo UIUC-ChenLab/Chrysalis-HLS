@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint32_t outSize = countSetBits<c_keepDWidth>((int)(inValue.keep));",
+            "Faulty Code": "uint32_t outSize; // uninitialized variable, should be initialized with countSetBits<c_keepDWidth>((int)(inValue.keep));"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS UNROLL factor=4 // Incorrect, should not be applied here as there is no loop to unroll"
+        }
+    ]
+}

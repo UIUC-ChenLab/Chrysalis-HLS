@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint32_t inSize = (inputSize - 1) / c_parallelByte + 1;",
+            "Faulty Code": "int inSize = (inputSize - 1) / c_parallelByte + 1;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS DATAFLOW"
+        }
+    ]
+}

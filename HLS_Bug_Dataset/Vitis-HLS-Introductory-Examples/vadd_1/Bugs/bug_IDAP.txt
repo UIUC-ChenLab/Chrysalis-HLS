@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INTERFACE m_axi port = in1 depth = DATA_SIZE",
+            "Faulty Code": "#pragma HLS INTERFACE ap_fifo port = in1 depth = DATA_SIZE"
+        }
+    ]
+}

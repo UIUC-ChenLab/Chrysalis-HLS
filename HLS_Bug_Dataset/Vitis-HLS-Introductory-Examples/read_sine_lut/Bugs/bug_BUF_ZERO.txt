@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "lut_word = cos_lut[adr];",
+            "Faulty Code": "lut_word = cos_lut[adr + LUTSIZE];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if (lsb==0) lut_word = 0;",
+            "Faulty Code": "lut_word = 0;"
+        }
+    ]
+}

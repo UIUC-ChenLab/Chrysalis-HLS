@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (auto hfCode = hfCodeStream.read(); hfCode.strobe > 0; hfCode = hfCodeStream.read()) {",
+            "Faulty Code": "for (auto hfCode = hfCodeStream.read(); hfCode.strobe >= 0; hfCode = hfCodeStream.read()) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "inLit >>= (8 * (8 - strb));",
+            "Faulty Code": "inLit >>= (8 * (strb - 8));"
+        }
+    ]
+}

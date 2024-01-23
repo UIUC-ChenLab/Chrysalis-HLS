@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (i = 0; i < N; ++i) {",
+            "Faulty Code": "for (i = 0; i <= N; ++i) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "calc = (inrun[i] * inrun[i]) / (i + 1);",
+            "Faulty Code": "calc = (oval[i] * oval[i]) / (i + 1);"
+        }
+    ]
+}

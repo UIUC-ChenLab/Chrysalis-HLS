@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (allDone) break;",
+            "Faulty Code": "// if (allDone) break; // Faulty as the loop will not terminate when allDone is true"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1 // Incorrect placement of #pragma HLS pipeline inside another pipeline"
+        }
+    ]
+}

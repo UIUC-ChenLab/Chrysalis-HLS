@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable = outputStream depth = c_inStreamDepth",
+            "Faulty Code": "#pragma HLS array_partition variable=outputStream dim=2"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "do {\n#pragma HLS PIPELINE II = 1\n        ap_axiu<8 * PARALLEL_BYTE, 0, 0, 0> tmp = inKStream.read();\n        zstdCoreInStream << tmp.data;\n        last = tmp.last;\n        inStrobe << tmp.strb;\n    } while (last == false);",
+            "Faulty Code": "for (int i = 0; i < last; i++) {\n#pragma HLS PIPELINE II = 1\n        ap_axiu<8 * PARALLEL_BYTE, 0, 0, 0> tmp = inKStream.read();\n        zstdCoreInStream << tmp.data;\n        inStrobe << tmp.strb;\n    }"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(k = 0; k < MAX_LOOP; k++) {",
+            "Faulty Code": "for(k = 0; k <= MAX_LOOP; k++) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(f = 0; f < MAX_LOOP; f++) {",
+            "Faulty Code": "for(f = 0; f <= size; f++) {"
+        }
+    ]
+}

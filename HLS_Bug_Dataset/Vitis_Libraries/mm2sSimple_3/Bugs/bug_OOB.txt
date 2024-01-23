@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "temp = in[i + j];",
+            "Faulty Code": "temp = in[i + j + 1];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t m = 0; m < MATCH_LEN - 1; m++) {",
+            "Faulty Code": "for (uint8_t m = 0; m <= MATCH_LEN - 1; m++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "outValue.data[0].range(31, 16) = match_offset;",
+            "Faulty Code": "outValue.data[0].range(31, 16) = match_offset - 1;"
+        }
+    ]
+}

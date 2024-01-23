@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=a factor=7 dim=2"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "for(int i = 0; i < Z; i++) {",
+            "Faulty Code": "#pragma HLS dataflow\n\t\tfor(int i = 0; i < Z; i++) {"
+        }
+    ]
+}

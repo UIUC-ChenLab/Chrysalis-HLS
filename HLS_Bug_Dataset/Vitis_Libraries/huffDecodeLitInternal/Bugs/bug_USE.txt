@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint8_t byte_0 = acchbs.range(bitcnt - 1, bitcnt - 8);",
+            "Faulty Code": "int8_t byte_0 = acchbs.range(bitcnt - 1, bitcnt - 8);"
+        }
+    ]
+}

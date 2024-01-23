@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "outKStream << t1;",
+            "Faulty Code": "t1 = outDataStream[i].read();"
+        }
+    ]
+}

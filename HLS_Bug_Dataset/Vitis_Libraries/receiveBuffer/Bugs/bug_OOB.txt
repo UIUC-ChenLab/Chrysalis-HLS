@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outVal.data[0] = inVal;",
+            "Faulty Code": "outVal.data[i] = inVal;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_axiu<DATAWIDTH, 0, 0, 0> tmp;",
+            "Faulty Code": "ap_axiu<DATAWIDTH, 0, 0, 0> tmp = inKStream.read(); // Assuming this line is the first use of tmp without initialization"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1 // Incorrect if nested inside another pipeline which is not shown in the original function"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "cnt = inHfVal.strobe - 1;",
+            "Faulty Code": "cnt = (char)inHfVal.strobe - 1;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "child_depth[num_symbols - 1] = 0;",
+            "Faulty Code": "child_depth[num_symbols - 1] = 1;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=length_histogram"
+        }
+    ]
+}

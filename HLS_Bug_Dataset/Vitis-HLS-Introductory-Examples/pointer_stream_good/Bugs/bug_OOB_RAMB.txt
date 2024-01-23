@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "acc += *(d_i + 2);",
+            "Faulty Code": "acc += *(d_i + 32);"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void pointer_stream_good(volatile dout_t *d_o, volatile din_t *d_i) {",
+            "Faulty Code": "void pointer_stream_good(volatile dout_t *d_o, volatile din_t *d_i) {\n#pragma HLS interface m_axi port=d_i offset=slave bundle=gmem"
+        }
+    ]
+}

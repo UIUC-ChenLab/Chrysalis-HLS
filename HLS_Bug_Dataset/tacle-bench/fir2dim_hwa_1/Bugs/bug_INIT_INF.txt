@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "TYPE *poutput = &fir2dim_output[0];",
+            "Faulty Code": "TYPE *poutput;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for ( k = 0 ; k < IMAGEDIM ; k++ ) {",
+            "Faulty Code": "for ( k = 0 ; ; k++ ) {"
+        }
+    ]
+}

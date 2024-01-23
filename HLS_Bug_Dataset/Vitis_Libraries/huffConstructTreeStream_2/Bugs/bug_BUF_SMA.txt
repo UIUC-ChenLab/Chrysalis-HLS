@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "length_histogram[length] += children;",
+            "Faulty Code": "length_histogram[length + 1] += children;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = parent type = ram_2p impl = lutram",
+            "Faulty Code": "#pragma HLS INTERFACE port=parent mode=bram"
+        }
+    ]
+}

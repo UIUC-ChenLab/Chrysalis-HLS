@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (uint32_t j = 0; j < inputSize; j += c_parallelByte) {",
+            "Faulty Code": "#pragma HLS dataflow\nfor (uint32_t j = 0; j < inputSize; j += c_parallelByte) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (uint32_t j = 0; j < inputSize; j += c_parallelByte) {",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (uint32_t j = 0; j < inputSize; j += c_parallelByte) {"
+        }
+    ]
+}

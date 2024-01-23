@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "t = in[i] + 1;",
+            "Faulty Code": "t = in[i + 512] + 1;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INTERFACE m_axi port = in bundle = aximm depth = 1024",
+            "Faulty Code": "#pragma HLS INTERFACE s_axilite port = in bundle = aximm"
+        }
+    ]
+}

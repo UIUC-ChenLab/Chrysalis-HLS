@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void compute_A(hls::stream<vecOf16Words>& in, hls::stream<vecOf16Words>& out1, hls::stream<vecOf16Words>& out2, int size)",
+            "Faulty Code": "#pragma HLS dataflow\nvoid compute_A(hls::stream<vecOf16Words>& in, hls::stream<vecOf16Words>& out1, hls::stream<vecOf16Words>& out2, int size)"
+        }
+    ]
+}

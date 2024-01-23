@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline II = 1 rewind",
+            "Faulty Code": "#pragma HLS pipeline II = 1 rewind\n        #pragma HLS pipeline II = 1 rewind"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline II = 1 rewind",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

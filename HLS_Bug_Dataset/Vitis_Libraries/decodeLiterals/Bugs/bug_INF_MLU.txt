@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < lbtWrite; readFlag = ((i + c_inputByte) < lbtWrite)) {",
+            "Faulty Code": "for (int i = 0; ; readFlag = ((i + c_inputByte) < lbtWrite)) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t i = 1; i < c_outByte; ++i) {",
+            "Faulty Code": "for (uint8_t i = 1; i <= c_outByte; ++i) {"
+        }
+    ]
+}

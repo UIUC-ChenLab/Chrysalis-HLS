@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "outLengthHistogramStream << histVal;",
+            "Faulty Code": "outLengthHistogramStream.write(histVal.data[0]);"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (uint16_t i = c_lengthHistogram - 1; i > max_bit_len; --i) {",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (uint16_t i = c_lengthHistogram - 1; i > max_bit_len; --i) {"
+        }
+    ]
+}

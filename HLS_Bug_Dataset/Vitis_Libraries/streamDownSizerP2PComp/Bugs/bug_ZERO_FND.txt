@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<IN_WIDTH> inBuffer = 0;",
+            "Faulty Code": "ap_uint<IN_WIDTH> inBuffer;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "int idx = i % factor;",
+            "Faulty Code": "#pragma HLS array_partition factor=factor"
+        }
+    ]
+}

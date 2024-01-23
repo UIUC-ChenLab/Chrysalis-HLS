@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "while (inVal.strobe > 0 && dataSize < BLOCK_SIZE) {",
+            "Faulty Code": "while (dataSize < BLOCK_SIZE) {"
+        }
+    ]
+}

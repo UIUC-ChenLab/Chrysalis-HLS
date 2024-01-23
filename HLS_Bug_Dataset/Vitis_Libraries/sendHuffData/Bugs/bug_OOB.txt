@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outHufVal.data[0] = inHfVal.data[idx++];",
+            "Faulty Code": "outHufVal.data[0] = inHfVal.data[idx++]; if (idx == 3) idx = 0;"
+        }
+    ]
+}

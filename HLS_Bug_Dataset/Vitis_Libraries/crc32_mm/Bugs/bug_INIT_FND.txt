@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "outChecksumStream << inChecksumData[0];",
+            "Faulty Code": "ap_uint<32> temp; outChecksumStream << temp;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS STREAM variable = inStream depth = 32",
+            "Faulty Code": "#pragma HLS array_partition variable=inStream factor=5"
+        }
+    ]
+}

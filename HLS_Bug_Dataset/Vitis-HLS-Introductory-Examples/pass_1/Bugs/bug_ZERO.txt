@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "void pass(int a[128], int b[128], int tmp1[128], int tmp2[128]) {",
+            "Faulty Code": "void pass(int a[128] = {0}, int b[128] = {0}, int tmp1[128], int tmp2[128]) {"
+        }
+    ]
+}

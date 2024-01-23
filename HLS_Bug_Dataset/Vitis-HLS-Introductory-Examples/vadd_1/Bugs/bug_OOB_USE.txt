@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int j = 0; j < chunk_size; j++) {",
+            "Faulty Code": "for (int j = 0; j <= chunk_size; j++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned int v1_buffer[BUFFER_SIZE];",
+            "Faulty Code": "int v1_buffer[BUFFER_SIZE];"
+        }
+    ]
+}

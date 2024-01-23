@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint16_t i = 0; i < LEFT_BYTES; ++i) {",
+            "Faulty Code": "for (uint16_t i = 0; i <= LEFT_BYTES; ++i) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "uint16_t tOffset = inValue.range(31, 16);",
+            "Faulty Code": "int16_t tOffset = inValue.range(31, 16);"
+        }
+    ]
+}

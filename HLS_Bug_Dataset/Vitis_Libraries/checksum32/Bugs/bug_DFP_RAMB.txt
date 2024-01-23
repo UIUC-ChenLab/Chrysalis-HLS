@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS STREAM variable = endInPackLenStrm depth = 4",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void checksum32(hls::stream<ap_uint<32> >& checksumInitStrm, ...)",
+            "Faulty Code": "#pragma HLS interface m_axi port=checksumInitStrm"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "void myfftwrapper(cmpxDataIn xn[FFT_LENGTH], cmpxDataIn xk[FFT_LENGTH],\n                  status_t& fft_status, config_t& fft_config) {\n#pragma HLS dataflow\n#pragma HLS INLINE recursive\n    hls::fft<config1>(xn, xk, &fft_status, &fft_config);\n}",
+            "Faulty Code": "void myfftwrapper(cmpxDataIn xn[FFT_LENGTH], cmpxDataIn xk[FFT_LENGTH + 1],\n                  status_t& fft_status, config_t& fft_config) {\n#pragma HLS dataflow\n#pragma HLS INLINE recursive\n    hls::fft<config1>(xn, xk, &fft_status, &fft_config);\n}"
+        }
+    ]
+}

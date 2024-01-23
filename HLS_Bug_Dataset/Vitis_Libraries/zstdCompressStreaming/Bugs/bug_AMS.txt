@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS STREAM variable = inBlockStream depth = 16",
+            "Faulty Code": "#pragma HLS INTERFACE port=inBlockStream mode=s_axilite"
+        }
+    ]
+}

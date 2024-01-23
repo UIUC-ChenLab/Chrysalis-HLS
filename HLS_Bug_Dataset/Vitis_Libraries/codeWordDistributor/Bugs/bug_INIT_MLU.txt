@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "auto inVal = inStreamCode.read();",
+            "Faulty Code": "DSVectorStream_dt<Codeword, 1> inVal; // Missing initialization from inStreamCode"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t i = 0; i < 2; i++)",
+            "Faulty Code": "for (uint8_t i = 0; i <= 2; i++) // Incorrect loop boundary, should be i < 2"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (true) {",
+            "Faulty Code": "while (1) { // Potential infinite loop if the break condition is never met inside the loop"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = literal_freq type = ram_2p impl = lutram",
+            "Faulty Code": "#pragma HLS INTERFACE port=literal_freq mode=m_axi // This is incorrect because literal_freq is not supposed to be interfaced with m_axi; it should be bound to local storage"
+        }
+    ]
+}

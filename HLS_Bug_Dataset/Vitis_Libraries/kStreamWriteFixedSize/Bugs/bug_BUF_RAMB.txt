@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "t1.last = false;",
+            "Faulty Code": "t1.last = i >= (sCnt / 2); // This could incorrectly set 'last' to true in the middle of the stream"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS INTERFACE port=outDataStream mode=m_axi // Incorrect pragma, should not be applied to a stream"
+        }
+    ]
+}

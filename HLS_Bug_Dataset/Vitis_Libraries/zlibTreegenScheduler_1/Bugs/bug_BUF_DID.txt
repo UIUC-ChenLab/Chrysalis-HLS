@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (read_flag) inVal = lz77InTree[j].read();",
+            "Faulty Code": "if (read_flag) inVal = lz77InTree[i].read();"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=eos_tmp dim=1 complete"
+        }
+    ]
+}

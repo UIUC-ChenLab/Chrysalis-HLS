@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<OUT_DATAWIDTH> tmpValue = inBuffer.range((idx + 1) * OUT_DATAWIDTH - 1, idx * OUT_DATAWIDTH);",
+            "Faulty Code": "ap_uint<OUT_DATAWIDTH> tmpValue = inBuffer.range((idx + 1) * OUT_DATAWIDTH, idx * OUT_DATAWIDTH);"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (uint16_t inSize = inSizeStream.read(); inSize != 0; inSize = inSizeStream.read()) {",
+            "Faulty Code": "for (uint16_t inSize = inSizeStream.read(); inSize >= 0; inSize = inSizeStream.read()) {"
+        }
+    ]
+}

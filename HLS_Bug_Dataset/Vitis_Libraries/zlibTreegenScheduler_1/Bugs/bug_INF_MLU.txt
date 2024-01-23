@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (is_pending) {",
+            "Faulty Code": "while (true) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint16_t k = 0; k < c_litDistCodeCnt; k++) {",
+            "Faulty Code": "for (uint16_t k = 0; k <= c_litDistCodeCnt; k++) {"
+        }
+    ]
+}

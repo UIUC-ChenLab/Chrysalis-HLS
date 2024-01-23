@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS pipeline\n\t#pragma HLS pipeline"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for ( k = 0; k < 32; k++ ) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\n\tfor ( k = 0; k < 32; k++ ) {"
+        }
+    ]
+}

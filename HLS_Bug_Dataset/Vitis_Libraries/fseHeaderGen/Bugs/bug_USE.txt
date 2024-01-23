@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "bitStream.range(nbBits + bitCount - 1, bitCount) = count;",
+            "Faulty Code": "bitStream.range(nbBits + bitCount, bitCount) = count;"
+        }
+    ]
+}

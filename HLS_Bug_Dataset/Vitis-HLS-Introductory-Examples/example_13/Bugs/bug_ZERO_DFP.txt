@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "stream<int, 16> inter[2];",
+            "Faulty Code": "stream<int, 16> inter[2] = {0}; // Incorrectly initializes the streams to zero"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS DATAFLOW // Incorrect placement, should be outside the example function"
+        }
+    ]
+}

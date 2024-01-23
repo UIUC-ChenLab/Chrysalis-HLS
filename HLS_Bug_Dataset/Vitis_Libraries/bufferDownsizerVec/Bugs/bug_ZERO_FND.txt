@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if (inSize == 0) break;",
+            "Faulty Code": "if (inSize == 0) inSize = 1;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=outVal.data factor=3"
+        }
+    ]
+}

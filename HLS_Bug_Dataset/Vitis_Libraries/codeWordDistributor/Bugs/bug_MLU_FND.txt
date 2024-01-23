@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t i = 0; i < 2; i++) {",
+            "Faulty Code": "for (uint8_t i = 0; i <= 2; i++) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=hctMeta factor=3"
+        }
+    ]
+}

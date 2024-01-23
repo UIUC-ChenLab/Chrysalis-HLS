@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void hlsStream2axiu(hls::stream<ap_uint<OUT_DWIDTH> >& inputStream, hls::stream<bool>& inputStreamEos, hls::stream<ap_axiu<OUT_DWIDTH, 0, 0, 0> >& outAxiStream, hls::stream<ap_axiu<32, 0, 0, 0> >& outAxiSizeStream, hls::stream<uint32_t>& inputTotalCmpSizeStream) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid hlsStream2axiu(hls::stream<ap_uint<OUT_DWIDTH> >& inputStream, hls::stream<bool>& inputStreamEos, hls::stream<ap_axiu<OUT_DWIDTH, 0, 0, 0> >& outAxiStream, hls::stream<ap_axiu<32, 0, 0, 0> >& outAxiSizeStream, hls::stream<uint32_t>& inputTotalCmpSizeStream) {"
+        }
+    ]
+}

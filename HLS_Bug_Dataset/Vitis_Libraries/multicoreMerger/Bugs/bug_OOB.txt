@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "inputWindow.range((inputIdx + factor) * 8 - 1, inputIdx * 8) = strdStream.read();",
+            "Faulty Code": "inputWindow.range((inputIdx + factor) * 8, inputIdx * 8) = strdStream.read();"
+        }
+    ]
+}

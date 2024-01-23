@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "void pass(int tmp3[128], int tmp2[128], int tmp1[128], int b[128]) {",
+            "Faulty Code": "#pragma HLS array_partition variable=tmp2 factor=10\nvoid pass(int tmp3[128], int tmp2[128], int tmp1[128], int b[128]) {"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "int buff[127];",
+            "Faulty Code": "buff[i] = tmp1[i]; // Inside the loop, which would be out-of-bounds when i >= 127"
+        }
+    ]
+}

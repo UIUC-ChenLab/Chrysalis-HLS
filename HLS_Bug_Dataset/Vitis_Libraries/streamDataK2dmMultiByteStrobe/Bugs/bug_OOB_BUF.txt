@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint32_t outSize = countSetBits<c_keepDWidth>((int)(inValue.keep));",
+            "Faulty Code": "uint32_t outSize = countSetBits<c_keepDWidth>((int)(inValue.keep[PARALLEL_BYTES]));"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "out << inValue.data;",
+            "Faulty Code": "out << inValue.data.range((PARALLEL_BYTES * 8) - 1, PARALLEL_BYTES * 4);"
+        }
+    ]
+}

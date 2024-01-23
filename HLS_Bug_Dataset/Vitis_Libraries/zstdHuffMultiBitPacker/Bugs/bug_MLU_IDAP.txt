@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<ap_uint<MAX_BITS * PARALLEL_HUFFMAN> >& hfBitStream",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=hfBitStream"
+        }
+    ]
+}

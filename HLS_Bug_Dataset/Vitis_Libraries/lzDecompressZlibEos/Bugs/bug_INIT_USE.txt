@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "bool eos_flag = inStream_eos.read();",
+            "Faulty Code": "bool eos_flag;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "outStream_eos << 0;",
+            "Faulty Code": "outStream_eos << (bool)0;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "accReg += ((ap_uint<c_accBytes>)inVal << bitsInAcc);",
+            "Faulty Code": "accReg += ((ap_uint<c_accBytes>)inVal << (bitsInAcc+1));"
+        }
+    ]
+}

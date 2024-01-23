@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "p_b = &b[k*size];",
+            "Faulty Code": "p_b = &b[k*size + i];"
+        }
+    ]
+}

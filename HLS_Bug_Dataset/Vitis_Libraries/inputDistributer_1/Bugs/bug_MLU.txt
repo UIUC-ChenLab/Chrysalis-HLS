@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "coreIdx = (coreIdx + 1) % CORE_COUNT; // increment within limits",
+            "Faulty Code": "++coreIdx; coreIdx = ((coreIdx < CORE_COUNT) ? coreIdx : 0);"
+        }
+    ]
+}

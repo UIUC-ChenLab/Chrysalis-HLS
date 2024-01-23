@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "bool last_block = false;",
+            "Faulty Code": "bool last_block;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint16_t tOffset = encodedValue.data[0].range(31, 16) + 3 + 1;",
+            "Faulty Code": "uint16_t tOffset = 0;"
+        }
+    ]
+}

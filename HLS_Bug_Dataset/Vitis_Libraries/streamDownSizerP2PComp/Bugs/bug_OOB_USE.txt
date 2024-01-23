@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<PACK_WIDTH> tmpValue = inBuffer.range((idx + 1) * PACK_WIDTH - 1, idx * PACK_WIDTH);",
+            "Faulty Code": "ap_uint<PACK_WIDTH> tmpValue = inBuffer.range((idx + 1) * c_out_word - 1, idx * c_out_word);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "uint32_t sizeOutputV = (size - 1) / c_out_word + 1;",
+            "Faulty Code": "int sizeOutputV = (size - 1) / c_out_word + 1;"
+        }
+    ]
+}

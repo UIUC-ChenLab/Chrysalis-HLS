@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t vid = 0; vid < NUM_BLOCKS; vid++) {",
+            "Faulty Code": "for (uint8_t vid = 0; vid <= NUM_BLOCKS; vid++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outSizeStream[vid] << (input_size[vid] - read_size[vid]);",
+            "Faulty Code": "outSizeStream[vid] << 0;"
+        }
+    ]
+}

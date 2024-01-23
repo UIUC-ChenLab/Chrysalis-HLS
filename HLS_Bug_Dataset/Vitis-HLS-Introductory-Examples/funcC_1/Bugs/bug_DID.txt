@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS unroll factor = 2",
+            "Faulty Code": "#pragma HLS array_partition variable=out dim=2 complete"
+        }
+    ]
+}

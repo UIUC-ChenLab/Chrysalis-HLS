@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint16_t decSize[4];",
+            "Faulty Code": "uint16_t decSize[4]; // decSize is declared but not initialized"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "HuffmanTable huffTable[2048];\n#pragma HLS BIND_STORAGE variable = huffTable type = ram_t2p impl = bram",
+            "Faulty Code": "HuffmanTable huffTable;\n#pragma HLS INTERFACE port=huffTable"
+        }
+    ]
+}

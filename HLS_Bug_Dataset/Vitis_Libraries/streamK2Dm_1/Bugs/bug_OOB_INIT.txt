@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out << inValue.data;",
+            "Faulty Code": "out << inValue.data.range(((PARALLEL_BYTES+1) * 8) - 1, 0); // Incorrect access beyond the actual data width"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_axiu<PARALLEL_BYTES * 8, 0, 0, 0> inValue;\ninValue = dmInStream.read();",
+            "Faulty Code": "ap_axiu<PARALLEL_BYTES * 8, 0, 0, 0> inValue;\n// Missing initialization of 'inValue' before use"
+        }
+    ]
+}

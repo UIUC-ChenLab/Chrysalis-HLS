@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "heap[digit_location[digit]] = prev_sorting[j];",
+            "Faulty Code": "heap[(int8_t)digit_location[digit]] = prev_sorting[j];"
+        }
+    ]
+}

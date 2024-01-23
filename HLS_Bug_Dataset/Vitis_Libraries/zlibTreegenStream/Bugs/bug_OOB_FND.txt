@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint16_t i = 0; i < i_symbolSize; ++i) {",
+            "Faulty Code": "for (uint16_t i = 0; i <= i_symbolSize; ++i) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL FACTOR = 2",
+            "Faulty Code": "#pragma HLS UNROLL FACTOR = 3"
+        }
+    ]
+}

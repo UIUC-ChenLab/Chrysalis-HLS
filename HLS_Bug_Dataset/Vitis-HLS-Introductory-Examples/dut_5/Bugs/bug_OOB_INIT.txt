@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (i != 512)",
+            "Faulty Code": "if (i < size)"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "int t;",
+            "Faulty Code": "int t = 0;"
+        }
+    ]
+}

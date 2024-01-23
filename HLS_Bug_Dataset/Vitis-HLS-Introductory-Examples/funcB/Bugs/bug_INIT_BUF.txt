@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void funcB(data_t* in, data_t* out) {",
+            "Faulty Code": "void funcB(data_t* in, data_t* out = nullptr) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "out[i] = in[i] + 25;",
+            "Faulty Code": "out[i] = in[N/2 + i] + 25;"
+        }
+    ]
+}

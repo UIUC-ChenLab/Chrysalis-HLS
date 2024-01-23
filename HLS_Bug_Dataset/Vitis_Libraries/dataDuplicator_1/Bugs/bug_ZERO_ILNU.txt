@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t inSize = (inputSize - 1) / c_parallelByte + 1;",
+            "Faulty Code": "uint32_t inSize = 0; // Incorrectly initialized to zero"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS UNROLL factor=2 // Unrolling a loop that is not the innermost loop without fully unrolling the inner loop"
+        }
+    ]
+}

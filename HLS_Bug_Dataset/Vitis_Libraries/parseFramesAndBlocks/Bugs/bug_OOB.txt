@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "inputWindow.range((validBytes + c_parallelByte) * 8 - 1, validBytes * 8) = input;",
+            "Faulty Code": "inputWindow.range((validBytes + c_parallelByte) * 8, validBytes * 8) = input;"
+        }
+    ]
+}

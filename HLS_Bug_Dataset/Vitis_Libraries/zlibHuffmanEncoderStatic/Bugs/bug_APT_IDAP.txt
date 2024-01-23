@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS STREAM variable = hufCodeStream depth = 4",
+            "Faulty Code": "#pragma HLS array_partition variable = hufCodeStream type = complete"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=inStream"
+        }
+    ]
+}

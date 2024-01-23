@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void read(A* a_in, A buf_out[NUM]) {\nREAD:\n    for (int i = 0; i < NUM; i++) {\n        buf_out[i] = a_in[i];\n    }\n}",
+            "Faulty Code": "void read(A* a_in, A buf_out[NUM]) {\n#pragma HLS INTERFACE port=a_in mode=m_axi\nREAD:\n    for (int i = 0; i < NUM; i += 2) {\n        // Incorrect access pattern for m_axi, should be consecutive\n        buf_out[i] = a_in[i];\n        if(i + 1 < NUM) buf_out[i + 1] = a_in[i + 3]; // Error: Random access producing non-burst read/write\n    }\n}"
+        }
+    ]
+}

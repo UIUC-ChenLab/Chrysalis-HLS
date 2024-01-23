@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void hlsStream2axiStreamFixedSize(hls::stream<ap_uint<STREAMDWIDTH> >& hlsInStream, hls::stream<qdma_axis<STREAMDWIDTH, 0, 0, 0> >& outputAxiStream, uint32_t originalSize) {",
+            "Faulty Code": "#pragma HLS dataflow void hlsStream2axiStreamFixedSize(hls::stream<ap_uint<STREAMDWIDTH> >& hlsInStream, hls::stream<qdma_axis<STREAMDWIDTH, 0, 0, 0> >& outputAxiStream, uint32_t originalSize) {"
+        }
+    ]
+}

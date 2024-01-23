@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (i = 2; i < N; i++) {",
+            "Faulty Code": "for (i = 2; i <= N; i++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "sum += tmp2 + tmp1 + tmp0;",
+            "Faulty Code": "sum += (int)(tmp2 + tmp1 + tmp0);"
+        }
+    ]
+}

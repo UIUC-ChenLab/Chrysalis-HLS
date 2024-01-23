@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS STREAM variable = axi2HlsStrm depth = 4096",
+            "Faulty Code": "#pragma HLS INTERFACE port=axi2HlsStrm mode=s_axilite"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "seqStream[i].read();",
+            "Faulty Code": "seqStream[cIdx].read();"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "for (uint8_t m = 0; m < 2; ++m) {",
+            "Faulty Code": "for (int m = 0; m < 2; ++m) {"
+        }
+    ]
+}

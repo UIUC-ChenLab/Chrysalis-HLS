@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "dout_t sum = 0;",
+            "Faulty Code": "dout_t sum;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = 2; i < N; ++i)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (i = 2; i < N; ++i)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "w = a[ k ][ j ];",
+            "Faulty Code": "w = a[ r ][ j ];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "w1 = 1.0;",
+            "Faulty Code": "w1 = 0.0;"
+        }
+    ]
+}

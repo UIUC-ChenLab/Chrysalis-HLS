@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int bufReference[totalNumWords];",
+            "Faulty Code": "int bufReference[totalNumWords]; // Missing initialization"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void read(A* a_in, A buf_out[NUM]) {",
+            "Faulty Code": "#pragma HLS dataflow // Incorrect placement, should not be here\nvoid read(A* a_in, A buf_out[NUM]) {"
+        }
+    ]
+}

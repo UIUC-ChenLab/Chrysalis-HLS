@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static dout_t a[8] = {1, 2, 3, 4, 5, 6, 7, 8};",
+            "Faulty Code": "static dout_t a[8] = {0};"
+        }
+    ]
+}

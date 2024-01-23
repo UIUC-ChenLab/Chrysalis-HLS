@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "int buf[8192];",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION type=complete variable=buf"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t max_lit_limit[NUM_BLOCK]",
+            "Faulty Code": "uint32_t max_lit_limit[NUM_BLOCK] = {0}"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = outStream type = FIFO impl = SRL",
+            "Faulty Code": "#pragma HLS array_partition variable=outStreamEos type=cyclic factor=2"
+        }
+    ]
+}

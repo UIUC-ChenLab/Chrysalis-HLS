@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "symbol[1] = bl1Codes[_bitbuffer.range(0, 0)];",
+            "Faulty Code": "#pragma HLS interface m_axi port=bl1Codes offset=slave bundle=gmem"
+        }
+    ]
+}

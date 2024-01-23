@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "din_t tmp0, tmp1, tmp2;",
+            "Faulty Code": "din_t tmp0 = 0, tmp1 = 0, tmp2;"
+        }
+    ]
+}

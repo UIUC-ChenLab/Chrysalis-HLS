@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<16> outVal;",
+            "Faulty Code": "ap_uint<16> outVal = outVal;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "outEos << 0;",
+            "Faulty Code": "outEos << (bool)outVal[7];"
+        }
+    ]
+}

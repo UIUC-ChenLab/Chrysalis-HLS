@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void zlibTreegenDistributor(hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> > hufCodeStream[NUM_BLOCK],\n                            hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> >& hufSerialCodeStream,\n                            hls::stream<uint8_t>& inIdxNum) {",
+            "Faulty Code": "void zlibTreegenDistributor(hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> > hufCodeStream[NUM_BLOCK],\n                            hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> >& hufSerialCodeStream,\n                            hls::stream<uint8_t>& inIdxNum) {\n#pragma HLS INTERFACE m_axi port=hufCodeStream offset=slave bundle=gmem"
+        }
+    ]
+}

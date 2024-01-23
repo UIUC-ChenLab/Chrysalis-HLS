@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void Double_pass(int tmp2[128], int tmp1[128], int tmp4[128], int tmp5[128]) {\n\n    int buff[127];\n    for (int i = 0; i < 128; i++) {\n        tmp4[i] = tmp1[i];\n        tmp5[i] = tmp2[i];\n    }\n}",
+            "Faulty Code": "void Double_pass(int tmp2[128], int tmp1[128], int tmp4[128], int tmp5[128]) {\n\n    int buff[127];\n    #pragma HLS pipeline\n    for (int i = 0; i < 128; i++) {\n        #pragma HLS pipeline\n        tmp4[i] = tmp1[i];\n        tmp5[i] = tmp2[i];\n    }\n}"
+        }
+    ]
+}

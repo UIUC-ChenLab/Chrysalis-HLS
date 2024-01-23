@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void ecc_flags(din_t in1[N], din_t in2[N], const din_t Iter, din_t output[N]) {",
+            "Faulty Code": "#pragma HLS dataflow\ndef void ecc_flags(din_t in1[N], din_t in2[N], const din_t Iter, din_t output[N]) {"
+        }
+    ]
+}

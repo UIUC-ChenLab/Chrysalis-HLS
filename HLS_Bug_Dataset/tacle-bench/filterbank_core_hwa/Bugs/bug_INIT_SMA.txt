@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "y[ i ] = 0;",
+            "Faulty Code": "vec_type temp; y[ i ] = temp;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS INTERFACE bram port=r",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=i"
+        }
+    ]
+}

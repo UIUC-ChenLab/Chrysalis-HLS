@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outChecksumStream << inChecksumData[0];",
+            "Faulty Code": "ap_uint<32> crc = 0; outChecksumStream << crc;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<PARALLEL_BYTE* 8> temp = in[i];",
+            "Faulty Code": "int temp = in[i];"
+        }
+    ]
+}

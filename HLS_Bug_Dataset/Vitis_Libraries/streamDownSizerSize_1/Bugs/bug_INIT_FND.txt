@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<IN_DATAWIDTH> inVal;",
+            "Faulty Code": "ap_uint<IN_DATAWIDTH> inVal = inStream.read();"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for (ap_uint<SIZE_DWIDTH> dsize = 0; dsize < outSizeV; ++dsize) {",
+            "Faulty Code": "#pragma HLS array_partition variable=outVal.data factor=c_factor"
+        }
+    ]
+}

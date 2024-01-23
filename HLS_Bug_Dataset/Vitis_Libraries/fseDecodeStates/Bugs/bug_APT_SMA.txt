@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=prevOffsets"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "ap_uint<LMO_WIDTH>* prevOffsets",
+            "Faulty Code": "#pragma HLS interface port=prevOffsets"
+        }
+    ]
+}

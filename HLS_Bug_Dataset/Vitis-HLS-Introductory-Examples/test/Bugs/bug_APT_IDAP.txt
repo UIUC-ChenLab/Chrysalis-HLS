@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = A type = RAM_2P impl = BRAM",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = A type = cyclic factor = 4"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "int test(int i) {",
+            "Faulty Code": "#pragma HLS INTERFACE mode = ap_fifo port = A"
+        }
+    ]
+}

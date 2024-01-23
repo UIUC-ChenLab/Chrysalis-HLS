@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "hls::stream<uint32_t> compressedSize[NUM_BLOCK];",
+            "Faulty Code": "hls::stream<uint32_t> compressedSize[NUM_BLOCK]; // Assuming this stream is used without initialization"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (uint8_t i = 0; i < NUM_BLOCK; i++) {",
+            "Faulty Code": "for (uint8_t i = 0; i <= NUM_BLOCK; i++) { // This will cause an infinite loop when i wraps around after reaching 255"
+        }
+    ]
+}

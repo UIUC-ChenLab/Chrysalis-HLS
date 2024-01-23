@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void createTree(Symbol<MAX_FREQ_DWIDTH>* heap, int num_symbols, ap_uint<SYMBOL_BITS>* parent, ap_uint<SYMBOL_SIZE>& left, ap_uint<SYMBOL_SIZE>& right, Frequency<MAX_FREQ_DWIDTH>* frequency) {",
+            "Faulty Code": "#pragma HLS DATAFLOW void createTree(Symbol<MAX_FREQ_DWIDTH>* heap, int num_symbols, ap_uint<SYMBOL_BITS>* parent, ap_uint<SYMBOL_SIZE>& left, ap_uint<SYMBOL_SIZE>& right, Frequency<MAX_FREQ_DWIDTH>* frequency) {"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (inVal = inStream.read(); inVal.strobe > 0; inVal = inStream.read()) {",
+            "Faulty Code": "for (inVal = inStream.read(); inVal.strobe > 0; ) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "for (int n = 0; n < SLAVES; n++) outStream[n] << i;",
+            "Faulty Code": "for (int n = 0; n < SLAVES/2; n++) outStream[n+SLAVES/2] << i;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "bool i = inStream.read();",
+            "Faulty Code": "unsigned char i = inStream.read();"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "outSeqStream << outSeqVal;",
+            "Faulty Code": "// write output sequence\n            outSeqStream << outSeqVal;\n        }\n        // End of block/file\n        outSeqVal.strobe = 0;\n        outSeqStream << outSeqVal;"
+        }
+    ]
+}

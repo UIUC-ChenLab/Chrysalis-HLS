@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint16_t maxSymbol;",
+            "Faulty Code": "uint16_t maxSymbol = 0;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void s2mmSizeWrite(hls::stream<OUTSIZE_DT>& inSizeStream, OUTSIZE_DT* compressedSize, OUTSIZE_DT numItr, OUTSIZE_DT inputSize, OUTSIZE_DT blckSize)",
+            "Faulty Code": "#pragma HLS INTERFACE port=compressedSize mode=ap_none"
+        }
+    ]
+}

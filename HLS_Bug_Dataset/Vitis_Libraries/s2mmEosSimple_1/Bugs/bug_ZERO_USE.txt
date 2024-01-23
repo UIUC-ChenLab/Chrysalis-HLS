@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<DATAWIDTH> dummy = 0;",
+            "Faulty Code": "ap_uint<DATAWIDTH> dummy;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "bool eos_tmp = (eos == true) ? true : endOfStream.read();",
+            "Faulty Code": "bool eos_tmp = (eos == true) ? 1 : endOfStream.read();"
+        }
+    ]
+}

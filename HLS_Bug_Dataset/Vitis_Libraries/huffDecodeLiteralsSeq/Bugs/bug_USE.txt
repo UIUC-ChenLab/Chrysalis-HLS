@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "cmpSize[0] = accHuff;",
+            "Faulty Code": "cmpSize[0] = (uint16_t)accHuff;"
+        }
+    ]
+}

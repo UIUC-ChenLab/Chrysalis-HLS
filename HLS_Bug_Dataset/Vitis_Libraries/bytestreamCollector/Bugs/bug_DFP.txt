@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void bytestreamCollector(hls::stream<META_DT>& lzMetaStream, ...",
+            "Faulty Code": "#pragma HLS dataflow \nvoid bytestreamCollector(hls::stream<META_DT>& lzMetaStream, ..."
+        }
+    ]
+}

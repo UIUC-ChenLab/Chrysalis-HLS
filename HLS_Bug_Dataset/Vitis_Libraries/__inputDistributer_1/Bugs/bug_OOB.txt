@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (!isRawBlock) outStream[coreIdx] << 0;",
+            "Faulty Code": "if (!isRawBlock) outStream[coreIdx % CORE_COUNT] << 0;"
+        }
+    ]
+}

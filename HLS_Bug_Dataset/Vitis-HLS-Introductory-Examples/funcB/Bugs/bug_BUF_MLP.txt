@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out[i] = in[i] + 25;",
+            "Faulty Code": "out[i] = in[i + N/2] + 25; // Assuming the buffer is split and the wrong half is used"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS pipeline // Incorrectly placed inside another pipeline pragma or loop"
+        }
+    ]
+}

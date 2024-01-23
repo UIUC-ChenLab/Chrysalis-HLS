@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<DATAWIDTH> > outStream[NUM_BLOCKS],",
+            "Faulty Code": "#pragma HLS INTERFACE port=outStream mode=ap_memory"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE off",
+            "Faulty Code": "#pragma HLS PIPELINE"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "void streamDistributor(hls::stream<bool>& inStream, hls::stream<bool> outStream[SLAVES]) {",
+            "Faulty Code": "void streamDistributor(hls::stream<bool>& inStream, hls::stream<bool> outStream[SLAVES-1]) {"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void streamDistributor(hls::stream<bool>& inStream, hls::stream<bool> outStream[SLAVES]) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid streamDistributor(hls::stream<bool>& inStream, hls::stream<bool> outStream[SLAVES]) {"
+        }
+    ]
+}

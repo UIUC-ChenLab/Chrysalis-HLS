@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int i = 0; i < NUM; i++) {\n    buf_out[i] = a_in[i];\n}",
+            "Faulty Code": "#pragma HLS pipeline\nfor (int i = 0; i < NUM; i++) {\n    #pragma HLS pipeline\n    buf_out[i] = a_in[i];\n}"
+        }
+    ]
+}

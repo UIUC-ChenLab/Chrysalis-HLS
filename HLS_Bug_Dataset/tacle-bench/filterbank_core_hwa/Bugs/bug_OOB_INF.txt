@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for ( k = 0; k < 32; k++ ) {",
+            "Faulty Code": "for ( k = 0; k <= 32; k++ ) {"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for ( i = 0; i < 8; i++ ) {",
+            "Faulty Code": "for ( i = 0; i <= 8; i++ ) {"
+        }
+    ]
+}

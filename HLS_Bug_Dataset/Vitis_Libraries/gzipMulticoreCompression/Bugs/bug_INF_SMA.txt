@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (auto inSize = dataSizeStream.read(); inSize > 0; inSize = dataSizeStream.read()) {",
+            "Faulty Code": "for (auto inSize = dataSizeStream.read(); inSize >= 0; inSize = dataSizeStream.read()) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<17> > upsizedCntr[c_numBlocks];",
+            "Faulty Code": "hls::stream<ap_uint<17> > upsizedCntr;"
+        }
+    ]
+}

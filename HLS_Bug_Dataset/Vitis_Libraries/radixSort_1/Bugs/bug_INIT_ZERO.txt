@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "auto prev_freq = heap[0].frequency;",
+            "Faulty Code": "// Faulty code line missing, thus prev_freq remains uninitialized"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "digit_location[0] = 0;",
+            "Faulty Code": "digit_location[0] = 1; // Incorrectly initialized to 1 instead of 0"
+        }
+    ]
+}

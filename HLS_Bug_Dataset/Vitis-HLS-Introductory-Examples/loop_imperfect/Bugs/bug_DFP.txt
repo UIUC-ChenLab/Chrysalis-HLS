@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void loop_imperfect(din_t A[N], dout_t B[N]) { /* ... */ }",
+            "Faulty Code": "void loop_imperfect(din_t A[N], dout_t B[N]) {\n    #pragma HLS dataflow\n    int i, j;\n    dint_t acc;\n\nLOOP_I:\n    for (i = 0; i < 20; i++) {\n        acc = 0;\n    LOOP_J:\n        for (j = 0; j < 20; j++) {\n            acc += A[j] * j;\n        }\n        if (i % 2 == 0)\n            B[i] = acc / 20;\n        else\n            B[i] = 0;\n    }\n}"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "hls::stream<ap_uint<c_parallelBit + PARALLEL_BYTES> > inflateDist[2];",
+            "Faulty Code": "hls::stream<ap_uint<c_parallelBit + PARALLEL_BYTES> > inflateDist[NUM_CORE];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (; i < allignedwidth * BURST_SIZE; i += BURST_SIZE) {",
+            "Faulty Code": "#pragma HLS array_partition factor=10\n    for (; i < allignedwidth * BURST_SIZE; i += BURST_SIZE) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (uint32_t j = 0; j < BURST_SIZE; j++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\n        for (uint32_t j = 0; j < BURST_SIZE; j++) {"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "config_t fft_config;",
+            "Faulty Code": "config_t fft_config = {0};"
+        }
+    ]
+}

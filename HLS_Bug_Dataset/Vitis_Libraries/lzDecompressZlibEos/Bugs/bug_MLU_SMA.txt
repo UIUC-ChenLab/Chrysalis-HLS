@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint32_t pIdx = LOW_OFFSET - 1; pIdx > 0; pIdx--) {",
+            "Faulty Code": "for (uint32_t pIdx = LOW_OFFSET - 1; pIdx >= 0; pIdx--) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<uint64_t>& outSize_val",
+            "Faulty Code": "#pragma HLS INTERFACE port=outSize_val bram"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outVal.keep = -1;",
+            "Faulty Code": "outVal.keep = 0;"
+        }
+    ]
+}

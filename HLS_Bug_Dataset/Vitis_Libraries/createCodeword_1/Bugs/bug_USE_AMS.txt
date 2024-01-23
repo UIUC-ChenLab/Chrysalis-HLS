@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint8_t length = (uint8_t)symbol_bits[k];",
+            "Faulty Code": "int length = symbol_bits[k];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<DSVectorStream_dt<Codeword, 1> >& huffCodes",
+            "Faulty Code": "DSVectorStream_dt<Codeword, 1> huffCodes"
+        }
+    ]
+}

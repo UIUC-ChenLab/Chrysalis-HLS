@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "bool i = inStream.read();",
+            "Faulty Code": "bool i = 0; // Assuming the user incorrectly initializes 'i' to zero instead of reading from the stream"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<bool> outStream[SLAVES]",
+            "Faulty Code": "#pragma HLS interface port=outStream mode=ap_memory // Assuming 'outStream' is incorrectly specified as a single port instead of an array"
+        }
+    ]
+}

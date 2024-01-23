@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "auto inVal = inStreamCode.read();",
+            "Faulty Code": "auto inVal = inStreamCode.read(); outStreamCode1 << inVal; inVal = inStreamCode.read(); outStreamCode2 << inVal;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "outStreamMaxCode1 << maxCode;",
+            "Faulty Code": "outStreamMaxCode1.write(maxCode);"
+        }
+    ]
+}

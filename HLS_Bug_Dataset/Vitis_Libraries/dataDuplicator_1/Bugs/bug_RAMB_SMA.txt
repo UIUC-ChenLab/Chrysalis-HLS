@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS interface m_axi port=inStream depth=256"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<DWIDTH> >& coreStream",
+            "Faulty Code": "#pragma HLS interface bram port=coreStream"
+        }
+    ]
+}

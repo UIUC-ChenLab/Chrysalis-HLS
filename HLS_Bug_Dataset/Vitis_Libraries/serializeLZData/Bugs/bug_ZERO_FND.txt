@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "seqVal.strobe = 0;",
+            "Faulty Code": "seqVal.strobe = 1;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1\n#pragma HLS array_partition variable=outLitFreqStream factor=2"
+        }
+    ]
+}

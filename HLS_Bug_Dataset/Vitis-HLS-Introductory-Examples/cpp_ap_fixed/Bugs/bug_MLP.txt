@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "dout_t cpp_ap_fixed(din1_t d_in1, din2_t d_in2) {\n    static dint_t sum;\n    sum = +d_in1;\n    return sum * d_in2;\n}",
+            "Faulty Code": "dout_t cpp_ap_fixed(din1_t d_in1, din2_t d_in2) {\n    #pragma HLS pipeline\n    static dint_t sum;\n    sum = +d_in1;\n    return sum * d_in2;\n}"
+        }
+    ]
+}

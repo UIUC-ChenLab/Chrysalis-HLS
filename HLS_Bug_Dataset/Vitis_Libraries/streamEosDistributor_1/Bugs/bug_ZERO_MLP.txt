@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "bool i = inStream.read();",
+            "Faulty Code": "bool i = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

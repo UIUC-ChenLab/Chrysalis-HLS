@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for ( i = 0; i < DIM; i++ ) {",
+            "Faulty Code": "for ( i = 0; i <= DIM; i++ ) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "w1 = 1.0;",
+            "Faulty Code": "w1 = 0.0;"
+        }
+    ]
+}

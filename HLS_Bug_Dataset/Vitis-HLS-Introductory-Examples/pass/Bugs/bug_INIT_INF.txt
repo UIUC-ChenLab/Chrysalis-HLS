@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void pass(int a[128], int tmp1[128]) {",
+            "Faulty Code": "void pass(int a[128], int tmp1[128]) { int uninitialized; for (int i = 0; i < 128; i++) { tmp1[i] = uninitialized; } }"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < 128; i++) {",
+            "Faulty Code": "for (int i = 0; i <= 128; i++) {"
+        }
+    ]
+}

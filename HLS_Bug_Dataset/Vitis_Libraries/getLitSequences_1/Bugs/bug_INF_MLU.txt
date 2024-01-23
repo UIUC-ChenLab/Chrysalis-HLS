@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (uint16_t i = 0; i < LEFT_BYTES; ++i) {",
+            "Faulty Code": "for (uint16_t i = 0; i <= LEFT_BYTES; ++i) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int m = 0; m < MATCH_LEN; m++) {",
+            "Faulty Code": "for (int m = 0; m < MATCH_LEN - 1; m++) {"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint16_t i = 0; i < c_maxLitV + 1; i++) {",
+            "Faulty Code": "for (uint16_t i = 0; i <= c_maxLitV; i++) {"
+        }
+    ]
+}

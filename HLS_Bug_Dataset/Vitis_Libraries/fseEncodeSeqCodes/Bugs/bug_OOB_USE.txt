@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<36> fseStateBitsTableOF[256];",
+            "Faulty Code": "ap_uint<36> fseStateBitsTableOF[128]; // Assuming the array is mistakenly defined with half the required size"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "uint8_t ofCode = (uint8_t)seqCode.data[0].offset;",
+            "Faulty Code": "int ofCode = seqCode.data[0].offset; // Assuming 'offset' is unsigned and sign extension is not intended"
+        }
+    ]
+}

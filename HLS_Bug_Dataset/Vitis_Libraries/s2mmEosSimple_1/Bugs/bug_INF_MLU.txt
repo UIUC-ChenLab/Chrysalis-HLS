@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int j = 0; eos == false; j += BURST_SIZE) {",
+            "Faulty Code": "for (int j = 0; eos != true; j += BURST_SIZE) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < BURST_SIZE; i++) {",
+            "Faulty Code": "for (int i = 0; i <= BURST_SIZE; i++) {"
+        }
+    ]
+}

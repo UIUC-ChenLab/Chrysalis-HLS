@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "outEoS << 0;",
+            "Faulty Code": "outEoS << (bool)0x8000;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "decompressSize << uncompressSize.data;",
+            "Faulty Code": "decompressSize << uncompressSize;"
+        }
+    ]
+}

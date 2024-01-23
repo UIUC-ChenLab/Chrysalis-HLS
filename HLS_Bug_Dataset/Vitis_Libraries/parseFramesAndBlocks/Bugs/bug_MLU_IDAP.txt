@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < bs2Write; i += c_parallelByte) {",
+            "Faulty Code": "for (int i = 0; i <= bs2Write; i += c_parallelByte) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 2"
+        }
+    ]
+}

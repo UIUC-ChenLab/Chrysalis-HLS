@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (data_t i = 0; i < N; i++) {\n#pragma HLS pipeline\n    out[i] = in[i] * 2;\n}",
+            "Faulty Code": "for (data_t i = 0; i <= N; i++) {\n#pragma HLS pipeline\n    out[i] = in[i] * 2;\n}"
+        }
+    ]
+}

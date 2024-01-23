@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable = inBlockStream depth = c_dataUpSDepth",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_memory port=inBlockStream"
+        }
+    ]
+}

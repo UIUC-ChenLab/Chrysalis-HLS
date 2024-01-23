@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void bypass(int tmp1[128], int tmp2[128], int tmp3[128]) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=tmp1 mode=s_axilite\nvoid bypass(int tmp1, int tmp2[128], int tmp3[128]) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void bypass(int tmp1[128], int tmp2[128], int tmp3[128]) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=tmp3 mode=ap_none\nvoid bypass(int tmp1[128], int tmp2[128], int tmp3) {"
+        }
+    ]
+}

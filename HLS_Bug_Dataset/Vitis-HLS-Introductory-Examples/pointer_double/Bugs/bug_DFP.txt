@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "if (pos >= 0 & pos < 10) *(array + pos) = x;",
+            "Faulty Code": "#pragma HLS dataflow\nif (pos >= 0 & pos < 10) *(array + pos) = x;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint32_t metabuf = (blockSize << 8) + ((uint8_t)blockType);",
+            "Faulty Code": "uint32_t metabuf = (blockSize << 8) + (blockType);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "blockValidStream << 1;",
+            "Faulty Code": "blockValidStream = 1;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int r = 0;",
+            "Faulty Code": "int r;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "a[ k ][ i ] = a[ k ][ k ];",
+            "Faulty Code": "a[ k ][ i ] = a[ i ][ k ];"
+        }
+    ]
+}

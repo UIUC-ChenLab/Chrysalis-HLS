@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "litVal = litUpsizedStream[cIdx].read();",
+            "Faulty Code": "litVal = litUpsizedStream[CORE_COUNT].read();"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < inputSize; i++) {",
+            "Faulty Code": "for (int i = 0; i <= inputSize; i++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "tmpOut = t1.get_data();",
+            "Faulty Code": "tmpOut = t1.get_data().range(STREAMDWIDTH-1, STREAMDWIDTH/2);"
+        }
+    ]
+}

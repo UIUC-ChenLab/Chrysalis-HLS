@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS STREAM variable = lz77PassStream depth = c_blockSize",
+            "Faulty Code": "#pragma HLS INTERFACE port=lz77PassStream mode=m_axi depth=c_blockSize"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<c_dwidth> > distStream[c_numBlocks];",
+            "Faulty Code": "#pragma HLS INTERFACE port=distStream mode=bram"
+        }
+    ]
+}

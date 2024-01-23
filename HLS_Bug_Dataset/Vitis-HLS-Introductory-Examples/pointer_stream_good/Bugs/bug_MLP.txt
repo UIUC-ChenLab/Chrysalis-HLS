@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void pointer_stream_good(volatile dout_t *d_o, volatile din_t *d_i) {\n  din_t acc = 0;\n\n  acc += *d_i;\n  acc += *(d_i + 1);\n  *d_o = acc;\n  acc += *(d_i + 2);\n  acc += *(d_i + 3);\n  *(d_o + 1) = acc;\n}",
+            "Faulty Code": "void pointer_stream_good(volatile dout_t *d_o, volatile din_t *d_i) {\n  din_t acc = 0;\n  #pragma HLS pipeline  // incorrect\n  acc += *d_i;\n  acc += *(d_i + 1);\n  *d_o = acc;\n  acc += *(d_i + 2);\n  acc += *(d_i + 3);\n  *(d_o + 1) = acc;\n}"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "tmp0 = mem[0];\ntmp1 = mem[1];",
+            "Faulty Code": "tmp0 = mem[N/2];\ntmp1 = mem[N/2+1];"
+        }
+    ]
+}

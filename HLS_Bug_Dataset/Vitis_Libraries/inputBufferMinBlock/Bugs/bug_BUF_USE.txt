@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "if (dataSize > 0 && dataSize < 1 + MIN_BLK_SIZE) rawBlockFlagStream << true;",
+            "Faulty Code": "if (dataSize > 0 && dataSize < 1 + (char)MIN_BLK_SIZE) rawBlockFlagStream << true;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (dataSize > 0 && inVal.strobe == 0) outStream << inVal;",
+            "Faulty Code": "if (dataSize > BLOCK_SIZE/2 && inVal.strobe == 0) outStream << inVal;"
+        }
+    ]
+}

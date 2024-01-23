@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void axiu2hlsStreamSizeEos(hls::stream<ap_axiu<IN_DWIDTH, 0, 0, 0> >& inputAxiStream, ...)",
+            "Faulty Code": "#pragma HLS interface m_axi port=inputAxiStream depth=10"
+        }
+    ]
+}

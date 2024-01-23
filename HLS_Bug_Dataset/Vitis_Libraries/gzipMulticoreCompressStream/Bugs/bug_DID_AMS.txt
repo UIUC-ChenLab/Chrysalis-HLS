@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable = downStream depth = c_thriceNumBlocks",
+            "Faulty Code": "#pragma HLS STREAM variable = downStream dim = 2 depth = c_thriceNumBlocks"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS STREAM variable = coreStream depth = c_defaultDepth",
+            "Faulty Code": "#pragma HLS INTERFACE port=coreStream mode=ap_none"
+        }
+    ]
+}

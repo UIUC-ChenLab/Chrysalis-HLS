@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = digit_location complete dim = 1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = digit_location cyclic dim = 1"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void huffConstructTreeStream_2(hls::stream<DSVectorStream_dt<Symbol<MAX_FREQ_DWIDTH>, 1> >& heapStream, ...)",
+            "Faulty Code": "void huffConstructTreeStream_2(hls::stream<Symbol<MAX_FREQ_DWIDTH>> heapStream, ...)"
+        }
+    ]
+}

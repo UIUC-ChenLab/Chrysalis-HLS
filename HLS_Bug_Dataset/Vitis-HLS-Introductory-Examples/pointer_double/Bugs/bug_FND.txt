@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "data_t array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};",
+            "Faulty Code": "#pragma HLS array_partition variable=array factor=3\n  data_t array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};"
+        }
+    ]
+}

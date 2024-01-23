@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "for (uint8_t i = inIdxNum.read(); i != 0xFF; i = inIdxNum.read()) {",
+            "Faulty Code": "uint8_t i; for (; i != 0xFF; i = inIdxNum.read()) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (uint8_t i = inIdxNum.read(); i != 0xFF; i = inIdxNum.read()) {",
+            "Faulty Code": "#pragma HLS unroll factor=4 for (uint8_t i = inIdxNum.read(); i != 0xFF; i = inIdxNum.read()) {"
+        }
+    ]
+}

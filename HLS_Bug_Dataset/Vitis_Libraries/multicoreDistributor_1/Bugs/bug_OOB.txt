@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "distStream[core] << tmp;",
+            "Faulty Code": "distStream[core % NUM_BLOCKS] << tmp;"
+        }
+    ]
+}

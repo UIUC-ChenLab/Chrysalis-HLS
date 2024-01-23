@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (stbFlagStrobe == 0) isRawBlk = 1;",
+            "Faulty Code": "if (stbFlagStrobe > 0) isRawBlk = 1;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=inVal dim=1"
+        }
+    ]
+}

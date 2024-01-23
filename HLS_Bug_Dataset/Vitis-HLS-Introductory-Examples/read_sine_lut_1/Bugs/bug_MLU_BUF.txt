@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int k=0;k<4*LUTSIZE;k++) {",
+            "Faulty Code": "for (int k=0;k<4*LUTSIZE-1;k++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "lut_word = cos_lut[adr];",
+            "Faulty Code": "lut_word = cos_lut[adr+LUTSIZE/2];"
+        }
+    ]
+}

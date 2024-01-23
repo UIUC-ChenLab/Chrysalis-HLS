@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint16_t extra_idx = 0;",
+            "Faulty Code": "uint16_t extra_idx;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "uint16_t low;",
+            "Faulty Code": "int16_t low;"
+        }
+    ]
+}

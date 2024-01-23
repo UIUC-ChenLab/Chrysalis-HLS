@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "present_window[m] = present_window[m + 1];",
+            "Faulty Code": "present_window[m + 1] = present_window[m];"
+        }
+    ]
+}

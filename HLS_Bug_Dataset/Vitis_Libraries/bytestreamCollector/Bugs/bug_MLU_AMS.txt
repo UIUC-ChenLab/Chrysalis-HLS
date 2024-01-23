@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t i = 0; i < litStreamCnt; ++i) {",
+            "Faulty Code": "for (uint8_t i = 0; i <= litStreamCnt; ++i) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "bscMetaStream << (uint16_t)litEncSize;",
+            "Faulty Code": "bscMetaStream << litEncSize;"
+        }
+    ]
+}

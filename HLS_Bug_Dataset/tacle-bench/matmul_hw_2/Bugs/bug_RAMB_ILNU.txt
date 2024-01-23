@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS INTERFACE bram port=a",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=a offset=slave"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "col:for(int j = 0; j < Z; j++) {",
+            "Faulty Code": "#pragma HLS UNROLL factor=2\ncol:for(int j = 0; j < Z; j++) {"
+        }
+    ]
+}

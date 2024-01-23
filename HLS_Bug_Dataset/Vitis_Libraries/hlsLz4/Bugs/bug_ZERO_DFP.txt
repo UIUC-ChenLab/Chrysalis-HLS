@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t output_size[NUM_BLOCK],",
+            "Faulty Code": "uint32_t output_size[NUM_BLOCK] = {0};"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS dataflow inside the for loop for (uint8_t i = 0; i < NUM_BLOCK; i++) {"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int j = 0; j < c_upsizeFactor; j += c_inSize) {",
+            "Faulty Code": "for (int j = 0; j <= c_upsizeFactor; j += c_inSize) {"
+        }
+    ]
+}

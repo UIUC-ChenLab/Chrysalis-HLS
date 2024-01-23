@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void sumsub_func(din_t* in1, din_t* in2, dint_t* outSum, dint_t* outSub) {\n    *outSum = *in1 + *in2;\n    *outSub = *in1 - *in2;\n}",
+            "Faulty Code": "void sumsub_func(din_t* in1, din_t* in2, dint_t* outSum, dint_t* outSub) {\n    #pragma HLS pipeline\n    *outSum = *in1 + *in2;\n    #pragma HLS pipeline\n    *outSub = *in1 - *in2;\n}"
+        }
+    ]
+}

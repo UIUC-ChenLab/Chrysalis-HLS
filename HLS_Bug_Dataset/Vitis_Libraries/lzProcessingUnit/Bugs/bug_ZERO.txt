@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "offset = 1; // dummy value",
+            "Faulty Code": "offset = 0; // dummy value"
+        }
+    ]
+}

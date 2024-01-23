@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = bsacc complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = bsacc cyclic"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "literalStream << outBuffer;",
+            "Faulty Code": "literalStream.write(outBuffer);"
+        }
+    ]
+}

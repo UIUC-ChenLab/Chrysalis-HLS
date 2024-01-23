@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "void example(stream<int>& in, stream<int>& out) {",
+            "Faulty Code": "void example(stream<short>& in, stream<int>& out) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

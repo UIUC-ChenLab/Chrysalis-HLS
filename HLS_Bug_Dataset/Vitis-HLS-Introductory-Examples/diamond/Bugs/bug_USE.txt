@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "void funcC(data_t* in, data_t* out) {",
+            "Faulty Code": "void funcC(data_t* in, short* out) {"
+        }
+    ]
+}

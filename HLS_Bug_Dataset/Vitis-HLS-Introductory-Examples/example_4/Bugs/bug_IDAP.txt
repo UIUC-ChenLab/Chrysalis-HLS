@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INTERFACE s_axilite port = a bundle = BUS_A offset = 0x20",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port = a bundle = BUS_A offset = 0x20"
+        }
+    ]
+}

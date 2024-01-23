@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "out_r[itr] = C[i * MAX_DIM + j];",
+            "Faulty Code": "out_r[i * MAX_DIM + j] = C[i * MAX_DIM + j];"
+        }
+    ]
+}

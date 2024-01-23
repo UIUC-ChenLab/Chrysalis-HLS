@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < N / 2; i++) {",
+            "Faulty Code": "for (int i = 0; i <= N / 2; i++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "RES.write(x_aux[N - N / 2 + i] - y_aux[N - N / 2 + i] / N);",
+            "Faulty Code": "RES.write(x_aux[N - N / 2 + i] - y_aux[N - N / 2 + i] >> N);"
+        }
+    ]
+}

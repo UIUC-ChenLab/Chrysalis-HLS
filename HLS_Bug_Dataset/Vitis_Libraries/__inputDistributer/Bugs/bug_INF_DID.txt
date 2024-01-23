@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (inVal = inStream.read(); inVal.strobe > 0; inVal = inStream.read()) {",
+            "Faulty Code": "for (inVal = inStream.read(); inVal.strobe >= 0; inVal = inStream.read()) {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=inVal dim=2 complete"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "data out_val = {in_val.data, in_val.last};",
+            "Faulty Code": "data out_val = {(int)in_val.data, in_val.last};"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

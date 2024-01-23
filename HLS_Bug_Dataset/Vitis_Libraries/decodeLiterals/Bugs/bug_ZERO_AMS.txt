@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint8_t huffDecoderTableLog = 6;",
+            "Faulty Code": "uint8_t huffDecoderTableLog = 0;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "outValue.data[0] = lit;",
+            "Faulty Code": "#pragma HLS INTERFACE port=lit ap_none"
+        }
+    ]
+}

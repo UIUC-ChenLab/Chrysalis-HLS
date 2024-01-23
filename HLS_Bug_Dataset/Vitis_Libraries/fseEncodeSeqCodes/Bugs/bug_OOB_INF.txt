@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<36> fseStateBitsTableLL[512];",
+            "Faulty Code": "ap_uint<36> fseStateBitsTableLL[256]; // Wrong size, should be 512"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (seqCode = seqCodeStream.read(); seqCode.strobe > 0; seqCode = seqCodeStream.read()) {",
+            "Faulty Code": "for (seqCode = seqCodeStream.read(); seqCode.strobe >= 0; seqCode = seqCodeStream.read()) { // Incorrect comparison, should be '>', not '>='"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<DATAWIDTH + PARALLEL_BYTES> inData = inStream.read();",
+            "Faulty Code": "ap_uint<DATAWIDTH + PARALLEL_BYTES> inData;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=out factor=3"
+        }
+    ]
+}

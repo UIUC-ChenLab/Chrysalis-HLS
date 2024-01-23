@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for ( j = 0; j < 256; j++ ) {",
+            "Faulty Code": "for ( j = 0; j < 255; j++ ) { // Error: One iteration is omitted due to wrong loop bound"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for ( i = 0; i < 8; i++ ) {",
+            "Faulty Code": "#pragma HLS unroll factor=4 // Error: This attempts to unroll the non-innermost loop without fully unrolling the inner loop"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "bitbuffer = (bitbuffer >> (len1 + len2)) | (bitBufferType)(inValue) << bits_cntr;",
+            "Faulty Code": "bitbuffer = (bitbuffer >> (len1 + len2)) | (bitBufferType)(inValue) << (bits_cntr - (len1 + len2));"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        }
+    ]
+}

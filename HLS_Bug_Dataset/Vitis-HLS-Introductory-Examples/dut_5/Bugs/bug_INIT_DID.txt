@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int t;",
+            "Faulty Code": "int t; // t is uninitialized here and used in calculation"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS cache port = in lines = 8 depth = 128",
+            "Faulty Code": "#pragma HLS array_partition dim = 2 // Incorrect 'dim' value as 'in' is not a multi-dimensional array"
+        }
+    ]
+}

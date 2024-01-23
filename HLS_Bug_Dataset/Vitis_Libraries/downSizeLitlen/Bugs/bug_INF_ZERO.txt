@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "done = dszDone;",
+            "Faulty Code": "// Faulty line omitted, leading to potential infinite loop"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outSeqVal.strobe = 1;",
+            "Faulty Code": "outSeqVal.strobe = 0;"
+        }
+    ]
+}

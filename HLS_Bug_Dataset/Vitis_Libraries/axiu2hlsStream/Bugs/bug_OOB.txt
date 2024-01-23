@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (auto i = 0, j = 0; i < IN_DWIDTH; i += c_maxByteCnt) {\n#pragma HLS UNROLL\n            val.data[j++] = tmpVal.range(i + 7, i);\n        }",
+            "Faulty Code": "for (auto i = 0, j = 0; j < c_maxByteCnt; i += 8) {\n#pragma HLS UNROLL\n            val.data[j++] = tmpVal.range(i + 7, i);\n        }"
+        }
+    ]
+}

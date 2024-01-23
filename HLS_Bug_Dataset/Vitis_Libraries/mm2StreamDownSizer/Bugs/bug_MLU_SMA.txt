@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "int idx = itr % factor;",
+            "Faulty Code": "int idx = itr % (factor - 1);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void mm2StreamDownSizer(hls::stream<ap_uint<IN_DATAWIDTH> >& inStream,...",
+            "Faulty Code": "#pragma HLS INTERFACE port=inStream bram"
+        }
+    ]
+}

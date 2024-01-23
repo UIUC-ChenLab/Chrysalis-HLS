@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "dout_t pointer_multi(sel_t sel, din_t pos) {",
+            "Faulty Code": "#pragma HLS dataflow\ndout_t pointer_multi(sel_t sel, din_t pos) {"
+        }
+    ]
+}

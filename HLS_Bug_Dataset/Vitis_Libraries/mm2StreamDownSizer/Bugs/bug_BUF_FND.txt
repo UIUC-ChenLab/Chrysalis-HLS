@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outStream << inBuffer.range(OUT_DATAWIDTH - 1, 0);",
+            "Faulty Code": "outStream << inBuffer.range(IN_DATAWIDTH - 1, IN_DATAWIDTH - OUT_DATAWIDTH);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "const int factor = c_inputWord / c_outWord;",
+            "Faulty Code": "const int factor = c_outWord / c_inputWord;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint16_t i = 0; i < c_maxCodeML + 1; i++) { matlen_freq[i] = 0; }",
+            "Faulty Code": "for (uint16_t i = 0; i <= c_maxCodeML + 1; i++) { matlen_freq[i] = 0; }"
+        }
+    ]
+}

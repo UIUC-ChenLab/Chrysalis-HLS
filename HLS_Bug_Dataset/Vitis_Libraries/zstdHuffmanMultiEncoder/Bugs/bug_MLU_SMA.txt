@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t si = 0; si < streamCnt; ++si) {",
+            "Faulty Code": "for (uint8_t si = 0; si <= streamCnt; ++si) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = hfcTable type = ram_2p impl = lutram",
+            "Faulty Code": "#pragma HLS INTERFACE port=hfcTable bram"
+        }
+    ]
+}

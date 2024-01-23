@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "LCL_Code_t out_reversed = first_codeword[length];",
+            "Faulty Code": "LCL_Code_t out_reversed = first_codeword[length + (MAX_LEN / 2)];"
+        }
+    ]
+}

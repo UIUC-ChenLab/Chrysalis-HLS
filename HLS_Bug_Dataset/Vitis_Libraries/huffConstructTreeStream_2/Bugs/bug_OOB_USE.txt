@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "temp_array[i] = 0;",
+            "Faulty Code": "temp_array[i_symbolSize] = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "symbol_bits[sorted[k].value] = length;",
+            "Faulty Code": "symbol_bits[sorted[k].value] = (ap_uint<4>)length;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "checksumSizeStream << c_size;",
+            "Faulty Code": "checksumSizeStream << checksumOutStream.read();"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint32_t i = 0; i < inSize; i++) {",
+            "Faulty Code": "for (uint32_t i = 0; i <= inSize; i++) {"
+        }
+    ]
+}

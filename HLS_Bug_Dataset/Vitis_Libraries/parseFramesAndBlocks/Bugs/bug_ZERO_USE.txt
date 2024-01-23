@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t processedBytes = 0;",
+            "Faulty Code": "uint32_t processedBytes;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "uint32_t metabuf = (blockSize << 8) + ((uint8_t)blockType);",
+            "Faulty Code": "uint32_t metabuf = (blockSize << 8) + blockType;"
+        }
+    ]
+}

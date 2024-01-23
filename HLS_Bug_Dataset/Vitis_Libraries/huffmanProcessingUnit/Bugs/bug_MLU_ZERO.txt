@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outValue.strobe = 1;",
+            "Faulty Code": "outValue.strobe = 0;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "outValue.data[0].range(15, 8) = inValue.range(7, 0);",
+            "Faulty Code": "outValue.data[0].range(7, 0) = 0;"
+        }
+    ]
+}

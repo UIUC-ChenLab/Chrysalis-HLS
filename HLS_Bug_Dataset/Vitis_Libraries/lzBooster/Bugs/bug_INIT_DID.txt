@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint8_t nextMatchCh = local_mem[match_loc % c_boosterOffsetWindow];",
+            "Faulty Code": "uint8_t nextMatchCh; // missing initialization with local_mem content"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable = lclBufStream depth = c_fifo_depth",
+            "Faulty Code": "#pragma HLS STREAM variable = lclBufStream depth = c_fifo_depth dim = 2 // dim should not be specified for a stream"
+        }
+    ]
+}

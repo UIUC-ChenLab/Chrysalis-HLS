@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "} while (!lastByte);",
+            "Faulty Code": "} while (lastByte);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "bool lastByte = false;",
+            "Faulty Code": "int lastByte = false;"
+        }
+    ]
+}

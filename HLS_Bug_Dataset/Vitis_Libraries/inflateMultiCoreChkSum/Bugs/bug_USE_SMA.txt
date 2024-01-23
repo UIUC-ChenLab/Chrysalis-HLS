@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "hls::stream<ap_uint<c_parallelBit + PARALLEL_BYTES> > inflateStrm[NUM_CORE];",
+            "Faulty Code": "hls::stream<ap_int<c_parallelBit + PARALLEL_BYTES> > inflateStrm[NUM_CORE];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = axi2HlsStrm type = FIFO impl = BRAM",
+            "Faulty Code": "#pragma HLS INTERFACE port = axi2HlsStrm mode = bram"
+        }
+    ]
+}

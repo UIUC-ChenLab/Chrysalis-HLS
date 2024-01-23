@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (NUM_BLOCKS >= 4) { lz77CompressStatic<2, c_blockSize>(downStream[2], lz77Stream[2]); lz77CompressStatic<3, c_blockSize>(downStream[3], lz77Stream[3]); }",
+            "Faulty Code": "if (NUM_BLOCKS >= 4) { lz77CompressStatic<2, c_blockSize>(downStream[2], lz77Stream[2]); }"
+        }
+    ]
+}

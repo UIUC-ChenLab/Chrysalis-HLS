@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "is_pending.range(i, i) = 1;",
+            "Faulty Code": "is_pending.range(NUM_BLOCK, NUM_BLOCK) = 1;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic"
+        }
+    ]
+}

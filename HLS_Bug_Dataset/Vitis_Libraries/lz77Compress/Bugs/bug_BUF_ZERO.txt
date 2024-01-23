@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static uint32_t relativeNumBlocks = 0;",
+            "Faulty Code": "static uint32_t relativeNumBlocks;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "nextMatchCh = local_mem[match_loc % BOOSTER_OFFSET_WINDOW];",
+            "Faulty Code": "nextMatchCh = local_mem[(match_loc + 1) % BOOSTER_OFFSET_WINDOW];"
+        }
+    ]
+}

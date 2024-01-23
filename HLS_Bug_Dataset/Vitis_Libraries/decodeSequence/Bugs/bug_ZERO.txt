@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<LMO_WIDTH> prevOffsets[3] = {1, 4, 8};",
+            "Faulty Code": "ap_uint<LMO_WIDTH> prevOffsets[3] = {0, 4, 8};"
+        }
+    ]
+}

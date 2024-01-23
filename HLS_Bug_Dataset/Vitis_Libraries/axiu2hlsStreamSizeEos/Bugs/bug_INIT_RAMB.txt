@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_axiu<IN_DWIDTH, 0, 0, 0> tempVal = inputAxiStream.read();",
+            "Faulty Code": "ap_axiu<IN_DWIDTH, 0, 0, 0> tempVal; // tempVal is not initialized"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1 // This pragma is correct, but if the loop were accessing non-consecutive memory addresses, it would lead to RAMB error"
+        }
+    ]
+}

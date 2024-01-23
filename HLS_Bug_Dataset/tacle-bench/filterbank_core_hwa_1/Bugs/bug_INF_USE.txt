@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for ( j = 0; j < 256; j++ ) {",
+            "Faulty Code": "for ( j = 0; j <= 256; j++ ) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "if( j - k < 0) break;",
+            "Faulty Code": "if( (int)(j - k) < 0) break;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "inputWindow.range((validBytes + c_parallelByte) * 8 - 1, validBytes * 8) = input;",
+            "Faulty Code": "inputWindow.range((validBytes + c_parallelByte - 1) * 8, validBytes * 8) = input;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < bs2Write; i += c_parallelByte) {",
+            "Faulty Code": "for (int i = 0; i <= bs2Write; i += c_parallelByte) {"
+        }
+    ]
+}

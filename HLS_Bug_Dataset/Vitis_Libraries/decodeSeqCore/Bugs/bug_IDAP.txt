@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable = symbolStream depth = c_intlStreamDepth",
+            "Faulty Code": "#pragma HLS INTERFACE mode=s_axilite port=symbolStream"
+        }
+    ]
+}

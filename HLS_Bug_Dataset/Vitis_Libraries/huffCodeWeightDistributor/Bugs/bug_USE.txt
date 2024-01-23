@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "weightFreq[blenWeight] += (uint8_t)(i < maxVal + 1);",
+            "Faulty Code": "weightFreq[blenWeight] += (i < maxVal + 1);"
+        }
+    ]
+}

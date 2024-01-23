@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint16_t i = 0; i < tableSize; ++i) {",
+            "Faulty Code": "for (uint16_t i = 0; i <= tableSize; ++i) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (uint32_t s = 1; s <= maxSymbol + 1; ++s) {",
+            "Faulty Code": "#pragma HLS UNROLL factor=2\nfor (uint32_t s = 1; s <= maxSymbol + 1; ++s) {"
+        }
+    ]
+}

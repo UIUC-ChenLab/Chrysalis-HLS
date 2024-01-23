@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = hfcTable type = ram_1p impl = lutram",
+            "Faulty Code": "#pragma HLS INTERFACE mode=s_axilite port=hfcTable"
+        }
+    ]
+}

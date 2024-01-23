@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void inputdatamover(bool direction, hls::stream<config_t>& config_strm, hls::stream<cmpxDataIn>& in, hls::stream<cmpxDataIn>& out_strm) {...}",
+            "Faulty Code": "#pragma HLS dataflow void inputdatamover(bool direction, hls::stream<config_t>& config_strm, hls::stream<cmpxDataIn>& in, hls::stream<cmpxDataIn>& out_strm) {...}"
+        }
+    ]
+}

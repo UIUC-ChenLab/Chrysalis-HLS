@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "OUTSIZE_DT idx = 0;",
+            "Faulty Code": "OUTSIZE_DT idx;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=compressedSize dim=3"
+        }
+    ]
+}

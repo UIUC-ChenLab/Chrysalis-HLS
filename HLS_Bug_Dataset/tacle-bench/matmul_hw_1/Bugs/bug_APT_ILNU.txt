@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "for(i = 0; i < MAX_LOOP; i++) {",
+            "Faulty Code": "#pragma HLS array_partition variable=p_a type=cyclic factor=4\n\t\t\tfor(i = 0; i < MAX_LOOP; i++) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for(k = 0; k < MAX_LOOP; k++) {",
+            "Faulty Code": "#pragma HLS unroll factor=2\n\tfor(k = 0; k < MAX_LOOP; k++) {"
+        }
+    ]
+}

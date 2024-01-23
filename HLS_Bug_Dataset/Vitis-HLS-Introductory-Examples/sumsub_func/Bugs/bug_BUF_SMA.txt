@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "void sumsub_func(din_t* in1, din_t* in2, dint_t* outSum, dint_t* outSub) {",
+            "Faulty Code": "#pragma HLS interface port=in1 bram"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void sumsub_func(din_t* in1, din_t* in2, dint_t* outSum, dint_t* outSub) {",
+            "Faulty Code": "#pragma HLS interface port=outSum bram"
+        }
+    ]
+}

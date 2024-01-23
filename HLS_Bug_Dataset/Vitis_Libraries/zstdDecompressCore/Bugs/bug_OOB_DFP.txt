@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "zstdCoreInStream << 0;",
+            "Faulty Code": "zstdCoreInStream.write(0xFFFFFFFF); // Assuming 0xFFFFFFFF is out-of-bounds for the data type"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS dataflow // Incorrect placement inside the do-while loop"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "distSizeStream[i] << 0;",
+            "Faulty Code": "#pragma HLS INTERFACE port=distSizeStream mode=ap_fifo"
+        }
+    ]
+}

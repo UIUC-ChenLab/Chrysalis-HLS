@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void axiu2hlsStreamSizeEos(hls::stream<ap_axiu<IN_DWIDTH, 0, 0, 0> >& inputAxiStream, ...",
+            "Faulty Code": "#pragma HLS INTERFACE port=inputAxiStream mode=ap_memory"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<bool>& outputStreamEos, ...",
+            "Faulty Code": "#pragma HLS INTERFACE port=outputStreamEos mode=ap_none"
+        }
+    ]
+}

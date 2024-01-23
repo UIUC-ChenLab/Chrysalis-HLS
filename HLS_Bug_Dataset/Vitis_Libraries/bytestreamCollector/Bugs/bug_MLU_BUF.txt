@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outVal.data[1] = fhVal.data[1];",
+            "Faulty Code": "outVal.data[1] = fseHdrBuf[i + 1];"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t i = 0; i < fseHIdx; i += 2) {",
+            "Faulty Code": "for (uint8_t i = 0; i <= fseHIdx; i += 2) {"
+        }
+    ]
+}

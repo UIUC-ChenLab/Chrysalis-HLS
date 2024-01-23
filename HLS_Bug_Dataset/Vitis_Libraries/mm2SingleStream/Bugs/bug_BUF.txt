@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outStream << in[read_idx + midx];",
+            "Faulty Code": "outStream << in[read_idx + midx + c_burstSize / 2];"
+        }
+    ]
+}

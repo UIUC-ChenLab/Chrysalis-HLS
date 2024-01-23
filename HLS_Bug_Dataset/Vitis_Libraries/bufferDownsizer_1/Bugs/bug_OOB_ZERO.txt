@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outVal = inVal.range(23, 8);",
+            "Faulty Code": "outVal = inVal.range(31, 16); // Assuming the input stream is only 24 bits wide, this would cause an OOB error"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outEos << 1;",
+            "Faulty Code": "outEos << 0; // This should indicate the end of the stream but mistakenly initializes to zero"
+        }
+    ]
+}

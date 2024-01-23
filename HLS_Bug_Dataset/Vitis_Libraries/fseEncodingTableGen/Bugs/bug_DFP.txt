@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (uint16_t u = 0; u < tableSize; ++u) { // NOTE: Latency 512\n#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS dataflow\nfor (uint16_t u = 0; u < tableSize; ++u) { // NOTE: Latency 512"
+        }
+    ]
+}

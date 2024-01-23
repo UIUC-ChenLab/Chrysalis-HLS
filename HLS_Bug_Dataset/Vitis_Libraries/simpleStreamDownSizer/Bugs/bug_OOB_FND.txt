@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<OUT_DATAWIDTH> tmpValue = inBuffer.range((idx + 1) * OUT_DATAWIDTH - 1, idx * OUT_DATAWIDTH);",
+            "Faulty Code": "ap_uint<OUT_DATAWIDTH> tmpValue = inBuffer.range((idx + 2) * OUT_DATAWIDTH - 1, idx * OUT_DATAWIDTH);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "int idx = itr % factor;",
+            "Faulty Code": "int idx = itr % (factor+1);"
+        }
+    ]
+}

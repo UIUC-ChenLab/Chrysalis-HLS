@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outVal.data[k] = accReg.range((k * 8) + 7, k * 8);",
+            "Faulty Code": "outVal.data[k] = accReg.range(((k + c_outBytes) * 8) + 7, (k + c_outBytes) * 8);"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=outVal.data dim=1"
+        }
+    ]
+}

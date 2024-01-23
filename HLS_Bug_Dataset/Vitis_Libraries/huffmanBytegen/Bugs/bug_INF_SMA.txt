@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (; !huffDone;) {",
+            "Faulty Code": "for (; !done;) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS INTERFACE ap_ctrl_none port = return",
+            "Faulty Code": "#pragma HLS INTERFACE bram port = return"
+        }
+    ]
+}

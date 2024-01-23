@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void sfunc2(din_t vec1[N], const din_t sIter, din_t ovec[N]) {",
+            "Faulty Code": "void sfunc2(din_t vec1[N], const din_t sIter, din_t ovec[N]) {\n#pragma HLS pipeline"
+        }
+    ]
+}

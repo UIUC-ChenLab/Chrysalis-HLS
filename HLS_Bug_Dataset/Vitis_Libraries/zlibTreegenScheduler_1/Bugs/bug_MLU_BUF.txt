@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t i = 0; i < NUM_BLOCK; i++) {",
+            "Faulty Code": "for (uint8_t i = 0; i <= NUM_BLOCK; i++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (!eos) {",
+            "Faulty Code": "if (!eos_tmp[j]) {"
+        }
+    ]
+}

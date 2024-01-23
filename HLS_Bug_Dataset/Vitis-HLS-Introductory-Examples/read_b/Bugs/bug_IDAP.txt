@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void read_b(hls::burst_maxi<din_t> IN, dout_t y_aux[N], din_t factor) {",
+            "Faulty Code": "void read_b(hls::stream<din_t> &IN, dout_t y_aux[N], din_t factor) {"
+        }
+    ]
+}

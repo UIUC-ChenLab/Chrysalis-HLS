@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void diamond(data_t vecIn[N], data_t vecOut[N]) {",
+            "Faulty Code": "void diamond(data_t vecIn[N], data_t vecOut[N]) {\n#pragma HLS interface port=vecIn mode=m_axi\n#pragma HLS interface port=vecOut mode=m_axi"
+        }
+    ]
+}

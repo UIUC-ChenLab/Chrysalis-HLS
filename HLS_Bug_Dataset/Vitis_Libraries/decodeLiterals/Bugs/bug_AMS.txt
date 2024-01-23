@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void decodeLiterals(hls::stream<bool>& litValidStream, hls::stream<uint32_t>& litMetaStream, hls::stream<uint32_t>& fseTableStream, hls::stream<ap_uint<IN_BYTES * 8> >& litDecodeInStream, hls::stream<IntVectorStream_dt<OUT_BYTES * 8, 1> >& literalStream)",
+            "Faulty Code": "#pragma HLS INTERFACE port=litValidStream mode=ap_none"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned i = 0; i < N; i++) {",
+            "Faulty Code": "for (unsigned i = 0; i <= N; i++) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS interface axis port = in",
+            "Faulty Code": "#pragma HLS interface m_axi depth=10 port = in"
+        }
+    ]
+}

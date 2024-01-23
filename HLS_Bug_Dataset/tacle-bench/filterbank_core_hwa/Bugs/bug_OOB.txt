@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "Vect_Up[ j * 8 ] = Vect_Dn[ j ];",
+            "Faulty Code": "Vect_Up[ j * 8 ] = Vect_Dn[ j * 8 ];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "metaVal.strobe = 1;",
+            "Faulty Code": "// metaVal.strobe = 1; (Uninitialized usage of metaVal.strobe)"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (dataSize > 0) { ... } else { ... break; }",
+            "Faulty Code": "if (dataSize >= 0) { ... } else { ... break; } (Loop never terminates if dataSize is always >= 0)"
+        }
+    ]
+}

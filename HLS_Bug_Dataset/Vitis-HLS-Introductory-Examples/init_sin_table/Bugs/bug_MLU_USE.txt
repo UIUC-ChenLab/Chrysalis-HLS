@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = 0; i < 256; i++) {",
+            "Faulty Code": "for (i = 0; i <= 256; i++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "dint_t real_val = sin(M_PI * (dint_t)(i - 128) / 256.0);",
+            "Faulty Code": "dint_t real_val = sin(M_PI * (int)(i - 128) / 256.0);"
+        }
+    ]
+}

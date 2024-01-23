@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint8_t nextlen = outCodes[offsets[tree]].bitlength;",
+            "Faulty Code": "uint8_t nextlen = 0;"
+        }
+    ]
+}

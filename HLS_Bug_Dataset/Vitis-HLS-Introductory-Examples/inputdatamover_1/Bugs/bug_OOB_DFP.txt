@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "RES.write(x_aux[N - N / 2 + i] - y_aux[N - N / 2 + i] / N);",
+            "Faulty Code": "RES.write(x_aux[N - N / 4 + i] - y_aux[N - N / 4 + i] / N);"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline II = 1 rewind",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

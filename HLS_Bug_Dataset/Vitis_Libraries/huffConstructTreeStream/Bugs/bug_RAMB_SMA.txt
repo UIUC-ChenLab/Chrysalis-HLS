@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1\nheap[digit_location[digit]] = prev_sorting[j];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void huffConstructTreeStream(hls::stream<IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> >& inFreq, ...",
+            "Faulty Code": "#pragma HLS interface port=inFreq mode=s_axilite"
+        }
+    ]
+}

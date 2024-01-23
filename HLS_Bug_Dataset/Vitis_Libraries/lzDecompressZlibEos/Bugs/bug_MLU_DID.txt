@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = prevValue dim = 0 complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = prevValue dim = 2 complete"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint32_t pIdx = LOW_OFFSET - 1; pIdx > 0; pIdx--) {",
+            "Faulty Code": "for (uint32_t pIdx = LOW_OFFSET - 1; pIdx >= 0; pIdx--) {"
+        }
+    ]
+}

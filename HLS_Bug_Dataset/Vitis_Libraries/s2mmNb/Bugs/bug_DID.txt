@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = local_buffer dim = 1 complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = local_buffer dim = 0 complete"
+        }
+    ]
+}

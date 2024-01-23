@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "adlerStrm << 1;",
+            "Faulty Code": "ap_uint<32> initial_adler = 1; adlerStrm << initial_adler;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable = endInPackLenStrm depth = 4",
+            "Faulty Code": "#pragma HLS STREAM variable = endInPackLenStrm depth = 4 mode=ap_fifo"
+        }
+    ]
+}

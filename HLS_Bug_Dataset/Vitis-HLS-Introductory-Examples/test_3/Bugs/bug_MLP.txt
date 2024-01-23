@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "int result = (ts[ind].A[i] + ts[ind].B[i] + ts[ind].C[i]);",
+            "Faulty Code": "#pragma HLS pipeline\nint result = (ts[ind].A[i] + ts[ind].B[i] + ts[ind].C[i]);"
+        }
+    ]
+}

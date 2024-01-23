@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "inputWindow.range((inputIdx + factor) * 8 - 1, inputIdx * 8) = strdStream.read();",
+            "Faulty Code": "inputWindow.range((inputIdx + factor) * 8 - 1, inputIdx * 8) = (ap_int<DWIDTH>)strdStream.read();"
+        }
+    ]
+}

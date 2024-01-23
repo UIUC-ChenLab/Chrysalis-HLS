@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<SIZE_DWIDTH> inSize = 0;",
+            "Faulty Code": "ap_uint<SIZE_DWIDTH> inSize;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS STREAM variable = distSizeStream depth = c_numBlocks",
+            "Faulty Code": "#pragma HLS array_partition variable=distSizeStream type=cyclic"
+        }
+    ]
+}

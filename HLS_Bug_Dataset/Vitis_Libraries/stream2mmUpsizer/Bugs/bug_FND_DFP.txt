@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "if (byteIdx == c_upsizeFactor) {",
+            "Faulty Code": "#pragma HLS array_partition variable=outBuffer factor=c_upsizeFactor complete"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (bool eos_flag = inStreamEos.read(); eos_flag == false; eos_flag = inStreamEos.read()) {",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

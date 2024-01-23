@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint16_t outSizeV = (inSize - 1) / c_outWord + 1;",
+            "Faulty Code": "int outSizeV = (inSize - 1) / c_outWord + 1;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<OUT_DATAWIDTH> >& outStream",
+            "Faulty Code": "#pragma HLS INTERFACE port=outStream mode=s_axilite"
+        }
+    ]
+}

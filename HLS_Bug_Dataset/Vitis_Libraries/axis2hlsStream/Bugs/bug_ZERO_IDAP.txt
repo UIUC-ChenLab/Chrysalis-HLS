@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "qdma_axis<STREAMDWIDTH, 0, 0, 0> t1 = inAxiStream.read();",
+            "Faulty Code": "qdma_axis<STREAMDWIDTH, 0, 0, 0> t1 = {0};"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void axis2hlsStream(hls::stream<qdma_axis<STREAMDWIDTH, 0, 0, 0> >& inAxiStream, hls::stream<ap_uint<STREAMDWIDTH> >& outStream) {",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=inAxiStream"
+        }
+    ]
+}

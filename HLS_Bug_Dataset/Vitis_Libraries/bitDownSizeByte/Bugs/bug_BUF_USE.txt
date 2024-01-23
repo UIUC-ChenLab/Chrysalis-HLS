@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outVal.data[k] = accReg.range((k * 8) + 7, k * 8);",
+            "Faulty Code": "outVal.data[k] = accReg.range((k * 8) + 7 + OUT_WIDTH, k * 8 + OUT_WIDTH);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "accReg += ((ap_uint<c_accBytes>)inVal << bitsInAcc);",
+            "Faulty Code": "accReg += ((int16_t)inVal << bitsInAcc);"
+        }
+    ]
+}

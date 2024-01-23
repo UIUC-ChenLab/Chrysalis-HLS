@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "outValue.data[0].code = lit_code_fixed[tCh];",
+            "Faulty Code": "outValue.data[0].code = lit_code_fixed[(int8_t)tCh];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "coreStream << inValue;",
+            "Faulty Code": "coreStream << inStream.read();"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "checksumSizeStream << c_size;",
+            "Faulty Code": "checksumSizeStream << inputSize;"
+        }
+    ]
+}

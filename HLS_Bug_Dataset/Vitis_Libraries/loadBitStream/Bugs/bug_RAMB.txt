@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void loadBitStream(bitBufferType& bitbuffer, ap_uint<6>& bits_cntr, hls::stream<ap_uint<16> >& inStream, hls::stream<bool>& inEos, bool& done) {",
+            "Faulty Code": "void loadBitStream(bitBufferType& bitbuffer, ap_uint<6>& bits_cntr, hls::stream<ap_uint<16> >& inStream, hls::stream<bool>& inEos, bool& done) { #pragma HLS interface port=inStream mode=m_axi"
+        }
+    ]
+}

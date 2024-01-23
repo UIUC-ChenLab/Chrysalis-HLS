@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable = encodedOutStream depth = 4",
+            "Faulty Code": "#pragma HLS INTERFACE port=encodedOutStream mode=ap_fifo"
+        }
+    ]
+}

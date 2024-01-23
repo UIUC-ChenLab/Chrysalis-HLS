@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "if( j - k < 0) break;",
+            "Faulty Code": "if( (int)(j - k) < 0) break;"
+        }
+    ]
+}

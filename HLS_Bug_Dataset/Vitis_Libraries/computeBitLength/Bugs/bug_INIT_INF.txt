@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "child_depth[num_symbols - 1] = 0;",
+            "Faulty Code": "// child_depth[num_symbols - 1] is not initialized"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int16_t i = num_symbols - 2; i >= 0; --i) {",
+            "Faulty Code": "for (int16_t i = num_symbols - 2; i > 0; --i) {"
+        }
+    ]
+}

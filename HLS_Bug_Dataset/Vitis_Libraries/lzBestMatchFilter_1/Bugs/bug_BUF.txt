@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "uint8_t compareLen = compareValue.range(15, 8);",
+            "Faulty Code": "uint8_t compareLen = compareValue.range(31, 24);"
+        }
+    ]
+}

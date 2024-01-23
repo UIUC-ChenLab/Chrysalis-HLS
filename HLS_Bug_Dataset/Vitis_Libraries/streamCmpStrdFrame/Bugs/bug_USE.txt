@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "strdBlockHeader.range(10, 3) = (uint8_t)outVal.data[0];",
+            "Faulty Code": "strdBlockHeader.range(10, 3) = outVal.data[0];"
+        }
+    ]
+}

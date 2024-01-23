@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "sha_info_digest[1] = 0xefcdab89L;",
+            "Faulty Code": "sha_info_digest[1] = 0xefcdab89;"
+        }
+    ]
+}

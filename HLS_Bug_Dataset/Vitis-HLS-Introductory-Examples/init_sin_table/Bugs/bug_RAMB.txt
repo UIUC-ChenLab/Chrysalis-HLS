@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void init_sin_table(din1_t sin_table[256]) {",
+            "Faulty Code": "void init_sin_table(din1_t sin_table[256]) { #pragma HLS interface m_axi port=sin_table offset=slave"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outVal.data[0] = fseHdrBuf[i];\noutVal.data[1] = fseHdrBuf[i + 1];",
+            "Faulty Code": "outVal.data[0] = fseHdrBuf[i + 1];\noutVal.data[1] = fseHdrBuf[i];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPEINE II = 1\n#pragma HLS PIPELINE II = 1"
+        }
+    ]
+}

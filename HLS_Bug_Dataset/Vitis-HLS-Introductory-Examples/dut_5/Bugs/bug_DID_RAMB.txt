@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS INTERFACE m_axi port = in bundle = aximm depth = 1024",
+            "Faulty Code": "#pragma HLS array_partition variable=in dim=3"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS INTERFACE m_axi port = in bundle = aximm depth = 1024",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port = in offset=slave bundle = aximm depth = 1024"
+        }
+    ]
+}

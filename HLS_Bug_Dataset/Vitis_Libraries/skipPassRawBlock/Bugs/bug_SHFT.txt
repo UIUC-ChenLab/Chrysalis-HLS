@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "if (inVal.range(STB_WIDTH - 1, 0) == 0) break;",
+            "Faulty Code": "if (inVal.range(IN_DWIDTH + STB_WIDTH - 1, 0) == 0) break;"
+        }
+    ]
+}

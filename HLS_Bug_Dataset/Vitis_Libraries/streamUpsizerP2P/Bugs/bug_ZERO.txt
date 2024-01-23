@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<OUT_WIDTH> shift_register;",
+            "Faulty Code": "ap_uint<OUT_WIDTH> shift_register = 0;"
+        }
+    ]
+}

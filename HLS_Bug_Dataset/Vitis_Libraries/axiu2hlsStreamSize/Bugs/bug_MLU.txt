@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint32_t j = 0; j < inputSize; j += c_parallelByte) {",
+            "Faulty Code": "for (uint32_t j = 0; j <= inputSize; j += c_parallelByte) {"
+        }
+    ]
+}

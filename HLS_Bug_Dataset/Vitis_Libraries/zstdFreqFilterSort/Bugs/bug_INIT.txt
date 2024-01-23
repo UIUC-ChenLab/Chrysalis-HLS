@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "auto prev_freq = heap[0].frequency;",
+            "Faulty Code": "Frequency<MAX_FREQ_DWIDTH> prev_freq;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "tmpOut = t1.get_data();",
+            "Faulty Code": "tmpOut = t1.get_keep(); // Assuming get_keep() returns a portion of data that's not intended to be copied"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "for (int i = 0; i < inputSize; i++) {",
+            "Faulty Code": "int i = 0; for (; i <= inputSize; i++) { // Incorrectly initializes 'i' outside the loop and uses '<=' which should be '<'"
+        }
+    ]
+}

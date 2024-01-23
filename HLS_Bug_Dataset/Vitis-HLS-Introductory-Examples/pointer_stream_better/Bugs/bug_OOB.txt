@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "void pointer_stream_better(volatile dout_t *d_o, volatile din_t *d_i) {\n  din_t acc = 0;\n\n  acc += *d_i;\n  acc += *d_i;\n  *d_o = acc;\n  acc += *d_i;\n  acc += *d_i;\n  *d_o = acc;\n}",
+            "Faulty Code": "void pointer_stream_better(volatile dout_t *d_o, volatile din_t *d_i, int size) {\n  din_t acc = 0;\n\n  for (int i = 0; i < size; i++) {\n    acc += *d_i;\n  }\n  *d_o = acc;\n  for (int i = 0; i <= size; i++) { // Here is the OOB error, it should be i < size\n    acc += *d_i;\n  }\n  *d_o = acc;\n}"
+        }
+    ]
+}

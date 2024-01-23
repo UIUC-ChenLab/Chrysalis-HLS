@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "int buff[127];\nfor (int i = 0; i < 128; i++) {\n    tmp4[i] = tmp2[i];\n}",
+            "Faulty Code": "int buff[127];\nfor (int i = 0; i < 128; i++) {\n    buff[i] = tmp2[i]; // Error: buff array is of size 127, but index i goes up to 127 (128th element), which is out of bounds.\n}"
+        }
+    ]
+}

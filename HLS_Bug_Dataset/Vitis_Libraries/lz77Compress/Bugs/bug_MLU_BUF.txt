@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < MATCH_LEVEL; i++) {",
+            "Faulty Code": "for (int i = 0; i <= MATCH_LEVEL; i++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "present_window[m] = present_window[m + 1];",
+            "Faulty Code": "present_window[m + 1] = present_window[m];"
+        }
+    ]
+}

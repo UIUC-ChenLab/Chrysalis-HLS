@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "data_t sub(data_t ptr[10], data_t size, data_t **flagPtr) {",
+            "Faulty Code": "#pragma HLS interface port=ptr mode=ap_none"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint16_t i = 0; i < num_symbols; ++i) {",
+            "Faulty Code": "for (uint16_t i = 0; i <= num_symbols; ++i) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = temp_array type = ram_1wnr impl = bram",
+            "Faulty Code": "#pragma HLS INTERFACE port=temp_array mode=bram"
+        }
+    ]
+}

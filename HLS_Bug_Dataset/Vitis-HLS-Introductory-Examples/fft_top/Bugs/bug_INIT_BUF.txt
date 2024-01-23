@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "status_t fft_status;",
+            "Faulty Code": "status_t fft_status = {0}; // Assuming that status_t is a struct which requires initialization"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "out[i] = in[i];",
+            "Faulty Code": "out[i] = in[i + FFT_LENGTH / 2]; // Accessing wrong half of the buffer assuming FFT_LENGTH is even and buffer was intended to be split"
+        }
+    ]
+}

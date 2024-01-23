@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "outfreq.data[0] = llim;",
+            "Faulty Code": "outfreq.data[0] = (int8_t)llim;"
+        }
+    ]
+}

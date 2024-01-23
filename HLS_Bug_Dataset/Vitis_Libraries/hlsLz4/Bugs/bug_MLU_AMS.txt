@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t i = 0; i < NUM_BLOCK; i++) {",
+            "Faulty Code": "for (uint8_t i = 0; i <= NUM_BLOCK; i++) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "uint32_t output_size[NUM_BLOCK],",
+            "Faulty Code": "#pragma HLS INTERFACE port=output_size mode=ap_vld"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "v44[k] = ((ap_uint<c_hf4cWidth>)vec1[(2 * k) + 1] << blen1[2 * k]) + vec1[2 * k];",
+            "Faulty Code": "v44[k] = ((ap_uint<c_hf4cWidth>)vec1[(2 * k)] << blen1[(2 * k) + 1]) + vec1[(2 * k) + 1];"
+        }
+    ]
+}

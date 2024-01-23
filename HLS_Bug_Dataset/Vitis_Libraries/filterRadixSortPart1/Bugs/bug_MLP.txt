@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (uint16_t j = 0; j < heapLength; ++j) {\n#pragma HLS LOOP_TRIPCOUNT min = 19 max = 286\n#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "for (uint16_t j = 0; j < heapLength; ++j) {\n#pragma HLS LOOP_TRIPCOUNT min = 19 max = 286\n#pragma HLS PIPELINE II = 1\n    for (uint16_t k = 0; k < some_inner_loop; ++k) {\n        #pragma HLS PIPELINE"
+        }
+    ]
+}

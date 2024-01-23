@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_axiu<32, 0, 0, 0> tempSize = inSizeStream.read();",
+            "Faulty Code": "ap_axiu<32, 0, 0, 0> tempSize;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outputSizeStream << inputSize;",
+            "Faulty Code": "outputSizeStream << 0;"
+        }
+    ]
+}

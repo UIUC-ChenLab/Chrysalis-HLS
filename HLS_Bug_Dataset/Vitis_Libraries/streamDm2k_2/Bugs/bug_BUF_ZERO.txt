@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t num = 0;",
+            "Faulty Code": "uint32_t num;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "num |= 1UL << b;",
+            "Faulty Code": "num |= 1UL << (b + c_size);"
+        }
+    ]
+}

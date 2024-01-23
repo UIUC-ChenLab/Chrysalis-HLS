@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void dut(int a[128], int b[128], int tmp2[128]) {\n#pragma HLS DATAFLOW\n\n    int tmp1[128], tmp3[128];\n\n    split(a, tmp1, tmp2);\n    pass(tmp1, b);\n}",
+            "Faulty Code": "void dut(int a[128], int b[128], int tmp2[128]) {\n#pragma HLS INTERFACE port=a mode=ap_none\n#pragma HLS DATAFLOW\n\n    int tmp1[128], tmp3[128];\n\n    split(a, tmp1, tmp2);\n    pass(tmp1, b);\n}"
+        }
+    ]
+}

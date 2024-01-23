@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (idx == 0) inBuffer = inStream.read();",
+            "Faulty Code": "if (idx != 0) inBuffer = inStream.read();"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "uint16_t outSizeV = (inSize - 1) / c_outWord + 1;",
+            "Faulty Code": "int outSizeV = (inSize - 1) / c_outWord + 1;"
+        }
+    ]
+}

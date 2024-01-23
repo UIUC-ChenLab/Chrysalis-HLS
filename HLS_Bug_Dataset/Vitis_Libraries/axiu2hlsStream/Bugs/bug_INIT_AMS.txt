@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<IN_DWIDTH / 8> cntr = 0;",
+            "Faulty Code": "ap_uint<IN_DWIDTH / 8> cntr;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<IntVectorStream_dt<8, IN_DWIDTH / 8> >& outHlsStream",
+            "Faulty Code": "hls::stream<IntVectorStream_dt<8, 1> >& outHlsStream"
+        }
+    ]
+}

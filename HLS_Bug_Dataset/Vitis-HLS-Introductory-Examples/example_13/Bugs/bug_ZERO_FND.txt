@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "stream<int, 16> inter[2];",
+            "Faulty Code": "stream<int, 16> inter[2] = {}; // Incorrectly initializes streams to zero"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "proc<0>(inter[0], mux_in[0]);",
+            "Faulty Code": "#pragma HLS array_partition variable=inter[0] factor=3 // 'factor' not divisible by loop count in 'proc'"
+        }
+    ]
+}

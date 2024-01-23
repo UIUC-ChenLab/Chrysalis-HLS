@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void dut(A in[N], A out[N]) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid dut(A in[N], A out[N]) {"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "const int inSize_gmemwidth = (inputSize - 1) / c_word_size + 1;",
+            "Faulty Code": "const int inSize_gmemwidth = (int)((inputSize - 1) / c_word_size) + 1;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "outValue.data[0].range(31, 16) = match_offset;",
+            "Faulty Code": "outValue.data[0].range(31, 16) = (int16_t)match_offset;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "for (uint8_t m = 0; m < MATCH_LEN - 1; m++) {\n#pragma HLS PIPELINE II = 1"
+        }
+    ]
+}

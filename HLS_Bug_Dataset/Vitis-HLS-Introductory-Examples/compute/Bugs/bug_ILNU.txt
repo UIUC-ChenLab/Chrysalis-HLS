@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int j = 0; j < NUM; j++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\n    for (int j = 0; j < NUM; j++) {"
+        }
+    ]
+}

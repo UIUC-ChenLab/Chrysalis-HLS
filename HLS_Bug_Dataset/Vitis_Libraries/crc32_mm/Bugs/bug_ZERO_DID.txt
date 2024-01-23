@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outChecksumStream << inChecksumData[0];",
+            "Faulty Code": "ap_uint<32> checksum = 0; outChecksumStream << checksum;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable = inStream depth = 32",
+            "Faulty Code": "#pragma HLS array_partition variable=inStream dim=2"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "packet tmp = A.read();",
+            "Faulty Code": "packet tmp; // tmp is uninitialized before being used"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outStream << inVal.data[0];",
+            "Faulty Code": "outStream << inVal.data[1]; // Assuming 'inVal' is an array split into two"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS STREAM variable = checksumStream depth = c_defaultDepth",
+            "Faulty Code": "#pragma HLS INTERFACE port=checksumStream bram // Incorrectly mapping scalar to BRAM interface"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "checksum_loop:\n    for (ap_uint<2> checksumType = checksumTypeStrm.read(); checksumType != 3; checksumType = checksumTypeStrm.read()) {",
+            "Faulty Code": "checksum_loop:\n    for (int checksumType = checksumTypeStrm.read(); checksumType != 3; checksumType = checksumTypeStrm.read()) {"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS STREAM variable = endInStrm depth = 4\n#pragma HLS STREAM variable = endOutStrm depth = 4",
+            "Faulty Code": "#pragma HLS dataflow\n#pragma HLS STREAM variable = endInStrm depth = 4\n#pragma HLS STREAM variable = endOutStrm depth = 4"
+        }
+    ]
+}

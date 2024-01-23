@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (nextSeq.strobe == 0) break;",
+            "Faulty Code": "if (nextSeq.strobe != 0) break;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "auto nextSeq = inSeqStream.read();",
+            "Faulty Code": "auto nextSeq = inSeqStream.read(); auto dummyRead = inSeqStream.read();"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void inflate(hls::stream<ap_axiu<16, 0, 0, 0> >& inaxistream, hls::stream<ap_axiu<PARALLEL_BYTES * 8, TUSER_WIDTH, 0, 0> >& outaxistream) {",
+            "Faulty Code": "#pragma HLS interface m_axi port=inaxistream mode=read"
+        }
+    ]
+}

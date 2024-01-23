@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "t = in[i] + 1;",
+            "Faulty Code": "t = in[i + 512] + 1; // if 'size' is less than or equal to 512, this will access the wrong half of the buffer"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS INTERFACE m_axi port = in bundle = aximm depth = 1024",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port = in bundle = aximm depth = 512 // Incorrect depth may lead to non-burst AXI read/write"
+        }
+    ]
+}

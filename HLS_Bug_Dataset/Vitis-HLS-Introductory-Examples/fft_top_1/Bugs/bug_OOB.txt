@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "void write(hls::burst_maxi<dout_t> RES, dout_t x_aux[N], dout_t y_aux[N]) {\n    RES.write_request(\n        0, N / 4); // request to write N/4 elements from the first element\n    RES.write_request(\n        N - N / 4,\n        N / 4); // request to write N/4 elements from the last quarter element\n\n    for (int i = 0; i < N / 2; i++) {\n        if (i < N / 4)\n            RES.write(x_aux[i] - y_aux[i]);\n        else\n            RES.write(x_aux[N - N / 2 + i] - y_aux[N - N / 2 + i] / N);\n    }\n    RES.write_response(); // wait for the write operation to complete\n    RES.write_response(); // wait for the write operation to complete\n}",
+            "Faulty Code": "void write(hls::burst_maxi<dout_t> RES, dout_t x_aux[N], dout_t y_aux[N]) {\n    RES.write_request(\n        0, N / 4); // request to write N/4 elements from the first element\n    RES.write_request(\n        N - N / 4,\n        N / 4); // request to write N/4 elements from the last quarter element\n\n    for (int i = 0; i < N / 2; i++) {\n        if (i < N / 4)\n            RES.write(x_aux[i] - y_aux[i]);\n        else\n            RES.write(x_aux[N - N / 2 + i] - y_aux[N - N / 2 + i]); // OOB access as i goes up to N/2\n    }\n    RES.write_response(); // wait for the write operation to complete\n    RES.write_response(); // wait for the write operation to complete\n}"
+        }
+    ]
+}

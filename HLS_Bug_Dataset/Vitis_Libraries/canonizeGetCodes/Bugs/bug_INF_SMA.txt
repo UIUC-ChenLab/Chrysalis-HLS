@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (histVal.strobe == 0) break;",
+            "Faulty Code": "// if (histVal.strobe == 0) break;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "static ap_uint<4> symbol_bits[SYMBOL_SIZE];",
+            "Faulty Code": "static ap_uint<4> symbol_bits;"
+        }
+    ]
+}

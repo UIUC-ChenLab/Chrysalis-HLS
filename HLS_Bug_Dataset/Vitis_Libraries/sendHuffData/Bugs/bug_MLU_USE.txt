@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "cnt = inHfVal.strobe - 1;",
+            "Faulty Code": "cnt = inHfVal.strobe;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<3> cnt = 0, idx = 0;",
+            "Faulty Code": "int cnt = 0, idx = 0;"
+        }
+    ]
+}

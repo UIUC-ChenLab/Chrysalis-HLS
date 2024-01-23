@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "IntVectorStream_dt<8, 2> outVal;",
+            "Faulty Code": "IntVectorStream_dt<8, 2> outVal = {0};"
+        }
+    ]
+}

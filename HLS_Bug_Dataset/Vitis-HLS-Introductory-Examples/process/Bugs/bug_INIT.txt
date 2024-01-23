@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void process(dout_t x_aux[N], dout_t y_aux[N], din_t factor) {",
+            "Faulty Code": "void process(dout_t x_aux[N], dout_t y_aux[N], din_t factor) { \n    din_t temp;"
+        }
+    ]
+}

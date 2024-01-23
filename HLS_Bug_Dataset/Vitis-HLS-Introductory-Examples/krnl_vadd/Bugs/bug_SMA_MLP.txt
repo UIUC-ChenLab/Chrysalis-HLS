@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS INTERFACE m_axi port = out bundle = gmem0 depth = 4096",
+            "Faulty Code": "#pragma HLS INTERFACE bram port = out"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

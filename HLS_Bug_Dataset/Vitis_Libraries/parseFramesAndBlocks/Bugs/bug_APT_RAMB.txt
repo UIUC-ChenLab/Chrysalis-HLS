@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "inputWindow >>= (inputIdx * 8);",
+            "Faulty Code": "inputWindow >>= (inputIdx * numWidth); // numWidth is not the correct shift amount"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "istb = inStrobe.read(); ap_uint<c_parallelBit> input = inStream.read(); inputWindow.range((validBytes + c_parallelByte) * 8 - 1, validBytes * 8) = input;",
+            "Faulty Code": "istb = inStrobe.read(); ap_uint<c_parallelBit> input = inStream.read(); inputWindow.range((i + c_parallelByte) * 8 - 1, i * 8) = input; // Using 'i' instead of 'validBytes' results in non-consecutive memory access"
+        }
+    ]
+}

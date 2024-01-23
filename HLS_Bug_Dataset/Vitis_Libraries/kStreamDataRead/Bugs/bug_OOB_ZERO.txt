@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint32_t sCnt = 1 + ((input_size - 1) / factor);",
+            "Faulty Code": "uint32_t sCnt = input_size / factor;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "readStreamSize << tmpSize.data;",
+            "Faulty Code": "readStreamSize << 0;"
+        }
+    ]
+}

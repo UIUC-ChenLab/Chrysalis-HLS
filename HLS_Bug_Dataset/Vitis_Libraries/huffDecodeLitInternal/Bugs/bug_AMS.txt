@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS STREAM variable = huffBitStream depth = 32",
+            "Faulty Code": "#pragma HLS INTERFACE port=huffBitStream mode=ap_none"
+        }
+    ]
+}

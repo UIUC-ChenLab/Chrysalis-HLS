@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void huffDecodeLiteralsSeq(hls::stream<ap_uint<8 * PARALLEL_BYTE> >& inStream, ...)",
+            "Faulty Code": "void huffDecodeLiteralsSeq(hls::stream<ap_uint<8 * PARALLEL_BYTE> >& inStream, ...)\n#pragma HLS INTERFACE m_axi port=weights offset=slave bundle=gmem"
+        }
+    ]
+}

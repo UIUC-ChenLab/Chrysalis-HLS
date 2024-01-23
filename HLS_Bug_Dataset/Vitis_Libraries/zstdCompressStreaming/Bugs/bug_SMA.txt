@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void zstdCompressCore(hls::stream<IntVectorStream_dt<8, 1> >& inStream, hls::stream<IntVectorStream_dt<8, 4> >& outStream)",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=inStream"
+        }
+    ]
+}

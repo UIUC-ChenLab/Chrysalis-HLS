@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void read_sine_lut( lut_word_t cos_lut[LUTSIZE], const int LUTSIZE ) {",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=cos_lut"
+        }
+    ]
+}

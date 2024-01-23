@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = read_idx dim = 0 complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = read_idx dim = 0 cyclic"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "outStream[vid] << in[rIdx + midx];",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=outStream"
+        }
+    ]
+}

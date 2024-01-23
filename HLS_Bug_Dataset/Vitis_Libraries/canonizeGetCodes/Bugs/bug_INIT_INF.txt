@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "Histogram length_histogram[c_lengthHistogram];",
+            "Faulty Code": "Histogram length_histogram[c_lengthHistogram] = {0};"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (histVal.strobe == 0) break;",
+            "Faulty Code": "if (histVal.strobe != 0) break;"
+        }
+    ]
+}

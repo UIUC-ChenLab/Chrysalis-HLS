@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void axiu2hlsStream(hls::stream<ap_axiu<IN_DWIDTH, 0, 0, 0> >& inAxiStream, hls::stream<IntVectorStream_dt<8, IN_DWIDTH / 8> >& outHlsStream) {",
+            "Faulty Code": "void axiu2hlsStream(hls::stream<ap_axiu<IN_DWIDTH, 0, 0, 0> >& inAxiStream, hls::stream<IntVectorStream_dt<8, IN_DWIDTH / 8> >& outHlsStream) {\n#pragma HLS interface mode=s_axilite port=inAxiStream"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        }
+    ]
+}

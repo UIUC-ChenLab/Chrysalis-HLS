@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "IntVectorStream_dt<16, 1> metaVal;",
+            "Faulty Code": "IntVectorStream_dt<16, 1> metaVal = {0}; // Assuming a constructor that initializes 'strobe' and 'data' to zero, which might not be the case."
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (inVal = inStream.read(); inVal.strobe > 0; inVal = inStream.read()) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (inVal = inStream.read(); inVal.strobe > 0; inVal = inStream.read()) {"
+        }
+    ]
+}

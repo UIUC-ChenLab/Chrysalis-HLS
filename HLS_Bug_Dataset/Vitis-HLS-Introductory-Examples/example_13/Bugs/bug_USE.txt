@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "stream<int, 16> inter[2];",
+            "Faulty Code": "stream<short, 16> inter[2];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (int k=0;k<4*LUTSIZE;k++) {",
+            "Faulty Code": "#pragma HLS dataflow\nfor (int k=0;k<4*LUTSIZE;k++) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int k=0;k<4*LUTSIZE;k++) {",
+            "Faulty Code": "for (int k=0;k<4*LUTSIZE;k++) {\n#pragma HLS unroll factor=4"
+        }
+    ]
+}

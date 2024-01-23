@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "uint16_t tmp_dt = (uint16_t)inStream.read();",
+            "Faulty Code": "uint16_t tmp_dt = *(uint16_t*)(inStream.read());"
+        }
+    ]
+}

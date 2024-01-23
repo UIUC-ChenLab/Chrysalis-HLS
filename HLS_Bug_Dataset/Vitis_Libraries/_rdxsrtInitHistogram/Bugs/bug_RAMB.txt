@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void _rdxsrtInitHistogram(ap_uint<SYMBOL_BITS> digit_histogram[RADIX]) {\n#pragma HLS INLINE\ninit_histogram:\n    for (uint8_t i = 0; i < RADIX; ++i) {\n#pragma HLS LOOP_TRIPCOUNT min = 16 max = 16 avg = 16\n#pragma HLS UNROLL\n        digit_histogram[i] = 0;\n    }\n}",
+            "Faulty Code": "void _rdxsrtInitHistogram(ap_uint<SYMBOL_BITS> digit_histogram[RADIX]) {\n#pragma HLS INTERFACE m_axi port=digit_histogram\n#pragma HLS INLINE\ninit_histogram:\n    for (uint8_t i = 0; i < RADIX; ++i) {\n#pragma HLS LOOP_TRIPCOUNT min = 16 max = 16 avg = 16\n#pragma HLS UNROLL\n        digit_histogram[i] = 0;\n    }\n}"
+        }
+    ]
+}

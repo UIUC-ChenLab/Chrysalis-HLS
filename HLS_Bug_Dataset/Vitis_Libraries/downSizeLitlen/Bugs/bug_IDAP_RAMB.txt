@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "auto inSeqVal = inSeqStream.read();",
+            "Faulty Code": "auto inSeqVal = inSeqStream.read(); // assuming 'inSeqStream' is mapped with pragma HLS interface mode=axis and it should be read sequentially but it's read multiple times due to the while loop structure"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1 // assuming 'outSeqStream' is mapped with pragma HLS interface port=m_axi and should be written in burst mode but the data is written one at a time inside the pipeline loop"
+        }
+    ]
+}

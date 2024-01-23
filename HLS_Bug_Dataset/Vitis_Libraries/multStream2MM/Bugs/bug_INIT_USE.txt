@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint32_t readSize = (readSizeBytes - 1) / c_wordSize + 1;",
+            "Faulty Code": "uint32_t readSize; // Uninitialized variable"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "if (!inSizeStream[i].empty()) {",
+            "Faulty Code": "if (!inSizeStream[i]) { // Assuming inSizeStream[i] can be implicitly converted to bool"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "hfc.data[0].codeword = (length == 0 || symCnt == 0) ? (uint16_t)0 : (uint16_t)out_reversed;",
+            "Faulty Code": "hfc.data[0].codeword = (length == 0 || symCnt == 0) ? 0 : out_reversed;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void canonizeGetCodes(hls::stream<DSVectorStream_dt<Symbol<MAX_FREQ_DWIDTH>, 1> >& heapStream, ...",
+            "Faulty Code": "#pragma HLS interface port=heapStream ap_none"
+        }
+    ]
+}

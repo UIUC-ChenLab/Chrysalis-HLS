@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "digit_location[0] = 0;",
+            "Faulty Code": "for (uint8_t i = 0; i < RADIX; ++i) { digit_location[i] = 0; }"
+        }
+    ]
+}

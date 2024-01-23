@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint16_t streamSizes[4] = {0, 0, 0, 0};",
+            "Faulty Code": "uint16_t streamSizes[4];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = streamSizes complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = streamSizes cyclic factor=3"
+        }
+    ]
+}

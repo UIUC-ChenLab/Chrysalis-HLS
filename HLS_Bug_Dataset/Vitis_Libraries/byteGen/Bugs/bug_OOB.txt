@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "symbol[1] = bl1Codes[_bitbuffer.range(0, 0)];",
+            "Faulty Code": "symbol[0] = bl1Codes[_bitbuffer.range(0, 0)];"
+        }
+    ]
+}

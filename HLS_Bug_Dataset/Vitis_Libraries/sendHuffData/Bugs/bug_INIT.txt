@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "inHfVal.strobe = 1;",
+            "Faulty Code": "// inHfVal.strobe = 1;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint32_t i = 0; i < inSize_gmemwidth; i++) {",
+            "Faulty Code": "for (uint32_t i = 0; i <= inSize_gmemwidth; i++) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        }
+    ]
+}

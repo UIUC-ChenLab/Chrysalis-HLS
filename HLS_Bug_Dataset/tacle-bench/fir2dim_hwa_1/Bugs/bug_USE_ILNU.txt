@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "*poutput += *pcoeff++ * *parray++ ;",
+            "Faulty Code": "*poutput += (short)(*pcoeff++) * *parray++ ;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "void process(dout_t x_aux[N], dout_t y_aux[N], din_t factor) {\n\n    for (int i = 0; i < N / 4; i++) {\n        x_aux[i] = factor + x_aux[i];\n        y_aux[i] = factor + y_aux[i];\n    }\n\n    for (int i = N - N / 4; i < N; i++) {\n        x_aux[i] = x_aux[i] - factor;\n        y_aux[i] = y_aux[i] - factor;\n    }\n}",
+            "Faulty Code": "void process(dout_t x_aux[N], dout_t y_aux[N], din_t factor) {\n    #pragma HLS unroll factor=2\n    for (int i = 0; i < N / 4; i++) {\n        x_aux[i] = factor + x_aux[i];\n        y_aux[i] = factor + y_aux[i];\n    }\n\n    #pragma HLS unroll factor=2\n    for (int i = N - N / 4; i < N; i++) {\n        x_aux[i] = x_aux[i] - factor;\n        y_aux[i] = y_aux[i] - factor;\n    }\n}"
+        }
+    ]
+}

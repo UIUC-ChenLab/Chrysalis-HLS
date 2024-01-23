@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "void hlsLz4Core(hls::stream<data_t>& inStream,",
+            "Faulty Code": "void hlsLz4Core(hls::stream<ap_uint<8> >& inStream,"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

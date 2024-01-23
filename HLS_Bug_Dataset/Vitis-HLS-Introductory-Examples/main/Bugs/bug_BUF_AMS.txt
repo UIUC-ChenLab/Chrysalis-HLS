@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "run[i] = krnl(bufIn, bufOut, totalNumWords / 16);",
+            "Faulty Code": "run[i] = krnl(bufIn, bufOut, totalNumWords);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void read(A* a_in, A buf_out[NUM]) {",
+            "Faulty Code": "void read(A a_in, A buf_out[NUM]) {"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "outReg.range((uint8_t)(inVal.data[0].bitlen) + validBits - 1, validBits) = inVal.data[0].code;",
+            "Faulty Code": "outReg.range((int8_t)(inVal.data[0].bitlen) + validBits - 1, validBits) = inVal.data[0].code;"
+        }
+    ]
+}

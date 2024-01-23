@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "adlerStrm << 1;",
+            "Faulty Code": "adlerStrm << 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "xf::security::adler32<W>(adlerStrm, inStrm, inPackLenStrm, endInPackLenStrm, outStrm, endOutStrm);",
+            "Faulty Code": "xf::security::adler32<8 * W>(adlerStrm, inStrm, inPackLenStrm, endInPackLenStrm, outStrm, endOutStrm);"
+        }
+    ]
+}

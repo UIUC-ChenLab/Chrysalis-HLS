@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<STREAMDWIDTH> tmp = t1.get_data();",
+            "Faulty Code": "ap_uint<STREAMDWIDTH+1> tmp = t1.get_data();"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition factor=3"
+        }
+    ]
+}

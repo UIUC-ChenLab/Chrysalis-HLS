@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "W[i] = W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16];",
+            "Faulty Code": "W[i] = W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 17];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "A = sha_info_digest[0];",
+            "Faulty Code": "A = 0;"
+        }
+    ]
+}

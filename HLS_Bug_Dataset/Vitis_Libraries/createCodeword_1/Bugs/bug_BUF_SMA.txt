@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "first_codeword[i] = (first_codeword[i - 1] + length_histogram[i - 1]) << 1;",
+            "Faulty Code": "first_codeword[i] = (first_codeword[i + 1] + length_histogram[i - 1]) << 1;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "typedef ap_uint<MAX_LEN> LCL_Code_t;",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=symbol_bits"
+        }
+    ]
+}

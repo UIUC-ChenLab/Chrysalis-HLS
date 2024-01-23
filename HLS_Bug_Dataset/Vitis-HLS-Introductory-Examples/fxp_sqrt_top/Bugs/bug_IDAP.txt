@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "out_data_t fxp_sqrt_top(in_data_t& in_val) {",
+            "Faulty Code": "#pragma HLS interface mode=axis port=in_val\nout_data_t fxp_sqrt_top(in_data_t& in_val) {"
+        }
+    ]
+}

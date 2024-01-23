@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int buff[127];",
+            "Faulty Code": "int buff[127] = {0};"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "for (int i = 0; i < 128; i++) {",
+            "Faulty Code": "#pragma HLS array_partition variable=buff dim=2"
+        }
+    ]
+}

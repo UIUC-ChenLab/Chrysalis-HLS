@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "inputWindow.range((inputIdx + factor) * 8 - 1, inputIdx * 8) = inVal.range(SIZE_DWIDTH + DWIDTH - 1, SIZE_DWIDTH);",
+            "Faulty Code": "inputWindow.range((inputIdx + factor) * 8, inputIdx * 8) = inVal.range(SIZE_DWIDTH + DWIDTH - 1, SIZE_DWIDTH);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for ( i = 0 ; i < COEFFICIENTS ; i++ ){ *poutput += *pcoeff++ * *parray++ ; }",
+            "Faulty Code": "for ( i = 0 ; i < COEFFICIENTS-1 ; i++ ){ *poutput += *pcoeff++ * *parray++ ; }"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        }
+    ]
+}

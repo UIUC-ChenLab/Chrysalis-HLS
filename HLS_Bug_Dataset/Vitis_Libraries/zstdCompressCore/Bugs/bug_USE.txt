@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "frameHeaderBuf[5].range(7, 3) = windowLog - 10;",
+            "Faulty Code": "frameHeaderBuf[5].range(7, 3) = (int8_t)(windowLog - 10);"
+        }
+    ]
+}

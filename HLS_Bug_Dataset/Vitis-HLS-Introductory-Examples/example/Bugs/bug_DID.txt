@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS INTERFACE m_axi depth = 800 port = A bundle = bundle1",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi depth = 800 port = A bundle = bundle1\n#pragma HLS array_partition variable=x_aux dim=2 complete"
+        }
+    ]
+}

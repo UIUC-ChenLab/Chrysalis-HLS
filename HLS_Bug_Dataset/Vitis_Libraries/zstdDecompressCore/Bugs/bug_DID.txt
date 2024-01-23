@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable = zstdCoreInStream depth = c_inStreamDepth",
+            "Faulty Code": "#pragma HLS array_partition variable=zstdCoreInStream dim=2 complete"
+        }
+    ]
+}

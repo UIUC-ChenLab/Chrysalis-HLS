@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "remaining = (1 << accuracyLog) + 1;",
+            "Faulty Code": "remaining = 0;"
+        }
+    ]
+}

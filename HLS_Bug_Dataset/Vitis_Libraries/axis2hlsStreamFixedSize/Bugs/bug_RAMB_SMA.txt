@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS INTERFACE port=inputAxiStream mode=m_axi"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<qdma_axis<STREAMDWIDTH, 0, 0, 0> >& inputAxiStream",
+            "Faulty Code": "#pragma HLS INTERFACE port=inputStream mode=m_axi"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "while (!eosFlag) {\n#pragma HLS PIPELINE II = 1\n    eosFlag = inDataStreamEoS.read();\n    if (eosFlag) {\n        #pragma HLS PIPELINE II = 1 // Incorrect placement\n        decompressSize.data = inSizeStream.read();\n        decompressSize.last = true;\n        outKSizeStream.write(decompressSize);\n\n        uint8_t value = decompressSize.data % (DATAWIDTH / 8);\n        outValue.last = true;\n        outValue.keep = ((1 << value) - 1);\n    }\n\n    outKStream.write(outValue);\n\n    inValue = inDataStream.read();\n    outValue.data = inValue;\n    outValue.last = false;\n    outValue.keep = -1;\n}"
+        }
+    ]
+}

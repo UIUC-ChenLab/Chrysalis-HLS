@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint16_t nBits = (uint8_t)(tableLog - (31 - __builtin_clz(nextState)));",
+            "Faulty Code": "int16_t nBits = (uint8_t)(tableLog - (31 - __builtin_clz(nextState)));"
+        }
+    ]
+}

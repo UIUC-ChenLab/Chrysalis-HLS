@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "status_t status = status_in_strm.read();",
+            "Faulty Code": "status_t status; // Missing initialization from the stream"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "RES.write(x_aux[i] - y_aux[i]);",
+            "Faulty Code": "RES.write(x_aux[N - N / 2 + i] - y_aux[N - N / 2 + i]); // Incorrectly accessing the second half of the buffer for the first quarter elements"
+        }
+    ]
+}

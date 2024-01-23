@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (; !huffDone;) {",
+            "Faulty Code": "#pragma HLS unroll factor = 2 for (; !huffDone;) {"
+        }
+    ]
+}

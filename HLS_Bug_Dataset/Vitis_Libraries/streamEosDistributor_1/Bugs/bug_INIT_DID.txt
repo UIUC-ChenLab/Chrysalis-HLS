@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "bool i = inStream.read();",
+            "Faulty Code": "bool i; // Missing initialization with inStream.read()"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=outStream dim=2"
+        }
+    ]
+}

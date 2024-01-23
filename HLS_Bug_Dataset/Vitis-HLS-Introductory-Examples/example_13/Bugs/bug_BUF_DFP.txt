@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "proc<0>(inter[0], mux_in[0]);",
+            "Faulty Code": "proc<0>(inter[1], mux_in[0]);"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS DATAFLOW inside the demux function definition"
+        }
+    ]
+}

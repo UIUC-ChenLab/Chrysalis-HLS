@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "details::zlibWithAdler<DECODER, PARALLEL_BYTES, FILE_FORMAT, HISTORY_SIZE>(hlsDownStream[i], hlsEos[i], inflateStrm[i], chkSum[i]);",
+            "Faulty Code": "details::zlibWithAdler<DECODER, PARALLEL_BYTES, FILE_FORMAT, (int8_t)HISTORY_SIZE>(hlsDownStream[i], hlsEos[i], inflateStrm[i], chkSum[i]);"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        }
+    ]
+}

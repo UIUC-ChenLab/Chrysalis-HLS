@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "match_loc = output_cnt - offset;",
+            "Faulty Code": "match_loc = output_cnt - (int16_t)offset;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "outStream << outStreamValue;",
+            "Faulty Code": "#pragma HLS INTERFACE axis port=outStreamValue"
+        }
+    ]
+}

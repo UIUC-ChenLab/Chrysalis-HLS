@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "not_done = (dataSize == BLOCK_SIZE);",
+            "Faulty Code": "not_done = (dataSize != BLOCK_SIZE);"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t dataSize = 0;",
+            "Faulty Code": "uint32_t dataSize;"
+        }
+    ]
+}

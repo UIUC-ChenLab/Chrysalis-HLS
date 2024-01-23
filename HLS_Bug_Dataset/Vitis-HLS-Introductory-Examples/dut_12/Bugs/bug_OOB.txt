@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "void pass(int tmp1[128], int b[128]) {\n    int buff[127];\n    for (int i = 0; i < 128; i++) {\n        b[i] = tmp1[i];\n    }\n}",
+            "Faulty Code": "void pass(int tmp1[128], int b[128]) {\n    int buff[127];\n    for (int i = 0; i < 128; i++) {\n        buff[i] = tmp1[i];  // Out-of-bounds access here using buff instead of b\n    }\n}"
+        }
+    ]
+}

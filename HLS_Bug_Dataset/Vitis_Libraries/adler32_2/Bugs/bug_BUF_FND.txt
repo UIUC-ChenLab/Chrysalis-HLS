@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "adlerStrm << 1;",
+            "Faulty Code": "adlerStrm << adlerStrm.read();"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for (int i = 0; i < NUMCORES; i++) {",
+            "Faulty Code": "#pragma HLS array_partition variable=inStrm cyclic factor=3"
+        }
+    ]
+}

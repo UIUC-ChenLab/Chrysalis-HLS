@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out_memory[i] = in_val.data_filed;",
+            "Faulty Code": "out_memory[count+i] = in_val.data_filed;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS dataflow inside the loop in streamtoparallelwithburst function"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void read_sine_lut( lut_word_t cos_lut[LUTSIZE], const int LUTSIZE ) {",
+            "Faulty Code": "#pragma HLS interface port=cos_lut ap_none"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int k=0;k<4*LUTSIZE;k++) {",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

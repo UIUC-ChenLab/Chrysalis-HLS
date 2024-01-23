@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> > lz77InTree[NUM_BLOCK]",
+            "Faulty Code": "#pragma HLS interface mode=ap_none port=lz77InTree"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<uint8_t>& outIdxNum",
+            "Faulty Code": "#pragma HLS interface port=outIdxNum"
+        }
+    ]
+}

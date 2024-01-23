@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "prod.sign = x_num.sign;",
+            "Faulty Code": "prod.sign = prod.sign;"
+        }
+    ]
+}

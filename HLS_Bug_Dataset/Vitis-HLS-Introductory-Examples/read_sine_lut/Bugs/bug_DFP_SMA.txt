@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void read_sine_lut( lut_word_t cos_lut[LUTSIZE], const int LUTSIZE ) {",
+            "Faulty Code": "#pragma HLS dataflow void read_sine_lut( lut_word_t cos_lut[LUTSIZE], const int LUTSIZE ) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void read_sine_lut( lut_word_t cos_lut[LUTSIZE], const int LUTSIZE ) {",
+            "Faulty Code": "#pragma HLS interface port=bram void read_sine_lut( int cos_lut, const int LUTSIZE ) {"
+        }
+    ]
+}

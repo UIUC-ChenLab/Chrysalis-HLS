@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (bool eos_flag = inStreamEos.read(); eos_flag == false; eos_flag = inStreamEos.read()) {",
+            "Faulty Code": "for (bool eos_flag = inStreamEos.read(); eos_flag != false; eos_flag = inStreamEos.read()) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "out[base_idx + j] = inStream[i].read();",
+            "Faulty Code": "out[output_idx[i] + j] = inStream[i].read();"
+        }
+    ]
+}

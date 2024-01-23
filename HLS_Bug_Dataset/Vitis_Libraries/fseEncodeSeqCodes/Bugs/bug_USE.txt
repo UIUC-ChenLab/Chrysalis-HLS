@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "fseOutWord.data[0] = ((ap_uint<28>)outWordLL << (bitsOF + bitsML)) + ((ap_uint<28>)outWordML << bitsOF) + outWordOF;",
+            "Faulty Code": "fseOutWord.data[0] = ((int)outWordLL << (bitsOF + bitsML)) + ((int)outWordML << bitsOF) + outWordOF;"
+        }
+    ]
+}

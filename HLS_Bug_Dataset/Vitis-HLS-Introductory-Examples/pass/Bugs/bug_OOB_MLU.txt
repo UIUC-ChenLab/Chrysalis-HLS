@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int i = 0; i < 128; i++) {",
+            "Faulty Code": "for (int i = 0; i <= 128; i++) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < 128; i++) {",
+            "Faulty Code": "for (int i = 0; i < 128; i += 4) { tmp1[i] = a[i]; tmp1[i+1] = a[i+1]; tmp1[i+2] = a[i+2]; /* Missing iteration here */ }"
+        }
+    ]
+}

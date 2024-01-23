@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "static bool resetDictFlag = true;",
+            "Faulty Code": "static bool resetDictFlag;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> >& litFreqStream,",
+            "Faulty Code": "hls::stream<ap_uint<MAX_FREQ_DWIDTH> >& litFreqStream,"
+        }
+    ]
+}

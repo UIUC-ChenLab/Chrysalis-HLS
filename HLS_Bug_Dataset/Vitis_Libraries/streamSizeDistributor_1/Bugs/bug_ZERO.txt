@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "do {",
+            "Faulty Code": "uint32_t i = 0; do {"
+        }
+    ]
+}

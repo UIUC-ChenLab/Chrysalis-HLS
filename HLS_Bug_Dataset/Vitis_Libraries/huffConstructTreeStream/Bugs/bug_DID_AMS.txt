@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = digit_location complete dim = 1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = digit_location complete dim = 0"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> >& inFreq",
+            "Faulty Code": "#pragma HLS INTERFACE port=inFreq mode=ap_none"
+        }
+    ]
+}

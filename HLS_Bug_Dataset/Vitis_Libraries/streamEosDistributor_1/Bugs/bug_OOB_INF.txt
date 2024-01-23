@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outStream[n] << i;",
+            "Faulty Code": "outStream[n+1] << i;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (i == 1) break;",
+            "Faulty Code": "if (i != 1) break;"
+        }
+    ]
+}

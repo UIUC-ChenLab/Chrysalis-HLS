@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void streamDuplicator(hls::stream<ap_uint<DWIDTH> >& inHlsStream, hls::stream<ap_uint<DWIDTH> > outStream[SLAVES]) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=outStream mode=ap_fifo"
+        }
+    ]
+}

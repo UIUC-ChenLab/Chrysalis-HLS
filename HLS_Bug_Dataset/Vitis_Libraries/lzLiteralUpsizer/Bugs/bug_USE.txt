@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "outBuffer.range((idx + 1) * 8 - 1, idx * 8) = val.range(9, 2);",
+            "Faulty Code": "outBuffer.range((idx + 1) * 8 - 1, idx * 8) = val.range(7, 0);"
+        }
+    ]
+}

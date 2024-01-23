@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint32_t input_size = tmpSize.data;",
+            "Faulty Code": "int input_size = tmpSize.data;"
+        }
+    ]
+}

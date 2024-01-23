@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "endInPackLenStrm << true;",
+            "Faulty Code": "endInPackLenStrm << false;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS STREAM variable = adlerStrm depth = 4",
+            "Faulty Code": "#pragma HLS STREAM variable = adlerStrm depth = 3 // assuming NUMCORES is not divisible by 3"
+        }
+    ]
+}

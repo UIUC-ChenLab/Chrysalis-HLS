@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "func_with_static<4>(inp, &out3);",
+            "Faulty Code": "func_with_static<32>(inp, &out3); // Assuming that func_with_static uses template argument for bit shifting"
+        }
+    ]
+}

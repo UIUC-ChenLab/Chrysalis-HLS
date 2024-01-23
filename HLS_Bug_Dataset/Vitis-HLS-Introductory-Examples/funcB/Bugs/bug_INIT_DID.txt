@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "out[i] = in[i] + 25;",
+            "Faulty Code": "data_t temp; out[i] = temp + 25;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS array_partition variable=out dim=2"
+        }
+    ]
+}

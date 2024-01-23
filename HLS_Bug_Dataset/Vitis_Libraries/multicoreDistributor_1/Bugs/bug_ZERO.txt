@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static ap_uint<4> core = 0;",
+            "Faulty Code": "static ap_uint<4> core;"
+        }
+    ]
+}

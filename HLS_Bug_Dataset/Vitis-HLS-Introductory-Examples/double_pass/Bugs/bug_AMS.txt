@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void double_pass(int b[128], int tmp2[128], int tmp1[128], int tmp4[128]) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=b mode=s_axilite"
+        }
+    ]
+}

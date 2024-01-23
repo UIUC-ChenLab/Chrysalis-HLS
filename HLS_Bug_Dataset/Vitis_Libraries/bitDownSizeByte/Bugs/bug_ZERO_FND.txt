@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<IN_WIDTH> inVal = 0;",
+            "Faulty Code": "ap_uint<IN_WIDTH> inVal;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition factor=2"
+        }
+    ]
+}

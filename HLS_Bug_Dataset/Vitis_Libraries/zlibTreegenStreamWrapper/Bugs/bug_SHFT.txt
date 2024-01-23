@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "LCL_Code_t out_reversed = first_codeword[length];\nout_reversed.reverse();\nout_reversed = out_reversed >> (MAX_LEN - length);",
+            "Faulty Code": "LCL_Code_t out_reversed = first_codeword[length];\nout_reversed.reverse();\nout_reversed = out_reversed >> (MAX_LEN - length - 1);"
+        }
+    ]
+}

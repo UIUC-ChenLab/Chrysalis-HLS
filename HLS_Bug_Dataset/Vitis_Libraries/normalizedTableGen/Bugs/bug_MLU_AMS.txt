@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t i = 0; i < 3; ++i) {",
+            "Faulty Code": "for (uint8_t i = 0; i <= 3; ++i) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "normTableStream[0] << outVal;",
+            "Faulty Code": "#pragma HLS INTERFACE port=normTableStream_0 ap_none"
+        }
+    ]
+}

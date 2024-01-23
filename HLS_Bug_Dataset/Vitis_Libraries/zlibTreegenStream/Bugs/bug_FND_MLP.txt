@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = digit_histogram complete dim = 1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = digit_histogram cyclic factor=4 dim = 1"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (uint16_t i = 0; i < i_symbolSize; ++i) {",
+            "Faulty Code": "#pragma HLS pipeline II = 1\nfor (uint16_t i = 0; i < i_symbolSize; ++i) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "void pass(int a[128], int tmp1[128]) {",
+            "Faulty Code": "void pass(int a[128], int tmp1[128] = {0}) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "tmp1[i] = a[i];",
+            "Faulty Code": "tmp1[i] = (short)a[i];"
+        }
+    ]
+}

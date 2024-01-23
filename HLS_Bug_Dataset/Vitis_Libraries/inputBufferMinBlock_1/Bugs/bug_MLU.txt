@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "not_done = (dataSize == BLOCK_SIZE);",
+            "Faulty Code": "not_done = (dataSize > BLOCK_SIZE);"
+        }
+    ]
+}

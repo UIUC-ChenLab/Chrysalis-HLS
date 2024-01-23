@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "void pointer_arith(dio_t *d) {\n  static int acc = 0;\n  int i;\n\n  for (i = 0; i < 4; i++) {\n    acc += *(d + i + 1);\n    *(d + i) = acc;\n  }\n}",
+            "Faulty Code": "void pointer_arith(dio_t *d) {\n  static int acc = 0;\n  int i;\n\n  for (i = 0; i <= 4; i++) {\n    acc += *(d + i + 1);\n    *(d + i) = acc;\n  }\n}"
+        }
+    ]
+}

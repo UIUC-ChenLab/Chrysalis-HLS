@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void separateLitSeqTableStreams(hls::stream<IntVectorStream_dt<36, 1> >& fseTableStream,\n                                hls::stream<IntVectorStream_dt<36, 1> >& fseLitTableStream,\n                                hls::stream<IntVectorStream_dt<36, 1> >& fseSeqTableStream) {",
+            "Faulty Code": "#pragma HLS interface m_axi port=fseTableStream depth=32\nvoid separateLitSeqTableStreams(hls::stream<IntVectorStream_dt<36, 1> >& fseTableStream,\n                                hls::stream<IntVectorStream_dt<36, 1> >& fseLitTableStream,\n                                hls::stream<IntVectorStream_dt<36, 1> >& fseSeqTableStream) {"
+        }
+    ]
+}

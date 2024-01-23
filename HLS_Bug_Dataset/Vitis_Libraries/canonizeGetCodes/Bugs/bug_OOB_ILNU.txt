@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "first_codeword[i] = (first_codeword[i - 1] + length_histogram[i - 1]) << 1;",
+            "Faulty Code": "first_codeword[i] = (first_codeword[i] + length_histogram[i - 1]) << 1;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (uint16_t k = 0; k < cur_symSize; ++k) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (uint16_t k = 0; k < cur_symSize; ++k) {"
+        }
+    ]
+}

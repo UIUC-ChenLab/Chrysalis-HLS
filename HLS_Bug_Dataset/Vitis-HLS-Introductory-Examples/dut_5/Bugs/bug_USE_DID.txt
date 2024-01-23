@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int t;",
+            "Faulty Code": "short t;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS cache port = in lines = 8 depth = 128",
+            "Faulty Code": "#pragma HLS array_partition variable=in dim=2"
+        }
+    ]
+}

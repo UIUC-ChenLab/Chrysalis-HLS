@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS interface port=axi2HlsStrm mode=ap_none"
+        }
+    ]
+}

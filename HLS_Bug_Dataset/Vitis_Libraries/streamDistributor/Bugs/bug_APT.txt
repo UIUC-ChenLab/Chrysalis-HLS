@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "void streamDistributor(hls::stream<bool>& inStream, hls::stream<bool> outStream[SLAVES]) {",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=outStream"
+        }
+    ]
+}

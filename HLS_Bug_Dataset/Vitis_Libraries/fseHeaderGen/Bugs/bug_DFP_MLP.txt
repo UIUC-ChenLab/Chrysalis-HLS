@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "while (true) {",
+            "Faulty Code": "#pragma HLS dataflow\nwhile (true) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "while ((symbol < maxCharSize) && (remaining > 1)) {",
+            "Faulty Code": "for(uint8_t i = 0; i < 2; i++) { #pragma HLS PIPELINE\nwhile ((symbol < maxCharSize) && (remaining > 1)) {"
+        }
+    ]
+}

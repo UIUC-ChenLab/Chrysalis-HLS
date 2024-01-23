@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void shift_func(dint_t* in1, dint_t* in2, dout_t* outA, dout_t* outB) {\n    *outA = *in1 >> 1;\n    *outB = *in2 >> 2;\n}",
+            "Faulty Code": "void shift_func(dint_t* in1, dint_t* in2, dout_t* outA, dout_t* outB) {\n    #pragma HLS dataflow\n    *outA = *in1 >> 1;\n    *outB = *in2 >> 2;\n}"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned i = 0; i < N; i++) {",
+            "Faulty Code": "for (unsigned i = 0; i <= N; i++) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS interface axis port = out",
+            "Faulty Code": "#pragma HLS interface ap_fifo port = out"
+        }
+    ]
+}

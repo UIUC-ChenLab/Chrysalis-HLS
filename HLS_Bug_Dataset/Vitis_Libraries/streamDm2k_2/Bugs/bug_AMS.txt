@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void streamDm2k(hls::stream<ap_uint<STREAMDWIDTH> >& in, hls::stream<SIZE_DT>& inSize, hls::stream<ap_axiu<STREAMDWIDTH, 0, 0, 0> >& outStream) {",
+            "Faulty Code": "#pragma HLS interface port=in mode=ap_none"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "din_t acc = 0;",
+            "Faulty Code": "din_t acc;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "acc += *(d_i + 2);\n  acc += *(d_i + 3);",
+            "Faulty Code": "acc += *(d_i + 15);\n  acc += *(d_i + 16);"
+        }
+    ]
+}

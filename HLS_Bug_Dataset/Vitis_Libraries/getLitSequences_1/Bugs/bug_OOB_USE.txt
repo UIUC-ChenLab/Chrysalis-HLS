@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outValue.data[0].range(15, 8) = match_length;",
+            "Faulty Code": "outValue.data[0].range(16, 8) = match_length;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "outValue.data[0].range(31, 16) = match_offset;",
+            "Faulty Code": "outValue.data[0].range(31, 16) = (int16_t)match_offset;"
+        }
+    ]
+}

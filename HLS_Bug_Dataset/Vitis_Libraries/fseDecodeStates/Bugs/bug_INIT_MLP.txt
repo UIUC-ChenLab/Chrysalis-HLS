@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<LMO_WIDTH> offsetVal;",
+            "Faulty Code": "ap_uint<LMO_WIDTH> offsetVal; // Initialized later but could be read before initialization"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1 // Incorrect if placed inside another already pipelined loop"
+        }
+    ]
+}

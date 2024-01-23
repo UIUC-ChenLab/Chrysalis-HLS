@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS STREAM variable = boosterStream depth = c_litDistCodeDepth",
+            "Faulty Code": "#pragma HLS array_partition variable=local_mem cyclic factor=10"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

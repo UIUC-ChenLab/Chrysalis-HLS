@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void read_sine_lut( lut_word_t cos_lut[LUTSIZE], const int LUTSIZE ) { ... }",
+            "Faulty Code": "void read_sine_lut( lut_word_t cos_lut[LUTSIZE], const int LUTSIZE ) {\n#pragma HLS interface m_axi port=cos_lut offset=slave\n ... }"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void read_sine_lut( lut_word_t cos_lut[LUTSIZE], const int LUTSIZE ) { ... }",
+            "Faulty Code": "void read_sine_lut( lut_word_t cos_lut[LUTSIZE], const int LUTSIZE ) {\n#pragma HLS interface port=cos_lut\n ... }"
+        }
+    ]
+}

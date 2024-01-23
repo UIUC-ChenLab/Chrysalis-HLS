@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "auto outSizeV = ((inSize - 1) / c_outWord) + 1;",
+            "Faulty Code": "auto outSizeV = ((inSize - 1) / c_outWord);"
+        }
+    ]
+}

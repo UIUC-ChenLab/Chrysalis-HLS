@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition type=complete"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (uint8_t i = 0; i < RADIX; ++i) {",
+            "Faulty Code": "for (uint8_t i = 0; i < RADIX; ++i) { #pragma HLS pipeline"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (auto i = 0; i < outSizeV; i++) {",
+            "Faulty Code": "for (auto i = 0; i <= outSizeV; i++) {"
+        }
+    ]
+}

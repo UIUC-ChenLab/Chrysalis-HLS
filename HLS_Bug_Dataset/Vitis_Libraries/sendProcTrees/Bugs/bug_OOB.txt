@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outCodes[c_litCodeCount + c_dstCodeCount + 1] = zeroValue;",
+            "Faulty Code": "outCodes[c_litCodeCount + c_dstCodeCount + 2] = zeroValue;"
+        }
+    ]
+}

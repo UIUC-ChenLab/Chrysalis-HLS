@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = huffTable type = ram_t2p impl = bram",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable = huffTable type = ram_t2p impl = m_axi"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "for (int s = 1; s < c_maxCodeLen + 1; ++s) {\n#pragma HLS PIPELINE II = 1\n                bsacc[s] = acchbs << s;\n            }"
+        }
+    ]
+}

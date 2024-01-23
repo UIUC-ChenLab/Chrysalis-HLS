@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(int i = 0; i < Z; i++) {",
+            "Faulty Code": "for(int i = 0; i <= Z; i++) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INTERFACE bram port=c",
+            "Faulty Code": "#pragma HLS INTERFACE ap_fifo port=c mode=read"
+        }
+    ]
+}

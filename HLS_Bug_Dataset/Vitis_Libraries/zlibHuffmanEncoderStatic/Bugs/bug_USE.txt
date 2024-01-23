@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "tOffset -= base_dist[dcode];",
+            "Faulty Code": "tOffset -= (int8_t)base_dist[dcode];"
+        }
+    ]
+}

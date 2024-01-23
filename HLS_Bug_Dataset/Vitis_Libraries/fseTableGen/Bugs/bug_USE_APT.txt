@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "normTable[63] = maxSymbol;",
+            "Faulty Code": "normTable[63] = (int16_t)maxSymbol;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = inFreq type = ram_1p impl = lutram",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = inFreq type = cyclic factor = 64"
+        }
+    ]
+}

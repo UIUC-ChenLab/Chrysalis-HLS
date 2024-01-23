@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS INTERFACE m_axi depth = 800 port = RES bundle = bundle3",
+            "Faulty Code": "#pragma HLS INTERFACE s_axilite port = RES bundle = bundle3"
+        }
+    ]
+}

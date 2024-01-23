@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INTERFACE mode = m_axi bundle = gmem depth =                       \\\n    256 max_read_burst_length = 16 max_widen_bitwidth =                        \\\n        512 max_write_burst_length = 16 num_read_outstanding =                 \\\n            16 num_write_outstanding = 16 port = mem",
+            "Faulty Code": "#pragma HLS INTERFACE mode = ap_none port = mem"
+        }
+    ]
+}

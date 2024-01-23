@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS DATAFLOW // Inside the loop, incorrect"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INTERFACE s_axilite port = outTop bundle = control",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port = outTop // Incorrect interface for array"
+        }
+    ]
+}

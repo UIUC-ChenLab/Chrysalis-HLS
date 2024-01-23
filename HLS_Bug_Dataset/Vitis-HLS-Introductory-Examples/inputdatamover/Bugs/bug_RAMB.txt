@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void inputdatamover(bool direction, config_t* config, cmpxDataIn in[FFT_LENGTH], cmpxDataIn out[FFT_LENGTH]) {",
+            "Faulty Code": "#pragma HLS interface m_axi port=in offset=slave depth=FFT_LENGTH"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void funcD(data_t* in1, data_t* in2, data_t* out) {",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=out\nvoid funcD(data_t in1, data_t in2, data_t* out) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void funcD(data_t* in1, data_t* in2, data_t* out) {",
+            "Faulty Code": "#pragma HLS INTERFACE s_axilite port=in1\nvoid funcD(data_t* in1, data_t* in2, data_t* out) {"
+        }
+    ]
+}

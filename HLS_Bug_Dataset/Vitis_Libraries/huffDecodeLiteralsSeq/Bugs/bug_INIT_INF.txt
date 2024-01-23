@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint16_t decSize[4];",
+            "Faulty Code": "uint16_t decSize[4]; // Uninitialized array, should be initialized to avoid reading garbage values."
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (uint8_t i = 7; i >= 0; --i) {",
+            "Faulty Code": "for (uint8_t i = 7; i <= 0; --i) { // Incorrect loop termination condition leading to an infinite loop."
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out_memory[i] = in_val.data_filed;",
+            "Faulty Code": "out_memory[count + i] = in_val.data_filed;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INTERFACE axis register_mode = both register port = inStreamTop",
+            "Faulty Code": "#pragma HLS INTERFACE axis register_mode = both port = inStreamTop"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "ap_uint<STREAMDWIDTH> tmp = t1.get_data();",
+            "Faulty Code": "ap_uint<STREAMDWIDTH / 2> tmp = t1.get_data(); // Assuming STREAMDWIDTH is even and greater than 1"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "while (true) {",
+            "Faulty Code": "#pragma HLS array_partition variable=t1 dim=2 // Incorrect 'dim' value for a scalar"
+        }
+    ]
+}

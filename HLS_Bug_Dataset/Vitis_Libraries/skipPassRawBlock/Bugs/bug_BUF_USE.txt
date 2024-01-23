@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outStbFlagStream1 << outFlagVal;",
+            "Faulty Code": "outStbFlagStream1 << inVal.range(IN_DWIDTH + STB_WIDTH - 1, IN_DWIDTH);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "outFlagVal.range(1, 1) = (ap_uint<1>)isRawBlk;",
+            "Faulty Code": "outFlagVal.range(1, 1) = isRawBlk ? 1 : -1;"
+        }
+    ]
+}

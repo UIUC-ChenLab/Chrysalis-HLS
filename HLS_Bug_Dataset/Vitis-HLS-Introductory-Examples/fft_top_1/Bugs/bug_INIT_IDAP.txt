@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "status_t status = status_in_strm.read();",
+            "Faulty Code": "status_t status; // Missing initialization"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS interface ap_fifo depth = 1 port = ovflo",
+            "Faulty Code": "#pragma HLS interface ap_fifo depth = 2 port = ovflo // Incorrect depth for single bit flag"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "inBuffer = inStream.read();",
+            "Faulty Code": "inBuffer = inStream.read().range(IN_DATAWIDTH - 1, IN_DATAWIDTH/2);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void mm2StreamDownSizer(hls::stream<ap_uint<IN_DATAWIDTH> >& inStream,",
+            "Faulty Code": "void mm2StreamDownSizer(ap_uint<IN_DATAWIDTH> inStream,"
+        }
+    ]
+}

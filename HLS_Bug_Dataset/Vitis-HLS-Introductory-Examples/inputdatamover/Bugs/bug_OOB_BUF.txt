@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int i = 0; i < FFT_LENGTH; i++) {",
+            "Faulty Code": "for (int i = 0; i <= FFT_LENGTH; i++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "out[i] = in[i];",
+            "Faulty Code": "out[i] = in[i + FFT_LENGTH/2];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "inData.keep = -1;",
+            "Faulty Code": "inData.keep = (i >= (inputAlignedSize / 2)) ? in.read() : -1;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "uint32_t num = 0;",
+            "Faulty Code": "uint32_t num[inputModSize] = {0};"
+        }
+    ]
+}

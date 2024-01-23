@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int t;",
+            "Faulty Code": "int t; // t is uninitialized and will have an indeterminate value"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "int t;",
+            "Faulty Code": "unsigned int t; // Changing to unsigned, might lead to unintended sign extension if later on the code uses 't' as signed"
+        }
+    ]
+}

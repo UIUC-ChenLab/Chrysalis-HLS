@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = prevValue dim = 0 complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = prevValue dim = 1 factor=3"
+        }
+    ]
+}

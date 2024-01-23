@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outHufVal.data[0] = inHfVal.data[idx++];",
+            "Faulty Code": "outHufVal.data[0] = inHfVal.data[idx++ % 3];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1 inside another #pragma HLS PIPELINE block"
+        }
+    ]
+}

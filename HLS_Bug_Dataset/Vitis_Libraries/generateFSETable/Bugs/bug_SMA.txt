@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "int16_t* prevDistribution",
+            "Faulty Code": "#pragma HLS INTERFACE port=prevDistribution mode=ap_fifo"
+        }
+    ]
+}

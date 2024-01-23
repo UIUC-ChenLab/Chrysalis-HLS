@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "bool eos = inStreamEos.read();",
+            "Faulty Code": "while (!inStreamEos.read());"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "if (!eos) outChecksumData[0] = inStream.read();",
+            "Faulty Code": "#pragma HLS array_partition variable=outChecksumData factor=3"
+        }
+    ]
+}

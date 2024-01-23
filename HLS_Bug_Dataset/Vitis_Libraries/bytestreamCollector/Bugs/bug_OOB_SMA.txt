@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint8_t i = 0; i < fseHIdx; i += 2) {",
+            "Faulty Code": "for (uint8_t i = 0; i <= fseHIdx; i += 2) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "bscMetaStream << (uint16_t)litEncSize;",
+            "Faulty Code": "#pragma HLS INTERFACE port=bscMetaStream mode=ap_memory"
+        }
+    ]
+}

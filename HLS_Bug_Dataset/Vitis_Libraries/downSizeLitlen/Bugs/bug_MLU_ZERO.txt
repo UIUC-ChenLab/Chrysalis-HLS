@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "litLen -= 255;",
+            "Faulty Code": "litLen -= 256;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outSeqVal.strobe = 1;",
+            "Faulty Code": "outSeqVal.strobe = 0;"
+        }
+    ]
+}

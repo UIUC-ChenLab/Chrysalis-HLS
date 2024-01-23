@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "auto litLen = inSeqVal.data[0].litlen;",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=inSeqVal.data dim=0"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "while (!dszDone) { #pragma HLS PIPELINE II = 1"
+        }
+    ]
+}

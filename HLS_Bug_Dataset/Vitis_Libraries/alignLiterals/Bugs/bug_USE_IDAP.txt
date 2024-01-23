@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "inputWindow.range(c_streamWidth - 1, 0) = inValue.data[0];",
+            "Faulty Code": "inputWindow.range(c_streamWidth - 1, 0) = (uint8_t)inValue.data[0];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "inValue = inLitStream.read();",
+            "Faulty Code": "if (!newBlockFlagStream.empty()) inValue = inLitStream.read();"
+        }
+    ]
+}

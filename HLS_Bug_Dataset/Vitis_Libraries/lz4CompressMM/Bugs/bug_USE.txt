@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "if (readBlockSize + block_length > input_size) inBlockSize = input_size - readBlockSize;",
+            "Faulty Code": "if ((int)(readBlockSize + block_length) > (int)input_size) inBlockSize = input_size - readBlockSize;"
+        }
+    ]
+}

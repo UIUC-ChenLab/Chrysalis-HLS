@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "burstbuffer[j] = a[i + j];",
+            "Faulty Code": "burstbuffer[j + BURSTBUFFERSIZE/2] = a[i + j];"
+        }
+    ]
+}

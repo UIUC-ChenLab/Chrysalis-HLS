@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (histVal.strobe == 0) break;",
+            "Faulty Code": "// if (histVal.strobe == 0) break;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint16_t i = 1; i <= cur_maxBits; ++i) {",
+            "Faulty Code": "for (uint16_t i = 1; i < cur_maxBits; ++i) {"
+        }
+    ]
+}

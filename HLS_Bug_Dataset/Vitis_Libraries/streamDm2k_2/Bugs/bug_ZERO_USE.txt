@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "inData.keep = -1;",
+            "Faulty Code": "inData.keep = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "num |= 1UL << b;",
+            "Faulty Code": "num |= 1 << b;"
+        }
+    ]
+}

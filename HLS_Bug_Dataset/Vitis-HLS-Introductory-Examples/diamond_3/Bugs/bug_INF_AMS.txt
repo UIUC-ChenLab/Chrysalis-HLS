@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < N / NUM_BLOCKS; i++) {",
+            "Faulty Code": "for (int i = 0; i <= N / NUM_BLOCKS; i++) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void diamond(hls::stream<data_t>& vecIn, hls::stream<data_t>& vecOut) {",
+            "Faulty Code": "void diamond(hls::stream<data_t>& vecIn, data_t& vecOut) {"
+        }
+    ]
+}

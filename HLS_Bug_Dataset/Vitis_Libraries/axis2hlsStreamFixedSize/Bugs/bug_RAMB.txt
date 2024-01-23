@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void axis2hlsStreamFixedSize(hls::stream<qdma_axis<STREAMDWIDTH, 0, 0, 0> >& inputAxiStream, hls::stream<ap_uint<STREAMDWIDTH> >& inputStream, uint32_t inputSize) {",
+            "Faulty Code": "void axis2hlsStreamFixedSize(hls::stream<qdma_axis<STREAMDWIDTH, 0, 0, 0> >& inputAxiStream, hls::stream<ap_uint<STREAMDWIDTH> >& inputStream, uint32_t inputSize) { #pragma HLS interface m_axi port=inputAxiStream mode=read"
+        }
+    ]
+}

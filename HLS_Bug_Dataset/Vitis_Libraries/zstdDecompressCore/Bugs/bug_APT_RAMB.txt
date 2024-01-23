@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS STREAM variable = zstdCoreInStream depth = c_inStreamDepth",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = zstdCoreInStream type = block dim = 1"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "zstdCoreInStream << tmp.data;",
+            "Faulty Code": "zstdCoreInStream.write(tmp.data.range(7, 0)); // Assuming IN_BYTES is 1 for this example"
+        }
+    ]
+}

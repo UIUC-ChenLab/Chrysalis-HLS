@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void kStreamWriteFixedSize(hls::stream<ap_axiu<DATAWIDTH, 0, 0, 0> >& outKStream, hls::stream<ap_uint<DATAWIDTH> >& outDataStream, uint32_t outputSize) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=outDataStream bram"
+        }
+    ]
+}

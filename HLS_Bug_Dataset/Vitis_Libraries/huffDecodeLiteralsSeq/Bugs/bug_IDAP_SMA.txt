@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = huffTable type = ram_t2p impl = bram",
+            "Faulty Code": "#pragma HLS INTERFACE port=huffTable mode=ap_fifo"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "uint16_t decSize[4];",
+            "Faulty Code": "#pragma HLS INTERFACE port=decSize mode=bram"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (auto z = 0; z < (numItr - 1) * blckNum; z++) {",
+            "Faulty Code": "for (auto z = 0; z < numItr * blckNum; z++) {"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void s2mmSizeWrite(hls::stream<OUTSIZE_DT>& inSizeStream, ...",
+            "Faulty Code": "#pragma HLS dataflow\nvoid s2mmSizeWrite(hls::stream<OUTSIZE_DT>& inSizeStream, ..."
+        }
+    ]
+}

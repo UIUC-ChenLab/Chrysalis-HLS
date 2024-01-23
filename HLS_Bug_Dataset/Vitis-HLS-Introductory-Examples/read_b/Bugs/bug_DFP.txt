@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void read_b(hls::burst_maxi<din_t> IN, dout_t y_aux[N], din_t factor) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid read_b(hls::burst_maxi<din_t> IN, dout_t y_aux[N], din_t factor) {"
+        }
+    ]
+}

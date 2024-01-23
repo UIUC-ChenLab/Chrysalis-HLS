@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void funcD(data_t* in1, data_t* in2, data_t* out) {",
+            "Faulty Code": "void funcD(data_t* in1, data_t* in2, data_t* out) {\n#pragma HLS interface mode=ap_fifo port=in1"
+        }
+    ]
+}

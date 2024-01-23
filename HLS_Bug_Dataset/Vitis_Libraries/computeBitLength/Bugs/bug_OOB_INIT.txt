@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "child_depth[num_symbols - 1] = 0;",
+            "Faulty Code": "child_depth[num_symbols] = 0;"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint32_t length = child_depth[parent[i]] + 1;",
+            "Faulty Code": "uint32_t length = child_depth[i] + 1;"
+        }
+    ]
+}

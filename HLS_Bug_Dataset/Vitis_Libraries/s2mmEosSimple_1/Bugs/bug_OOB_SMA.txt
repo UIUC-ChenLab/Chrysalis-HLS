@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out[j + i] = tmp;",
+            "Faulty Code": "out[j + BURST_SIZE] = tmp;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "output_size[0] = outSize.read();",
+            "Faulty Code": "output_size = outSize.read();"
+        }
+    ]
+}

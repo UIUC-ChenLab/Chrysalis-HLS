@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outStream << inVal.data[0];",
+            "Faulty Code": "outStream << inVal.data[1];"
+        }
+    ]
+}

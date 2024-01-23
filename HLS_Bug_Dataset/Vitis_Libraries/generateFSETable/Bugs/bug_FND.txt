@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (int i = 0; i < 64; ++i) normalizedCounter[i] = 0;",
+            "Faulty Code": "#pragma HLS array_partition variable=normalizedCounter factor=10\nfor (int i = 0; i < 64; ++i) normalizedCounter[i] = 0;"
+        }
+    ]
+}

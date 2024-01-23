@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (uint8_t i = 7; i >= 0; --i) {\n#pragma HLS UNROLL\n#pragma HLS LOOP_TRIPCOUNT min = 1 max = 7",
+            "Faulty Code": "for (uint8_t i = 7; i >= 0; --i) {\n#pragma HLS UNROLL factor=3\n#pragma HLS LOOP_TRIPCOUNT min = 1 max = 7"
+        }
+    ]
+}

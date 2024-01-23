@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void fseDecodeStatesLL(hls::stream<uint8_t>& litsymbolStream, ...",
+            "Faulty Code": "#pragma HLS INTERFACE port=prevOffsets mode=ap_fifo"
+        }
+    ]
+}

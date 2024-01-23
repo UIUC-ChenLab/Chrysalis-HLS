@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "outputSizeStream << inputSize;",
+            "Faulty Code": "outputSizeStream << 0;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "outputStream << tmpOut;",
+            "Faulty Code": "#pragma HLS INTERFACE port=outputStream ap_fifo"
+        }
+    ]
+}

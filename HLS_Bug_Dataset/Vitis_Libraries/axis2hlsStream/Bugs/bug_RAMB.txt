@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void axis2hlsStream(hls::stream<qdma_axis<STREAMDWIDTH, 0, 0, 0> >& inAxiStream, hls::stream<ap_uint<STREAMDWIDTH> >& outStream)",
+            "Faulty Code": "#pragma HLS interface m_axi port=inAxiStream mode=read_write void axis2hlsStream(hls::stream<qdma_axis<STREAMDWIDTH, 0, 0, 0> >& inAxiStream, hls::stream<ap_uint<STREAMDWIDTH> >& outStream)"
+        }
+    ]
+}

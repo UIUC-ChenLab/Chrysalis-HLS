@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for ( i = 0 ; i < COEFFICIENTS ; i++ ){",
+            "Faulty Code": "for ( i = 0 ; i <= COEFFICIENTS ; i++ ){"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "*poutput = 0 ;",
+            "Faulty Code": "*poutput = 1 ;"
+        }
+    ]
+}

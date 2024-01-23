@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<IN_WIDTH> inValue = inStream.read();",
+            "Faulty Code": "ap_uint<IN_WIDTH> inValue;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "const int c_upsizeFactor = OUT_WIDTH / IN_WIDTH;",
+            "Faulty Code": "const int c_upsizeFactor = 0;"
+        }
+    ]
+}

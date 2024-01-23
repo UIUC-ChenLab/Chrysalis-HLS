@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < lbtWrite; readFlag = ((i + c_inputByte) < lbtWrite)) {",
+            "Faulty Code": "for (int i = 0; i < lbtWrite; readFlag = ((i + c_outByte) < lbtWrite)) {"
+        }
+    ]
+}

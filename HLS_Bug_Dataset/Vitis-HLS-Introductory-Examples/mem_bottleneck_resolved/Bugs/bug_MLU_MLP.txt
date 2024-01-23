@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "tmp1 = mem[1];",
+            "Faulty Code": "tmp1 = mem[2]; // Incorrect manual loop initialization, skips an iteration"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = 2; i < N; i++) {",
+            "Faulty Code": "#pragma HLS pipeline // Incorrect multi-level pipelining inside loop\n    for (i = 2; i < N; i++) {"
+        }
+    ]
+}

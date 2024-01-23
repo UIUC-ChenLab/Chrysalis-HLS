@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (int size = inStreamSize.read(); size != 0; size = inStreamSize.read()) {",
+            "Faulty Code": "#pragma HLS dataflow\nfor (int size = inStreamSize.read(); size != 0; size = inStreamSize.read()) {"
+        }
+    ]
+}

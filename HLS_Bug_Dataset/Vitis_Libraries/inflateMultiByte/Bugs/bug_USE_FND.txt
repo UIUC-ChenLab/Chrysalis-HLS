@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "out << tmp.data;",
+            "Faulty Code": "out << (ap_int<16>)tmp.data;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS STREAM variable = axi2HlsStrm depth = 32",
+            "Faulty Code": "#pragma HLS STREAM variable = axi2HlsStrm depth = 30"
+        }
+    ]
+}

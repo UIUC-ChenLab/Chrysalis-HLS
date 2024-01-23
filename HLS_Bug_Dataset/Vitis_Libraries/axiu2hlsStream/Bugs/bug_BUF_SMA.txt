@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "val.data[j++] = tmpVal.range(i + 7, i);",
+            "Faulty Code": "val.data[j++] = tmpVal.range(i + c_maxByteCnt - 1, i);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "ap_uint<IN_DWIDTH / 8> cntr = 0;",
+            "Faulty Code": "ap_uint<IN_DWIDTH> cntr = 0;"
+        }
+    ]
+}

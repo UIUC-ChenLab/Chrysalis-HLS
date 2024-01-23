@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS RESOURCE variable=H core=RAM_1P_BRAM",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=H factor=5 dim=2"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS INTERFACE bram port=r",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=y total_size=1"
+        }
+    ]
+}

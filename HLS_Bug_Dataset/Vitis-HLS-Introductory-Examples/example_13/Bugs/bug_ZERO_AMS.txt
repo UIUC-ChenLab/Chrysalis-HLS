@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "stream<int, 16> inter[2];",
+            "Faulty Code": "stream<int, 16> inter[2] = {}; // Incorrectly initializes streams to zero, which is not meaningful for streams"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INTERFACE mode = ap_ctrl_none port = return",
+            "Faulty Code": "#pragma HLS INTERFACE mode = ap_none port = inter // Incorrectly maps array 'inter' to a scalar interface port"
+        }
+    ]
+}

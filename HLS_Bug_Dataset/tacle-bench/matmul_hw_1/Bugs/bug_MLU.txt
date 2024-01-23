@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(f = 0; f < MAX_LOOP; f++) {",
+            "Faulty Code": "for(f = 0; f < MAX_LOOP-1; f++) {"
+        }
+    ]
+}

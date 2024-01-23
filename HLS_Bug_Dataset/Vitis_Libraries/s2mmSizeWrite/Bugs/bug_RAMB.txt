@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void s2mmSizeWrite(hls::stream<OUTSIZE_DT>& inSizeStream, OUTSIZE_DT* compressedSize, OUTSIZE_DT numItr, OUTSIZE_DT inputSize, OUTSIZE_DT blckSize) {",
+            "Faulty Code": "void s2mmSizeWrite(hls::stream<OUTSIZE_DT>& inSizeStream, #pragma HLS INTERFACE m_axi port=compressedSize offset=slave #pragma HLS INTERFACE s_axilite port=compressedSize bundle=control OUTSIZE_DT* compressedSize, OUTSIZE_DT numItr, OUTSIZE_DT inputSize, OUTSIZE_DT blckSize) {"
+        }
+    ]
+}

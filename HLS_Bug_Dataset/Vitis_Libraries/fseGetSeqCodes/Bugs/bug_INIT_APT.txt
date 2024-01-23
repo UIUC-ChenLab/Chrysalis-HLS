@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<33> extCodeword;",
+            "Faulty Code": "ap_uint<33> extCodeword; // uninitialized, should have an initial value if used before set in all paths"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition type=complete // Incorrect pragma for pipeline directive"
+        }
+    ]
+}

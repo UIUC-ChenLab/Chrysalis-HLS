@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void myfftwrapper(cmpxDataIn xn[FFT_LENGTH], cmpxDataIn xk[FFT_LENGTH], status_t& fft_status, config_t& fft_config) {\n#pragma HLS dataflow\n#pragma HLS INLINE recursive\n    hls::fft<config1>(xn, xk, &fft_status, &fft_config);\n}",
+            "Faulty Code": "void myfftwrapper(cmpxDataIn xn[FFT_LENGTH], cmpxDataIn xk[FFT_LENGTH], status_t& fft_status, config_t& fft_config) {\n#pragma HLS pipeline\n#pragma HLS dataflow\n#pragma HLS INLINE recursive\n    hls::fft<config1>(xn, xk, &fft_status, &fft_config);\n}"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "void inputdatamover(bool direction, config_t* config, cmpxDataIn in[FFT_LENGTH], cmpxDataIn out[FFT_LENGTH]) {\n    config->setDir(direction);\n    config->setSch(0x2AB);\nL0:\n    for (int i = 0; i < FFT_LENGTH; i++) {\n        out[i] = in[i];\n    }\n}",
+            "Faulty Code": "void inputdatamover(bool direction, config_t* config, cmpxDataIn in[FFT_LENGTH], cmpxDataIn out[FFT_LENGTH]) {\n#pragma HLS unroll factor=4\n    config->setDir(direction);\n    config->setSch(0x2AB);\nL0:\n    for (int i = 0; i < FFT_LENGTH; i++) {\n        out[i] = in[i];\n    }\n}"
+        }
+    ]
+}

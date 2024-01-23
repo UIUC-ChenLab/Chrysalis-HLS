@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (inVal.strobe == 0) break;",
+            "Faulty Code": "// if (inVal.strobe == 0) break;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "outVal.data[0] = tableU16[i];",
+            "Faulty Code": "outVal.data[0] = tableU16[i % 256]; // Assumes tableU16 is size 256 instead of 512"
+        }
+    ]
+}

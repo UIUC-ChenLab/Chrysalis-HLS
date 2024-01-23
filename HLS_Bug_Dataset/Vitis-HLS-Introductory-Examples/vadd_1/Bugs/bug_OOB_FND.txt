@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "v1_buffer[j] = in1[i + j];",
+            "Faulty Code": "v1_buffer[j + 1] = in1[i + j];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL FACTOR = 2",
+            "Faulty Code": "#pragma HLS UNROLL FACTOR = 3"
+        }
+    ]
+}

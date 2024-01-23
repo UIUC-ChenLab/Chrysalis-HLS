@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t tmp = inputSize;",
+            "Faulty Code": "uint32_t tmp = 0;"
+        }
+    ]
+}

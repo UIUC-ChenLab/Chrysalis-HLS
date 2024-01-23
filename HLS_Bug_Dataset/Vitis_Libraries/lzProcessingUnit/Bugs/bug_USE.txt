@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "offset = inValue.range(16, 1);",
+            "Faulty Code": "offset = inValue.range(15, 0);"
+        }
+    ]
+}

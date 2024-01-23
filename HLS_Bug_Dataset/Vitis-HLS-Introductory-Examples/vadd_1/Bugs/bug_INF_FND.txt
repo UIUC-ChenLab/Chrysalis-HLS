@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < size; i += BUFFER_SIZE) {",
+            "Faulty Code": "for (int i = 0; i <= size; i += BUFFER_SIZE) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL FACTOR = 2",
+            "Faulty Code": "#pragma HLS UNROLL FACTOR = 3"
+        }
+    ]
+}

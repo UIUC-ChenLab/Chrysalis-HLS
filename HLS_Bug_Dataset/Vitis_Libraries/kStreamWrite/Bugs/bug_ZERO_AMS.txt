@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t outSize = 0;",
+            "Faulty Code": "uint32_t outSize;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "outSize = dataSize.read();",
+            "Faulty Code": "#pragma HLS interface port=outSize mode=ap_none"
+        }
+    ]
+}

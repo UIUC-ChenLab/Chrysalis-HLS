@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "// filter the input, write 0 heapLength at end of block\n            filter<MAX_FREQ_DWIDTH>(inFreq, heap, &heapLength, maxCodes, i_symbolSize);",
+            "Faulty Code": "#pragma HLS dataflow\n            // filter the input, write 0 heapLength at end of block\n            filter<MAX_FREQ_DWIDTH>(inFreq, heap, &heapLength, maxCodes, i_symbolSize);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "void s2mm32(hls::stream<ap_uint<32> >& inStream, hls::stream<bool>& inStreamEos, ap_uint<32>* outChecksumData) {",
+            "Faulty Code": "#pragma HLS array_partition dim=2 variable=outChecksumData"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (!eos) outChecksumData[0] = inStream.read();",
+            "Faulty Code": "if (!eos) { outChecksumData[0] = inStream.read(); outChecksumData[0] = inStream.read(); }"
+        }
+    ]
+}

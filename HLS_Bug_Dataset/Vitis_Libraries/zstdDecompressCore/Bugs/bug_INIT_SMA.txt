@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "bool last = true;",
+            "Faulty Code": "bool last;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS STREAM variable = zstdCoreInStream depth = c_inStreamDepth",
+            "Faulty Code": "#pragma HLS INTERFACE port=zstdCoreInStream mode=bram"
+        }
+    ]
+}

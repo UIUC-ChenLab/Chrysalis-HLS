@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void pointer_stream_good(volatile dout_t *d_o, volatile din_t *d_i) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid pointer_stream_good(volatile dout_t *d_o, volatile din_t *d_i) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void pointer_stream_good(volatile dout_t *d_o, volatile din_t *d_i) {",
+            "Faulty Code": "#pragma HLS interface mode=ap_none port=d_i\nvoid pointer_stream_good(volatile dout_t *d_o, volatile din_t *d_i) {"
+        }
+    ]
+}

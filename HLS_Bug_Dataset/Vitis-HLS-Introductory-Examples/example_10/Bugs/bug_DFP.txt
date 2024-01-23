@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void example(mystream& A, mystream& B) {\n#pragma HLS INTERFACE axis port = A\n#pragma HLS INTERFACE axis port = B\n\n    data_t tmp_a;\n\n    do {\n        tmp_a = A.read();\n        data_t tmp_b;\n        tmp_b.data.real(tmp_a.data.real() + 5);\n        tmp_b.data.imag(tmp_a.data.imag() + 1);\n        B.write(tmp_b);\n    } while (!tmp_a.last);\n}",
+            "Faulty Code": "void example(mystream& A, mystream& B) {\n#pragma HLS INTERFACE axis port = A\n#pragma HLS INTERFACE axis port = B\n\n    data_t tmp_a;\n\n    do {\n        #pragma HLS dataflow\n        tmp_a = A.read();\n        data_t tmp_b;\n        tmp_b.data.real(tmp_a.data.real() + 5);\n        tmp_b.data.imag(tmp_a.data.imag() + 1);\n        B.write(tmp_b);\n    } while (!tmp_a.last);\n}"
+        }
+    ]
+}

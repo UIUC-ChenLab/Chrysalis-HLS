@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void bufferDownsizer(hls::stream<ap_uint<72> >& inStream, hls::stream<ap_uint<16> >& outStream, hls::stream<bool>& outEos) {",
+            "Faulty Code": "#pragma HLS interface port=outStream mode=ap_memory"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

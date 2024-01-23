@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (; nextVal.strobe != 0;) {",
+            "Faulty Code": "for (; nextVal.strobe == 0;) {"
+        }
+    ]
+}

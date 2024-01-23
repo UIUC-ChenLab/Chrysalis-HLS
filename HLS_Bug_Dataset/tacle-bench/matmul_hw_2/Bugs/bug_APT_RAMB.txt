@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS INTERFACE bram port=c",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=c depth=8"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "c[i][j] = tmp;",
+            "Faulty Code": "c[j][i] = tmp;"
+        }
+    ]
+}

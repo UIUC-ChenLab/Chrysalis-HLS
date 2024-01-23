@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = length_histogram complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = length_histogram cyclic factor=10"
+        }
+    ]
+}

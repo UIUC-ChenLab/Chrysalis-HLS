@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "first_codeword[i] = (first_codeword[i - 1] + length_histogram[i - 1]) << 1;",
+            "Faulty Code": "first_codeword[i] = 0;"
+        }
+    ]
+}

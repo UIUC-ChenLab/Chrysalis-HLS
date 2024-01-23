@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = axi2HlsStrm type = FIFO impl = BRAM",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable = axi2HlsStrm type = complete impl = BRAM"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS dataflow disable_start_propagation",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

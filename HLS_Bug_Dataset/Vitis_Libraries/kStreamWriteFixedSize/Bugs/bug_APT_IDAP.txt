@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=outKStream"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<ap_axiu<DATAWIDTH, 0, 0, 0> >& outKStream",
+            "Faulty Code": "#pragma HLS interface mode=ap_none port=outKStream"
+        }
+    ]
+}

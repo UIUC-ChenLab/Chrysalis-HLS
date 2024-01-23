@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void streamDistributor(hls::stream<bool>& inStream, hls::stream<bool> outStream[SLAVES]) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid streamDistributor(hls::stream<bool>& inStream, hls::stream<bool> outStream[SLAVES]) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int n = 0; n < SLAVES; n++) outStream[n] << i;",
+            "Faulty Code": "#pragma HLS pipeline\nfor (int n = 0; n < SLAVES; n++) outStream[n] << i;"
+        }
+    ]
+}

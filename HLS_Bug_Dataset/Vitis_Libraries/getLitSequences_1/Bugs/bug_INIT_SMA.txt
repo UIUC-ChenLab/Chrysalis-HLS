@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "bool resetDictFlag = true;",
+            "Faulty Code": "bool resetDictFlag;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<IntVectorStream_dt<32, 1> > compressedStream(\"compressedStream\");",
+            "Faulty Code": "#pragma HLS INTERFACE port=compressedStream bram"
+        }
+    ]
+}

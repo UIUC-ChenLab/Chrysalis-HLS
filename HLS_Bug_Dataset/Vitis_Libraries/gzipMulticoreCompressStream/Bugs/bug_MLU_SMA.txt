@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t i = 0; i < c_numBlocks; i++) {",
+            "Faulty Code": "for (uint8_t i = 0; i <= c_numBlocks; i++) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS STREAM variable = fileSizeStream depth = 32",
+            "Faulty Code": "#pragma HLS INTERFACE port=fileSizeStream bram"
+        }
+    ]
+}

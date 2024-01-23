@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "*(array_local + i) = din[i] >> 2;",
+            "Faulty Code": "*(array_local + i) = (int)(din[i]) >> 2;"
+        }
+    ]
+}

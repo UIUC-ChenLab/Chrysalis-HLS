@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "zstdCoreInStream << tmp.data;",
+            "Faulty Code": "zstdCoreInStream << tmp.data.range((PARALLEL_BYTE * 8) - 1, PARALLEL_BYTE * 8);"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "zstdCoreInStream << 0;",
+            "Faulty Code": "zstdCoreInStream << 1;"
+        }
+    ]
+}

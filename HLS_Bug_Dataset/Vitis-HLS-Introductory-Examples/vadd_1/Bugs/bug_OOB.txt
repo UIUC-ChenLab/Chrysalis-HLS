@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int j = 0; j < chunk_size; j++) {\n#pragma HLS LOOP_TRIPCOUNT min = c_chunk_sz max = c_chunk_sz\n    v1_buffer[j] = in1[i + j];\n}",
+            "Faulty Code": "for (int j = 0; j <= chunk_size; j++) {\n#pragma HLS LOOP_TRIPCOUNT min = c_chunk_sz max = c_chunk_sz\n    v1_buffer[j] = in1[i + j];\n}"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void bypass(int tmp1[128], int tmp2[128], int tmp3[128]) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid bypass(int tmp1[128], int tmp2[128], int tmp3[128]) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void bypass(int tmp1[128], int tmp2[128], int tmp3[128]) {",
+            "Faulty Code": "#pragma HLS interface port=ap_none\nvoid bypass(int tmp1[128], int tmp2[128], int tmp3[128]) {"
+        }
+    ]
+}

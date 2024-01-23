@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "tmp = outDataStream.read();",
+            "Faulty Code": "tmp = outDataStream.read(outSize); // Assuming outSize is mistakenly used as an index"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS unroll factor=2 // Incorrectly placed and incorrect factor for unrolling"
+        }
+    ]
+}

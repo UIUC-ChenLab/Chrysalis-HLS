@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (NUM_BLOCKS >= 8) {",
+            "Faulty Code": "if (NUM_BLOCKS > 8) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "lz77Compress<4, c_blockSize, c_freq_dwidth>(downStream[4], lz77Stream[4], lz77Tree[4]);",
+            "Faulty Code": "lz77Compress<4, c_blockSize, c_freq_dwidth>(downStream[5], lz77Stream[5], lz77Tree[5]);"
+        }
+    ]
+}

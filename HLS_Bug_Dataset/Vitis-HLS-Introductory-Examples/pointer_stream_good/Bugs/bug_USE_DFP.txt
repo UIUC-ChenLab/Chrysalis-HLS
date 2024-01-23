@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "acc += *d_i;",
+            "Faulty Code": "acc += (int8_t)*d_i;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void pointer_stream_good(volatile dout_t *d_o, volatile din_t *d_i) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid pointer_stream_good(volatile dout_t *d_o, volatile din_t *d_i) {"
+        }
+    ]
+}

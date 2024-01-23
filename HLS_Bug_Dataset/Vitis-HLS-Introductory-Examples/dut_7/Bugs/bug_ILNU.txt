@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned i = 0; i < 10; i++) {\n    int val = s_in[j].read();\n    s_out[j].write(val + 2);\n    sum += val;\n}",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (unsigned i = 0; i < 10; i++) {\n    int val = s_in[j].read();\n    s_out[j].write(val + 2);\n    sum += val;\n}"
+        }
+    ]
+}

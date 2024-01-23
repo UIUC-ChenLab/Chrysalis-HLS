@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "bitbuffer = (bitbuffer >> (len1 + len2)) | (bitBufferType)(inValue) << bits_cntr;",
+            "Faulty Code": "bitbuffer = (bitbuffer >> (len1 + len2)) | (bitBufferType)(inValue) << (bits_cntr - 1);"
+        }
+    ]
+}

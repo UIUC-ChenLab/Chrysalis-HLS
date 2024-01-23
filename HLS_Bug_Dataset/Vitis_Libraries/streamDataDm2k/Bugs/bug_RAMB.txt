@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void streamDataDm2k(hls::stream<ap_uint<STREAMDWIDTH> >& in,\n                    hls::stream<ap_axiu<STREAMDWIDTH, 0, 0, 0> >& inStream_dm,\n                    uint32_t inputSize) {",
+            "Faulty Code": "#pragma HLS interface m_axi port=inStream_dm offset=slave\nvoid streamDataDm2k(hls::stream<ap_uint<STREAMDWIDTH> >& in,\n                    hls::stream<ap_axiu<STREAMDWIDTH, 0, 0, 0> >& inStream_dm,\n                    uint32_t inputSize) {"
+        }
+    ]
+}

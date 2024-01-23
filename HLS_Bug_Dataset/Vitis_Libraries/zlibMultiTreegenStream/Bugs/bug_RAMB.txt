@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void zlibTreegenStreamLL(hls::stream<IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> >& lz77TreeStream,\n                         hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> >& hufCodeStream)",
+            "Faulty Code": "void zlibTreegenStreamLL(hls::stream<IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> >& lz77TreeStream,\n                         hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> >& hufCodeStream) {\n    #pragma HLS interface port=lz77TreeStream mode=m_axi\n    #pragma HLS interface port=hufCodeStream mode=m_axi\n}"
+        }
+    ]
+}

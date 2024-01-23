@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outEos << 0;",
+            "Faulty Code": "outEos << outEos.read(); // Incorrectly reading from stream instead of writing a fixed value"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS STREAM variable = axi2HlsStrm depth = 32",
+            "Faulty Code": "#pragma HLS INTERFACE port=axi2HlsStrm mode=ap_fifo // Incorrectly mapping a stream to an array-like port interface"
+        }
+    ]
+}

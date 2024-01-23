@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (auto i = 0; i < inputAlignedSize; i++) {",
+            "Faulty Code": "for (auto i = 0; i <= inputAlignedSize; i++) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for (auto b = 0; b < inputModSize; b++) {",
+            "Faulty Code": "#pragma HLS array_partition factor=4\nfor (auto b = 0; b < inputModSize; b++) {"
+        }
+    ]
+}

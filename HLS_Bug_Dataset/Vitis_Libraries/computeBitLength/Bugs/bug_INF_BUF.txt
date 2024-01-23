@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int16_t i = num_symbols - 2; i >= 0; --i) {",
+            "Faulty Code": "for (int16_t i = num_symbols - 2; i >= -1; --i) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "length_histogram[length] += children;",
+            "Faulty Code": "length_histogram[length + num_symbols] += children;"
+        }
+    ]
+}

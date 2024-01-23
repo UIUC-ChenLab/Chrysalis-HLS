@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int i = 0; i < tblVCnt; ++i) {\n#pragma HLS PIPELINE II = 1\n    litFseTable[i] = fseTableStream.read();\n}",
+            "Faulty Code": "for (int i = 0; i < tblVCnt; ++i) {\n#pragma HLS UNROLL factor=2\n    litFseTable[i] = fseTableStream.read();\n}"
+        }
+    ]
+}

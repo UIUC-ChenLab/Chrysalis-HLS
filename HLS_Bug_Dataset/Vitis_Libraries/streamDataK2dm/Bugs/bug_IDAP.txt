@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void streamDataK2dm(hls::stream<ap_uint<STREAMDWIDTH> >& out, hls::stream<bool>& bytEos, hls::stream<uint32_t>& dataSize, hls::stream<ap_axiu<STREAMDWIDTH, 0, 0, 0> >& dmOutStream) {",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=dmOutStream"
+        }
+    ]
+}

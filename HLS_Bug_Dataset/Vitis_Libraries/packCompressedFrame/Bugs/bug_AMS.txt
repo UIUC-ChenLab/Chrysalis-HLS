@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = frameHeaderBuf complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=frameHeaderBuf mode=ap_none"
+        }
+    ]
+}

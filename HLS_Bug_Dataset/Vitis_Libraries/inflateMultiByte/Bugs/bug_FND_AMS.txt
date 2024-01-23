@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS STREAM variable = axi2HlsStrm depth = 32",
+            "Faulty Code": "#pragma HLS STREAM variable = axi2HlsStrm depth = 34"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void inflateMultiByte(hls::stream<ap_axiu<16, 0, 0, 0> >& inaxistream, ...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=inaxistream mode=ap_none"
+        }
+    ]
+}

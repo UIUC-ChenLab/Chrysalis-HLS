@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<16> outVal;",
+            "Faulty Code": "ap_uint<16> outVal = inVal.range(23, 8);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "for (int i = 0; i < 2; i++) { #pragma HLS PIPELINE }"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (i != 512)",
+            "Faulty Code": "if (i != size)"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS cache port = in lines = 8 depth = 128",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=in"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (; nextVal.strobe != 0;) {",
+            "Faulty Code": "for (int i = 0; i < c_max_match_length - 1; i++) {"
+        }
+    ]
+}

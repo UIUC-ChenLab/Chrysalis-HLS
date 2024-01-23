@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "next_state = WRITE_TOKEN;",
+            "Faulty Code": "// next_state = WRITE_TOKEN; // Faulty omission after DIST_EXTRA state"
+        }
+    ]
+}

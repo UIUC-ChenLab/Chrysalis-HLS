@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "void pointer_basic(dio_t *d) {\n  static dio_t acc = 0;\n\n  acc += *d;\n  *d = acc;\n}",
+            "Faulty Code": "void pointer_basic(dio_t *d, int index) {\n  static dio_t acc = 0;\n\n  acc += d[index]; // Assuming index is within bounds\n  d[index] = acc;\n  // Potential out-of-bounds access if index is not properly checked or bounded\n}"
+        }
+    ]
+}

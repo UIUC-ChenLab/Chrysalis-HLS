@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "void example(char* a, char* b, char* c) {\n#pragma HLS INTERFACE s_axilite port = a bundle = BUS_A offset = 0x20\n#pragma HLS INTERFACE s_axilite port = b bundle = BUS_A offset = 0x28\n#pragma HLS INTERFACE s_axilite port = c bundle = BUS_A offset = 0x30\n#pragma HLS INTERFACE s_axilite port = return bundle = BUS_A\n\n    *c += *a + *b;\n}",
+            "Faulty Code": "void example(char* a, char* b, char* c) {\n#pragma HLS INTERFACE s_axilite port = a bundle = BUS_A offset = 0x20\n#pragma HLS INTERFACE s_axilite port = b bundle = BUS_A offset = 0x28\n#pragma HLS INTERFACE s_axilite port = c bundle = BUS_A offset = 0x30\n#pragma HLS INTERFACE s_axilite port = return bundle = BUS_A\n\n    c[1] += a[1] + b[1];\n}"
+        }
+    ]
+}

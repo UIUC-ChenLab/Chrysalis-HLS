@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void s2mm32(hls::stream<ap_uint<32> >& inStream, hls::stream<bool>& inStreamEos, ap_uint<32>* outChecksumData) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=outChecksumData mode=ap_none"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "if (!eos) outChecksumData[0] = inStream.read();",
+            "Faulty Code": "#pragma HLS PIPELINE\nif (!eos) outChecksumData[0] = inStream.read();"
+        }
+    ]
+}

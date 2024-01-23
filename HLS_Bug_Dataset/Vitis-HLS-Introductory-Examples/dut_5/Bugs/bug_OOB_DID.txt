@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (i != 512)",
+            "Faulty Code": "if (i != size)"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS INTERFACE m_axi port = in bundle = aximm depth = 1024",
+            "Faulty Code": "#pragma HLS array_partition variable=in dim=1"
+        }
+    ]
+}

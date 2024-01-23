@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "outReg = ((ap_uint<c_hfbsWidth>)v44[1] << blen2[0]) + v44[0];",
+            "Faulty Code": "outReg = ((ap_int<c_hfbsWidth>)v44[1] << blen2[0]) + v44[0];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS INTERFACE port=hfEncodedStream mode=m_axi"
+        }
+    ]
+}

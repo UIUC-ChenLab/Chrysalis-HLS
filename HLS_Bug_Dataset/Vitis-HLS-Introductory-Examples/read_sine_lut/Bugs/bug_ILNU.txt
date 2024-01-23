@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int k=0;k<4*LUTSIZE;k++) {",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (int k=0;k<4*LUTSIZE;k++) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static int addr = 0;",
+            "Faulty Code": "static int addr;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS STREAM depth = 512 type = fifo variable = int_fifo",
+            "Faulty Code": "#pragma HLS STREAM depth = 512 type = fifo variable = int_fifo2 factor = 3"
+        }
+    ]
+}

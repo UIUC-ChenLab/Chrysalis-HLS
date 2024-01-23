@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (uint16_t i = 1; i <= cur_maxBits; ++i) {",
+            "Faulty Code": "for (uint16_t i = 1; i != cur_maxBits; ++i) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "hfc.data[0].bitlength = (symCnt == 0 && k == 0) ? 1 : length;",
+            "Faulty Code": "hfc.data[0].bitlength = (symCnt == 0 && k == 0) ? 0 : length;"
+        }
+    ]
+}

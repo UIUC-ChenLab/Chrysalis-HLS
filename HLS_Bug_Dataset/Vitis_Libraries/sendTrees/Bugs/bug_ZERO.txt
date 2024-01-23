@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "maxCodesReg[1] = maxLdCodes.read();",
+            "Faulty Code": "maxCodesReg[1] = 0;"
+        }
+    ]
+}

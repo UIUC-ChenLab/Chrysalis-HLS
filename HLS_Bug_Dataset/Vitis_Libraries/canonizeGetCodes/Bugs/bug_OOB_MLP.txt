@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "first_codeword[i] = (first_codeword[i - 1] + length_histogram[i - 1]) << 1;",
+            "Faulty Code": "first_codeword[i] = (first_codeword[i - 1] + length_histogram[i]) << 1;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1\n#pragma HLS PIPELINE II = 1"
+        }
+    ]
+}

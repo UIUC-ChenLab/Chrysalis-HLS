@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=outVal.data factor=3"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "outVal.strobe = ((bitsInAcc > OUT_WIDTH - 1) ? c_outBytes : ((bitsInAcc + 7) >> 3));",
+            "Faulty Code": "#pragma HLS array_partition variable=outVal.data dim=3"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "static data_t buffer[NWORDS];",
+            "Faulty Code": "data_t buffer[NWORDS];"
+        }
+    ]
+}

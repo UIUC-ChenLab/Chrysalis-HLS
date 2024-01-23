@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "while (bits_cntr < 32 && (done == false)) {",
+            "Faulty Code": "bits_cntr = 0; while (bits_cntr < 32 && (done == false)) {"
+        }
+    ]
+}

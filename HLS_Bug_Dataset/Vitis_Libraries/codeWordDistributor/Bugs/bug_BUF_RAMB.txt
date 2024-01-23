@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outStreamMaxCode1 << maxCode;",
+            "Faulty Code": "outStreamMaxCode2 << maxCode;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS interface port=inStreamCode mode=read"
+        }
+    ]
+}

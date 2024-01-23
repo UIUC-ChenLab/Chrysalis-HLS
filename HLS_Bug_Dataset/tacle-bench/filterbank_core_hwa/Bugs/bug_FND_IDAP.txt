@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS RESOURCE variable=H core=RAM_1P_BRAM",
+            "Faulty Code": "#pragma HLS array_partition variable=H cyclic factor=5"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INTERFACE bram port=r",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=r"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "void bypass(int tmp1[128], int tmp2[128], int tmp3[128]) {",
+            "Faulty Code": "void bypass(int tmp1[256], int tmp2[256], int tmp3[256]) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void bypass(int tmp1[128], int tmp2[128], int tmp3[128]) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=tmp1 mode=ap_none"
+        }
+    ]
+}

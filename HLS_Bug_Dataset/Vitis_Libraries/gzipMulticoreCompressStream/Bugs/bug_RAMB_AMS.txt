@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = distStream type = FIFO impl = URAM",
+            "Faulty Code": "#pragma HLS INTERFACE port = distStream mode = m_axi"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<c_dwidth + c_size_dwidth> > coreStream(\"coreStream\");",
+            "Faulty Code": "#pragma HLS INTERFACE port=coreStream mode=ap_none"
+        }
+    ]
+}

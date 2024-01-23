@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<DSVectorStream_dt<HuffmanCode_dt<c_maxBits>, 1> > hufCodeStream[NUM_BLOCK],",
+            "Faulty Code": "#pragma HLS INTERFACE port=hufCodeStream mode=ap_none"
+        }
+    ]
+}

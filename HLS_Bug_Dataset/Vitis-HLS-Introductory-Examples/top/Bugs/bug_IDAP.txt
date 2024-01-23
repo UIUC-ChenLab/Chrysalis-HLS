@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS interface bram port = c",
+            "Faulty Code": "#pragma HLS interface ap_fifo port = c"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1\n            if (++count < max_count && curlen == nextlen) continue;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = digit_histogram complete dim = 1",
+            "Faulty Code": "#pragma HLS UNROLL FACTOR = 2\n            Symbol<MAX_FREQ_DWIDTH> val = heap[j];"
+        }
+    ]
+}

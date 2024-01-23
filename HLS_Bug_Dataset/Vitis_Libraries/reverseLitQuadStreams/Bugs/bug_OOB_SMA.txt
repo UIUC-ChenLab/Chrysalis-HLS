@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "litBuffer[0] = inVal.range(67, 4);",
+            "Faulty Code": "litBuffer[wIdx] = inVal.range(67, 4);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "outVal.range(3, 0) = 1;",
+            "Faulty Code": "#pragma HLS INTERFACE port=return mode=s_axilite"
+        }
+    ]
+}

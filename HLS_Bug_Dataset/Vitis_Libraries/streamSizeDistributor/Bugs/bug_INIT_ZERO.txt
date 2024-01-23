@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint32_t i = inStream.read();",
+            "Faulty Code": "uint32_t i; // Uninitialized variable i, which will be used later."
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if (i == 0) break;",
+            "Faulty Code": "if (i = 0) break; // Assignment instead of comparison, i is set to zero."
+        }
+    ]
+}

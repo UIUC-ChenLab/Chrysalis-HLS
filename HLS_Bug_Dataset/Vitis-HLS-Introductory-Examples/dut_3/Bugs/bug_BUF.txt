@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out[i].c = in[i].c;",
+            "Faulty Code": "out[i].c = in[i+N/2].c;"
+        }
+    ]
+}

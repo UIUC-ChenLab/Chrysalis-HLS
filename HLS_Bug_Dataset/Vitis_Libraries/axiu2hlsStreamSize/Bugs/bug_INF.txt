@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (ap_axiu<32, 0, 0, 0> tempSize = inSizeStream.read(); tempSize.data != 0; tempSize = inSizeStream.read())",
+            "Faulty Code": "for (ap_axiu<32, 0, 0, 0> tempSize = inSizeStream.read(); tempSize.data >= 0; tempSize = inSizeStream.read())"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<FREQ_DWIDTH> outputSize = ((readSize + BLOCK_SIZE) > inputSize) ? (inputSize - readSize) : BLOCK_SIZE;",
+            "Faulty Code": "int outputSize = ((readSize + BLOCK_SIZE) > inputSize) ? (inputSize - readSize) : BLOCK_SIZE;"
+        }
+    ]
+}

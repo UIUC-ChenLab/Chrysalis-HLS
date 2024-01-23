@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "bool eos = inStreamEos.read();",
+            "Faulty Code": "int eos = inStreamEos.read();"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "if (!eos) outChecksumData[0] = inStream.read();",
+            "Faulty Code": "#pragma HLS pipeline\nif (!eos) outChecksumData[0] = inStream.read();"
+        }
+    ]
+}

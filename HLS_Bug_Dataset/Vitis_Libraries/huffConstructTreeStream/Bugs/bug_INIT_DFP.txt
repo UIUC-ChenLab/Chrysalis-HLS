@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "Symbol<MAX_FREQ_DWIDTH> prev_sorting[SYMBOL_SIZE];",
+            "Faulty Code": "Symbol<MAX_FREQ_DWIDTH> prev_sorting[SYMBOL_SIZE]; // Missing initialization, leading to potential use of uninitialized values"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS dataflow",
+            "Faulty Code": "#pragma HLS dataflow // Incorrect placement, should be outside of the while loop but within the function scope"
+        }
+    ]
+}

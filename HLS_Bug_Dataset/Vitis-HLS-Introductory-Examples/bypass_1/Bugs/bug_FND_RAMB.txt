@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "void bypass(int tmp1[128], int tmp2[128], int tmp3[128]) {\n    for (int i = 0; i < 128; i++) {\n        tmp3[i] = tmp1[i] + tmp2[i];\n    }\n}",
+            "Faulty Code": "void bypass(int tmp1[128], int tmp2[128], int tmp3[128]) {\n    #pragma HLS array_partition variable=tmp1 cyclic factor=10\n    #pragma HLS array_partition variable=tmp2 cyclic factor=10\n    for (int i = 0; i < 128; i++) {\n        tmp3[i] = tmp1[i] + tmp2[i];\n    }\n}"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void bypass(int tmp1[128], int tmp2[128], int tmp3[128]) {\n    for (int i = 0; i < 128; i++) {\n        tmp3[i] = tmp1[i] + tmp2[i];\n    }\n}",
+            "Faulty Code": "void bypass(int tmp1[128], int tmp2[128], int tmp3[128]) {\n    #pragma HLS interface m_axi port=tmp1\n    #pragma HLS interface m_axi port=tmp2\n    for (int i = 0; i < 128; i+=4) {\n        tmp3[i] = tmp1[i] + tmp2[i];\n        tmp3[i+1] = tmp1[i+2] + tmp2[i+2];\n        tmp3[i+2] = tmp1[i+1] + tmp2[i+1];\n        tmp3[i+3] = tmp1[i+3] + tmp2[i+3];\n    }\n}"
+        }
+    ]
+}

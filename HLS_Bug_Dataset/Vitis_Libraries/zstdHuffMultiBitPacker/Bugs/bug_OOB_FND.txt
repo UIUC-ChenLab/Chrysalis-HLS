@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "vec1[k] = ((ap_uint<c_hf2cWidth>)inVal.data[(2 * k) + 1].code << inVal.data[2 * k].bitlen) + inVal.data[2 * k].code;",
+            "Faulty Code": "vec1[k + 1] = ((ap_uint<c_hf2cWidth>)inVal.data[(2 * k) + 1].code << inVal.data[2 * k].bitlen) + inVal.data[2 * k].code;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = vec1 type = complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = vec1 type = complete factor = 2"
+        }
+    ]
+}

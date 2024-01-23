@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for ( i = 0; i < DIM; i++ ) {\n\t#pragma HLS PIPELINE\n        a[ k ][ i ] /= pivot;\n    }",
+            "Faulty Code": "for ( i = 0; i <= DIM; i++ ) {\n\t#pragma HLS PIPELINE\n        a[ k ][ i ] /= pivot;\n    }"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "compute_add(inStream1, inStream2, outStream, vSize);",
+            "Faulty Code": "compute_add(#pragma HLS pipeline inStream1, inStream2, outStream, vSize);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (uint16_t i = 1; i <= cur_maxBits; ++i) {",
+            "Faulty Code": "for (uint16_t i = 1; i < cur_maxBits; ++i) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "first_codeword[0] = 0;",
+            "Faulty Code": "// first_codeword[0] = 0;"
+        }
+    ]
+}

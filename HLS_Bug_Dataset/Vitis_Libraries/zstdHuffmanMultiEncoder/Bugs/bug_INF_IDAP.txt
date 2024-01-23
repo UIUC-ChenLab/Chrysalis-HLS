@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (inVal.range(3, 0) == 0) break;",
+            "Faulty Code": "if (inVal.range(3, 0) != 0) break;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = hfcTable type = ram_2p impl = lutram",
+            "Faulty Code": "#pragma HLS INTERFACE port = hfcTable mode = ap_fifo"
+        }
+    ]
+}

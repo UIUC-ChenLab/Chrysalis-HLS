@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint32_t sCnt = 1 + ((input_size - 1) / factor);",
+            "Faulty Code": "uint32_t sCnt = input_size / factor;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void kStreamRead(hls::stream<ap_axiu<DATAWIDTH, 0, 0, 0> >& inKStream, hls::stream<ap_uint<DATAWIDTH> >& readStream, uint32_t input_size) {",
+            "Faulty Code": "void kStreamRead(hls::stream<ap_axiu<DATAWIDTH, 0, 0, 0> > inKStream, hls::stream<ap_uint<DATAWIDTH> > readStream, uint32_t input_size) {"
+        }
+    ]
+}

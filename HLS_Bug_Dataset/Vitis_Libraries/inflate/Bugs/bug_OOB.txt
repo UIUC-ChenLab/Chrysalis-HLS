@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outEos << 0;",
+            "Faulty Code": "outEos.write(0); outEos.write(1); // Accidentally writing two elements instead of one"
+        }
+    ]
+}

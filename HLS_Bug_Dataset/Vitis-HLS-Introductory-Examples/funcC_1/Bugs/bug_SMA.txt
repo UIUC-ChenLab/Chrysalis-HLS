@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void funcC(data_t* in, data_t* out) {",
+            "Faulty Code": "#pragma HLS interface port=in bram"
+        }
+    ]
+}

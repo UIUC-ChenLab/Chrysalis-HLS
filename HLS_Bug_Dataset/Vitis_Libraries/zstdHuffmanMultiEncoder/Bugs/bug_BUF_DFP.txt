@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outVal.data[k] = hfcTable[tblIdx][inLit.range(7 + (k * 8), k * 8)];",
+            "Faulty Code": "outVal.data[k] = hfcTable[tblIdx + c_hftCount][inLit.range(7 + (k * 8), k * 8)];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

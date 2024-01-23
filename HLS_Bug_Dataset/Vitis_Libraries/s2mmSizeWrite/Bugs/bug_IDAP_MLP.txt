@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=inSizeStream"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "for (auto z = 0; z < (numItr - 1) * blckNum; z++) {\n#pragma HLS PIPELINE\n    inSizeStream.read();\n    if (TUSR_DWIDTH != 0) inSizeStream.read();\n}"
+        }
+    ]
+}

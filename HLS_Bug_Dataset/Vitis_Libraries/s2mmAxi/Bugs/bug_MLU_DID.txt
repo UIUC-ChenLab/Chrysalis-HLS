@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (auto i = 0; i < BURST_SIZE; i++) {",
+            "Faulty Code": "for (auto i = 0; i <= BURST_SIZE; i++) {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=out dim=1"
+        }
+    ]
+}

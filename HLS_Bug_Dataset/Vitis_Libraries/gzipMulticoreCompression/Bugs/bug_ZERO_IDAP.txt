@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "constexpr int c_freq_dwidth = getDataPortWidth(c_blockSize);",
+            "Faulty Code": "int c_freq_dwidth = 0; // assuming getDataPortWidth will initialize"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable = distStream depth = c_bufferFifoDepth",
+            "Faulty Code": "#pragma HLS STREAM variable = distStream depth = c_bufferFifoDepth mode=ap_fifo"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void inner(data_t A[SZ], hls::stream<data_t>& stream_in, data_t* out) {",
+            "Faulty Code": "void inner(data_t A[SZ], hls::stream<data_t>& stream_in, data_t* out) {\n#pragma HLS pipeline"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (auto z = 0; z < blckNum; z++) {",
+            "Faulty Code": "#pragma HLS array_partition variable=compressedSize factor=3 cyclic"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "OUTSIZE_DT* compressedSize,",
+            "Faulty Code": "#pragma HLS interface port=compressedSize mode=ap_none"
+        }
+    ]
+}

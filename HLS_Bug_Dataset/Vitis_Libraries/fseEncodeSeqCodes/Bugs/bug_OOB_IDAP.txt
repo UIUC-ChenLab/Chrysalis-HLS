@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint16_t fseNextStateTableLL[512];",
+            "Faulty Code": "uint16_t fseNextStateTableLL[256]; // Incorrect array size leading to OOB"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=seqCodeStream"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "inputWindow.range((i + c_parallelByte) * 8 - 1, i * 8) = inStream.read();",
+            "Faulty Code": "inputWindow.range((i + c_parallelByte) * 9 - 1, i * 9) = inStream.read();"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE"
+        }
+    ]
+}

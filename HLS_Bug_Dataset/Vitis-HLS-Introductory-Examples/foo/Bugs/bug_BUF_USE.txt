@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "return inval + incr;",
+            "Faulty Code": "return inval + (int)incr;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "return inval + incr;",
+            "Faulty Code": "char buf[2]; buf[0] = inval; buf[1] = incr; return buf[0] + buf[1];"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (uint32_t j = 0; j < BURST_SIZE; j++) {",
+            "Faulty Code": "#pragma HLS array_partition variable=temp factor=3 complete"
+        }
+    ]
+}

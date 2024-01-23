@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = present_window complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = present_window dim=2 complete"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (uint16_t i = 0; i < LEFT_BYTES; ++i) {",
+            "Faulty Code": "for (uint16_t i = 1; i < LEFT_BYTES; ++i) {"
+        }
+    ]
+}

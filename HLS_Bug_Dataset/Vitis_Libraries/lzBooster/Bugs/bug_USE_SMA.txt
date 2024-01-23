@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "uint8_t tLen = inValue.range(15, 8);",
+            "Faulty Code": "int8_t tLen = inValue.range(15, 8);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<32> > lclBufStream(\"lclBufStream\");",
+            "Faulty Code": "ap_uint<32> lclBufStream;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static int16_t window_coeff[WINDOW_LEN];",
+            "Faulty Code": "static int16_t window_coeff[WINDOW_LEN] = {0};"
+        }
+    ]
+}

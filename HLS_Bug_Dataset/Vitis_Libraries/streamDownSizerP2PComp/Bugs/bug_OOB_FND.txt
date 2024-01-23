@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<PACK_WIDTH> tmpValue = inBuffer.range((idx + 1) * PACK_WIDTH - 1, idx * PACK_WIDTH);",
+            "Faulty Code": "ap_uint<PACK_WIDTH> tmpValue = inBuffer.range((idx + 1) * PACK_WIDTH, idx * PACK_WIDTH);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "outStreamSize << size;",
+            "Faulty Code": "outStreamSize << sizeOutputV;"
+        }
+    ]
+}

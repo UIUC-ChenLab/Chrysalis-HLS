@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (; i < allignedwidth * BURST_SIZE; i += BURST_SIZE) {",
+            "Faulty Code": "for (; i <= allignedwidth * BURST_SIZE; i += BURST_SIZE) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "const int inSize_gmemwidth = (inputSize - 1) / c_word_size + 1;",
+            "Faulty Code": "const int inSize_gmemwidth = ((int)inputSize - 1) / c_word_size + 1;"
+        }
+    ]
+}

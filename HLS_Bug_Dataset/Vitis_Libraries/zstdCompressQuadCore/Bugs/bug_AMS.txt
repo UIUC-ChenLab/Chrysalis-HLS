@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS STREAM variable = inBlockStream depth = c_dataUpSDepth",
+            "Faulty Code": "#pragma HLS INTERFACE port=inBlockStream mode=ap_none"
+        }
+    ]
+}

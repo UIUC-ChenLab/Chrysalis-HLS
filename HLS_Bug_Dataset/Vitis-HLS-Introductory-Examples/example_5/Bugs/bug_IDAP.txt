@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INTERFACE axis register_mode = both register port = inStreamTop",
+            "Faulty Code": "#pragma HLS INTERFACE bram port = inStreamTop"
+        }
+    ]
+}

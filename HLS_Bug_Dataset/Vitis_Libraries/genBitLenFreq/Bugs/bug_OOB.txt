@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "blFreq[curlen] += count;",
+            "Faulty Code": "blFreq[curlen+1] += count;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void filterRadixSortPart1(hls::stream<IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> >& inFreqStream, ...)",
+            "Faulty Code": "void filterRadixSortPart1(hls::stream<IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> >& inFreqStream, ...){\n#pragma HLS interface m_axi port=inFreqStream offset=slave bundle=gmem0\n...}"
+        }
+    ]
+}

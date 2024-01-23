@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out[i] = in1[i] + in2[i] * 2;",
+            "Faulty Code": "out[i] = in1[i + N/2] + in2[i] * 2; // Assuming N is even and in1 buffer is mistakenly accessed from the wrong half"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS array_partition variable=in1 cyclic factor=25 // Assuming N is not a multiple of 25, which would be a mistake"
+        }
+    ]
+}

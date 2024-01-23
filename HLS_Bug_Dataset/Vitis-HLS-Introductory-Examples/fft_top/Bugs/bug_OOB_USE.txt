@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int i = 0; i < FFT_LENGTH; i++) {",
+            "Faulty Code": "for (int i = 0; i <= FFT_LENGTH; i++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "*ovflo = status_in->getOvflo() & 0x1;",
+            "Faulty Code": "*ovflo = (bool)(status_in->getOvflo() & 0x100);"
+        }
+    ]
+}

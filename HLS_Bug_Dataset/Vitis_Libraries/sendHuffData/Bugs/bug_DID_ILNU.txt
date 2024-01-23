@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "outHufVal.data[0] = inHfVal.data[idx++];",
+            "Faulty Code": "#pragma HLS array_partition variable=outHufVal.data dim=2 complete"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

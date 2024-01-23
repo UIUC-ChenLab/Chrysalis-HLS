@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=array_codes factor=3"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "bitbuffer = (bitbuffer >> (len1 + len2)) | (bitBufferType)(inValue) << bits_cntr;",
+            "Faulty Code": "bitbuffer = (bitbuffer >> (len1 + len2)) | ((bitBufferType)(inValue) << (bits_cntr-1));"
+        }
+    ]
+}

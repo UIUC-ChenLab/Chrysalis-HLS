@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "acc += *(d_i + 2);",
+            "Faulty Code": "acc += *(d_i + 1); // Error: Manual unrolling duplicates the second access instead of third"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "void pointer_stream_good(volatile dout_t *d_o, volatile din_t *d_i) {\n  din_t acc = 0;\n\n  acc += *d_i;\n  acc += *(d_i + 1);\n  *d_o = acc;\n  acc += *(d_i + 2);\n  acc += *(d_i + 3);\n  *(d_o + 1) = acc;\n}",
+            "Faulty Code": "void pointer_stream_good(volatile dout_t *d_o, volatile din_t *d_i) {\n  #pragma HLS unroll factor=2 // Error: Incorrectly placed pragma for manual loop unrolling which does not exist\n  din_t acc = 0;\n\n  acc += *d_i;\n  acc += *(d_i + 1);\n  *d_o = acc;\n  acc += *(d_i + 2);\n  acc += *(d_i + 3);\n  *(d_o + 1) = acc;\n}"
+        }
+    ]
+}

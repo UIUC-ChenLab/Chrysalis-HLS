@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "static hls::stream<uint32_t> inStream1(\"input_stream_1\");",
+            "Faulty Code": "hls::stream<uint32_t> inStream1;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS INTERFACE m_axi port = in1 bundle = gmem0 depth = 4096",
+            "Faulty Code": "#pragma HLS INTERFACE axis port = in1 depth = 4096"
+        }
+    ]
+}

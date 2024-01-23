@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "acc += *(d + i + 1);",
+            "Faulty Code": "acc += *(d + i + 4); // Accessing out of bounds when i is 0 to 3"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "static int acc = 0;",
+            "Faulty Code": "static int acc; // Uninitialized static variable"
+        }
+    ]
+}

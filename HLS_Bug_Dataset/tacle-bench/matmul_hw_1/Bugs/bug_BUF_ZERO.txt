@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "p_b = &b[k*size];",
+            "Faulty Code": "p_b = &b[(k+1)*size];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "tmp = 0;",
+            "Faulty Code": "tmp;"
+        }
+    ]
+}

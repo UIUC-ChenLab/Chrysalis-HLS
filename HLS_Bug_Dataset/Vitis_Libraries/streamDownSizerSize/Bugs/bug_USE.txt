@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "outSizeStream << inSize;",
+            "Faulty Code": "outSizeStream << (uint32_t)inSize;"
+        }
+    ]
+}

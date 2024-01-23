@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "y[ i ] = 0;",
+            "Faulty Code": "// y[ i ] = 0; // This line is commented out and the variable 'y' is not initialized to zero."
+        }
+    ]
+}

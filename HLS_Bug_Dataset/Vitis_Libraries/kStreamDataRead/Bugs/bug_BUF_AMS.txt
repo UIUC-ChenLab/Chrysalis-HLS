@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "tmp = inKStream.read();",
+            "Faulty Code": "tmp = inKStream.read(); // Assuming this read could be from the wrong half of a split buffer if inKStream was previously partitioned and not managed correctly"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "readStreamSize << tmpSize.data;",
+            "Faulty Code": "#pragma HLS interface port=readStreamSize mode=ap_none // Incorrectly mapping an array/stream to a scalar interface"
+        }
+    ]
+}

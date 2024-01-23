@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = A type = RAM_2P impl = BRAM",
+            "Faulty Code": "#pragma HLS array_partition variable = A dim = 2"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int test(int i) {",
+            "Faulty Code": "#pragma HLS interface port=A bram"
+        }
+    ]
+}

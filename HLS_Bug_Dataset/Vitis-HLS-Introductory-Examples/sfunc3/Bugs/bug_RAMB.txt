@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void sfunc3(din_t inrun[N], din_t oval[N]) {",
+            "Faulty Code": "void sfunc3(din_t inrun[N], din_t oval[N]) { #pragma HLS interface m_axi port=inrun mode=read"
+        }
+    ]
+}

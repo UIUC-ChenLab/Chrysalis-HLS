@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outValue = local_buf[match_loc % HISTORY_SIZE];",
+            "Faulty Code": "outValue = local_buf[match_loc];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "outStream << outValue;",
+            "Faulty Code": "outStream.write(outValue);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "bool done = false;",
+            "Faulty Code": "bool done = true;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = hfcTable type = ram_2p impl = lutram",
+            "Faulty Code": "#pragma HLS INTERFACE port=hfcTable mode=ap_none"
+        }
+    ]
+}

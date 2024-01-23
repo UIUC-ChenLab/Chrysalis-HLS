@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint16_t n = 0; n < i_symSize; ++n) {",
+            "Faulty Code": "for (uint16_t n = 0; n <= i_symSize; n += 2) {"
+        }
+    ]
+}

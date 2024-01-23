@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "bits_cntr -= n_bits;",
+            "Faulty Code": "bits_cntr -= (int)n_bits;"
+        }
+    ]
+}

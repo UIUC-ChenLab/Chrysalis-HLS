@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "while (keep) {",
+            "Faulty Code": "for (int i = 0; i < 8 - 1; i++) { // assuming PARALLEL_BYTES is 1 for simplicity"
+        }
+    ]
+}

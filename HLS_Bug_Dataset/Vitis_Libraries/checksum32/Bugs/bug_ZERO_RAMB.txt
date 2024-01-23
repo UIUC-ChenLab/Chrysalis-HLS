@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "adlerStrm << 1;",
+            "Faulty Code": "ap_uint<32> adler = 1; // Assuming this should be a variable with initial value set to 1\nadlerStrm << adler;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void adler32(hls::stream<ap_uint<W * 8> >& inStrm,\n             hls::stream<ap_uint<5> >& inPackLenStrm,\n             hls::stream<ap_uint<32> >& outStrm) {",
+            "Faulty Code": "void adler32(hls::stream<ap_uint<W * 8> >& inStrm, // Assuming 'W' is meant for width which should be a template parameter\n             hls::stream<ap_uint<32> >& outStrm) {\n#pragma HLS interface m_axi port=inStrm offset=slave bundle=gmem"
+        }
+    ]
+}

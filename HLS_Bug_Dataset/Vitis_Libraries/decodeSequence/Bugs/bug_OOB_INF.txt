@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "uint32_t fseTableLL[512];",
+            "Faulty Code": "uint32_t fseTableLL[256];"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "while (seqValidStream.read()) {",
+            "Faulty Code": "while (true) {"
+        }
+    ]
+}

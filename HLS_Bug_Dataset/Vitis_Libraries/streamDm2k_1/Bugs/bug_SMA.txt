@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void streamDm2k(hls::stream<ap_uint<STREAMDWIDTH> >& in, ...",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=in"
+        }
+    ]
+}

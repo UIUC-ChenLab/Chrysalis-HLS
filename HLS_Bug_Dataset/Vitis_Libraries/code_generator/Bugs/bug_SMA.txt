@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void code_generator(uint8_t* weights, ...)",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=accuracyLog"
+        }
+    ]
+}

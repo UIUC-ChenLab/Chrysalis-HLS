@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (x = 0; x < width; x++) {",
+            "Faulty Code": "#pragma HLS dataflow\n    for (x = 0; x < width; x++) {"
+        }
+    ]
+}

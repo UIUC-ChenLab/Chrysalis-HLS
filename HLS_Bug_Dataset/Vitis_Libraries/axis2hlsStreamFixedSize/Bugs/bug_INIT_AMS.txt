@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "qdma_axis<STREAMDWIDTH, 0, 0, 0> t1 = inputAxiStream.read();",
+            "Faulty Code": "qdma_axis<STREAMDWIDTH, 0, 0, 0> t1; t1 = inputAxiStream.read();"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "inputStream << tmpOut;",
+            "Faulty Code": "inputStream.write(tmpOut);"
+        }
+    ]
+}

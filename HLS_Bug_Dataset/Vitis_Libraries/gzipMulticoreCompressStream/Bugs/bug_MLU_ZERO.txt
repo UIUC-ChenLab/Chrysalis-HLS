@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (NUM_BLOCKS >= 8) {\n        lz77Compress<4, c_blockSize, c_freq_dwidth>(downStream[4], lz77Stream[4], lz77Tree[4]);\n        lz77Compress<5, c_blockSize, c_freq_dwidth>(downStream[5], lz77Stream[5], lz77Tree[5]);\n        lz77Compress<6, c_blockSize, c_freq_dwidth>(downStream[6], lz77Stream[6], lz77Tree[6]);\n        lz77Compress<7, c_blockSize, c_freq_dwidth>(downStream[7], lz77Stream[7], lz77Tree[7]);\n    }",
+            "Faulty Code": "if (NUM_BLOCKS >= 8) {\n        lz77Compress<4, c_blockSize, c_freq_dwidth>(downStream[4], lz77Stream[4], lz77Tree[4]);\n        lz77Compress<6, c_blockSize, c_freq_dwidth>(downStream[6], lz77Stream[6], lz77Tree[6]);\n        lz77Compress<7, c_blockSize, c_freq_dwidth>(downStream[7], lz77Stream[7], lz77Tree[7]);\n    }"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "hls::stream<ap_uint<32> > adlerStrm;\n#pragma HLS STREAM variable = endInPackLenStrm depth = 4\n#pragma HLS STREAM variable = endOutStrm depth = 4\n#pragma HLS STREAM variable = adlerStrm depth = 4\n\nfor (int i = 0; i < NUMCORES; i++) {\n    endInPackLenStrm << false;\n    endInPackLenStrm << true;\n    adlerStrm << 1;\n    xf::security::adler32<W>(adlerStrm, inStrm, inPackLenStrm, endInPackLenStrm, outStrm, endOutStrm);\n    endOutStrm.read();\n    endOutStrm.read();\n}",
+            "Faulty Code": "hls::stream<ap_uint<32> > adlerStrm;\n#pragma HLS STREAM variable = endInPackLenStrm depth = 4\n#pragma HLS STREAM variable = endOutStrm depth = 4\n#pragma HLS STREAM variable = adlerStrm depth = 4\n\nfor (int i = 0; i < NUMCORES; i++) {\n    endInPackLenStrm << false;\n    endInPackLenStrm << true;\n    adlerStrm << 0; // Should be 1 as initial adler value\n    xf::security::adler32<W>(adlerStrm, inStrm, inPackLenStrm, endInPackLenStrm, outStrm, endOutStrm);\n    endOutStrm.read();\n    endOutStrm.read();\n}"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM depth = 512 type = fifo variable = int_fifo",
+            "Faulty Code": "#pragma HLS STREAM depth = 512 type = fifo variable = int_fifo dim = 2"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < N / 2; i++) {",
+            "Faulty Code": "for (int i = 0; i <= N / 2; i++) {"
+        }
+    ]
+}

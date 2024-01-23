@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "din_t calc = 0;",
+            "Faulty Code": "din_t calc;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "calc = (inrun[i] * inrun[i]) / (i + 1);",
+            "Faulty Code": "calc = (inrun[i] * inrun[i]) / i;"
+        }
+    ]
+}

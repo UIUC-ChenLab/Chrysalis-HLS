@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (uint16_t k = 0; k < cur_symSize; ++k) {",
+            "Faulty Code": "for (uint16_t k = 0; k <= cur_symSize; ++k) {"
+        }
+    ]
+}

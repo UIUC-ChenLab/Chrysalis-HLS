@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = inflateStrm type = fifo impl = BRAM",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable = inflateStrm type = fifo impl = SRL"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void adler32(hls::stream<ap_uint<W * 8> >& inStrm, hls::stream<ap_uint<5> >& inPackLenStrm, hls::stream<ap_uint<32> >& outStrm) {",
+            "Faulty Code": "void adler32(ap_uint<W * 8> inStrm[NUMCORES], ap_uint<5> inPackLenStrm[NUMCORES], ap_uint<32> outStrm[NUMCORES]) {"
+        }
+    ]
+}

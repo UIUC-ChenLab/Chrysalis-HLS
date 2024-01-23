@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "tmpOut = t1.get_data();",
+            "Faulty Code": "tmpOut = (ap_int<STREAMDWIDTH>)t1.get_data(); // Assuming t1.get_data() returns ap_uint<STREAMDWIDTH>"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=inputStream factor=3 // Assuming inputSize is not divisible by 3"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS dependence variable = local_mem inter false",
+            "Faulty Code": "#pragma HLS array_partition variable=local_mem type=complete"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS STREAM variable = lclBufStream depth = c_fifo_depth",
+            "Faulty Code": "#pragma HLS interface m_axi port=lclBufStream"
+        }
+    ]
+}

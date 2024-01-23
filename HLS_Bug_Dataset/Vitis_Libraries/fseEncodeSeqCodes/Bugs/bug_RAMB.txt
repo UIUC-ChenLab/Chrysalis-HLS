@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "// Internal tables\n    ap_uint<36> fseStateBitsTableLL[512];\n    uint16_t fseNextStateTableLL[512];\n    ap_uint<36> fseStateBitsTableML[512];\n    uint16_t fseNextStateTableML[512];\n    ap_uint<36> fseStateBitsTableOF[256];\n    uint16_t fseNextStateTableOF[256];",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=fseStateBitsTableLL depth=512 // Incorrect pragma, should be placed outside the function\n#pragma HLS INTERFACE m_axi port=fseNextStateTableLL depth=512 // Incorrect pragma, should be placed outside the function\n#pragma HLS INTERFACE m_axi port=fseStateBitsTableML depth=512 // Incorrect pragma, should be placed outside the function\n#pragma HLS INTERFACE m_axi port=fseNextStateTableML depth=512 // Incorrect pragma, should be placed outside the function\n#pragma HLS INTERFACE m_axi port=fseStateBitsTableOF depth=256 // Incorrect pragma, should be placed outside the function\n#pragma HLS INTERFACE m_axi port=fseNextStateTableOF depth=256 // Incorrect pragma, should be placed outside the function\n// Internal tables\n    ap_uint<36> fseStateBitsTableLL[512];\n    uint16_t fseNextStateTableLL[512];\n    ap_uint<36> fseStateBitsTableML[512];\n    uint16_t fseNextStateTableML[512];\n    ap_uint<36> fseStateBitsTableOF[256];\n    uint16_t fseNextStateTableOF[256];"
+        }
+    ]
+}

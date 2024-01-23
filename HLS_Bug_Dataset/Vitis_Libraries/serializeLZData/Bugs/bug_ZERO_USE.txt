@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "seqVal = seqStream[cIdx].read();",
+            "Faulty Code": "seqVal.strobe = 0; seqVal = seqStream[cIdx].read();"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "seqFreqVal = seqFreqStream[cIdx].read();",
+            "Faulty Code": "seqFreqVal.data = (int8_t)seqFreqStream[cIdx].read().data;"
+        }
+    ]
+}

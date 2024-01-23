@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS interface axis port = in",
+            "Faulty Code": "#pragma HLS interface s_axilite port = in"
+        }
+    ]
+}

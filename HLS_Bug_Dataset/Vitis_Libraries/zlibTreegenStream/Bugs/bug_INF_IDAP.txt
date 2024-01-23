@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (!last) {",
+            "Faulty Code": "while (last) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable = heapStream depth = 320",
+            "Faulty Code": "#pragma HLS INTERFACE mode=s_axilite port=heapStream"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outStream[vid] << in[rIdx + midx];",
+            "Faulty Code": "outStream[vid] << in[rIdx + NUM_BLOCKS + midx];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "uint32_t burstSize = (pendingWords > BURST_SIZE) ? BURST_SIZE : pendingWords;",
+            "Faulty Code": "#pragma HLS array_partition variable=outStream factor=3"
+        }
+    ]
+}

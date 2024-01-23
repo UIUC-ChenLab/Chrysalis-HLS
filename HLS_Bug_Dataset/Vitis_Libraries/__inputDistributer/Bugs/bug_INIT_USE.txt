@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint32_t dataSize = 0;",
+            "Faulty Code": "uint32_t dataSize;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "metaVal.data[0] = dataSize >> 16;",
+            "Faulty Code": "metaVal.data[0] = (int16_t)dataSize >> 16;"
+        }
+    ]
+}

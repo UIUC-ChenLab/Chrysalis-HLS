@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS STREAM variable = axi2HlsStrm depth = 32",
+            "Faulty Code": "#pragma HLS STREAM variable = axi2HlsStrm depth = 30"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = axi2HlsStrm type = FIFO impl = SRL",
+            "Faulty Code": "#pragma HLS INTERFACE mode = ap_fifo port = axi2HlsStrm"
+        }
+    ]
+}

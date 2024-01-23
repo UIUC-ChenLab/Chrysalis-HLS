@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "const int hctMeta[2] = {c_litCodeCount, c_dstCodeCount};",
+            "Faulty Code": "#pragma HLS array_partition variable=hctMeta factor=3 complete"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

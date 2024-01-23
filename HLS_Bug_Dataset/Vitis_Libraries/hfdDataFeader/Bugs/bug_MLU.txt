@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if ((wsi == streamCnt) || (wsi - rsi > 1)) fetchMode = 0;",
+            "Faulty Code": "if ((wsi == streamCnt) || (wsi - rsi >= 1)) fetchMode = 0;"
+        }
+    ]
+}

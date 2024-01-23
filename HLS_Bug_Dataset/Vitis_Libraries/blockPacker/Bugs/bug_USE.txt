@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "outStream << lcl_buffer.range(DATAWIDTH - 1, 0);",
+            "Faulty Code": "outStream << (int)lcl_buffer.range(DATAWIDTH - 1, 0);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void axis2hlsStream(hls::stream<qdma_axis<STREAMDWIDTH, 0, 0, 0> >& inAxiStream, hls::stream<ap_uint<STREAMDWIDTH> >& outStream)",
+            "Faulty Code": "void axis2hlsStream(hls::stream<qdma_axis<STREAMDWIDTH, 0, 0, 0> > inAxiStream, hls::stream<ap_uint<STREAMDWIDTH> > outStream)"
+        }
+    ]
+}

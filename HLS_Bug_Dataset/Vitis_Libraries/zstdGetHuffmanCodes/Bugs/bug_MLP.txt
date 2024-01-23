@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (uint32_t k = 0; k < num_symbols; ++k) {\n#pragma HLS LOOP_TRIPCOUNT max = 286 min = 256 avg = 286\n",
+            "Faulty Code": "for (uint32_t k = 0; k < num_symbols; ++k) {\n#pragma HLS PIPELINE II = 1\n#pragma HLS LOOP_TRIPCOUNT max = 286 min = 256 avg = 286\n"
+        }
+    ]
+}

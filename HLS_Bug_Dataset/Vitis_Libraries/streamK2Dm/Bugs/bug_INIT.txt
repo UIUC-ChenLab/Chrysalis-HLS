@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_axiu<PARALLEL_BYTES * 8, TUSR_DWIDTH, 0, 0> inValue;",
+            "Faulty Code": "ap_axiu<PARALLEL_BYTES * 8, TUSR_DWIDTH, 0, 0> inValue = dmInStream.read();"
+        }
+    ]
+}

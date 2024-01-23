@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS aggregate variable = distTree",
+            "Faulty Code": "#pragma HLS interface port=distTree mode=m_axi"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<IntVectorStream_dt<32, 1> > encodedOutStream(\"encodedOutStream\");",
+            "Faulty Code": "#pragma HLS interface port=encodedOutStream bram"
+        }
+    ]
+}

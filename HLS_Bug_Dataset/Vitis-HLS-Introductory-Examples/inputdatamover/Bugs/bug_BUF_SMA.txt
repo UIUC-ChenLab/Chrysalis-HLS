@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out[i] = in[i];",
+            "Faulty Code": "out[i] = in[i + FFT_LENGTH/2];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void inputdatamover(bool direction, config_t* config, cmpxDataIn in[FFT_LENGTH], cmpxDataIn out[FFT_LENGTH]) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=direction bram"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t output_size[NUM_BLOCK]",
+            "Faulty Code": "uint32_t output_size[NUM_BLOCK] = {0}"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void hlsLz4(const data_t* in, ...",
+            "Faulty Code": "#pragma HLS INTERFACE port=in mode=bram"
+        }
+    ]
+}

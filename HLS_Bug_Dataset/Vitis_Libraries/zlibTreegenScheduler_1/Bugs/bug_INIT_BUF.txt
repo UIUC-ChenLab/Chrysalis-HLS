@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> inVal;",
+            "Faulty Code": "IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> inVal = lz77InTree[0].read(); // Assuming this is the incorrect initialization"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (!eos) {",
+            "Faulty Code": "if (!eos && read_flag) { // Incorrectly using read_flag to determine if output should be written to the buffer"
+        }
+    ]
+}

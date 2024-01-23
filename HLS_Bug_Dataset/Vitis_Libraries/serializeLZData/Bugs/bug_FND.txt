@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (uint8_t s = 0; s < c_seqFreqCnt; ++s) {",
+            "Faulty Code": "#pragma HLS array_partition variable=seqFreqStream factor=10"
+        }
+    ]
+}

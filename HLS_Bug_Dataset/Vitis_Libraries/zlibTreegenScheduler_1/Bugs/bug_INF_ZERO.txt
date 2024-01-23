@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (is_pending) {",
+            "Faulty Code": "while (true) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static uint8_t treeIdx = 0;",
+            "Faulty Code": "static uint8_t treeIdx;"
+        }
+    ]
+}

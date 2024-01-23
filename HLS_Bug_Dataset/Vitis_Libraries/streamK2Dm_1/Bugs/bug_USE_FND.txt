@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "decompressSize << uncompressSize.data;",
+            "Faulty Code": "decompressSize << (SIZE_DT)uncompressSize.data;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition variable=inValue.data factor=3"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "void streamDistributor(hls::stream<bool>& inStream, hls::stream<bool> outStream[SLAVES]) {",
+            "Faulty Code": "void streamDistributor(hls::stream<bool>& inStream, hls::stream<bool> outStream[SLAVES]) { #pragma HLS array_partition variable=outStream factor=5"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void streamDistributor(hls::stream<bool>& inStream, hls::stream<bool> outStream[SLAVES]) {",
+            "Faulty Code": "void streamDistributor(hls::stream<bool>& inStream, hls::stream<bool> outStream[SLAVES]) { #pragma HLS dataflow"
+        }
+    ]
+}

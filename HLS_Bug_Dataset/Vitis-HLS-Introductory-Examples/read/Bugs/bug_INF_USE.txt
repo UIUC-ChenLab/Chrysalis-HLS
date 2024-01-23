@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < NUM; i++) {",
+            "Faulty Code": "for (int i = 0; i <= NUM; i++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "void read(A* a_in, A buf_out[NUM]) {",
+            "Faulty Code": "void read(int* a_in, unsigned buf_out[NUM]) {"
+        }
+    ]
+}

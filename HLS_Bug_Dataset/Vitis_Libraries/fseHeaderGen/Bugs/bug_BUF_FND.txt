@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "normTable[i] = inVal.data[0];",
+            "Faulty Code": "normTable[i] = inVal.data[1]; // Incorrect index used"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=normTable factor=16 cyclic // Factor not divisible by loop count of 64"
+        }
+    ]
+}

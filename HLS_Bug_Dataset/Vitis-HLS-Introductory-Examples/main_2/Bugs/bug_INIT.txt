@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "std::fill(bo_out_map, bo_out_map + DATA_SIZE, 0);",
+            "Faulty Code": "// std::fill(bo_out_map, bo_out_map + DATA_SIZE, 0);"
+        }
+    ]
+}

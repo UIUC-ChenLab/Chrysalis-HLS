@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outVal = inVal.range(23, 8);",
+            "Faulty Code": "outVal = inVal.range(31, 16); // Incorrect range causing OOB"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS dataflow // Incorrect placement of dataflow pragma"
+        }
+    ]
+}

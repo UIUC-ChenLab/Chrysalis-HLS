@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < N; i++) {",
+            "Faulty Code": "for (int i = 0; i < N - 1; i++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "out[i] = in1[i] + in2[i] * 2;",
+            "Faulty Code": "out[i] = 0;"
+        }
+    ]
+}

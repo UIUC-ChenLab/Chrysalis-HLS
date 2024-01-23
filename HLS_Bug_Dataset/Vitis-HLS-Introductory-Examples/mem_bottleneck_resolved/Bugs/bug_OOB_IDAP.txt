@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "tmp1 = mem[1];",
+            "Faulty Code": "tmp1 = mem[N];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "tmp2 = mem[i];",
+            "Faulty Code": "tmp2 = mem[i++];"
+        }
+    ]
+}

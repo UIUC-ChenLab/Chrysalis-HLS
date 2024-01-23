@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = buffer type = ram_2p impl = uram",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=buffer cyclic factor=2 dim=1"
+        }
+    ]
+}

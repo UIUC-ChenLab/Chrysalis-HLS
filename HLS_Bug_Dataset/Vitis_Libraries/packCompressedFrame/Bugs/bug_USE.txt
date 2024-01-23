@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "fcs.range(23, 16) = (uint8_t)meta.data[0];",
+            "Faulty Code": "fcs.range(23, 16) = meta.data[0];"
+        }
+    ]
+}

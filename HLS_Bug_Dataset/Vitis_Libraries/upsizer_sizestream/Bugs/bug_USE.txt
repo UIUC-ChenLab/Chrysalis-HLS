@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "outBuffer.range((byteIdx + c_in_size) * c_byte_width - 1, byteIdx * c_byte_width) = tmpValue;",
+            "Faulty Code": "outBuffer.range((byteIdx + chunk_size) * c_byte_width - 1, byteIdx * c_byte_width) = tmpValue;"
+        }
+    ]
+}

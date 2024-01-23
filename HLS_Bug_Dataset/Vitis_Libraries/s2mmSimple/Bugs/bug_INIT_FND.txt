@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "uint32_t itrLim = 1 + ((output_size - 1) / factor);",
+            "Faulty Code": "uint32_t itrLim; // Uninitialized variable, should be initialized as above"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "uint8_t factor = DATAWIDTH / 8;",
+            "Faulty Code": "#pragma HLS array_partition variable=out factor=3 // 'factor' is not divisible by output_size if output_size is not a multiple of 3"
+        }
+    ]
+}

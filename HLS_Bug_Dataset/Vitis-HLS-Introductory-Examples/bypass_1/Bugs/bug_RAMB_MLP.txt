@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void bypass(int tmp1[128], int tmp2[128], int tmp3[128]) {",
+            "Faulty Code": "#pragma HLS interface m_axi port=tmp1 depth=128\n#pragma HLS interface m_axi port=tmp2 depth=128\n#pragma HLS interface m_axi port=tmp3 depth=128\nvoid bypass(int tmp1[128], int tmp2[128], int tmp3[128]) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "tmp3[i] = tmp1[i] + tmp2[i];",
+            "Faulty Code": "#pragma HLS pipeline\n    tmp3[i] = tmp1[i] + tmp2[i];"
+        }
+    ]
+}

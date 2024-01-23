@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "do {",
+            "Faulty Code": "int in_val = 0; do {"
+        }
+    ]
+}

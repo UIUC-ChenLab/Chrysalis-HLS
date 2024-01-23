@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "metaVal.data[0] = dataSize;",
+            "Faulty Code": "#pragma HLS array_partition variable=metaVal.data dim=2 complete // Incorrect 'dim' value"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS pipeline // Incorrect placement inside another pipeline region"
+        }
+    ]
+}

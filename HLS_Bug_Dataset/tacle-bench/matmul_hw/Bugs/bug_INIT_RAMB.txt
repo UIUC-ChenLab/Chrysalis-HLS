@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "tmp = 0;",
+            "Faulty Code": "mat_type tmp;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "tmp += a[i][k] * b[k][j];",
+            "Faulty Code": "tmp += a[k][i] * b[j][k];"
+        }
+    ]
+}

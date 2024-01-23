@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "char foo(char inval, char incr) {\n#pragma HLS INLINE OFF\n#pragma HLS FUNCTION_INSTANTIATE variable = incr\n    return inval + incr;\n}",
+            "Faulty Code": "char foo(char inval, char incr) {\n#pragma HLS INLINE OFF\n#pragma HLS FUNCTION_INSTANTIATE variable = incr\n    char result;\n    return result;\n}"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "char foo(char inval, char incr) {\n#pragma HLS INLINE OFF\n#pragma HLS FUNCTION_INSTANTIATE variable = incr\n    return inval + incr;\n}",
+            "Faulty Code": "char foo(char inval, char incr) {\n#pragma HLS INLINE OFF\n#pragma HLS INTERFACE port=incr s_axilite\n#pragma HLS FUNCTION_INSTANTIATE variable = incr\n    return inval + incr;\n}"
+        }
+    ]
+}

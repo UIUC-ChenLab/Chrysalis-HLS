@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "acc += A[j] * j;",
+            "Faulty Code": "acc += (dint_t)((int)A[j] * j);"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ts.A[i] += ts.B[i] + ts.C[i];\nts.B[i] += 5;\nts.C[i] += 10;",
+            "Faulty Code": "ts.A[i%10] += ts.B[i%10] + ts.C[i%10];\nts.B[i%10] += 5;\nts.C[i%10] += 10;"
+        }
+    ]
+}

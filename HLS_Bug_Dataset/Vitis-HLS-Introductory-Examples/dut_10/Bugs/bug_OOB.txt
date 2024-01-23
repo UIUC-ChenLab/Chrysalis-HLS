@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "int buff[127];\n    for (int i = 0; i < 128; i++) {\n        tmp4[i] = tmp2[i];\n    }",
+            "Faulty Code": "int buff[127];\n    for (int i = 0; i < 128; i++) {\n        buff[i] = tmp2[i]; // OOB Error: buff has size 127 but is accessed up to index 127 (which is the 128th element)\n    }"
+        }
+    ]
+}

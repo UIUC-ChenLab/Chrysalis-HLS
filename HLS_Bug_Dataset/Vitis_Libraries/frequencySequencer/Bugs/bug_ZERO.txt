@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "constexpr uint16_t c_limits[4] = {c_maxCodeLL + 1, c_maxCodeOF + 1, c_maxCodeML + 1, c_maxZstdHfBits + 1};",
+            "Faulty Code": "constexpr uint16_t c_limits[4] = {0, c_maxCodeOF + 1, c_maxCodeML + 1, c_maxZstdHfBits + 1};"
+        }
+    ]
+}

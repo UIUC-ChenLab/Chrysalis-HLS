@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "offsetVal = prevOffsets[offsetVal - 1];",
+            "Faulty Code": "offsetVal = prevOffsets[offsetVal];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "auto prev1 = prevOffsets[1];",
+            "Faulty Code": "auto prev1 = prevOffsets[2];"
+        }
+    ]
+}

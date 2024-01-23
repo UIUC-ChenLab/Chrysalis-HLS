@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outReg = ((ap_uint<c_hfbsWidth>)v44[1] << blen2[0]) + v44[0];",
+            "Faulty Code": "outReg = ((ap_uint<c_hfbsWidth>)v44[0] << blen2[1]) + v44[1];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=hfEncodedStream"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void zlibTreegenScheduler(hls::stream<IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> > lz77InTree[NUM_BLOCK],\n                          hls::stream<IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> > lz77OutTree[NUM_TREEGEN],\n                          hls::stream<ap_uint<4> >& coreIdxStream,\n                          hls::stream<uint8_t>& outIdxNum) {",
+            "Faulty Code": "void zlibTreegenScheduler(hls::stream<IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> > lz77InTree[NUM_BLOCK],\n                          hls::stream<IntVectorStream_dt<MAX_FREQ_DWIDTH, 1> > lz77OutTree[NUM_TREEGEN],\n                          hls::stream<ap_uint<4> >& coreIdxStream,\n                          hls::stream<uint8_t>& outIdxNum) {\n#pragma HLS interface mode=ap_memory port=lz77OutTree"
+        }
+    ]
+}

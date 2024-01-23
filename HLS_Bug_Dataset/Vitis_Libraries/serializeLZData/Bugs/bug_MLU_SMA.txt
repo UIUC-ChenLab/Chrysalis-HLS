@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (uint8_t m = 0; m < 2; ++m) {",
+            "Faulty Code": "for (uint8_t m = 0; m <= 2; ++m) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "outSeqStream << seqVal;",
+            "Faulty Code": "#pragma HLS INTERFACE port=outSeqStream bram"
+        }
+    ]
+}

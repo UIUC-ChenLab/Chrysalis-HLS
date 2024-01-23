@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outChecksumStream << inChecksumData[0];",
+            "Faulty Code": "outChecksumStream << inChecksumData[inputSize];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uint32_t inSize_gmemwidth = (inputSize - 1) / PARALLEL_BYTE + 1;",
+            "Faulty Code": "uint32_t inSize_gmemwidth = 0;"
+        }
+    ]
+}

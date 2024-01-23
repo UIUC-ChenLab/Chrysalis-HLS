@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "auto bo_output_map = bo_output.map<int*>();",
+            "Faulty Code": "auto bo_output_map = bo_output.map<short*>();"
+        }
+    ]
+}

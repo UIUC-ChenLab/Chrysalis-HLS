@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS BIND_STORAGE variable = inflateOut type = fifo impl = SRL",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable = inflateOut type = complete impl = SRL"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS STREAM variable = axi2HlsStrm depth = 32",
+            "Faulty Code": "#pragma HLS INTERFACE port = axi2HlsStrm mode = ap_none"
+        }
+    ]
+}

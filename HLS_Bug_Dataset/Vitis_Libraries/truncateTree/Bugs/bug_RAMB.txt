@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void truncateTree(Histogram* length_histogram, uint16_t c_tree_depth, int max_bit_len) {",
+            "Faulty Code": "void truncateTree(Histogram* length_histogram, uint16_t c_tree_depth, int max_bit_len) {\n#pragma HLS INTERFACE m_axi port=length_histogram"
+        }
+    ]
+}

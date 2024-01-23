@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (auto z = 0; z < blckNum; z++) {",
+            "Faulty Code": "for (auto z = 0; z <= blckNum; z++) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "OUTSIZE_DT* compressedSize,",
+            "Faulty Code": "#pragma HLS INTERFACE port=compressedSize"
+        }
+    ]
+}

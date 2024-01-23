@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (int i = 0; i < N / NUM_BLOCKS; i++) {",
+            "Faulty Code": "#pragma HLS dataflow\n    for (int i = 0; i < N / NUM_BLOCKS; i++) {"
+        }
+    ]
+}

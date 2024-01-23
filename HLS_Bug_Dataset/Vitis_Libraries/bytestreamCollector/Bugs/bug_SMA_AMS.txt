@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<META_DT>& bscMetaStream",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=bscMetaStream"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<IntVectorStream_dt<8, HFBYTES> >& hfLitBitstream",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=hfLitBitstream"
+        }
+    ]
+}

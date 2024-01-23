@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "while (inSize > 0) {",
+            "Faulty Code": "while (inSize >= 0) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "outEos << 0;",
+            "Faulty Code": "outEos << (bool)0;"
+        }
+    ]
+}

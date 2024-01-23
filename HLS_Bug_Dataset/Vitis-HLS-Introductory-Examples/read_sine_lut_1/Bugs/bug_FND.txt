@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "void read_sine_lut( lut_word_t cos_lut[LUTSIZE], const int LUTSIZE ) {",
+            "Faulty Code": "#pragma HLS array_partition variable=cos_lut factor=3 block"
+        }
+    ]
+}

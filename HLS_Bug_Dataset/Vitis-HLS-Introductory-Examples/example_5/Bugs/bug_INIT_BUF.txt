@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "data in_val;",
+            "Faulty Code": "data in_val = in_stream.read();"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "RES.write(x_aux[N - N / 2 + i] - y_aux[N - N / 2 + i] / N);",
+            "Faulty Code": "RES.write(x_aux[N - N / 4 + i] - y_aux[N - N / 4 + i] / N);"
+        }
+    ]
+}

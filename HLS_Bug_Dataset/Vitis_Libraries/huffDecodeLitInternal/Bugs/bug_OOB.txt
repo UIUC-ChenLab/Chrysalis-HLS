@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "streamRLim[wsi] = 0;",
+            "Faulty Code": "streamRLim[wsi + 1] = 0;"
+        }
+    ]
+}
