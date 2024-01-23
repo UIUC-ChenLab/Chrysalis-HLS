@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "return roundAndPackFloat64 (zSign, zExp - shiftCount, zSig << shiftCount);",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=roundBits // Incorrect placement for array_partition pragma"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "return (((bits64) zSign) << 63) + (((bits64) zExp) << 52) + zSig;",
+            "Faulty Code": "#pragma HLS interface m_axi port=zSig offset=slave // Incorrect interface pragma leading to random m_axi access"
+        }
+    ]
+}

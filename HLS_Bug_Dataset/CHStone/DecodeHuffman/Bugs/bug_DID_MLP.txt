@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "code = (code << 1) + buf_getb();",
+            "Faulty Code": "#pragma HLS array_partition variable=Dhuff_maxcode dim=2\n  code = (code << 1) + buf_getb();"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (l = 1; code > Dhuff_maxcode[l]; l++)",
+            "Faulty Code": "#pragma HLS pipeline\n  for (l = 1; code > Dhuff_maxcode[l]; l++)"
+        }
+    ]
+}

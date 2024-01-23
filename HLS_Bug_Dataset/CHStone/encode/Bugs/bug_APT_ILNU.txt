@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "for (i = 0; i < 10; i++)",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic factor=2\nfor (i = 0; i < 10; i++)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 0; i < IN_END; i += 2)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (i = 0; i < IN_END; i += 2)"
+        }
+    ]
+}

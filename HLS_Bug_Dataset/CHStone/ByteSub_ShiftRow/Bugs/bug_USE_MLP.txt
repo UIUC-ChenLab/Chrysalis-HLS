@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "temp = Sbox[statemt[1] >> 4][statemt[1] & 0xf];",
+            "Faulty Code": "temp = Sbox[statemt[1] >> 4][statemt[1] & 0xf]; // Possible unintended sign extension if Sbox is defined with a signed type"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "statemt[1] = Sbox[statemt[5] >> 4][statemt[5] & 0xf];",
+            "Faulty Code": "#pragma HLS pipeline\nstatemt[1] = Sbox[statemt[5] >> 4][statemt[5] & 0xf]; // Incorrect placement of the pipeline pragma"
+        }
+    ]
+}

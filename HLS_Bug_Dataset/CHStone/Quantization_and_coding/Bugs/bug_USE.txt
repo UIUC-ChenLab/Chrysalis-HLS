@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "*LAR  =  temp>MAC ? MAC - MIC : (temp<MIC ? 0 : temp - MIC);",
+            "Faulty Code": "*LAR  =  temp>MAC ? MAC - MIC : (temp<MIC ? 0 : temp - MIC) & 0xFFFF;"
+        }
+    ]
+}

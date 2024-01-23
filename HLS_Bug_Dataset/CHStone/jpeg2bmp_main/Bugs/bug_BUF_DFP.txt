@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "c = JpegFileBuf;",
+            "Faulty Code": "c = JpegFileBuf + JPEGSIZE / 2; // Incorrect buffer half"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "jpeg_read (JpegFileBuf);",
+            "Faulty Code": "#pragma HLS dataflow\njpeg_read (JpegFileBuf); // Incorrectly placing pragma"
+        }
+    ]
+}

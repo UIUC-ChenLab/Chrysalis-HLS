@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "return ((int) (zl >> 14));",
+            "Faulty Code": "return ((int) (zl >> 32));"
+        }
+    ]
+}

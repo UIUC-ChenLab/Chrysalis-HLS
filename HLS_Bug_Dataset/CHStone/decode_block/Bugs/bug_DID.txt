@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "void ChenIDct (int *x, int *y) { ...  for (i = 0; i < 8; i++) { ... } ...  for (i = 0; i < 8; i++) { ... } ... }",
+            "Faulty Code": "void ChenIDct (int *x, int *y) { #pragma HLS array_partition variable=x dim=2 #pragma HLS array_partition variable=y dim=2 ...  for (i = 0; i < 8; i++) { ... } ... for (i = 0; i < 8; i++) { ... } ... }"
+        }
+    ]
+}

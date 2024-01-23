@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out_buf[diff + e] = (unsigned char) (*(store++));",
+            "Faulty Code": "out_buf[diff + e + 1] = (unsigned char) (*(store++));"
+        }
+    ]
+}

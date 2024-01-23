@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "roundBits = zSig & 0x3FF;",
+            "Faulty Code": "roundBits = (zSig >> 10) & 0x3FF;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "return (((bits64) zSign) << 63) + (((bits64) zExp) << 52) + zSig;",
+            "Faulty Code": "return (((bits32) zSign) << 63) + (((bits32) zExp) << 52) + zSig;"
+        }
+    ]
+}

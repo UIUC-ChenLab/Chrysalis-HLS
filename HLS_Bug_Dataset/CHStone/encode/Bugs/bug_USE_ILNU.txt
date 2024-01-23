@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "xl = (xa + xb) >> 15;",
+            "Faulty Code": "xl = ((int)(xa + xb)) >> 15;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 0; i < 6; i++) { ... }",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (i = 0; i < 6; i++) { ... }"
+        }
+    ]
+}

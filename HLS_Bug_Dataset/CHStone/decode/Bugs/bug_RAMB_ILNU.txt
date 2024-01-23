@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void decode (int input)",
+            "Faulty Code": "#pragma HLS interface m_axi port=compressed depth=32"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 0; i < IN_END; i += 2) { ... }",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (i = 0; i < IN_END; i += 2) { ... }"
+        }
+    ]
+}

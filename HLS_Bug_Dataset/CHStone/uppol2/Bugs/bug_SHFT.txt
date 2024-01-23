@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "wd2 = wd2 >> 7;",
+            "Faulty Code": "wd2 = wd2 >> 130;"
+        }
+    ]
+}

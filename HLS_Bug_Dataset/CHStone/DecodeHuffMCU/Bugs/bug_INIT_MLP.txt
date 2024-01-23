@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int code, l, p;",
+            "Faulty Code": "int code, l, p = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (k = 1; k < DCTSIZE2;)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (k = 1; k < DCTSIZE2;)"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "wd = ((long) nbh * 127L) >> 7L;",
+            "Faulty Code": "wd = ((long) nbh * 127L) >> 32L;"
+        }
+    ]
+}

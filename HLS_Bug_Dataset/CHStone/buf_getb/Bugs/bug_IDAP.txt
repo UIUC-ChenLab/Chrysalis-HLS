@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "int buf_getb() { /* function code */ }",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=CurHuffReadBuf\nint buf_getb() { /* function code */ }"
+        }
+    ]
+}

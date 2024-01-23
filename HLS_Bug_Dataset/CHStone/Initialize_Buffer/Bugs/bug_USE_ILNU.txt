@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ld_Bfr = 68157440;",
+            "Faulty Code": "ld_Bfr = (short)68157440;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "Flush_Buffer (0);",
+            "Faulty Code": "#pragma HLS unroll factor=4\nFlush_Buffer (0);"
+        }
+    ]
+}

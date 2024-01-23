@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "int temp;",
+            "Faulty Code": "#pragma HLS array_partition variable=CurHuffReadBuf dim=2"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ril = quant26bt_pos[mil];",
+            "Faulty Code": "ril = quant26bt_pos[mil + 1];"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (wd <= decis)",
+            "Faulty Code": "if (decis_levl[mil + 1] <= decis)"
+        }
+    ]
+}

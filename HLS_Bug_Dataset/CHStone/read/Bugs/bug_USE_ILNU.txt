@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int read (unsigned char *s1, const unsigned char *s2, int n)",
+            "Faulty Code": "int read (unsigned char *s1, const unsigned char *s2, signed int n)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "while (n_tmp-- > 0)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nwhile (n_tmp-- > 0)"
+        }
+    ]
+}

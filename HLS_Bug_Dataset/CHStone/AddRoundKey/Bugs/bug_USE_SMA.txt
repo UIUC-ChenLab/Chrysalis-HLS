@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "case 128256:",
+            "Faulty Code": "case 128256L:"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int AddRoundKey (int statemt[32], int type, int n)",
+            "Faulty Code": "#pragma HLS INTERFACE port=statemt bram"
+        }
+    ]
+}

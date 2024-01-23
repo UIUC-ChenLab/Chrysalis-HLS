@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void decode_block (int comp_no, int *out_buf, int *HuffBuff)",
+            "Faulty Code": "#pragma HLS interface port=comp_no bram"
+        }
+    ]
+}

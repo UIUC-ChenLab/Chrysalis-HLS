@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int8 roundingMode;",
+            "Faulty Code": "int8 roundingMode; // uninitialized variable, should be set before use"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "return roundAndPackFloat64 (zSign, zExp - shiftCount, zSig << shiftCount);",
+            "Faulty Code": "#pragma HLS dataflow // incorrect placement of pragma, should not be used here"
+        }
+    ]
+}

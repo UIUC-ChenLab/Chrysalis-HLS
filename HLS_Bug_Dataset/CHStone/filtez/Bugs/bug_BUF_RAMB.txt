@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "zl += (long) (*bpl++) * (*dlt++);",
+            "Faulty Code": "zl += (long) (*(bpl + 16)) * (*dlt++);"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "int filtez (int *bpl, int *dlt)",
+            "Faulty Code": "#pragma HLS interface m_axi port=bpl offset=slave bundle=gmem\n#pragma HLS interface m_axi port=dlt offset=slave bundle=gmem\nint filtez (int *bpl, int *dlt)"
+        }
+    ]
+}

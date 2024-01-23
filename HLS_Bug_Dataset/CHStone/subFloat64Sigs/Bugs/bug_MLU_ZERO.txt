@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "aSig <<= 10;",
+            "Faulty Code": "aSig = 0;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "zSig = (zSig + roundIncrement) >> 10;",
+            "Faulty Code": "zSig = (zSig + roundIncrement);"
+        }
+    ]
+}

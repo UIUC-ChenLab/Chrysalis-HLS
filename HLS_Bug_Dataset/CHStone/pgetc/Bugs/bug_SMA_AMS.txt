@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "int temp;",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=temp"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "static int pgetc () {...}",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=CurHuffReadBuf"
+        }
+    ]
+}

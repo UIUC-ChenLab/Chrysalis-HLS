@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void sha_stream () { ... sha_update(p, i); ... }",
+            "Faulty Code": "void sha_stream () { #pragma HLS dataflow ... sha_update(p, i); ... }"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 0; i < 16; ++i) { W[i] = sha_info_data[i]; }",
+            "Faulty Code": "for (i = 0; i < 16; ++i) { #pragma HLS unroll factor=4 W[i] = sha_info_data[i]; }"
+        }
+    ]
+}

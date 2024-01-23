@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "LAR++;",
+            "Faulty Code": "*LAR++;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "temp = GSM_ADD(  temp, 256 );",
+            "Faulty Code": "temp = GSM_ADD(  temp, 0 );"
+        }
+    ]
+}

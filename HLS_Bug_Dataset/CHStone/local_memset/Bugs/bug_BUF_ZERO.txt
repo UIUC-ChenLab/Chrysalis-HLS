@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "p = (INT32 *) s;",
+            "Faulty Code": "p = (INT32 *) s + n/2;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uc = c;",
+            "Faulty Code": "uc = 0;"
+        }
+    ]
+}

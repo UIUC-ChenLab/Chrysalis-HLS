@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int *mptr;",
+            "Faulty Code": "int *mptr = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "*mptr = *mptr * (*qmatrix);",
+            "Faulty Code": "*mptr = ((int)(*mptr)) * ((int)(*qmatrix));"
+        }
+    ]
+}

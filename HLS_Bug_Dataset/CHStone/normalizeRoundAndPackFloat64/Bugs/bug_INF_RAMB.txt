@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (0x7FD <= (bits16) zExp)",
+            "Faulty Code": "if (0x7FD < (bits16) zExp)"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "roundBits = zSig & 0x3FF;",
+            "Faulty Code": "roundBits = A[zSig & 0x3FF];"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "voffs = *p_out_vpos * DCTSIZE;",
+            "Faulty Code": "voffs = 0;"
+        }
+    ]
+}

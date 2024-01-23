@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = 0; i < 4; ++i) word[i][j] = word[i][j - nk] ^ temp[i];",
+            "Faulty Code": "for (i = 0; i < 3; ++i) word[i][j] = word[i][j - nk] ^ temp[i];"
+        }
+    ]
+}

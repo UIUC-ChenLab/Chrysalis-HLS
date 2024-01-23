@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "zSig = (aSig + bSig) << 1;",
+            "Faulty Code": "zSig = (aSig + aSig) << 1;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (0x7FD <= (bits16) zExp)",
+            "Faulty Code": "if (0x7FE <= (bits16) zExp)"
+        }
+    ]
+}

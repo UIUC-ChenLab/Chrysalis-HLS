@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "return saturate (sum);",
+            "Faulty Code": "return saturate (sum << 32); // Assuming 'word' is a 32-bit integer, this shift is out-of-bounds"
+        }
+    ]
+}

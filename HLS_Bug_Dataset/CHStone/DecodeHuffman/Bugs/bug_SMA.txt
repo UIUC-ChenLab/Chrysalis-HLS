@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "int code, l, p;",
+            "Faulty Code": "#pragma HLS INTERFACE port=code bram"
+        }
+    ]
+}

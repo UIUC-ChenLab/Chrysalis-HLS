@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return ((current_read_byte >> p) & lmask[n]);",
+            "Faulty Code": "return ((current_read_byte >> p) & lmask[p]);"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "while (n-- > 0)",
+            "Faulty Code": "#pragma HLS dataflow\nwhile (n-- > 0)"
+        }
+    ]
+}

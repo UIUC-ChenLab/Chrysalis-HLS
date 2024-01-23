@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void local_memset (INT32 * s, int c, int n, int e)",
+            "Faulty Code": "#pragma HLS interface s port=s_axilite\n void local_memset (INT32 * s, int c, int n, int e)"
+        }
+    ]
+}

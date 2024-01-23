@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "rv = (current_read_byte << p);",
+            "Faulty Code": "rv = ((int)(char)current_read_byte << p);"
+        }
+    ]
+}

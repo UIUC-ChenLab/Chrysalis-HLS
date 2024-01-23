@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "\"\"\"int\nscalel (int nbl, int shift_constant)\n{\nint wd1, wd2, wd3;\nwd1 = (nbl >> 6) & 31;\nwd2 = nbl >> 11;\nwd3 = ilb_table[wd1] >> (shift_constant + 1 - wd2);\nreturn (wd3 << 3);\n}\"\"\"",
+            "Faulty Code": "\"\"\"int\nscalel (int nbl, int shift_constant)\n{\n#pragma HLS pipeline\nint wd1, wd2, wd3;\nwd1 = (nbl >> 6) & 31;\n#pragma HLS pipeline\nwd2 = nbl >> 11;\nwd3 = ilb_table[wd1] >> (shift_constant + 1 - wd2);\nreturn (wd3 << 3);\n}\"\"\""
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return *ReadBuf++;",
+            "Faulty Code": "return ReadBuf[32]; // Assuming ReadBuf is an array of size 32"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "c1 = read_byte();\nc2 = read_byte();",
+            "Faulty Code": "#pragma HLS dataflow\nc1 = read_byte();\nc2 = read_byte();"
+        }
+    ]
+}

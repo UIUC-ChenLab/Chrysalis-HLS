@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "(*p_out_vpos)++;",
+            "Faulty Code": "(*p_out_vpos)--;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (e = hoffs; e < hoffs + DCTSIZE; e++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (e = hoffs; e < hoffs + DCTSIZE; e++)"
+        }
+    ]
+}

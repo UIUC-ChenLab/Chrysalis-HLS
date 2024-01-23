@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "c1 = read_byte ();",
+            "Faulty Code": "c1 = 0;"
+        }
+    ]
+}

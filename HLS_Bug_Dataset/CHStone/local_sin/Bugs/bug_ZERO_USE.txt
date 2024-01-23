@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "app = diff = rad;",
+            "Faulty Code": "app = diff = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "zSig = (aSig + bSig) << 1;",
+            "Faulty Code": "zSig = ((int32_t)(aSig + bSig)) << 1;"
+        }
+    ]
+}

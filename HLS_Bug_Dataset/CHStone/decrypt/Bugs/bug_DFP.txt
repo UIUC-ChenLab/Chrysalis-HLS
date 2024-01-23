@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "KeySchedule (type, key);",
+            "Faulty Code": "#pragma HLS dataflow\nKeySchedule (type, key);"
+        }
+    ]
+}

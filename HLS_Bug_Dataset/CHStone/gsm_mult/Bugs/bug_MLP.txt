@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "\"\"\"word\ngsm_mult (word a, word b)\n{\n  if (a == MIN_WORD && b == MIN_WORD)\n    return MAX_WORD;\n  else\n    return SASR ((longword) a * (longword) b, 15);\n}\"\"\"",
+            "Faulty Code": "\"\"\"word\ngsm_mult (word a, word b)\n{\n  #pragma HLS pipeline\n  if (a == MIN_WORD && b == MIN_WORD)\n    return MAX_WORD;\n  else\n    return SASR ((longword) a * (longword) b, 15);\n}\"\"\""
+        }
+    ]
+}

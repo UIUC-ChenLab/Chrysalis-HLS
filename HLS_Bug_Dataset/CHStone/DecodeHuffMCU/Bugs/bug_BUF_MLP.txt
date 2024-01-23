@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "current_read_byte = (current_read_byte << 8) | pgetc ();",
+            "Faulty Code": "current_read_byte = (current_read_byte << 8) | *CurHuffReadBuf++;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (k = 1; k < DCTSIZE2;)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (k = 1; k < DCTSIZE2;)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (i = 0; i < (BF_ROUNDS + 2); i++) {...}",
+            "Faulty Code": "#pragma HLS dataflow\nfor (i = 0; i < (BF_ROUNDS + 2); i++) {...}"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 0; i < (BF_ROUNDS + 2); i += 2) {...}",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (i = 0; i < (BF_ROUNDS + 2); i += 2) {...}"
+        }
+    ]
+}

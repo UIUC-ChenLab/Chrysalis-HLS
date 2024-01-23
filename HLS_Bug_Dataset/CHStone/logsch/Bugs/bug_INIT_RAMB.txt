@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int wd;",
+            "Faulty Code": "int wd = ih;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "nbh = wd + wh_code_table[ih];",
+            "Faulty Code": "nbh = wd + wh_code_table[nbh];"
+        }
+    ]
+}

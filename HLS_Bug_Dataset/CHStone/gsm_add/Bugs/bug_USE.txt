@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "sum = (longword) a + (longword) b;",
+            "Faulty Code": "sum = a + b;"
+        }
+    ]
+}

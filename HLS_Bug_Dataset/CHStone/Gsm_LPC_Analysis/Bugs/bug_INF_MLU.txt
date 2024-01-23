@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (k--)",
+            "Faulty Code": "while (k-- >= 0)"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = n; i <= 8; i++)",
+            "Faulty Code": "for (i = n; i < 8; i++)"
+        }
+    ]
+}

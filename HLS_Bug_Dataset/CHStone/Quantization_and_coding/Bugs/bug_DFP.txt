@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": " STEP (20480, 0, 31, -32);",
+            "Faulty Code": "#pragma HLS dataflow \n STEP (20480, 0, 31, -32);"
+        }
+    ]
+}

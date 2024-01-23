@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void adpcm_main() { ... /* reset, initialize required memory */ reset(); ... }",
+            "Faulty Code": "void adpcm_main() { #pragma HLS dataflow reset(); ... }"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void adpcm_main() { ... for (i = 0; i < IN_END; i += 2) { compressed[i / 2] = encode(test_data[i], test_data[i + 1]); } ... }",
+            "Faulty Code": "void adpcm_main() { #pragma HLS interface m_axi port=test_data #pragma HLS interface m_axi port=compressed ... for (i = 0; i < IN_END; i += 2) { compressed[i / 2] = encode(test_data[i], test_data[i + 1]); } ... }"
+        }
+    ]
+}

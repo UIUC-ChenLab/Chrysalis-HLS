@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "c = *ReadBuf++ << 8;",
+            "Faulty Code": "c = ReadBuf[2] << 8; // Assuming ReadBuf has only 2 elements"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "c |= *ReadBuf++;",
+            "Faulty Code": "c |= ReadBuf[1]; // After ReadBuf has been incremented already"
+        }
+    ]
+}

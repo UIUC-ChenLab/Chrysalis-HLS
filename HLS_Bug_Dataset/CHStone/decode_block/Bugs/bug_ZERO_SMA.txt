@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int QuantBuff[DCTSIZE2];",
+            "Faulty Code": "int QuantBuff[DCTSIZE2] = {0};"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void decode_block (int comp_no, int *out_buf, int *HuffBuff)",
+            "Faulty Code": "void decode_block (int comp_no, int out_buf[64], int HuffBuff[64])"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "sha_transform()",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=W dim=0\nsha_transform()"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "sha_transform()",
+            "Faulty Code": "#pragma HLS interface m_axi port=sha_info_data depth=64\nsha_transform()"
+        }
+    ]
+}

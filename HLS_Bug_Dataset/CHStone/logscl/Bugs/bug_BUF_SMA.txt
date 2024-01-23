@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "nbl = (int) wd + wl_code_table[il >> 2];",
+            "Faulty Code": "nbl = (int) wd + wl_code_table[(il >> 2) + 128]; // Assuming the table size is 128, this would access the wrong half of the buffer"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "nbl = (int) wd + wl_code_table[il >> 2];",
+            "Faulty Code": "#pragma HLS interface port=wl_code_table bram // This pragma is mapping a scalar port to an array interface, which is incorrect"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (CurrentMCU < p_jinfo_NumMCU)",
+            "Faulty Code": "while (CurrentMCU <= p_jinfo_NumMCU)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "jpeg_read(unsigned char *read_buf)",
+            "Faulty Code": "#pragma HLS INTERFACE port=read_buf ap_none"
+        }
+    ]
+}

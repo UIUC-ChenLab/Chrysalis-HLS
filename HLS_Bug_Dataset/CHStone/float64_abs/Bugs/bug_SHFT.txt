@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "return (x & 0x7fffffffffffffffULL);",
+            "Faulty Code": "return (x & (0x1FFFFFFFF << 31));"
+        }
+    ]
+}

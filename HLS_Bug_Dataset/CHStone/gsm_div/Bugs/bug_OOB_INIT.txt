@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "while (k--)",
+            "Faulty Code": "while (k--) { L_num.arr[k] <<= 1; } // Assuming L_num was incorrectly defined as an array"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "L_num = num;",
+            "Faulty Code": "longword L_num; // L_num is not initialized to num"
+        }
+    ]
+}

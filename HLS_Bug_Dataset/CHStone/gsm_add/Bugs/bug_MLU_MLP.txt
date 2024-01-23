@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "sum = (longword) a + (longword) b;",
+            "Faulty Code": "sum = (longword) a + (longword) b + (longword) b; // Accidental duplication of b"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "return saturate (sum);",
+            "Faulty Code": "#pragma HLS pipeline\nreturn saturate (sum); // Incorrectly placed pragma"
+        }
+    ]
+}

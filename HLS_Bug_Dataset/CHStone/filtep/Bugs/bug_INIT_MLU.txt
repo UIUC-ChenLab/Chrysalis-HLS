@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "long int pl, pl2;",
+            "Faulty Code": "long int pl, pl2 = pl;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "pl2 = 2 * rlt2;",
+            "Faulty Code": "pl2 = 2 * rlt1;"
+        }
+    ]
+}

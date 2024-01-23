@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (n_tmp-- > 0)",
+            "Faulty Code": "while (n_tmp-- >= 0)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "int Buffer_Level;",
+            "Faulty Code": "#pragma HLS interface port=Buffer_Level mode=s_axilite"
+        }
+    ]
+}

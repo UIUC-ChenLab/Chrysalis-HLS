@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "while (Buffer_Level < 2048) {\n  ld_Rdbfr[Buffer_Level++] = SEQUENCE_END_CODE >> 24;\n  ld_Rdbfr[Buffer_Level++] = SEQUENCE_END_CODE >> 16;\n  ld_Rdbfr[Buffer_Level++] = SEQUENCE_END_CODE >> 8;\n  ld_Rdbfr[Buffer_Level++] = SEQUENCE_END_CODE & 0xff;\n}",
+            "Faulty Code": "while (Buffer_Level < 2048) {\n  ld_Rdbfr[Buffer_Level++] = SEQUENCE_END_CODE >> 24;\n  ld_Rdbfr[Buffer_Level++] = SEQUENCE_END_CODE >> 16;\n  ld_Rdbfr[Buffer_Level++] = SEQUENCE_END_CODE >> 8;\n  if (Buffer_Level < 2048) ld_Rdbfr[Buffer_Level++] = SEQUENCE_END_CODE & 0xff;\n}"
+        }
+    ]
+}

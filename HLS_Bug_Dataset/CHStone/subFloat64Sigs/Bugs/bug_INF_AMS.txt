@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (0 < expDiff) goto aExpBigger;",
+            "Faulty Code": "if (0 < expDiff); // Missing goto statement, causing infinite loop"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "INLINE float64 packFloat64 (flag zSign, int16 zExp, bits64 zSig)",
+            "Faulty Code": "#pragma HLS interface port=packFloat64 ap_none // Incorrectly mapping function to a scalar interface"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "INT32 tmp;",
+            "Faulty Code": "INT32 tmp = *p1;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "tmp = 0;",
+            "Faulty Code": "tmp = 1;"
+        }
+    ]
+}

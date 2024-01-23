@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void decode_start (int *out_data_image_width, int *out_data_image_height, int *out_data_comp_vpos, int *out_data_comp_hpos)",
+            "Faulty Code": "#pragma HLS INTERFACE port=out_data_comp_vpos mode=ap_none"
+        }
+    ]
+}

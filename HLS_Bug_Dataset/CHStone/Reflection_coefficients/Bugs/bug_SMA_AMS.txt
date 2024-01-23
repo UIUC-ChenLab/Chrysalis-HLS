@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void Reflection_coefficients (longword * L_ACF /* 0...8        IN      */ , register word * r /* 0...7        OUT     */ )",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=L_ACF\nvoid Reflection_coefficients (longword * L_ACF /* 0...8        IN      */ , register word * r /* 0...7        OUT     */ )"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void Reflection_coefficients (longword * L_ACF /* 0...8        IN      */ , register word * r /* 0...7        OUT     */ )",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=r\nvoid Reflection_coefficients (longword * L_ACF /* 0...8        IN      */ , register word * r /* 0...7        OUT     */ )"
+        }
+    ]
+}

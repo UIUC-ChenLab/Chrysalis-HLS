@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "float64 float64_abs (float64 x) { return (x & 0x7fffffffffffffffULL); }",
+            "Faulty Code": "float64 float64_abs (float64 x) { #pragma HLS INTERFACE port=x mode=ap_none return (x & 0x7fffffffffffffffULL); }"
+        }
+    ]
+}

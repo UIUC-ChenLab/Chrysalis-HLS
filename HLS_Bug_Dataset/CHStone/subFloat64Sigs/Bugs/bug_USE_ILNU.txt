@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "aSig <<= 10;",
+            "Faulty Code": "aSig = (int32)(aSig) << 10;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "shift64RightJamming (aSig, -expDiff, &aSig);",
+            "Faulty Code": "#pragma HLS unroll factor=2\nshift64RightJamming (aSig, -expDiff, &aSig);"
+        }
+    ]
+}

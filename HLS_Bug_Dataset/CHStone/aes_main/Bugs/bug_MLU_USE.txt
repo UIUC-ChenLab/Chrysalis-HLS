@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "encrypt (statemt, key, 128128);",
+            "Faulty Code": "encrypt (statemt, key, 128127); // Incorrect loop unrolling, missing one iteration"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "statemt[2] = 246;",
+            "Faulty Code": "statemt[2] = (char)246; // Unintended sign extension from char to int"
+        }
+    ]
+}

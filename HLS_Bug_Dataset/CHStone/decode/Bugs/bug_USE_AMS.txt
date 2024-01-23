@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ilr = input & 0x3f;",
+            "Faulty Code": "ilr = (char)(input & 0x3f);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "xa1 += (long) (*ac_ptr++) * (*h_ptr++);",
+            "Faulty Code": "#pragma HLS interface port=ac_ptr ap_none"
+        }
+    ]
+}

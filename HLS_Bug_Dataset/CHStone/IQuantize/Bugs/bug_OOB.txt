@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "\"\"\"void\nIQuantize (int *matrix, unsigned int *qmatrix)\n{\n  int *mptr;\n\n  for (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++)\n    {\n      *mptr = *mptr * (*qmatrix);\n      qmatrix++;\n    }\n}\"\"\"",
+            "Faulty Code": "\"\"\"void\nIQuantize (int *matrix, unsigned int *qmatrix)\n{\n  int *mptr;\n\n  for (mptr = matrix; mptr <= matrix + DCTSIZE2; mptr++)\n    {\n      *mptr = *mptr * (*qmatrix);\n      qmatrix++;\n    }\n}\"\"\""
+        }
+    ]
+}

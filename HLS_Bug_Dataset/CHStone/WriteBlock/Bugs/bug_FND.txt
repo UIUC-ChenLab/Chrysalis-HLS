@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (e = hoffs; e < hoffs + DCTSIZE; e++)",
+            "Faulty Code": "#pragma HLS array_partition variable=out_buf cyclic factor=7\nfor (e = hoffs; e < hoffs + DCTSIZE; e++)"
+        }
+    ]
+}

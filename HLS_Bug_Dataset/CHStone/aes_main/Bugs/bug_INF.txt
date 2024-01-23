@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "encrypt (statemt, key, 128128); decrypt (statemt, key, 128128);",
+            "Faulty Code": "while(1) { encrypt (statemt, key, 128128); decrypt (statemt, key, 128128); }"
+        }
+    ]
+}

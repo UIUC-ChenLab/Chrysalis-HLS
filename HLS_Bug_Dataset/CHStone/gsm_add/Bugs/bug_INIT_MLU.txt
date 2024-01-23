@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "longword sum;",
+            "Faulty Code": "longword sum = 0;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "return saturate (sum);",
+            "Faulty Code": "return saturate (sum - 1);"
+        }
+    ]
+}

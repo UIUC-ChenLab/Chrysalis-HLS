@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out_buf[diff + e] = (unsigned char) (*(store++));",
+            "Faulty Code": "out_buf[diff + e + 1] = (unsigned char) (*(store++));"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void Write4Blocks (int *store1, int *store2, int *store3, int *store4, int *p_out_vpos, int *p_out_hpos, unsigned char *p_out_buf)",
+            "Faulty Code": "#pragma HLS interface port=p_out_buf bram"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "int uppol2 (int al1, int al2, int plt, int plt1, int plt2)",
+            "Faulty Code": "int uppol2 (int al1, int al2, int plt[3]) /* Assuming plt is incorrectly passed as an array */"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "if ((long) plt * plt2 >= 0L)",
+            "Faulty Code": "#pragma HLS pipeline\nif ((long) plt * plt2 >= 0L)"
+        }
+    ]
+}

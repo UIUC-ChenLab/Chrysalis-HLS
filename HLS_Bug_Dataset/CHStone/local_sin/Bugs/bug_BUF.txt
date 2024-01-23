@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "zSig0 |= (zSig1 != 0);",
+            "Faulty Code": "zSig0 |= (zSig0 != 0);"
+        }
+    ]
+}

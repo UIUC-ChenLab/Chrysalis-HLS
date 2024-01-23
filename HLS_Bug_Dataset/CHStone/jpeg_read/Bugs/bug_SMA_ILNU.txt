@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "jpeg_read (unsigned char *read_buf)",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=read_buf"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 0; i < NUM_COMPONENT; i++)",
+            "Faulty Code": "#pragma HLS UNROLL factor=2\nfor (i = 0; i < NUM_COMPONENT; i++)"
+        }
+    ]
+}

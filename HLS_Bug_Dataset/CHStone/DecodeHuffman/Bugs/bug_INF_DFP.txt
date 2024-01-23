@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (l = 1; code > Dhuff_maxcode[l]; l++)",
+            "Faulty Code": "for (l = 1; code >= Dhuff_maxcode[l]; l++)"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "code = (code << 1) + buf_getb ();",
+            "Faulty Code": "#pragma HLS dataflow\ncode = (code << 1) + buf_getb ();"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (Buffer_Level < 2048)",
+            "Faulty Code": "while (Buffer_Level <= 2048)"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "ld_Rdbfr[Buffer_Level++] = SEQUENCE_END_CODE & 0xff;",
+            "Faulty Code": "ld_Rdbfr[Buffer_Level] = SEQUENCE_END_CODE & 0xff;"
+        }
+    ]
+}

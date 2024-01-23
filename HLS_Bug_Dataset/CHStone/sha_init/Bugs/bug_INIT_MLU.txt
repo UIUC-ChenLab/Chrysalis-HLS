@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "sha_info_count_lo = 0L;",
+            "Faulty Code": "long uninitialized_variable; sha_info_count_lo = uninitialized_variable;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "sha_info_digest[4] = 0xc3d2e1f0L;",
+            "Faulty Code": "// sha_info_digest[4] = 0xc3d2e1f0L; // This line is mistakenly commented out"
+        }
+    ]
+}

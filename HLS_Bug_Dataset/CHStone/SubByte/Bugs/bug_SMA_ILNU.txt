@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "int SubByte(int in) { return Sbox[(in / 16)][(in % 16)]; }",
+            "Faulty Code": "#pragma HLS interface port=bram int SubByte(int in) { return Sbox[(in / 16)][(in % 16)]; }"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "int SubByte(int in) { return Sbox[(in / 16)][(in % 16)]; }",
+            "Faulty Code": "int SubByte(int in) { #pragma HLS unroll factor=2 return Sbox[(in / 16)][(in % 16)]; }"
+        }
+    ]
+}

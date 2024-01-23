@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "y = y_buf[i];",
+            "Faulty Code": "y = y_buf[i+1];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "u = u_buf[i] - 128;",
+            "Faulty Code": "u = (char)u_buf[i] - 128;"
+        }
+    ]
+}

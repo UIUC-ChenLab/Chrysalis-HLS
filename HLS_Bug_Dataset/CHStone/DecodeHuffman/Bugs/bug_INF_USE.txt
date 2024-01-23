@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (l = 1; code > Dhuff_maxcode[l]; l++)",
+            "Faulty Code": "for (l = 1; code >= Dhuff_maxcode[l]; l++)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "return (Xhuff_huffval[p]);",
+            "Faulty Code": "return ((char)Xhuff_huffval[p]);"
+        }
+    ]
+}

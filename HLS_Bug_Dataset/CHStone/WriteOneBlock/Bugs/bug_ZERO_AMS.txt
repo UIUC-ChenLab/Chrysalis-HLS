@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int i, e;",
+            "Faulty Code": "int i = 0, e = 0;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void WriteOneBlock (int *store, unsigned char *out_buf, int width, int height, int voffs, int hoffs)",
+            "Faulty Code": "#pragma HLS interface port=store mode=ap_none\nvoid WriteOneBlock (int *store, unsigned char *out_buf, int width, int height, int voffs, int hoffs)"
+        }
+    ]
+}

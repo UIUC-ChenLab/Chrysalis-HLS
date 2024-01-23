@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "c = *ReadBuf++ << 8;",
+            "Faulty Code": "#pragma HLS interface bram port=c \n c = *ReadBuf++ << 8;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ril = quant26bt_pos[mil];",
+            "Faulty Code": "ril = quant26bt_pos[mil+1];"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (mil = 0; mil < 30; mil++)",
+            "Faulty Code": "for (mil = 0; ; mil++)"
+        }
+    ]
+}

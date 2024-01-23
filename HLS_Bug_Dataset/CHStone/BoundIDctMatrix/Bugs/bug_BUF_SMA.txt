@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "for (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++)",
+            "Faulty Code": "for (mptr = matrix + DCTSIZE2/2; mptr < matrix + DCTSIZE2; mptr++)"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void BoundIDctMatrix (int *matrix, int Bound)",
+            "Faulty Code": "#pragma HLS INTERFACE port=matrix mode=bram"
+        }
+    ]
+}

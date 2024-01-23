@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "decis = (decis_levl[mil] * (long) detl) >> 15L;",
+            "Faulty Code": "#pragma HLS interface m_axi port=decis_levl offset=slave"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "int quantl (int el, int detl)",
+            "Faulty Code": "#pragma HLS interface port=el mode=ap_none"
+        }
+    ]
+}

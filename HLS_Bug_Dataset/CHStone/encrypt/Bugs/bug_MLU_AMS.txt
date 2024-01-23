@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = 1; i <= round_val + 9; ++i)",
+            "Faulty Code": "for (i = 1; i < round_val + 9; ++i) // Loop misses last iteration"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "int encrypt (int statemt[32], int key[32], int type)",
+            "Faulty Code": "#pragma HLS interface port=statemt mode=ap_none // 'statemt' should not be mapped to a scalar interface"
+        }
+    ]
+}

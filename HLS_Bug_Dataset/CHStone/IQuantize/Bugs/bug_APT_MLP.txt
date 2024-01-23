@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "void IQuantize (int *matrix, unsigned int *qmatrix)",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=qmatrix"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++)"
+        }
+    ]
+}

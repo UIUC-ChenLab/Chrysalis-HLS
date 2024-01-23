@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int p, rv;",
+            "Faulty Code": "int p = 0, rv;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "rv = (current_read_byte << p);",
+            "Faulty Code": "rv = (current_read_byte << (p & 0xFF));"
+        }
+    ]
+}

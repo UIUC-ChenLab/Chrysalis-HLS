@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "*mptr = *mptr * (*qmatrix);",
+            "Faulty Code": "*mptr = ((int)(*mptr)) * ((char)(*qmatrix));"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 0; i < 8; i++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (i = 0; i < 8; i++)"
+        }
+    ]
+}

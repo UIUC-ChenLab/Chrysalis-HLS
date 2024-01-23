@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "aSig <<= 10;",
+            "Faulty Code": "aSig <<= 0;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "// Content of called function\nINLINE int16\nextractFloat64Exp (float64 a)\n{\n\n  return (a >> 52) & 0x7FF;\n\n}",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo\nINLINE int16\nextractFloat64Exp (float64 a)\n{\n\n  return (a >> 52) & 0x7FF;\n\n}"
+        }
+    ]
+}

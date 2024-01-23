@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "float64 float64_abs (float64 x) { return (x & 0x7fffffffffffffffULL); }",
+            "Faulty Code": "#pragma HLS dataflow\nfloat64 float64_abs (float64 x) { return (x & 0x7fffffffffffffffULL); }"
+        }
+    ]
+}

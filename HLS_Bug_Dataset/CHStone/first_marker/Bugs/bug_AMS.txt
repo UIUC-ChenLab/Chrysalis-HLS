@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "c1 = read_byte ();",
+            "Faulty Code": "#pragma HLS interface port=read_byte ap_none"
+        }
+    ]
+}

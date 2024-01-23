@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ld_Rdptr = ld_Rdbfr + 2048;",
+            "Faulty Code": "ld_Rdptr = ld_Rdbfr;"
+        }
+    ]
+}

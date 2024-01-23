@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (float64_ge (float64_abs (diff), 0x3ee4f8b588e368f1ULL));",
+            "Faulty Code": "while (float64_ge (float64_abs (diff), 0x3ee4f8b588e368f1ULL) == 0);"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "diff = float64_div (float64_mul (diff, m_rad2), int32_to_float64 ((2 * inc) * (2 * inc + 1)));",
+            "Faulty Code": "diff = float64_div (float64_mul (diff, m_rad2), int32_to_float64 ((2 * (inc+1)) * (2 * (inc+1) + 1)));"
+        }
+    ]
+}

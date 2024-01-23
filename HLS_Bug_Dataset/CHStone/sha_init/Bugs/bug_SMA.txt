@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "sha_info_count_lo = 0L;",
+            "Faulty Code": "#pragma HLS interface port=sha_info_count_lo bram"
+        }
+    ]
+}

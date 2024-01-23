@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "temp = invSbox[statemt[22] >> 4][statemt[22] & 0xf]; statemt[22] = invSbox[statemt[14] >> 4][statemt[14] & 0xf]; statemt[14] = invSbox[statemt[6] >> 4][statemt[6] & 0xf]; statemt[6] = temp;",
+            "Faulty Code": "temp = invSbox[statemt[22] >> 4][statemt[22] & 0xf]; statemt[22] = invSbox[statemt[14] >> 4][statemt[14] & 0xf]; statemt[14] = temp;"
+        }
+    ]
+}

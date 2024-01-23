@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void BoundIDctMatrix (int *matrix, int Bound) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid BoundIDctMatrix (int *matrix, int Bound) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void BoundIDctMatrix (int *matrix, int Bound) {",
+            "Faulty Code": "#pragma HLS interface port=matrix bram\nvoid BoundIDctMatrix (int *matrix, int Bound) {"
+        }
+    ]
+}

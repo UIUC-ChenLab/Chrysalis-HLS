@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "nbl = (int) wd + wl_code_table[il >> 2];",
+            "Faulty Code": "nbl = (int) wd + wl_code_table[il];"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (nbl > 18432)\n    nbl = 18432;",
+            "Faulty Code": "while (nbl > 18432)\n    nbl = 18432;"
+        }
+    ]
+}

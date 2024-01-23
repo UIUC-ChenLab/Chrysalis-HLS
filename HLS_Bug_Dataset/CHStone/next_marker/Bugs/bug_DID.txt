@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "int read_byte (void) { return *ReadBuf++; }",
+            "Faulty Code": "int read_byte (void) {\n#pragma HLS array_partition variable=ReadBuf dim=2\n  return *ReadBuf++; }"
+        }
+    ]
+}

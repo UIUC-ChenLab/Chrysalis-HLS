@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void Initialize_Buffer () {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid Initialize_Buffer () {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "Flush_Buffer (0);",
+            "Faulty Code": "#pragma HLS pipeline\nFlush_Buffer (0);"
+        }
+    ]
+}

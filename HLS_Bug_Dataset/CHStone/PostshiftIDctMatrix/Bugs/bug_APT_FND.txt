@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "void PostshiftIDctMatrix (int *matrix, int shift)",
+            "Faulty Code": "#pragma HLS array_partition type=block variable=matrix factor=8\nvoid PostshiftIDctMatrix (int *matrix, int shift)"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++)",
+            "Faulty Code": "#pragma HLS array_partition variable=matrix type=cyclic factor=8\nfor (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++)"
+        }
+    ]
+}

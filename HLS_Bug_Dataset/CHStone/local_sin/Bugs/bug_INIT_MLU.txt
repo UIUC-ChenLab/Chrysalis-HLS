@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "app = diff = rad;",
+            "Faulty Code": "float64 app, diff;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "do {...} while (float64_ge (float64_abs (diff), 0x3ee4f8b588e368f1ULL));",
+            "Faulty Code": "do { if (inc == 10) continue; ... } while (float64_ge (float64_abs (diff), 0x3ee4f8b588e368f1ULL));"
+        }
+    ]
+}

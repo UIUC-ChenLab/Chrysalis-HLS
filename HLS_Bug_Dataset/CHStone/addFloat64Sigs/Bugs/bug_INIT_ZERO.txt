@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int16 roundIncrement, roundBits;",
+            "Faulty Code": "int16 roundIncrement, roundBits = 0;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "roundIncrement = 0x200;",
+            "Faulty Code": "roundIncrement = 0;"
+        }
+    ]
+}

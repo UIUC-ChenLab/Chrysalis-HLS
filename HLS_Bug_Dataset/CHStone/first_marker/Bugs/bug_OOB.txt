@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return *ReadBuf++;",
+            "Faulty Code": "return *(ReadBuf++); if (ReadBuf > BufSize) { printf (\"Out of Bounds Error!\\n\"); EXIT; }"
+        }
+    ]
+}

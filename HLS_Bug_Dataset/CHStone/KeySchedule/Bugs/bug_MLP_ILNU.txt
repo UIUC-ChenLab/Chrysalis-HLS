@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (j = nk; j < nb * (round_val + 1); ++j)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (j = nk; j < nb * (round_val + 1); ++j)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 0; i < 4; ++i)\n    word[i][j] = word[i][j - nk] ^ temp[i];",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (i = 0; i < 4; ++i)\n    word[i][j] = word[i][j - nk] ^ temp[i];"
+        }
+    ]
+}

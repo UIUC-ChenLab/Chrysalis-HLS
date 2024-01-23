@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (CurrentMCU < p_jinfo_NumMCU)",
+            "Faulty Code": "while (CurrentMCU != p_jinfo_NumMCU)"
+        }
+    ]
+}

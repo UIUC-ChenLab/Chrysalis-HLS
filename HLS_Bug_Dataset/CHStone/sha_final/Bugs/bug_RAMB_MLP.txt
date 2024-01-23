@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "sha_info_data[count++] = 0x80;",
+            "Faulty Code": "#pragma HLS interface m_axi port=sha_info_data\nsha_info_data[count++] = 0x80;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = 0; i < 16; ++i) {\n  W[i] = sha_info_data[i];\n}",
+            "Faulty Code": "for (i = 0; i < 16; ++i) {\n  #pragma HLS pipeline\n  W[i] = sha_info_data[i];\n}"
+        }
+    ]
+}

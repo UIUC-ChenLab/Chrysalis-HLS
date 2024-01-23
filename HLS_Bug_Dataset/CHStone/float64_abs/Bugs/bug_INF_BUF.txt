@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "return (x & 0x7fffffffffffffffULL);",
+            "Faulty Code": "while (x & 0x8000000000000000ULL) { /* ... */ }"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "return (x & 0x7fffffffffffffffULL);",
+            "Faulty Code": "return (x & 0xffffffffffffffffULL);"
+        }
+    ]
+}

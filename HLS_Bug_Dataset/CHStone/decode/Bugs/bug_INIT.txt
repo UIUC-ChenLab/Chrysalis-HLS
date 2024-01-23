@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "for (i = 0; i < 22; i++)\n    *tqmf_ptr-- = *tqmf_ptr1--;",
+            "Faulty Code": "for (i = 0; i < 22; i++)\n    *tqmf_ptr-- = *tqmf_ptr1--;\n*tqmf_ptr-- = xin1;\n*tqmf_ptr = xin2;"
+        }
+    ]
+}

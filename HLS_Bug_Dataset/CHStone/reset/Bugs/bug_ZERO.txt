@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "detl = dec_detl = 32; /* reset to min scale factor */",
+            "Faulty Code": "detl = dec_detl = 0; /* reset to min scale factor */"
+        }
+    ]
+}

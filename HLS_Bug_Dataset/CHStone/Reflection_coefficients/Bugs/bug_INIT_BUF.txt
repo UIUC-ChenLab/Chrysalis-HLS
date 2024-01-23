@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "word ACF[9]; /* 0..8 */",
+            "Faulty Code": "word ACF[9]; /* 0..8 */ // ACF array is declared but not initialized before usage"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "*r++ = 0;",
+            "Faulty Code": "*r++ = 0; // Inside the loop, this should be *r = 0; r++; to avoid copying from the wrong half of the buffer"
+        }
+    ]
+}

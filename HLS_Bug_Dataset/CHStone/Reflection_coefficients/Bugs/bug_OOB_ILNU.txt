@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "*r++ = 0;",
+            "Faulty Code": "*r = 0; r += 9;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (m = 1; m <= 8 - n; m++)",
+            "Faulty Code": "#pragma HLS unroll factor=4 for (m = 1; m <= 8 - n; m++)"
+        }
+    ]
+}

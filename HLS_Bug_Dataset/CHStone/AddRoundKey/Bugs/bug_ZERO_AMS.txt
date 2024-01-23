@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int j, nb;",
+            "Faulty Code": "int j = 0, nb = 0;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "int statemt[32], int type, int n",
+            "Faulty Code": "#pragma HLS interface port=statemt mode=ap_none"
+        }
+    ]
+}

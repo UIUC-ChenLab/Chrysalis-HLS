@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "*tqmf_ptr-- = *tqmf_ptr1--;",
+            "Faulty Code": "*tqmf_ptr-- = *tqmf_ptr++;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 0; i < 10; i++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (i = 0; i < 10; i++)"
+        }
+    ]
+}

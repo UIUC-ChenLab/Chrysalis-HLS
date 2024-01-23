@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while ((huffsize[p] == size) && (p < 257))",
+            "Faulty Code": "while ((huffsize[p] == size) && (p < 256))"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "p += p_xhtbl_bits[l] - 1;",
+            "Faulty Code": "p += p_xhtbl_bits[l];"
+        }
+    ]
+}

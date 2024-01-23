@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int code, l, p;",
+            "Faulty Code": "int code, l, p = Xhuff_huffval[0];"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "if ((temp = *CurHuffReadBuf++) == MARKER_MARKER)",
+            "Faulty Code": "if ((temp = *CurHuffReadBuf) == MARKER_MARKER)"
+        }
+    ]
+}

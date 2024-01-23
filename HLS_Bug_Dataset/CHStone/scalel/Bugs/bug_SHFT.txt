@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "wd3 = ilb_table[wd1] >> (shift_constant + 1 - wd2);",
+            "Faulty Code": "wd3 = ilb_table[wd1] >> (shift_constant - wd2);"
+        }
+    ]
+}

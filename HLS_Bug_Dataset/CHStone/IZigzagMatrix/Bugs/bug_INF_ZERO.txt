@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (i = 0; i < DCTSIZE2; i++)",
+            "Faulty Code": "for (i = 0; i <= DCTSIZE2; i++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "*(omatrix++) = imatrix[zigzag_index[i]];",
+            "Faulty Code": "*(omatrix++) = imatrix[zigzag_index[0]];"
+        }
+    ]
+}

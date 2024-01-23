@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int p, rv;",
+            "Faulty Code": "int p = 0, rv;"
+        }
+    ]
+}

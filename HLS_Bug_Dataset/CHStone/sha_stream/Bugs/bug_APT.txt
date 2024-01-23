@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "sha_transform ()",
+            "Faulty Code": "sha_transform () {\n#pragma HLS array_partition variable=W type=cyclic factor=16\n  int i;\n  INT32 temp, A, B, C, D, E, W[80];\n  ... "
+        }
+    ]
+}

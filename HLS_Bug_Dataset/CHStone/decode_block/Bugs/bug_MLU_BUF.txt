@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "aptr += 8;",
+            "Faulty Code": "aptr += 8; // Missing increment, should be repeated 8 times for loop unrolling"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "*mptr = *mptr * (*qmatrix);",
+            "Faulty Code": "*mptr = *mptr * (*(qmatrix + DCTSIZE2)); // Using the wrong half of the buffer"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "apl1 = (int) wd2 + 192;",
+            "Faulty Code": "apl1 = 0;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int uppol1 (int al1, int apl2, int plt, int plt1)",
+            "Faulty Code": "#pragma HLS interface port=bram int uppol1 (int al1, int apl2, int plt, int plt1)"
+        }
+    ]
+}

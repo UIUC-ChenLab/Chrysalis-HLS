@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "diff += *out_buf;       /* Change the last DC */",
+            "Faulty Code": "diff += (char)*out_buf; /* Change the last DC */"
+        }
+    ]
+}

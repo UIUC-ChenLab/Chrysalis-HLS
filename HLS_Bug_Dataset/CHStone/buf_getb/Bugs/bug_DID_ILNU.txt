@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "if (current_read_byte & bit_set_mask[read_position--])",
+            "Faulty Code": "#pragma HLS array_partition dim=2 variable=bit_set_mask\nif (current_read_byte & bit_set_mask[read_position--])"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "if ((temp = *CurHuffReadBuf++) == MARKER_MARKER)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nif ((temp = *CurHuffReadBuf++) == MARKER_MARKER)"
+        }
+    ]
+}

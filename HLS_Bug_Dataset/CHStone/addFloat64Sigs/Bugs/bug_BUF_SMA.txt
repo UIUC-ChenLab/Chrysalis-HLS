@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "zSig = (aSig + bSig) << 1;",
+            "Faulty Code": "zSig = (aSig + bSig);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "INLINE float64 packFloat64 (flag zSign, int16 zExp, bits64 zSig)",
+            "Faulty Code": "#pragma HLS INTERFACE port=packFloat64 bram"
+        }
+    ]
+}

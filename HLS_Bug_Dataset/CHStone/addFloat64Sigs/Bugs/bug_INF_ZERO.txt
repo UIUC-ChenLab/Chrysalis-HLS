@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if ((sbits64) zSig < 0)",
+            "Faulty Code": "if ((sbits64) zSig)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "roundIncrement = 0x200;",
+            "Faulty Code": "roundIncrement = 0;"
+        }
+    ]
+}

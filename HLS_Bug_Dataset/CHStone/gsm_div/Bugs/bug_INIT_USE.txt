@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "div = 0;",
+            "Faulty Code": "word div;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "L_num = num;",
+            "Faulty Code": "L_num = (longword)(int)num;"
+        }
+    ]
+}

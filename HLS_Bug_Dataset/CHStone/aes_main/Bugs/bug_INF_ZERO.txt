@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "encrypt (statemt, key, 128128);",
+            "Faulty Code": "encrypt (statemt, key, 128128); // Assuming the encrypt function has an incorrect loop termination"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "statemt[0] = 50;",
+            "Faulty Code": "statemt[0] = 0; // Incorrectly initialized to zero"
+        }
+    ]
+}

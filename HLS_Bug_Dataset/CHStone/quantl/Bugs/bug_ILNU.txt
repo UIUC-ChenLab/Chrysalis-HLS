@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (mil = 0; mil < 30; mil++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (mil = 0; mil < 30; mil++)"
+        }
+    ]
+}

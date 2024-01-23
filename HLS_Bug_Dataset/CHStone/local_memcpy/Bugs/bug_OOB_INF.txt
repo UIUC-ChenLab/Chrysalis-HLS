@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "while (n-- > 0)",
+            "Faulty Code": "while (n-- >= 0)"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "while (n-- > 0)",
+            "Faulty Code": "while (n-- > -1)"
+        }
+    ]
+}

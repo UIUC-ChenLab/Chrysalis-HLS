@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if ((long) plt * plt1 >= 0L)",
+            "Faulty Code": "if ((long) plt[0] * plt1 >= 0L)"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "apl2 = wd4 + (127L * (long) al2 >> 7L);",
+            "Faulty Code": "apl2 = wd4 + (127L * (long) al2 >> 8L);"
+        }
+    ]
+}

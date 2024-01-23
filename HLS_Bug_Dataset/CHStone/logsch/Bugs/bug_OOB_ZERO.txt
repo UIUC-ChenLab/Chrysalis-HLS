@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "nbh = wd + wh_code_table[ih];",
+            "Faulty Code": "nbh = wd + wh_code_table[ih + 1];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "wd = ((long) nbh * 127L) >> 7L;",
+            "Faulty Code": "wd = ((long) nbh * 0L) >> 7L;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "while (m-- > 0) { *p++ = uc; }",
+            "Faulty Code": "for (int i = 0; i <= m; i++) { *p++ = uc; }"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "uc = c;",
+            "Faulty Code": "uc = (INT32)((char)c);"
+        }
+    ]
+}

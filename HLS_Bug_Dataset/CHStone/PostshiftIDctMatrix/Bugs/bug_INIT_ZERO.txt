@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int *mptr;",
+            "Faulty Code": "int *mptr = nullptr;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "*mptr += shift;",
+            "Faulty Code": "*mptr = shift;"
+        }
+    ]
+}

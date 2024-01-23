@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "p_quant_tbl = &p_jinfo_quant_tbl_quantval[(int)p_jinfo_comps_info_quant_tbl_no[comp_no]][DCTSIZE2];",
+            "Faulty Code": "p_quant_tbl = &p_jinfo_quant_tbl_quantval[(int)p_jinfo_comps_info_quant_tbl_no[comp_no]][0];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void decode_block (int comp_no, int *out_buf, int *HuffBuff)",
+            "Faulty Code": "void decode_block (int comp_no, int out_buf, int *HuffBuff)"
+        }
+    ]
+}

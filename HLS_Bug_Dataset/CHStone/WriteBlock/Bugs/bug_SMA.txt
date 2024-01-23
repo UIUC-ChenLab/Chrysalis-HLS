@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void WriteBlock (int *store, int *p_out_vpos, int *p_out_hpos, unsigned char *p_out_buf)",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=p_out_vpos depth=1024 offset=slave bundle=gmem0\n void WriteBlock (int *store, int *p_out_vpos, int *p_out_hpos, unsigned char *p_out_buf)"
+        }
+    ]
+}

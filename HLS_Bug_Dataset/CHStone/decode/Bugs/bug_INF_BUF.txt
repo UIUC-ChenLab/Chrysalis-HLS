@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (i = 0; i < IN_END; i += 2)",
+            "Faulty Code": "for (i = 0; i <= IN_END; i += 2)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "*tqmf_ptr-- = *tqmf_ptr1--",
+            "Faulty Code": "*tqmf_ptr-- = *tqmf_ptr1++"
+        }
+    ]
+}

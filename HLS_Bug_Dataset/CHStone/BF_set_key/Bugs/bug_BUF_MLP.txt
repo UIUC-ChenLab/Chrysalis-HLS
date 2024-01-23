@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "end = &(data[len]);",
+            "Faulty Code": "end = &(data[len / 2]); // Should be the end of data, not the middle"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = 0; i < (BF_ROUNDS + 2); i++)",
+            "Faulty Code": "#pragma HLS pipeline // Incorrect placement, should not be here"
+        }
+    ]
+}

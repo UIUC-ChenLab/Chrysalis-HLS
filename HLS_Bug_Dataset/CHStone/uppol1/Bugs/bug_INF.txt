@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (apl1 > wd3)\n    apl1 = wd3;\nif (apl1 < -wd3)\n    apl1 = -wd3;",
+            "Faulty Code": "while (apl1 > wd3)\n    apl1 = wd3;\nwhile (apl1 < -wd3)\n    apl1 = -wd3;"
+        }
+    ]
+}

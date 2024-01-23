@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "int abs (int n) { int m; if (n >= 0) m = n; else m = -n; return m; }",
+            "Faulty Code": "int abs (int n) { int m; while (n != 0) { if (n > 0) m = n; else m = -n; } return m; }"
+        }
+    ]
+}

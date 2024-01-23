@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "statemt[3 + j * 4] ^= word[3][j + nb * n];",
+            "Faulty Code": "statemt[3 + j * 8] ^= word[3][j + nb * n];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (j = 0; j < nb; ++j)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (j = 0; j < nb; ++j)"
+        }
+    ]
+}

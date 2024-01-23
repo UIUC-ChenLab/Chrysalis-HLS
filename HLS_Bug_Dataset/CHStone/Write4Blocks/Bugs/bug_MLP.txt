@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "\"\"\"for (i = voffs; i < voffs + DCTSIZE; i++)\n{...}\"\"\"",
+            "Faulty Code": "\"\"\"#pragma HLS pipeline\nfor (i = voffs; i < voffs + DCTSIZE; i++)\n{\n#pragma HLS pipeline\n...}\"\"\""
+        }
+    ]
+}

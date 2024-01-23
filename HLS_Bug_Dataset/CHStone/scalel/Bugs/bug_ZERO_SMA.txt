@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int wd1, wd2, wd3;",
+            "Faulty Code": "int wd1 = 0, wd2, wd3;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int scalel (int nbl, int shift_constant)",
+            "Faulty Code": "#pragma HLS interface port=bram int scalel (int nbl, int shift_constant)"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "while (n_tmp-- > 0) { *p1 = *p2; p1++; p2++; }",
+            "Faulty Code": "#pragma HLS unroll factor=4 while (n_tmp-- > 0) { *p1 = *p2; p1++; p2++; }"
+        }
+    ]
+}

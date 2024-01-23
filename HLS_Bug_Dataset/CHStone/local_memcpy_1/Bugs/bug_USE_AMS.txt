@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "tmp |= (0xFF & *p2++) << 8;",
+            "Faulty Code": "tmp |= (0xFF & *p2++) << 32;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void local_memcpy (INT32 * s1, const BYTE * s2, int n)",
+            "Faulty Code": "#pragma HLS interface port=s1 mode=ap_none\nvoid local_memcpy (INT32 * s1, const BYTE * s2, int n)"
+        }
+    ]
+}

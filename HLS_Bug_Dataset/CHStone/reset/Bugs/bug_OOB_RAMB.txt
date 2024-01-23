@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (i = 0; i < 24; i++) tqmf[i] = 0;",
+            "Faulty Code": "for (i = 0; i <= 24; i++) tqmf[i] = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (i = 0; i < 6; i++) { delay_dltx[i] = 0; delay_dhx[i] = 0; dec_del_dltx[i] = 0; dec_del_dhx[i] = 0; }",
+            "Faulty Code": "for (i = 0; i < 6; i += 2) { delay_dltx[i] = 0; delay_dhx[i] = 0; dec_del_dltx[i] = 0; dec_del_dhx[i] = 0; }"
+        }
+    ]
+}

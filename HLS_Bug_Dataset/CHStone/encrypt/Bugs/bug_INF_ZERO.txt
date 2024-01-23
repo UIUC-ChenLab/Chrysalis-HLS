@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (i = 1; i <= round_val + 9; ++i)",
+            "Faulty Code": "for (i = 1; i < round_val + 9; ++i)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "round_val = 2;",
+            "Faulty Code": "round_val = 0;"
+        }
+    ]
+}

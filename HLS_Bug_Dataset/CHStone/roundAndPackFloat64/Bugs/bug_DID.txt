@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "INLINE float64 packFloat64 (flag zSign, int16 zExp, bits64 zSig) { ... }",
+            "Faulty Code": "#pragma HLS array_partition dim=2\nINLINE float64 packFloat64 (flag zSign, int16 zExp, bits64 zSig) { ... }"
+        }
+    ]
+}

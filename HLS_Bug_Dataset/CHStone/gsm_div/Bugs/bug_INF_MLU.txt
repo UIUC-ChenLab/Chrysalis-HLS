@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (k--)",
+            "Faulty Code": "while (k)"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "while (k--)",
+            "Faulty Code": "while (--k)"
+        }
+    ]
+}

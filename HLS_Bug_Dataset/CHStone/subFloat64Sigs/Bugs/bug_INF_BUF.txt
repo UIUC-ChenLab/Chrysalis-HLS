@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if ((0x7FD < zExp) || ((zExp == 0x7FD) && ((sbits64) (zSig + roundIncrement) < 0)))",
+            "Faulty Code": "if ((0x7FD <= zExp) || ((zExp == 0x7FD) && ((sbits64) (zSig + roundIncrement) < 0)))"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "zSig = (zSig + roundIncrement) >> 10;",
+            "Faulty Code": "zSig = (zSig + roundIncrement) << 10;"
+        }
+    ]
+}

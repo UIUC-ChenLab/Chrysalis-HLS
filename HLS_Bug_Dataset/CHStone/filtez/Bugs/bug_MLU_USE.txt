@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = 1; i < 6; i++)",
+            "Faulty Code": "for (i = 1; i <= 6; i++)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "return ((int) (zl >> 14));",
+            "Faulty Code": "return ((short) (zl >> 14));"
+        }
+    ]
+}

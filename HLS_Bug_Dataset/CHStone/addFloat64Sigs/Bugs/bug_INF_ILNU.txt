@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (0 < expDiff)",
+            "Faulty Code": "while (0 < expDiff)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "zSig = (aSig + bSig) << 1;",
+            "Faulty Code": "#pragma HLS unroll factor=2\nzSig = (aSig + bSig) << 1;"
+        }
+    ]
+}

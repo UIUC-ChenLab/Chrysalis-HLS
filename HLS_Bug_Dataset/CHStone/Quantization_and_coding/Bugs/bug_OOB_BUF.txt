@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "*LAR  =  temp>MAC ? MAC - MIC : (temp<MIC ? 0 : temp - MIC);",
+            "Faulty Code": "*LAR  =  temp>MAC ? MAC - MIC : (temp<MIC ? 0 : temp - MIC); LAR++;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "STEP (20480, -2560, 15, -16);",
+            "Faulty Code": "STEP (20480, 0, 15, -16);"
+        }
+    ]
+}

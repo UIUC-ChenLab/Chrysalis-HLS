@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "register int a0, a1, a2, a3;",
+            "Faulty Code": "register int a0, a1, a2, a3 = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "/* Loop over columns */ for (i = 0; i < 8; i++)",
+            "Faulty Code": "/* Loop over columns in a non-consecutive manner */ for (i = 0; i < 32; i += 4)"
+        }
+    ]
+}

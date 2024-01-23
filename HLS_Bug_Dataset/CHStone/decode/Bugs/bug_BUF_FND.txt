@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "*tqmf_ptr-- = *tqmf_ptr1--;",
+            "Faulty Code": "*tqmf_ptr-- = *tqmf_ptr++;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for (i = 0; i < 10; i++)",
+            "Faulty Code": "#pragma HLS array_partition factor=3"
+        }
+    ]
+}

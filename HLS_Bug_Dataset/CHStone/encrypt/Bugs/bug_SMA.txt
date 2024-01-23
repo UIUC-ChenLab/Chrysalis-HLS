@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "int encrypt (int statemt[32], int key[32], int type)",
+            "Faulty Code": "#pragma HLS interface port=statemt bram\nint encrypt (int statemt[32], int key[32], int type)"
+        }
+    ]
+}

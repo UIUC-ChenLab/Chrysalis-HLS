@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int16 roundIncrement, roundBits;",
+            "Faulty Code": "int16 roundIncrement, roundBits = roundIncrement;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "zSig = (zSig + roundIncrement) >> 10;",
+            "Faulty Code": "zSig = (zSig + roundIncrement) >> 9;"
+        }
+    ]
+}

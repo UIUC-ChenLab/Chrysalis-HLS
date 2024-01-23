@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "statemt[2] = Sbox[statemt[10] >> 4][statemt[10] & 0xf];",
+            "Faulty Code": "statemt[2] = Sbox[statemt[2] >> 4][statemt[2] & 0xf];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "temp = Sbox[statemt[3] >> 4][statemt[3] & 0xf];",
+            "Faulty Code": "temp = Sbox[(char)statemt[3] >> 4][(char)statemt[3] & 0xf];"
+        }
+    ]
+}

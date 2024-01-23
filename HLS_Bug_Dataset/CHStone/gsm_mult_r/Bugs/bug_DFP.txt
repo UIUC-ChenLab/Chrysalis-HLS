@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "prod = (longword) a *(longword) b + 16384;",
+            "Faulty Code": "#pragma HLS dataflow\nprod = (longword) a *(longword) b + 16384;"
+        }
+    ]
+}

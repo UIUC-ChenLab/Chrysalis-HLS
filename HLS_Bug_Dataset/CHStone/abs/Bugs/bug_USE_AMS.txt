@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int abs (int n)",
+            "Faulty Code": "int abs (short n)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "int m;",
+            "Faulty Code": "#pragma HLS interface port=return ap_none\nint m;"
+        }
+    ]
+}

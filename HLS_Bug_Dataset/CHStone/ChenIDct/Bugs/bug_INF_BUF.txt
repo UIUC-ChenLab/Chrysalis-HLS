@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (i = 0; i < 8; i++)",
+            "Faulty Code": "for (i = 0; i <= 8; i++)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "aptr += 8;",
+            "Faulty Code": "aptr += 4;"
+        }
+    ]
+}

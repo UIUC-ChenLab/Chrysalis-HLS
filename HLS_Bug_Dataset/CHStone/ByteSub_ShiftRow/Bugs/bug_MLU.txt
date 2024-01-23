@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "statemt[10] = Sbox[statemt[22] >> 4][statemt[22] & 0xf];",
+            "Faulty Code": "statemt[10] = Sbox[statemt[18] >> 4][statemt[18] & 0xf];"
+        }
+    ]
+}

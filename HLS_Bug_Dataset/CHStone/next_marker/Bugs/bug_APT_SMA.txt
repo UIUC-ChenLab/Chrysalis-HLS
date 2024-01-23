@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "int read_byte (void) { return *ReadBuf++; }",
+            "Faulty Code": "#pragma HLS interface port=bram variable=ReadBuf\nint read_byte (void) { return *ReadBuf++; }"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "int read_byte (void) { return *ReadBuf++; }",
+            "Faulty Code": "#pragma HLS array_partition variable=ReadBuf type=complete\nint read_byte (void) { return *ReadBuf++; }"
+        }
+    ]
+}

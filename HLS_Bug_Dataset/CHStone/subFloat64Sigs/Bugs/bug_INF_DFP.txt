@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "shift64RightJamming (aSig, -expDiff, &aSig);",
+            "Faulty Code": "while(-expDiff) { shift64RightJamming(aSig, -expDiff, &aSig); } // Assuming expDiff is not updated inside the loop"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "INLINE float64 packFloat64 (flag zSign, int16 zExp, bits64 zSig)",
+            "Faulty Code": "#pragma HLS dataflow\nINLINE float64 packFloat64 (flag zSign, int16 zExp, bits64 zSig)"
+        }
+    ]
+}

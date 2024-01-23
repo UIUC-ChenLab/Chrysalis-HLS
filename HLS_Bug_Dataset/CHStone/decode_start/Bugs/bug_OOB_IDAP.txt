@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (i = 0; i < NUM_COMPONENT; i++)",
+            "Faulty Code": "for (i = 0; i <= NUM_COMPONENT; i++)"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "*p_out_vpos = *p_out_vpos + 2;",
+            "Faulty Code": "*p_out_vpos++;"
+        }
+    ]
+}

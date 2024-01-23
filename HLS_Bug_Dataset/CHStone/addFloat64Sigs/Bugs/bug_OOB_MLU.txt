@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "roundBits = zSig & 0x3FF;",
+            "Faulty Code": "roundBits = zSig & 0xFFF;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "zSig = (zSig + roundIncrement) >> 10;",
+            "Faulty Code": "zSig = (zSig + roundIncrement) >> 9;"
+        }
+    ]
+}

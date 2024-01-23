@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "IZigzagMatrix (int *imatrix, int *omatrix)",
+            "Faulty Code": "IZigzagMatrix (int *imatrix = {0}, int *omatrix)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 0; i < DCTSIZE2; i++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (i = 0; i < DCTSIZE2; i++)"
+        }
+    ]
+}

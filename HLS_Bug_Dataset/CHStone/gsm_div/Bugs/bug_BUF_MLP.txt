@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "L_num = num;",
+            "Faulty Code": "L_num = L_denum;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "while (k--)",
+            "Faulty Code": "#pragma HLS pipeline\nwhile (k--)"
+        }
+    ]
+}

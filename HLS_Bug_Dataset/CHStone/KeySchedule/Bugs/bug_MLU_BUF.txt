@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = 0; i < 4; ++i)",
+            "Faulty Code": "for (i = 0; i < 3; ++i)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "temp[0] = SubByte (word[1][j - 1]) ^ Rcon0[(j / nk) - 1];",
+            "Faulty Code": "temp[0] = SubByte (word[0][j - 1]) ^ Rcon0[(j / nk) - 1];"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "c = read_byte ();",
+            "Faulty Code": "c = read_byte (); c = read_byte ();"
+        }
+    ]
+}

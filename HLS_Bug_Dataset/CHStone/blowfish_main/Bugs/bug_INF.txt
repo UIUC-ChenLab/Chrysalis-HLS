@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (k < KEYSIZE && i < N) indata[i++] = in_key[k++];",
+            "Faulty Code": "while (k < KEYSIZE) indata[i++] = in_key[k++];"
+        }
+    ]
+}

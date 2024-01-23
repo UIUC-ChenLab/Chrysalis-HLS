@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "return Sbox[(in / 16)][(in % 16)];",
+            "Faulty Code": "return Sbox[(unsigned char)(in / 16)][(unsigned char)(in % 16)];"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "return Sbox[(in / 16)][(in % 16)];",
+            "Faulty Code": "return Sbox[(in % 16)][(in / 16)];"
+        }
+    ]
+}

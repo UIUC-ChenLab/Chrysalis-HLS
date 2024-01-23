@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void decode_block (int comp_no, int *out_buf, int *HuffBuff)",
+            "Faulty Code": "#pragma HLS INTERFACE port=comp_no mode=ap_none"
+        }
+    ]
+}

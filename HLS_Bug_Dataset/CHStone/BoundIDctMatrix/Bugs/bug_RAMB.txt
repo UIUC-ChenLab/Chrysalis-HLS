@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void BoundIDctMatrix (int *matrix, int Bound) {",
+            "Faulty Code": "#pragma HLS interface m_axi port=matrix mode=read_write\nvoid BoundIDctMatrix (int *matrix, int Bound) {"
+        }
+    ]
+}

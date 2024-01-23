@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "int read_byte (void) { return *ReadBuf++; }",
+            "Faulty Code": "#pragma HLS array_partition variable=ReadBuf factor=3 complete\nint read_byte (void) { return *ReadBuf++; }"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "int read_byte (void) { return *ReadBuf++; }",
+            "Faulty Code": "#pragma HLS interface port=ReadBuf mode=ap_fifo\nint read_byte (void) { return *ReadBuf++; }"
+        }
+    ]
+}

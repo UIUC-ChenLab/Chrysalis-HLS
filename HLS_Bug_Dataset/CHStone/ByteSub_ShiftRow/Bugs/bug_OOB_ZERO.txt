@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "statemt[13] = Sbox[statemt[17] >> 4][statemt[17] & 0xf];",
+            "Faulty Code": "statemt[13] = Sbox[statemt[17] >> 4][statemt[32] & 0xf];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "temp = Sbox[statemt[1] >> 4][statemt[1] & 0xf];",
+            "Faulty Code": "int temp = 0;"
+        }
+    ]
+}

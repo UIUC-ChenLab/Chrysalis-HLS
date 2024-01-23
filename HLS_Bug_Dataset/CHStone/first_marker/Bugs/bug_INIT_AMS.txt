@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int c1, c2;",
+            "Faulty Code": "int c1, c2 = read_byte();"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "return *ReadBuf++;",
+            "Faulty Code": "#pragma HLS INTERFACE port=ReadBuf ap_none\nint\nread_byte (void)\n{\n  return *ReadBuf++;\n}"
+        }
+    ]
+}

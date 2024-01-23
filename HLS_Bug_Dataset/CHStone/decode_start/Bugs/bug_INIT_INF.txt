@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int HuffBuff[NUM_COMPONENT][DCTSIZE2];",
+            "Faulty Code": "int HuffBuff[NUM_COMPONENT][DCTSIZE2]; // The 'HuffBuff' array is declared but not initialized."
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "*p_out_vpos = *p_out_vpos + 2;",
+            "Faulty Code": "*p_out_vpos = *p_out_vpos + 2; // This line could cause an infinite loop if 'p_out_vpos' is not properly managed within 'Write4Blocks'."
+        }
+    ]
+}

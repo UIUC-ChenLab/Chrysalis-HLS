@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "detl = dec_detl = 32;",
+            "Faulty Code": "detl = dec_detl = 0;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "for (i = 0; i < 24; i++) tqmf[i] = 0;",
+            "Faulty Code": "tqmf[0] = 0; // Assuming the entire array is initialized"
+        }
+    ]
+}

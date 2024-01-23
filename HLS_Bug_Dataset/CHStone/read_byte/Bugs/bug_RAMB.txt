@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "int read_byte (void) { return *ReadBuf++; }",
+            "Faulty Code": "int read_byte (void) { #pragma HLS interface m_axi port=ReadBuf #pragma HLS resource variable=ReadBuf core=AXI4LiteS return *ReadBuf++; }"
+        }
+    ]
+}

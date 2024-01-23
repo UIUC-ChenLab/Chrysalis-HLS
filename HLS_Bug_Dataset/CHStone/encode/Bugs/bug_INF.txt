@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (mil = 0; mil < 30; mil++)\n    {\n      decis = (decis_levl[mil] * (long) detl) >> 15L;\n      if (wd <= decis)\n        break;\n    }",
+            "Faulty Code": "for (mil = 0; mil < 30; mil++)\n    {\n      decis = (decis_levl[mil] * (long) detl) >> 15L;\n      if (wd >= decis)\n        break;\n    }"
+        }
+    ]
+}

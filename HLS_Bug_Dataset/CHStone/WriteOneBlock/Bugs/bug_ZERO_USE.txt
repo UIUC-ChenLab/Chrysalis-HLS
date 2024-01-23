@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int diff;",
+            "Faulty Code": "int diff = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "out_buf[diff + e] = (unsigned char) (*(store++));",
+            "Faulty Code": "out_buf[diff + e] = (int) (*(store++));"
+        }
+    ]
+}

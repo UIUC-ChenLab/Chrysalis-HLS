@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void decode_block (int comp_no, int *out_buf, int *HuffBuff) { /* Function Body */ }",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=out_buf offset=slave bundle=gmem\nvoid decode_block (int comp_no, int *out_buf, int *HuffBuff) { /* Function Body */ }"
+        }
+    ]
+}

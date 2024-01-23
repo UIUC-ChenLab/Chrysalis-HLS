@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "r_size = r_size % 32;",
+            "Faulty Code": "r_size = r_size % 64;"
+        }
+    ]
+}

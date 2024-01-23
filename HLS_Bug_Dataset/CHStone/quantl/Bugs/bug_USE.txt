@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "decis = (decis_levl[mil] * (long) detl) >> 15L;",
+            "Faulty Code": "decis = (decis_levl[mil] * detl) >> 15L;"
+        }
+    ]
+}

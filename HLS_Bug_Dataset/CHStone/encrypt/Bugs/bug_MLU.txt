@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = 1; i <= round_val + 9; ++i)",
+            "Faulty Code": "for (i = 1; i < round_val + 9; ++i)"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "int filtez (int *bpl, int *dlt) { /* ... */ }",
+            "Faulty Code": "#pragma HLS interface port=bram mode=m_axi int filtez (int *bpl, int *dlt) { /* ... */ }"
+        }
+    ]
+}

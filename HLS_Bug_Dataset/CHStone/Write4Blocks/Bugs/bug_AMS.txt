@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void Write4Blocks (int *store1, int *store2, int *store3, int *store4, int *p_out_vpos, int *p_out_hpos, unsigned char *p_out_buf)",
+            "Faulty Code": "#pragma HLS interface port=store1 ap_none"
+        }
+    ]
+}

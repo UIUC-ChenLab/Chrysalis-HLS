@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (i = round_val - 1; i >= 1; --i)",
+            "Faulty Code": "#pragma HLS array_partition variable=statemt factor=3 complete\nfor (i = round_val - 1; i >= 1; --i)"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "KeySchedule (type, key);",
+            "Faulty Code": "#pragma HLS array_partition variable=key dim=1\nKeySchedule (type, key);"
+        }
+    ]
+}

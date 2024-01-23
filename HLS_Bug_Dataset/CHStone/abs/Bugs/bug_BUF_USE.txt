@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "m = n;",
+            "Faulty Code": "m = n >> 16;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "m = -n;",
+            "Faulty Code": "m = -((short)n);"
+        }
+    ]
+}

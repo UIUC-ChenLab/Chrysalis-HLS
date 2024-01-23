@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (e = hoffs; e < hoffs + DCTSIZE; e++)",
+            "Faulty Code": "for (e = hoffs; e <= hoffs + DCTSIZE; e++)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "out_buf[diff + e] = (unsigned char) (*(store++));",
+            "Faulty Code": "out_buf[diff + e] = (int) (*(store++));"
+        }
+    ]
+}

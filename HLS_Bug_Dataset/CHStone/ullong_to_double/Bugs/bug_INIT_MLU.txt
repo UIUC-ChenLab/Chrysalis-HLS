@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "t.ll = x;",
+            "Faulty Code": "// Missing initialization of t.ll, assuming it's set elsewhere or relying on default initialization which is not guaranteed"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "t.ll = x;",
+            "Faulty Code": "// Incorrect manual loop unrolling could be introduced if there was a loop setting multiple parts of a larger data structure, but the loop is omitted here since the function is simple."
+        }
+    ]
+}

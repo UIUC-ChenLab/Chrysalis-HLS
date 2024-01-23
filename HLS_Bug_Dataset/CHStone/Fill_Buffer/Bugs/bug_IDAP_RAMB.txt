@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "Buffer_Level = read (ld_Rdbfr, inRdbfr, 2048);",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=ld_Rdbfr"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "Buffer_Level = read (ld_Rdbfr, inRdbfr, 2048);",
+            "Faulty Code": "#pragma HLS interface port=ld_Rdbfr mode=m_axi"
+        }
+    ]
+}

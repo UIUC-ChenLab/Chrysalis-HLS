@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "for (i = 0; i < 24; i++)\n    tqmf[i] = 0;",
+            "Faulty Code": "for (i = 0; i < 12; i++)\n    tqmf[i + 24] = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (i = 0; i < IN_END; i += 2)\n    {\n      compressed[i / 2] = encode (test_data[i], test_data[i + 1]);\n    }",
+            "Faulty Code": "for (i = 0; i < IN_END; i++)\n    {\n      compressed[i] = encode (test_data[i], test_data[i + 1]);\n    }"
+        }
+    ]
+}

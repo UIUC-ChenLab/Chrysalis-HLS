@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "A = sha_info_digest[0];",
+            "Faulty Code": "A = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (i = 0; i < 16; ++i) { W[i] = sha_info_data[i]; }",
+            "Faulty Code": "#pragma HLS interface m_axi port=sha_info_data offset=slave bundle=gmem"
+        }
+    ]
+}

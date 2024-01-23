@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "long int zl;",
+            "Faulty Code": "long int zl = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "return ((int) (zl >> 14));",
+            "Faulty Code": "return ((int) ((unsigned long)zl >> 14));"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "return Sbox[(in / 16)][(in % 16)];",
+            "Faulty Code": "return Sbox[(in % 16)][(in / 16)];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "int SubByte (int in)",
+            "Faulty Code": "#pragma HLS interface m_axi port=Sbox offset=slave bundle=gmem\nint SubByte (int in)"
+        }
+    ]
+}

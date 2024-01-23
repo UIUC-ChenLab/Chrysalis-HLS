@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ld_Rdbfr[Buffer_Level++] = SEQUENCE_END_CODE >> 24;",
+            "Faulty Code": "ld_Rdbfr[Buffer_Level++] = (char)(SEQUENCE_END_CODE >> 24);"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "while (Buffer_Level & 3)\n\tld_Rdbfr[Buffer_Level++] = 0;",
+            "Faulty Code": "#pragma HLS unroll factor=2\nwhile (Buffer_Level & 3)\n\tld_Rdbfr[Buffer_Level++] = 0;"
+        }
+    ]
+}

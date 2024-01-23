@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void local_memcpy (BF_LONG * s1, const BF_LONG * s2, int n) { ... }",
+            "Faulty Code": "#pragma HLS INTERFACE port=s1 bram\nvoid local_memcpy (BF_LONG * s1, const BF_LONG * s2, int n) { ... }"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "while (n-- > 0) { *p1 = *p2; p1++; p2++; }",
+            "Faulty Code": "while (n-- > 0) { #pragma HLS pipeline #pragma HLS pipeline *p1 = *p2; p1++; p2++; }"
+        }
+    ]
+}

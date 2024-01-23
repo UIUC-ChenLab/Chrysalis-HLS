@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "wd2 = ((long) al1 * 255L) >> 8L;",
+            "Faulty Code": "wd2 = 0;"
+        }
+    ]
+}

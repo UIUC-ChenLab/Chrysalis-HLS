@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (e = hoffs; e < hoffs + DCTSIZE; e++)",
+            "Faulty Code": "#pragma HLS dataflow\\nfor (e = hoffs; e < hoffs + DCTSIZE; e++)"
+        }
+    ]
+}

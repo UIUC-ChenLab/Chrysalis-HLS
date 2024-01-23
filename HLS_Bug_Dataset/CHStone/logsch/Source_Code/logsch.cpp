@@ -1,0 +1,12 @@
+int
+logsch (int ih, int nbh)
+{
+  int wd;
+  wd = ((long) nbh * 127L) >> 7L;	/* leak factor 127/128 */
+  nbh = wd + wh_code_table[ih];
+  if (nbh < 0)
+    nbh = 0;
+  if (nbh > 22528)
+    nbh = 22528;
+  return (nbh);
+}

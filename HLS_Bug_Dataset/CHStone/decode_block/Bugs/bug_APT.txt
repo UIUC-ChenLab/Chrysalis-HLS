@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "void ChenIDct (int *x, int *y) { /* ... */ for (i = 0; i < 8; i++) { /* ... */ } /* ... */ }",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic variable=x factor=8 dim=1\nvoid ChenIDct (int *x, int *y) { /* ... */ for (i = 0; i < 8; i++) { /* ... */ } /* ... */ }"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "gsm_abs (word a) { return a < 0 ? (a == MIN_WORD ? MAX_WORD : -a) : a; }",
+            "Faulty Code": "#pragma HLS interface port=bram function=gsm_abs\ngsm_abs (word a) { return a < 0 ? (a == MIN_WORD ? MAX_WORD : -a) : a; }"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "gsm_abs (word a) { return a < 0 ? (a == MIN_WORD ? MAX_WORD : -a) : a; }",
+            "Faulty Code": "#pragma HLS unroll factor=4\n gsm_abs (word a) { return a < 0 ? (a == MIN_WORD ? MAX_WORD : -a) : a; }"
+        }
+    ]
+}

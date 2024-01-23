@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (j = 0; j < nb; ++j)",
+            "Faulty Code": "for (j = 0; j < nb - 1; ++j)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "x = statemt[1 + j * 4];",
+            "Faulty Code": "x = 0;"
+        }
+    ]
+}

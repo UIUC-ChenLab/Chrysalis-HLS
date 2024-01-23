@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "zSig = (aSig + bSig) << 1;",
+            "Faulty Code": "#pragma HLS pipeline\n    zSig = (aSig + bSig) << 1;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "if (aSig < bSig) goto bBigger;",
+            "Faulty Code": "#pragma HLS unroll factor=2\n    if (aSig < bSig) goto bBigger;"
+        }
+    ]
+}

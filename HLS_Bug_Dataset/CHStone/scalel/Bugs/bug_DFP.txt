@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "wd3 = ilb_table[wd1] >> (shift_constant + 1 - wd2);",
+            "Faulty Code": "#pragma HLS dataflow\nwd3 = ilb_table[wd1] >> (shift_constant + 1 - wd2);"
+        }
+    ]
+}

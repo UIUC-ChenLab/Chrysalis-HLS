@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "return ((int) (pl >> 15));",
+            "Faulty Code": "while(1) { /* ... some irrelevant code ... */ }"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "pl += (long) al2 *pl2;",
+            "Faulty Code": "pl += (long) al1 *pl2;"
+        }
+    ]
+}

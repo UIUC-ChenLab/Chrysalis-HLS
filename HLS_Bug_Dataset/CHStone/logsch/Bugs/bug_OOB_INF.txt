@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "nbh = wd + wh_code_table[ih];",
+            "Faulty Code": "nbh = wd + wh_code_table[ih+1];"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (nbh > 22528) nbh = 22528;",
+            "Faulty Code": "while (nbh > 22528) nbh = 22528;"
+        }
+    ]
+}

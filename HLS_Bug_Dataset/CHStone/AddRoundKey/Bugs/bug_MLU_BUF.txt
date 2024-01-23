@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (j = 0; j < nb; ++j)",
+            "Faulty Code": "for (j = 0; j <= nb; ++j)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "statemt[j * 4] ^= word[0][j + nb * n];",
+            "Faulty Code": "statemt[j * 4] ^= word[0][j + nb * (n-1)];"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "int read_byte (void) {\n  return *ReadBuf++;\n}",
+            "Faulty Code": "#pragma HLS INTERFACE port=ReadBuf mode=ap_none\nint read_byte (void) {\n  return *ReadBuf++;\n}"
+        }
+    ]
+}

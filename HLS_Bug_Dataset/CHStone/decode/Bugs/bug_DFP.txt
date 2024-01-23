@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void decode (int input) { /* ... function body ... */ }",
+            "Faulty Code": "void decode (int input) { #pragma HLS dataflow /* ... function body ... */ }"
+        }
+    ]
+}

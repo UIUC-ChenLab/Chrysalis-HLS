@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "m = -n;",
+            "Faulty Code": "m = n[1]; // Assuming n is incorrectly used as an array"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (n >= 0)",
+            "Faulty Code": "while (n >= 0) // Incorrectly replacing if with while creating a potential infinite loop for non-negative n"
+        }
+    ]
+}

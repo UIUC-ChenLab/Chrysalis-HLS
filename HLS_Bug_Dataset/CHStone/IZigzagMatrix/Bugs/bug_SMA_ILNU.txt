@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void IZigzagMatrix (int *imatrix, int *omatrix)",
+            "Faulty Code": "#pragma HLS INTERFACE port=omatrix bram"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 0; i < DCTSIZE2; i++)",
+            "Faulty Code": "#pragma HLS UNROLL factor=4\nfor (i = 0; i < DCTSIZE2; i++)"
+        }
+    ]
+}

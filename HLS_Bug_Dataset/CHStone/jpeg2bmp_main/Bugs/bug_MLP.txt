@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = 0; i < NUM_COMPONENT; i++) { decode_block (i, IDCTBuff[i], HuffBuff[i]); }",
+            "Faulty Code": "for (i = 0; i < NUM_COMPONENT; i++) { #pragma HLS pipeline decode_block (i, IDCTBuff[i], HuffBuff[i]); }"
+        }
+    ]
+}

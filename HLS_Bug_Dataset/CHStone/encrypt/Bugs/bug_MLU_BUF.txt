@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = 1; i <= round_val + 9; ++i)",
+            "Faulty Code": "for (i = 1; i < round_val + 9; ++i)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "for (i = 0; i < nb * 4; ++i)",
+            "Faulty Code": "for (i = 0; i < 16; ++i)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "round_val = 0;",
+            "Faulty Code": "int round_val;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (i = 0; i < 16; i++)",
+            "Faulty Code": "for (i = 0; i < 32; i += 16)"
+        }
+    ]
+}

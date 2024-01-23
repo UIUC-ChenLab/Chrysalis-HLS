@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void local_memcpy (INT32 * s1, const BYTE * s2, int n)",
+            "Faulty Code": "#pragma HLS INTERFACE port=s1 mode=ap_none"
+        }
+    ]
+}

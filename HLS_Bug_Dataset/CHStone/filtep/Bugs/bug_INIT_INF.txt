@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "long int pl, pl2;",
+            "Faulty Code": "long int pl, pl2 = 0;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "return ((int) (pl >> 15));",
+            "Faulty Code": "while(1) { return ((int) (pl >> 15)); }"
+        }
+    ]
+}

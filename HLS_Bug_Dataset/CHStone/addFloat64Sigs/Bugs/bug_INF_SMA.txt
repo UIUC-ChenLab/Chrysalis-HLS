@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (0x7FD <= (bits16) zExp)",
+            "Faulty Code": "if (0x7FD < (bits16) zExp)"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "shift64RightJamming (zSig, -zExp, &zSig);",
+            "Faulty Code": "shift64RightJamming (zSig, zExp, &zSig);"
+        }
+    ]
+}

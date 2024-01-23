@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "return ((int) (pl >> 15));",
+            "Faulty Code": "while(1) { pl >>= 15; } // Infinite loop, missing termination condition"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "pl += (long) al2 *pl2;",
+            "Faulty Code": "#pragma HLS pipeline // Incorrect placement, no outer loop present"
+        }
+    ]
+}

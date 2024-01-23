@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "tmp |= (0xFF & *p2++) << 24;",
+            "Faulty Code": "tmp |= (0xFF & *p2++) << 32;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "while (m-- > 0)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nwhile (m-- > 0)"
+        }
+    ]
+}

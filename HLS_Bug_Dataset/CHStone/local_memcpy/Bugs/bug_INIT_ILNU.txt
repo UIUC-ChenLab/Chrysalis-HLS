@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "BF_LONG *p1;\n  const BF_LONG *p2;",
+            "Faulty Code": "BF_LONG *p1 = s1;\n  const BF_LONG *p2;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "while (n-- > 0)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nwhile (n-- > 0)"
+        }
+    ]
+}

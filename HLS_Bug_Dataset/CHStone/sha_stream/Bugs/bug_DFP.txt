@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "\"\"\"void sha_stream () { int i, j; const BYTE *p; sha_init (); for (j = 0; j < VSIZE; j++) { i = in_i[j]; p = &indata[j][0]; sha_update (p, i); } sha_final (); }\"\"\"",
+            "Faulty Code": "\"\"\"void sha_stream () { #pragma HLS dataflow int i, j; const BYTE *p; sha_init (); for (j = 0; j < VSIZE; j++) { i = in_i[j]; p = &indata[j][0]; sha_update (p, i); } sha_final (); }\"\"\""
+        }
+    ]
+}

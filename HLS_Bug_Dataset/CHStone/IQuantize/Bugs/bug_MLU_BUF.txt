@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "*mptr = *mptr * (*qmatrix);",
+            "Faulty Code": "*mptr = *(matrix + (DCTSIZE2 / 2) + (mptr - matrix)) * (*qmatrix);"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++)",
+            "Faulty Code": "for (mptr = matrix; mptr <= matrix + DCTSIZE2; mptr++)"
+        }
+    ]
+}

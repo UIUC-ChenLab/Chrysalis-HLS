@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "INT32 temp, A, B, C, D, E, W[80];",
+            "Faulty Code": "INT32 temp, A, B, C, D, E, W[80]; // 'temp' is declared but not initialized before use"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = 0; i < 16; ++i) { W[i] = sha_info_data[i]; }",
+            "Faulty Code": "for (i = 0; i <= 16; ++i) { W[i] = sha_info_data[i]; } // Loop unrolls one too many iterations, accessing W[16] which is out of bounds of sha_info_data"
+        }
+    ]
+}

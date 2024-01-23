@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void\nBoundIDctMatrix (int *matrix, int Bound)\n{\n  int *mptr;\n\n  for (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++)\n    {\n      if (*mptr < 0)\n\t{\n\t  *mptr = 0;\n\t}\n      else if (*mptr > Bound)\n\t{\n\t  *mptr = Bound;\n\t}\n    }\n}",
+            "Faulty Code": "void\nBoundIDctMatrix (int *matrix, int Bound)\n{\n  int *mptr;\n  #pragma HLS pipeline\n  for (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++)\n    {\n      #pragma HLS pipeline\n      if (*mptr < 0)\n\t{\n\t  *mptr = 0;\n\t}\n      else if (*mptr > Bound)\n\t{\n\t  *mptr = Bound;\n\t}\n    }\n}"
+        }
+    ]
+}

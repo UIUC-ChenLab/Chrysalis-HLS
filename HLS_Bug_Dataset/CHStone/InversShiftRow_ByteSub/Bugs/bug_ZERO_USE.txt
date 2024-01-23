@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "temp = invSbox[statemt[13] >> 4][statemt[13] & 0xf];",
+            "Faulty Code": "int temp = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "statemt[13] = invSbox[statemt[9] >> 4][statemt[9] & 0xf];",
+            "Faulty Code": "statemt[13] = invSbox[(unsigned char)statemt[9] >> 4][statemt[9] & 0xf];"
+        }
+    ]
+}

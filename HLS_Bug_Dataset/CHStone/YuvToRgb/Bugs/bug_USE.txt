@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "u = u_buf[i] - 128;",
+            "Faulty Code": "u = u_buf[i] << 128;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void BoundIDctMatrix (int *matrix, int Bound) {\n  int *mptr;\n  for (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++) {\n    if (*mptr < 0) {\n      *mptr = 0;\n    }\n    else if (*mptr > Bound) {\n      *mptr = Bound;\n    }\n  }\n}",
+            "Faulty Code": "void BoundIDctMatrix (int *matrix, int Bound) {\n  #pragma HLS dataflow\n  int *mptr;\n  for (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++) {\n    if (*mptr < 0) {\n      *mptr = 0;\n    }\n    else if (*mptr > Bound) {\n      *mptr = Bound;\n    }\n  }\n}"
+        }
+    ]
+}

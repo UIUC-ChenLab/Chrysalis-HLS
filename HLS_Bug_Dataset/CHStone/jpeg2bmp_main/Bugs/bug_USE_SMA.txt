@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "diff |= extend_mask[s];",
+            "Faulty Code": "diff |= (int)extend_mask[s];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void decode_block (int comp_no, int *out_buf, int *HuffBuff)",
+            "Faulty Code": "#pragma HLS INTERFACE port=comp_no bram"
+        }
+    ]
+}

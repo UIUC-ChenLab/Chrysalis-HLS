@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (el >= 0)\n    ril = quant26bt_pos[mil];\n  else\n    ril = quant26bt_neg[mil];",
+            "Faulty Code": "if (el >= 0)\n    ril = quant26bt_pos[mil+1];\n  else\n    ril = quant26bt_neg[mil+1];"
+        }
+    ]
+}

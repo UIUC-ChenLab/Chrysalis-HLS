@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "BF_cfb64_encrypt (indata, outdata, i, ivec, &num, encordec);",
+            "Faulty Code": "BF_cfb64_encrypt (indata, outdata, N, ivec, &num, encordec);"
+        }
+    ]
+}

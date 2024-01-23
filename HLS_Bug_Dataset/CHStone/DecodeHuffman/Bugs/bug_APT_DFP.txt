@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "int DecodeHuffman (int *Xhuff_huffval, int Dhuff_ml, int *Dhuff_maxcode, int *Dhuff_mincode, int *Dhuff_valptr)",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=Dhuff_maxcode\nint DecodeHuffman (int *Xhuff_huffval, int Dhuff_ml, int *Dhuff_maxcode, int *Dhuff_mincode, int *Dhuff_valptr)"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "code = (code << 1) + buf_getb ();",
+            "Faulty Code": "#pragma HLS dataflow\ncode = (code << 1) + buf_getb ();"
+        }
+    ]
+}

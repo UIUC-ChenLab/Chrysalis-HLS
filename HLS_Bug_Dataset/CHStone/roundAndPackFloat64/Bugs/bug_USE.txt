@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "((sbits64) (zSig + roundIncrement) < 0)",
+            "Faulty Code": "(zSig + roundIncrement < 0)"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "local_memcpy (sha_info_data, buffer, SHA_BLOCKSIZE);",
+            "Faulty Code": "local_memcpy (sha_info_data, buffer + SHA_BLOCKSIZE, SHA_BLOCKSIZE);"
+        }
+    ]
+}

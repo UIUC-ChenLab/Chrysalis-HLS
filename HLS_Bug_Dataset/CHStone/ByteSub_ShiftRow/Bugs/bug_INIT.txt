@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int temp;",
+            "Faulty Code": "int temp = Sbox[statemt[0] >> 4][statemt[0] & 0xf];"
+        }
+    ]
+}

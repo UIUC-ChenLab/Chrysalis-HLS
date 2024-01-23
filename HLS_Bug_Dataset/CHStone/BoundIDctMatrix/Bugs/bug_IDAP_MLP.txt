@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void BoundIDctMatrix (int *matrix, int Bound)",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=matrix\nvoid BoundIDctMatrix (int *matrix, int Bound)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++)"
+        }
+    ]
+}

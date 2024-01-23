@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (i = 0; i < 6; i++)",
+            "Faulty Code": "for (i = 0; i <= 6; i++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "detl = dec_detl = 32;",
+            "Faulty Code": "detl = dec_detl = 0;"
+        }
+    ]
+}

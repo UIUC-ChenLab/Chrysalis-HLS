@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "for (i = 16; i < 80; ++i)\n{\nW[i] = W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16];\n}",
+            "Faulty Code": "#pragma HLS array_partition variable=W dim=2 complete\nfor (i = 16; i < 80; ++i)\n{\nW[i] = W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16];\n}"
+        }
+    ]
+}

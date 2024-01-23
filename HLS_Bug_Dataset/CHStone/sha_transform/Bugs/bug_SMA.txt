@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "INT32 temp, A, B, C, D, E, W[80];",
+            "Faulty Code": "#pragma HLS interface port=temp bram"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "*c++ = ci;",
+            "Faulty Code": "*c++ = (char)ci;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "jpeg_read (JpegFileBuf);",
+            "Faulty Code": "#pragma HLS INTERFACE port=JpegFileBuf ap_none"
+        }
+    ]
+}

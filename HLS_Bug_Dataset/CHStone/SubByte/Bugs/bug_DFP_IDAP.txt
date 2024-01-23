@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "int SubByte (int in) {\n  return Sbox[(in / 16)][(in % 16)];\n}",
+            "Faulty Code": "#pragma HLS dataflow\nint SubByte (int in) {\n  return Sbox[(in / 16)][(in % 16)];\n}"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "int SubByte (int in) {\n  return Sbox[(in / 16)][(in % 16)];\n}",
+            "Faulty Code": "#pragma HLS interface mode=burst port=Sbox\nint SubByte (int in) {\n  return Sbox[(in / 16)][(in % 16)];\n}"
+        }
+    ]
+}

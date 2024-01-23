@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "while (n-- > 0)",
+            "Faulty Code": "#pragma HLS array_partition variable=p1 factor=3 cyclic\n    while (n-- > 0)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "while (n-- > 0)",
+            "Faulty Code": "#pragma HLS unroll factor=4\n    while (n-- > 0)"
+        }
+    ]
+}

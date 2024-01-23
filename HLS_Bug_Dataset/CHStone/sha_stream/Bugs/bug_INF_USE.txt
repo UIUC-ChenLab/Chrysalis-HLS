@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (i = 16; i < 80; ++i)",
+            "Faulty Code": "for (i = 16; i <= 80; ++i)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "vec += ((motion_code - 1) << r_size) + motion_residual + 1;",
+            "Faulty Code": "vec += ((motion_code - 1) << (r_size & 31)) + motion_residual + 1;"
+        }
+    ]
+}

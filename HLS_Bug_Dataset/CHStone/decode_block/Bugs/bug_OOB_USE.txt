@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "p_quant_tbl = &p_jinfo_quant_tbl_quantval[(int)p_jinfo_comps_info_quant_tbl_no[comp_no]][DCTSIZE2];",
+            "Faulty Code": "p_quant_tbl = &p_jinfo_quant_tbl_quantval[(int)p_jinfo_comps_info_quant_tbl_no[comp_no]][DCTSIZE2 + 1];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "c0 = MSCALE ((c7d16 * a0) - (c1d16 * a3));",
+            "Faulty Code": "c0 = MSCALE ((c7d16 * (short)a0) - (c1d16 * (short)a3));"
+        }
+    ]
+}

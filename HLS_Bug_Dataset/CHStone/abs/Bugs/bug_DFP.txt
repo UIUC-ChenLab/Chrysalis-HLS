@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "\"\"\"int\nabs (int n)\n{\nint m;\n\nif (n >= 0)\nm = n;\nelse\nm = -n;\nreturn m;\n}\"\"\"",
+            "Faulty Code": "\"\"\"int\nabs (int n)\n{\n#pragma HLS dataflow\nint m;\n\nif (n >= 0)\nm = n;\nelse\nm = -n;\nreturn m;\n}\"\"\""
+        }
+    ]
+}

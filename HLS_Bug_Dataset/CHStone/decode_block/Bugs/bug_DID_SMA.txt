@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "int QuantBuff[DCTSIZE2];",
+            "Faulty Code": "#pragma HLS array_partition variable=QuantBuff dim=3"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void decode_block (int comp_no, int *out_buf, int *HuffBuff)",
+            "Faulty Code": "#pragma HLS interface port=comp_no bram"
+        }
+    ]
+}

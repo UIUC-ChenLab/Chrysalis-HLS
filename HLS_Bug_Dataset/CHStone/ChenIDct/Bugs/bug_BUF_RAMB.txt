@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "aptr = y + i;",
+            "Faulty Code": "aptr = x + i;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "aptr += 8;",
+            "Faulty Code": "aptr += i;"
+        }
+    ]
+}

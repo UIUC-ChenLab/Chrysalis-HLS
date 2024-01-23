@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (mptr = out_buf + 1; mptr < out_buf + DCTSIZE2; mptr++)",
+            "Faulty Code": "for (mptr = out_buf; mptr <= out_buf + DCTSIZE2; mptr++)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "diff |= extend_mask[s];",
+            "Faulty Code": "diff |= extend_mask[s] & 0xFF;"
+        }
+    ]
+}

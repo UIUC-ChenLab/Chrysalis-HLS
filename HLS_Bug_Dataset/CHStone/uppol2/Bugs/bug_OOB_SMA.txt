@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (apl2 > 12288)\n    apl2 = 12288;",
+            "Faulty Code": "if (apl2[1] > 12288)\n    apl2 = 12288;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int uppol2 (int al1, int al2, int plt, int plt1, int plt2)",
+            "Faulty Code": "#pragma HLS interface port=bram int uppol2 (int al1, int al2, int plt, int plt1, int plt2)"
+        }
+    ]
+}

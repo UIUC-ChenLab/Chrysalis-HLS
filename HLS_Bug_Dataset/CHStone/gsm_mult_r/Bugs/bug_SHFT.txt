@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "prod >>= 15;",
+            "Faulty Code": "prod >>= 16;"
+        }
+    ]
+}

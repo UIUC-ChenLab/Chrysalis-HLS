@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "zSig = (zSig + roundIncrement) >> 10;",
+            "Faulty Code": "zSig = (zSig + roundIncrement);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "return roundAndPackFloat64 (zSign, zExp - shiftCount, zSig << shiftCount);",
+            "Faulty Code": "#pragma HLS pipeline\nreturn roundAndPackFloat64 (zSign, zExp - shiftCount, zSig << shiftCount);"
+        }
+    ]
+}

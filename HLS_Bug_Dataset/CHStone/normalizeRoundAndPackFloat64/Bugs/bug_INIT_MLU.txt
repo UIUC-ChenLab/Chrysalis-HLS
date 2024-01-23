@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int8 roundingMode;",
+            "Faulty Code": "int8 roundingMode; // uninitialized variable"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (0x7FD <= (bits16) zExp) { ... }",
+            "Faulty Code": "if (0x7FE <= (bits16) zExp) { ... } // Missing the 0x7FD case due to off-by-one error"
+        }
+    ]
+}

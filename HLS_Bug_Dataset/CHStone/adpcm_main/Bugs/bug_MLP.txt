@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = 0; i < IN_END; i += 2) {\n    compressed[i / 2] = encode (test_data[i], test_data[i + 1]);\n}",
+            "Faulty Code": "#pragma HLS pipeline\nfor (i = 0; i < IN_END; i += 2) {\n    compressed[i / 2] = encode(test_data[i], test_data[i + 1]);\n}"
+        }
+    ]
+}

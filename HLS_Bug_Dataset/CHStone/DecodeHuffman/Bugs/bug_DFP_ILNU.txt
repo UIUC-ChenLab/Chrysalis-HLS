@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (l = 1; code > Dhuff_maxcode[l]; l++)",
+            "Faulty Code": "#pragma HLS dataflow\nfor (l = 1; code > Dhuff_maxcode[l]; l++)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (l = 1; code > Dhuff_maxcode[l]; l++)",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (l = 1; code > Dhuff_maxcode[l]; l++)"
+        }
+    ]
+}

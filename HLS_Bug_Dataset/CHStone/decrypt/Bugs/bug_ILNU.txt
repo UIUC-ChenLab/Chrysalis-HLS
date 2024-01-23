@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = round_val - 1; i >= 1; --i)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (i = round_val - 1; i >= 1; --i)"
+        }
+    ]
+}

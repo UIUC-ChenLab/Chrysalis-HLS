@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "statemt[17] = Sbox[statemt[21] >> 4][statemt[21] & 0xf];",
+            "Faulty Code": "statemt[17] = Sbox[statemt[21] >> 4][statemt[22] & 0xf];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void ByteSub_ShiftRow (int statemt[32], int nb)",
+            "Faulty Code": "#pragma HLS interface port=statemt bram"
+        }
+    ]
+}

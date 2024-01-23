@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "aSig <<= 10;",
+            "Faulty Code": "// Missing code line for aSig <<= 10;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "INLINE bits64 extractFloat64Frac (float64 a)",
+            "Faulty Code": "#pragma HLS interface port=extractFloat64Frac ap_none"
+        }
+    ]
+}

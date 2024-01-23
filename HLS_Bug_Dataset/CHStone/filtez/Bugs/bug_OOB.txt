@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "zl += (long) (*bpl++) * (*dlt++);",
+            "Faulty Code": "zl += (long) (*bpl[7]) * (*dlt[7]);"
+        }
+    ]
+}

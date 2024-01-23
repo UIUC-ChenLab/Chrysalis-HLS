@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (n_tmp-- > 0)",
+            "Faulty Code": "while (n_tmp-- >= 0)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "Buffer_Level = read(ld_Rdbfr, inRdbfr, 2048);",
+            "Faulty Code": "Buffer_Level = 0;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "if ((temp = *CurHuffReadBuf++) == MARKER_MARKER)",
+            "Faulty Code": "if ((temp = *CurHuffReadBuf) == MARKER_MARKER)"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "static int pgetc ()",
+            "Faulty Code": "#pragma HLS interface port=CurHuffReadBuf ap_fifo\nstatic int pgetc ()"
+        }
+    ]
+}

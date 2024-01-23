@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "wd1 = (nbl >> 6) & 31;",
+            "Faulty Code": "wd1 = nbl >> 6;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "wd3 = ilb_table[wd1] >> (shift_constant + 1 - wd2);",
+            "Faulty Code": "wd3 = ilb_table[wd1 + 32] >> (shift_constant + 1 - wd2);"
+        }
+    ]
+}

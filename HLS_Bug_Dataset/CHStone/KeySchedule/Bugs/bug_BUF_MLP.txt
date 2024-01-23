@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "word[i][j] = key[i + j * 4];",
+            "Faulty Code": "word[i][j] = key[i + (j - nk) * 4];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = 0; i < 4; ++i) word[i][j] = word[i][j - nk] ^ temp[i];",
+            "Faulty Code": "#pragma HLS pipeline\nfor (i = 0; i < 4; ++i) word[i][j] = word[i][j - nk] ^ temp[i];"
+        }
+    ]
+}

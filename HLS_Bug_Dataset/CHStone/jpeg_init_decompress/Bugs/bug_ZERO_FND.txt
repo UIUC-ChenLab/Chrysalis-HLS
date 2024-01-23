@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int huffsize[257];",
+            "Faulty Code": "int huffsize[257] = {0};"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "p_dhtbl_maxcode[p_dhtbl_ml]++;",
+            "Faulty Code": "#pragma HLS array_partition variable=p_dhtbl_maxcode factor=4\np_dhtbl_maxcode[p_dhtbl_ml]++;"
+        }
+    ]
+}

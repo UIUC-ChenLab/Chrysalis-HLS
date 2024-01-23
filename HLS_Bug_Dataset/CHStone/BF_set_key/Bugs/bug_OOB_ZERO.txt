@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "end = &(data[len]);",
+            "Faulty Code": "end = &(data[len - 1]);"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "in[0] = 0L;",
+            "Faulty Code": "in[0] = 1L;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "zSig = (aSig + bSig) << 1;",
+            "Faulty Code": "zSig = aSig + bSig;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "return (((bits64) zSign) << 63) + (((bits64) zExp) << 52) + zSig;",
+            "Faulty Code": "#pragma HLS interface port=return ap_none"
+        }
+    ]
+}

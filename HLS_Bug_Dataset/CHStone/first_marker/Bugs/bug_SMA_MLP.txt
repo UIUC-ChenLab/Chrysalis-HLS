@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "int read_byte (void) { return *ReadBuf++; }",
+            "Faulty Code": "#pragma HLS INTERFACE port=bram mode=read_only\nint read_byte (void) { return *ReadBuf++; }"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "if (c1 != 0xFF || c2 != M_SOI) { ... }",
+            "Faulty Code": "#pragma HLS PIPELINE\nif (c1 != 0xFF || c2 != M_SOI) { ... }"
+        }
+    ]
+}

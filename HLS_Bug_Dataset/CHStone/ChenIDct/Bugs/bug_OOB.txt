@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "*aptr = b0 + c3;",
+            "Faulty Code": "*(aptr + 8) = b0 + c3; // Wrong offset leading to OOB"
+        }
+    ]
+}

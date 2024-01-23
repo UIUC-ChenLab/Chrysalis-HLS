@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "LAR++;",
+            "Faulty Code": "*LAR++;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "temp = SASR( temp, 9 );",
+            "Faulty Code": "temp = SASR( (int)temp, 9 );"
+        }
+    ]
+}

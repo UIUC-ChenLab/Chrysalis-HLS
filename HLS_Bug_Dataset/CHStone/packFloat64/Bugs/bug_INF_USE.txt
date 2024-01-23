@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "return (((bits64) zSign) << 63) + (((bits64) zExp) << 52) + zSig;",
+            "Faulty Code": "return (((int64) zSign) << 63) + (((bits64) zExp) << 52) + zSig;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "return (((bits64) zSign) << 63) + (((bits64) zExp) << 52) + zSig;",
+            "Faulty Code": "while (1) { return (((bits64) zSign) << 63) + (((bits64) zExp) << 52) + zSig; }"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int lastp;",
+            "Faulty Code": "int lastp = huffsize[0];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int huff_make_dhuff_tb (int *p_xhtbl_bits, int p_dhtbl_ml, int *p_dhtbl_maxcode, int *p_dhtbl_mincode, int *p_dhtbl_valptr)",
+            "Faulty Code": "int huff_make_dhuff_tb (int p_xhtbl_bits, int p_dhtbl_ml, int p_dhtbl_maxcode[257], int p_dhtbl_mincode[257], int p_dhtbl_valptr[257])"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "statemt[j * 4] ^= word[0][j + nb * n];",
+            "Faulty Code": "statemt[j * 4] ^= word[0][j + nb * (n+1)];"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "nb = 4;",
+            "Faulty Code": "int nb;"
+        }
+    ]
+}

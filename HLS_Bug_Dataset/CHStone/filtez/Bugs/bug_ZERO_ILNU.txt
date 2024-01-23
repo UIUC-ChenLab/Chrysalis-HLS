@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "zl = (long) (*bpl++) * (*dlt++);",
+            "Faulty Code": "zl = 0; zl += (long) (*bpl++) * (*dlt++);"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 1; i < 6; i++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (i = 1; i < 6; i++)"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "if (current_read_byte & bit_set_mask[read_position--])",
+            "Faulty Code": "if (current_read_byte & (bit_set_mask[read_position] << 1))"
+        }
+    ]
+}

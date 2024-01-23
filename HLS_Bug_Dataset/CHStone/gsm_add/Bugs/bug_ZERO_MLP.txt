@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "longword sum;",
+            "Faulty Code": "longword sum = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "return saturate (sum);",
+            "Faulty Code": "#pragma HLS pipeline\nreturn saturate (sum);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void decode_start (int *out_data_image_width, int *out_data_image_height, int *out_data_comp_vpos, int *out_data_comp_hpos)",
+            "Faulty Code": "#pragma HLS dataflow\nvoid decode_start (int *out_data_image_width, int *out_data_image_height, int *out_data_comp_vpos, int *out_data_comp_hpos)"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void jpeg_read (unsigned char *read_buf)",
+            "Faulty Code": "#pragma HLS interface m_axi port=read_buf depth=32\nvoid jpeg_read (unsigned char *read_buf)"
+        }
+    ]
+}

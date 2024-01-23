@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "for (i = 0; i < 16; ++i) { W[i] = sha_info_data[i]; }",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic factor=4\nfor (i = 0; i < 16; ++i) { W[i] = sha_info_data[i]; }"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = 0; i < 20; ++i) { FUNC (1, i); }",
+            "Faulty Code": "for (i = 0; i < 20; ++i) { #pragma HLS pipeline #pragma HLS pipeline FUNC (1, i); }"
+        }
+    ]
+}

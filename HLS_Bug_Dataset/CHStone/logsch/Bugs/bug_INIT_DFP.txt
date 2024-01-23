@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int wd;",
+            "Faulty Code": "int wd = ih;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "logsch (int ih, int nbh) {",
+            "Faulty Code": "#pragma HLS dataflow\nlogsch (int ih, int nbh) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "word K[9]; /* 2..8 */",
+            "Faulty Code": "word K[9]; /* 2..8 */ // K[0] is uninitialized and could be used in the loop"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = n; i <= 8; i++) *r++ = 0;",
+            "Faulty Code": "for (i = n; i < 8; i++) *r++ = 0; // This would omit the last iteration, initializing only r[n] to r[7], leaving r[8] uninitialized"
+        }
+    ]
+}

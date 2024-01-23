@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "*r = gsm_div(temp, P[0]);",
+            "Faulty Code": "*r++ = gsm_div(temp, P[0]);"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void Reflection_coefficients (longword * L_ACF /* 0...8        IN      */ ,\n\t\t\t register word * r /* 0...7        OUT     */ )",
+            "Faulty Code": "void Reflection_coefficients (longword * L_ACF /* 0...8        IN      */ ,\n\t\t\t register word * r /* 0...7        OUT     */ )\n#pragma HLS interface m_axi port=L_ACF"
+        }
+    ]
+}

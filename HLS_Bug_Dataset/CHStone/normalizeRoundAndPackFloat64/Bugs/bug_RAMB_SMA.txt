@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "return roundAndPackFloat64 (zSign, zExp - shiftCount, zSig << shiftCount);",
+            "Faulty Code": "#pragma HLS interface m_axi port=zSig offset=slave // Incorrect pragma for scalar type should not have m_axi"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "return (((bits64) zSign) << 63) + (((bits64) zExp) << 52) + zSig;",
+            "Faulty Code": "#pragma HLS interface port=zSig bram // Incorrect pragma for scalar, zSig should not be mapped to a BRAM interface"
+        }
+    ]
+}

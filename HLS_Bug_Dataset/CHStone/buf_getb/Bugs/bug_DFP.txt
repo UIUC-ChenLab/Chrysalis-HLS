@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "int buf_getb () { ... }",
+            "Faulty Code": "#pragma HLS dataflow\nint buf_getb () { ... }"
+        }
+    ]
+}

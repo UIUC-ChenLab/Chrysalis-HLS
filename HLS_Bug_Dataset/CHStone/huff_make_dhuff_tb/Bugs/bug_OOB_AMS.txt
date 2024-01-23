@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "while ((huffsize[p] == size) && (p < 257))",
+            "Faulty Code": "while ((huffsize[p] == size) && (p <= 257))"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "huff_make_dhuff_tb (int *p_xhtbl_bits, int p_dhtbl_ml, ...)",
+            "Faulty Code": "#pragma HLS interface port=p_dhtbl_ml ap_none"
+        }
+    ]
+}

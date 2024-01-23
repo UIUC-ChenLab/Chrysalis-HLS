@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (OutData_comp_buf[i][j] != hana_bmp[i][j])",
+            "Faulty Code": "if (OutData_comp_buf[i][j + BMP_OUT_SIZE/2] != hana_bmp[i][j])"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 0; i < RGB_NUM; i++)",
+            "Faulty Code": "#pragma HLS unroll\nfor (i = 0; i < RGB_NUM; i++)"
+        }
+    ]
+}

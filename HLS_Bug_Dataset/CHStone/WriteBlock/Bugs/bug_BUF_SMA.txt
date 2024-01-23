@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "(*p_out_hpos)++;",
+            "Faulty Code": "(*p_out_vpos)++;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int voffs, hoffs;",
+            "Faulty Code": "int *voffs, *hoffs;"
+        }
+    ]
+}

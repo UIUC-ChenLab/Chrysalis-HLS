@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int wd1, wd2, wd3;",
+            "Faulty Code": "int wd1, wd2, wd3 = wd2;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "wd2 = nbl >> 11;",
+            "Faulty Code": "wd2 = (char)(nbl >> 11);"
+        }
+    ]
+}

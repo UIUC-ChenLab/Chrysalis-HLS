@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "BF_cfb64_encrypt(indata, outdata, i, ivec, &num, encordec);",
+            "Faulty Code": "#pragma HLS interface m_axi port=outdata\nBF_cfb64_encrypt(indata, outdata, i, ivec, &num, encordec);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "BF_cfb64_encrypt(indata, outdata, i, ivec, &num, encordec);",
+            "Faulty Code": "#pragma HLS pipeline\nBF_cfb64_encrypt(indata, outdata, i, ivec, &num, encordec);\n#pragma HLS pipeline"
+        }
+    ]
+}

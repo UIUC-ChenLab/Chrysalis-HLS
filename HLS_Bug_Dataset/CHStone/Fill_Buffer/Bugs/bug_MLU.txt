@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "ld_Rdbfr[Buffer_Level++] = SEQUENCE_END_CODE & 0xff;",
+            "Faulty Code": "ld_Rdbfr[Buffer_Level] = SEQUENCE_END_CODE & 0xff;"
+        }
+    ]
+}

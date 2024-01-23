@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "if ((temp = *CurHuffReadBuf++) == MARKER_MARKER)",
+            "Faulty Code": "#pragma HLS pipeline\nif ((temp = *CurHuffReadBuf++) == MARKER_MARKER)"
+        }
+    ]
+}

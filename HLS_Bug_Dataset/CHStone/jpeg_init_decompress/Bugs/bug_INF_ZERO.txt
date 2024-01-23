@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (huffsize[p] != size);",
+            "Faulty Code": "while (huffsize[p] == size);"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "p_jinfo_MCUHeight = (p_jinfo_image_height - 1) / 8 + 1;",
+            "Faulty Code": "p_jinfo_MCUHeight = (p_jinfo_image_height - 1) / 8;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "long int wd;",
+            "Faulty Code": "long int wd = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "wd = ((long) nbl * 127L) >> 7L;",
+            "Faulty Code": "wd = ((int) nbl * 127) >> 7;"
+        }
+    ]
+}

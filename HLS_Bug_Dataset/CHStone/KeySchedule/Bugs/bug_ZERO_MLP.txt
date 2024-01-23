@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int i, j, temp[4];",
+            "Faulty Code": "int i, j, temp[4] = {0};"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (j = nk; j < nb * (round_val + 1); ++j)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (j = nk; j < nb * (round_val + 1); ++j)"
+        }
+    ]
+}

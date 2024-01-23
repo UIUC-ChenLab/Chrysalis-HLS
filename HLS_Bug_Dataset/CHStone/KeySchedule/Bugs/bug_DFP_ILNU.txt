@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (j = nk; j < nb * (round_val + 1); ++j)",
+            "Faulty Code": "#pragma HLS dataflow\nfor (j = nk; j < nb * (round_val + 1); ++j)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (j = 0; j < nk; ++j)",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (j = 0; j < nk; ++j)"
+        }
+    ]
+}

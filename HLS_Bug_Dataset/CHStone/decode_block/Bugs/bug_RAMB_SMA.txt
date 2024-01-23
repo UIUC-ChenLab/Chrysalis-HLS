@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void decode_block (int comp_no, int *out_buf, int *HuffBuff)",
+            "Faulty Code": "#pragma HLS interface m_axi port=HuffBuff offset=slave bundle=gmem"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int QuantBuff[DCTSIZE2];",
+            "Faulty Code": "#pragma HLS interface bram port=QuantBuff"
+        }
+    ]
+}

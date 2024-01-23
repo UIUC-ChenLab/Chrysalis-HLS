@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "for (i = 0; i < 10; i++)",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic variable=tqmf_ptr factor=4\ncyclic partitioning here is incorrect because it assumes that the access pattern is evenly distributed across the iterations, but in reality, the loop accesses elements sequentially, which would be better suited for block or complete partitioning."
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void decode (int input)",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=input\nThis is incorrect for the 'input' parameter of the 'decode' function as it is not an array or FIFO queue, but rather a single scalar value. The appropriate mode for a scalar is typically 'ap_none' or 's_axilite'. Using 'ap_fifo' for scalars can lead to incorrect data access patterns."
+        }
+    ]
+}

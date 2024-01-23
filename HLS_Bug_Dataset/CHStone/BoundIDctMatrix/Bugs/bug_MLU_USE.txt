@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++)",
+            "Faulty Code": "for (mptr = matrix; mptr <= matrix + DCTSIZE2; mptr++)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "if (*mptr < 0)",
+            "Faulty Code": "if ((char)(*mptr) < 0)"
+        }
+    ]
+}

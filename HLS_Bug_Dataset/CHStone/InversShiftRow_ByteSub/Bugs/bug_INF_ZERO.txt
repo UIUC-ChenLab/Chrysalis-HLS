@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "temp = invSbox[statemt[13] >> 4][statemt[13] & 0xf];",
+            "Faulty Code": "temp = 0;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "temp = invSbox[statemt[15] >> 4][statemt[15] & 0xf];",
+            "Faulty Code": "while (temp != invSbox[statemt[15] >> 4][statemt[15] & 0xf]) { /* ... */ }"
+        }
+    ]
+}

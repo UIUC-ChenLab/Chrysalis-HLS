@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "aSig = (aSig | LIT64 (0x0010000000000000)) << 10;",
+            "Faulty Code": "aSig = (aSig | LIT64 (0x0010000000000000)) << 64;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "long int pl, pl2;",
+            "Faulty Code": "long int pl, pl2 = pl;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int filtep (int rlt1, int al1, int rlt2, int al2)",
+            "Faulty Code": "#pragma HLS INTERFACE port=rlt1 bram"
+        }
+    ]
+}

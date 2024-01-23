@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int lastp;",
+            "Faulty Code": "int lastp = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "p_dhtbl_maxcode[p_dhtbl_ml]++;",
+            "Faulty Code": "p_dhtbl_maxcode[p_dhtbl_ml] = p_dhtbl_maxcode[p_dhtbl_ml] + 1;"
+        }
+    ]
+}

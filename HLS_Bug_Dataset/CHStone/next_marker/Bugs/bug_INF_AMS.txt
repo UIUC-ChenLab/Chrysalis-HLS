@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (;;)",
+            "Faulty Code": "for (;c!=0;)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "int read_byte (void) { return *ReadBuf++; }",
+            "Faulty Code": "#pragma HLS interface port=ap_none int read_byte (void) { return *ReadBuf++; }"
+        }
+    ]
+}

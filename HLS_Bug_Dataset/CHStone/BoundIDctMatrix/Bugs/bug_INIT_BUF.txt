@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int *mptr;",
+            "Faulty Code": "int *mptr = nullptr;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "for (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++)",
+            "Faulty Code": "for (mptr = matrix + DCTSIZE2/2; mptr < matrix + DCTSIZE2; mptr++)"
+        }
+    ]
+}

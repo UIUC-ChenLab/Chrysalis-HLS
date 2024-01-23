@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = n; i <= 8; i++) *r++ = 0;",
+            "Faulty Code": "for (i = n; i <= 8; i++) { #pragma HLS pipeline for (i = n; i <= 8; i++) *r++ = 0; }"
+        }
+    ]
+}

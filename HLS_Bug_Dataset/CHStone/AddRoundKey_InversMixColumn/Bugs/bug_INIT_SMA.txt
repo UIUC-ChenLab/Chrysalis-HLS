@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int ret[8 * 4], i, j;",
+            "Faulty Code": "int ret[8 * 4]; // Missing initialization, i, j;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int AddRoundKey_InversMixColumn (int statemt[32], int nb, int n)",
+            "Faulty Code": "#pragma HLS INTERFACE port=statemt bram int AddRoundKey_InversMixColumn (int statemt, int nb, int n)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "for (i = 0; i < NUM_COMPONENT; i++) { HuffBuff[i][0] = 0; }",
+            "Faulty Code": "for (i = 0; i < NUM_COMPONENT; i++) { HuffBuff[i][0] = 0; HuffBuff[i][1] = 0; /* Potentially unintended zero initialization */ }"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "diff += *out_buf; /* Change the last DC */",
+            "Faulty Code": "diff += (short)(*out_buf); /* Unintended sign extension if out_buf was negative */"
+        }
+    ]
+}

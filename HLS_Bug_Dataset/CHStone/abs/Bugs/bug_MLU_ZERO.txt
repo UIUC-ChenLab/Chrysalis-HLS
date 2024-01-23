@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int m;",
+            "Faulty Code": "int m = 0;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "m = -n;",
+            "Faulty Code": "m = n;"
+        }
+    ]
+}

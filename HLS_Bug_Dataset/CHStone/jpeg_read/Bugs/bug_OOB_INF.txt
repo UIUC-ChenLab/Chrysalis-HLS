@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (i = 0; i < DCTSIZE2; i++)",
+            "Faulty Code": "for (i = 0; i <= DCTSIZE2; i++)"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "while (CurrentMCU < p_jinfo_NumMCU)",
+            "Faulty Code": "while (CurrentMCU <= p_jinfo_NumMCU)"
+        }
+    ]
+}

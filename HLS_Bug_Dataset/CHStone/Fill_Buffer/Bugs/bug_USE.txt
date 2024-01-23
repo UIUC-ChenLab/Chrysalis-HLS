@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ld_Rdbfr[Buffer_Level++] = SEQUENCE_END_CODE >> 24;",
+            "Faulty Code": "ld_Rdbfr[Buffer_Level++] = (char)(SEQUENCE_END_CODE >> 24);"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "app = float64_add(app, diff);",
+            "Faulty Code": "app = float64_add(app, diff); inc++;"
+        }
+    ]
+}

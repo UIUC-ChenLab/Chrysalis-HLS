@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "\"\"\"void\nlocal_memcpy (BF_LONG * s1, const BF_LONG * s2, int n)\n{\n  BF_LONG *p1;\n  const BF_LONG *p2;\n\n  p1 = s1;\n  p2 = s2;\n\n  while (n-- > 0)\n    {\n      *p1 = *p2;\n      p1++;\n      p2++;\n    }\n}\"\"\"",
+            "Faulty Code": "\"\"\"void\nlocal_memcpy (BF_LONG * s1, const BF_LONG * s2, int n, int m)\n{\n  BF_LONG *p1;\n  const BF_LONG *p2;\n\n  p1 = s1;\n  p2 = s2;\n\n  while (n-- > 0)\n    {\n      *p1 = *p2;\n      p1++;\n      p2++;\n    }\n  for (int i = 0; i < m; i++)\n    {\n      *p1 = *p2;\n      p1++;\n      p2++;\n    }\n}\"\"\"\n"
+        }
+    ]
+}

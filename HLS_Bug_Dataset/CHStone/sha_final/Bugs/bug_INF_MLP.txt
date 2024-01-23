@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (e-- > 0)",
+            "Faulty Code": "while (e-- >= 0)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = 0; i < 16; ++i)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (i = 0; i < 16; ++i)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = round_val - 1; i >= 1; --i)",
+            "Faulty Code": "for (i = round_val - 1; i > 1; --i)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "printf (\"%x\", statemt[i]);",
+            "Faulty Code": "printf (\"%x\", (char)statemt[i]);"
+        }
+    ]
+}

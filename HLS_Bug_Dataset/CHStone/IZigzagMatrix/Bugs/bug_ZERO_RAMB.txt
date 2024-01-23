@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "*(omatrix++) = imatrix[zigzag_index[i]]; ",
+            "Faulty Code": "*(omatrix++) = imatrix[zigzag_index[0]]; "
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void IZigzagMatrix (int *imatrix, int *omatrix) { ... }",
+            "Faulty Code": "void IZigzagMatrix (int *imatrix, int *omatrix) { #pragma HLS interface m_axi port=imatrix offset=slave ... }"
+        }
+    ]
+}

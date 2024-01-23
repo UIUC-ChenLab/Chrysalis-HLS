@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if ((temp = *CurHuffReadBuf++) == MARKER_MARKER)",
+            "Faulty Code": "if ((temp = *CurHuffReadBuf) == MARKER_MARKER)"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "if ((temp = *CurHuffReadBuf++))",
+            "Faulty Code": "if ((temp = *CurHuffReadBuf))"
+        }
+    ]
+}

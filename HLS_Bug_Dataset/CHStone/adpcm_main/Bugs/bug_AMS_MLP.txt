@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void adpcm_main () {...}",
+            "Faulty Code": "#pragma HLS interface port=compressed mode=ap_none\nvoid adpcm_main () {...}"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = 0; i < 10; i++) {...}",
+            "Faulty Code": "for (i = 0; i < 10; i++) { #pragma HLS pipeline }"
+        }
+    ]
+}

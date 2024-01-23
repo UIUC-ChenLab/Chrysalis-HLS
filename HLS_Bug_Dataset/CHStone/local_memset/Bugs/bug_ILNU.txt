@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "\"\"\"while (e-- > 0)\n{\np++;\n}\nwhile (m-- > 0)\n{\n*p++ = uc;\n}\"\"\"",
+            "Faulty Code": "\"\"\"#pragma HLS unroll factor = 4\nwhile (e-- > 0)\n{\np++;\n}\nwhile (m-- > 0)\n{\n*p++ = uc;\n}\"\"\""
+        }
+    ]
+}

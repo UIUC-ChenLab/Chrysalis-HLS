@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "*LAR  =  temp>MAC ? MAC - MIC : (temp<MIC ? 0 : temp - MIC);",
+            "Faulty Code": "*LAR  =  temp>MAC ? MAC - MIC : (temp<MIC ? 0 : temp - MIC); LAR++;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void Quantization_and_coding (register word * LAR /* [0..7]       IN/OUT  */ )",
+            "Faulty Code": "#pragma HLS INTERFACE port=LAR bram\nvoid Quantization_and_coding (register word LAR /* [0..7]       IN/OUT  */ )"
+        }
+    ]
+}

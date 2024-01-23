@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (j = 0; j < nb; ++j) { statemt[j * 4] ^= word[0][j + nb * n]; statemt[1 + j * 4] ^= word[1][j + nb * n]; statemt[2 + j * 4] ^= word[2][j + nb * n]; statemt[3 + j * 4] ^= word[3][j + nb * n]; }",
+            "Faulty Code": "#pragma HLS unroll factor=2 \n for (j = 0; j < nb; ++j) { statemt[j * 4] ^= word[0][j + nb * n]; statemt[1 + j * 4] ^= word[1][j + nb * n]; statemt[2 + j * 4] ^= word[2][j + nb * n]; statemt[3 + j * 4] ^= word[3][j + nb * n]; }"
+        }
+    ]
+}

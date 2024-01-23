@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "static int pgetc () {...}",
+            "Faulty Code": "#pragma HLS dataflow\nstatic int pgetc () {...}"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "if ((temp = *CurHuffReadBuf++) == MARKER_MARKER) {...}",
+            "Faulty Code": "#pragma HLS pipeline\nif ((temp = *CurHuffReadBuf++) == MARKER_MARKER) {...}"
+        }
+    ]
+}

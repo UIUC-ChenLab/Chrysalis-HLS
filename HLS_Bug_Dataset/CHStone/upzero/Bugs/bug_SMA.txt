@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "int dlt, int *dlti, int *bli",
+            "Faulty Code": "#pragma HLS interface port=dlt"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "pl = 2 * rlt1;",
+            "Faulty Code": "pl = 2 * (short)rlt1;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "return ((int) (pl >> 15));",
+            "Faulty Code": "return ((int) (pl << 15));"
+        }
+    ]
+}

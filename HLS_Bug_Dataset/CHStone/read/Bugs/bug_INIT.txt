@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned char *p1; const unsigned char *p2; int n_tmp; p1 = s1; p2 = s2; n_tmp = n;",
+            "Faulty Code": "unsigned char *p1; const unsigned char *p2; int n_tmp; p1 = s1; p2 = s2;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (i = 0; i < nb * 4; ++i) { if (statemt[i] < 16) printf (\"0\"); printf (\"%x\", statemt[i]); }",
+            "Faulty Code": "for (i = 0; i <= nb * 4; ++i) { if (statemt[i] < 16) printf (\"0\"); printf (\"%x\", statemt[i]); }"
+        }
+    ]
+}

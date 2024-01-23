@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "b0 = LS (*aptr, 2);",
+            "Faulty Code": "b0 = *(aptr++); // Assuming unintentional omission of left shift by 2"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void ChenIDct (int *x, int *y)",
+            "Faulty Code": "#pragma HLS INTERFACE port=y mode=ap_fifo"
+        }
+    ]
+}

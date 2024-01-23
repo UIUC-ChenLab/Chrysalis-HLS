@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "long int wd2, wd4;",
+            "Faulty Code": "long int wd2, wd4 = 0;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "wd4 = wd2 + 128;",
+            "Faulty Code": "wd4 = wd2;"
+        }
+    ]
+}

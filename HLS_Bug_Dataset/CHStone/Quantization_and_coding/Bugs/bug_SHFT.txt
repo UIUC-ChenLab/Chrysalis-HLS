@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "temp = SASR( temp, 9 );",
+            "Faulty Code": "temp = SASR( temp, 32 );"
+        }
+    ]
+}

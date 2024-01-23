@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int i;",
+            "Faulty Code": "int i; // i is declared but not initialized before use"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "vec += ((motion_code - 1) << r_size) + motion_residual + 1;",
+            "Faulty Code": "vec += ((motion_code - 1) << (r_size & 31)) + motion_residual + 1; // Assuming r_size is always < 32, which might not be the case"
+        }
+    ]
+}

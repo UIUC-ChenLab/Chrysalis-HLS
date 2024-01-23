@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "jpeg_read (JpegFileBuf);",
+            "Faulty Code": "#pragma HLS dataflow jpeg_read (JpegFileBuf);"
+        }
+    ]
+}

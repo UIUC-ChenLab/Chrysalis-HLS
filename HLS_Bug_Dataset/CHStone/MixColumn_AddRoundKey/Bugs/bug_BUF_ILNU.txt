@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "statemt[2 + j * 4] ^ statemt[3 + j * 4] ^ word[0][j + nb * n];",
+            "Faulty Code": "statemt[2 + j * 8] ^ statemt[3 + j * 8] ^ word[0][j + nb * n];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (j = 0; j < nb; ++j) {",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (j = 0; j < nb; ++j) {"
+        }
+    ]
+}

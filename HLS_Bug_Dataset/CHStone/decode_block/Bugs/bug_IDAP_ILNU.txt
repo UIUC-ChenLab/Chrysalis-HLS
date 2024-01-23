@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void decode_block (int comp_no, int *out_buf, int *HuffBuff)",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=out_buf\nvoid decode_block (int comp_no, int *out_buf, int *HuffBuff)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 0; i < 8; i++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (i = 0; i < 8; i++)"
+        }
+    ]
+}

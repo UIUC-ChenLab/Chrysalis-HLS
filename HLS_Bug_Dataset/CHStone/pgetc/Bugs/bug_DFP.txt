@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "int pgetc ()\n{\n  int temp;\n\n  if ((temp = *CurHuffReadBuf++) == MARKER_MARKER)\n    {",
+            "Faulty Code": "#pragma HLS dataflow\nint pgetc ()\n{\n  int temp;\n\n  if ((temp = *CurHuffReadBuf++) == MARKER_MARKER)\n    {"
+        }
+    ]
+}

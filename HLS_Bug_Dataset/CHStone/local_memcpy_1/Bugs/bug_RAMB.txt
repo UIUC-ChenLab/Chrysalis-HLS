@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void local_memcpy(INT32 * s1, const BYTE * s2, int n) {",
+            "Faulty Code": "void local_memcpy(INT32 * s1, const BYTE * s2, int n) {\n#pragma HLS interface m_axi port=s1 mode=read_write\n#pragma HLS interface m_axi port=s2 mode=read"
+        }
+    ]
+}

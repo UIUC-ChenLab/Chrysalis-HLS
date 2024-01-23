@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (float64_ge (float64_abs (diff), 0x3ee4f8b588e368f1ULL));",
+            "Faulty Code": "while (float64_ge (float64_abs (diff), 0x0ULL));"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "zSig |= (rem1 != 0);",
+            "Faulty Code": "zSig |= (rem0 != 0);"
+        }
+    ]
+}

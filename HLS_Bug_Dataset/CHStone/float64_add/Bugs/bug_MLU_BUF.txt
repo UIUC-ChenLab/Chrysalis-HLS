@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (0 < expDiff)",
+            "Faulty Code": "if (0 < expDiff) { aSig |= LIT64 (0x2000000000000000); }"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "zSig = (aSig + bSig) << 1;",
+            "Faulty Code": "zSig = (aSig + bSig);"
+        }
+    ]
+}

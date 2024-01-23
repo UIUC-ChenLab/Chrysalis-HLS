@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "zSig &= ~(((roundBits ^ 0x200) == 0) & roundNearestEven);",
+            "Faulty Code": "zSig &= ~(((roundBitsArray[index] ^ 0x200) == 0) & roundNearestEven); // assuming roundBitsArray is an array and index is out-of-bounds"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "if (0x7FD <= (bits16) zExp) { ...",
+            "Faulty Code": "#pragma HLS unroll factor=2\nif (0x7FD <= (bits16) zExp) { // incorrect unroll pragma outside of loop"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "prod >>= 15;",
+            "Faulty Code": "while(prod > 0) { prod >>= 15; } // Infinite loop if prod is positive"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "prod = (longword) a *(longword) b + 16384;",
+            "Faulty Code": "prod = ((longword) a * b) + 16384; // Incorrect manual unrolling, missing cast leads to overflow"
+        }
+    ]
+}

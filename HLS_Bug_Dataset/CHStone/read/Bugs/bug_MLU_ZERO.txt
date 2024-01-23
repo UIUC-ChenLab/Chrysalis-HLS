@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "while (n_tmp-- > 0)",
+            "Faulty Code": "while (n_tmp-- > 1)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "n_tmp = n;",
+            "Faulty Code": "n_tmp = 0;"
+        }
+    ]
+}

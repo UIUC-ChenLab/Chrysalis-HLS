@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "wd1 = (nbl >> 6) & 31;",
+            "Faulty Code": "int wd1 = 0;"
+        }
+    ]
+}

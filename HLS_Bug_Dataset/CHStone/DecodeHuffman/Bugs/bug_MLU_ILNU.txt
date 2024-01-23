@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "code = (code << 1) + buf_getb();",
+            "Faulty Code": "code = (code << 1) + buf_getb() + buf_getb(); // Incorrect manual loop unrolling, adding buf_getb() twice"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (l = 1; code > Dhuff_maxcode[l]; l++)",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (l = 1; code > Dhuff_maxcode[l]; l++) // Incorrectly unrolling non-innermost loop without fully unrolling inner loop"
+        }
+    ]
+}

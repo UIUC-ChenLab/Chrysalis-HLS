@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (count >= SHA_BLOCKSIZE)\n{\nlocal_memcpy (sha_info_data, buffer, SHA_BLOCKSIZE);\nsha_transform ();\nbuffer += SHA_BLOCKSIZE;\ncount -= SHA_BLOCKSIZE;\n}",
+            "Faulty Code": "while (count >= SHA_BLOCKSIZE)\n{\nlocal_memcpy (sha_info_data, buffer, SHA_BLOCKSIZE);\nsha_transform ();\nbuffer += SHA_BLOCKSIZE;\n}"
+        }
+    ]
+}

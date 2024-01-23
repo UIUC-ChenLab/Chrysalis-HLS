@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void Write4Blocks (int *store1, int *store2, int *store3, int *store4, int *p_out_vpos, int *p_out_hpos, unsigned char *p_out_buf)",
+            "Faulty Code": "#pragma HLS interface m_axi port=store1 depth=64\n#pragma HLS interface m_axi port=store2 depth=64\n#pragma HLS interface m_axi port=store3 depth=64\n#pragma HLS interface m_axi port=store4 depth=64\nvoid Write4Blocks (int *store1, int *store2, int *store3, int *store4, int *p_out_vpos, int *p_out_hpos, unsigned char *p_out_buf)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void WriteOneBlock (int *store, unsigned char *out_buf, int width, int height, int voffs, int hoffs)",
+            "Faulty Code": "#pragma HLS interface ap_none port=store\nvoid WriteOneBlock (int *store, unsigned char *out_buf, int width, int height, int voffs, int hoffs)"
+        }
+    ]
+}

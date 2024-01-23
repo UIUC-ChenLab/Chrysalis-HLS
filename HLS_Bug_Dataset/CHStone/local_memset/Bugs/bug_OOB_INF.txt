@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "while (e-- > 0) { p++; }",
+            "Faulty Code": "while (e-- >= 0) { p++; }"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "while (m-- > 0) { *p++ = uc; }",
+            "Faulty Code": "while (m-- >= 0) { *p++ = uc; }"
+        }
+    ]
+}

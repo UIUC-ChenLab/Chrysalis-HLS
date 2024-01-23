@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "p_dhtbl_maxcode[l] = huffcode[p];",
+            "Faulty Code": "p_dhtbl_maxcode[l] = huffcode[p + 128];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "int huffsize[257];",
+            "Faulty Code": "#pragma HLS interface port=ap_none huffsize"
+        }
+    ]
+}

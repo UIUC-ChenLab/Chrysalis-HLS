@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "\"\"\"void\nlocal_memset (INT32 * s, int c, int n, int e)\n{\n  INT32 uc;\n  INT32 *p;\n  int m;\n\n  m = n / 4;\n  uc = c;\n  p = (INT32 *) s;\n  while (e-- > 0)\n    {\n      p++;\n    }\n  while (m-- > 0)\n    {\n      *p++ = uc;\n    }\n}\n\n// Content of called function\nwhile (n_tmp-- > 0)\n    {\n      *p1 = *p2;\n      \np1++;\n      \np2++;\n    \n}\"\"\"",
+            "Faulty Code": "\"\"\"void\nlocal_memset (INT32 * s, int c, int n, int e)\n{\n  INT32 uc;\n  INT32 *p;\n  int m;\n\n  m = n / 4;\n  uc = c;\n  p = (INT32 *) s;\n  while (e-- > 0)\n    {\n      p++;\n    }\n  while (m-- > 0)\n    {\n      *p++ = uc;\n    }\n}\n\n// Content of called function\nwhile (n_tmp-- > 0)\n    {\n      *p1 = *p2;\n      \np1++;\n      \np2++;\n    \n}\nif (n_tmp > 0) {\n  *p1 = *p2;\n}\"\"\""
+        }
+    ]
+}

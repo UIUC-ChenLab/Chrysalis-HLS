@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return *ReadBuf++;",
+            "Faulty Code": "return *ReadBuf--;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int c1, c2;",
+            "Faulty Code": "int c1=0, c2=0;"
+        }
+    ]
+}

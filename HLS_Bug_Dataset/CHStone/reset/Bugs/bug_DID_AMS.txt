@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "for (i = 0; i < 24; i++) tqmf[i] = 0;",
+            "Faulty Code": "#pragma HLS array_partition variable=tqmf dim=2 complete\n   for (i = 0; i < 24; i++) tqmf[i] = 0;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "detl = dec_detl = 32;",
+            "Faulty Code": "#pragma HLS interface port=detl ap_none\n   detl = dec_detl = 32;"
+        }
+    ]
+}

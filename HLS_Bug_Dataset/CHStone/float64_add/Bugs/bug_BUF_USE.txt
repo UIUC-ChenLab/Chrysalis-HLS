@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "zSig = (aSig + bSig) << 1;",
+            "Faulty Code": "zSig = (aSig + bSig) << 10;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "zSig &= ~(((roundBits ^ 0x200) == 0) & roundNearestEven);",
+            "Faulty Code": "zSig &= ~(((roundBits ^ 0x200) == 0) & (int64_t)roundNearestEven);"
+        }
+    ]
+}

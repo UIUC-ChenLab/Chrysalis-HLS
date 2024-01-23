@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void Initialize_Buffer ()",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=ld_Rdptr"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void Initialize_Buffer ()",
+            "Faulty Code": "#pragma HLS interface port=ld_Bfr"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = round_val - 1; i >= 1; --i)",
+            "Faulty Code": "for (i = round_val - 1; i > 1; --i)"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "const int out_dec_statemt[16] =",
+            "Faulty Code": "#pragma HLS array_partition variable=out_dec_statemt factor=5 complete"
+        }
+    ]
+}

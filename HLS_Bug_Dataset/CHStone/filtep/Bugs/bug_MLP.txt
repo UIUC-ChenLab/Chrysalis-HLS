@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "\"\"\"int\nfiltep (int rlt1, int al1, int rlt2, int al2)\n{\n  long int pl, pl2;\n  pl = 2 * rlt1;\n  pl = (long) al1 *pl;\n  pl2 = 2 * rlt2;\n  pl += (long) al2 *pl2;\n  return ((int) (pl >> 15));\n}\"\"\"",
+            "Faulty Code": "\"\"\"int\nfiltep (int rlt1, int al1, int rlt2, int al2)\n{\n  #pragma HLS pipeline\n  long int pl, pl2;\n  pl = 2 * rlt1;\n  pl = (long) al1 *pl;\n  pl2 = 2 * rlt2;\n  #pragma HLS pipeline\n  pl += (long) al2 *pl2;\n  return ((int) (pl >> 15));\n}\"\"\""
+        }
+    ]
+}

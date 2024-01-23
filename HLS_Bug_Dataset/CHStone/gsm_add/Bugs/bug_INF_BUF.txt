@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "return saturate(sum);",
+            "Faulty Code": "while(a != b) { sum = (longword) a + (longword) b; } return saturate(sum);"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "sum = (longword) a + (longword) b;",
+            "Faulty Code": "sum = ((longword*)buffer)[a] + ((longword*)buffer)[b];"
+        }
+    ]
+}

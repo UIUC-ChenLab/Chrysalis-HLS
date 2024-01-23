@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++)",
+            "Faulty Code": "for (mptr = matrix; ; mptr++)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++)"
+        }
+    ]
+}

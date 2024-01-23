@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "p -= 8;",
+            "Faulty Code": "p -= 7;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "rv |= (current_read_byte >> (8 - p));",
+            "Faulty Code": "rv |= (current_read_byte >> (24 - p));"
+        }
+    ]
+}

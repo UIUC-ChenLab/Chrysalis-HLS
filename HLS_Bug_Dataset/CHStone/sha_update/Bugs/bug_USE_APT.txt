@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "sha_info_count_lo += (INT32) count << 3;",
+            "Faulty Code": "sha_info_count_lo += count << 3;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "for (i = 16; i < 80; ++i) { W[i] = W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16]; }",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic variable=W dim=1"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (k--)",
+            "Faulty Code": "while (k-- >= 0)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "L_num = num;",
+            "Faulty Code": "L_num = L_denum;"
+        }
+    ]
+}

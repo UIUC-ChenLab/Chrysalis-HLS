@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "m = n / 4;",
+            "Faulty Code": "#pragma HLS array_partition variable=p factor=3\n  m = n / 4;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void local_memset (INT32 * s, int c, int n, int e)",
+            "Faulty Code": "#pragma HLS interface port=s bram\nvoid local_memset (INT32 * s, int c, int n, int e)"
+        }
+    ]
+}

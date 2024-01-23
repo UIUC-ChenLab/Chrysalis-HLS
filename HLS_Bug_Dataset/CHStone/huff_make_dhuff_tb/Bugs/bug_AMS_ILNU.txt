@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "int huffsize[257];",
+            "Faulty Code": "#pragma HLS interface port=ap_none variable=huffsize"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (j = 1; j <= p_xhtbl_bits[i]; j++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (j = 1; j <= p_xhtbl_bits[i]; j++)"
+        }
+    ]
+}

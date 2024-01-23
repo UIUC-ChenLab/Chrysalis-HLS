@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "int encrypt (int statemt[32], int key[32], int type)",
+            "Faulty Code": "#pragma HLS array_partition variable=statemt dim=3 complete\nint encrypt (int statemt[32], int key[32], int type)"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "KeySchedule (type, key);",
+            "Faulty Code": "#pragma HLS dataflow\nKeySchedule (type, key);"
+        }
+    ]
+}

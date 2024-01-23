@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "p_dhtbl_maxcode[p_dhtbl_ml]++;",
+            "Faulty Code": "p_dhtbl_maxcode[0]++;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (p = 0, i = 1; i < 17; i++)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (p = 0, i = 1; i < 17; i++)"
+        }
+    ]
+}

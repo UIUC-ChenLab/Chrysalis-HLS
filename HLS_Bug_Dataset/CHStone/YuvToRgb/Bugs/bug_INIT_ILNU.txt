@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int r, g, b;",
+            "Faulty Code": "int r, g, b = 0;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 0; i < DCTSIZE2; i++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (i = 0; i < DCTSIZE2; i++)"
+        }
+    ]
+}

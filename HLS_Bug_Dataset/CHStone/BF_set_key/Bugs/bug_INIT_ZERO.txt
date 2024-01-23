@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "BF_LONG *p, ri, in[2];",
+            "Faulty Code": "BF_LONG *p, ri, in[2] = {1L, 1L}; // Incorrectly assuming in[] should be initialized to {1L, 1L}"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "in[0] = 0L; in[1] = 0L;",
+            "Faulty Code": "in[0] = 1L; in[1] = 1L; // Incorrectly initialized to 1L instead of 0L"
+        }
+    ]
+}

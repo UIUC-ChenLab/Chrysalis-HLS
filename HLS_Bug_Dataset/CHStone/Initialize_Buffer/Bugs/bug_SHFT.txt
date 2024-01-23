@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "ld_Bfr = 68157440;",
+            "Faulty Code": "ld_Bfr = 1 << 32;"
+        }
+    ]
+}

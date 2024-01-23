@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "/* Loop over columns */\n  for (i = 0; i < 8; i++)",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=x\n/* Loop over columns */\n  for (i = 0; i < 8; i++)"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "aptr = x + i;",
+            "Faulty Code": "aptr = x + (i * 8);"
+        }
+    ]
+}

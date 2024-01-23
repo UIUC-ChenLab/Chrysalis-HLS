@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "word gsm_add (word a, word b)",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=a"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "word gsm_add (word a, word b)",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=sum"
+        }
+    ]
+}

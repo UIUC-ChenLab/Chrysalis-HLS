@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "\"\"\" void IQuantize (int *matrix, unsigned int *qmatrix) { int *mptr; for (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++) { *mptr = *mptr * (*qmatrix); qmatrix++; } }\"\"\"",
+            "Faulty Code": "\"\"\" void IQuantize (int *matrix, unsigned int *qmatrix) { int *mptr; #pragma HLS unroll factor = 4 for (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++) { *mptr = *mptr * (*qmatrix); qmatrix++; } }\"\"\""
+        }
+    ]
+}

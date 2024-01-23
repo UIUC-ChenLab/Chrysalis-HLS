@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "sha_info_count_hi += (INT32) count >> 29;",
+            "Faulty Code": "sha_info_count_hi += (INT32) count >> 32;"
+        }
+    ]
+}

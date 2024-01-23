@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void ByteSub_ShiftRow (int statemt[32], int nb)",
+            "Faulty Code": "#pragma HLS INTERFACE port=statemt mode=ap_scalar"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "switch (nb)",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

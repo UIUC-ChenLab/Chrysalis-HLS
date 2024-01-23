@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "while (k < KEYSIZE && i < N)\n    indata[i++] = in_key[k++];",
+            "Faulty Code": "while (k < KEYSIZE)\n    indata[i++] = in_key[k++];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int blowfish_main()",
+            "Faulty Code": "#pragma HLS interface port=indata ap_fifo\nint blowfish_main()"
+        }
+    ]
+}

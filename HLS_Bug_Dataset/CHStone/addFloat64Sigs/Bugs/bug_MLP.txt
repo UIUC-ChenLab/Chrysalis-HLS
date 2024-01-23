@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "aSig = extractFloat64Frac (a);\n aExp = extractFloat64Exp (a);\n bSig = extractFloat64Frac (b);\n bExp = extractFloat64Exp (b);\n expDiff = aExp - bExp;",
+            "Faulty Code": "#pragma HLS pipeline\n aSig = extractFloat64Frac (a);\n #pragma HLS pipeline\n aExp = extractFloat64Exp (a);\n #pragma HLS pipeline\n bSig = extractFloat64Frac (b);\n #pragma HLS pipeline\n bExp = extractFloat64Exp (b);\n #pragma HLS pipeline\n expDiff = aExp - bExp;"
+        }
+    ]
+}

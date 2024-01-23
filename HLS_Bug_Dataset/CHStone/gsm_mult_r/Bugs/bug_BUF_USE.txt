@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "prod = (longword) a *(longword) b + 16384;",
+            "Faulty Code": "prod = (word) a *(longword) b + 16384;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "return prod & 0xFFFF;",
+            "Faulty Code": "return (prod >> 16) & 0xFFFF;"
+        }
+    ]
+}

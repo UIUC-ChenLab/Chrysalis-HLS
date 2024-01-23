@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (apl1 > wd3) apl1 = wd3;",
+            "Faulty Code": "if (apl1[0] > wd3) apl1 = wd3;"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "int wd3, apl1;",
+            "Faulty Code": "int wd3, apl1 = wd3;"
+        }
+    ]
+}

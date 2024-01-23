@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (i = 1; i < 6; i++)",
+            "Faulty Code": "for (i = 1; i <= 6; i++)"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = 1; i < 6; i++)",
+            "Faulty Code": "for (i = 0; i < 5; i++)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (j = 0; j < nb; ++j)",
+            "Faulty Code": "for (j = 0; j <= nb; ++j)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "if ((x >> 8) == 1)",
+            "Faulty Code": "if ((x >> 8) & 0xFF == 1)"
+        }
+    ]
+}

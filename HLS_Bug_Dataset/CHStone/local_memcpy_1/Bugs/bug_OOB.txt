@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "tmp |= (0xFF & *p2++) << 24;",
+            "Faulty Code": "tmp |= (0xFF & *p2) << 24; p2 += 4;"
+        }
+    ]
+}

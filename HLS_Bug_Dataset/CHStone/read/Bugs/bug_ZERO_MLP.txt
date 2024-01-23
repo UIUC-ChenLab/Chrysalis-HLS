@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "n_tmp = n;",
+            "Faulty Code": "n_tmp = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "while (n_tmp-- > 0) { *p1 = *p2; p1++; p2++; }",
+            "Faulty Code": "while (n_tmp-- > 0) { #pragma HLS pipeline *p1 = *p2; p1++; p2++; }"
+        }
+    ]
+}

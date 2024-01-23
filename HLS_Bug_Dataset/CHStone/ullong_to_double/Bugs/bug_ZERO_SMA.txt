@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "t.ll = x;",
+            "Faulty Code": "t.ll = 0;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "double ullong_to_double (unsigned long long x)",
+            "Faulty Code": "#pragma HLS interface port=bram double ullong_to_double (unsigned long long x)"
+        }
+    ]
+}

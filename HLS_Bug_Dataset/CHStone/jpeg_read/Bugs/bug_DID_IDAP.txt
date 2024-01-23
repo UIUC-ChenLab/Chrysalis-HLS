@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "int HuffBuff[NUM_COMPONENT][DCTSIZE2];",
+            "Faulty Code": "#pragma HLS array_partition variable=HuffBuff dim=3 complete"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "unsigned char *read_buf",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=read_buf"
+        }
+    ]
+}

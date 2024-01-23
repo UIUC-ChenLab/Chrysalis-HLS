@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "roundBits = zSig & 0x3FF;",
+            "Faulty Code": "roundBits = zSig & 0x7FF;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "if ((0x7FD < zExp) || ((zExp == 0x7FD) && ((sbits64) (zSig + roundIncrement) < 0)))",
+            "Faulty Code": "if ((0x7FD < zExp) || ((zExp == 0x7FD) && ((sbits64) (zSig + roundIncrement) > 0)))"
+        }
+    ]
+}

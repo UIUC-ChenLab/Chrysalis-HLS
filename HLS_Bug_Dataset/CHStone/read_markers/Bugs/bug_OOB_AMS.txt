@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "c = *ReadBuf++ << 8;",
+            "Faulty Code": "c = ReadBuf[2] << 8; // Assuming ReadBuf has only 2 elements, this access is out of bounds."
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void read_markers (unsigned char *buf)",
+            "Faulty Code": "#pragma HLS INTERFACE port=buf mode=s_axilite"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "\nfor (i = voffs; i < voffs + DCTSIZE; i++)\n{\nif (i < height)\n{\nint diff;\ndiff = width * i;\nfor (e = hoffs; e < hoffs + DCTSIZE; e++)\n{\nif (e < width)\n{\nout_buf[diff + e] = (unsigned char) (*(store++));\n}\nelse\n{\nbreak;\n}\n}\n}\nelse\n{\nbreak;\n}\n}\n",
+            "Faulty Code": "#pragma HLS pipeline\nfor (i = voffs; i < voffs + DCTSIZE; i++)\n{\n#pragma HLS pipeline\nif (i < height)\n{\nint diff;\ndiff = width * i;\nfor (e = hoffs; e < hoffs + DCTSIZE; e++)\n{\nif (e < width)\n{\nout_buf[diff + e] = (unsigned char) (*(store++));\n}\nelse\n{\nbreak;\n}\n}\n}\nelse\n{\nbreak;\n}\n}\n"
+        }
+    ]
+}

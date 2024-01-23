@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "CurrentMCU++;",
+            "Faulty Code": "CurrentMCU = CurrentMCU;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "*p_out_vpos = *p_out_vpos + 2;",
+            "Faulty Code": "*p_out_vpos = 0;"
+        }
+    ]
+}

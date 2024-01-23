@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "temp = invSbox[statemt[29] >> 4][statemt[29] & 0xf];",
+            "Faulty Code": "temp = invSbox[statemt[32] >> 4][statemt[32] & 0xf];"
+        }
+    ]
+}

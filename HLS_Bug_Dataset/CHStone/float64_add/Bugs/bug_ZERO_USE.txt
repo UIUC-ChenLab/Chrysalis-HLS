@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "roundIncrement = 0x200;",
+            "Faulty Code": "roundIncrement = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "return (((bits64) zSign) << 63) + (((bits64) zExp) << 52) + zSig;",
+            "Faulty Code": "return (((int64_t) zSign) << 63) + (((int64_t) zExp) << 52) + zSig;"
+        }
+    ]
+}

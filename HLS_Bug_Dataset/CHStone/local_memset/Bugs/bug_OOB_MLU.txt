@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "while (e-- > 0) { p++; }",
+            "Faulty Code": "while (e-- >= 0) { p++; }"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "m = n / 4;",
+            "Faulty Code": "m = (n - 1) / 4;"
+        }
+    ]
+}

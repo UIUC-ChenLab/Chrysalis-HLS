@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "int abs (int n)",
+            "Faulty Code": "#pragma HLS INTERFACE port=bram storage_type=ram_1p"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "int abs (int n)",
+            "Faulty Code": "#pragma HLS INTERFACE port=n mode=ap_none"
+        }
+    ]
+}

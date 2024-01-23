@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void IZigzagMatrix (int *imatrix, int *omatrix) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid IZigzagMatrix (int *imatrix, int *omatrix) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = 0; i < DCTSIZE2; i++) { *(omatrix++) = imatrix[zigzag_index[i]]; }",
+            "Faulty Code": "for (i = 0; i < DCTSIZE2; i++) { #pragma HLS pipeline\n*(omatrix++) = imatrix[zigzag_index[i]]; }"
+        }
+    ]
+}

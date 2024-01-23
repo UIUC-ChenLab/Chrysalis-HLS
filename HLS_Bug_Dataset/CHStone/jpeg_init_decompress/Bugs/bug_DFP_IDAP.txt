@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "/* Content of called function */\nint\nhuff_make_dhuff_tb (int *p_xhtbl_bits, int p_dhtbl_ml,\n...",
+            "Faulty Code": "#pragma HLS dataflow\n/* Content of called function */\nint\nhuff_make_dhuff_tb (int *p_xhtbl_bits, int p_dhtbl_ml,\n..."
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void\njpeg_init_decompress ()\n{...",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo\nvoid\njpeg_init_decompress ()\n{..."
+        }
+    ]
+}

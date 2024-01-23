@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (mptr = out_buf + 1; mptr < out_buf + DCTSIZE2; mptr++)",
+            "Faulty Code": "#pragma HLS array_partition variable=out_buf factor=3\for (mptr = out_buf + 1; mptr < out_buf + DCTSIZE2; mptr++)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (k = 1; k < DCTSIZE2;)",
+            "Faulty Code": "#pragma HLS unroll factor=4\n for (k = 1; k < DCTSIZE2;)"
+        }
+    ]
+}

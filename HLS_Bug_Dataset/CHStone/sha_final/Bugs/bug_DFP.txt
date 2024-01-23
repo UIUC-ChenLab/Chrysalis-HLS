@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "sha_transform ();",
+            "Faulty Code": "#pragma HLS dataflow \n sha_transform ();"
+        }
+    ]
+}

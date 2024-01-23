@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "wd3 = ilb_table[wd1] >> (shift_constant + 1 - wd2);",
+            "Faulty Code": "wd3 = ilb_table[wd1 + 1] >> (shift_constant + 1 - wd2);"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "wd1 = (nbl >> 6) & 31;",
+            "Faulty Code": "wd1 = (nbl >> 7) & 31;"
+        }
+    ]
+}

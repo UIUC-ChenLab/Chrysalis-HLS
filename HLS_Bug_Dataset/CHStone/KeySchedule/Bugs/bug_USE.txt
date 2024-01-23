@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "temp[0] = SubByte (word[1][j - 1]) ^ Rcon0[(j / nk) - 1];",
+            "Faulty Code": "temp[0] = SubByte (word[1][j - 1]) ^ Rcon0[j / nk - 1];"
+        }
+    ]
+}

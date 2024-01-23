@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "*(omatrix++) = imatrix[zigzag_index[i]];",
+            "Faulty Code": "*(omatrix++) = (short)imatrix[zigzag_index[i]];"
+        }
+    ]
+}

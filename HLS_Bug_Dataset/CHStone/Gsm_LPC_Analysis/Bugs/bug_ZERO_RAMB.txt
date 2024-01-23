@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "temp = gsm_norm (L_ACF[0]);",
+            "Faulty Code": "temp = gsm_norm (0); /* Assuming the norm should be calculated from zero */"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void Gsm_LPC_Analysis (word * s /* 0..159 signals       IN/OUT  */ , word * LARc /* 0..7   LARc's        OUT     */ )",
+            "Faulty Code": "void Gsm_LPC_Analysis (word * s /* 0..159 signals       IN/OUT  */ , word * LARc /* 0..7   LARc's        OUT     */ ) { #pragma HLS interface m_axi port=s offset=slave /* Assuming direct m_axi interface with offset */"
+        }
+    ]
+}

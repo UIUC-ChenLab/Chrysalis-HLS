@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ld_Rdptr = ld_Rdbfr;",
+            "Faulty Code": "ld_Rdptr = 0;"
+        }
+    ]
+}

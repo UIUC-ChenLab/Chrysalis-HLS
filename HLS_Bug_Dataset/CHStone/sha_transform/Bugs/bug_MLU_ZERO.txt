@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = 0; i < 16; ++i)",
+            "Faulty Code": "for (i = 0; i <= 16; ++i)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "A = sha_info_digest[0];",
+            "Faulty Code": "A = 0;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int huffsize[257];",
+            "Faulty Code": "int huffsize[257]; // huffsize array not initialized, might contain garbage values"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (p = 0, i = 1; i < 17; i++)",
+            "Faulty Code": "#pragma HLS unroll factor=4 // Incorrect because the full inner loop is not unrolled\nfor (p = 0, i = 1; i < 17; i++)"
+        }
+    ]
+}

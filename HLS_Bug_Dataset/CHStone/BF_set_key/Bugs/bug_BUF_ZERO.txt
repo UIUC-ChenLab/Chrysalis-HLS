@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "ri |= *(d++);",
+            "Faulty Code": "ri |= *(end++);"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "in[0] = 0L; in[1] = 0L;",
+            "Faulty Code": "in[0] = 1L; in[1] = 1L;"
+        }
+    ]
+}

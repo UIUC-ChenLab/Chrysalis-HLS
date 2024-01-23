@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "return roundAndPackFloat64(zSign, zExp - shiftCount, zSig << shiftCount);",
+            "Faulty Code": "#pragma HLS pipeline\nreturn roundAndPackFloat64(zSign, zExp - shiftCount, zSig << shiftCount);"
+        }
+    ]
+}

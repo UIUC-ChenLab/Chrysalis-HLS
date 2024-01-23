@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void IQuantize (int *matrix, unsigned int *qmatrix)",
+            "Faulty Code": "#pragma HLS interface port=ap_none int *matrix"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++)"
+        }
+    ]
+}

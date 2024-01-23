@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int unread_marker;",
+            "Faulty Code": "int unread_marker = unread_marker;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for (i = 0; i < num_comp; i++)",
+            "Faulty Code": "#pragma HLS array_partition variable=p_jinfo_comps_info_dc_tbl_no factor=3\nc++ code\nfor (i = 0; i < num_comp; i++)"
+        }
+    ]
+}

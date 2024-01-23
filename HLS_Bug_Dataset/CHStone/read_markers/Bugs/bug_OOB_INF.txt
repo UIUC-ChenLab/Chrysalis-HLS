@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "*p_comp_info_dc_tbl_no = (c >> 4) & 15;",
+            "Faulty Code": "*p_comp_info_dc_tbl_no = (c >> 4) & 16;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (c != 0) break;",
+            "Faulty Code": "if (c == 0) break;"
+        }
+    ]
+}

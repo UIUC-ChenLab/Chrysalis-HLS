@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "return SASR ((longword) a * (longword) b, 15);",
+            "Faulty Code": "while(1) { return SASR ((longword) a * (longword) b, 15); }"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if (a == MIN_WORD && b == MIN_WORD) return MAX_WORD;",
+            "Faulty Code": "longword result = 0; if (a == MIN_WORD && b == MIN_WORD) result = MAX_WORD; return SASR (result, 15);"
+        }
+    ]
+}

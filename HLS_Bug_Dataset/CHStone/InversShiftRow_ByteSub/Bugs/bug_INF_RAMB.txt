@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "switch (nb)",
+            "Faulty Code": "while (nb)"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void InversShiftRow_ByteSub (int statemt[32], int nb)",
+            "Faulty Code": "void InversShiftRow_ByteSub (int statemt[32], int nb) { #pragma HLS interface m_axi port=statemt offset=slave}"
+        }
+    ]
+}

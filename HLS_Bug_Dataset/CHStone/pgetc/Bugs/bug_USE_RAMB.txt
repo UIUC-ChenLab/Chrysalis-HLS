@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "if ((temp = *CurHuffReadBuf++) == MARKER_MARKER)",
+            "Faulty Code": "if ((temp = (char)*CurHuffReadBuf++) == MARKER_MARKER)"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "if ((temp = *CurHuffReadBuf++))",
+            "Faulty Code": "if ((temp = *CurHuffReadBuf)) CurHuffReadBuf += 2;"
+        }
+    ]
+}

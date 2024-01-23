@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int huffsize[257];",
+            "Faulty Code": "short huffsize[257];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "int *p_dhtbl_maxcode, int *p_dhtbl_mincode, int *p_dhtbl_valptr",
+            "Faulty Code": "#pragma HLS interface port=ap_none int *p_dhtbl_maxcode, int *p_dhtbl_mincode, int *p_dhtbl_valptr"
+        }
+    ]
+}

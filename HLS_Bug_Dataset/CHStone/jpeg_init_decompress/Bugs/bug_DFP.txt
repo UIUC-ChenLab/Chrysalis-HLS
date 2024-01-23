@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "tmp = huff_make_dhuff_tb (&p_jinfo_dc_xhuff_tbl_bits[0][0], p_jinfo_dc_dhuff_tbl_ml[0], &p_jinfo_dc_dhuff_tbl_maxcode[0][0], &p_jinfo_dc_dhuff_tbl_mincode[0][0], &p_jinfo_dc_dhuff_tbl_valptr[0][0]);",
+            "Faulty Code": "#pragma HLS dataflow \n tmp = huff_make_dhuff_tb (&p_jinfo_dc_xhuff_tbl_bits[0][0], p_jinfo_dc_dhuff_tbl_ml[0], &p_jinfo_dc_dhuff_tbl_maxcode[0][0], &p_jinfo_dc_dhuff_tbl_mincode[0][0], &p_jinfo_dc_dhuff_tbl_valptr[0][0]);"
+        }
+    ]
+}

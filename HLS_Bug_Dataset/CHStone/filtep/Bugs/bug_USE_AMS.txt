@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "pl = (long) al1 *pl;",
+            "Faulty Code": "pl = al1 *pl;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "int filtep (int rlt1, int al1, int rlt2, int al2)",
+            "Faulty Code": "#pragma HLS interface port=al1 mode=ap_none\nint filtep (int rlt1, int al1, int rlt2, int al2)"
+        }
+    ]
+}

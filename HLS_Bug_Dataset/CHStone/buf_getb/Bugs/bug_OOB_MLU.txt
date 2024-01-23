@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (current_read_byte & bit_set_mask[read_position--])",
+            "Faulty Code": "if (current_read_byte & bit_set_mask[read_position])"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "read_position = 7;",
+            "Faulty Code": "read_position = 8;"
+        }
+    ]
+}

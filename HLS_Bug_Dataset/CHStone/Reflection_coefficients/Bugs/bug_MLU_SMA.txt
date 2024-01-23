@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = n; i <= 8; i++)",
+            "Faulty Code": "for (i = n; i < 8; i++)"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void Reflection_coefficients (longword * L_ACF /* 0...8        IN      */ , register word * r /* 0...7        OUT     */ )",
+            "Faulty Code": "#pragma HLS interface port=bram longword * L_ACF /* 0...8        IN      */ , register word * r /* 0...7        OUT     */"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ld_Bfr = 68157440;",
+            "Faulty Code": "ld_Bfr = 0;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "ld_Rdptr = ld_Rdbfr + 2048;",
+            "Faulty Code": "ld_Rdptr = ld_Rdbfr;"
+        }
+    ]
+}

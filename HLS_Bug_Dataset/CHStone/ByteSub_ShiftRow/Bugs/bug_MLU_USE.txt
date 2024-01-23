@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "statemt[10] = Sbox[statemt[22] >> 4][statemt[22] & 0xf];",
+            "Faulty Code": "statemt[10] = Sbox[statemt[18] >> 4][statemt[18] & 0xf];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "temp = Sbox[statemt[1] >> 4][statemt[1] & 0xf];",
+            "Faulty Code": "temp = Sbox[statemt[1] >> 4][(unsigned)statemt[1] & 0xf];"
+        }
+    ]
+}

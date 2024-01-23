@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "BF_cfb64_encrypt(indata, outdata, i, ivec, &num, encordec);",
+            "Faulty Code": "#pragma HLS unroll factor=2\nBF_cfb64_encrypt(indata, outdata, i, ivec, &num, encordec);"
+        }
+    ]
+}

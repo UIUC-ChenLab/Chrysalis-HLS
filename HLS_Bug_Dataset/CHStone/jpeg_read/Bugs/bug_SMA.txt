@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "jpeg_read (unsigned char *read_buf)",
+            "Faulty Code": "#pragma HLS interface port=read_buf"
+        }
+    ]
+}

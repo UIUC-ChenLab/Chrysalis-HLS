@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "roundBits = zSig & 0x3FF;",
+            "Faulty Code": "roundBits = zSig[10]; // Assuming zSig is an array and trying to access its 11th element"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "shift64RightJamming (zSig, -zExp, &zSig);",
+            "Faulty Code": "shift64RightJamming (zSigArray, -zExp, &zSig); // Assuming zSigArray is an incorrectly declared m_axi array instead of a single bits64 variable"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "sha_info_data[14] = hi_bit_count;",
+            "Faulty Code": "sha_info_data[64] = hi_bit_count;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "uc = c;",
+            "Faulty Code": "uc = 0;"
+        }
+    ]
+}

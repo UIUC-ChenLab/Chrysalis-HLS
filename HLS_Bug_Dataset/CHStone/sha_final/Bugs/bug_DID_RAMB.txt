@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "sha_info_data[count++] = 0x80;",
+            "Faulty Code": "#pragma HLS array_partition variable=sha_info_data dim=2 complete\n      sha_info_data[count++] = 0x80;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "sha_transform ();",
+            "Faulty Code": "#pragma HLS interface port=sha_info_data mode=m_axi\n      sha_transform ();"
+        }
+    ]
+}

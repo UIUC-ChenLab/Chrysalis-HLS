@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "p1 = s1;",
+            "Faulty Code": "BF_LONG *p1 = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "*p1 = *p2;",
+            "Faulty Code": "*p1 = (int)*p2;"
+        }
+    ]
+}

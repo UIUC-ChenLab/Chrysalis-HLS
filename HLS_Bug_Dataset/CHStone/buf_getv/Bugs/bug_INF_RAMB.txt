@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (p > 0)",
+            "Faulty Code": "while (p >= 0)"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "if ((temp = *CurHuffReadBuf++) == MARKER_MARKER)",
+            "Faulty Code": "if ((temp = *CurHuffReadBuf) == MARKER_MARKER)"
+        }
+    ]
+}

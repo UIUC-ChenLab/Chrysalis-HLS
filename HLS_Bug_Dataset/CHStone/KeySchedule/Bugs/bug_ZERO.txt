@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int nk, nb, round_val;",
+            "Faulty Code": "int nk = 0, nb = 0, round_val = 0;"
+        }
+    ]
+}

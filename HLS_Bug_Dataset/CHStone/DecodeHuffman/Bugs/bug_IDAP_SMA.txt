@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "int DecodeHuffman (int *Xhuff_huffval, int Dhuff_ml, int *Dhuff_maxcode, int *Dhuff_mincode, int *Dhuff_valptr)",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=Dhuff_maxcode\nint DecodeHuffman (int *Xhuff_huffval, int Dhuff_ml, int *Dhuff_maxcode, int *Dhuff_mincode, int *Dhuff_valptr)"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int code, l, p;",
+            "Faulty Code": "#pragma HLS interface port=bram variable=code\nint code, l, p;"
+        }
+    ]
+}

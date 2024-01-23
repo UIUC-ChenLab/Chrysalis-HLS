@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "p_xhtbl_huffval[i] = read_byte();",
+            "Faulty Code": "p_xhtbl_huffval[count] = read_byte();"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "length -= DCTSIZE2 + 1;\n      if (prec)\n\tlength -= DCTSIZE2;",
+            "Faulty Code": "length -= 64 + 1;\n      if (prec)\n\tlength -= 64;"
+        }
+    ]
+}

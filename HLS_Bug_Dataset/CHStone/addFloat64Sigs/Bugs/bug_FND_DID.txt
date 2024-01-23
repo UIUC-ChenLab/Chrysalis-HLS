@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "bSig |= LIT64(0x2000000000000000);",
+            "Faulty Code": "#pragma HLS array_partition factor=3\ncyclic partitioning of bSig, but bSig is not an array, and even if it was, factor=3 doesn\u2019t match any potential loop count in the function."
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "aSig <<= 9;",
+            "Faulty Code": "#pragma HLS array_partition variable=aSig dim=2\nAttempting to partition 'aSig' as if it were a multi-dimensional array, but 'aSig' is a single 64-bit integer."
+        }
+    ]
+}

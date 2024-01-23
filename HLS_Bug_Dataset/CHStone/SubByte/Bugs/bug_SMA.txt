@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "int SubByte (int in)",
+            "Faulty Code": "#pragma HLS interface port=in bram\nint SubByte (int in)"
+        }
+    ]
+}

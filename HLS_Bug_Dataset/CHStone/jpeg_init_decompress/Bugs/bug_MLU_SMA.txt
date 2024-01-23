@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (p = 0, i = 1; i < 17; i++)",
+            "Faulty Code": "for (p = 0, i = 1; i <= 16; i++)"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int huff_make_dhuff_tb (int *p_xhtbl_bits, int p_dhtbl_ml, int *p_dhtbl_maxcode, int *p_dhtbl_mincode, int *p_dhtbl_valptr)",
+            "Faulty Code": "int huff_make_dhuff_tb (int p_xhtbl_bits[36], int p_dhtbl_ml, int p_dhtbl_maxcode[36], int p_dhtbl_mincode[36], int p_dhtbl_valptr[36])"
+        }
+    ]
+}

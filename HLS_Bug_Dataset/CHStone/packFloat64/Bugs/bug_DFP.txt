@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "return (((bits64) zSign) << 63) + (((bits64) zExp) << 52) + zSig;",
+            "Faulty Code": "#pragma HLS dataflow\nreturn (((bits64) zSign) << 63) + (((bits64) zExp) << 52) + zSig;"
+        }
+    ]
+}

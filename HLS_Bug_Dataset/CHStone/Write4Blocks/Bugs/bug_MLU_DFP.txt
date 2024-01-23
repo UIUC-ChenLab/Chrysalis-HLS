@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "WriteOneBlock (store1, p_out_buf, p_jinfo_image_width, p_jinfo_image_height, voffs, hoffs);",
+            "Faulty Code": "#pragma HLS dataflow\nWriteOneBlock (store1, p_out_buf, p_jinfo_image_width, p_jinfo_image_height, voffs, hoffs);"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = voffs; i < voffs + DCTSIZE; i++)",
+            "Faulty Code": "for (i = voffs; i <= voffs + DCTSIZE; i++)"
+        }
+    ]
+}

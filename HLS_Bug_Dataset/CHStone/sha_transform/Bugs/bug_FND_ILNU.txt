@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (i = 16; i < 80; ++i)",
+            "Faulty Code": "#pragma HLS array_partition variable=W factor=15 complete\n  for (i = 16; i < 80; ++i)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 0; i < 20; ++i)",
+            "Faulty Code": "#pragma HLS unroll factor=4\n  for (i = 0; i < 20; ++i)"
+        }
+    ]
+}

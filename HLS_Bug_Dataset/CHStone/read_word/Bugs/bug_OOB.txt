@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "short\nread_word (void)\n{\n  short c;\n\n  c = *ReadBuf++ << 8;\n  c |= *ReadBuf++;\n\n  return c;\n}",
+            "Faulty Code": "short\nread_word (void)\n{\n  short c;\n\n  c = *ReadBuf++ << 8;\n  c |= *ReadBuf++;\n  c |= *ReadBuf++; \n  return c;\n}"
+        }
+    ]
+}

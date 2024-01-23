@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out_buf[diff + e] = (unsigned char) (*(store++));",
+            "Faulty Code": "out_buf[diff + e + DCTSIZE] = (unsigned char) (*(store++));"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "out_buf[diff + e] = (unsigned char) (*(store++));",
+            "Faulty Code": "out_buf[diff + e] = (unsigned char) ((int)(*(store++)));"
+        }
+    ]
+}

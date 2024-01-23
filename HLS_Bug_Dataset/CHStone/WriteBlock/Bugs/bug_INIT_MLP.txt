@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int voffs, hoffs;",
+            "Faulty Code": "int voffs, hoffs; // Uninitialized variables, should be initialized before use."
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = voffs; i < voffs + DCTSIZE; i++)",
+            "Faulty Code": "#pragma HLS pipeline // Incorrect placement, especially if another pipeline pragma is added in the nested loop."
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "p_dhtbl_maxcode[l] = huffcode[p];",
+            "Faulty Code": "p_dhtbl_maxcode[l] = (short)huffcode[p];"
+        }
+    ]
+}

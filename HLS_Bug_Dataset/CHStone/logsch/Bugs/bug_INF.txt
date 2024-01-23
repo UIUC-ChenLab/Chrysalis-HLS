@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "\"\"\"int\nlogsch (int ih, int nbh)\n{\n  int wd;\n  wd = ((long) nbh * 127L) >> 7L;\t/* leak factor 127/128 */\n  nbh = wd + wh_code_table[ih];\n  if (nbh < 0)\n    nbh = 0;\n  if (nbh > 22528)\n    nbh = 22528;\n  return (nbh);\n}\"\"\"",
+            "Faulty Code": "\"\"\"int\nlogsch (int ih, int nbh)\n{\n  int wd;\n  wd = ((long) nbh * 127L) >> 7L;\t/* leak factor 127/128 */\n  nbh = wd + wh_code_table[ih];\n  while (nbh < 0)\n    nbh = 0;\n  while (nbh > 22528)\n    nbh = 22528;\n  return (nbh);\n}\"\"\""
+        }
+    ]
+}

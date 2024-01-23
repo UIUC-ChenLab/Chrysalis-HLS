@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "int scalel (int nbl, int shift_constant)",
+            "Faulty Code": "#pragma HLS interface port=nbl s_axilite"
+        }
+    ]
+}

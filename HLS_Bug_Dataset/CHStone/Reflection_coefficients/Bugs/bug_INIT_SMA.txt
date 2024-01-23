@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "word K[9]; /* 2..8 */",
+            "Faulty Code": "word K[9]; /* 2..8 */\nfor (i = 2; i <= 8; i++) K[i] = 0;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void Reflection_coefficients (longword * L_ACF /* 0...8        IN      */ , register word * r /* 0...7        OUT     */ )",
+            "Faulty Code": "#pragma HLS interface port=bram ap_memory\nvoid Reflection_coefficients (longword * L_ACF /* 0...8        IN      */ , register word * r /* 0...7        OUT     */ )"
+        }
+    ]
+}

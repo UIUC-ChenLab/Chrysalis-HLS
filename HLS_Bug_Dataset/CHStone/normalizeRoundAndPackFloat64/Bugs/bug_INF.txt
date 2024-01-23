@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "shiftCount = countLeadingZeros64 (zSig) - 1;",
+            "Faulty Code": "while(zSig){ shiftCount = countLeadingZeros64 (zSig) - 1; }"
+        }
+    ]
+}

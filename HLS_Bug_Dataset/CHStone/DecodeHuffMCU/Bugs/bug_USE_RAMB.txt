@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "diff += *out_buf;      /* Change the last DC */",
+            "Faulty Code": "diff += out_buf;       /* Change the last DC */"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void DecodeHuffMCU (int *out_buf, int num_cmp) {",
+            "Faulty Code": "void DecodeHuffMCU (int *out_buf, int num_cmp) { #pragma HLS interface m_axi port=out_buf"
+        }
+    ]
+}

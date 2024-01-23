@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "temp = invSbox[statemt[13] >> 4][statemt[13] & 0xf];",
+            "Faulty Code": "temp = invSbox[statemt[32] >> 4][statemt[32] & 0xf];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "temp = invSbox[statemt[14] >> 4][statemt[14] & 0xf];",
+            "Faulty Code": "temp = invSbox[(char)statemt[14] >> 4][statemt[14] & 0xf];"
+        }
+    ]
+}

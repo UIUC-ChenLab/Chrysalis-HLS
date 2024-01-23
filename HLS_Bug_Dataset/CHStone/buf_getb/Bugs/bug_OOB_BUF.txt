@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (current_read_byte & bit_set_mask[read_position--])",
+            "Faulty Code": "if (current_read_byte & bit_set_mask[read_position-- - 1])"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "if ((temp = *CurHuffReadBuf++) == MARKER_MARKER)",
+            "Faulty Code": "if ((temp = *CurHuffReadBuf--) == MARKER_MARKER)"
+        }
+    ]
+}

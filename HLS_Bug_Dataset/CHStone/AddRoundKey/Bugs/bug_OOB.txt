@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "statemt[j * 4] ^= word[0][j + nb * n];\nstatemt[1 + j * 4] ^= word[1][j + nb * n];\nstatemt[2 + j * 4] ^= word[2][j + nb * n];\nstatemt[3 + j * 4] ^= word[3][j + nb * n];",
+            "Faulty Code": "statemt[j * 4] ^= word[0][j + nb * n];\nstatemt[1 + j * 4] ^= word[1][j + nb * n];\nstatemt[2 + j * 4] ^= word[2][j + nb * n];\nstatemt[4 + j * 4] ^= word[3][j + nb * n];"
+        }
+    ]
+}

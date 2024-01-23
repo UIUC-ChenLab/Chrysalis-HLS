@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "while (m-- > 0)\n    {\n      *p++ = uc;\n    }",
+            "Faulty Code": "while (e-- > 0)\n    {\n      p++;\n    }\n  while (m-- > 0)\n    {\n      *p++ = uc;\n    }"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "// Content of called function\nwhile (n_tmp-- > 0)\n    {\n      *p1 = *p2;\n      p1++;\n      p2++;\n    }",
+            "Faulty Code": "// Content of called function\n#pragma HLS pipeline\nwhile (n_tmp-- > 0)\n    {\n      *p1 = *p2;\n      p1++;\n      p2++;\n    }\n#pragma HLS pipeline"
+        }
+    ]
+}

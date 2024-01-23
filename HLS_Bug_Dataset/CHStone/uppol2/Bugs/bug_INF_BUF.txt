@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (apl2 > 12288)\n    apl2 = 12288;",
+            "Faulty Code": "while (apl2 > 12288)\n    apl2 = 12288;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "apl2 = wd4 + (127L * (long) al2 >> 7L);",
+            "Faulty Code": "apl2 = wd4 + (127L * (long) plt >> 7L);"
+        }
+    ]
+}

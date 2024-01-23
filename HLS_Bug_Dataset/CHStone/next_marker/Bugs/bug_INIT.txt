@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int c;",
+            "Faulty Code": "int c = read_byte();"
+        }
+    ]
+}

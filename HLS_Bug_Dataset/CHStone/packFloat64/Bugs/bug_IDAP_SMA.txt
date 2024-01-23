@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "INLINE float64 packFloat64 (flag zSign, int16 zExp, bits64 zSig)",
+            "Faulty Code": "#pragma HLS interface port=zSig bram"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "INLINE float64 packFloat64 (flag zSign, int16 zExp, bits64 zSig)",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo"
+        }
+    ]
+}

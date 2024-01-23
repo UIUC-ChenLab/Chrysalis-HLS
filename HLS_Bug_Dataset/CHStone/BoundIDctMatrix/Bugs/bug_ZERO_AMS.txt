@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int *mptr;",
+            "Faulty Code": "int *mptr = 0;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void BoundIDctMatrix (int *matrix, int Bound)",
+            "Faulty Code": "void BoundIDctMatrix (int matrix, int Bound)"
+        }
+    ]
+}

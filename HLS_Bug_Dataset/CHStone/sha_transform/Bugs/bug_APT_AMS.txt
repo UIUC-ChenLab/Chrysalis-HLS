@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "W[i] = W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16];",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=W"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "sha_info_digest[0] += A;",
+            "Faulty Code": "#pragma HLS interface port=sha_info_digest"
+        }
+    ]
+}

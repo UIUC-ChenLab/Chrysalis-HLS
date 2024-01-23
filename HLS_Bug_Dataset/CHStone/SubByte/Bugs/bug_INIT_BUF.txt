@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int SubByte (int in) { return Sbox[(in / 16)][(in % 16)]; }",
+            "Faulty Code": "int SubByte (int in) { int uninitialized_var; return Sbox[uninitialized_var][in % 16]; }"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "int SubByte (int in) { return Sbox[(in / 16)][(in % 16)]; }",
+            "Faulty Code": "int SubByte (int in) { int half = in / 32; return Sbox[half][(in % 16)]; }"
+        }
+    ]
+}

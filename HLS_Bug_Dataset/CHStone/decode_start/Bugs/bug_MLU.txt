@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = 0; i < 4; i++) { decode_block (0, IDCTBuff[i], HuffBuff[0]); }",
+            "Faulty Code": "for (i = 0; i < 3; i++) { decode_block (0, IDCTBuff[i], HuffBuff[0]); }"
+        }
+    ]
+}

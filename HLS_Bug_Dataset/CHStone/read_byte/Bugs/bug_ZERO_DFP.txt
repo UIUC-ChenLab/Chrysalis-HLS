@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int read_byte (void) { return *ReadBuf++; }",
+            "Faulty Code": "int read_byte (void) { int value = 0; return value; }"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "int read_byte (void) { return *ReadBuf++; }",
+            "Faulty Code": "#pragma HLS dataflow int read_byte (void) { return *ReadBuf++; }"
+        }
+    ]
+}

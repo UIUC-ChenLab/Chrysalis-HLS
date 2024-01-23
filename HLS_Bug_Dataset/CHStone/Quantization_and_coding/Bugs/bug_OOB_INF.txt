@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "LAR++;",
+            "Faulty Code": "*LAR++;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "LAR++;",
+            "Faulty Code": "LAR;"
+        }
+    ]
+}

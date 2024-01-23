@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int wd3, apl1;",
+            "Faulty Code": "int wd3 = 0, apl1 = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "long int wd2;\n  int wd3, apl1;",
+            "Faulty Code": "#pragma HLS pipeline\nlong int wd2;\n  int wd3, apl1;"
+        }
+    ]
+}

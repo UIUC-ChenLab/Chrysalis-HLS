@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int CurrentMCU = 0;",
+            "Faulty Code": "int CurrentMCU;"
+        }
+    ]
+}

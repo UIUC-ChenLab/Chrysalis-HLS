@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "roundBits = zSig & 0x3FF;",
+            "Faulty Code": "roundBits = zSig & 0x400;"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "roundingMode = float_rounding_mode;",
+            "Faulty Code": "int8 roundingMode;"
+        }
+    ]
+}

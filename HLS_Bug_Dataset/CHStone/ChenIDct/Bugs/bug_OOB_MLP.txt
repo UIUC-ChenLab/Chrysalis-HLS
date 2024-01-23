@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "aptr = y + LS (i, 3);",
+            "Faulty Code": "aptr = y + LS (i, 4); // Assuming LS(i, 4) incorrectly computes an out-of-bounds index"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = 0; i < 8; i++) {",
+            "Faulty Code": "#pragma HLS pipeline // Incorrectly placed pragma within the outer loop instead of innermost loop"
+        }
+    ]
+}

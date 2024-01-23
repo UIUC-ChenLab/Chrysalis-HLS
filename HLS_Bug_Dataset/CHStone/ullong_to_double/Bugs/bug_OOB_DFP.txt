@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "t.ll = x;",
+            "Faulty Code": "t.ll[32] = x;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "double\nullong_to_double (unsigned long long x)\n{",
+            "Faulty Code": "#pragma HLS dataflow\ndouble\nullong_to_double (unsigned long long x)\n{"
+        }
+    ]
+}

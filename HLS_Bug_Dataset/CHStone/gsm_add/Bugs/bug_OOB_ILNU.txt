@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "sum = (longword) a + (longword) b;",
+            "Faulty Code": "sum = (longword) a[i] + (longword) b[j]; // Assuming a and b are wrongly used as arrays"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "return saturate(sum);",
+            "Faulty Code": "#pragma HLS unroll factor=4\nreturn saturate(sum); // Incorrect placement of unroll pragma"
+        }
+    ]
+}

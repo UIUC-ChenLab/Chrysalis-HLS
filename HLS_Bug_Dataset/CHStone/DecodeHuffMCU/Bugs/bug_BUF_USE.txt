@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "diff |= extend_mask[s];",
+            "Faulty Code": "diff |= extend_mask[s] << 1;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "current_read_byte = (current_read_byte << 8) | pgetc();",
+            "Faulty Code": "current_read_byte = (current_read_byte >> 8) | pgetc();"
+        }
+    ]
+}

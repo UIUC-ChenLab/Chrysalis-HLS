@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "out_buf[diff + e] = (unsigned char) (*(store++));",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=out_buf depth=256 offset=slave bundle=gmem0\n#pragma HLS INTERFACE m_axi port=store depth=256 offset=slave bundle=gmem1\nout_buf[diff + e] = (unsigned char) (*(store++));"
+        }
+    ]
+}

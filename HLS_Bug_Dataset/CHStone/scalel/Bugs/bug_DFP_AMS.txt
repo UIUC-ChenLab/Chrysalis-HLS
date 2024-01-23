@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "int scalel (int nbl, int shift_constant) { ... }",
+            "Faulty Code": "#pragma HLS dataflow\nint scalel (int nbl, int shift_constant) { ... }"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "int scalel (int nbl, int shift_constant) { ... }",
+            "Faulty Code": "#pragma HLS interface port=ap_none\nint scalel (int nbl, int shift_constant) { ... }"
+        }
+    ]
+}

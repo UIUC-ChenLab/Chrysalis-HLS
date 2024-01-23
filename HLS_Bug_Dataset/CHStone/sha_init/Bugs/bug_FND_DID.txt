@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "void sha_init() {",
+            "Faulty Code": "#pragma HLS array_partition variable=sha_info_digest factor=3\nvoid sha_init() {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "void sha_init() {",
+            "Faulty Code": "#pragma HLS array_partition variable=sha_info_digest dim=2\nvoid sha_init() {"
+        }
+    ]
+}

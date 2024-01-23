@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "return saturate (sum);",
+            "Faulty Code": "while(true) { saturate(sum); } // Infinite loop due to erroneous loop termination condition"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "sum = (longword) a + (longword) b;",
+            "Faulty Code": "sum = 0; // Variable initialized to zero instead of nonzero initializer"
+        }
+    ]
+}

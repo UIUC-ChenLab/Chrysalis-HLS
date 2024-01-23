@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "for (i = 0; i < nb * 4; ++i)",
+            "Faulty Code": "for (i = nb * 4; i < 32; ++i)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 1; i <= round_val + 9; ++i)",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (i = 1; i <= round_val + 9; ++i)"
+        }
+    ]
+}

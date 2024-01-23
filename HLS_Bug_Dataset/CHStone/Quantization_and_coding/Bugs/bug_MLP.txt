@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void Quantization_and_coding (register word * LAR /* [0..7]       IN/OUT  */ ) {...}",
+            "Faulty Code": "void Quantization_and_coding (register word * LAR /* [0..7]       IN/OUT  */ ) { \n#pragma HLS pipeline \n...}"
+        }
+    ]
+}

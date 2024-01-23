@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (i = 0; i < 6; i++)",
+            "Faulty Code": "#pragma HLS array_partition variable=delay_dltx factor=4 complete\nfor (i = 0; i < 6; i++)"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "int main_result;",
+            "Faulty Code": "#pragma HLS interface port=main_result bram\nint main_result;"
+        }
+    ]
+}

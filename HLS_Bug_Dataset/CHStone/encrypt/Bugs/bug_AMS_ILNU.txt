@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "encrypt (int statemt[32], int key[32], int type)",
+            "Faulty Code": "#pragma HLS interface port=ap_none int statemt\nencrypt (int statemt, int key[32], int type)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 1; i <= round_val + 9; ++i)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (i = 1; i <= round_val + 9; ++i)"
+        }
+    ]
+}

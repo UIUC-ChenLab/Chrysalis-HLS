@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (i = 0; i < 8; i++)",
+            "Faulty Code": "for (i = 0; i <= 8; i++)"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void ChenIDct (int *x, int *y)",
+            "Faulty Code": "#pragma HLS INTERFACE port=x bram"
+        }
+    ]
+}

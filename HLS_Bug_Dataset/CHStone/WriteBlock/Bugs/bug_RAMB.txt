@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "out_buf[diff + e] = (unsigned char) (*(store++));",
+            "Faulty Code": "#pragma HLS interface m_axi port=out_buf depth=512\nout_buf[diff + e] = (unsigned char) (*(store++));"
+        }
+    ]
+}

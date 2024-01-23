@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "x = (statemt[(i + 3) % 4 + j * 4] << 1);\nif ((x >> 8) == 1)\n  x ^= 283;\nx = (x << 1);\nif ((x >> 8) == 1)\n  x ^= 283;\nx = (x << 1);\nif ((x >> 8) == 1)\n  x ^= 283;\nx ^= statemt[(i + 3) % 4 + j * 4];\nret[i + j * 4] ^= x;",
+            "Faulty Code": "x = (statemt[(i + 3) % 4 + j * 4] << 1);\nif ((x >> 8) == 1)\n  x ^= 283;\nx = (x << 1);\nif ((x >> 8) == 1)\n  x ^= 283;\n/* omission of one iteration here */\nx ^= statemt[(i + 3) % 4 + j * 4];\nret[i + j * 4] ^= x;"
+        }
+    ]
+}

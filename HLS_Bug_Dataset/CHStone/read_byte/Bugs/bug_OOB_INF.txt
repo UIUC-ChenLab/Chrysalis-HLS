@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "int read_byte(void) { return *ReadBuf++; }",
+            "Faulty Code": "int read_byte(void) { static int ReadBuf[10]; static int index = 0; return ReadBuf[index++]; }"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "int read_byte(void) { return *ReadBuf++; }",
+            "Faulty Code": "int read_byte(void) { static int ReadBuf[10]; static int index = 0; while(1) { return ReadBuf[index++]; }}"
+        }
+    ]
+}

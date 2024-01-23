@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (CurrentMCU < p_jinfo_NumMCU)",
+            "Faulty Code": "while (CurrentMCU = p_jinfo_NumMCU)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 0; i < NUM_COMPONENT; i++)",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (i = 0; i < NUM_COMPONENT; i++)"
+        }
+    ]
+}

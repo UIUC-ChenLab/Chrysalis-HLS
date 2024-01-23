@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "if (aExp == 0x7FF)",
+            "Faulty Code": "#pragma HLS pipeline\nif (aExp == 0x7FF)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "if (0x7FD <= (bits16) zExp)",
+            "Faulty Code": "#pragma HLS unroll factor=2\nif (0x7FD <= (bits16) zExp)"
+        }
+    ]
+}

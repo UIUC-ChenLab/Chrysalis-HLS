@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "zSig = (zSig + roundIncrement) >> 10;",
+            "Faulty Code": "zSig = (zSig + roundIncrement) >> 9;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "roundBits = zSig & 0x3FF;",
+            "Faulty Code": "#pragma HLS array_partition variable=roundBits factor=5 complete"
+        }
+    ]
+}

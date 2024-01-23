@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "bSig <<= 10;",
+            "Faulty Code": "#pragma HLS array_partition factor=3\ncyclic bSig <<= 10;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "shift64RightJamming (aSig, -expDiff, &aSig);",
+            "Faulty Code": "#pragma HLS dataflow\nshift64RightJamming (aSig, -expDiff, &aSig);"
+        }
+    ]
+}

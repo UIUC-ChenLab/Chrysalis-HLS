@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "rgb_buf[p][0][i] = r; rgb_buf[p][1][i] = g; rgb_buf[p][2][i] = b;",
+            "Faulty Code": "rgb_buf[p+1][0][i] = r; rgb_buf[p+1][1][i] = g; rgb_buf[p+1][2][i] = b;"
+        }
+    ]
+}

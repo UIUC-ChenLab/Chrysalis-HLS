@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "\"int\nquantl (int el, int detl)\n{\n  int ril, mil;\n  long int wd, decis;\n\n/* abs of difference signal */\n  wd = abs (el);\n/* determine mil based on decision levels and detl gain */\n  for (mil = 0; mil < 30; mil++)\n    {\n      decis = (decis_levl[mil] * (long) detl) >> 15L;\n      if (wd <= decis)\n\tbreak;\n    }\n/* if mil=30 then wd is less than all decision levels */\n  if (el >= 0)\n    ril = quant26bt_pos[mil];\n  else\n    ril = quant26bt_neg[mil];\n  return (ril);\n}\n\n// Content of called function\nint\nabs (int n)\n{\n  int m;\n\n  if (n >= 0)\n    m = n;\n  else\n    m = -n;\n  return m;\n}\"",
+            "Faulty Code": "\"#pragma HLS INTERFACE m_axi port=el depth=512\nint\nquantl (int el, int detl)\n{\n  int ril, mil;\n  long int wd, decis;\n\n/* abs of difference signal */\n  wd = abs (el);\n/* determine mil based on decision levels and detl gain */\n  for (mil = 0; mil < 30; mil++)\n    {\n      decis = (decis_levl[mil] * (long) detl) >> 15L;\n      if (wd <= decis)\n\tbreak;\n    }\n/* if mil=30 then wd is less than all decision levels */\n  if (el >= 0)\n    ril = quant26bt_pos[mil];\n  else\n    ril = quant26bt_neg[mil];\n  return (ril);\n}\n\n// Content of called function\nint\nabs (int n)\n{\n  int m;\n\n  if (n >= 0)\n    m = n;\n  else\n    m = -n;\n  return m;\n}\""
+        }
+    ]
+}

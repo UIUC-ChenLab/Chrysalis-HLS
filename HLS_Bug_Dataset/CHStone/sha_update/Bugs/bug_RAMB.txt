@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void sha_update (const BYTE * buffer, int count) { /*...*/ }",
+            "Faulty Code": "#pragma HLS interface port=buffer mode=m_axi\nvoid sha_update (const BYTE * buffer, int count) { /*...*/ }"
+        }
+    ]
+}

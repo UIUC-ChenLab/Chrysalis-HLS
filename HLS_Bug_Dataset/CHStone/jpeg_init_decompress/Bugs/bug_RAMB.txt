@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "p_jinfo_dc_dhuff_tbl_maxcode[1][0]",
+            "Faulty Code": "#pragma HLS interface m_axi port=p_jinfo_dc_dhuff_tbl_maxcode[1][0]"
+        }
+    ]
+}

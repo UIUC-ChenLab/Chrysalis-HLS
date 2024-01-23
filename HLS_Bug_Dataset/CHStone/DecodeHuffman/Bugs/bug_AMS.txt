@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "int DecodeHuffman (int *Xhuff_huffval, int Dhuff_ml, int *Dhuff_maxcode, int *Dhuff_mincode, int *Dhuff_valptr)",
+            "Faulty Code": "#pragma HLS interface port=Dhuff_maxcode ap_none"
+        }
+    ]
+}

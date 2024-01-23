@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (i < height)",
+            "Faulty Code": "if (i <= height)"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "*p_out_hpos = 0;",
+            "Faulty Code": "*p_out_hpos = *p_out_hpos - 2;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int count;",
+            "Faulty Code": "int count = sha_info_data[count]; // Using 'count' before it's initialized"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (i = 0; i < 16; ++i) { W[i] = sha_info_data[i]; }",
+            "Faulty Code": "for (i = 0; i < 80; i += 5) { W[i] = sha_info_data[i]; // Non-consecutive access for 'sha_info_data' with potential gaps if 'i' skips values"
+        }
+    ]
+}

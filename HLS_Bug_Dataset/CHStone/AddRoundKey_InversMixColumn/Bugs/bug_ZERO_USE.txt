@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int ret[8 * 4], i, j;",
+            "Faulty Code": "int ret[8 * 4] = {0}, i, j;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "x = (statemt[i + j * 4] << 1);",
+            "Faulty Code": "x = ((char)statemt[i + j * 4] << 1);"
+        }
+    ]
+}

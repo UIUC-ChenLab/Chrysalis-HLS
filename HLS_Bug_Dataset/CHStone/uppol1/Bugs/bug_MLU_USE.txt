@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if ((long) plt * plt1 >= 0L)",
+            "Faulty Code": "if ((long) plt * (plt1 - 1) >= 0L)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "apl1 = (int) wd2 + 192;",
+            "Faulty Code": "apl1 = (int)((short)wd2) + 192;"
+        }
+    ]
+}

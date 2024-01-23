@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int c1, c2;",
+            "Faulty Code": "int c1, c2; c2 = read_byte(); // c1 is uninitialized when used"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "c1 = read_byte ();\nc2 = read_byte ();",
+            "Faulty Code": "c2 = read_byte (); // Missing the c1 = read_byte(); hence manual loop unrolling omits one iteration"
+        }
+    ]
+}

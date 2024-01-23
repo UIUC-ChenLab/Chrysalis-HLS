@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "temp = GSM_ADD(  temp, 256 );",
+            "Faulty Code": "temp = 0;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "sha_info_data[count++] = 0x80;",
+            "Faulty Code": "#pragma HLS interface m_axi port=sha_info_data depth=512 offset=slave"
+        }
+    ]
+}

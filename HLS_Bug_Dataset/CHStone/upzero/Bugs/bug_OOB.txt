@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "dlti[5] = dlti[4];\ndlti[4] = dlti[3];\ndlti[3] = dlti[2];\ndlti[2] = dlti[1];\ndlti[1] = dlti[0];\ndlti[0] = dlt;",
+            "Faulty Code": "dlti[6] = dlti[5];\ndlti[5] = dlti[4];\ndlti[4] = dlti[3];\ndlti[3] = dlti[2];\ndlti[2] = dlti[1];\ndlti[1] = dlti[0];\ndlti[0] = dlt;"
+        }
+    ]
+}

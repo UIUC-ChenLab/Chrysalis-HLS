@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "diff += *out_buf; /* Change the last DC */",
+            "Faulty Code": "diff += (char)*out_buf; /* Change the last DC */"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void decode_start(int *out_data_image_width, int *out_data_image_height,...",
+            "Faulty Code": "#pragma HLS dataflow \nvoid decode_start(int *out_data_image_width, int *out_data_image_height,..."
+        }
+    ]
+}

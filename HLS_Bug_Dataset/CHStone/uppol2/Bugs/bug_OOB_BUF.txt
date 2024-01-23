@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (apl2 > 12288) apl2 = 12288;",
+            "Faulty Code": "if (apl2[1] > 12288) apl2 = 12288;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "wd2 = 4L * (long) al1;",
+            "Faulty Code": "wd2 = 4L * (long) al1[0];"
+        }
+    ]
+}

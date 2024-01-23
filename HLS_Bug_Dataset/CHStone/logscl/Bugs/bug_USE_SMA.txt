@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "wd = ((long) nbl * 127L) >> 7L;",
+            "Faulty Code": "wd = ((int) nbl * 127) >> 7;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "nbl = (int) wd + wl_code_table[il >> 2];",
+            "Faulty Code": "#pragma HLS interface port=wl_code_table bram"
+        }
+    ]
+}

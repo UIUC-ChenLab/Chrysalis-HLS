@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "shift64RightJamming(bSig, expDiff, &bSig);",
+            "Faulty Code": "#pragma HLS array_partition variable=bSig factor=5 complete\nshift64RightJamming(bSig, expDiff, &bSig);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "shift64RightJamming(aSig, -expDiff, &aSig);",
+            "Faulty Code": "#pragma HLS interface port=aSig bram\nshift64RightJamming(aSig, -expDiff, &aSig);"
+        }
+    ]
+}

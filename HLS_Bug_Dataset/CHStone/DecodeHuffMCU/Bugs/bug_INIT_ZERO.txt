@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int code, l, p;",
+            "Faulty Code": "int code = 0, l, p;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "diff += *out_buf;      /* Change the last DC */",
+            "Faulty Code": "diff = 0;      /* Change the last DC */"
+        }
+    ]
+}

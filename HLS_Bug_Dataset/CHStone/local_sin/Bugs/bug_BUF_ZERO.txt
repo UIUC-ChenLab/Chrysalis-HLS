@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "app = diff = rad;",
+            "Faulty Code": "app = diff = 0;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "aSig = (aSig | LIT64(0x0010000000000000)) << 10;",
+            "Faulty Code": "aSig = (aSig | LIT64(0x0010000000000000)) << 20;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "int\nbuf_getb ()\n{\n  if (read_position < 0)\n    {\n      current_read_byte = pgetc ();\n      read_position = 7;\n    }\n\n  if (current_read_byte & bit_set_mask[read_position--])\n    {\n      return (1);\n    }\n  return (0);\n}\n",
+            "Faulty Code": "int\nbuf_getb ()\n{\n  #pragma HLS pipeline\n  if (read_position < 0)\n    {\n      #pragma HLS pipeline\n      current_read_byte = pgetc ();\n      read_position = 7;\n    }\n\n  if (current_read_byte & bit_set_mask[read_position--])\n    {\n      return (1);\n    }\n  return (0);\n}\n"
+        }
+    ]
+}

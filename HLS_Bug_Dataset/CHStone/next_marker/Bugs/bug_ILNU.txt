@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (;;)\n    {\n      c = read_byte ();\n\n      while (c != 0xff)\n\tc = read_byte ();\n\n      do\n\t{\n\t  c = read_byte ();\n\t}\n      while (c == 0xff);\n      if (c != 0)\n\tbreak;\n    }",
+            "Faulty Code": "for (;;)\n    {\n      #pragma HLS unroll factor=4\n      c = read_byte ();\n\n      while (c != 0xff)\n\tc = read_byte ();\n\n      do\n\t{\n\t  c = read_byte ();\n\t}\n      while (c == 0xff);\n      if (c != 0)\n\tbreak;\n    }"
+        }
+    ]
+}

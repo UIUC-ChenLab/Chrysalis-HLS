@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "encrypt (statemt, key, 128128);",
+            "Faulty Code": "encrypt (statemt, key, 0);"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "encrypt (statemt, key, 128128);",
+            "Faulty Code": "#pragma HLS dataflow\nencrypt (statemt, key, 128128);"
+        }
+    ]
+}

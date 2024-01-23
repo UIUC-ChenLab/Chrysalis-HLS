@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "return a < 0 ? (a == MIN_WORD ? MAX_WORD : -a) : a;",
+            "Faulty Code": "return a < 0 ? (a == MIN_WORD ? MAX_WORD : -a) : a+1;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "return a < 0 ? (a == MIN_WORD ? MAX_WORD : -a) : a;",
+            "Faulty Code": "return a < 0 ? (a == MIN_WORD ? MAX_WORD : -(unsigned) a) : a;"
+        }
+    ]
+}

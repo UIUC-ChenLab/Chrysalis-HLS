@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "IQuantize (int *matrix, unsigned int *qmatrix)",
+            "Faulty Code": "#pragma HLS dataflow IQuantize (int *matrix, unsigned int *qmatrix)"
+        }
+    ]
+}

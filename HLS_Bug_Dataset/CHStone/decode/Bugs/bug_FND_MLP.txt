@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (i = 0; i < 10; i++)",
+            "Faulty Code": "#pragma HLS array_partition variable=accumc cyclic factor=3\nfor (i = 0; i < 10; i++)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = 0; i < 10; i++)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (i = 0; i < 10; i++) {\n    #pragma HLS pipeline\n}"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "int\nread_byte (void)\n{\n  return *ReadBuf++;\n}",
+            "Faulty Code": "int\nread_byte (void)\n{\n  static int index = 0;\n  return ReadBuf[index++]; // Assuming ReadBuf is an array with a fixed size, this can go out-of-bounds\n}"
+        }
+    ]
+}

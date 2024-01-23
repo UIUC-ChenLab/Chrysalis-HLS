@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = 0; i < 8; i++)",
+            "Faulty Code": "for (i = 0; i <= 8; i++)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "check += (outdata[j] != out_key[l++]);",
+            "Faulty Code": "check += (int)(char)(outdata[j] != out_key[l++]);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (i = 8; i > 0; i--)",
+            "Faulty Code": "for (i = 9; i > 0; i--)"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void Gsm_LPC_Analysis (word * s /* 0..159 signals       IN/OUT  */ , word * LARc /* 0..7   LARc's        OUT     */ )",
+            "Faulty Code": "#pragma HLS dataflow\nvoid Gsm_LPC_Analysis (word * s /* 0..159 signals       IN/OUT  */ , word * LARc /* 0..7   LARc's        OUT     */ )"
+        }
+    ]
+}

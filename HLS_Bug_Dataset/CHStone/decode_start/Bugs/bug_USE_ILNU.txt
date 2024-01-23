@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 0; i < NUM_COMPONENT; i++)",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (i = 0; i < NUM_COMPONENT; i++)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "r = (y * 256 + v * 359 + 128) >> 8;",
+            "Faulty Code": "r = (y * 256 + (char)v * 359 + 128) >> 8;"
+        }
+    ]
+}

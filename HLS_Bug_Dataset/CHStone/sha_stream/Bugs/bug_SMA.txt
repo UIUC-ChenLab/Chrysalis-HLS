@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "i = in_i[j];",
+            "Faulty Code": "#pragma HLS interface port=in_i bram"
+        }
+    ]
+}

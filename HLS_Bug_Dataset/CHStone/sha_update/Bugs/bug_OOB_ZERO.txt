@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "W[i] = W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16];",
+            "Faulty Code": "W[i] = W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 17];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "INT32 temp, A, B, C, D, E, W[80];",
+            "Faulty Code": "INT32 temp = 0, A = 0, B = 0, C = 0, D = 0, E = 0, W[80] = {0};"
+        }
+    ]
+}

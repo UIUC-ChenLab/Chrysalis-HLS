@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "statemt[14] = invSbox[statemt[6] >> 4][statemt[6] & 0xf];",
+            "Faulty Code": "statemt[14] = invSbox[statemt[14] >> 4][statemt[14] & 0xf];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void InversShiftRow_ByteSub (int statemt[32], int nb) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid InversShiftRow_ByteSub (int statemt[32], int nb) {"
+        }
+    ]
+}

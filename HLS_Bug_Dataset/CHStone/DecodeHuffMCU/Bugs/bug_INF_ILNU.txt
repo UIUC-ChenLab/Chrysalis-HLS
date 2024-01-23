@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (l = 1; code > Dhuff_maxcode[l]; l++)",
+            "Faulty Code": "for (l = 1; code >= Dhuff_maxcode[l]; l++)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (mptr = out_buf + 1; mptr < out_buf + DCTSIZE2; mptr++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (mptr = out_buf + 1; mptr < out_buf + DCTSIZE2; mptr++)"
+        }
+    ]
+}

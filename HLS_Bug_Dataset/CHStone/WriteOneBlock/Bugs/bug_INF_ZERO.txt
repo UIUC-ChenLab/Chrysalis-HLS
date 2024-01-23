@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (i = voffs; i < voffs + DCTSIZE; i++)",
+            "Faulty Code": "for (i = voffs; ; i++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "diff = width * i;",
+            "Faulty Code": "diff = 0;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (i = 8; i > 0; i--)",
+            "Faulty Code": "for (i = 9; i > 0; i--)"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "while (k--)",
+            "Faulty Code": "while (k-- >= 0)"
+        }
+    ]
+}

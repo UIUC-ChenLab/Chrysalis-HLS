@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "dec_detl = scalel (dec_nbl, 8);",
+            "Faulty Code": "dec_detl = scalel (dec_nbl, 0);"
+        }
+    ]
+}

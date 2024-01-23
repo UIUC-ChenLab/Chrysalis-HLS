@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "long int wd, decis;",
+            "Faulty Code": "long int wd = 0, decis;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (mil = 0; mil < 30; mil++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (mil = 0; mil < 30; mil++)"
+        }
+    ]
+}

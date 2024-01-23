@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "Flush_Buffer(0);",
+            "Faulty Code": "while(1) Flush_Buffer(0);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void Initialize_Buffer()",
+            "Faulty Code": "#pragma HLS interface port=ld_Rdbfr ap_none\nvoid Initialize_Buffer()"
+        }
+    ]
+}

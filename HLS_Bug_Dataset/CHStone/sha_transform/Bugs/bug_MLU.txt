@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = 20; i < 40; ++i) { FUNC (2, i); }",
+            "Faulty Code": "for (i = 20; i < 39; ++i) { FUNC (2, i); }"
+        }
+    ]
+}

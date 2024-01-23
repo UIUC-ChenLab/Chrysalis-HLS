@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int temp;",
+            "Faulty Code": "int temp = statemt[0]; // Incorrectly initializing with the first element of statemt, which may not be the desired initial value."
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "statemt[14] = Sbox[statemt[22] >> 4][statemt[22] & 0xf];",
+            "Faulty Code": "statemt[14] = Sbox[statemt[14] >> 4][statemt[14] & 0xf]; // Incorrectly copying from the same position instead of the intended '22' position."
+        }
+    ]
+}

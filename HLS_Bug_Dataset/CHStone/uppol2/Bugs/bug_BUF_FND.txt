@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "if ((long) plt * plt1 >= 0L)",
+            "Faulty Code": "if ((long) plt * plt2 >= 0L)"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "if ((long) plt * plt2 >= 0L)",
+            "Faulty Code": "#pragma HLS array_partition variable=wd2 factor=5 cyclic"
+        }
+    ]
+}

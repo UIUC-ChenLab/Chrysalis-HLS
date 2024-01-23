@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "return packFloat64 (zSign, zExp, zSig);",
+            "Faulty Code": "return packFloat64 ((int16)zSign, zExp, zSig);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "return (((bits64) zSign) << 63) + (((bits64) zExp) << 52) + zSig;",
+            "Faulty Code": "return (((int16) zSign) << 63) + (((bits64) zExp) << 52) + zSig;"
+        }
+    ]
+}

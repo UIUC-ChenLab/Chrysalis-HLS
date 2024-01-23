@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "statemt[3 + j * 4] = ret[3 + j * 4];",
+            "Faulty Code": "statemt[2 + j * 4] = ret[2 + j * 4];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void PostshiftIDctMatrix (int *matrix, int shift) { ... }",
+            "Faulty Code": "void PostshiftIDctMatrix (int *matrix, int shift) { #pragma HLS dataflow ... }"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++) { *mptr += shift; }",
+            "Faulty Code": "for (mptr = matrix; mptr < matrix + DCTSIZE2; mptr++) { #pragma HLS unroll factor=4 *mptr += shift; }"
+        }
+    ]
+}

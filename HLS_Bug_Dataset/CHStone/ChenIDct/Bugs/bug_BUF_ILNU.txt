@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "aptr = x + i;",
+            "Faulty Code": "aptr = y + i;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (i = 0; i < 8; i++) { ... /* Loop over rows */ ... for (i = 0; i < 8; i++) { ...",
+            "Faulty Code": "#pragma HLS unroll\nfor (i = 0; i < 8; i++) { ... /* Loop over rows */ ... #pragma HLS unroll\nfor (i = 0; i < 8; i++) { ..."
+        }
+    ]
+}

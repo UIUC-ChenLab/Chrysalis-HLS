@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void decode_start (int *out_data_image_width, int *out_data_image_height, int *out_data_comp_vpos, int *out_data_comp_hpos){ /* function body*/ }",
+            "Faulty Code": "#pragma HLS dataflow void decode_start (int *out_data_image_width, int *out_data_image_height, int *out_data_comp_vpos, int *out_data_comp_hpos){ /* function body*/ }"
+        }
+    ]
+}

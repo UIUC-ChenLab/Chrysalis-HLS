@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "n_tmp = n;",
+            "Faulty Code": "n_tmp = 0;"
+        }
+    ]
+}

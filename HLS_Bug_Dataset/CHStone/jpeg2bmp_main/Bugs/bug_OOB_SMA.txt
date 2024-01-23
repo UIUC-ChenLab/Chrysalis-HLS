@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (i = 0; i < DCTSIZE2; i++)",
+            "Faulty Code": "for (i = 0; i <= DCTSIZE2; i++)"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "jpeg_read (JpegFileBuf);",
+            "Faulty Code": "#pragma HLS INTERFACE port=JpegFileBuf bram"
+        }
+    ]
+}

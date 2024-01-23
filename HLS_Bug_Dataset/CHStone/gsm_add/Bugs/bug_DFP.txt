@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "gsm_add (word a, word b) {\n  longword sum;\n  sum = (longword) a + (longword) b;\n  return saturate (sum);\n}",
+            "Faulty Code": "gsm_add (word a, word b) {\n  #pragma HLS dataflow\n  longword sum;\n  sum = (longword) a + (longword) b;\n  return saturate (sum);\n}"
+        }
+    ]
+}

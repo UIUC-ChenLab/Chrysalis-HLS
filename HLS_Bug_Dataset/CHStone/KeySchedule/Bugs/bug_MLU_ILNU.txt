@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (j = nk; j < nb * (round_val + 1); ++j)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (j = nk; j < nb * (round_val + 1); ++j)"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (i = 0; i < 4; ++i)",
+            "Faulty Code": "for (i = 0; i < 3; ++i) /* Missing last iteration */"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "dlti[5] = dlti[4];",
+            "Faulty Code": "dlti[4] = dlti[5];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (i = 0; i < 6; i++)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (i = 0; i < 6; i++)"
+        }
+    ]
+}

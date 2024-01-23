@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "int *p_dhtbl_maxcode, int *p_dhtbl_mincode, int *p_dhtbl_valptr",
+            "Faulty Code": "#pragma HLS interface port=ap_none int p_dhtbl_maxcode, p_dhtbl_mincode, p_dhtbl_valptr"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (j = 1; j <= p_xhtbl_bits[i]; j++)",
+            "Faulty Code": "#pragma HLS pipeline for (j = 1; j <= p_xhtbl_bits[i]; j++)"
+        }
+    ]
+}

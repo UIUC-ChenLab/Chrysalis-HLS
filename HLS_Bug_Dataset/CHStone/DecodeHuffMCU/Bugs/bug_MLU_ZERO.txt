@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "diff += *out_buf;      /* Change the last DC */",
+            "Faulty Code": "*out_buf = 0;          /* Incorrectly initializing to zero */"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (k = 1; k < DCTSIZE2;)",
+            "Faulty Code": "for (k = 1; k <= DCTSIZE2;)"
+        }
+    ]
+}

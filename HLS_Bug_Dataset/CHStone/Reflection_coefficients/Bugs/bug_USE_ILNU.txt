@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ACF[i] = SASR (L_ACF[i] << temp, 16);",
+            "Faulty Code": "ACF[i] = (word)(L_ACF[i] << temp) >> 16;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (m = 1; m <= 8 - n; m++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (m = 1; m <= 8 - n; m++)"
+        }
+    ]
+}

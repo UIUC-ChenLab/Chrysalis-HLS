@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "u = u_buf[i] - 128;",
+            "Faulty Code": "u = (char)u_buf[i] - 128;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void decode_start (int *out_data_image_width, int *out_data_image_height, int *out_data_comp_vpos, int *out_data_comp_hpos)",
+            "Faulty Code": "#pragma HLS dataflow\nvoid decode_start (int *out_data_image_width, int *out_data_image_height, int *out_data_comp_vpos, int *out_data_comp_hpos)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (i = 0; i < IN_END; i += 2)",
+            "Faulty Code": "for (i = 0; i < IN_END; i -= 2)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "dec_dlt = ((long) dec_detl * qq4_code4_table[ilr >> 2]) >> 15;",
+            "Faulty Code": "dec_dlt = ((int) dec_detl * qq4_code4_table[ilr >> 2]) >> 15;"
+        }
+    ]
+}

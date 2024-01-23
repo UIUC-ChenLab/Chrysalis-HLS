@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "while (e-- > 0) { p++; }",
+            "Faulty Code": "while (e-- >= 0) { p++; }"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "INT32 uc;",
+            "Faulty Code": "#pragma HLS INTERFACE port=uc bram"
+        }
+    ]
+}

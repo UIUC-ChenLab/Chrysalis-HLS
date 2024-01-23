@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ri |= *(d++);",
+            "Faulty Code": "ri |= (int)(char)*(d++);"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void BF_set_key (int len, unsigned char *data) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid BF_set_key (int len, unsigned char *data) {"
+        }
+    ]
+}

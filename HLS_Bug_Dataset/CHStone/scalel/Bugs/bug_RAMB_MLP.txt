@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "wd3 = ilb_table[wd1] >> (shift_constant + 1 - wd2);",
+            "Faulty Code": "wd3 = ilb_table[wd1 + shift_constant] >> (1 - wd2);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "return (wd3 << 3);",
+            "Faulty Code": "#pragma HLS pipeline\nreturn (wd3 << 3);"
+        }
+    ]
+}
