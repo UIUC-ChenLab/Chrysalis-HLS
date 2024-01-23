@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "for(unsigned int i = 0; i < numReps; i++) {",
+            "Faulty Code": "unsigned int i; for(i = 0; i < numReps; i++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "void StreamingCast(hls::stream<InT> & in, hls::stream<OutT> & out, unsigned int numReps) {",
+            "Faulty Code": "void StreamingCast(hls::stream<InT> & in, hls::stream<OutT> & out, unsigned int numReps = 0) {"
+        }
+    ]
+}

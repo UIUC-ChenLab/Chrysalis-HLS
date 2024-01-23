@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "valueOut = (valueIn(offset-1,0),remainder(OutWidth-offset-1,0));",
+            "Faulty Code": "valueOut = (valueIn(OutWidth-1,0),remainder(OutWidth-offset-1,0));"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "ap_uint<InWidth>  valueIn = in.read();",
+            "Faulty Code": "ap_uint<InWidth>  valueIn = in.read(offset);"
+        }
+    ]
+}

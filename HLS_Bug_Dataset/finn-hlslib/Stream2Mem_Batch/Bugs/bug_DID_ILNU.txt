@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "Stream2Mem<DataWidth, numBytes * 16>(in, &out[rep * indsPerRep]);",
+            "Faulty Code": "#pragma HLS array_partition variable=out dim=3 complete // Incorrect 'dim' value for a 1D array"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS unroll factor=4 // Incorrect unroll without full inner loop unrolling"
+        }
+    ]
+}

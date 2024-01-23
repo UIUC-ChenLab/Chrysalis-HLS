@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned int r = 0; r < REMAINDER_PIXELS*NF; r++){",
+            "Faulty Code": "for (unsigned int r = 0; r <= REMAINDER_PIXELS*NF; r++){"
+        }
+    ]
+}

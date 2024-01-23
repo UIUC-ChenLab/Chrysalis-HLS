@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "buf[ch][p] = min_value;",
+            "Faulty Code": "// buf[ch][p] = min_value; // Uninitialized due to commented out initialization"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "ActType const channeldata = inputData(highBit, lowBit);",
+            "Faulty Code": "ActType const channeldata = (ActType)(inputData(highBit, lowBit) << (sizeof(ActType)*8 - (highBit - lowBit + 1))) >> (sizeof(ActType)*8 - (highBit - lowBit + 1)); // Incorrect sign extension due to left and right shift"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for(unsigned int x=0; x < OutputDim; x++){\n#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "for(unsigned int x=0; x < OutputDim; x++){\n#pragma HLS unroll factor=4"
+        }
+    ]
+}

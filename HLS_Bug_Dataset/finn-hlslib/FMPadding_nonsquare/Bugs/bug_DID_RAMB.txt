@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition dim=4"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "outData = in.read();",
+            "Faulty Code": "#pragma HLS interface port=in mode=s_axilite"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ActType const  val = thin((pe+1) * ActType::width - 1,pe * ActType::width);",
+            "Faulty Code": "ActType const  val = (ActType)thin((pe+1) * ActType::width - 1,pe * ActType::width);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=accumulators factor=PECount-1 cyclic"
+        }
+    ]
+}

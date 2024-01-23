@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned int i = 0; i < numWords; i++) {",
+            "Faulty Code": "for (unsigned int i = 0; i <= numWords; i++) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "for (unsigned int j = 0; j < 2; j++) { #pragma HLS pipeline style=flp II=1"
+        }
+    ]
+}

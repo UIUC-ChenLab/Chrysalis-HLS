@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<NumChannels * Out_t::width> e;",
+            "Faulty Code": "ap_uint<NumChannels * Out_t::width> e; for (unsigned int j = 0; j < NumChannels; j++) { #pragma HLS UNROLL In1_t op1 = e1((j + 1) * In1_t::width - 1, j * In1_t::width); In2_t op2 = e2((j + 1) * In2_t::width - 1, j * In2_t::width); Out_t sum = op1 + op2 + offset; e((j + 1) * Out_t::width - 1, j * Out_t::width) = sum; } out.write(e);"
+        }
+    ]
+}

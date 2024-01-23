@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned  ocnt = SIMD_COUNT;",
+            "Faulty Code": "unsigned  ocnt = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "if(++ocnt == BUFFER_SIZE)  ocnt = 0;",
+            "Faulty Code": "if(++ocnt == (BUFFER_SIZE << 1))  ocnt = 0;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "auto const act = TSrcI()(inElem);",
+            "Faulty Code": "auto const act = TSrcI()(inElem, pe); // Incorrectly using 'pe' to index 'inElem', which is not a buffer"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS interface port=activation mode=read // Incorrect placement and usage of pragma for 'activation' which may cause non-burst RAMB access"
+        }
+    ]
+}

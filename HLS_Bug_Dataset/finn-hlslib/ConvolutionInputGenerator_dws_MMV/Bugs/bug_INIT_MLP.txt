@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned int inp = 0, ofm_y = 0, ofm_x = 0, k_y = 0, k_x = 0, count_simd =0;",
+            "Faulty Code": "unsigned int inp, ofm_y = 0, ofm_x = 0, k_y = 0, k_x = 0, count_simd =0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

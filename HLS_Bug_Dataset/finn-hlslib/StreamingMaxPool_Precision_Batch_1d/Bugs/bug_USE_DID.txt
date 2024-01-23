@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned const highBit = (p+1) * ActType::width -1;",
+            "Faulty Code": "int const highBit = (p+1) * ActType::width -1;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=buf complete dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=buf complete dim=3"
+        }
+    ]
+}

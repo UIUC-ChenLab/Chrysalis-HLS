@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned int y = 0; y < OFMDim; y++) {",
+            "Faulty Code": "for (unsigned int y = 0; ; y++) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (count_row > scale_factor) count_row =1;",
+            "Faulty Code": "if (count_row >= scale_factor) count_row =1;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ei.data[v] = ei.data[v] >> OutWidth;",
+            "Faulty Code": "ei.data[v] = (signed) ei.data[v] >> OutWidth;"
+        }
+    ]
+}

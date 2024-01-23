@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=accu complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=accu cyclic dim=0"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "TI  inputBuf[SF];",
+            "Faulty Code": "TI  inputBuf[SF]; // Missing initialization, could lead to reading uninitialized values"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=accu complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=accu cyclic factor=4 dim=0 // Assuming 'PE' is not divisible by 4 could lead to a FND error"
+        }
+    ]
+}

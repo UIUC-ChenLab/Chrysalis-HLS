@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "TI  inputBuf[SF];",
+            "Faulty Code": "TI  inputBuf[SF] = {0}; // Incorrectly initializes an array that should not be zero-initialized as it is filled conditionally in the loop"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "inElem = inputBuf[sf];",
+            "Faulty Code": "inElem = inputBuf[sf + SF/2]; // Incorrectly accesses the wrong half of the split buffer, assuming SF is even and the buffer is split"
+        }
+    ]
+}

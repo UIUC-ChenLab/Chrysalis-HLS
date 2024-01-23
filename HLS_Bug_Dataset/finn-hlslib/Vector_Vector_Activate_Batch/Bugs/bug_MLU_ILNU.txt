@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned  i = 0; i < reps * TOTAL_FOLD; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; i < (reps - 1) * TOTAL_FOLD; i++) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=4"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<WI>  max = 1;",
+            "Faulty Code": "ap_uint<WI>  max;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "dst.write(q(WO, 1) + q[0]);",
+            "Faulty Code": "dst.write(static_cast<ap_int<WO+1>>(q)(WO, 1) + q[0]);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "temp.set_data(in.read());",
+            "Faulty Code": "temp.set_data(in.read(image % 2 ? NumTotal : 0));"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

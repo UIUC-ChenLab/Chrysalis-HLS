@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline style=flp II=IFMChannels/SIMD",
+            "Faulty Code": "#pragma HLS array_partition variable=inElem factor=MULTIPLYING_FACTOR/2"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned int x = 0; x < IFMDim; x++) {",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

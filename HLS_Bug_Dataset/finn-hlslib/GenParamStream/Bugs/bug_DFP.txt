@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void GenParamStream(TW const &W_in, hls::stream<ap_uint<SIMD * PE * WP>> &paramStreamOut, int const numReps) {\n  for (unsigned rep = 0; rep < numReps; rep++) {\n    for (unsigned tile = 0; tile < TILES; tile++) {\n#pragma HLS pipeline style=flp II=1\n\n      ap_uint<SIMD * PE * WP> strMem;\n      for (unsigned pe = 0; pe < PE; pe++) {\n        // Concatenate the weights within the tile into a large SIMD * PE * WP wide word\n        // Using Little Endian PE order\n        strMem((SIMD * WP)*(pe+1)-1,(SIMD * WP)*pe) = W_in.m_weights[pe][tile]; \n      }\n\n      paramStreamOut.write(strMem);\n    }\n  }\n}",
+            "Faulty Code": "#pragma HLS dataflow\nvoid GenParamStream(TW const &W_in, hls::stream<ap_uint<SIMD * PE * WP>> &paramStreamOut, int const numReps) {\n  for (unsigned rep = 0; rep < numReps; rep++) {\n    for (unsigned tile = 0; tile < TILES; tile++) {\n#pragma HLS pipeline style=flp II=1\n\n      ap_uint<SIMD * PE * WP> strMem;\n      for (unsigned pe = 0; pe < PE; pe++) {\n        // Concatenate the weights within the tile into a large SIMD * PE * WP wide word\n        // Using Little Endian PE order\n        strMem((SIMD * WP)*(pe+1)-1,(SIMD * WP)*pe) = W_in.m_weights[pe][tile]; \n      }\n\n      paramStreamOut.write(strMem);\n    }\n  }\n}"
+        }
+    ]
+}

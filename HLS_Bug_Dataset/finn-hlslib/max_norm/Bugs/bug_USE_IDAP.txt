@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "static ap_uint<WO> const  MAX { NORMAX? NORMAX : -1u };",
+            "Faulty Code": "static ap_int<WO> const  MAX { NORMAX? NORMAX : -1 };"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS stream variable=buffer depth=FM_SIZE",
+            "Faulty Code": "#pragma HLS interface port=buffer mode=ap_fifo"
+        }
+    ]
+}

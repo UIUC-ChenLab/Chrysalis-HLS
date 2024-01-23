@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<BitWidth> tmp = (ap_uint<BitWidth>) log.read();",
+            "Faulty Code": "int tmp = log.read(); // This line can lead to unintended sign extension if BitWidth > size of int"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "void logStringStream(const char *layer_name, hls::stream<ap_uint<BitWidth> > &log){",
+            "Faulty Code": "void logStringStream(const char *layer_name, hls::stream<ap_uint<BitWidth> > &log){\n    #pragma HLS pipeline // This pragma is incorrectly placed outside of a loop"
+        }
+    ]
+}

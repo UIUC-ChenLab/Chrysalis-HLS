@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS array_partition dim=2 variable=weights"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

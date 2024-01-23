@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_int<COUNTER_WIDTH> counter_y = -1;",
+            "Faulty Code": "ap_int<COUNTER_WIDTH> counter_y = 0;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS pipeline style=flp II=IFMChannels/SIMD",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=counter_x"
+        }
+    ]
+}

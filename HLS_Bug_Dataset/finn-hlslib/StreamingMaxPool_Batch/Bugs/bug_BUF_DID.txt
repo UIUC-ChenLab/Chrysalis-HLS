@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "buf[xp] |= acc;",
+            "Faulty Code": "buf[xp + ImgDim / PoolDim] |= acc;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=buf dim=1"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS bind_storage variable=accumulators type=RAM_2P impl=LUTRAM",
+            "Faulty Code": "#pragma HLS interface port=accumulators mode=ap_none"
+        }
+    ]
+}

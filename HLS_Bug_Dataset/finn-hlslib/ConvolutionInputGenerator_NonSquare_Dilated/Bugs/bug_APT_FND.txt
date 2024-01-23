@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf cyclic dim=1"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "if (current_line == Stride_x * IFMDim_x * multiplying_factor ) {",
+            "Faulty Code": "if (current_line == Stride_x * IFMDim_x ) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "StreamingDataWidthConverter_Batch<InStreamW, SIMD*TSrcI::width, InpPerImage>(in, wa_in, reps);",
+            "Faulty Code": "StreamingDataWidthConverter_Batch<InStreamW, SIMD*TSrcI::width, InpPerImage + 1>(in, wa_in, reps);"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "TMRCheck_Batch<TDstI::width, OFMChannels, NUM_RED, REDF, OFMDim, MAX_CH_WIDTH>(tmr_in, out, errortype, channel_mask, red_cha_index, reps);",
+            "Faulty Code": "ap_uint<MAX_CH_WIDTH> uninitialized_array[NUM_RED]; TMRCheck_Batch<TDstI::width, OFMChannels, NUM_RED, REDF, OFMDim, MAX_CH_WIDTH>(tmr_in, out, errortype, channel_mask, uninitialized_array, reps);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "T  res = a;",
+            "Faulty Code": "T  res = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "res += mul(c[i], d(i,mmv), r);",
+            "Faulty Code": "res += mul(c[i + mmv], d(i,mmv), r); // Assuming mmv is not always 0 and could lead to non-consecutive addressing"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "w.m_weights[pe] = W_packed((pe+1)*SIMD*TW::width-1, pe*SIMD*TW::width);",
+            "Faulty Code": "w.m_weights[pe] = W_packed(pe*SIMD*TW::width-1, (pe+1)*SIMD*TW::width);"
+        }
+    ]
+}

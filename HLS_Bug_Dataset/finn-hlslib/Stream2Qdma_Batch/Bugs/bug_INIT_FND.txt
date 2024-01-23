@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "qdma_axis<DataWidth,0,0,0> temp;",
+            "Faulty Code": "qdma_axis<DataWidth,0,0,0> temp = temp;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=temp factor=3"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int count_row = -PaddingUp;",
+            "Faulty Code": "int count_row = 0;"
+        }
+    ]
+}

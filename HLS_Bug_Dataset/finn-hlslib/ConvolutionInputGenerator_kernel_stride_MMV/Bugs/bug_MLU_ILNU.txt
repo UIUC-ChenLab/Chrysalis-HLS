@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=4"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned int v = 0; v < MMV; v++) {",
+            "Faulty Code": "for(unsigned int v = 0; v < MMV-1; v++) {"
+        }
+    ]
+}

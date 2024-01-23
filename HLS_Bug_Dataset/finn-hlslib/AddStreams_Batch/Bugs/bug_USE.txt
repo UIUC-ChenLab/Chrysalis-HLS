@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "In1_t op1 = e1((j + 1) * In1_t::width - 1, j * In1_t::width);",
+            "Faulty Code": "In1_t op1 = e1((j + 1) * In1_t::width - 1, j * In2_t::width);"
+        }
+    ]
+}

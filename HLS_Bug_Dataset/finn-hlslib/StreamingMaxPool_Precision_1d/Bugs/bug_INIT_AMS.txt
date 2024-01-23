@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ActType buf[NF][PE];",
+            "Faulty Code": "ActType buf[NF][PE]; // Error: The array is not explicitly initialized, which may contain garbage values."
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<PE*ActType::width> > & out",
+            "Faulty Code": "hls::stream<ap_uint<PE*ActType::width> > & out // Error: The stream 'out' is not associated with a specific interface pragma."
+        }
+    ]
+}

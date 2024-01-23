@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS unroll",
+            "Faulty Code": "for(unsigned j = 0; j < 4; j++) { #pragma HLS unroll factor=2 for(unsigned i = 0; i < N; i++) { res += mul(c[i], d(i,mmv), r); } }"
+        }
+    ]
+}

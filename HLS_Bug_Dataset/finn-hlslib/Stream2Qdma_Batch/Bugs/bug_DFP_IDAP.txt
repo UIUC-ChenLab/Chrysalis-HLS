@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "temp.set_last(word == NumTotal-1);",
+            "Faulty Code": "temp.set_last(image == numReps-1);"
+        }
+    ]
+}

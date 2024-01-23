@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "buf[i] = 0;",
+            "Faulty Code": "// buf[i] = 0; // Intentionally commented out for demonstration"
+        }
+    ]
+}

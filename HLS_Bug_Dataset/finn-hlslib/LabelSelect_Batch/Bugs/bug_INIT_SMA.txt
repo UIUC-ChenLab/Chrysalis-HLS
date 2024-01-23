@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "topval   [topx] = In_T_MIN_VAL;",
+            "Faulty Code": "topval   [topx];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<Out_T> & out",
+            "Faulty Code": "#pragma HLS INTERFACE port=out mode=bram"
+        }
+    ]
+}

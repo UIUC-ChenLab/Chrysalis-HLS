@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outData = RowBuf[(x-PaddingLeft)/scale_factor];",
+            "Faulty Code": "outData = RowBuf[x];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int count_row = -PaddingUp;",
+            "Faulty Code": "int count_row = 0;"
+        }
+    ]
+}

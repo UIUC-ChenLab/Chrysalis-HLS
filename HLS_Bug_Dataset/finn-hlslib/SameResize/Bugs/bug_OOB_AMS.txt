@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "inData = in.read();",
+            "Faulty Code": "inData = in[x];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "out.write(outData);",
+            "Faulty Code": "out = outData;"
+        }
+    ]
+}

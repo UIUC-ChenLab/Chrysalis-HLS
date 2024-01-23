@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int count_row = -PaddingUp;",
+            "Faulty Code": "int count_row;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=RowBuf factor=scale_factor"
+        }
+    ]
+}

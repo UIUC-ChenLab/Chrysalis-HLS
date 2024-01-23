@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned  y = 0; y < OutputDim_y; y++) {",
+            "Faulty Code": "for(unsigned  y = 0; y <= OutputDim_y; y++) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for(unsigned  sf = 0; sf < Folding; sf++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor(unsigned  sf = 0; sf < Folding; sf++) {"
+        }
+    ]
+}

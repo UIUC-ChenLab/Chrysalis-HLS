@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned const MatrixW = ConvKernelDim * ConvKernelDim * IFMChannels;",
+            "Faulty Code": "unsigned MatrixW; // Uninitialized variable"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "StreamingDataWidthConverter_Batch<PE*TDstI::width, OutStreamW, OFMDim * OFMDim * (OFMChannels / PE)>(mvOut, out, reps);",
+            "Faulty Code": "StreamingDataWidthConverter_Batch<PE*TDstI::width, OutStreamW, OFMDim * OFMDim * (OFMChannels)>(mvOut, out, reps); // Incorrect buffer size due to missing division by PE"
+        }
+    ]
+}

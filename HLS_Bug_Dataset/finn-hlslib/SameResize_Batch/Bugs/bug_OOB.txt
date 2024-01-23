@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "inData = in.read();",
+            "Faulty Code": "if (!(y < PaddingUp || y >= (OutputDim - PaddingDown)) && !(x < PaddingLeft || x >= (OutputDim - PaddingRight))) inData = in.read();"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_int<COUNTER_WIDTH> counter_y = -1;",
+            "Faulty Code": "ap_int<COUNTER_WIDTH> counter_y = 0;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "out.write(inElem);",
+            "Faulty Code": "out.write(in.read());"
+        }
+    ]
+}

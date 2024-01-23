@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<NumChannels> buf[ImgDim / PoolDim];",
+            "Faulty Code": "ap_uint<NumChannels> buf[ImgDim / PoolDim - 1];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

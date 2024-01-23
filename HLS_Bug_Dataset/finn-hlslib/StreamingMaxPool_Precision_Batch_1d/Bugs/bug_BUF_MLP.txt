@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "buf[ch][p] = min_value;",
+            "Faulty Code": "buf[ch][p] = buf[ch][p-1];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

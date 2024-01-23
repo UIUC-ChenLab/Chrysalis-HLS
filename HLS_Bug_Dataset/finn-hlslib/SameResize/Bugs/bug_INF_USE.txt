@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(unsigned int y = 0; y<OutputDim; y++){",
+            "Faulty Code": "for(unsigned int y = 0; y<=OutputDim; y++){"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "constexpr unsigned int PaddingUp = Padding/2 + ((PaddingStyle == 2) ? ((Padding % 2) > 0) : 0);",
+            "Faulty Code": "constexpr int PaddingUp = Padding/2 + ((PaddingStyle == 2) ? ((Padding % 2) > 0) : 0);"
+        }
+    ]
+}

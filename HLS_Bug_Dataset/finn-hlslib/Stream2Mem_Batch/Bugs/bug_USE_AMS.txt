@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "const unsigned int indsPerRep = numBytes / (DataWidth / 8);",
+            "Faulty Code": "const int indsPerRep = numBytes / (DataWidth / 8);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void Stream2Mem(hls::stream<ap_uint<DataWidth> > & in, ap_uint<DataWidth> * out) {",
+            "Faulty Code": "void Stream2Mem(hls::stream<ap_uint<DataWidth> > & in, ap_uint<DataWidth> & out) {"
+        }
+    ]
+}

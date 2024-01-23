@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<InWidth> > & in",
+            "Faulty Code": "#pragma HLS interface port=bram mode=read hls::stream<ap_uint<InWidth> > & in"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (; offset <= (InWidth-OutWidth) ; offset+=OutWidth){",
+            "Faulty Code": "#pragma HLS unroll factor=2 for (; offset <= (InWidth-OutWidth) ; offset+=OutWidth){"
+        }
+    ]
+}

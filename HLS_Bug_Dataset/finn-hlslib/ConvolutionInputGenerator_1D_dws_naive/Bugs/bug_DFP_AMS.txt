@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<SIMD*Input_precision> > & out",
+            "Faulty Code": "#pragma HLS INTERFACE port=out mode=ap_none"
+        }
+    ]
+}

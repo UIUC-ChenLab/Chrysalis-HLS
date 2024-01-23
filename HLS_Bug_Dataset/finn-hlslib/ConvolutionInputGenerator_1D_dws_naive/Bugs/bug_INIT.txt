@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<SIMD*Input_precision> inElem;\ninElem = in.read();\ninputBuf[current_line] = inElem;",
+            "Faulty Code": "ap_uint<SIMD*Input_precision> inElem;\ninputBuf[current_line] = inElem;\ninElem = in.read();"
+        }
+    ]
+}

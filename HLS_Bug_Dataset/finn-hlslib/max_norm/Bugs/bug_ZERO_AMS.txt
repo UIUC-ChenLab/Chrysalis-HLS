@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<WI>  max = 1;",
+            "Faulty Code": "ap_uint<WI>  max = 0;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS stream variable=buffer depth=FM_SIZE",
+            "Faulty Code": "#pragma HLS interface port=buffer mode=ap_none"
+        }
+    ]
+}

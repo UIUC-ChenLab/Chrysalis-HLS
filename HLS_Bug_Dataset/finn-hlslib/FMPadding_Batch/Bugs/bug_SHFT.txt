@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "ap_uint<SIMD*In_t::width>  outData = 0;",
+            "Faulty Code": "ap_uint<SIMD*In_t::width>  outData = in.read() << (OutOfBoundShiftValue * In_t::width);"
+        }
+    ]
+}

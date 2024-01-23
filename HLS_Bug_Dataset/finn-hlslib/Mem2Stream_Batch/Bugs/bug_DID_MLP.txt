@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "Mem2Stream<DataWidth, numBytes * 16>(&in[rep * indsPerRep], out);",
+            "Faulty Code": "#pragma HLS array_partition variable=in dim=2 // Incorrect dim\nMem2Stream<DataWidth, numBytes * 16>(&in[rep * indsPerRep], out);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "for (unsigned int i = 0; i < numWords; i++) {\n#pragma HLS pipeline // Nested pipeline without style\n#pragma HLS pipeline style=flp II=1\n    ap_uint<DataWidth> e = in[i];\n    out.write(e);\n  }"
+        }
+    ]
+}

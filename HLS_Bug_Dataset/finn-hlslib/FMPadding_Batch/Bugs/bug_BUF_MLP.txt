@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outData = in.read();",
+            "Faulty Code": "outData = in.read(); // Assuming this is the wrong half due to incorrect buffer handling"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline style=flp II=1 // Incorrect if placed inside another loop already marked with #pragma HLS pipeline"
+        }
+    ]
+}

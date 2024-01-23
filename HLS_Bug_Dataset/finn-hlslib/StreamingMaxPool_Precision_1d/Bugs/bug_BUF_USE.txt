@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "buf[ch][p] = min_value;",
+            "Faulty Code": "buf[ch+1][p] = min_value;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "ActType const channeldata = inputData(highBit, lowBit);",
+            "Faulty Code": "int const channeldata = inputData(highBit, lowBit);"
+        }
+    ]
+}

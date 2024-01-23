@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outElem(pe, 0, 1) = f(in0_slice_channels(pe, 0), in1_slice_channels(pe, 0));",
+            "Faulty Code": "outElem(pe, 0, 1) = f(in0_slice_channels(pe, 1), in1_slice_channels(pe, 1));"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=outElem factor=3"
+        }
+    ]
+}

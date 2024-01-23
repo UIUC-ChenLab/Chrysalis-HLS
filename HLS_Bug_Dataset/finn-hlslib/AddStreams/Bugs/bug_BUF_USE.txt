@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "e((j + 1) * Out_t::width - 1, j * Out_t::width) = sum;",
+            "Faulty Code": "e((j + 1) * In1_t::width - 1, j * In1_t::width) = sum;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "Out_t sum = op1 + op2 + offset;",
+            "Faulty Code": "Out_t sum = (Out_t)(op1 + op2) + offset;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<DataWidth> e = in[i];",
+            "Faulty Code": "int e = in[i]; // Unintended sign extension if DataWidth > size of int"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic factor=4 // Assuming 'cyclic' is the incorrect partition type"
+        }
+    ]
+}

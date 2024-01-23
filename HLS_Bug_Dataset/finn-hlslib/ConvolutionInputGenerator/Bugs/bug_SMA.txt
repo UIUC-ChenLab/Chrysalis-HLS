@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "ap_uint<SIMD*Input_precision> inElem;\ninElem = in.read();\ninputBuf[current_block_write][current_line] = inElem;",
+            "Faulty Code": "#pragma HLS interface port=inElem bram\nap_uint<SIMD*Input_precision> inElem;\ninElem = in.read();\ninputBuf[current_block_write][current_line] = inElem;"
+        }
+    ]
+}

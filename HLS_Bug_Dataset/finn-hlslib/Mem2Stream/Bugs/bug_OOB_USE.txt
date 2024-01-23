@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned int i = 0; i < numWords; i++) {",
+            "Faulty Code": "for (unsigned int i = 0; i <= numWords; i++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<DataWidth> e = in[i];",
+            "Faulty Code": "int e = in[i];"
+        }
+    ]
+}

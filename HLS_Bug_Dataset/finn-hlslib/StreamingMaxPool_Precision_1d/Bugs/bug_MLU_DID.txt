@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned int xp = 0; xp < OutputSize; xp++) {",
+            "Faulty Code": "for (unsigned int xp = 0; xp <= OutputSize; xp++) {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=buf complete dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=buf complete dim=1"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned int image = 0; image < numReps; image++) {",
+            "Faulty Code": "for (unsigned int image = 0; image <= numReps; image++) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=accu complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=accu cyclic dim=0"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for(unsigned  i = 0; i < reps * TOTAL_FOLD; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; i < reps * TOTAL_FOLD; i++) { #pragma HLS UNROLL factor=2"
+        }
+    ]
+}

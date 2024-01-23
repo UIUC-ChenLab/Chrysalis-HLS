@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (counter_internal_block == (max_cycles-1)) {\n          counter_internal_block = 0;\n        }",
+            "Faulty Code": "if (counter_internal_block < (max_cycles-1)) {\n          counter_internal_block = 0;\n        }"
+        }
+    ]
+}

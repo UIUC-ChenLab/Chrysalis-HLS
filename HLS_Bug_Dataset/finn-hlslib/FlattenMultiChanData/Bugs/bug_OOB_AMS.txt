@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "o(DataWidth*(v+1)-1, DataWidth*v) = e.data[v];",
+            "Faulty Code": "o(DataWidth*(v+1), DataWidth*v) = e.data[v];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<NumChannels*DataWidth> > & out",
+            "Faulty Code": "ap_uint<NumChannels*DataWidth> & out"
+        }
+    ]
+}

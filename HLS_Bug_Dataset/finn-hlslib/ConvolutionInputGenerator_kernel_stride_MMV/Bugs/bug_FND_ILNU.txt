@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "static_assert(OFMDim % MMV == 0, \"\");",
+            "Faulty Code": "static_assert(OFMDim % MMV != 0, \"\");"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for(unsigned int v = 0; v < MMV; v++) {\n#pragma HLS UNROLL\n...",
+            "Faulty Code": "#pragma HLS UNROLL\nfor(unsigned int v = 0; v < MMV; v++) {..."
+        }
+    ]
+}

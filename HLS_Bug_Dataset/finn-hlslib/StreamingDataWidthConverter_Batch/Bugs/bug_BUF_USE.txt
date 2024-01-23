@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "eo = eo >> InWidth;",
+            "Faulty Code": "eo = ei >> InWidth;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "eo(OutWidth - 1, OutWidth - InWidth) = ei;",
+            "Faulty Code": "eo(OutWidth - 1, OutWidth - InWidth) = (ap_uint<OutWidth>)ei;"
+        }
+    ]
+}

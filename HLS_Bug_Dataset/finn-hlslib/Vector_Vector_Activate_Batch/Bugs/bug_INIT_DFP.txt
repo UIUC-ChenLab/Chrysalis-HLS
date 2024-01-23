@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "accu[mmv][pe] = activation.init(nf, pe);",
+            "Faulty Code": "accu[mmv][pe] = accu[mmv][pe];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

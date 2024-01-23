@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS pipeline II=1 style=flp",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=src"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<NumChannels * In_t::width>> &src",
+            "Faulty Code": "ap_uint<NumChannels * In_t::width> src[IFMDim]"
+        }
+    ]
+}

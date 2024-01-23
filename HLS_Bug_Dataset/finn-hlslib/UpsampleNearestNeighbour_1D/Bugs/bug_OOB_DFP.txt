@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if(rep == 0)  buf = src.read();",
+            "Faulty Code": "if(i == 0)  buf = src.read();"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "for(unsigned  i = 0; i < OFMDim; i++) {\n#pragma HLS pipeline II=1 style=flp\n    if(rep == 0)  buf = src.read();\n    dst.write(buf);\n    if(++rep == REPS)  rep = 0;\n}",
+            "Faulty Code": "#pragma HLS dataflow\nfor(unsigned  i = 0; i < OFMDim; i++) {\n    if(rep == 0)  buf = src.read();\n    dst.write(buf);\n    if(++rep == REPS)  rep = 0;\n}"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void StreamingCast(hls::stream<InT> & in, hls::stream<OutT> & out, unsigned int numReps) {\n  for(unsigned int i = 0; i < numReps; i++) {\n#pragma HLS pipeline style=flp II=1\n    out.write((OutT) in.read());\n  }\n}",
+            "Faulty Code": "void StreamingCast(hls::stream<InT> & in, hls::stream<OutT> & out, unsigned int numReps) {\n  for(unsigned int i = 0; i < numReps; i++) {\n#pragma HLS pipeline style=flp II=1\n    for(unsigned int j = 0; j < some_other_loop_count; j++) {\n#pragma HLS pipeline\n      out.write((OutT) in.read());\n    }\n  }\n}"
+        }
+    ]
+}

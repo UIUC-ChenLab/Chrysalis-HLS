@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=topval complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=topval cyclic factor=2 dim=1"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<ap_uint<PECount * In_T::width> > & in",
+            "Faulty Code": "hls::stream<ap_uint<PECount * In_T::width> > & in #pragma HLS INTERFACE mode=ap_fifo port=in"
+        }
+    ]
+}

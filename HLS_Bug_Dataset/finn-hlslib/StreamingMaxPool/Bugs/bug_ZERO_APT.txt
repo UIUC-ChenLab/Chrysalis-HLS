@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "acc = acc | in.read();",
+            "Faulty Code": "acc = 0 | in.read();"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition type=complete"
+        }
+    ]
+}

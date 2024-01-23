@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void FMPadding_nonsquare(...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=in bram"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for(unsigned  sf = 0; sf < Folding; sf++) {",
+            "Faulty Code": "#pragma HLS UNROLL factor=4"
+        }
+    ]
+}

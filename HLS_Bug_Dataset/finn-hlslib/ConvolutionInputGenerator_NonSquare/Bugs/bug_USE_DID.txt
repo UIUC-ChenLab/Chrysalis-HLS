@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<SIMD*Input_precision> inputBuf[number_blocks][Stride_x * IFMDim_x * multiplying_factor];",
+            "Faulty Code": "int inputBuf[number_blocks][Stride_x * IFMDim_x * multiplying_factor];"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=2"
+        }
+    ]
+}

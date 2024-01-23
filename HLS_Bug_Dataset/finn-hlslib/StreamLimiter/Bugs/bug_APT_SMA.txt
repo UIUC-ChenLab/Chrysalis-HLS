@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic factor=2 variable=numLeft"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void StreamLimiter(hls::stream<ap_uint<DataWidth> > & in, hls::stream<ap_uint<DataWidth> > & out)",
+            "Faulty Code": "#pragma HLS interface port=numLeft"
+        }
+    ]
+}

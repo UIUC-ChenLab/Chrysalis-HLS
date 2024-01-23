@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void StreamingDataWidthConverter_Batch(hls::stream<ap_uint<InWidth> > & in, hls::stream<ap_uint<OutWidth> > & out, const unsigned int numReps) {",
+            "Faulty Code": "void StreamingDataWidthConverter_Batch(ap_uint<InWidth> in, ap_uint<OutWidth> out, const unsigned int numReps) {"
+        }
+    ]
+}

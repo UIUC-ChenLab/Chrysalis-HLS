@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "Out_t sum = op1 + op2 + offset;",
+            "Faulty Code": "Out_t sum = 0; sum = op1 + op2 + offset;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "Out_t sum = op1 + op2 + offset;",
+            "Faulty Code": "int sum = op1 + op2 + offset; // Assuming In1_t, In2_t, and Out_t are unsigned and 'int' causes unintended sign extension"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<NumChannels * Out_t::width> e;",
+            "Faulty Code": "ap_uint<NumChannels * Out_t::width> e = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "Out_t sum = op1 + op2 + offset;",
+            "Faulty Code": "Out_t sum = (Out_t)(op1 + op2) + offset;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned int count_simd = 0; count_simd < IFMChannels/SIMD; count_simd++) {",
+            "Faulty Code": "for (unsigned int count_simd = 0; count_simd <= IFMChannels/SIMD; count_simd++) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS interface port=in mode=ap_fifo"
+        }
+    ]
+}

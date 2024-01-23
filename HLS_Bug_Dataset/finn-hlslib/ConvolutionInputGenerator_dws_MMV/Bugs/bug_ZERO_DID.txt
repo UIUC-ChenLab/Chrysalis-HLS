@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned int current_block_write = 0;",
+            "Faulty Code": "unsigned int current_block_write;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=3"
+        }
+    ]
+}

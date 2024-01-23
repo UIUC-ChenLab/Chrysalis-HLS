@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "pixel_slice = in.read();",
+            "Faulty Code": "pixel_slice = in.read(); // Assuming in.read() is erroneously implemented to read from the wrong half of a buffer"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "out.write(outElem);",
+            "Faulty Code": "#pragma HLS INTERFACE port=out mode=ap_memory // Incorrectly maps scalar stream 'out' to an array interface"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned  sf = 0; sf < Folding; sf++) {",
+            "Faulty Code": "for(unsigned  sf = 0; sf <= Folding; sf++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<SIMD*In_t::width>  outData = 0;",
+            "Faulty Code": "int outData = 0;"
+        }
+    ]
+}

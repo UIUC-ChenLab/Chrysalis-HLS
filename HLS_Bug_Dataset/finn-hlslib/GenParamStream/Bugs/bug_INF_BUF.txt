@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned rep = 0; rep < numReps; rep++) {",
+            "Faulty Code": "for (unsigned rep = 0; rep <= numReps; rep++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "strMem((SIMD * WP)*(pe+1)-1,(SIMD * WP)*pe) = W_in.m_weights[pe][tile];",
+            "Faulty Code": "strMem((SIMD * WP)*(pe+1)-1,(SIMD * WP)*pe) = W_in.m_weights[pe][tile + TILES/2];"
+        }
+    ]
+}

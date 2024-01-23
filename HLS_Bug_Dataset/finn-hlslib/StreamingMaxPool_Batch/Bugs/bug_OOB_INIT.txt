@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned int yp = 0; yp < ImgDim / PoolDim; yp++) {",
+            "Faulty Code": "for (unsigned int yp = 0; yp <= ImgDim / PoolDim; yp++) {"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<NumChannels> acc = 0;",
+            "Faulty Code": "ap_uint<NumChannels> acc;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "buffer.write(x);",
+            "Faulty Code": "buffer.read(x); // Incorrect use of read instead of write"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline II=1 style=flp",
+            "Faulty Code": "#pragma HLS unroll factor=4 // Incorrect unroll inside a loop that should be pipelined"
+        }
+    ]
+}

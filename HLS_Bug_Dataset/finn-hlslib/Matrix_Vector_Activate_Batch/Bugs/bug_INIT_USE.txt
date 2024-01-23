@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "TI  inputBuf[SF];\n#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=0",
+            "Faulty Code": "TI  inputBuf[SF]; // Missing initialization\n#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=0"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "auto const &w = weights.weights(tile);",
+            "Faulty Code": "auto &w = weights.weights(tile); // Unintended sign extension because 'auto' may deduce to a signed type when 'weights.weights()' returns an unsigned value."
+        }
+    ]
+}

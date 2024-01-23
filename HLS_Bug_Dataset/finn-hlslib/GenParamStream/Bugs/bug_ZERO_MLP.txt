@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<SIMD * PE * WP> strMem;",
+            "Faulty Code": "ap_uint<SIMD * PE * WP> strMem = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "for (unsigned pe = 0; pe < PE; pe++) { #pragma HLS pipeline style=flp II=1"
+        }
+    ]
+}

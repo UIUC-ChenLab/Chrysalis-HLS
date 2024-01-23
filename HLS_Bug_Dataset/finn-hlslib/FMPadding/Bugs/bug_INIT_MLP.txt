@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<SIMD*In_t::width>  outData = 0;",
+            "Faulty Code": "ap_uint<SIMD*In_t::width>  outData;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

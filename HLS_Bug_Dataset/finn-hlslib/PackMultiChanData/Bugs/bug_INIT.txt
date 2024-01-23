@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "MultiChanData<NumChannels, DataWidth> o;",
+            "Faulty Code": "MultiChanData<NumChannels, DataWidth> o; o.data[v] = e(DataWidth*(v+1)-1, DataWidth*v);"
+        }
+    ]
+}

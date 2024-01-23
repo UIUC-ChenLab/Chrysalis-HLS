@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (unsigned int word = 0; word < NumTotal; word++) {\n#pragma HLS pipeline style=flp II=1\n...",
+            "Faulty Code": "#pragma HLS dataflow\nfor (unsigned int word = 0; word < NumTotal; word++) {\n#pragma HLS pipeline style=flp II=1\n..."
+        }
+    ]
+}

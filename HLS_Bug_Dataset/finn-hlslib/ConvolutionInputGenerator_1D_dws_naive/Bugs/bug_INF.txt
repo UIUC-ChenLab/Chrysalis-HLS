@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (k_x == ConvKernelDim_x) {\n    k_x = 0;\n    count_simd++;\n    if (count_simd == multiplying_factor) {\n        count_simd=0;\n        ofm_x++;\n        if (ofm_x == OFMDim_x) {\n            ofm_x = 0;\n            inp = 0;\n        }\n    }\n}",
+            "Faulty Code": "if (k_x == ConvKernelDim_x) {\n    k_x = 0;\n    count_simd++;\n    if (count_simd == multiplying_factor) {\n        count_simd=0;\n        ofm_x++;\n        if (ofm_x == OFMDim_x) {\n            ofm_x = 0;\n            // Missing reset of inp to 0\n        }\n    }\n}"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "inData = in.read();",
+            "Faulty Code": "outData = in.read(); // This should be 'inData = in.read();' as outData is used to write to the output stream."
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<NumChannels* In_t::width> > &in",
+            "Faulty Code": "#pragma HLS INTERFACE port=in mode=ap_memory // Incorrectly mapping the stream 'in' to a memory interface instead of a stream interface."
+        }
+    ]
+}

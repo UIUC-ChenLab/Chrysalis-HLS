@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<SIMD*Input_precision>  buffer[BUFFER_SIZE];",
+            "Faulty Code": "ap_uint<SIMD*Input_precision>  buffer[BUFFER_SIZE]; // Missing initialization, might contain garbage values."
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=buffer factor=3 // Assuming 'factor' is not divisible by 'SIMD_COUNT' which is the loop count for 'buffer'"
+        }
+    ]
+}

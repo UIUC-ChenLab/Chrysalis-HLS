@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "o.data[v] = e(DataWidth*(v+1)-1, DataWidth*v);",
+            "Faulty Code": "o.data[v] = e(DataWidth*(v)-1, DataWidth*(v-1));"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS interface port=in mode=s_axilite"
+        }
+    ]
+}

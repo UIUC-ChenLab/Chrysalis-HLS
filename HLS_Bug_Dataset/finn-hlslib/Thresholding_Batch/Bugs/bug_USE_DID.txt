@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "auto const act = TSrcI()(inElem);",
+            "Faulty Code": "auto act = TSrcI()(inElem);"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=outElem dim=2 complete"
+        }
+    ]
+}

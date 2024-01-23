@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "inputBuf[current_block_write][current_line] = inElem;",
+            "Faulty Code": "inputBuf[current_block_write][current_line + 1] = inElem;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=1",
+            "Faulty Code": "#pragma HLS INTERFACE port=inputBuf bram"
+        }
+    ]
+}

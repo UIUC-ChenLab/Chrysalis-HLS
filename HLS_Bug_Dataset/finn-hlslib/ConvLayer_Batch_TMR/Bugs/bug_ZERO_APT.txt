@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "StreamingDataWidthConverter_Batch<PE*TDstI::width, OFMChannels*TDstI::width, OFMDim * OFMDim * (OFMChannels / PE)>(mvOut, tmr_in, reps);",
+            "Faulty Code": "unsigned error_count = 0; // This should be initialized with a non-zero value if intended"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS array_partition variable=weights type=cyclic factor=4 // Assuming the variable 'weights' needs block partitioning instead of cyclic for performance"
+        }
+    ]
+}

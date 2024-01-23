@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if(++ocnt == BUFFER_SIZE)  ocnt = 0;",
+            "Faulty Code": "if(++ocnt == BUFFER_SIZE)  ocnt = 1;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned  i = 0; i < 1 + READ_CYCLES + OUTPUT_SIZE; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; i <= READ_CYCLES + OUTPUT_SIZE; i++) {"
+        }
+    ]
+}

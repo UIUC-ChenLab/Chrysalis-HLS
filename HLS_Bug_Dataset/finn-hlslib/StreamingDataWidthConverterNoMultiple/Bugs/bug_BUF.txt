@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "valueOut = (valueIn(offset-1,0),remainder(OutWidth-offset-1,0));",
+            "Faulty Code": "valueOut = (remainder(OutWidth-offset-1,0),valueIn(offset-1,0));"
+        }
+    ]
+}

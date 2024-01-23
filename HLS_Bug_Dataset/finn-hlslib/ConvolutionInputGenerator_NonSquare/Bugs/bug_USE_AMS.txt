@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void memory_resource(T inputBuf, ap_resource_lutram const&){\n#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_S2P impl=LUTRAM\n}",
+            "Faulty Code": "void memory_resource(T inputBuf, ap_resource_lutram const&){\n#pragma HLS INTERFACE port=inputBuf mode=ap_none\n}"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "const unsigned int cycles_write_block = (OFMDim_x * ConvKernelDim_x * ConvKernelDim_y * multiplying_factor);",
+            "Faulty Code": "int cycles_write_block = (OFMDim_x * ConvKernelDim_x * ConvKernelDim_y * multiplying_factor);"
+        }
+    ]
+}

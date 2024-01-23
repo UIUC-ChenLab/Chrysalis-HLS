@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<SIMD*Input_precision>  buffer[BUFFER_SIZE];",
+            "Faulty Code": "ap_uint<SIMD*Input_precision>  buffer[BUFFER_SIZE]; // Uninitialized buffer might be read from before being written to"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline style=flp II=1 // Correct in this context, but would be a mistake if placed inside another pipeline pragma or dataflow region"
+        }
+    ]
+}

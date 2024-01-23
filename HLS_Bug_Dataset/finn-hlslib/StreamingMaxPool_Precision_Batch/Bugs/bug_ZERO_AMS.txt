@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "buf[outpix][ch] = min_value;",
+            "Faulty Code": "buf[outpix][ch] = 0;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<NumChannels*ActType::width> > wa_in(\"StreamingMaxPool_Precision_Batch.wa_in\");",
+            "Faulty Code": "#pragma HLS INTERFACE port=wa_in mode=ap_none"
+        }
+    ]
+}

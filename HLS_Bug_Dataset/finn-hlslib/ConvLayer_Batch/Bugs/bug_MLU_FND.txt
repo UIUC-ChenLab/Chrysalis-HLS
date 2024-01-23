@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "Matrix_Vector_Activate_Batch<MatrixW, MatrixH, SIMD, PE, 1, TSrcI, TDstI, TWeightI>",
+            "Faulty Code": "Matrix_Vector_Activate_Batch<MatrixW, MatrixH-1, SIMD, PE, 1, TSrcI, TDstI, TWeightI>"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "StreamingDataWidthConverter_Batch<PE*TDstI::width, OutStreamW, OFMDim * OFMDim * (OFMChannels / PE)>",
+            "Faulty Code": "#pragma HLS array_partition variable=weights factor=3\nStreamingDataWidthConverter_Batch<PE*TDstI::width, OutStreamW, OFMDim * OFMDim * (OFMChannels / PE)>"
+        }
+    ]
+}

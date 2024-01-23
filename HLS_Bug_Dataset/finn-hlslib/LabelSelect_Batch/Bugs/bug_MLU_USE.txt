@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned int topx=0; topx<NumTop; topx++){",
+            "Faulty Code": "for(unsigned int topx=0; topx<=NumTop; topx++){"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "static In_T const  In_T_MIN_VAL = (In_T(-1)<0)? 1<<(In_T::width-1) : 0;",
+            "Faulty Code": "static In_T const  In_T_MIN_VAL = (In_T(-1)<0)? In_T(1<<(In_T::width-1)) : 0;"
+        }
+    ]
+}

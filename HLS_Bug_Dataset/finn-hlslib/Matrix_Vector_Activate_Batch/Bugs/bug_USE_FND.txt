@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "auto const  act = TSrcI()(inElem, mmv);",
+            "Faulty Code": "auto act = TSrcI()(inElem, mmv); // Missing 'const' may lead to unintended sign extension if 'act' is later modified"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=accu complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=accu block factor=4 dim=0 // 'factor' is not divisible by the loop count MMV*PE if MMV*PE is not a multiple of 4"
+        }
+    ]
+}

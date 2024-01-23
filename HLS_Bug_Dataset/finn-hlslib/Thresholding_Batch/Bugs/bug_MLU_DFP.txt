@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned pe = 0; pe < PE; pe++)",
+            "Faulty Code": "for (unsigned pe = 0; pe <= PE; pe++)"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "ap_uint<SIMD*Input_precision> inElem;\n inElem = in.read();\n inputBuf[current_block_write][current_line] = inElem;",
+            "Faulty Code": "#pragma HLS interface m_axi port=inputBuf\nap_uint<SIMD*Input_precision> inElem;\n inElem = in.read();\n inputBuf[current_block_write][current_line] = inElem;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "buffer.write(x);",
+            "Faulty Code": "buffer.write(x); // Faulty if FM_SIZE is not the actual size of 'buffer'"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS stream variable=buffer depth=FM_SIZE",
+            "Faulty Code": "#pragma HLS array_partition variable=buffer factor=3 // Faulty if FM_SIZE % 3 != 0"
+        }
+    ]
+}

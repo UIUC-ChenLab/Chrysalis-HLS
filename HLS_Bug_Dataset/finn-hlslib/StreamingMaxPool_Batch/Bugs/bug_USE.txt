@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "acc = acc | in.read();",
+            "Faulty Code": "acc = acc | (in.read() << NumChannels);"
+        }
+    ]
+}

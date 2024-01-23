@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned int xp = 0; xp < OutputSize; xp++) {",
+            "Faulty Code": "for (unsigned int xp = 0; xp <= OutputSize; xp++) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void StreamingMaxPool_Precision_Batch_1d(hls::stream<ap_uint<PE*ActType::width> > & in, hls::stream<ap_uint<PE*ActType::width> > & out, unsigned int numReps)",
+            "Faulty Code": "#pragma HLS INTERFACE port=buf mode=ap_fifo"
+        }
+    ]
+}

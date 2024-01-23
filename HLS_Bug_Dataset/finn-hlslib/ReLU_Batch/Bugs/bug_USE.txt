@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ActType val = thin(highBit,lowBit);",
+            "Faulty Code": "int val = thin(highBit,lowBit);"
+        }
+    ]
+}

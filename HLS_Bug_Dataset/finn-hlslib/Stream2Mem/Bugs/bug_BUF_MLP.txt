@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out[i] = e;",
+            "Faulty Code": "out[i + numWords] = e; // Incorrect index, potentially copying to the wrong half of a buffer if 'out' was a split buffer"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline style=flp II=1\n#pragma HLS pipeline // Incorrect nested pipeline pragma"
+        }
+    ]
+}

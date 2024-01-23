@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned int numLeft = NumAllowed;",
+            "Faulty Code": "int numLeft = NumAllowed;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<DataWidth> > & out",
+            "Faulty Code": "hls::stream<ap_uint<DataWidth> > out[1]"
+        }
+    ]
+}

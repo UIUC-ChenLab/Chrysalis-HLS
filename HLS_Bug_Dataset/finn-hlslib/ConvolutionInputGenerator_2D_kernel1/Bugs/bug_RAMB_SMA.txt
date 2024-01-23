@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS pipeline style=flp II=IFMChannels/SIMD",
+            "Faulty Code": "#pragma HLS pipeline style=flp II=1"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<SIMD*Input_precision> > & in",
+            "Faulty Code": "ap_uint<SIMD*Input_precision> in[IFMDim*IFMDim]"
+        }
+    ]
+}

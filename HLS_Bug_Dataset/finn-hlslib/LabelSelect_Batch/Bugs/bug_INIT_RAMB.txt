@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "topval   [topx] = In_T_MIN_VAL;",
+            "Faulty Code": "In_T topval[NumTop];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for(unsigned int topx=0; topx<NumTop; topx++){",
+            "Faulty Code": "for(unsigned int block=0; block<(NumClasses/PECount); block++){"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "const unsigned int indsPerRep = numBytes / (DataWidth / 8);",
+            "Faulty Code": "#pragma HLS array_partition variable=in factor=16 dim=1"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void Mem2Stream(ap_uint<DataWidth> * in, hls::stream<ap_uint<DataWidth> > & out)",
+            "Faulty Code": "#pragma HLS interface port=in bram"
+        }
+    ]
+}

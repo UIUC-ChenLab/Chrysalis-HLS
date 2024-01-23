@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf block factor=3 dim=1"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS DEPENDENCE variable=inputBuf inter false",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=inputBuf"
+        }
+    ]
+}

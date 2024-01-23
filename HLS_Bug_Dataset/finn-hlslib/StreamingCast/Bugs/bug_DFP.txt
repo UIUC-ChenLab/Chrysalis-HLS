@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void StreamingCast(hls::stream<InT> & in, hls::stream<OutT> & out, unsigned int numReps) {\n  for(unsigned int i = 0; i < numReps; i++) {\n#pragma HLS pipeline style=flp II=1\n    out.write((OutT) in.read());\n  }\n}",
+            "Faulty Code": "void StreamingCast(hls::stream<InT> & in, hls::stream<OutT> & out, unsigned int numReps) {\n#pragma HLS dataflow\n  for(unsigned int i = 0; i < numReps; i++) {\n#pragma HLS pipeline style=flp II=1\n    out.write((OutT) in.read());\n  }\n}"
+        }
+    ]
+}

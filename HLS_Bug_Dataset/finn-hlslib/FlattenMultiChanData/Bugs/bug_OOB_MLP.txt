@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "o(DataWidth*(v+1)-1, DataWidth*v) = e.data[v];",
+            "Faulty Code": "o(DataWidth*(v+1), DataWidth*v) = e.data[v];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "for(unsigned int v = 0; v < NumChannels; v++) {\n#pragma HLS pipeline"
+        }
+    ]
+}

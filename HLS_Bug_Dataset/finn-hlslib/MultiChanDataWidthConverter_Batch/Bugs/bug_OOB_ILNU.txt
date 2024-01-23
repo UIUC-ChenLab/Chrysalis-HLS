@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ei.data[v] = ei.data[v] >> OutWidth;",
+            "Faulty Code": "ei.data[v] = ei.data[v + 1] >> OutWidth;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        }
+    ]
+}

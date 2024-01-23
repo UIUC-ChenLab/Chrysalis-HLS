@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "out.write(outData);",
+            "Faulty Code": "#pragma HLS interface m_axi port=out offset=slave // Incorrect placement, should be at the function interface"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS unroll factor=2 // Incorrect as it's not the innermost loop"
+        }
+    ]
+}

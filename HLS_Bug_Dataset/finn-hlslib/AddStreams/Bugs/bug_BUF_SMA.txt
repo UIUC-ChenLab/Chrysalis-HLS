@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "e1((j + 1) * In1_t::width - 1, j * In1_t::width);",
+            "Faulty Code": "e1((NumChannels + j) * In1_t::width - 1, (NumChannels + j - 1) * In1_t::width);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<NumChannels * Out_t::width>> &out",
+            "Faulty Code": "ap_uint<NumChannels * Out_t::width> &out"
+        }
+    ]
+}

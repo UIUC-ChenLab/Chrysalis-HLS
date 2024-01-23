@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void FMPadding_nonsquare( hls::stream<ap_uint<SIMD*In_t::width>> &in, hls::stream<ap_uint<SIMD*In_t::width>> &out )",
+            "Faulty Code": "#pragma HLS dataflow\nvoid FMPadding_nonsquare( hls::stream<ap_uint<SIMD*In_t::width>> &in, hls::stream<ap_uint<SIMD*In_t::width>> &out )"
+        }
+    ]
+}

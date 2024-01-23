@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "ap_uint<SIMD*Input_precision> outElem = inputBuf[current_line_in_block];",
+            "Faulty Code": "ap_uint<SIMD*Input_precision> outElem = inputBuf[current_line_in_block + cycles_read_block];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned int inp = 0, ofm_x = 0, k_x = 0, count_simd =0;",
+            "Faulty Code": "unsigned int inp = 0, ofm_x = 0, k_x = 1, count_simd =0;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<SIMD*In_t::width>  outData = 0;",
+            "Faulty Code": "ap_uint<SIMD*In_t::width>  outData;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned  y = 0; y < OutputDim_y; y++) {",
+            "Faulty Code": "for(unsigned  y = 0; y <= OutputDim_y; y++) {"
+        }
+    ]
+}

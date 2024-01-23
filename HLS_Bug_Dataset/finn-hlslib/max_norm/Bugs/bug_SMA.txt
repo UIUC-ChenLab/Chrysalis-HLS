@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "auto const  x = src.read();",
+            "Faulty Code": "#pragma HLS interface port=src"
+        }
+    ]
+}

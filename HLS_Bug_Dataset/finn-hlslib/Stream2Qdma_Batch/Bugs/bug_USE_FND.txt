@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "temp.set_keep(-1);",
+            "Faulty Code": "temp.set_keep(0xFFFFFFFF);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition factor=3"
+        }
+    ]
+}

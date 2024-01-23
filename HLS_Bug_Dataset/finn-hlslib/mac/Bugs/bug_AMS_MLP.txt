@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "T mac(T const &a, TC const &c, TD const &d, R const &r, unsigned mmv) {",
+            "Faulty Code": "#pragma HLS interface port=a ap_vld"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS unroll",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

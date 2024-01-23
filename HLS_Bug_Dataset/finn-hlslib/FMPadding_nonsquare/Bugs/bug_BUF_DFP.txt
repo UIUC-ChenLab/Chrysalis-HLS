@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outData = in.read();",
+            "Faulty Code": "outData = in.read(); // Assuming this was meant to read from a different buffer half"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS dataflow // Incorrectly placed inside the loop, potentially assumed to optimize dataflow but this is not the correct usage"
+        }
+    ]
+}

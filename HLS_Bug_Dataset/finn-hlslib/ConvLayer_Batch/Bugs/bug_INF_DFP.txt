@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "StreamingDataWidthConverter_Batch<InStreamW, SIMD*TSrcI::width, InpPerImage>(in, wa_in, reps);",
+            "Faulty Code": "StreamingDataWidthConverter_Batch<InStreamW, SIMD*TSrcI::width, 0>(in, wa_in, reps);"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

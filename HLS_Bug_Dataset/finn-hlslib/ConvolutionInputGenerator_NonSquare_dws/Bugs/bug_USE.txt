@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "if ((counter_internal_block < cycles_read_block-1) && (read_block<IFMDim_y/Stride_y)) {",
+            "Faulty Code": "if ((counter_internal_block < cycles_read_block-1) && ((int)read_block<IFMDim_y/Stride_y)) {"
+        }
+    ]
+}

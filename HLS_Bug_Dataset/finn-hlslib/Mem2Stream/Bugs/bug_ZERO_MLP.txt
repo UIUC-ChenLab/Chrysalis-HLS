@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "const unsigned int numWords = numBytes / (DataWidth / 8);",
+            "Faulty Code": "unsigned int numWords = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "for (unsigned int i = 0; i < numWords; i++) {\n#pragma HLS pipeline style=flp II=1\n#pragma HLS pipeline\n  ap_uint<DataWidth> e = in[i];\n  out.write(e);\n}"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition factor=3"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<ap_uint<DataWidth> > & in, hls::stream<ap_uint<DataWidth> > & out1, hls::stream<ap_uint<DataWidth> > & out2",
+            "Faulty Code": "#pragma HLS interface mode=ap_memory port=in"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outElem(pe,0,1) = function.activate(accu[pe]);",
+            "Faulty Code": "outElem(pe,0,2) = function.activate(accu[pe]);"
+        }
+    ]
+}

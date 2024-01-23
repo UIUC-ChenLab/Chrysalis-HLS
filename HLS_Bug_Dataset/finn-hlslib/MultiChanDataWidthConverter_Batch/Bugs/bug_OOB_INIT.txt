@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "(eo.data[v])(OutWidth - 1, OutWidth - InWidth) = ei.data[v];",
+            "Faulty Code": "(eo.data[v])(OutWidth, OutWidth - InWidth) = ei.data[v];"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "MultiChanData<NumVecs, OutWidth> eo;",
+            "Faulty Code": "MultiChanData<NumVecs, OutWidth> eo = eo;"
+        }
+    ]
+}

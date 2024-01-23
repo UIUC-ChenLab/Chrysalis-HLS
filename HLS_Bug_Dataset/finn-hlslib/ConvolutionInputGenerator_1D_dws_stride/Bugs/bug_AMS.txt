@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<SIMD*Input_precision>> &in",
+            "Faulty Code": "#pragma HLS interface port=in ap_none"
+        }
+    ]
+}

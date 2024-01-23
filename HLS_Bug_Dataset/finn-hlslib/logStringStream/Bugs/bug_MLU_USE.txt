@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "tmp_stream.write(tmp);",
+            "Faulty Code": "// Missing tmp_stream.write(tmp);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<BitWidth> tmp = (ap_uint<BitWidth>) log.read();",
+            "Faulty Code": "int tmp = log.read(); // Incorrect casting, potential sign extension if BitWidth < size of int"
+        }
+    ]
+}

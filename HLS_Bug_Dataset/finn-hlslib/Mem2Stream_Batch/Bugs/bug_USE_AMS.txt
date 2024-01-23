@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned int repsLeft = numReps - rep;",
+            "Faulty Code": "int repsLeft = numReps - rep;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void Mem2Stream(ap_uint<DataWidth> * in, hls::stream<ap_uint<DataWidth> > & out)",
+            "Faulty Code": "void Mem2Stream(ap_uint<DataWidth> in, hls::stream<ap_uint<DataWidth> > & out)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "valueOut = (valueIn(offset-1,0),remainder(OutWidth-offset-1,0));",
+            "Faulty Code": "valueOut = (remainder(OutWidth-offset-1,0),valueIn(offset-1,0));"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (; offset <= (InWidth-OutWidth) ; offset+=OutWidth){",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (; offset <= (InWidth-OutWidth) ; offset+=OutWidth){"
+        }
+    ]
+}

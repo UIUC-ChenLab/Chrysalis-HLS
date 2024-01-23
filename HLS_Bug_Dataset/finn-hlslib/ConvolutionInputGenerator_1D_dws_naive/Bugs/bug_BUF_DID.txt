@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "ap_uint<SIMD*Input_precision> outElem = inputBuf[current_line_in_block];",
+            "Faulty Code": "ap_uint<SIMD*Input_precision> outElem = inputBuf[current_line_in_block + cycles_read_block];"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_S2P impl=LUTRAM",
+            "Faulty Code": "#pragma HLS array_partition variable=inputBuf dim=2"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=buf complete dim=2",
+            "Faulty Code": "#pragma HLS INTERFACE port=buf mode=s_axilite"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=4"
+        }
+    ]
+}

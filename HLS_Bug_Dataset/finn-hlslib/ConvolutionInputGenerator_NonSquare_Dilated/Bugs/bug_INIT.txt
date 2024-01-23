@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<SIMD*Input_precision> inElem; inElem = in.read();",
+            "Faulty Code": "ap_uint<SIMD*Input_precision> inElem; out.write(inElem);"
+        }
+    ]
+}

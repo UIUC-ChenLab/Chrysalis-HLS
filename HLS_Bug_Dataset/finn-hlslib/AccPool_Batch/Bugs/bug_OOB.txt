@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<PECount * AccType::width> accumulators[NumChannels/PECount];",
+            "Faulty Code": "ap_uint<PECount * AccType::width> accumulators[NumChannels/PECount - 1];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out.write(outData);",
+            "Faulty Code": "out.write(outData[x]); // x is used as if outData is an array, which it's not"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS dataflow // Incorrect placement of 'dataflow' pragma inside the loop"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned rep = 0;",
+            "Faulty Code": "unsigned rep;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline II=1 style=flp",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

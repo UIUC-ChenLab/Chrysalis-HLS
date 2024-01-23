@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "topval   [i] = topval   [i+1];",
+            "Faulty Code": "topval   [i] = topval   [NumTop - i - 1];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for(unsigned int topx=0; topx<NumTop; topx++){",
+            "Faulty Code": "for(unsigned int topx=0; topx<=NumTop; topx++){"
+        }
+    ]
+}

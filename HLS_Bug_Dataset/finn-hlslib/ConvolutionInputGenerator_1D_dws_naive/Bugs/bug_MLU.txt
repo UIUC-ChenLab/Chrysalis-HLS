@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned int count_image = 0; count_image < numReps; count_image++) {",
+            "Faulty Code": "for (unsigned int count_image = 0; count_image <= numReps; count_image++) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "buf[ch][p] = min_value;",
+            "Faulty Code": "// buf[ch][p] = min_value; // Uninitialized buffer"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=buf complete dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=buf complete dim=3 // Incorrect dimension"
+        }
+    ]
+}

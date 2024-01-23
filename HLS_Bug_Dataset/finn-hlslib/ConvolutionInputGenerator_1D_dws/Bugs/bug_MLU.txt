@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned  i = 0; i < 1 + READ_CYCLES + OUTPUT_SIZE; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; i <= READ_CYCLES + OUTPUT_SIZE; i++) {"
+        }
+    ]
+}

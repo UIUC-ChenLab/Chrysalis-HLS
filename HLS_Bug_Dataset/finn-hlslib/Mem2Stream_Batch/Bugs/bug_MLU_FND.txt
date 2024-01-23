@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "rep += 16;",
+            "Faulty Code": "rep += 15;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for (unsigned int i = 0; i < numWords; i++) {",
+            "Faulty Code": "#pragma HLS array_partition factor=5"
+        }
+    ]
+}

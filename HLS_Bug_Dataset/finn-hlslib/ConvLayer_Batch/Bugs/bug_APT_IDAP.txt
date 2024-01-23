@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=wa_in"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "ConvolutionInputGenerator<ConvKernelDim, IFMChannels, TSrcI::width, IFMDim, OFMDim, SIMD,1>(wa_in, convInp, reps, ap_resource_dflt());",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=wa_in"
+        }
+    ]
+}

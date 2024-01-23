@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "inElem = inputBuf[sf];",
+            "Faulty Code": "inElem = inputBuf[sf + SF/2]; // Assuming SF is even and BUF error occurs when accessing beyond the intended half"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "w.m_weights[pe] = W_packed((pe+1)*SIMD*TW::width-1,pe*SIMD*TW::width);",
+            "Faulty Code": "w.m_weights[pe] = W_packed((pe+1)*SIMD*TW::width,pe*SIMD*TW::width); // USE error due to incorrect bit range that could lead to unintended sign extension"
+        }
+    ]
+}

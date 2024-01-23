@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "topval   [i] = topval   [i+1];",
+            "Faulty Code": "topval   [i] = topval   [NumTop - i - 1];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline style=ap_fifo II=1"
+        }
+    ]
+}

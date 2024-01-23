@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<PECount * AccType::width> accumulators[NumChannels/PECount];",
+            "Faulty Code": "ap_uint<PECount * AccType::width> accumulators[NumChannels/PECount]; // Error: Accumulators array not initialized"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "out.write(accumulators[fold]);",
+            "Faulty Code": "out.write(accumulators[NumChannels/PECount + fold]); // Error: Writing from the wrong part of the buffer"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outElem(pe,0,1) = activation.activate(nf, pe, act(pe,0));",
+            "Faulty Code": "outElem(pe,0,NumChannels) = activation.activate(nf, pe, act(pe,0));"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "StreamingDataWidthConverter_Batch<InStreamW, SIMD*TSrcI::width, InpPerImage>(in, wa_in, reps);",
+            "Faulty Code": "for (int i=0; i < reps-1; i++) {\n StreamingDataWidthConverter_Batch<InStreamW, SIMD*TSrcI::width, InpPerImage>(in, wa_in, 1); \n}"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS INTERFACE port=activation bram"
+        }
+    ]
+}

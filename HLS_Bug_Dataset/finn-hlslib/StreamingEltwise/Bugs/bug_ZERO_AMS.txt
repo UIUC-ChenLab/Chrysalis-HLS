@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "auto const  in0_slice_channels = SliceIn0()(in0.read(), 0);",
+            "Faulty Code": "auto const  in0_slice_channels = SliceIn0()(); // Missing in0.read() call, default constructor might initialize to zero"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "auto outElem = SliceOut().template operator()<TStrmOut>();",
+            "Faulty Code": "#pragma HLS interface port=outElem ap_none // Incorrectly mapping array 'outElem' to a scalar interface"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out.write(in.read().get_data());",
+            "Faulty Code": "out.write(in.read().get_data().range(DataWidth/2-1, 0)); // Assuming DataWidth is greater than 8 and this is a mistake copying only half of the data width"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS dataflow // Incorrect placement of '#pragma HLS dataflow' inside the loop instead of '#pragma HLS pipeline'"
+        }
+    ]
+}

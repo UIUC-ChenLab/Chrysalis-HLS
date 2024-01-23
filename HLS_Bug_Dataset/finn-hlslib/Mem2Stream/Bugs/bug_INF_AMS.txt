@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned int i = 0; i < numWords; i++) {",
+            "Faulty Code": "for (unsigned int i = 0; i <= numWords; i++) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void Mem2Stream(ap_uint<DataWidth> * in, hls::stream<ap_uint<DataWidth> > & out) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=out mode=ap_none"
+        }
+    ]
+}

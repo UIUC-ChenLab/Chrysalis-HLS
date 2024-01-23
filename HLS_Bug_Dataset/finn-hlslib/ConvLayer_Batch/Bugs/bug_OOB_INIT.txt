@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "StreamingDataWidthConverter_Batch<InStreamW, SIMD*TSrcI::width, InpPerImage>(in, wa_in, reps);",
+            "Faulty Code": "StreamingDataWidthConverter_Batch<InStreamW, SIMD*TSrcI::width, InpPerImage + 1>(in, wa_in, reps);"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "Matrix_Vector_Activate_Batch<MatrixW, MatrixH, SIMD, PE, 1, TSrcI, TDstI, TWeightI>(...);",
+            "Faulty Code": "Matrix_Vector_Activate_Batch<MatrixW, MatrixH, SIMD, PE, 1, TSrcI, TDstI, TWeightI>();"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<SIMD*TSrcI::width>",
+            "Faulty Code": "ap_int<SIMD*TSrcI::width>"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS array_partition variable=weights dim=3"
+        }
+    ]
+}

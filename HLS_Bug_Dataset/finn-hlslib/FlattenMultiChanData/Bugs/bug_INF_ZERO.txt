@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(unsigned int r = 0; r < numReps; r++) {",
+            "Faulty Code": "for(unsigned int r = 0; r <= numReps; r++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<NumChannels*DataWidth> o = 0;",
+            "Faulty Code": "ap_uint<NumChannels*DataWidth> o;"
+        }
+    ]
+}

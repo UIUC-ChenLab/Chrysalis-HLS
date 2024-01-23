@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out.write(outElem);",
+            "Faulty Code": "out.write(accu); // Incorrectly writing the entire 'accu' buffer instead of 'outElem'"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS interface port=in mode=ap_fifo // Incorrect 'mode' may cause read/write only once in a sequential order"
+        }
+    ]
+}

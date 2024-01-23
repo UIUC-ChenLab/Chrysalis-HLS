@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "void Mem2Stream_Batch_external_wmem(ap_uint<DataWidth> * in,",
+            "Faulty Code": "void Mem2Stream_Batch_external_wmem(int * in,"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void Mem2Stream_Batch_external_wmem(ap_uint<DataWidth> * in,",
+            "Faulty Code": "#pragma HLS INTERFACE port=in mode=ap_memory"
+        }
+    ]
+}

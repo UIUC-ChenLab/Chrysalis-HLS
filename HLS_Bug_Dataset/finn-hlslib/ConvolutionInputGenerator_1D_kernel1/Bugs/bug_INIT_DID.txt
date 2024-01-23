@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_int<COUNTER_WIDTH> counter_x = -1;",
+            "Faulty Code": "ap_int<COUNTER_WIDTH> counter_x;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=inElem dim=2"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (count_row > scale_factor)",
+            "Faulty Code": "if (count_row >= scale_factor)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int count_row = -PaddingUp;",
+            "Faulty Code": "int count_row = 0;"
+        }
+    ]
+}

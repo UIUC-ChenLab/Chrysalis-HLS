@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned int count_image = 0; count_image < numReps; count_image++) {...}",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (unsigned int count_image = 0; count_image < numReps; count_image++) {...}"
+        }
+    ]
+}

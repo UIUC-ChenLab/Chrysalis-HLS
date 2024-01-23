@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out.write(e);",
+            "Faulty Code": "out.write(in.read()); // Incorrectly reading from the input stream again instead of writing 'e'"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned int numLeft = NumAllowed;",
+            "Faulty Code": "int numLeft = NumAllowed; // Unintended sign extension if NumAllowed is implicitly of a smaller signed type"
+        }
+    ]
+}

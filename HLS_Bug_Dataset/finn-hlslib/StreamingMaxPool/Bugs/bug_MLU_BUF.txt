@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned int i = 0; i < ImgDim / PoolDim; i++) {",
+            "Faulty Code": "for(unsigned int i = 0; i <= ImgDim / PoolDim; i++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "buf[xp] |= acc;",
+            "Faulty Code": "buf[xp+ImgDim / PoolDim] |= acc;"
+        }
+    ]
+}

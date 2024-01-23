@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "unsigned int lowBit = ch * ActType::width; unsigned int highBit = (ch+1) * ActType::width -1; ActType channeldata = inputData(highBit, lowBit);",
+            "Faulty Code": "unsigned int lowBit = ch * ActType::width; unsigned int highBit = (ch+1) * ActType::width; ActType channeldata = inputData(highBit, lowBit);"
+        }
+    ]
+}

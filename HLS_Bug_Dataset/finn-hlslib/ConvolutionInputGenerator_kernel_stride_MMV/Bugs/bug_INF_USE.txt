@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (counter_internal_block < cycles_write_block-1 || read_block==IFMDim)",
+            "Faulty Code": "if (counter_internal_block < cycles_write_block || read_block==IFMDim)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned int current_block_read = (ofm_y*Stride + k_y);",
+            "Faulty Code": "int current_block_read = (ofm_y*Stride + k_y);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS bind_storage variable=accumulators type=RAM_2P impl=LUTRAM",
+            "Faulty Code": "#pragma HLS array_partition variable=accumulators dim=3"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<PECount * AccType::width> > & out",
+            "Faulty Code": "#pragma HLS interface port=out mode=ap_none"
+        }
+    ]
+}

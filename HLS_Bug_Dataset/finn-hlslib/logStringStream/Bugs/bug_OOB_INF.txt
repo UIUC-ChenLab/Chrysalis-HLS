@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<BitWidth> tmp = (ap_uint<BitWidth>) log.read();",
+            "Faulty Code": "ap_uint<BitWidth> tmp = (ap_uint<BitWidth>) log.read(log.size());"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "while(!log.empty()){",
+            "Faulty Code": "while(log.empty()){"
+        }
+    ]
+}

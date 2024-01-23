@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for(unsigned int y = 0; y<OutputDim; y++){",
+            "Faulty Code": "for(unsigned int y = 0; y<=OutputDim; y++){"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "out.write(outData);",
+            "Faulty Code": "#pragma HLS interface port=out mode=ap_none\n\t\t\tout.write(outData);"
+        }
+    ]
+}

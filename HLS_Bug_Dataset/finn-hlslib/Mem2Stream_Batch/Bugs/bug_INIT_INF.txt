@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "const unsigned int indsPerRep = numBytes / (DataWidth / 8);",
+            "Faulty Code": "unsigned int indsPerRep; // Uninitialized variable"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "while (rep != numReps) {",
+            "Faulty Code": "while (rep <= numReps) { // Improper loop termination condition"
+        }
+    ]
+}

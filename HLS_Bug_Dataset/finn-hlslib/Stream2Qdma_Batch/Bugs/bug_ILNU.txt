@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned int word = 0; word < NumTotal; word++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\n\t\tfor (unsigned int word = 0; word < NumTotal; word++) {"
+        }
+    ]
+}

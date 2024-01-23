@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "rp += SIMD_COUNT;",
+            "Faulty Code": "rp += SIMD_COUNT + 1;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if(++ocnt == BUFFER_SIZE)  ocnt = 0;",
+            "Faulty Code": "if(++ocnt == BUFFER_SIZE)  ocnt = 1;"
+        }
+    ]
+}

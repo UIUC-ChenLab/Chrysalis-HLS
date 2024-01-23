@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "out.write(buffer[rp]);",
+            "Faulty Code": "out.write((int)buffer[rp]);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void memory_resource(T inputBuf, ap_resource_lutram const&){...}",
+            "Faulty Code": "#pragma HLS interface port=inputBuf mode=ap_none"
+        }
+    ]
+}

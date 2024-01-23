@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ActType const  val = thin((pe+1) * ActType::width - 1,pe * ActType::width);",
+            "Faulty Code": "ActType const  val = (ActType)thin((pe+1) * ActType::width - 1,pe * ActType::width);"
+        }
+    ]
+}

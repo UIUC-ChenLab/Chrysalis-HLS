@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned int counter_internal_block = 0;",
+            "Faulty Code": "unsigned int counter_internal_block = 0; // Faulty if it should be initialized with a nonzero value"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline style=flp II=1\n#pragma HLS pipeline"
+        }
+    ]
+}

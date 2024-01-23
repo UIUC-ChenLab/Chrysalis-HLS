@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (counter_internal_block < cycles_write_block-1 || read_block==IFMDim)",
+            "Faulty Code": "if (counter_internal_block <= cycles_write_block-1 || read_block==IFMDim)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "current_block_read -= floor_block_read;",
+            "Faulty Code": "current_block_read = (int)current_block_read - (int)floor_block_read;"
+        }
+    ]
+}

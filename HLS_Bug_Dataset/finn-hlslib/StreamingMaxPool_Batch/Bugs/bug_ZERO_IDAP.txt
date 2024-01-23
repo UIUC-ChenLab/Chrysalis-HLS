@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "buf[i] = 0;",
+            "Faulty Code": "// buf[i] = 0; // Mistakenly commented out"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=in"
+        }
+    ]
+}

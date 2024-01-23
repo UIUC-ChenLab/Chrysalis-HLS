@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "buf[ch][p] = min_value;",
+            "Faulty Code": "buf[ch][p] = 0;"
+        }
+    ]
+}

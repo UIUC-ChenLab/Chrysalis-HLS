@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<BitWidth> tmp = (ap_uint<BitWidth>) log.read();",
+            "Faulty Code": "ap_uint<BitWidth> tmp = (ap_uint<BitWidth>) log.read(); // Assuming log is not checked for empty before read"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "tmp_stream.write(tmp);",
+            "Faulty Code": "log.write(tmp); // Incorrectly writing back to the input stream instead of the tmp_stream"
+        }
+    ]
+}

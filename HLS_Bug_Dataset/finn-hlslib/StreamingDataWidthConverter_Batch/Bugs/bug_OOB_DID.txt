@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "eo(OutWidth - 1, OutWidth - InWidth) = ei;",
+            "Faulty Code": "eo(OutWidth, OutWidth - InWidth) = ei;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition dim=3"
+        }
+    ]
+}

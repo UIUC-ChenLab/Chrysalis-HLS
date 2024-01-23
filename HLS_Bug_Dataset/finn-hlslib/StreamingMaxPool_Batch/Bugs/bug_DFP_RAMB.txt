@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void StreamingMaxPool_Batch(hls::stream<ap_uint<NumChannels> > & in, hls::stream<ap_uint<NumChannels> > & out, unsigned int numReps) {",
+            "Faulty Code": "#pragma HLS dataflow void StreamingMaxPool_Batch(hls::stream<ap_uint<NumChannels> > & in, hls::stream<ap_uint<NumChannels> > & out, unsigned int numReps) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void StreamingMaxPool(hls::stream<ap_uint<NumChannels> > & in, hls::stream<ap_uint<NumChannels> > & out) {",
+            "Faulty Code": "#pragma HLS interface m_axi port=in depth=256 void StreamingMaxPool(hls::stream<ap_uint<NumChannels> > & in, hls::stream<ap_uint<NumChannels> > & out) {"
+        }
+    ]
+}

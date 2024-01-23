@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "unsigned int current_block_read = (current_block_write + 1 + k_y / Stride);",
+            "Faulty Code": "unsigned int current_block_read = (current_block_write + k_y / Stride);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "if ((counter_internal_block < cycles_read_block-1) && (read_block<IFMDim/Stride)) {",
+            "Faulty Code": "if ((counter_internal_block < cycles_read_block) && (read_block<IFMDim/Stride)) {"
+        }
+    ]
+}

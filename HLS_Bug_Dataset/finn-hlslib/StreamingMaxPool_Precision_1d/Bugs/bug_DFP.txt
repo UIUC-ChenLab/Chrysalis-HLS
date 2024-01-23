@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void StreamingMaxPool_Precision_1d(hls::stream<ap_uint<PE*ActType::width> > & in,\n        hls::stream<ap_uint<PE*ActType::width> > & out)\n{",
+            "Faulty Code": "#pragma HLS dataflow\nvoid StreamingMaxPool_Precision_1d(hls::stream<ap_uint<PE*ActType::width> > & in,\n        hls::stream<ap_uint<PE*ActType::width> > & out)\n{"
+        }
+    ]
+}

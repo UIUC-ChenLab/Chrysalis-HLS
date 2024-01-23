@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned int i = 0; i < baseIter; i++) {",
+            "Faulty Code": "for (unsigned int i = 0; i <= baseIter; i++) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

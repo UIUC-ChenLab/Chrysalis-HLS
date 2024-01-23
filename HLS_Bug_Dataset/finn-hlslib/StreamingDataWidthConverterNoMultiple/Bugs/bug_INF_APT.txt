@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (; offset <= (InWidth-OutWidth) ; offset+=OutWidth){",
+            "Faulty Code": "for (; offset < (InWidth-OutWidth) ; offset+=OutWidth){"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "valueOut = (valueIn(offset-1,0),remainder(OutWidth-offset-1,0));",
+            "Faulty Code": "valueOut = (valueIn(offset,0),remainder(OutWidth-offset,0));"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "inputBuf[v][current_block_write][current_line] = inElem;",
+            "Faulty Code": "inputBuf[v][current_block_write][current_line + 1] = inElem;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "ap_uint<SIMD*Input_precision> temp_value = inputBuf[v][current_block_read][(current_line_in_block + v*Stride*multiplying_factor)];",
+            "Faulty Code": "ap_uint<SIMD*Input_precision> temp_value = inputBuf[v][current_block_read][(current_line_in_block + (v+1)*Stride*multiplying_factor)];"
+        }
+    ]
+}

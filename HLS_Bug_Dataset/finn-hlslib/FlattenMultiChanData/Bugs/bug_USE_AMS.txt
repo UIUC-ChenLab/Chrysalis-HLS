@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<NumChannels*DataWidth> o = 0;",
+            "Faulty Code": "ap_int<NumChannels*DataWidth> o = 0;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<NumChannels*DataWidth> > & out",
+            "Faulty Code": "#pragma HLS INTERFACE port=out mode=ap_none"
+        }
+    ]
+}

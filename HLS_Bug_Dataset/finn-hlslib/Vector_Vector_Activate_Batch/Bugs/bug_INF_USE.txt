@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(unsigned  i = 0; i < reps * TOTAL_FOLD; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; i <= reps * TOTAL_FOLD; i++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "accu[mmv][pe] += mul(wgt[0], act(pe,mmv), r);",
+            "Faulty Code": "accu[mmv][pe] += mul((int)wgt[0], act(pe,mmv), r);"
+        }
+    ]
+}

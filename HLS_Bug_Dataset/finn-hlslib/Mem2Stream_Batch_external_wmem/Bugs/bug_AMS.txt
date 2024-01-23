@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void Mem2Stream_Batch_external_wmem(ap_uint<DataWidth> * in, hls::stream<ap_uint<DataWidth> > & out, const unsigned int numReps)",
+            "Faulty Code": "#pragma HLS interface port=in ap_s_axilite"
+        }
+    ]
+}

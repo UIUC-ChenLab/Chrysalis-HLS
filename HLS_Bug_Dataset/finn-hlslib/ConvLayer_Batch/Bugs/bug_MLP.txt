@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "ConvolutionInputGenerator<ConvKernelDim, IFMChannels, TSrcI::width, IFMDim, OFMDim, SIMD,1>(wa_in, convInp, reps, ap_resource_dflt());",
+            "Faulty Code": "#pragma HLS pipeline ConvolutionInputGenerator<ConvKernelDim, IFMChannels, TSrcI::width, IFMDim, OFMDim, SIMD,1>(wa_in, convInp, reps, ap_resource_dflt());"
+        }
+    ]
+}

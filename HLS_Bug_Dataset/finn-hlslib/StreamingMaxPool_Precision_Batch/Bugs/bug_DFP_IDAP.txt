@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<ap_uint<InStreamW> > & in",
+            "Faulty Code": "hls::stream<ap_uint<InStreamW> > & in #pragma HLS interface mode=ap_fifo"
+        }
+    ]
+}

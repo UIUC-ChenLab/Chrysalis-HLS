@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if(rp >= BUFFER_SIZE) rp -= BUFFER_SIZE;",
+            "Faulty Code": "if(rp > BUFFER_SIZE) rp -= BUFFER_SIZE;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline style=flp II=1\n#pragma HLS pipeline"
+        }
+    ]
+}

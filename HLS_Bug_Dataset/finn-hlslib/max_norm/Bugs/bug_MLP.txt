@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline II=1 style=flp",
+            "Faulty Code": "for(unsigned  i = 0; i < FM_SIZE; i++) {\n#pragma HLS pipeline II=1 style=flp\nfor(unsigned j = 0; j < 10; j++) {\n#pragma HLS pipeline II=1 style=flp\nauto const  x = src.read();\nmax = std::max(max, x);\nbuffer.write(x);\n}\n}"
+        }
+    ]
+}

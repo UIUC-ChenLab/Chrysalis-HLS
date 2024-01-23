@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<NumChannels> buf[ImgDim / PoolDim];",
+            "Faulty Code": "ap_uint<NumChannels> buf[ImgDim / PoolDim]; // Missing initialization, may contain garbage values"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned int yp = 0; yp < ImgDim / PoolDim; yp++) {",
+            "Faulty Code": "for (unsigned int yp = 0; yp <= ImgDim / PoolDim; yp++) { // Off-by-one error causing infinite loop if ImgDim % PoolDim == 0"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "\"\"\"void memory_resource(T inputBuf, ap_resource_dflt const&){\n#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_2P\n}\"\"\"",
+            "Faulty Code": "\"\"\"void memory_resource(T inputBuf, ap_resource_dflt const&){\n#pragma HLS pipeline\n#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_2P\n}\"\"\""
+        }
+    ]
+}

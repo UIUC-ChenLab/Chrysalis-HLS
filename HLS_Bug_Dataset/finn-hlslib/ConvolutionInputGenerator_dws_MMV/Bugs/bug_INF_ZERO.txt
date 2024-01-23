@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (counter_internal_block == (max_cycles-1))",
+            "Faulty Code": "if (counter_internal_block != (max_cycles-1))"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned int current_block_write = 0;",
+            "Faulty Code": "unsigned int current_block_write;"
+        }
+    ]
+}

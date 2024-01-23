@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<NumChannels*DataWidth> > & out",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=out"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<MultiChanData<NumChannels, DataWidth> > & in",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=in"
+        }
+    ]
+}

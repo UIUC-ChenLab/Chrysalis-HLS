@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned  y = 0; y < OutputDim_y; y++) {",
+            "Faulty Code": "for(unsigned  y = 0; y <= OutputDim_y; y++) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition factor=Folding"
+        }
+    ]
+}

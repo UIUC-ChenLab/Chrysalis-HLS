@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<NumChannels * Out_t::width> e;",
+            "Faulty Code": "ap_uint<NumChannels * Out_t::width> e = 0;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=in1"
+        }
+    ]
+}

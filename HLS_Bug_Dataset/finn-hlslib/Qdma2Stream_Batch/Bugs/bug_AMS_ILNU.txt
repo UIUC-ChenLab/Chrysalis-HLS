@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void Qdma2Stream_Batch(hls::stream<qdma_axis<DataWidth,0,0,0> > & in, hls::stream<ap_uint<DataWidth> > & out, const unsigned int numReps){",
+            "Faulty Code": "void Qdma2Stream_Batch(hls::stream<qdma_axis<DataWidth,0,0,0> > & in, ap_uint<DataWidth> & out, const unsigned int numReps){"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned int word = 0; word < NumTotal; word++) {",
+            "Faulty Code": "for (unsigned int word = 0; word < NumTotal; word++) {\n#pragma HLS unroll factor=2"
+        }
+    ]
+}

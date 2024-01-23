@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS stream variable=buffer depth=FM_SIZE",
+            "Faulty Code": "#pragma HLS array_partition variable=buffer type=complete dim=2"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS stream variable=buffer depth=FM_SIZE",
+            "Faulty Code": "#pragma HLS array_partition variable=buffer type=block dim=3"
+        }
+    ]
+}

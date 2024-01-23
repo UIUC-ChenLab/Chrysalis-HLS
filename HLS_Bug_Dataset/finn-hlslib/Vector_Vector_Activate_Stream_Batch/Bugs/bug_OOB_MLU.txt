@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "accu[mmv][pe] += mul(wgt[0], act(pe,mmv), r);",
+            "Faulty Code": "accu[mmv][pe] += mul(wgt[pe], act(pe,mmv), r);"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned  i = 0; i < reps * TOTAL_FOLD; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; i < (reps * TOTAL_FOLD) - 1; i++) {"
+        }
+    ]
+}

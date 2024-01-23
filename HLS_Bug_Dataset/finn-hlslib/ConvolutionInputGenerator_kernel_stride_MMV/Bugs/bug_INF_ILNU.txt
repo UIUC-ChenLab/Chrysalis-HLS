@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (counter_internal_block == (max_cycles-1))",
+            "Faulty Code": "if (counter_internal_block < (max_cycles-1))"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        }
+    ]
+}

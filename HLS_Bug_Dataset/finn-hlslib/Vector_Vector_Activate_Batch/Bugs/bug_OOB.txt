@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "accu[mmv][pe] += mul(wgt[0], act(pe,mmv), r);",
+            "Faulty Code": "accu[mmv][pe] += mul(wgt[pe], act(pe,mmv), r);"
+        }
+    ]
+}

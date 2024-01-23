@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "res += mul(c[i], d[i], r);",
+            "Faulty Code": "res += mul(c[i + 1], d[i + 1], r);"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "res += mul(c[i], d[i], r);",
+            "Faulty Code": "res += mul(c[i + N/2], d[i + N/2], r);"
+        }
+    ]
+}

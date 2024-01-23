@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out.write(outData);",
+            "Faulty Code": "out.write(inData); // Assuming 'inData' is used instead of 'outData' and could result in an out-of-bounds read if 'inData' is not assigned in certain conditions"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=outData // Assuming 'outData' is incorrectly thought to be an array which needs complete partitioning"
+        }
+    ]
+}

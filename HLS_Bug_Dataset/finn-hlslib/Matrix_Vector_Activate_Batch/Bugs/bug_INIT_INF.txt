@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "TI  inputBuf[SF];",
+            "Faulty Code": "TI  inputBuf[SF] = {0}; // Incorrect initialization assuming 0 is a valid default for type TI"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for(unsigned  i = 0; i < reps * TOTAL_FOLD; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; i <= reps * TOTAL_FOLD; i++) { // Off-by-one error leading to an infinite loop when reps * TOTAL_FOLD is the maximum value for unsigned"
+        }
+    ]
+}

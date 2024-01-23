@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "auto const  wgt = TWeightI()(w[pe]);",
+            "Faulty Code": "auto const  wgt = TWeightI()(w[sf]);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "outElem(pe,mmv,1) = activation.activate(nf, pe, accu[mmv][pe]);",
+            "Faulty Code": "outElem(pe,mmv,1) = activation.activate(nf, pe, static_cast<unsigned char>(accu[mmv][pe]));"
+        }
+    ]
+}

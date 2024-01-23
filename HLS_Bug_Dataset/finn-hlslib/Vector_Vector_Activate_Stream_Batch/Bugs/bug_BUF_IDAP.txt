@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "inElem = in.read();",
+            "Faulty Code": "inElem = in.read(); inElem = in.read(); // Reading the stream twice inadvertently"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS interface mode=ap_hs port=in // Incorrect interface mode, should be axis or fifo for streams"
+        }
+    ]
+}

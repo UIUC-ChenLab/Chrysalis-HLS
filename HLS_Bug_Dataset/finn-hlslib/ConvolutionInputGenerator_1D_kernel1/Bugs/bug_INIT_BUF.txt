@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_int<COUNTER_WIDTH> counter_x = -1;",
+            "Faulty Code": "ap_int<COUNTER_WIDTH> counter_x;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "out.write(inElem);",
+            "Faulty Code": "out.write(buffer[count_simd + IFMChannels/SIMD]);"
+        }
+    ]
+}

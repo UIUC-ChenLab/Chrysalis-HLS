@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "res += mul(c[i], d[i], r);",
+            "Faulty Code": "res += mul(c[i], d[i], r) << (N - i); // Assuming a shift with N-i could lead to out-of-bounds shift when i == N-1"
+        }
+    ]
+}

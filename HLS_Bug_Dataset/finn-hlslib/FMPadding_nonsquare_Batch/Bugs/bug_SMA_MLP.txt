@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void FMPadding_nonsquare_Batch(\n\thls::stream<ap_uint<SIMD*In_t::width>> &in,\n\thls::stream<ap_uint<SIMD*In_t::width>> &out,\n\tunsigned const  numReps\n) {",
+            "Faulty Code": "#pragma HLS interface port=bram\nvoid FMPadding_nonsquare_Batch(\n\thls::stream<ap_uint<SIMD*In_t::width>> &in,\n\thls::stream<ap_uint<SIMD*In_t::width>> &out,\n\tunsigned const  numReps\n) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline\n#pragma HLS pipeline style=flp II=1"
+        }
+    ]
+}

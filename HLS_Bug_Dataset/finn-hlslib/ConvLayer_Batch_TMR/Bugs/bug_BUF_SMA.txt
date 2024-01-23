@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "StreamingDataWidthConverter_Batch<PE*TDstI::width, OFMChannels*TDstI::width, OFMDim * OFMDim * (OFMChannels / PE)>(mvOut, tmr_in, reps);",
+            "Faulty Code": "StreamingDataWidthConverter_Batch<PE*TDstI::width, OFMChannels*TDstI::width, OFMDim * OFMDim * (OFMChannels / PE)>(mvOut, wa_in, reps);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "Matrix_Vector_Activate_Batch<MatrixW, MatrixH, SIMD, PE, 1, TSrcI, TDstI, TWeightI>",
+            "Faulty Code": "Matrix_Vector_Activate_Batch<MatrixW, MatrixH, SIMD, PE, 1, TSrcI, ap_uint<1>, TWeightI>"
+        }
+    ]
+}

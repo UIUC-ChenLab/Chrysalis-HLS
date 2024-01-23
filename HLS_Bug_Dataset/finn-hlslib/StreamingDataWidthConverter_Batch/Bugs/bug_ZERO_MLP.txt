@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned int o = 0;",
+            "Faulty Code": "unsigned int o = 1;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "for (int dummy = 0; dummy < 2; dummy++) { #pragma HLS pipeline style=flp II=1 }"
+        }
+    ]
+}

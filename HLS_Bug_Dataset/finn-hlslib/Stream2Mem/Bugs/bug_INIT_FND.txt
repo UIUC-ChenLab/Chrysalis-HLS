@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<DataWidth> e = in.read();",
+            "Faulty Code": "ap_uint<DataWidth> e; e = in.read();"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=out factor=3 complete"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "valueOut = (valueIn(offset-1,0),remainder(OutWidth-offset-1,0));",
+            "Faulty Code": "valueOut = (valueIn(offset,0),remainder(OutWidth-offset,0));"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (; offset <= (InWidth-OutWidth) ; offset+=OutWidth){ ... }",
+            "Faulty Code": "#pragma HLS pipeline\nfor (; offset <= (InWidth-OutWidth) ; offset+=OutWidth){ ... }"
+        }
+    ]
+}

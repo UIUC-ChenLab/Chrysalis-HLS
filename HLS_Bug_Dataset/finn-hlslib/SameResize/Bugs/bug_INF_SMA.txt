@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(unsigned int y = 0; y<OutputDim; y++){",
+            "Faulty Code": "for(unsigned int y = 0; y<=OutputDim; y++){"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<NumChannels* In_t::width> > &in",
+            "Faulty Code": "#pragma HLS interface port=bram mode=read_write hls::stream<ap_uint<NumChannels* In_t::width> > &in"
+        }
+    ]
+}

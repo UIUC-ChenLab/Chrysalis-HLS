@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(unsigned  i = 0; i < FM_SIZE; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; i <= FM_SIZE; i++) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<WI>> &src",
+            "Faulty Code": "#pragma HLS interface port=ap_none mode=stream type=hls::stream<ap_uint<WI>>"
+        }
+    ]
+}

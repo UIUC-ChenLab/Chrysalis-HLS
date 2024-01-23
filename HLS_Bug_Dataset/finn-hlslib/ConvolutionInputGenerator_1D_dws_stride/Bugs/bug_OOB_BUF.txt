@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if(re) {",
+            "Faulty Code": "if(re && rp < BUFFER_SIZE) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "rp += SIMD_COUNT;",
+            "Faulty Code": "rp += Stride_x * SIMD_COUNT;"
+        }
+    ]
+}

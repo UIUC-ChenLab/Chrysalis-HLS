@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "qdma_axis<DataWidth,0,0,0> temp;",
+            "Faulty Code": "qdma_axis<DataWidth,0,0,0> temp = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "temp.set_keep(-1);",
+            "Faulty Code": "temp.set_keep((ap_uint<DataWidth / 8>) -1);"
+        }
+    ]
+}

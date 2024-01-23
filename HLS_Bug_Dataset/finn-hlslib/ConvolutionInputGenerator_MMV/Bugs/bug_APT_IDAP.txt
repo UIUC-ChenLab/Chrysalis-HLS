@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf cyclic dim=1"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_S2P impl=LUTRAM",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_2P impl=LUTRAM"
+        }
+    ]
+}

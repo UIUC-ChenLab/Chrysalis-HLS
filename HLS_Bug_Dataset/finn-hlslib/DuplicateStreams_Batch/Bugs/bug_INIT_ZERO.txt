@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<DataWidth> e = in.read();",
+            "Faulty Code": "ap_uint<DataWidth> e; // Missing initialization from stream read"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "for (unsigned int i = 0; i < NumTotal; i++) {",
+            "Faulty Code": "unsigned int i = 0; // Incorrect loop initialization outside for loop"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=outElem factor=3 cyclic"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<TO> &out",
+            "Faulty Code": "#pragma HLS INTERFACE port=out mode=ap_none"
+        }
+    ]
+}

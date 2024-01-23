@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if ((x < IFMDim) && read_row)",
+            "Faulty Code": "if ((x <= IFMDim) && read_row)"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (count_row > scale_factor)",
+            "Faulty Code": "if (count_row >= scale_factor)"
+        }
+    ]
+}

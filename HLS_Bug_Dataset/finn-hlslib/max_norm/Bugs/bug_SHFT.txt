@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "dst.write(q(WO, 1) + q[0]);",
+            "Faulty Code": "dst.write((q << WO) + q[0]);"
+        }
+    ]
+}

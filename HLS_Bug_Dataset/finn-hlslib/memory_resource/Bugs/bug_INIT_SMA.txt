@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void memory_resource(T inputBuf, ap_resource_dflt const&){\n#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_2P\n}",
+            "Faulty Code": "void memory_resource(T inputBuf, ap_resource_dflt const&){\n#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_2P\nT uninitializedVar;\nT data = uninitializedVar; // Reading from uninitialized variable\n}"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void memory_resource(T inputBuf, ap_resource_dflt const&){\n#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_2P\n}",
+            "Faulty Code": "void memory_resource(T inputBuf, ap_resource_dflt const&){\n#pragma HLS INTERFACE port=inputBuf bram\n}"
+        }
+    ]
+}

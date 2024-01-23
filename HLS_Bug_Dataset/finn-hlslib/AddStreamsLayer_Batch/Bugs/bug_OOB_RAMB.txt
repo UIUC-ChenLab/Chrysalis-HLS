@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "eo(OutWidth - 1, OutWidth - InWidth) = ei;",
+            "Faulty Code": "eo(OutWidth, OutWidth - InWidth) = ei;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void AddStreamsLayer_Batch(hls::stream<ap_uint<NumChannels * In1_t::width>> &in1, hls::stream<ap_uint<NumChannels * In2_t::width>> &in2, hls::stream<ap_uint<NumChannels * Out_t::width>> &out, const unsigned int numReps) {",
+            "Faulty Code": "#pragma HLS interface port=in1 mode=m_axi depth=NumTotal\nvoid AddStreamsLayer_Batch(hls::stream<ap_uint<NumChannels * In1_t::width>> &in1, hls::stream<ap_uint<NumChannels * In2_t::width>> &in2, hls::stream<ap_uint<NumChannels * Out_t::width>> &out, const unsigned int numReps) {"
+        }
+    ]
+}

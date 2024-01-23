@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "Mem2Stream<DataWidth, numBytes * 16>(&in[rep * indsPerRep], out);",
+            "Faulty Code": "Mem2Stream<DataWidth, numBytes>(&in[rep * indsPerRep + numBytes * 8], out);"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "const unsigned int numWords = numBytes / (DataWidth / 8);",
+            "Faulty Code": "const unsigned int numWords = 0;"
+        }
+    ]
+}

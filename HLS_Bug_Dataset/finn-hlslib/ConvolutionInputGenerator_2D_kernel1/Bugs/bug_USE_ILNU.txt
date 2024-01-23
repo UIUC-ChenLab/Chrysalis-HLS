@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_int<COUNTER_WIDTH> counter_y = -1;",
+            "Faulty Code": "int counter_y = -1;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline style=flp II=IFMChannels/SIMD",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

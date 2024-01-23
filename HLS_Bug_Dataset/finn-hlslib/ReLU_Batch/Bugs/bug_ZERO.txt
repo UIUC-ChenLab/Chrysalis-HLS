@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ActType result;",
+            "Faulty Code": "ActType result = 0;"
+        }
+    ]
+}

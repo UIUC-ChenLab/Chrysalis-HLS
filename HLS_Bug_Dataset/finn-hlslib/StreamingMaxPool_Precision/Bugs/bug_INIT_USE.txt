@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "buf[outpix][ch] = min_value;",
+            "Faulty Code": "//buf[outpix][ch] = min_value;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "ActType channeldata = inputData(highBit, lowBit);",
+            "Faulty Code": "ActType channeldata = inputData; // Missing bit range"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "TW const        &weights",
+            "Faulty Code": "#pragma HLS interface port=bram mode=read_only variable=weights"
+        }
+    ]
+}

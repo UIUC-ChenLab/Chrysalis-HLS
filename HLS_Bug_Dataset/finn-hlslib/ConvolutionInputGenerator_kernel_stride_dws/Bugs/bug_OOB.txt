@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<SIMD*Input_precision> inputBuf[number_blocks][IFMDim * multiplying_factor];",
+            "Faulty Code": "ap_uint<SIMD*Input_precision> inputBuf[number_blocks+1][IFMDim * multiplying_factor];"
+        }
+    ]
+}

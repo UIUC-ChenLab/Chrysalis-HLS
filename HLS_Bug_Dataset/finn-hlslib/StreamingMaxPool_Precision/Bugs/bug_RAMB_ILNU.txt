@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "inputData = in.read();",
+            "Faulty Code": "inputData = in.read(kx); // Assuming read function is overloaded to take indices"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=2 // Incorrect factor for the loop"
+        }
+    ]
+}

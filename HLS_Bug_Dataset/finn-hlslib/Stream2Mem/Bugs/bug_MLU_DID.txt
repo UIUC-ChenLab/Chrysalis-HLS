@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned int i = 0; i < numWords; i++) {",
+            "Faulty Code": "for (unsigned int i = 0; i <= numWords; i++) {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=out dim=2"
+        }
+    ]
+}

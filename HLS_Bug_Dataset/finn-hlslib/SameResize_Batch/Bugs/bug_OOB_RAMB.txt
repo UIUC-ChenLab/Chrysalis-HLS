@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out.write(outData);",
+            "Faulty Code": "out.write(A[y * OutputDim + x]); // Assuming 'A' is an array not declared in the scope"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS interface port=in mode=m_axi // This pragma is incorrectly placed inside the function rather than at the top-level function scope."
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "strMem((SIMD * WP)*(pe+1)-1,(SIMD * WP)*pe) = W_in.m_weights[pe][tile];",
+            "Faulty Code": "strMem((SIMD * WP)*(pe+1)-1,(SIMD * WP)*pe) = W_in.m_weights[tile][pe];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void GenParamStream(TW const &W_in, hls::stream<ap_uint<SIMD * PE * WP>> &paramStreamOut, int const numReps)",
+            "Faulty Code": "#pragma HLS INTERFACE port=W_in bram"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "auto outElem = SliceOut().template operator()<TStrmOut>();",
+            "Faulty Code": "TStrmOut outElem = {}; // Incorrectly initializes outElem to zero"
+        }
+    ]
+}

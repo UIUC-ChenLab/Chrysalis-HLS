@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned int v = 0; v < NumVecs; v++) {",
+            "Faulty Code": "for(unsigned int v = 0; v <= NumVecs; v++) {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=ei.data dim=0"
+        }
+    ]
+}

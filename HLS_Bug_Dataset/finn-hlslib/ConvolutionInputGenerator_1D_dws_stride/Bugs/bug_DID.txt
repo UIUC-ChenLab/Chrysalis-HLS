@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "ap_uint<SIMD*Input_precision>  buffer[BUFFER_SIZE];",
+            "Faulty Code": "#pragma HLS array_partition variable=buffer dim=2 complete\nap_uint<SIMD*Input_precision>  buffer[BUFFER_SIZE];"
+        }
+    ]
+}

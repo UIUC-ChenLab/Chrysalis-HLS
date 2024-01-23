@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "buf[i][ch] = min_value;",
+            "Faulty Code": "buf[i][ch] = 0;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=buf complete dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=buf complete dim=3"
+        }
+    ]
+}

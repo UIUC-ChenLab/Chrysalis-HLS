@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void StreamingMaxPool_Precision(hls::stream<ap_uint<StreamW> > & in, hls::stream<ap_uint<StreamW> > & out)",
+            "Faulty Code": "void StreamingMaxPool_Precision(hls::stream<ap_uint<StreamW> > & in, hls::stream<ap_uint<StreamW> > & out) {\n#pragma HLS INTERFACE port=buf bram"
+        }
+    ]
+}

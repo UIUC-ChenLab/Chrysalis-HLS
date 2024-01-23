@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "AccType const  result = val + (pixel == 0? AccType(0) : acc);",
+            "Faulty Code": "AccType const  result = val + (pixel == 0? AccType(1) : acc);"
+        }
+    ]
+}

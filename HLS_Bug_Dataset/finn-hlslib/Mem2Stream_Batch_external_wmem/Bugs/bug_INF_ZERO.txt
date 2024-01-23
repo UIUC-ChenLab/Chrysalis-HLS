@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (rep != numReps) {",
+            "Faulty Code": "while (rep <= numReps) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "for (unsigned int i = 0; i < numWords; i++) {",
+            "Faulty Code": "for (unsigned int i = 1; i < numWords; i++) {"
+        }
+    ]
+}

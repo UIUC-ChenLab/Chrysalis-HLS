@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned int yp = 0; yp < ImgDim / PoolDim; yp++) {",
+            "Faulty Code": "for (unsigned int yp = 0; yp <= ImgDim / PoolDim; yp++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "buf[outpix][ch] = min_value;",
+            "Faulty Code": "buf[yp][ch] = min_value;"
+        }
+    ]
+}

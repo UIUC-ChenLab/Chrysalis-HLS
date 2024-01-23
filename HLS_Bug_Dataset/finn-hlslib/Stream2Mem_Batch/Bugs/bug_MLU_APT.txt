@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "rep += 16;",
+            "Faulty Code": "rep += 15;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=out"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<NumChannels*ActType::width> > wa_in(\"StreamingMaxPool_Precision_Batch.wa_in\");",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=wa_in"
+        }
+    ]
+}

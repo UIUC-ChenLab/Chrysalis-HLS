@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<NumChannels* In_t::width> outData, inData;",
+            "Faulty Code": "ap_uint<NumChannels* In_t::width> outData, inData = in.read();"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "inData = in.read();",
+            "Faulty Code": "inData = outData;"
+        }
+    ]
+}

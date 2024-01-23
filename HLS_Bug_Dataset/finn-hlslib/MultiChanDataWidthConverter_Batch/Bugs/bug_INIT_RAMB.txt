@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "MultiChanData<NumVecs, OutWidth> eo;",
+            "Faulty Code": "MultiChanData<NumVecs, OutWidth> eo = {0}; // Incorrectly zero-initialized, should be uninitialized"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline style=flp II=1\n#pragma HLS interface port=in mode=m_axi // Incorrect placement leading to random m_axi access"
+        }
+    ]
+}

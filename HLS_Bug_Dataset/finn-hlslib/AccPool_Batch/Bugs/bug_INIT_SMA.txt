@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<PECount * AccType::width> accumulators[NumChannels/PECount];",
+            "Faulty Code": "ap_uint<PECount * AccType::width> accumulators[NumChannels/PECount]; // The array 'accumulators' is declared but not initialized, which could lead to reading uninitialized values"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS bind_storage variable=accumulators type=RAM_2P impl=LUTRAM",
+            "Faulty Code": "#pragma HLS interface port=accumulators // Incorrectly maps the array 'accumulators' to a port interface, which should not be the case as 'accumulators' is intended for internal storage"
+        }
+    ]
+}

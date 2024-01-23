@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "unsigned int current_line_in_block = ((k_y%Stride_y) * IFMDim_y + ofm_x*Stride_x + k_x)*multiplying_factor + count_simd;",
+            "Faulty Code": "unsigned int current_line_in_block = ((k_y%Stride_y) * IFMDim_x + ofm_x*Stride_x + k_x)*multiplying_factor + count_simd;"
+        }
+    ]
+}

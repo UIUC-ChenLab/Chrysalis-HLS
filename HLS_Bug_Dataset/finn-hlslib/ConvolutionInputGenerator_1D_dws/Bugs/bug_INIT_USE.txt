@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<SIMD*Input_precision>  buffer[BUFFER_SIZE];",
+            "Faulty Code": "ap_uint<SIMD*Input_precision>  buffer[BUFFER_SIZE]; // Missing buffer initialization"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "if(++ocnt == BUFFER_SIZE)  ocnt = 0;",
+            "Faulty Code": "if(++ocnt == BUFFER_SIZE)  ocnt = SIMD_COUNT; // Unintended sign extension"
+        }
+    ]
+}

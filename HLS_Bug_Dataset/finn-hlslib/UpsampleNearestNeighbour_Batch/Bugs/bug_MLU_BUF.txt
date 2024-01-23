@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (count_row > scale_factor)",
+            "Faulty Code": "if (count_row >= scale_factor)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "outData = RowBuf[(x-PaddingLeft)/scale_factor];",
+            "Faulty Code": "outData = RowBuf[(x-PaddingRight)/scale_factor];"
+        }
+    ]
+}

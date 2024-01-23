@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<NumChannels> buf[ImgDim / PoolDim];",
+            "Faulty Code": "ap_uint<NumChannels> buf[ImgDim / PoolDim - 1];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "acc = acc | in.read();",
+            "Faulty Code": "acc |= (ap_int<NumChannels>)in.read();"
+        }
+    ]
+}

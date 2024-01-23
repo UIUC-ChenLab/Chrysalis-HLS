@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out.write(in.read().get_data());",
+            "Faulty Code": "out.write(in.read().get_data(word >= NumTotal/2 ? 1 : 0));"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS interface port=in mode=m_axi"
+        }
+    ]
+}

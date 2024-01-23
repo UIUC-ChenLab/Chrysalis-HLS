@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void GenParamStream(TW const &W_in, hls::stream<ap_uint<SIMD * PE * WP>> &paramStreamOut, int const numReps) {",
+            "Faulty Code": "void GenParamStream(TW const &W_in, hls::stream<ap_uint<SIMD * PE * WP>> &paramStreamOut, int const numReps) {\n#pragma HLS interface mode=ap_fifo port=paramStreamOut"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

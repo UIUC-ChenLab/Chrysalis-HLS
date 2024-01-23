@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<SIMD*Input_precision>  buffer[BUFFER_SIZE];",
+            "Faulty Code": "ap_uint<SIMD*Input_precision>  buffer[BUFFER_SIZE]; // Error: Buffer is declared but not initialized"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "signed  ocnt = OCNT_INITIAL < WINDOW_SIZE ? OCNT_INITIAL : -1;",
+            "Faulty Code": "signed  ocnt = 0; // Error: ocnt should be initialized based on a condition"
+        }
+    ]
+}

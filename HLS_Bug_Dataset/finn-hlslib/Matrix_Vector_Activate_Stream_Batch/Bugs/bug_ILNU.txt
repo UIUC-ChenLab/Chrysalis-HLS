@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for(unsigned  pe = 0; pe < PE; pe++) {\n#pragma HLS UNROLL\n      accu[0][pe] = activation.init(nf, pe);\n      }",
+            "Faulty Code": "#pragma HLS UNROLL\nfor(unsigned  pe = 0; pe < PE; pe++) {\n      accu[0][pe] = activation.init(nf, pe);\n      }"
+        }
+    ]
+}

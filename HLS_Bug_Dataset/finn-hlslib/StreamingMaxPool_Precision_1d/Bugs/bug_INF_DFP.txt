@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned int xp = 0; xp < OutputSize; xp++) {",
+            "Faulty Code": "for (unsigned int xp = 0; xp <= OutputSize; xp++) {"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "for(unsigned int ch = 0; ch < NF; ch++){",
+            "Faulty Code": "#pragma HLS dataflow\nfor(unsigned int ch = 0; ch < NF; ch++){"
+        }
+    ]
+}

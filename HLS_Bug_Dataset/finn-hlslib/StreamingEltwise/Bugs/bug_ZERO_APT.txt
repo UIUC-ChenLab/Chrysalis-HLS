@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "auto outElem = SliceOut().template operator()<TStrmOut>();",
+            "Faulty Code": "TStrmOut outElem = {}; // Incorrectly initialized to zero"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=outElem type=block factor=PE // Incorrect type or factor"
+        }
+    ]
+}

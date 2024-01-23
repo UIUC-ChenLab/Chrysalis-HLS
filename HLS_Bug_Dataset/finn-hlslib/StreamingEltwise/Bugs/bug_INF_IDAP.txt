@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(unsigned  i = 0; i < TOTAL_FOLD; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; i <= TOTAL_FOLD; i++) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<TStrmIn0> &in0,",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=in0"
+        }
+    ]
+}

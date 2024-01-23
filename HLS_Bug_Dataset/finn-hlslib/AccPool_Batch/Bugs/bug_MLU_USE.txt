@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned int pe=0; pe<PECount; pe++){",
+            "Faulty Code": "for(unsigned int pe=0; pe<=PECount; pe++){"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "AccType const  result = val + (pixel == 0? AccType(0) : acc);",
+            "Faulty Code": "AccType const  result = val + (pixel == 0? 0 : acc);"
+        }
+    ]
+}

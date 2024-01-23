@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS pipeline style=flp II=IFMChannels/SIMD",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=inElem"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "out.write(inElem);",
+            "Faulty Code": "out.write(inElem[count_simd]);"
+        }
+    ]
+}

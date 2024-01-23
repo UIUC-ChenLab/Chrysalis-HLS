@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<SIMD*Input_precision>  buffer[BUFFER_SIZE];",
+            "Faulty Code": "ap_uint<SIMD*Input_precision>  buffer[BUFFER_SIZE]; // Missing initialization, might contain garbage values"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if(++ocnt == BUFFER_SIZE)  ocnt = 0;",
+            "Faulty Code": "if(++ocnt == BUFFER_SIZE)  ocnt = 1; // Incorrectly initializes ocnt to 1 instead of resetting it to 0"
+        }
+    ]
+}

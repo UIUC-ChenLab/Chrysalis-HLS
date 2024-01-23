@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (rep != numReps) {",
+            "Faulty Code": "while (rep <= numReps) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned int rep = 0;",
+            "Faulty Code": "int rep = 0;"
+        }
+    ]
+}

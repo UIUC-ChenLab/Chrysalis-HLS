@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "buf[i] = 0;",
+            "Faulty Code": "ap_uint<NumChannels> buf[ImgDim / PoolDim];"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "pragma HLS array_partition dim=3"
+        }
+    ]
+}

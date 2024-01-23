@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=internal_thr.m_thresholds complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=internal_thr.m_thresholds cyclic dim=0"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "out.write(outElem);",
+            "Faulty Code": "out.write((int)outElem);"
+        }
+    ]
+}

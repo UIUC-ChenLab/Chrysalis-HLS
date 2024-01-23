@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "if(++rp >= BUFFER_SIZE)  rp -= BUFFER_SIZE;",
+            "Faulty Code": "if(++rp >= BUFFER_SIZE)  rp -= SIMD_COUNT;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "out.write(buffer[rp]);",
+            "Faulty Code": "#pragma HLS interface port=buffer mode=ap_none"
+        }
+    ]
+}

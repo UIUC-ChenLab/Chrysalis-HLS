@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS unroll",
+            "Faulty Code": "#pragma HLS array_partition variable=c factor=5"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "res += mul(c[i], d(i,mmv), r);",
+            "Faulty Code": "res += mul(c[i], d[i * mmv], r);"
+        }
+    ]
+}

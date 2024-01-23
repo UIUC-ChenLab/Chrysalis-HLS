@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<SIMD*Input_precision> inputBuf[cycles_read_block];",
+            "Faulty Code": "ap_uint<SIMD*Input_precision> inputBuf[cycles_read_block]; // Uninitialized array"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<SIMD*Input_precision> outElem = inputBuf[current_line_in_block];",
+            "Faulty Code": "ap_uint<SIMD*Input_precision> outElem = inputBuf[current_line_in_block] << (Input_precision - 1); // Potential unintended sign extension if Input_precision is not the full bit-width of ap_uint"
+        }
+    ]
+}

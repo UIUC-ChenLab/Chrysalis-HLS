@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "auto const act = TSrcI()(inElem);",
+            "Faulty Code": "auto act = TSrcI()(inElem); // Assuming TSrcI returns a narrower signed data type"
+        }
+    ]
+}

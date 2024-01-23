@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "auto outElem = SliceOut().template operator()<TStrmOut>();",
+            "Faulty Code": "TStrmOut outElem;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS interface port=out mode=ap_none"
+        }
+    ]
+}

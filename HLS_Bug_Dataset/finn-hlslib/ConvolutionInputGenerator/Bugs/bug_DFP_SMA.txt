@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void memory_resource(T inputBuf, ap_resource_lutram const&){\n#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_S2P impl=LUTRAM\n}",
+            "Faulty Code": "void memory_resource(T inputBuf, ap_resource_lutram const&){\n#pragma HLS INTERFACE port=inputBuf mode=bram\n}"
+        }
+    ]
+}

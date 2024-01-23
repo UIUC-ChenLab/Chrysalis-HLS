@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "auto outElem = TDstI().template operator()<TO>();",
+            "Faulty Code": "TO outElem = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "outElem(pe,0,1) = internal_thr.activate(0, pe, act(pe,0));",
+            "Faulty Code": "outElem(pe,0,1) = internal_thr.activate(0, pe, act(pe,0)).to_int();"
+        }
+    ]
+}

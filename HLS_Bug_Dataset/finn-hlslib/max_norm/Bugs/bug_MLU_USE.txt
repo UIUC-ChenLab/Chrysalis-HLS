@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned  i = 0; i < FM_SIZE; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; i <= FM_SIZE; i++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "static ap_uint<WO> const  MAX { NORMAX? NORMAX : -1u };",
+            "Faulty Code": "static ap_uint<WO> const  MAX { NORMAX? NORMAX : -1 };"
+        }
+    ]
+}

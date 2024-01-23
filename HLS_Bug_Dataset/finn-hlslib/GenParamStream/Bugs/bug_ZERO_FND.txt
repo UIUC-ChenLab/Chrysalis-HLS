@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<SIMD * PE * WP> strMem;",
+            "Faulty Code": "ap_uint<SIMD * PE * WP> strMem = 0;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=W_in.m_weights factor=3 dim=2"
+        }
+    ]
+}

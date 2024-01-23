@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned int image = 0; image < numReps; image++) {",
+            "Faulty Code": "for (unsigned int image = 0; image <= numReps; image++) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned int j = 0; j < NumChannels; j++) {",
+            "Faulty Code": "for (unsigned int j = 0; j <= NumChannels; j++) {"
+        }
+    ]
+}

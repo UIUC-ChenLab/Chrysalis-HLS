@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (; offset <= (InWidth-OutWidth) ; offset+=OutWidth){",
+            "Faulty Code": "#pragma HLS array_partition variable=valueIn factor=3\ncyclic\nfor (; offset <= (InWidth-OutWidth) ; offset+=OutWidth){"
+        }
+    ]
+}

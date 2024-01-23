@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ActType channeldata = inputData(highBit, lowBit);",
+            "Faulty Code": "int channeldata = inputData(highBit, lowBit);"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=buf complete dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=buf type=cyclic dim=2"
+        }
+    ]
+}

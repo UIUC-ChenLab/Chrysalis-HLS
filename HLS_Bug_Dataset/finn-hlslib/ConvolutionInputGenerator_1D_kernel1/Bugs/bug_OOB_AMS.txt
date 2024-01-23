@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<SIMD*Input_precision> inElem = in.read();",
+            "Faulty Code": "ap_uint<(SIMD+1)*Input_precision> inElem = in.read();"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<SIMD*Input_precision> > & out",
+            "Faulty Code": "ap_uint<SIMD*Input_precision> & out"
+        }
+    ]
+}

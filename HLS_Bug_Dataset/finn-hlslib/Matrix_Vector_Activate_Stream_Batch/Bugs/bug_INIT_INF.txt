@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "TI  inputBuf[SF];",
+            "Faulty Code": "TI  inputBuf[SF]; // Faulty if inputBuf is used before initialization within the loop"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for(unsigned  i = 0; i < reps * TOTAL_FOLD; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; i <= reps * TOTAL_FOLD; i++) { // Faulty due to off-by-one error causing an infinite loop"
+        }
+    ]
+}

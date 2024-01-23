@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "pixel_slice = in.read();",
+            "Faulty Code": "pixel_slice = in.read(); // Assuming in.read() has two halves and we're reading the wrong half"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=accu complete dim=0",
+            "Faulty Code": "#pragma HLS INTERFACE port=accu mode=ap_none"
+        }
+    ]
+}

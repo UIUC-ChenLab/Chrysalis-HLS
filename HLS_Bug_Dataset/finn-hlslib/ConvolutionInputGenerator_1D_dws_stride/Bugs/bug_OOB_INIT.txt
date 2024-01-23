@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if(++wp == BUFFER_SIZE)  wp = 0;",
+            "Faulty Code": "if(++wp > BUFFER_SIZE)  wp = 0;"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned  ocnt = SIMD_COUNT;",
+            "Faulty Code": "unsigned  ocnt;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<OutWidth> eo = 0;",
+            "Faulty Code": "ap_uint<OutWidth> eo;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition type=complete"
+        }
+    ]
+}

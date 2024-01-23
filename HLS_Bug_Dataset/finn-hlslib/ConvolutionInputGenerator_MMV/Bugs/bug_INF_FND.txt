@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (counter_internal_block == (max_cycles-1))",
+            "Faulty Code": "if (counter_internal_block == (max_cycles))"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf cyclic factor=number_blocks dim=2"
+        }
+    ]
+}

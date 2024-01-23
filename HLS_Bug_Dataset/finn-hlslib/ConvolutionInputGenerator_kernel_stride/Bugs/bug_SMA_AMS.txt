@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<SIMD*Input_precision> > & in",
+            "Faulty Code": "#pragma HLS INTERFACE port=in mode=ap_memory"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<SIMD*Input_precision> > & out",
+            "Faulty Code": "#pragma HLS INTERFACE port=out mode=ap_none"
+        }
+    ]
+}

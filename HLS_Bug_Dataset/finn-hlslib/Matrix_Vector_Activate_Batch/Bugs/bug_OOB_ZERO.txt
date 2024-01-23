@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "inputBuf[sf] = inElem;",
+            "Faulty Code": "inputBuf[sf+1] = inElem;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "accu[mmv][pe] = activation.init(nf, pe);",
+            "Faulty Code": "accu[mmv][pe] = 0;"
+        }
+    ]
+}

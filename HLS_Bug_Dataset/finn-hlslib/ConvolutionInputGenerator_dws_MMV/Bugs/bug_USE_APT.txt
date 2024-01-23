@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<SIMD*Input_precision> temp_value = inputBuf[v][current_block_read][(current_line_in_block + v*Stride*multiplying_factor)];",
+            "Faulty Code": "int temp_value = inputBuf[v][current_block_read][(current_line_in_block + v*Stride*multiplying_factor)];"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf cyclic dim=1"
+        }
+    ]
+}

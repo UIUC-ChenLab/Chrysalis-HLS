@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outElem(pe,mmv,1) = activation.activate(nf, pe, accu[mmv][pe]);",
+            "Faulty Code": "outElem(pe,mmv,PE) = activation.activate(nf, pe, accu[mmv][pe]);"
+        }
+    ]
+}

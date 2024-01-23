@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if(++inp_count <= INPUT_SIZE){\n\tbuffer[wp] = in.read();\n\tif(++wp == BUFFER_SIZE)  wp = 0;\n}",
+            "Faulty Code": "if(++inp_count <= INPUT_SIZE){\n\tbuffer[wp] = in.read();\n\tif(++wp > BUFFER_SIZE)  wp = 0;\n}"
+        }
+    ]
+}

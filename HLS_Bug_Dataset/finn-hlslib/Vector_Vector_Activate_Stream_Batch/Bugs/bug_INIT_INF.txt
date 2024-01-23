@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "for(unsigned  pe = 0; pe < PE; pe++) {",
+            "Faulty Code": "for(unsigned  pe = 1; pe < PE; pe++) {"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for(unsigned  i = 0; i < reps * TOTAL_FOLD; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; ; i++) {"
+        }
+    ]
+}

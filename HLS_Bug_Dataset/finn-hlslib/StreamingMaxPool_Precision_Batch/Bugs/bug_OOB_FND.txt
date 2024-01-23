@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ActType buf[ImgDim / PoolDim][NumChannels];",
+            "Faulty Code": "ActType buf[ImgDim / PoolDim + 1][NumChannels]; // Incorrect buffer size, could lead to an out-of-bounds write"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=buf complete dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=buf block factor=3 dim=2 // 'factor' is not a divisor of 'NumChannels'"
+        }
+    ]
+}

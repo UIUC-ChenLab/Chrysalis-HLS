@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "Stream2Mem<DataWidth, numBytes * 16>(in, &out[rep * indsPerRep]);",
+            "Faulty Code": "Stream2Mem<DataWidth, numBytes * 16>(in, &out[(rep + 8) * indsPerRep]);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=out factor=3"
+        }
+    ]
+}

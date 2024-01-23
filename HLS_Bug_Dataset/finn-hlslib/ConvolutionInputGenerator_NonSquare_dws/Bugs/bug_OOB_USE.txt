@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "unsigned int current_line_in_block = ((k_y%Stride_y) * IFMDim_y + ofm_x*Stride_x + k_x)*multiplying_factor + count_simd;",
+            "Faulty Code": "unsigned int current_line_in_block = ((k_y%Stride_y) * IFMDim_y + ofm_x*Stride_x + k_x + 1)*multiplying_factor + count_simd;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<SIMD*Input_precision> outElem = inputBuf[current_block_read][(current_line_in_block)];",
+            "Faulty Code": "int outElem = inputBuf[current_block_read][(current_line_in_block)];"
+        }
+    ]
+}

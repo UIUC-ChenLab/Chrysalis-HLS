@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "DuplicateStreams<DataWidth, NumTotal>(in, out1, out2);",
+            "Faulty Code": "DuplicateStreams<DataWidth, NumTotal/2>(in, out1, out2);"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "eo(OutWidth - 1, OutWidth - InWidth) = ei;",
+            "Faulty Code": "eo(OutWidth - 1, OutWidth - InWidth) = (ap_uint<OutWidth>)ei;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<MultiChanData<NumChannels, DataWidth> > & in,",
+            "Faulty Code": "#pragma HLS interface port=in bram\nhls::stream<MultiChanData<NumChannels, DataWidth> > & in,"
+        }
+    ]
+}

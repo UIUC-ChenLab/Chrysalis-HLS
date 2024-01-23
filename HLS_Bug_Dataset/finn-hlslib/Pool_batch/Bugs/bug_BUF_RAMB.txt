@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "accu[pe] = function.pool(slice_channels(pe,0), accu[pe]);",
+            "Faulty Code": "accu[pe + PE/2] = function.pool(slice_channels(pe,0), accu[pe + PE/2]);"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "out.write(outElem);",
+            "Faulty Code": "out.write(outElem); // Assuming out is incorrectly configured as an m_axi interface with random access pattern"
+        }
+    ]
+}

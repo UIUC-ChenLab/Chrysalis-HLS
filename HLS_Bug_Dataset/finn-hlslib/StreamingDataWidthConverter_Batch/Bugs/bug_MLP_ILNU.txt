@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline style=flp II=1\n#pragma HLS pipeline style=flp II=1"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "if (o == outPerIn) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\nif (o == outPerIn) {"
+        }
+    ]
+}

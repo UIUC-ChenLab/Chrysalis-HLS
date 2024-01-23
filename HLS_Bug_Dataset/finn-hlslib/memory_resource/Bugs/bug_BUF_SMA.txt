@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_2P",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_1P"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void memory_resource(T inputBuf, ap_resource_dflt const&){ ... }",
+            "Faulty Code": "void memory_resource(T &inputBuf, ap_resource_dflt const&){ ... }"
+        }
+    ]
+}

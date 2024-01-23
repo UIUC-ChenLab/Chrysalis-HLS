@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "o.data[v] = e(DataWidth*(v+1)-1, DataWidth*v);",
+            "Faulty Code": "o.data[v] = (DataWidth)(e(DataWidth*(v+1)-1, DataWidth*v));"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<MultiChanData<NumChannels, DataWidth> > & out",
+            "Faulty Code": "#pragma HLS interface port=out mode=ap_none"
+        }
+    ]
+}

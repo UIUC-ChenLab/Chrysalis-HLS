@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "auto const  act = TSrcI()(inElem, mmv);",
+            "Faulty Code": "accu[mmv][pe] += mul(wgt[0], (char)act(pe,mmv), r);"
+        }
+    ]
+}

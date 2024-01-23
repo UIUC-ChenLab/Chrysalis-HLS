@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned const MatrixW = ConvKernelDim * ConvKernelDim * IFMChannels;",
+            "Faulty Code": "unsigned const MatrixW = 0;"
+        }
+    ]
+}

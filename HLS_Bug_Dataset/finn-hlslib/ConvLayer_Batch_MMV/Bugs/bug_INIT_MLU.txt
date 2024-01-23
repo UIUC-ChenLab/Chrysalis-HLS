@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned const MatrixW = ConvKernelDim * ConvKernelDim * IFMChannels;",
+            "Faulty Code": "unsigned MatrixW; // Missing initialization"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "StreamingDataWidthConverter_Batch<InStreamW, SIMD * TSrcI::width, InpPerImage>(in, wa_in, reps);",
+            "Faulty Code": "for (int i = 0; i < reps - 1; ++i) { // Incorrect manual unrolling, missing last iteration\n  StreamingDataWidthConverter_Batch<InStreamW, SIMD * TSrcI::width, InpPerImage>(in, wa_in, 1);\n}"
+        }
+    ]
+}

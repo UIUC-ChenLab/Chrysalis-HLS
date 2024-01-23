@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "T mac(T const &a, TC const &c, TD const &d, R const &r) {\n#pragma HLS inline\n  T  res = a;",
+            "Faulty Code": "T mac(T const &a, TC const &c, TD const &d, R const &r) {\n#pragma HLS dataflow\n  T  res = a;"
+        }
+    ]
+}

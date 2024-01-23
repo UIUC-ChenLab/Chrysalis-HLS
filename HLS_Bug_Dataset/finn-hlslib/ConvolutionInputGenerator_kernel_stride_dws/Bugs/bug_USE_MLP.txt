@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned int current_block_read = (ofm_y*Stride + k_y);",
+            "Faulty Code": "int current_block_read = (ofm_y*Stride + k_y);"
+        }
+    ]
+}

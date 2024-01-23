@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "outElem(pe, 0, 1) = f(in0_slice_channels(pe, 0), in1_slice_channels(pe, 0));",
+            "Faulty Code": "outElem(pe, 0, 1) = f(in0_slice_channels(pe, 0) << pe, in1_slice_channels(pe, 0));"
+        }
+    ]
+}

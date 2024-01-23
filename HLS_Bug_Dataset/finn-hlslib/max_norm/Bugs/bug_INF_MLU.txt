@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(unsigned  i = 0; i < FM_SIZE; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; i <= FM_SIZE; i++) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "ap_uint<WO+1>    const  q = b / max;",
+            "Faulty Code": "ap_uint<WO>    const  q = b / max;"
+        }
+    ]
+}

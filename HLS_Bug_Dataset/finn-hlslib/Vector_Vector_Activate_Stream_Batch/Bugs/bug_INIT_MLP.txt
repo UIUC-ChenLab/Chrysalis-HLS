@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "decltype(activation.init(0,0))  accu[MMV][PE];",
+            "Faulty Code": "decltype(activation.init(0,0))  accu[MMV][PE]; // Faulty because the array is not explicitly initialized"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline // Faulty because 'style=flp II=1' was omitted, and this may lead to an unintended pipeline configuration"
+        }
+    ]
+}

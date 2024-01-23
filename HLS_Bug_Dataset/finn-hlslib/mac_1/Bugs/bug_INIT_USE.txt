@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "T  res = a;",
+            "Faulty Code": "T  res;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "res += mul(c[i], d[i], r);",
+            "Faulty Code": "res += (T)(c[i]*d[i]); // Assuming mul() handles sign extension correctly"
+        }
+    ]
+}

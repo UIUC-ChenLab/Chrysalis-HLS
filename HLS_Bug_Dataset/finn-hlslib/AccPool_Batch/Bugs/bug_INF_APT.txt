@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(unsigned int reps=0; reps<numReps; reps++){",
+            "Faulty Code": "for(unsigned int reps=0; reps<=numReps; reps++){"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS bind_storage variable=accumulators type=RAM_2P impl=LUTRAM",
+            "Faulty Code": "#pragma HLS array_partition variable=accumulators type=cyclic factor=PECount"
+        }
+    ]
+}

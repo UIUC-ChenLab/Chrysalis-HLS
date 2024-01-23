@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned int j = 0; j < NumChannels; j++) {",
+            "Faulty Code": "for (unsigned int j = 0; j <= NumChannels; j++) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void AddStreamsLayer_Batch(hls::stream<ap_uint<NumChannels * In1_t::width>> &in1, hls::stream<ap_uint<NumChannels * In2_t::width>> &in2,",
+            "Faulty Code": "#pragma HLS interface port=in1 bram"
+        }
+    ]
+}

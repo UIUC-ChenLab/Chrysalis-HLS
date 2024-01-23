@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "buf[i] = 0;",
+            "Faulty Code": "acc = 0;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "buf[xp] |= acc;",
+            "Faulty Code": "buf[xp] = acc;"
+        }
+    ]
+}

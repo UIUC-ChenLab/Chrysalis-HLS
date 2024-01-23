@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "qdma_axis<DataWidth,0,0,0> temp;",
+            "Faulty Code": "qdma_axis<DataWidth,0,0,0> temp = in.read();"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic"
+        }
+    ]
+}

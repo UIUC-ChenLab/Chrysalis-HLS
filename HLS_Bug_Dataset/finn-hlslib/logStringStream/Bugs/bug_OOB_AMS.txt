@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "while(!log.empty()){",
+            "Faulty Code": "for(int i = 0; i <= log.size(); i++){"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void logStringStream(const char *layer_name, hls::stream<ap_uint<BitWidth> > &log){",
+            "Faulty Code": "#pragma HLS INTERFACE port=log mode=ap_none"
+        }
+    ]
+}

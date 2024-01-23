@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "TI inElem;\ninElem = in.read();",
+            "Faulty Code": "TI inElem;\n// Missing inElem initialization with in.read()"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=internal_thr.m_thresholds factor=3 dim=2 // Assuming NumSteps is not a multiple of 3"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ActType const channeldata = inputData(highBit, lowBit);",
+            "Faulty Code": "int const channeldata = inputData(highBit, lowBit);"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "inputData = in.read();",
+            "Faulty Code": "inputData = in.read(ch);"
+        }
+    ]
+}

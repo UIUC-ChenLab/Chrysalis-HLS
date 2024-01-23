@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned int i = 0; i < numWords; i++) {\n#pragma HLS pipeline style=flp II=1\n    ap_uint<DataWidth> e = in.read();\n\tout[i] = e;\n  }",
+            "Faulty Code": "for (unsigned int i = 0; i <= numWords; i++) {\n#pragma HLS pipeline style=flp II=1\n    ap_uint<DataWidth> e = in.read();\n\tout[i] = e;\n  }"
+        }
+    ]
+}

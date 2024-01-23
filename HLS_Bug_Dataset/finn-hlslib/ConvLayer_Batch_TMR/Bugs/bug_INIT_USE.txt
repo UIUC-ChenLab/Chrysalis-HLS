@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<2> &errortype",
+            "Faulty Code": "ap_uint<2> errortype"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "StreamingDataWidthConverter_Batch<InStreamW, SIMD*TSrcI::width, InpPerImage>(in, wa_in, reps);",
+            "Faulty Code": "StreamingDataWidthConverter_Batch<InStreamW, (int)SIMD*TSrcI::width, InpPerImage>(in, wa_in, reps);"
+        }
+    ]
+}

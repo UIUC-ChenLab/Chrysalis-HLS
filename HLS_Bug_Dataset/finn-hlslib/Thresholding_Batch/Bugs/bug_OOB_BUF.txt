@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outElem(pe,0,1) = activation.activate(nf, pe, act(pe,0));",
+            "Faulty Code": "outElem(pe,0,1) = activation.activate(nf, pe, act(pe,1));"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "for (unsigned i = 0; i < reps * ImgDim * NF; i++) {",
+            "Faulty Code": "for (unsigned i = 0; i < reps * (ImgDim + 1) * NF; i++) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned const InpPerImage = IFMDim*IFMDim*IFMChannels * TSrcI::width/InStreamW;",
+            "Faulty Code": "int InpPerImage = IFMDim*IFMDim*IFMChannels * TSrcI::width/InStreamW;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "Matrix_Vector_Activate_Batch<MatrixW, MatrixH, SIMD, PE, MMV, TSrcI, TDstI, TWeightI>",
+            "Faulty Code": "#pragma HLS pipeline\nMatrix_Vector_Activate_Batch<MatrixW, MatrixH, SIMD, PE, MMV, TSrcI, TDstI, TWeightI>"
+        }
+    ]
+}

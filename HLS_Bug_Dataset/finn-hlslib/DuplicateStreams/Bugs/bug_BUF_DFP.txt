@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out1.write(e);",
+            "Faulty Code": "out2.write(e); // Assuming this is the wrong half where data shouldn't be copied"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS dataflow // Incorrect placement, no concurrent functions to justify dataflow"
+        }
+    ]
+}

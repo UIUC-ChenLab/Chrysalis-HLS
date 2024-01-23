@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (current_line == Stride_x * IFMDim_x * multiplying_factor ) {",
+            "Faulty Code": "if (current_line == Stride_x * IFMDim_x * multiplying_factor + 1) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "current_block_read-= number_blocks;",
+            "Faulty Code": "current_block_read-= (signed)number_blocks;"
+        }
+    ]
+}

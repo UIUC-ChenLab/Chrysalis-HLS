@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out.write(outData);",
+            "Faulty Code": "out.write(inData); // Assuming the 'inData' is intended to be 'outData' but inadvertently used 'inData'"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=outData factor=3 // Incorrect 'factor' which is not divisible by the loop count 'OutputDim'"
+        }
+    ]
+}

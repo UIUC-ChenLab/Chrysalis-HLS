@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_S2P impl=LUTRAM",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_T2P impl=LUTRAM"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "out.write(buffer[rp]);",
+            "Faulty Code": "out.write(buffer[(rp/SIMD_COUNT)*SIMD_COUNT + (i % SIMD_COUNT)]);"
+        }
+    ]
+}

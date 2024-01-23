@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned int read_block = 0;",
+            "Faulty Code": "unsigned int read_block;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_S2P impl=LUTRAM",
+            "Faulty Code": "#pragma HLS INTERFACE port=inputBuf mode=ap_none"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned int current_block_write = 0;",
+            "Faulty Code": "int current_block_write = 0;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void memory_resource(T inputBuf, ap_resource_lutram const&){\n#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_S2P impl=LUTRAM\n}",
+            "Faulty Code": "void memory_resource(T inputBuf, ap_resource_lutram const&){\n#pragma HLS INTERFACE port=inputBuf mode=s_axilite\n}"
+        }
+    ]
+}

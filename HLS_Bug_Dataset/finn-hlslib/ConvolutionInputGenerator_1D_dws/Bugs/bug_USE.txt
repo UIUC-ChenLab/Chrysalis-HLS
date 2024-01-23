@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "if(++ocnt == BUFFER_SIZE) ocnt = 0;",
+            "Faulty Code": "if(++ocnt == BUFFER_SIZE) ocnt = 0xFFFF;"
+        }
+    ]
+}

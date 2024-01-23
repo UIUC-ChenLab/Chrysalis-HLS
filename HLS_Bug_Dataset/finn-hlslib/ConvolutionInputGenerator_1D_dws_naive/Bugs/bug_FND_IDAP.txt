@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "constexpr unsigned cycles_write_block = OFMDim_x * ConvKernelDim_x * multiplying_factor;",
+            "Faulty Code": "#pragma HLS array_partition variable=inputBuf factor=cycles_write_block cyclic"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void memory_resource(T inputBuf, ap_resource_lutram const&){...}",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=inputBuf"
+        }
+    ]
+}

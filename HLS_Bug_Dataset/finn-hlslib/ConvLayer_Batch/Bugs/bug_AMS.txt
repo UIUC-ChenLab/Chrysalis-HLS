@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "ConvLayer_Batch(hls::stream<ap_uint<InStreamW>>  &in, hls::stream<ap_uint<OutStreamW>> &out, TW const        &weights, TA const        &activation, unsigned const   reps, R const &r)",
+            "Faulty Code": "ConvLayer_Batch(ap_uint<InStreamW>  &in, ap_uint<OutStreamW> &out, TW const        &weights, TA const        &activation, unsigned const   reps, R const &r)"
+        }
+    ]
+}

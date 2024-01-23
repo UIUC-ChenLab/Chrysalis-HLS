@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if(/* rows */ (PaddingTop  <= y) && (y < OutputDim_y - PaddingBottom) &&",
+            "Faulty Code": "if(/* rows */ (PaddingTop  < y) && (y <= OutputDim_y - PaddingBottom) &&"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned  sf = 0; sf < Folding; sf++) {",
+            "Faulty Code": "for(unsigned  sf = 0; sf <= Folding; sf++) {"
+        }
+    ]
+}

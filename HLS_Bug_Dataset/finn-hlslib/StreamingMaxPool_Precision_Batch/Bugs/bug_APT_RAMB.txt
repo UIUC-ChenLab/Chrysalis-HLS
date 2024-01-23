@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=buf complete dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=buf cyclic dim=2"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (unsigned int yp = 0; yp < ImgDim / PoolDim; yp++) {",
+            "Faulty Code": "for (unsigned int yp = 0; yp < ImgDim; yp++) {"
+        }
+    ]
+}

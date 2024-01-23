@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(unsigned int reps=0; reps<numReps; reps++){",
+            "Faulty Code": "for(unsigned int reps=0; reps<=numReps; reps++){"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if(val < offset)",
+            "Faulty Code": "if(val < 0)"
+        }
+    ]
+}

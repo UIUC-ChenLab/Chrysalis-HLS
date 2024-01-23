@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned int count_simd = 0; count_simd < MULTIPLYING_FACTOR; count_simd++)",
+            "Faulty Code": "for (unsigned int count_simd = 0; count_simd <= MULTIPLYING_FACTOR; count_simd++)"
+        }
+    ]
+}

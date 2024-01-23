@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "Mem2Stream<DataWidth, numBytes * 16>(&in[rep * indsPerRep], out);",
+            "Faulty Code": "Mem2Stream<DataWidth, numBytes>(&in[rep * indsPerRep + i], out); // Assuming i is some index variable introduced in the faulty code"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS unroll factor=4 // Incorrectly placed outside and before the for-loop"
+        }
+    ]
+}

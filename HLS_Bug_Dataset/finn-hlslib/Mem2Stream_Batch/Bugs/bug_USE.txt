@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned int repsLeft = numReps - rep;",
+            "Faulty Code": "int repsLeft = numReps - rep;"
+        }
+    ]
+}

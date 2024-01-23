@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned int j = 0; j < NumChannels; j++) {",
+            "Faulty Code": "for (unsigned int j = 0; j <= NumChannels; j++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<OutWidth> eo = 0;",
+            "Faulty Code": "ap_uint<OutWidth> eo;"
+        }
+    ]
+}

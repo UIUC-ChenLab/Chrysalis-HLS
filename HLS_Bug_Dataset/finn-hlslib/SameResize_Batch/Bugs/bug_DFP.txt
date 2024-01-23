@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void SameResize_Batch(hls::stream<ap_uint<NumChannels* In_t::width> > &in,\n\t\thls::stream<ap_uint<NumChannels* In_t::width> > &out,\n\t\tconst unsigned int numReps) {\n\tfor (unsigned int rep = 0; rep < numReps; rep++) {\n\t\tSameResize<ImgDim, KernelDim, Stride, NumChannels, In_t, PaddingStyle>(in, out);\n\t}\n\n}",
+            "Faulty Code": "void SameResize_Batch(hls::stream<ap_uint<NumChannels* In_t::width> > &in,\n\t\thls::stream<ap_uint<NumChannels* In_t::width> > &out,\n\t\tconst unsigned int numReps) {\n#pragma HLS dataflow\n\tfor (unsigned int rep = 0; rep < numReps; rep++) {\n\t\tSameResize<ImgDim, KernelDim, Stride, NumChannels, In_t, PaddingStyle>(in, out);\n\t}\n\n}"
+        }
+    ]
+}

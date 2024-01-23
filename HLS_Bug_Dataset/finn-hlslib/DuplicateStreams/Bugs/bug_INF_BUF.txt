@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned int i = 0; i < NumTotal; i++) {",
+            "Faulty Code": "for (unsigned int i = 0; i <= NumTotal; i++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "ap_uint<DataWidth> e = in.read();",
+            "Faulty Code": "ap_uint<DataWidth> e = in.read(); // Assuming in is mistakenly a split buffer and we always read from the wrong half"
+        }
+    ]
+}

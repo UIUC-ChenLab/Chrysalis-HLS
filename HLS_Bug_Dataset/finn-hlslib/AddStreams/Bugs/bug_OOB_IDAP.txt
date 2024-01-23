@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "e1((j + 1) * In1_t::width - 1, j * In1_t::width)",
+            "Faulty Code": "e1((NumChannels + 1) * In1_t::width - 1, j * In1_t::width)"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=in1"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "static ap_uint<OutWidth> remainder = 0;",
+            "Faulty Code": "static ap_uint<OutWidth> remainder;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "valueOut = (valueIn(offset-1,0),remainder(OutWidth-offset-1,0));",
+            "Faulty Code": "valueOut = (remainder(offset-1,0),valueIn(OutWidth-offset-1,0));"
+        }
+    ]
+}

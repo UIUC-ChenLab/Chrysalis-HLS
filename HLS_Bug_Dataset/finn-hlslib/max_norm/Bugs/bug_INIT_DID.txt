@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<WI>  max = 1;",
+            "Faulty Code": "ap_uint<WI>  max;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS stream variable=buffer depth=FM_SIZE",
+            "Faulty Code": "#pragma HLS array_partition variable=buffer dim=2"
+        }
+    ]
+}

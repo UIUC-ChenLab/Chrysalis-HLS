@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=NumChannels-1"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "o.data[v] = e(DataWidth*(v+1)-1, DataWidth*v);",
+            "Faulty Code": "o.data[v] = e(DataWidth*v-1, DataWidth*(v-1));"
+        }
+    ]
+}

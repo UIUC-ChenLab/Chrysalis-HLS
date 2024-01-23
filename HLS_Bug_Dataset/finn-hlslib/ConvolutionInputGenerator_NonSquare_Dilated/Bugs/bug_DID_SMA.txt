@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=2"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void memory_resource(T inputBuf, ap_resource_lutram const&){\n#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_S2P impl=LUTRAM\n}",
+            "Faulty Code": "void memory_resource(T inputBuf, ap_resource_lutram const&){\n#pragma HLS INTERFACE port=inputBuf type=bram\n}"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "StreamingDataWidthConverter_Batch<InStreamW, SIMD*TSrcI::width, InpPerImage>(in, wa_in, reps);",
+            "Faulty Code": "for (int i = 0; i < reps-1; ++i) { StreamingDataWidthConverter_Batch<InStreamW, SIMD*TSrcI::width, InpPerImage>(in, wa_in, 1); }"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "Matrix_Vector_Activate_Batch<MatrixW, MatrixH, SIMD, PE, 1, TSrcI, TDstI, TWeightI>",
+            "Faulty Code": "Matrix_Vector_Activate_Batch<int(MatrixW), int(MatrixH), SIMD, PE, 1, TSrcI, TDstI, TWeightI>"
+        }
+    ]
+}

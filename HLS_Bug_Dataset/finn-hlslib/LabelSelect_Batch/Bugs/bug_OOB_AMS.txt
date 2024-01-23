@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for(unsigned int topx = 0; topx < NumTop; topx++){",
+            "Faulty Code": "for(unsigned int topx = 0; topx <= NumTop; topx++){"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=topval complete dim=1",
+            "Faulty Code": "#pragma HLS INTERFACE port=topval mode=ap_none"
+        }
+    ]
+}

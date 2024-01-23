@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(unsigned  i = 0; i < reps * TOTAL_FOLD; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; i <= reps * TOTAL_FOLD; i++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "outElem(pe,0,1) = activation.activate(nf, pe, accu[0][pe]);",
+            "Faulty Code": "outElem(pe,0) = activation.activate(nf, pe, accu[0][pe]);"
+        }
+    ]
+}

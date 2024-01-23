@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (input_count++ < ImgDim){",
+            "Faulty Code": "if (input_count++ <= ImgDim){"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<PE*ActType::width> inputData,outputData;",
+            "Faulty Code": "ap_uint<PE*ActType::width> inputData; ap_uint<PE*ActType::width> outputData;"
+        }
+    ]
+}

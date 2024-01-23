@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=in dim=2"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void StreamingCast(hls::stream<InT> & in, hls::stream<OutT> & out, unsigned int numReps)",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=in"
+        }
+    ]
+}

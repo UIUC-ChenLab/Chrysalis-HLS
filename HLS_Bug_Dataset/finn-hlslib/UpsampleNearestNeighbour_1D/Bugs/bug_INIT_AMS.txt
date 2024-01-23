@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "buf_t     buf;",
+            "Faulty Code": "buf_t     buf = src.read();"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS pipeline II=1 style=flp",
+            "Faulty Code": "#pragma HLS interface port=src protocol=ap_none"
+        }
+    ]
+}

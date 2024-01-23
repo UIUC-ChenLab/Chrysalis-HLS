@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "unsigned int current_line_in_block = ((k_y%Stride) * IFMDim + ofm_x*Stride + k_x)*multiplying_factor + count_simd;",
+            "Faulty Code": "unsigned int current_line_in_block = ((k_y%Stride) * IFMDim + ofm_x*Stride + k_x + 1)*multiplying_factor + count_simd;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "unsigned int current_block_read = (current_block_write + 1 + k_y / Stride);",
+            "Faulty Code": "unsigned int current_block_read = (current_block_write + k_y / Stride);"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void StreamingMaxPool_Batch(hls::stream<ap_uint<NumChannels> > & in,\n        hls::stream<ap_uint<NumChannels> > & out, unsigned int numReps) {\n  for (unsigned int rep = 0; rep < numReps; rep++) {\n    StreamingMaxPool<ImgDim, PoolDim, NumChannels>(in, out);\n  }\n}",
+            "Faulty Code": "#pragma HLS INTERFACE mode=s_axilite port=in\n#pragma HLS INTERFACE mode=s_axilite port=out\nvoid StreamingMaxPool_Batch(hls::stream<ap_uint<NumChannels> > & in,\n        hls::stream<ap_uint<NumChannels> > & out, unsigned int numReps) {\n  for (unsigned int rep = 0; rep < numReps; rep++) {\n    StreamingMaxPool<ImgDim, PoolDim, NumChannels>(in, out);\n  }\n}"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned int t = 0; t < totalIters; t++)",
+            "Faulty Code": "for (unsigned int t = 0; ; t++)"
+        }
+    ]
+}

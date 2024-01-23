@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "Mem2Stream<DataWidth, numBytes>(&in[0], out);",
+            "Faulty Code": "Mem2Stream<DataWidth, numBytes>(&in[rep * numWords], out);"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

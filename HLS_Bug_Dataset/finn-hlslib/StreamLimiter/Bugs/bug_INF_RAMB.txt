@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned int i = 0; i < NumTotal; i++) {",
+            "Faulty Code": "for (unsigned int i = 0; ; i++) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "ap_uint<DataWidth> e = in.read();",
+            "Faulty Code": "ap_uint<DataWidth> e = A[i + j]; // Assuming an array A[] is mistakenly accessed with non-consecutive indices in a nested loop."
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "In1_t op1 = e1((j + 1) * In1_t::width - 1, j * In1_t::width);",
+            "Faulty Code": "In1_t op1 = e1((j + 2) * In1_t::width - 1, (j + 1) * In1_t::width);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=e1 factor=3"
+        }
+    ]
+}

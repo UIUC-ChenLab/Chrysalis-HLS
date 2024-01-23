@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=buffer cyclic factor=3"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "out.write(buffer[rp]);",
+            "Faulty Code": "out.write(buffer[i]);"
+        }
+    ]
+}

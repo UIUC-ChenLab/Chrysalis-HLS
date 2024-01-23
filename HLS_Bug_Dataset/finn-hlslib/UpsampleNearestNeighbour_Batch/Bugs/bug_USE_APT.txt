@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int count_row = -PaddingUp;",
+            "Faulty Code": "unsigned int count_row = -PaddingUp;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=RowBuf type=complete"
+        }
+    ]
+}

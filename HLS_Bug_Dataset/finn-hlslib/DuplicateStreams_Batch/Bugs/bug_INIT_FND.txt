@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<DataWidth> e = in.read();",
+            "Faulty Code": "ap_uint<DataWidth> e; // missing initialization"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=e factor=3 // 'factor' not relevant to single element, and no loop here to apply factor to"
+        }
+    ]
+}

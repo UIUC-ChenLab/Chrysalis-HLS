@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "accu[mmv][pe] = activation.init(nf, pe);",
+            "Faulty Code": "accu[mmv][pe] = 0;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=4"
+        }
+    ]
+}

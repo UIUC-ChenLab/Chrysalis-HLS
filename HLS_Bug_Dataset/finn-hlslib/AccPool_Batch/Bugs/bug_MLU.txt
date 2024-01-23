@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "for(unsigned int pe=0; pe<PECount; pe++){ // Missing #pragma HLS UNROLL, which may lead to an incorrect manual unrolling attempt}"
+        }
+    ]
+}

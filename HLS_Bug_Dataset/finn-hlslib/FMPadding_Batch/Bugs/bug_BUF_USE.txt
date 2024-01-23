@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outData = in.read();",
+            "Faulty Code": "outData = in.read(); // Assuming in.read() is incorrectly used and should have been split for two halves of a buffer"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<SIMD*In_t::width>  outData = 0;",
+            "Faulty Code": "int outData = 0; // outData should be unsigned, as sign extension could occur when assigning to it from ap_uint"
+        }
+    ]
+}

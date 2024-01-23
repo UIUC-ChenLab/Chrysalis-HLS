@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned int counter_internal_block = 0;",
+            "Faulty Code": "unsigned int counter_internal_block = 0; // Should not be initialized to zero if it requires a different initial value"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=4 // Incorrect unroll factor applied to the loop"
+        }
+    ]
+}

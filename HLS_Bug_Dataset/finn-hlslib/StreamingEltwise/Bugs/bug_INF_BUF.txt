@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(unsigned  i = 0; i < TOTAL_FOLD; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; i <= TOTAL_FOLD; i++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "auto const  in1_slice_channels = SliceIn1()(in1.read(), 0);",
+            "Faulty Code": "auto const  in1_slice_channels = SliceIn1()(in0.read(), 0);"
+        }
+    ]
+}

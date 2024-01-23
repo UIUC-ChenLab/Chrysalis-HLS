@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned int o = 0;",
+            "Faulty Code": "unsigned int o;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "// read new input word if current out count is zero\nif (o == 0)\nei = in.read();",
+            "Faulty Code": "// read new input word if current out count is zero\nif (o == 0)\nei = in.read();\n#pragma HLS interface port=ei mode=ap_none"
+        }
+    ]
+}

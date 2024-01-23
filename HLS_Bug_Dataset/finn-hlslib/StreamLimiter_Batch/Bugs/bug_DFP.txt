@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "StreamLimiter<DataWidth, NumAllowed, NumTotal>(in, out);",
+            "Faulty Code": "#pragma HLS dataflow StreamLimiter<DataWidth, NumAllowed, NumTotal>(in, out);"
+        }
+    ]
+}

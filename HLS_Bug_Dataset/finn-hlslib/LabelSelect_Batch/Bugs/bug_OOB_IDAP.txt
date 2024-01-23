@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "cmp[NumTop] = false;",
+            "Faulty Code": "cmp[i] = val > topval[i]; // when i == NumTop"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "for(unsigned int topx = 0; topx < NumTop; topx++){ out.write(toplabels[NumTop - topx - 1]); }",
+            "Faulty Code": "for(unsigned int topx = 0; topx <= NumTop; topx++){ out.write(toplabels[NumTop - topx - 1]); }"
+        }
+    ]
+}

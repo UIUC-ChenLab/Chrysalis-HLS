@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "for(unsigned  i = 0; i < FM_SIZE; i++) {\n#pragma HLS pipeline II=1 style=flp\nauto const  x = src.read();\n",
+            "Faulty Code": "#pragma HLS dataflow disable_start_propagation\nfor(unsigned  i = 0; i < FM_SIZE; i++) {\n#pragma HLS pipeline II=1 style=flp\nauto const  x = src.read();\n"
+        }
+    ]
+}

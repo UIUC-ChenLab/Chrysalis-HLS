@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "MultiChanDataWidthConverter_Batch<PE * TDstI::width, OFMChannels * TDstI::width, OFMDim * OFMDim * (OFMChannels / PE), MMV>(mmv2dwc, dwc2flat, reps);",
+            "Faulty Code": "#pragma HLS dataflow\nMultiChanDataWidthConverter_Batch<PE * TDstI::width, OFMChannels * TDstI::width, OFMDim * OFMDim * (OFMChannels / PE), MMV>(mmv2dwc, dwc2flat, reps);"
+        }
+    ]
+}

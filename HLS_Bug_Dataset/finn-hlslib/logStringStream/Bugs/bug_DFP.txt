@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void logStringStream(const char *layer_name, hls::stream<ap_uint<BitWidth> > &log)",
+            "Faulty Code": "#pragma HLS dataflow\nvoid logStringStream(const char *layer_name, hls::stream<ap_uint<BitWidth> > &log)"
+        }
+    ]
+}

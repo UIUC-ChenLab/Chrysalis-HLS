@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<WI>  max = 1;",
+            "Faulty Code": "ap_uint<WI>  max = 0;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline II=1 style=flp",
+            "Faulty Code": "#pragma HLS array_partition variable=buffer factor=3"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ActType buf[ImgDim / PoolDim][NumChannels];",
+            "Faulty Code": "ActType buf[ImgDim / PoolDim + 1][NumChannels]; // Incorrect buffer size, may lead to out-of-bounds access"
+        }
+    ]
+}

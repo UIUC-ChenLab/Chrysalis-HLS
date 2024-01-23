@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<OutWidth> eo = 0;",
+            "Faulty Code": "ap_uint<OutWidth> eo;"
+        }
+    ]
+}

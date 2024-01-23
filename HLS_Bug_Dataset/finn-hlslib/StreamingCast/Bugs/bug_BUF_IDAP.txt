@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out.write((OutT) in.read());",
+            "Faulty Code": "out.write((OutT) in.read()); // Assuming 'in' is a split buffer and this line is outside of the context where it's safe"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS interface port=in mode=ap_fifo // Incorrect mode may cause data to be consumed incorrectly, assuming there's a pragma outside of this snippet"
+        }
+    ]
+}

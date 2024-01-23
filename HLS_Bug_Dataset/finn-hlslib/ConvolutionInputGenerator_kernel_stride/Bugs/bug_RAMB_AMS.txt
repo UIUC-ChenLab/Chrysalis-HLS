@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_S2P impl=LUTRAM",
+            "Faulty Code": "#pragma HLS INTERFACE port=inputBuf mode=m_axi"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "ap_uint<SIMD*Input_precision> inputBuf[number_blocks][IFMDim * multiplying_factor];",
+            "Faulty Code": "#pragma HLS INTERFACE port=inputBuf mode=ap_none"
+        }
+    ]
+}

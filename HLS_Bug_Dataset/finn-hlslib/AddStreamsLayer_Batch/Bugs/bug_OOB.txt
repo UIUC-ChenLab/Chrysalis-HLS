@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "Out_t sum = op1 + op2 + offset;",
+            "Faulty Code": "Out_t sum = op1 + op2 + offset + e[(NumChannels + 1) * Out_t::width - 1];"
+        }
+    ]
+}

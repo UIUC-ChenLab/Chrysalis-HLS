@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<2> &errortype",
+            "Faulty Code": "ap_uint<2> errortype"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "reps* OFMDim * OFMDim",
+            "Faulty Code": "reps* (OFMDim-1) * OFMDim"
+        }
+    ]
+}

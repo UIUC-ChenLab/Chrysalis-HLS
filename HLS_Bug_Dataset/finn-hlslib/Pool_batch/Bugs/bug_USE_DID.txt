@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "accu[pe] = function.pool(slice_channels(pe,0), accu[pe]);",
+            "Faulty Code": "accu[pe] = function.pool((short)slice_channels(pe,0), accu[pe]);"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=accu complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=accu complete dim=1"
+        }
+    ]
+}

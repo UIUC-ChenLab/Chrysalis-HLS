@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_int<COUNTER_WIDTH> counter_x = -1;",
+            "Faulty Code": "ap_int<COUNTER_WIDTH> counter_x;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=IFMChannels/SIMD",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

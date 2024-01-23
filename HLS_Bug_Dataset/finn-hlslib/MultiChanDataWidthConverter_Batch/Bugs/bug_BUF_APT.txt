@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "eo.data[v] = (ei.data[v])(OutWidth - 1, 0);",
+            "Faulty Code": "eo.data[v] = (ei.data[v])(InWidth - 1, 0); // Assuming InWidth > OutWidth"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic // Incorrect partitioning type used"
+        }
+    ]
+}

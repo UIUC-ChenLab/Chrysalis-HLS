@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<2> &errortype",
+            "Faulty Code": "ap_uint<2> errortype"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "Matrix_Vector_Activate_Batch<MatrixW, MatrixH, SIMD, PE, 1, TSrcI, TDstI, TWeightI>",
+            "Faulty Code": "Matrix_Vector_Activate_Batch<MatrixW, MatrixH, SIMD, PE, 1, TSrcI, TDstI, TWeightI> #pragma HLS pipeline"
+        }
+    ]
+}

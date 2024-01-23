@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "buf[i][ch] = min_value;",
+            "Faulty Code": "// buf[i][ch] = min_value;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<NumChannels*ActType::width> > wa_in(\"StreamingMaxPool_Precision_Batch.wa_in\");",
+            "Faulty Code": "hls::stream<ap_uint<NumChannels*ActType::width> > wa_in;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void AddStreamsLayer_Batch(hls::stream<ap_uint<NumChannels * In1_t::width>> &in1, hls::stream<ap_uint<NumChannels * In2_t::width>> &in2, hls::stream<ap_uint<NumChannels * Out_t::width>> &out, const unsigned int numReps) {",
+            "Faulty Code": "void AddStreamsLayer_Batch(hls::stream<ap_uint<NumChannels * In1_t::width>> &in1, hls::stream<ap_uint<NumChannels * In2_t::width>> &in2, hls::stream<ap_uint<NumChannels * Out_t::width>> &out, const unsigned int numReps) {\n#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (i == inPerOut) {",
+            "Faulty Code": "if (i == inPerOut - 1) {"
+        }
+    ]
+}

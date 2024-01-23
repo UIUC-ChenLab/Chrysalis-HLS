@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "if (numLeft > 0) {",
+            "Faulty Code": "if (numLeft - 1 > 0) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "void StreamLimiter_Batch(hls::stream<ap_uint<DataWidth> > & in, hls::stream<ap_uint<DataWidth> > & out, unsigned int numReps) {",
+            "Faulty Code": "#pragma HLS pipeline // Incorrect placement\nvoid StreamLimiter_Batch(hls::stream<ap_uint<DataWidth> > & in, hls::stream<ap_uint<DataWidth> > & out, unsigned int numReps) {"
+        }
+    ]
+}

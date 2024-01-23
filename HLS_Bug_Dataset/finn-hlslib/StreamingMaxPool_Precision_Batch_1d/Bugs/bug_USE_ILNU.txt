@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned const highBit = (p+1) * ActType::width -1;",
+            "Faulty Code": "int const highBit = (p+1) * ActType::width -1;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        }
+    ]
+}

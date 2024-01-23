@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned int rep = 0;",
+            "Faulty Code": "unsigned int rep;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "const unsigned int numWords = numBytes / (DataWidth / 8);",
+            "Faulty Code": "const unsigned int numWords = 0;"
+        }
+    ]
+}

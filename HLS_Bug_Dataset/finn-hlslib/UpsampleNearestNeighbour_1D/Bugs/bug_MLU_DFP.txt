@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if(++rep == REPS)  rep = 0;",
+            "Faulty Code": "if(rep++ == REPS)  rep = 0;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline II=1 style=flp",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

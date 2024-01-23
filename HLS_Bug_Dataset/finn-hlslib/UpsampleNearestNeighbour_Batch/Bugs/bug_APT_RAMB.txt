@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "ap_uint<NumChannels * In_t::width> RowBuf[IFMDim];",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=RowBuf"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "out.write(outData);",
+            "Faulty Code": "#pragma HLS interface m_axi port=outData"
+        }
+    ]
+}

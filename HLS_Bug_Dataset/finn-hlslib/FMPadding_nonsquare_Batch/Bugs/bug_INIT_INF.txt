@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<SIMD*In_t::width>  outData = 0;",
+            "Faulty Code": "ap_uint<SIMD*In_t::width>  outData;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned int rep = 0; rep < numReps; rep++) {",
+            "Faulty Code": "for (unsigned int rep = 0; rep <= numReps; rep++) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "inElem = inputBuf[sf];",
+            "Faulty Code": "inElem = inputBuf[sf + SF/2]; // Assuming SF is even and this is meant to access the second half of the buffer"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "outElem(pe,mmv,1) = activation.activate(nf, pe, accu[mmv][pe]);",
+            "Faulty Code": "outElem(pe,mmv,1) = (short)activation.activate(nf, pe, accu[mmv][pe]); // Assuming activation.activate returns int and there is an unintended narrowing conversion to short"
+        }
+    ]
+}

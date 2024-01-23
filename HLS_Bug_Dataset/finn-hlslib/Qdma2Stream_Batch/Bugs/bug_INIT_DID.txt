@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "for (unsigned int image = 0; image < numReps; image++) {",
+            "Faulty Code": "unsigned int image; for (image = 0; image < numReps; image++) {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=in dim=2"
+        }
+    ]
+}

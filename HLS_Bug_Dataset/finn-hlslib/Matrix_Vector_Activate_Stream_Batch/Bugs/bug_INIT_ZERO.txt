@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "inputBuf[sf] = inElem;",
+            "Faulty Code": "// inputBuf[sf] = inElem; // Uninitialized usage of inputBuf[sf] as this line is commented out"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "accu[0][pe] = activation.init(nf, pe);",
+            "Faulty Code": "accu[0][pe] = 0; // Incorrectly initializing accu[0][pe] to zero"
+        }
+    ]
+}

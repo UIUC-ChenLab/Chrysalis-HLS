@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<SIMD*Input_precision> inputBuf[cycles_read_block];",
+            "Faulty Code": "ap_uint<SIMD*Input_precision> inputBuf[cycles_read_block]; // Missing initialization of inputBuf, could lead to reading uninitialized values"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_S2P impl=LUTRAM",
+            "Faulty Code": "#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_S2P impl=LUTRAM\n#pragma HLS array_partition variable=inputBuf factor=multiplying_factor cyclic // Faulty if multiplying_factor is not divisible by cycles_read_block"
+        }
+    ]
+}

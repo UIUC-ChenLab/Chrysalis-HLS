@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "out.write(in.read().get_data());",
+            "Faulty Code": "out.write((ap_int<DataWidth>)in.read().get_data());"
+        }
+    ]
+}

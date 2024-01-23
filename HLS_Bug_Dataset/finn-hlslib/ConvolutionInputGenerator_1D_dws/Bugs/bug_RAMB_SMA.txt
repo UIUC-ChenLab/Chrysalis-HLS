@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "memory_resource(buffer, r);",
+            "Faulty Code": "#pragma HLS interface m_axi port=buffer offset=slave // Incorrect placement, should be outside the function"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "ap_uint<SIMD*Input_precision>  buffer[BUFFER_SIZE];",
+            "Faulty Code": "#pragma HLS interface bram port=buffer // Incorrect, 'buffer' should not be mapped as a bram interface"
+        }
+    ]
+}

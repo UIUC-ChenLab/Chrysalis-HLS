@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "while (rep != numReps) {",
+            "Faulty Code": "while (rep <= numReps) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "rep += 16;",
+            "Faulty Code": "rep += 15;"
+        }
+    ]
+}

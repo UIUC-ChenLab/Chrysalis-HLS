@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned int numLeft = NumAllowed;",
+            "Faulty Code": "unsigned int numLeft;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<DataWidth> e = in.read();",
+            "Faulty Code": "int e = in.read();"
+        }
+    ]
+}

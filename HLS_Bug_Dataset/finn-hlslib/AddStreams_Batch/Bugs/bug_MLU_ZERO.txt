@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned int j = 0; j < NumChannels; j++) {",
+            "Faulty Code": "for (unsigned int j = 0; j <= NumChannels; j++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "Out_t sum = op1 + op2 + offset;",
+            "Faulty Code": "Out_t sum = op1 + op2;"
+        }
+    ]
+}

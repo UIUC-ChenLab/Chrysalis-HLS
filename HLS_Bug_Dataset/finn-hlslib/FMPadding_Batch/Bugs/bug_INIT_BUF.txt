@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<SIMD*In_t::width>  outData = 0;",
+            "Faulty Code": "ap_uint<SIMD*In_t::width>  outData;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "outData = in.read();",
+            "Faulty Code": "outData = in.read(); // Assuming this line is mistakenly placed outside the conditional block where it should be"
+        }
+    ]
+}

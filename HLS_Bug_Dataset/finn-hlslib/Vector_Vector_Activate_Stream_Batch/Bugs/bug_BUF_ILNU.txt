@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outElem(pe,mmv,1) = activation.activate(nf, pe, accu[mmv][pe]);",
+            "Faulty Code": "outElem(pe,mmv,1) = activation.activate(nf, pe, accu[pe][mmv]);"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        }
+    ]
+}

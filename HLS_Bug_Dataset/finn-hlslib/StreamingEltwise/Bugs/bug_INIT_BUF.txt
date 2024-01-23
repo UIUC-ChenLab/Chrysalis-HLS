@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "auto outElem = SliceOut().template operator()<TStrmOut>();",
+            "Faulty Code": "TStrmOut outElem;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "outElem(pe, 0, 1) = f(in0_slice_channels(pe, 0), in1_slice_channels(pe, 0));",
+            "Faulty Code": "outElem(pe, 0, 1) = f(in0_slice_channels(pe, 0, 1), in1_slice_channels(pe, 0, 1));"
+        }
+    ]
+}

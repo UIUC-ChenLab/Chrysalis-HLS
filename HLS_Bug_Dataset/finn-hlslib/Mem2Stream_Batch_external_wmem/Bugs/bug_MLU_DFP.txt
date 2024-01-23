@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void Mem2Stream_Batch_external_wmem(ap_uint<DataWidth> * in, hls::stream<ap_uint<DataWidth> > & out, const unsigned int numReps) {",
+            "Faulty Code": "#pragma HLS dataflow void Mem2Stream_Batch_external_wmem(ap_uint<DataWidth> * in, hls::stream<ap_uint<DataWidth> > & out, const unsigned int numReps) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned int i = 0; i < numWords; i++) {",
+            "Faulty Code": "for (unsigned int i = 0; i <= numWords; i++) {"
+        }
+    ]
+}

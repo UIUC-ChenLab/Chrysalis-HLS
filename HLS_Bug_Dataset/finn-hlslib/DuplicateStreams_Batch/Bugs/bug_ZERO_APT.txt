@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "for (unsigned int image = 0; image < numReps; image++) {",
+            "Faulty Code": "for (unsigned int image = 1; image <= numReps; image++) {"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=e type=complete"
+        }
+    ]
+}

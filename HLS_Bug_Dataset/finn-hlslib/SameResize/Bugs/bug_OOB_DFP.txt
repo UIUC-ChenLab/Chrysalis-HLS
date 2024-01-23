@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "inData = in.read();",
+            "Faulty Code": "inData = in.read(); // Assuming 'in' has more data than it actually does can cause OOB when the stream is empty"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS dataflow // Incorrectly placed inside the nested loop, should be outside at the function scope"
+        }
+    ]
+}

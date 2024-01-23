@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outElem(pe, 0, 1) = f(in0_slice_channels(pe, 0), in1_slice_channels(pe, 0));",
+            "Faulty Code": "outElem(pe, 0, 1) = f(in0_slice_channels(pe+1, 0), in1_slice_channels(pe+1, 0));"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "auto const  in0_slice_channels = SliceIn0()(in0.read(), 0);",
+            "Faulty Code": "auto const  in0_slice_channels = in0.read(); // Assuming SliceIn0 returns a single value instead of a slice"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "for(unsigned int i = 0; i < numReps; i++) {",
+            "Faulty Code": "unsigned int i; for(i = 1; i <= numReps; i++) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned int i = 0; i < numReps; i++) {",
+            "Faulty Code": "for(unsigned int i = 0; i < numReps - 1; i++) {"
+        }
+    ]
+}

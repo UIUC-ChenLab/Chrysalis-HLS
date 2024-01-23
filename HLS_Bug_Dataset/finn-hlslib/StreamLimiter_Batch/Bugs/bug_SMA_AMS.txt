@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<DataWidth> > & in",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=in"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<DataWidth> > & out",
+            "Faulty Code": "#pragma HLS INTERFACE s_axilite port=out"
+        }
+    ]
+}

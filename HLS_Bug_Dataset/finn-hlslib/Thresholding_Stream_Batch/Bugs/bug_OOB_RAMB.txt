@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned i = 0; i < reps * ImgDim * NF; i++)",
+            "Faulty Code": "for (unsigned i = 0; i <= reps * ImgDim * NF; i++)"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "out.write(outElem);",
+            "Faulty Code": "out.write(outElem(pe, 0, 1));"
+        }
+    ]
+}

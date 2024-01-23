@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ActType buf[ImgDim / PoolDim][NumChannels];",
+            "Faulty Code": "ActType buf[ImgDim / PoolDim - 1][NumChannels]; // Off by one error in buffer size"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "buf[outpix][ch] = min_value;",
+            "Faulty Code": "buf[outpix + 1][ch] = min_value; // Incorrectly accessing the next row which might not exist"
+        }
+    ]
+}

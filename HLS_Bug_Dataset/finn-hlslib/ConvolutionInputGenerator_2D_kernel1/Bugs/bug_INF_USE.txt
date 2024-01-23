@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "counter_y = keep_y ? ap_int<COUNTER_WIDTH>(COUNTER_RESET) : ap_int<COUNTER_WIDTH>(counter_y - 1);",
+            "Faulty Code": "counter_y = keep_y ? ap_int<COUNTER_WIDTH>(COUNTER_RESET) : ap_int<COUNTER_WIDTH>(counter_y + 1);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_int<COUNTER_WIDTH> counter_x = -1;",
+            "Faulty Code": "int counter_x = -1;"
+        }
+    ]
+}

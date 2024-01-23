@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void StreamingMaxPool_Batch(hls::stream<ap_uint<NumChannels> > & in, hls::stream<ap_uint<NumChannels> > & out, unsigned int numReps) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid StreamingMaxPool_Batch(hls::stream<ap_uint<NumChannels> > & in, hls::stream<ap_uint<NumChannels> > & out, unsigned int numReps) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline\n#pragma HLS pipeline style=flp II=1"
+        }
+    ]
+}

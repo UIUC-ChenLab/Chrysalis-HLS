@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out.write(outputData);",
+            "Faulty Code": "out.write(buf[ch]);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void StreamingMaxPool_Precision_1d(hls::stream<ap_uint<PE*ActType::width> > & in, hls::stream<ap_uint<PE*ActType::width> > & out)",
+            "Faulty Code": "#pragma HLS INTERFACE port=buf mode=s_axilite"
+        }
+    ]
+}

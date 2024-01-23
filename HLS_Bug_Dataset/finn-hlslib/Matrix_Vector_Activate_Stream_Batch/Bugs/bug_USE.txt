@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "accu[0][pe] = mac<SIMD>(accu[0][pe], wgt, act, r, 0);",
+            "Faulty Code": "accu[0][pe] = (int)mac<SIMD>(accu[0][pe], wgt, act, r, 0);"
+        }
+    ]
+}

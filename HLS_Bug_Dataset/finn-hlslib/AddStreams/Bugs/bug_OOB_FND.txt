@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "e1((j + 1) * In1_t::width - 1, j * In1_t::width);",
+            "Faulty Code": "e1((j + 1) * In1_t::width, j * In1_t::width);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=e factor=3"
+        }
+    ]
+}

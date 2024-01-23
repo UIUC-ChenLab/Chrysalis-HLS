@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned int count_image = 0; count_image < numReps; count_image++) {",
+            "Faulty Code": "for (unsigned int count_image = 0; count_image <= numReps; count_image++) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf cyclic factor=3 dim=1"
+        }
+    ]
+}

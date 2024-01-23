@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (; offset <= (InWidth-OutWidth) ; offset+=OutWidth){\n    ap_uint<OutWidth>   valueOut = valueIn(OutWidth-1,0);\n    valueIn = valueIn(InWidth-1,OutWidth); // leave the next part prepared \n    out.write(valueOut);\n  }",
+            "Faulty Code": "#pragma HLS pipeline\nfor (; offset <= (InWidth-OutWidth) ; offset+=OutWidth){\n    #pragma HLS pipeline\n    ap_uint<OutWidth>   valueOut = valueIn(OutWidth-1,0);\n    valueIn = valueIn(InWidth-1,OutWidth); // leave the next part prepared \n    out.write(valueOut);\n  }"
+        }
+    ]
+}

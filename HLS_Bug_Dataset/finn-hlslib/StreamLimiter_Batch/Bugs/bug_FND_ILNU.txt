@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "void StreamLimiter(hls::stream<ap_uint<DataWidth> > & in,\n\t\thls::stream<ap_uint<DataWidth> > & out) {",
+            "Faulty Code": "void StreamLimiter(hls::stream<ap_uint<DataWidth> > & in,\n\t\thls::stream<ap_uint<DataWidth> > & out) {\n#pragma HLS array_partition factor=3"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned int rep = 0; rep < numReps; rep++) {\n    StreamLimiter<DataWidth, NumAllowed, NumTotal>(in, out);\n  }",
+            "Faulty Code": "for (unsigned int rep = 0; rep < numReps; rep++) {\n#pragma HLS unroll factor=2\n    StreamLimiter<DataWidth, NumAllowed, NumTotal>(in, out);\n  }"
+        }
+    ]
+}

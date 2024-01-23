@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ActType const channeldata = inputData(highBit, lowBit);",
+            "Faulty Code": "int const channeldata = inputData(highBit, lowBit);"
+        }
+    ]
+}

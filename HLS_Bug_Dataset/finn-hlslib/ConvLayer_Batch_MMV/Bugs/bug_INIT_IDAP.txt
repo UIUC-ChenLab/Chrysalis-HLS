@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned const MatrixW = ConvKernelDim * ConvKernelDim * IFMChannels;",
+            "Faulty Code": "unsigned const MatrixW;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<ap_uint<SIMD * TSrcI::width> > wa_in(\"StreamingConvLayerMMV_Batch.wa_in\");",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=wa_in"
+        }
+    ]
+}

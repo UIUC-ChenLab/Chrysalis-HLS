@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outData = RowBuf[(x-PaddingLeft)/scale_factor];",
+            "Faulty Code": "outData = RowBuf[x/scale_factor]; // Incorrectly accesses the buffer without accounting for padding"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS unroll factor=2 // Incorrectly placed unroll pragma without fully unrolling the innermost loop"
+        }
+    ]
+}

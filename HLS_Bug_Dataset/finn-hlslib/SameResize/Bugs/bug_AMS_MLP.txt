@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void SameResize(hls::stream<ap_uint<NumChannels* In_t::width> > &in, hls::stream<ap_uint<NumChannels* In_t::width> > &out){",
+            "Faulty Code": "void SameResize(hls::stream<ap_uint<NumChannels* In_t::width> > in, hls::stream<ap_uint<NumChannels* In_t::width> > &out){"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

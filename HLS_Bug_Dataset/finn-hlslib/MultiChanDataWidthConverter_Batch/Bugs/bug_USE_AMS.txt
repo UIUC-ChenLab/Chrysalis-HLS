@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ei.data[v] = ei.data[v] >> OutWidth;",
+            "Faulty Code": "ei.data[v] = (int)ei.data[v] >> OutWidth;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "MultiChanData<NumVecs, InWidth> ei;",
+            "Faulty Code": "#pragma HLS interface port=ei mode=ap_none"
+        }
+    ]
+}

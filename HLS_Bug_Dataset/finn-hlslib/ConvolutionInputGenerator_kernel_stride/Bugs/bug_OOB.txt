@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<SIMD*Input_precision> outElem = inputBuf[current_block_read][(current_line_in_block)];",
+            "Faulty Code": "ap_uint<SIMD*Input_precision> outElem = inputBuf[current_block_read][(current_line_in_block+1)];"
+        }
+    ]
+}

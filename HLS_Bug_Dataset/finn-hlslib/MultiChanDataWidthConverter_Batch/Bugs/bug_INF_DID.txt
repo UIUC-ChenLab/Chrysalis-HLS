@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned int t = 0; t < totalIters; t++) {",
+            "Faulty Code": "for (unsigned int t = 0; t <= totalIters; t++) {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=eo.data dim=1"
+        }
+    ]
+}

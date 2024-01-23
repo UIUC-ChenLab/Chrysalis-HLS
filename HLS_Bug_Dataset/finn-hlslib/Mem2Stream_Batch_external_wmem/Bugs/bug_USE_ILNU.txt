@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "while (rep != numReps) {",
+            "Faulty Code": "#pragma HLS unroll\nwhile (rep != numReps) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<DataWidth> e = in[i];",
+            "Faulty Code": "int e = in[i];"
+        }
+    ]
+}

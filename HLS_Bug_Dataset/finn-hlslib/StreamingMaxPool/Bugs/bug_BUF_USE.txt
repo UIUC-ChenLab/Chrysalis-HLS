@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "buf[xp] |= acc;",
+            "Faulty Code": "buf[xp + ImgDim / PoolDim] |= acc;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "acc = acc | in.read();",
+            "Faulty Code": "acc = acc | (in.read() & 0xFFFF);"
+        }
+    ]
+}

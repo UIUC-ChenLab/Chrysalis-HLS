@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned int read_block = 0;",
+            "Faulty Code": "unsigned int read_block;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=2"
+        }
+    ]
+}

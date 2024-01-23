@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL\ninputBuf[v][current_block_write][current_line] = inElem;",
+            "Faulty Code": "for (unsigned int v = 0; v < MMV; v++) {\n#pragma HLS UNROLL factor=4\ninputBuf[v][current_block_write][current_line] = inElem;\n}"
+        }
+    ]
+}

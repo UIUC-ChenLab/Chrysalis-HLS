@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outData = in.read();",
+            "Faulty Code": "outData = in.read(); // Assuming the buffer is split and reading from the wrong half"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<SIMD*In_t::width>> &in",
+            "Faulty Code": "hls::stream<ap_uint<SIMD*In_t::width>> &in // Mistakenly mapping this as an array interface with the port name in a pragma"
+        }
+    ]
+}

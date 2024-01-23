@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "const unsigned int indsPerRep = numBytes / (DataWidth / 8);",
+            "Faulty Code": "unsigned int rep = 0;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo"
+        }
+    ]
+}

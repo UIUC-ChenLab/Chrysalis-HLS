@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "o.data[v] = e(DataWidth*(v+1)-1, DataWidth*v);",
+            "Faulty Code": "o.data[v] = e(DataWidth*(v+2)-1, DataWidth*v);"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "o.data[v] = e(DataWidth*(v+1)-1, DataWidth*v);",
+            "Faulty Code": "o.data[v] = e(DataWidth*(v)-1, DataWidth*(v-1));"
+        }
+    ]
+}

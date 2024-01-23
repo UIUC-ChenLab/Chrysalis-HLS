@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<NumChannels> buf[ImgDim / PoolDim];",
+            "Faulty Code": "// Faulty initialization omitted for buf array"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned int i = 0; i < ImgDim / PoolDim; i++) {",
+            "Faulty Code": "for(unsigned int i = 0; i < ImgDim / PoolDim - 1; i++) { // Incorrect loop unrolling, missing last iteration"
+        }
+    ]
+}

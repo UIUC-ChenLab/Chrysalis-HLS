@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "res += mul(c[i], d[i], r);",
+            "Faulty Code": "res += mul(c[i + 1], d[i + 1], r); // Assuming N is the exact size of arrays c and d"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS unroll",
+            "Faulty Code": "#pragma HLS unroll factor=2 // Incorrect factor leading to potential non-consecutive memory access if N is not divisible by 2"
+        }
+    ]
+}

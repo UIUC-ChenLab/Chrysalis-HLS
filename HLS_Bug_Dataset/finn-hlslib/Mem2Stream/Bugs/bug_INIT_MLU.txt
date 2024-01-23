@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<DataWidth> e = in[i];",
+            "Faulty Code": "ap_uint<DataWidth> e; // Missing initialization"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned int i = 0; i < numWords; i++) {",
+            "Faulty Code": "for (unsigned int i = 0; i <= numWords; i++) { // Incorrect loop bounds"
+        }
+    ]
+}

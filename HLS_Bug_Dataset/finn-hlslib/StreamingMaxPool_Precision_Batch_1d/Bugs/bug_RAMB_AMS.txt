@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS interface port=buf mode=m_axi"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS interface port=outputData mode=ap_none"
+        }
+    ]
+}

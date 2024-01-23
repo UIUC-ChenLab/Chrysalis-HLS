@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out[i] = e;",
+            "Faulty Code": "out[i + numWords] = e; // Incorrectly accessing the wrong half of the buffer"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS unroll factor=4 // Attempting to partially unroll a loop that should be pipelined"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ei.data[v] = ei.data[v] >> OutWidth;",
+            "Faulty Code": "(ei.data[v])(OutWidth - 1, 0) = (ei.data[v])(OutWidth - 1, 0) >> OutWidth;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic"
+        }
+    ]
+}

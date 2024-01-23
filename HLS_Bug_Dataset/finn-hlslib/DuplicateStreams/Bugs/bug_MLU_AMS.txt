@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned int i = 0; i < NumTotal; i++) {",
+            "Faulty Code": "for (unsigned int i = 0; i <= NumTotal; i++) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void DuplicateStreams(hls::stream<ap_uint<DataWidth> > & in, hls::stream<ap_uint<DataWidth> > & out1, hls::stream<ap_uint<DataWidth> > & out2) {",
+            "Faulty Code": "void DuplicateStreams(hls::stream<ap_uint<DataWidth> > & in, ap_uint<DataWidth> & out1, hls::stream<ap_uint<DataWidth> > & out2) {"
+        }
+    ]
+}

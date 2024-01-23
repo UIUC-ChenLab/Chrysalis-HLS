@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition dim=2"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<TI> &in",
+            "Faulty Code": "#pragma HLS interface port=in bram"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "accu[mmv][pe] = mac<SIMD>(accu[mmv][pe], wgt, act, r, mmv);",
+            "Faulty Code": "accu[mmv][pe] = mac<SIMD>((int)accu[mmv][pe], wgt, act, r, mmv);"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=1"
+        }
+    ]
+}

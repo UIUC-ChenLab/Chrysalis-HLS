@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (counter_internal_block < cycles_write_block-1 || read_block==IFMDim)",
+            "Faulty Code": "if (counter_internal_block < cycles_write_block || read_block==IFMDim)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "inputBuf[current_block_write][current_line] = inElem;",
+            "Faulty Code": "inputBuf[current_block_read][current_line] = inElem;"
+        }
+    ]
+}

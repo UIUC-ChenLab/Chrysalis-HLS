@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS interface port=buf mode=m_axi"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "outputData(highBit, lowBit) = buf[ch][p];",
+            "Faulty Code": "#pragma HLS interface port=outputData mode=s_axilite"
+        }
+    ]
+}

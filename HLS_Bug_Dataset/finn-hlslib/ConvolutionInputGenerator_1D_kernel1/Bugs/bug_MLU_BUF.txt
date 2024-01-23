@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned int count_simd = 0; count_simd < IFMChannels/SIMD; count_simd++) {",
+            "Faulty Code": "for (unsigned int count_simd = 0; count_simd <= IFMChannels/SIMD; count_simd++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "ap_uint<SIMD*Input_precision> inElem = in.read();",
+            "Faulty Code": "ap_uint<SIMD*Input_precision> inElem = in.peek();"
+        }
+    ]
+}

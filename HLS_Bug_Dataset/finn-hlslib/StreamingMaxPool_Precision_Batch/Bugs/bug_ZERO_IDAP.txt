@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "buf[i][ch] = min_value;",
+            "Faulty Code": "buf[i][ch] = 0;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "inputData = in.read();",
+            "Faulty Code": "if (!in.empty()) inputData = in.read();"
+        }
+    ]
+}

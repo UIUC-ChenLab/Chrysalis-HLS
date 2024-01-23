@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "buf_t     buf;",
+            "Faulty Code": "int     buf;"
+        }
+    ]
+}

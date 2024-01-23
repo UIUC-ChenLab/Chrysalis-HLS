@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned int rep = 0; rep < numReps; rep++) {",
+            "Faulty Code": "for (unsigned int rep = 0; rep <= numReps; rep++) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "// No Padding\nelse{\ninData = in.read();\noutData = inData;\n}",
+            "Faulty Code": "// No Padding\nelse{\noutData = in.read();\n}"
+        }
+    ]
+}

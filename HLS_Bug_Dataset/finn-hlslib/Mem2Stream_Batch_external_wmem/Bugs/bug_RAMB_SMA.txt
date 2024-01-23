@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void Mem2Stream(ap_uint<DataWidth> * in, hls::stream<ap_uint<DataWidth> > & out) {",
+            "Faulty Code": "void Mem2Stream(ap_uint<DataWidth> * in, hls::stream<ap_uint<DataWidth> > & out) { #pragma HLS interface m_axi port=in"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void Mem2Stream_Batch_external_wmem(ap_uint<DataWidth> * in, hls::stream<ap_uint<DataWidth> > & out, const unsigned int numReps) {",
+            "Faulty Code": "void Mem2Stream_Batch_external_wmem(ap_uint<DataWidth> & in, hls::stream<ap_uint<DataWidth> > & out, const unsigned int numReps) { #pragma HLS interface bram port=in"
+        }
+    ]
+}

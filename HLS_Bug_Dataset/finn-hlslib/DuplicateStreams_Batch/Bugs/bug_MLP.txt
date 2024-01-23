@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void DuplicateStreams(hls::stream<ap_uint<DataWidth> > & in, hls::stream<ap_uint<DataWidth> > & out1,\n\t\thls::stream<ap_uint<DataWidth> > & out2) {\n\t\n\tfor (unsigned int i = 0; i < NumTotal; i++) {\n#pragma HLS pipeline style=flp II=1\n\t\tap_uint<DataWidth> e = in.read();\n\t\t\n\t\tout1.write(e);\n\t\tout2.write(e);\n\t}\n}",
+            "Faulty Code": "void DuplicateStreams_Batch(hls::stream<ap_uint<DataWidth> > & in, hls::stream<ap_uint<DataWidth> > & out1,\n\t\thls::stream<ap_uint<DataWidth> > & out2, const unsigned int numReps) {\n\tfor (unsigned int image = 0; image < numReps; image++) {\n#pragma HLS pipeline\n\t\tDuplicateStreams<DataWidth, NumTotal>(in, out1, out2);\n\t}\n}"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "decltype(activation.init(0,0))  accu[MMV][PE];",
+            "Faulty Code": "decltype(activation.init(0,0))  accu[MMV][PE]; // Missing initialization could lead to use of uninitialized values"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=accu complete dim=0",
+            "Faulty Code": "#pragma HLS INTERFACE port=accu mode=ap_none // 'accu' is an array but mapped to scalar interface"
+        }
+    ]
+}

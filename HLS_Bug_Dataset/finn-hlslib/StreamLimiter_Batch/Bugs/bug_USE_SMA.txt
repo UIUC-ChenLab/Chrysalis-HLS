@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned int numLeft = NumAllowed;",
+            "Faulty Code": "int numLeft = NumAllowed;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void StreamLimiter_Batch(hls::stream<ap_uint<DataWidth> > & in, hls::stream<ap_uint<DataWidth> > & out, unsigned int numReps) {",
+            "Faulty Code": "void StreamLimiter_Batch(hls::stream<ap_uint<DataWidth> > & in, hls::stream<ap_uint<DataWidth> > & out [NumTotal], unsigned int numReps) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=ei.data dim=1"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (unsigned int t = 0; t < totalIters; t++) {\n#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "for (unsigned int t = 0; t < totalIters; t += outPerIn) {\n#pragma HLS pipeline style=flp II=1"
+        }
+    ]
+}

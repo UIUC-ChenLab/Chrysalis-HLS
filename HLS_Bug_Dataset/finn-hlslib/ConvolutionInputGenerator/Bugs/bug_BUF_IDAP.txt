@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "ap_uint<SIMD*Input_precision> outElem = inputBuf[current_block_read][(current_line_in_block)];",
+            "Faulty Code": "ap_uint<SIMD*Input_precision> outElem = inputBuf[current_block_write][(current_line_in_block)];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf cyclic dim=1 factor=multiplying_factor"
+        }
+    ]
+}

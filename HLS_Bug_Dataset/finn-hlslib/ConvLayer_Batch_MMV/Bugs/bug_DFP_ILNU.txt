@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "ConvolutionInputGenerator_MMV<ConvKernelDim, IFMChannels, TSrcI::width, IFMDim, OFMDim, SIMD, STRIDE, MMV>(wa_in, convInp, reps, ap_resource_dflt());",
+            "Faulty Code": "#pragma HLS unroll factor=2\nConvolutionInputGenerator_MMV<ConvKernelDim, IFMChannels, TSrcI::width, IFMDim, OFMDim, SIMD, STRIDE, MMV>(wa_in, convInp, reps, ap_resource_dflt());"
+        }
+    ]
+}

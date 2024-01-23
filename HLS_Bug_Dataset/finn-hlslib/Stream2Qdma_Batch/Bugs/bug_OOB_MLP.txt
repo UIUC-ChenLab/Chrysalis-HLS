@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "temp.set_last(word == NumTotal-1);",
+            "Faulty Code": "temp.set_last(word == NumTotal);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "for (unsigned int image = 0; image < numReps; image++) {\n#pragma HLS pipeline style=flp II=1\n..."
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned int rep = 0; rep < numReps; rep++) {",
+            "Faulty Code": "for (unsigned int rep = 0; rep <= numReps; rep++) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition factor=3"
+        }
+    ]
+}

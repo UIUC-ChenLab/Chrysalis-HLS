@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<PECount * In_T::width> > & in",
+            "Faulty Code": "ap_uint<PECount * In_T::width> in"
+        }
+    ]
+}

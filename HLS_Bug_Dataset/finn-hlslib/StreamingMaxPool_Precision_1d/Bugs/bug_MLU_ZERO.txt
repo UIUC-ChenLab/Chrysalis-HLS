@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned int p = 0; p < PE; p++){",
+            "Faulty Code": "for(unsigned int p = 0; p < PE-1; p++){"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "buf[ch][p] = min_value;",
+            "Faulty Code": "buf[ch][p] = 0;"
+        }
+    ]
+}

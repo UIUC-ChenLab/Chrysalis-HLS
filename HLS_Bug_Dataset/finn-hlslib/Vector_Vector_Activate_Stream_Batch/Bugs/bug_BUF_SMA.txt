@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "auto const  wgt = TWeightI()(w[pe]);",
+            "Faulty Code": "auto const  wgt = TWeightI()(w[sf]);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=accu complete dim=0",
+            "Faulty Code": "#pragma HLS INTERFACE port=accu bram"
+        }
+    ]
+}

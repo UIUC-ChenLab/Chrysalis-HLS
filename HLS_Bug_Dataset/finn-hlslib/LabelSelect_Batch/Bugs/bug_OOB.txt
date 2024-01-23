@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "topval   [i] = topval   [i+1];",
+            "Faulty Code": "topval   [i+1] = topval   [i+2];"
+        }
+    ]
+}

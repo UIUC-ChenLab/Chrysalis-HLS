@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "temp.set_last(word == NumTotal-1);",
+            "Faulty Code": "temp.set_last(word = NumTotal-1);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS interface port=out mode=ap_none"
+        }
+    ]
+}

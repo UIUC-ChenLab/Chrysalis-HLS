@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (unsigned int ch = 0; ch < NF; ch++){\n#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "for (unsigned int kx = 0; kx < PoolDim; kx++) {\n#pragma HLS pipeline style=flp II=1"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "ei = ei >> OutWidth;",
+            "Faulty Code": "ei = ei << OutWidth;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "ap_uint<OutWidth> eo = ei(OutWidth - 1, 0);",
+            "Faulty Code": "ap_uint<OutWidth> eo = ei;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition factor=3"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<ap_uint<PECount * In1_t::width>> in_folded1;",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=in_folded1"
+        }
+    ]
+}

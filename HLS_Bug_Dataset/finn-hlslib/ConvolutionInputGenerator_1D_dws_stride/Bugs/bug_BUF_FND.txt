@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out.write(buffer[rp]);",
+            "Faulty Code": "out.write(buffer[wp]); // Using the write pointer (wp) instead of the read pointer (rp) leads to copying from the wrong part of the buffer"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_S2P impl=LUTRAM",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf cyclic factor=3 // Assuming IFMChannels or SIMD_COUNT is not divisible by 3, this would lead to an invalid partitioning factor"
+        }
+    ]
+}

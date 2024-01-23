@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned const MatrixW = ConvKernelDim * ConvKernelDim * IFMChannels;",
+            "Faulty Code": "unsigned MatrixW; // Uninitialized variable"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "StreamingDataWidthConverter_Batch<MMV * OFMChannels * TDstI::width, OutStreamW, OFMDim * OFMDim / MMV>(mvOut, out, reps);",
+            "Faulty Code": "#pragma HLS unroll factor=2 // Incorrect placement as this is not an innermost loop\nStreamingDataWidthConverter_Batch<MMV * OFMChannels * TDstI::width, OutStreamW, OFMDim * OFMDim / MMV>(mvOut, out, reps);"
+        }
+    ]
+}

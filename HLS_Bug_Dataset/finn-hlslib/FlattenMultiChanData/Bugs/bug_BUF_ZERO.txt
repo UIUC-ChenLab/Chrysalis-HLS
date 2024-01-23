@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<NumChannels*DataWidth> o = 0;",
+            "Faulty Code": "ap_uint<NumChannels*DataWidth> o;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "o(DataWidth*(v+1)-1, DataWidth*v) = e.data[v];",
+            "Faulty Code": "o(DataWidth*(v)-1, DataWidth*(v-1)) = e.data[v];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned int ky = 0; ky < PoolDim; ky++) {",
+            "Faulty Code": "for (unsigned int ky = 0; ky <= PoolDim; ky++) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=buf complete dim=2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=buf cyclic factor=3 dim=2"
+        }
+    ]
+}

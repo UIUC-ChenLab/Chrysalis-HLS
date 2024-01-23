@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "Matrix_Vector_Activate_Batch<MatrixW, MatrixH, SIMD, PE, 1, TSrcI, TDstI, TWeightI>",
+            "Faulty Code": "Matrix_Vector_Activate_Batch<0, MatrixH, SIMD, PE, 1, TSrcI, TDstI, TWeightI>"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "StreamingDataWidthConverter_Batch<InStreamW, SIMD*TSrcI::width, InpPerImage>(in, wa_in, reps);",
+            "Faulty Code": "#pragma HLS array_partition variable=wa_in dim=2 complete"
+        }
+    ]
+}

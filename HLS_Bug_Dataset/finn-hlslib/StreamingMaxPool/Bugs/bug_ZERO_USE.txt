@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<NumChannels> acc = 0;",
+            "Faulty Code": "ap_uint<NumChannels> acc;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "out.write(buf[outpix]);",
+            "Faulty Code": "out.write((int)buf[outpix]);"
+        }
+    ]
+}

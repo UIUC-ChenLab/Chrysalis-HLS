@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition dim=2"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "StreamingMaxPool<ImgDim, PoolDim, NumChannels>(in, out);",
+            "Faulty Code": "#pragma HLS dataflow\n    StreamingMaxPool<ImgDim, PoolDim, NumChannels>(in, out);"
+        }
+    ]
+}

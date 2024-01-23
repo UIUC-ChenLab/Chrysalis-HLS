@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned int rep = 0; rep < numReps; rep++) {",
+            "Faulty Code": "for (unsigned int rep = 0; rep <= numReps; rep++) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (unsigned int xp = 0; xp < OutputSize; xp++) {",
+            "Faulty Code": "for (unsigned int xp = 0; xp < OutputSize; xp+=2) {"
+        }
+    ]
+}

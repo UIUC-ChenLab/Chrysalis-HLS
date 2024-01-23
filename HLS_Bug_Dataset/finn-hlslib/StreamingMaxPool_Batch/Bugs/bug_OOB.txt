@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for(unsigned int i = 0; i < ImgDim / PoolDim; i++) {\n#pragma HLS UNROLL\n    buf[i] = 0;\n  }",
+            "Faulty Code": "for(unsigned int i = 0; i <= ImgDim / PoolDim; i++) {\n#pragma HLS UNROLL\n    buf[i] = 0;\n  }"
+        }
+    ]
+}

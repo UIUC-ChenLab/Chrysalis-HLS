@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned const InpPerImage = IFMDim * IFMDim * IFMChannels * TSrcI::width / InStreamW;",
+            "Faulty Code": "unsigned const InpPerImage; // Uninitialized variable"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "Matrix_Vector_Activate_Batch<MatrixW, MatrixH, SIMD, PE, 1, TSrcI, TDstI, TWeightI>(...);",
+            "Faulty Code": "unsigned zeroInit = 0; // Incorrectly initializing a variable that requires a non-zero value\nMatrix_Vector_Activate_Batch<MatrixW, MatrixH, SIMD, PE, zeroInit, TSrcI, TDstI, TWeightI>(...);"
+        }
+    ]
+}

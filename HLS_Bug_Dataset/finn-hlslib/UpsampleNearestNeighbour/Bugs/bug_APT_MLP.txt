@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "ap_uint<NumChannels * In_t::width> RowBuf[IFMDim];",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic factor=2 variable=RowBuf"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

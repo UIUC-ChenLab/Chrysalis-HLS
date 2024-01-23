@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned int rep = 0; rep < numReps; rep++) {",
+            "Faulty Code": "for (unsigned int rep = 0; ; rep++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned int numLeft = NumAllowed;",
+            "Faulty Code": "unsigned int numLeft = 0;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "if(re) { out.write(buffer[rp]); if(++wcnt == ConvKernelDim_x){ rp += SIMD_COUNT + 1; wcnt = 0; } else{ rp += SIMD_COUNT; } if(rp >= BUFFER_SIZE) rp -= BUFFER_SIZE; if(++ocnt == BUFFER_SIZE)  ocnt = 0; }",
+            "Faulty Code": "if(re) { out.write(buffer[rp]); if(++wcnt == ConvKernelDim_x){ rp += SIMD_COUNT; wcnt = 0; } else{ rp += SIMD_COUNT; } if(rp >= BUFFER_SIZE) rp -= BUFFER_SIZE; if(++ocnt == BUFFER_SIZE)  ocnt = 0; }"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for(unsigned  i = 0; i < 1 + READ_CYCLES + OUTPUT_SIZE; i++) { #pragma HLS pipeline style=flp II=1 bool const  re = i > READ_CYCLES; bool const  we = (i < BUFFER_SIZE) || (ocnt < SIMD_COUNT); ... }",
+            "Faulty Code": "for(unsigned  i = 0; i < 1 + READ_CYCLES + OUTPUT_SIZE; i++) { #pragma HLS unroll factor=2 bool const  re = i > READ_CYCLES; bool const  we = (i < BUFFER_SIZE) || (ocnt < SIMD_COUNT); ... }"
+        }
+    ]
+}

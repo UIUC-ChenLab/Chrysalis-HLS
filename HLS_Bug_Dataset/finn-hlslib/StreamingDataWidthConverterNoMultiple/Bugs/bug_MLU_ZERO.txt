@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (; offset <= (InWidth-OutWidth) ; offset+=OutWidth){",
+            "Faulty Code": "for (; offset < (InWidth-OutWidth) ; offset+=OutWidth){"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static ap_uint<OutWidth> remainder = 0;",
+            "Faulty Code": "static ap_uint<OutWidth> remainder;"
+        }
+    ]
+}

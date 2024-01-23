@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "inputBuf[current_block_write][current_line] = inElem;",
+            "Faulty Code": "inputBuf[current_block_write + number_blocks / 2][current_line] = inElem;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<SIMD*Input_precision> outElem = inputBuf[current_block_read][(current_line_in_block)];",
+            "Faulty Code": "int outElem = inputBuf[current_block_read][(current_line_in_block)];"
+        }
+    ]
+}

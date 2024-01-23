@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "hls::stream<ap_uint<MMV * OFMChannels * TDstI::width> > mvOut(\"StreamingConvLayerMMV_Batch.mvOut\");",
+            "Faulty Code": "hls::stream<ap_int<MMV * OFMChannels * TDstI::width> > mvOut(\"StreamingConvLayerMMV_Batch.mvOut\");"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<InStreamW>>  &in,",
+            "Faulty Code": "ap_uint<InStreamW> &in,"
+        }
+    ]
+}

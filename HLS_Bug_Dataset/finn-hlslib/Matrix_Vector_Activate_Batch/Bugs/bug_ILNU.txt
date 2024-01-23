@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned  pe = 0; pe < PE; pe++) { #pragma HLS UNROLL for (unsigned mmv = 0; mmv < MMV; mmv++){ #pragma HLS UNROLL accu[mmv][pe] = activation.init(nf, pe); } }",
+            "Faulty Code": "for (unsigned  pe = 0; pe < PE; pe++) { #pragma HLS UNROLL factor=4 for (unsigned mmv = 0; mmv < MMV; mmv++){ accu[mmv][pe] = activation.init(nf, pe); } }"
+        }
+    ]
+}

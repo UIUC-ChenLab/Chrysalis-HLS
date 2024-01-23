@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void ConvLayer_Batch_MMV(hls::stream<ap_uint<InStreamW>>  &in,",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=in"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<PECount * AccType::width> accumulators[NumChannels/PECount];",
+            "Faulty Code": "ap_uint<PECount * AccType::width> accumulators[PECount]; // Error: Should be NumChannels/PECount, not PECount"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "out.write(accumulators[fold]);",
+            "Faulty Code": "#pragma HLS interface port=accumulators // Error: 'accumulators' is an array, should not be mapped to a scalar interface"
+        }
+    ]
+}

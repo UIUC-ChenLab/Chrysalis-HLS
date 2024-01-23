@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned int i = 0; i < NumTotal; i++) {",
+            "Faulty Code": "for (unsigned int i = 0; i <= NumTotal; i++) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned int image = 0; image < numReps; image++) {",
+            "Faulty Code": "#pragma HLS unroll factor=2\n\tfor (unsigned int image = 0; image < numReps; image++) {"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (unsigned int j = 0; j < NumChannels; j++) {",
+            "Faulty Code": "#pragma HLS array_partition variable=e1 factor=4\n for (unsigned int j = 0; j < NumChannels; j++) {"
+        }
+    ]
+}

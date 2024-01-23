@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "constexpr unsigned int scale_factor = OFMDim/IFMDim;",
+            "Faulty Code": "#pragma HLS array_partition variable=RowBuf factor=scale_factor cyclic"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void UpsampleNearestNeighbour_Batch(...){...}",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

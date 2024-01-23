@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<SIMD*Input_precision> inElem = in.read();",
+            "Faulty Code": "ap_uint<SIMD*Input_precision> inElem = in.read(count_simd);"
+        }
+    ]
+}

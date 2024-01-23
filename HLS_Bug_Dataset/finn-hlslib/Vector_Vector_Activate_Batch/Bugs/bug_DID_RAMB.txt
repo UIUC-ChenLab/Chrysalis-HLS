@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=accu complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=accu complete dim=3"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "accu[mmv][pe] += mul(wgt[0], act(pe,mmv), r);",
+            "Faulty Code": "accu[pe][mmv] += mul(wgt[0], act(pe,mmv), r);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "hls::stream<ap_uint<SIMD * TSrcI::width> > wa_in(\"StreamingConvLayerMMV_Batch.wa_in\");",
+            "Faulty Code": "hls::stream<ap_uint<(SIMD+1) * TSrcI::width> > wa_in(\"StreamingConvLayerMMV_Batch.wa_in\");"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "Matrix_Vector_Activate_Batch<MatrixW, MatrixH, SIMD, PE, MMV, TSrcI, TDstI, TWeightI>",
+            "Faulty Code": "#pragma HLS pipeline\nMatrix_Vector_Activate_Batch<MatrixW, MatrixH, SIMD, PE, MMV, TSrcI, TDstI, TWeightI>"
+        }
+    ]
+}

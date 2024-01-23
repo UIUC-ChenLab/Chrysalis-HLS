@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ap_uint<SIMD*In_t::width>  outData = 0;",
+            "Faulty Code": "int outData = 0;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void FMPadding_nonsquare_Batch(...)",
+            "Faulty Code": "#pragma HLS dataflow\nvoid FMPadding_nonsquare_Batch(...)"
+        }
+    ]
+}

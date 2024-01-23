@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "ActType buf[NF][PE];",
+            "Faulty Code": "ActType buf[NF][PE / 2]; // Incorrect buffer size"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline style=flp II=2 // Incorrect initiation interval for burst access"
+        }
+    ]
+}

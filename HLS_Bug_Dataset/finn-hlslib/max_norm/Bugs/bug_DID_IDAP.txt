@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS stream variable=buffer depth=FM_SIZE",
+            "Faulty Code": "#pragma HLS array_partition variable=buffer dim=2"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS dataflow disable_start_propagation",
+            "Faulty Code": "#pragma HLS interface port=src mode=ap_fifo"
+        }
+    ]
+}

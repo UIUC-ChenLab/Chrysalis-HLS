@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned int word = 0; word < NumTotal; word++) {",
+            "Faulty Code": "for (unsigned int word = 0; ; word++) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (count_row > scale_factor)",
+            "Faulty Code": "if (count_row >= scale_factor)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "int count_row = -PaddingUp;",
+            "Faulty Code": "unsigned int count_row = -PaddingUp;"
+        }
+    ]
+}

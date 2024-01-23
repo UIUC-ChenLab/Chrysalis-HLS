@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned int ky = 0; ky < PoolDim; ky++) {...}",
+            "Faulty Code": "for (unsigned int ky = 0; ; ky++) {...}"
+        }
+    ]
+}

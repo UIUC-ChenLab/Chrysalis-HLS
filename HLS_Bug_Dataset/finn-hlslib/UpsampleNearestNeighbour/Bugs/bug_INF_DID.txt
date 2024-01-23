@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (count_row > scale_factor)",
+            "Faulty Code": "if (count_row >= scale_factor)"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "ap_uint<NumChannels * In_t::width> RowBuf[IFMDim];",
+            "Faulty Code": "#pragma HLS array_partition variable=RowBuf dim=2"
+        }
+    ]
+}

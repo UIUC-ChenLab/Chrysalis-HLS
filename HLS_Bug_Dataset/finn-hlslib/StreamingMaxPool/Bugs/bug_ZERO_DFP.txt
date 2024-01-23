@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<NumChannels> buf[ImgDim / PoolDim];",
+            "Faulty Code": "ap_uint<NumChannels> buf[ImgDim / PoolDim] = {1};"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (unsigned int yp = 0; yp < ImgDim / PoolDim; yp++) {",
+            "Faulty Code": "#pragma HLS dataflow\nfor (unsigned int yp = 0; yp < ImgDim / PoolDim; yp++) {"
+        }
+    ]
+}

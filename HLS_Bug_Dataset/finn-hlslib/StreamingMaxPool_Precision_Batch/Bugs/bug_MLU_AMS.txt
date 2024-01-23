@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void StreamingMaxPool_Precision_Batch(...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=wa_in mode=s_axilite"
+        }
+    ]
+}

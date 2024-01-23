@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=e"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<ap_uint<NumChannels * Out_t::width>> &out",
+            "Faulty Code": "#pragma HLS interface mode=ap_memory port=out"
+        }
+    ]
+}

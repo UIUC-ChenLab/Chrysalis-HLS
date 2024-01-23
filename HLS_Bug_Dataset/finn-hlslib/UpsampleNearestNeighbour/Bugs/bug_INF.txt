@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (count_row > scale_factor) count_row =1;",
+            "Faulty Code": "if (count_row > scale_factor) count_row =0;"
+        }
+    ]
+}

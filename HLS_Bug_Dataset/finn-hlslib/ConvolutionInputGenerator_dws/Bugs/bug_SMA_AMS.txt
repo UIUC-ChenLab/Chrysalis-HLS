@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_S2P impl=LUTRAM",
+            "Faulty Code": "#pragma HLS INTERFACE port=inputBuf mode=m_axi"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<SIMD*Input_precision> > & in",
+            "Faulty Code": "#pragma HLS INTERFACE port=in mode=ap_none"
+        }
+    ]
+}

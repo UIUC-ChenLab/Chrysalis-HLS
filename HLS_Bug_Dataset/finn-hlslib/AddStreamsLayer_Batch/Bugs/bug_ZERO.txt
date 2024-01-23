@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned int o = 0;",
+            "Faulty Code": "unsigned int o = 1;"
+        }
+    ]
+}

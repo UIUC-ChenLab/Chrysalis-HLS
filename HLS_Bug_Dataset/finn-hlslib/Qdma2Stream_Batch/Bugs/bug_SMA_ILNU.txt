@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void Qdma2Stream_Batch(hls::stream<qdma_axis<DataWidth,0,0,0> > & in, hls::stream<ap_uint<DataWidth> > & out, const unsigned int numReps)",
+            "Faulty Code": "void Qdma2Stream_Batch(hls::stream<qdma_axis<DataWidth,0,0,0> > & in, ap_uint<DataWidth> & out, const unsigned int numReps) #pragma HLS interface port=out mode=bram"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned int word = 0; word < NumTotal; word++) {\n#pragma HLS pipeline style=flp II=1\n\t\t\tout.write(in.read().get_data());\n\t\t}",
+            "Faulty Code": "for (unsigned int word = 0; word < NumTotal; word++) {\n#pragma HLS unroll factor=2\n\t\t\tout.write(in.read().get_data());\n\t\t}"
+        }
+    ]
+}

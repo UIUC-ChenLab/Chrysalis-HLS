@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "auto const  slice_channels = TSrcI()(pixel_slice,0);",
+            "Faulty Code": "auto const  slice_channels = TSrcI()(pixel_slice,PE); // Assuming PE is greater than the number of elements in pixel_slice"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=2 // Unrolling with a factor instead of completely"
+        }
+    ]
+}

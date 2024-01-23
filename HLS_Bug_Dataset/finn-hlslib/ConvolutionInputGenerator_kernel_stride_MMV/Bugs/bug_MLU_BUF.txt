@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned int v = 0; v < MMV; v++) {",
+            "Faulty Code": "for(unsigned int v = 0; v <= MMV; v++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "ap_uint<SIMD*Input_precision> temp_value = inputBuf[v][current_block_read][(current_line_in_block + v*Stride*multiplying_factor)];",
+            "Faulty Code": "ap_uint<SIMD*Input_precision> temp_value = inputBuf[v][current_block_read][(v*Stride*multiplying_factor)];"
+        }
+    ]
+}

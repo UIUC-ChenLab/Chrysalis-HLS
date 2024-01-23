@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "for(unsigned  x = 0; x < OutputDim_x; x++) {",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=outData"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for(unsigned  sf = 0; sf < Folding; sf++) {",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

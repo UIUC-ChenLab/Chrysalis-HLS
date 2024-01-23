@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<NumChannels * In_t::width>> & in",
+            "Faulty Code": "hls::stream<ap_uint<NumChannels * In_t::width>> in #pragma HLS INTERFACE port=in mode=ap_none"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

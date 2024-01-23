@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void Stream2Mem(hls::stream<ap_uint<DataWidth> > & in, ap_uint<DataWidth> * out)",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=out"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void Stream2Mem(hls::stream<ap_uint<DataWidth> > & in, ap_uint<DataWidth> * out)",
+            "Faulty Code": "#pragma HLS INTERFACE s_axilite port=in"
+        }
+    ]
+}

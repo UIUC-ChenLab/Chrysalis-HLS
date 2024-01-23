@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "buf[i][ch] = min_value;",
+            "Faulty Code": "// buf[i][ch] = min_value;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned int ky = 0; ky < PoolDim; ky++) {",
+            "Faulty Code": "for (unsigned int ky = 0; ky < PoolDim - 1; ky++) {"
+        }
+    ]
+}

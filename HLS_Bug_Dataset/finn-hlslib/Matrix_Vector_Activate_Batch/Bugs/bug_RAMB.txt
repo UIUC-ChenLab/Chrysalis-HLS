@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "auto const &w = weights.weights(tile);",
+            "Faulty Code": "#pragma HLS interface m_axi port=w mode=read\nauto const &w = weights.weights(tile);"
+        }
+    ]
+}

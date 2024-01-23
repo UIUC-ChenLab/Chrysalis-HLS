@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_int<COUNTER_WIDTH> counter_x = -1;",
+            "Faulty Code": "ap_int<COUNTER_WIDTH> counter_x = IFMDim;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "ap_uint<SIMD*Input_precision> inElem = in.read();",
+            "Faulty Code": "ap_uint<SIMD*Input_precision> inElem = 0;"
+        }
+    ]
+}

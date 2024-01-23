@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned int topx=0; topx<NumTop; topx++){",
+            "Faulty Code": "for(unsigned int topx=0; topx<=NumTop; topx++){"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "out.write(toplabels[NumTop - topx - 1]);",
+            "Faulty Code": "out.write(toplabels[topx]);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "void StreamLimiter(hls::stream<ap_uint<DataWidth> > & in, hls::stream<ap_uint<DataWidth> > & out) {",
+            "Faulty Code": "#pragma HLS array_partition variable=in type=complete"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "ap_uint<DataWidth> e = in.read();",
+            "Faulty Code": "ap_uint<DataWidth> e = in[i];"
+        }
+    ]
+}

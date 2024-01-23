@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma AP dependence variable=inputBuf intra false",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=inputBuf"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<ap_uint<SIMD*Input_precision> > & out",
+            "Faulty Code": "#pragma HLS INTERFACE port=out mode=bram"
+        }
+    ]
+}

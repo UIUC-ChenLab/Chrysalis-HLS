@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "for (unsigned pe = 0; pe < PE; pe++)",
+            "Faulty Code": "for (int pe = 0; pe < PE; pe++)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned nt = 0; nt < NumSteps; nt++) {\n#pragma HLS UNROLL\n",
+            "Faulty Code": "for (unsigned nt = 0; nt < NumSteps; nt++) {\n#pragma HLS UNROLL factor=2\n"
+        }
+    ]
+}

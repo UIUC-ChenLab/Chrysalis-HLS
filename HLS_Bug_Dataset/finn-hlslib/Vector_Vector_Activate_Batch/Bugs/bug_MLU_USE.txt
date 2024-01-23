@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned  i = 0; i < reps * TOTAL_FOLD; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; i <= reps * TOTAL_FOLD; i++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "outElem(pe,mmv,1) = activation.activate(nf, pe, accu[mmv][pe]);",
+            "Faulty Code": "outElem(pe,mmv) = activation.activate(nf, pe, (int)accu[mmv][pe]);"
+        }
+    ]
+}

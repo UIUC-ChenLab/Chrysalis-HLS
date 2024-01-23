@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned int xp = 0; xp < OutputSize; xp++) {",
+            "Faulty Code": "for (unsigned int xp = 0; xp <= OutputSize; xp++) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned int kx = 0; kx < PoolDim; kx++) {",
+            "Faulty Code": "for (unsigned int kx = 0; kx <= PoolDim; kx++) {"
+        }
+    ]
+}

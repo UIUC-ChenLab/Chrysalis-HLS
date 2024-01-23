@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "In_T const  In_T_MIN_VAL = (In_T(-1)<0)? 1<<(In_T::width-1) : 0;",
+            "Faulty Code": "In_T const  In_T_MIN_VAL = (In_T(-1)<0)? In_T(In_T(1)<<(In_T::width-1)) : In_T(0);"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=topval complete dim=1",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=topval cyclic dim=1"
+        }
+    ]
+}

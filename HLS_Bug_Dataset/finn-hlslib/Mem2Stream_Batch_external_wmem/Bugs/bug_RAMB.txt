@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "ap_uint<DataWidth> e = in[i];",
+            "Faulty Code": "#pragma HLS interface m_axi port=in[i] mode=read"
+        }
+    ]
+}

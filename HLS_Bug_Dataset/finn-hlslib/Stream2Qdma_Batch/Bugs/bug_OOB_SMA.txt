@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "temp.set_last(word == NumTotal-1);",
+            "Faulty Code": "temp.set_last(word == NumWords); // Assuming NumWords is incorrectly defined to be greater than NumTotal"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void Stream2Qdma_Batch(hls::stream<ap_uint<DataWidth> > & in, ...)",
+            "Faulty Code": "void Stream2Qdma_Batch(ap_uint<DataWidth> & in, ... ) // incorrectly passing a scalar instead of a stream"
+        }
+    ]
+}

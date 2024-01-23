@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "auto outElem = TDstI().template operator()<TO>();",
+            "Faulty Code": "TO outElem = 0;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=internal_thr.m_thresholds complete dim=0",
+            "Faulty Code": "#pragma HLS INTERFACE port=internal_thr.m_thresholds bram"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS bind_storage variable=accumulators type=RAM_2P impl=LUTRAM",
+            "Faulty Code": "#pragma HLS array_partition variable=accumulators type=complete dim=1"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition variable=accumulators dim=2"
+        }
+    ]
+}

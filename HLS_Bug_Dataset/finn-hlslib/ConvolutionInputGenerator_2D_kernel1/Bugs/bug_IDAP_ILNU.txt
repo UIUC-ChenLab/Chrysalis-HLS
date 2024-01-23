@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS pipeline style=flp II=IFMChannels/SIMD",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=in"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned int count_simd = 0; count_simd < MULTIPLYING_FACTOR; count_simd++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

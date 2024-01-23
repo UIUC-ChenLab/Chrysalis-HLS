@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<SIMD*Input_precision>  buffer[BUFFER_SIZE];",
+            "Faulty Code": "ap_uint<SIMD*Input_precision>  buffer[BUFFER_SIZE]; // Fault: The 'buffer' is not explicitly initialized, might contain garbage values"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for(unsigned  i = 0; i < 1 + READ_CYCLES + OUTPUT_SIZE; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; i <= 1 + READ_CYCLES + OUTPUT_SIZE; i++) { // Fault: Off-by-one error, '<=' causes one additional iteration, potentially infinite loop"
+        }
+    ]
+}

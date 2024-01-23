@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned rep = 0; rep < numReps; rep++) {",
+            "Faulty Code": "for (unsigned rep = 0; rep <= numReps; rep++) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS interface port=paramStreamOut mode=ap_fifo"
+        }
+    ]
+}

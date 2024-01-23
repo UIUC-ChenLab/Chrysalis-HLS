@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "accu[pe] = function.pool(slice_channels(pe,0), accu[pe]);",
+            "Faulty Code": "accu[pe+1] = function.pool(slice_channels(pe,0), accu[pe]); // 'pe+1' may cause out-of-bounds when pe = PE-1"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS dataflow // Incorrectly placed, should be pipeline for this context"
+        }
+    ]
+}

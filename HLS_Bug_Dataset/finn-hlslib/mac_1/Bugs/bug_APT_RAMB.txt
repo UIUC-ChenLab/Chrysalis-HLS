@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS unroll",
+            "Faulty Code": "#pragma HLS array_partition type=complete"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "res += mul(c[i], d[i], r);",
+            "Faulty Code": "#pragma HLS interface m_axi port=c offset=slave"
+        }
+    ]
+}

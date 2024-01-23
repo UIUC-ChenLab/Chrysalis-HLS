@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline \n for(unsigned  pe = 0; pe < PE; pe++) {\n#pragma HLS UNROLL\n  auto const  wgt = TWeightI()(w[pe]);\n  for (unsigned mmv = 0; mmv < MMV; mmv++){\n    auto const  act = TSrcI()(inElem, mmv);\n    accu[mmv][pe] = mac<SIMD>(accu[mmv][pe], wgt, act, r, mmv);\n  }\n}"
+        }
+    ]
+}

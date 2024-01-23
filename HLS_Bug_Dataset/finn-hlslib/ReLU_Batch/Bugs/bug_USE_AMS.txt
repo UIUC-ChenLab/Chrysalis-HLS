@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "ActType val = thin(highBit,lowBit);",
+            "Faulty Code": "int val = thin(highBit,lowBit); // Unintended sign extension if ActType is unsigned"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<PECount * ActType::width> > & out",
+            "Faulty Code": "#pragma HLS interface port=out mode=ap_none // Incorrect mode for a stream interface"
+        }
+    ]
+}

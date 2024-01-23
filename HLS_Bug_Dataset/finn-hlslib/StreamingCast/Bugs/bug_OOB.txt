@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "void StreamingCast(hls::stream<InT> & in, hls::stream<OutT> & out, unsigned int numReps) {\n  for(unsigned int i = 0; i < numReps; i++) {\n#pragma HLS pipeline style=flp II=1\n    out.write((OutT) in.read());\n  }\n}",
+            "Faulty Code": "void StreamingCast(hls::stream<InT> & in, hls::stream<OutT> & out, unsigned int numReps) {\n  InT buffer[10]; // Assuming a buffer is added for some reason\n  for(unsigned int i = 0; i <= numReps; i++) { // Error here with <= instead of <\n#pragma HLS pipeline style=flp II=1\n    buffer[i] = in.read(); // This could lead to out-of-bounds write if numReps >= 10\n    out.write((OutT) buffer[i]); // Potential out-of-bounds read\n  }\n}"
+        }
+    ]
+}

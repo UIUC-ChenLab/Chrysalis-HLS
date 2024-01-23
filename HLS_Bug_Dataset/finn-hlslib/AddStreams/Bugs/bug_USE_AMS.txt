@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "Out_t sum = op1 + op2 + offset;",
+            "Faulty Code": "Out_t sum = (Out_t)(op1 + op2) + offset;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<NumChannels * Out_t::width>> &out",
+            "Faulty Code": "#pragma HLS interface port=ap_none mode=s_axilite"
+        }
+    ]
+}

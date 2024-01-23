@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "unsigned const lowBit = p * ActType::width; unsigned const highBit = (p+1) * ActType::width -1; ActType const channeldata = inputData(highBit, lowBit);",
+            "Faulty Code": "unsigned const lowBit = p * ActType::width; unsigned const highBit = (p+2) * ActType::width -1; ActType const channeldata = inputData(highBit, lowBit);"
+        }
+    ]
+}

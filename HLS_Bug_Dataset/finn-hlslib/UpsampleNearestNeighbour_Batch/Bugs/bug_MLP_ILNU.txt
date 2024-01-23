@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned int y = 0; y < OFMDim; y++)",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (unsigned int y = 0; y < OFMDim; y++)"
+        }
+    ]
+}

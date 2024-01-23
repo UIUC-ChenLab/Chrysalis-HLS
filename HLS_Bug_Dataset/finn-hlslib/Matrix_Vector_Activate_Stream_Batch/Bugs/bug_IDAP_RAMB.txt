@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "TI  inputBuf[SF];\n#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=1",
+            "Faulty Code": "TI  inputBuf[SF];\n#pragma HLS ARRAY_PARTITION variable=inputBuf type=cyclic dim=1"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for(unsigned  i = 0; i < reps * TOTAL_FOLD; i++) {\n#pragma HLS pipeline style=flp II=1\n...",
+            "Faulty Code": "for(unsigned  i = 0; i < reps * TOTAL_FOLD; i++) {\n#pragma HLS pipeline\n..."
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "outElem(pe,0,1) = internal_thr.activate(0, pe, act(pe,0));",
+            "Faulty Code": "outElem(pe,0,2) = internal_thr.activate(0, pe, act(pe,0));"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "auto const act = TSrcI()(inElem);",
+            "Faulty Code": "auto act = TSrcI()(inElem); // Assuming TSrcI returns a signed value and act is later used where unsigned is expected."
+        }
+    ]
+}

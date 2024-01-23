@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(unsigned  i = 0; i < OFMDim; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; ; i++) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "if(++rep == REPS)  rep = 0;",
+            "Faulty Code": "if(++rep > REPS)  rep = 0;"
+        }
+    ]
+}

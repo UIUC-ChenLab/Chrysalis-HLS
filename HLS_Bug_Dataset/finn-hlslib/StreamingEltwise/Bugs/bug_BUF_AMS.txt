@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "auto const  in0_slice_channels = SliceIn0()(in0.read(), 0);",
+            "Faulty Code": "auto const  in0_slice_channels = SliceIn0()(in1.read(), 0);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "auto outElem = SliceOut().template operator()<TStrmOut>();",
+            "Faulty Code": "auto outElem = SliceOut().template operator()<TStrmIn0>();"
+        }
+    ]
+}

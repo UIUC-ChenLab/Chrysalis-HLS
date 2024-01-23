@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (current_line == Stride_x * IFMDim_x * multiplying_factor ) {",
+            "Faulty Code": "if (current_line == Stride_x * IFMDim_x * multiplying_factor + 1) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=inputBuf complete dim=1",
+            "Faulty Code": "#pragma HLS INTERFACE port=inputBuf mode=ap_none"
+        }
+    ]
+}

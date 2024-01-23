@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "In_T topval[NumTop];",
+            "Faulty Code": "In_T topval[NumTop] = {0};"
+        }
+    ]
+}

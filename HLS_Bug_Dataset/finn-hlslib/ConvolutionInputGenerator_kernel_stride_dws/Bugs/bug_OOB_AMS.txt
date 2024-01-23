@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "inputBuf[current_block_write][current_line] = inElem;",
+            "Faulty Code": "inputBuf[current_block_write+1][current_line] = inElem;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "ap_uint<SIMD*Input_precision> inputBuf[number_blocks][IFMDim * multiplying_factor];",
+            "Faulty Code": "#pragma HLS INTERFACE port=inputBuf mode=ap_none"
+        }
+    ]
+}

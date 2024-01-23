@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "outData = inData;",
+            "Faulty Code": "outData = in.read(); // This should be 'inData = in.read();'"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS array_partition factor=3 // Assuming that 'OutputDim' is not divisible by 3, this would be incorrect"
+        }
+    ]
+}

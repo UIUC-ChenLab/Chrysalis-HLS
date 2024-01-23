@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<SIMD*Input_precision>  buffer[BUFFER_SIZE];",
+            "Faulty Code": "ap_uint<SIMD*Input_precision>  buffer[BUFFER_SIZE]; // buffer is not explicitly initialized, may contain garbage values"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void memory_resource(T inputBuf, ap_resource_lutram const&){\n#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_S2P impl=LUTRAM\n}",
+            "Faulty Code": "void memory_resource(T &inputBuf, ap_resource_lutram const&){\n#pragma HLS INTERFACE port=inputBuf type=bram\n}"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "for(unsigned  i = 0; i < 1+OUTPUT_SIZE; i++) {\n#pragma HLS pipeline style=flp II=1\nfor(unsigned j = 0; j < WINDOW_SIZE; j++){\n#pragma HLS pipeline II=1\n}\n}"
+        }
+    ]
+}

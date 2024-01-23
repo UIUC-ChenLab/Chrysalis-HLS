@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "// Content of called function\nvoid memory_resource(T inputBuf, ap_resource_lutram const&){\n#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_S2P impl=LUTRAM\n}",
+            "Faulty Code": "// Content of called function\nvoid memory_resource(T inputBuf, ap_resource_lutram const&){\n#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_T2P impl=LUTRAM\n}"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "// Content of called function\nvoid memory_resource(T inputBuf, ap_resource_lutram const&){\n#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_S2P impl=LUTRAM\n}",
+            "Faulty Code": "// Content of called function\nvoid memory_resource(T inputBuf, ap_resource_lutram const&){\n#pragma HLS INTERFACE port=inputBuf mode=bram\n}"
+        }
+    ]
+}

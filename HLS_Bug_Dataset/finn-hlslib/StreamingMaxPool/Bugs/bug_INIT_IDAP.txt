@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "for(unsigned int i = 0; i < ImgDim / PoolDim; i++) {\n#pragma HLS UNROLL\n    buf[i] = 0;\n  }",
+            "Faulty Code": "for(unsigned int i = 0; i < ImgDim / PoolDim; i++) {\n#pragma HLS UNROLL\n    // buf[i] is not initialized\n  }"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS pipeline style=flp II=1\n          acc = acc | in.read();\n        }\n        // pool with old value in row buffer\n        buf[xp] |= acc;\n      }\n    }\n    for (unsigned int outpix = 0; outpix < ImgDim / PoolDim; outpix++) {\n#pragma HLS pipeline style=flp II=1\n      out.write(buf[outpix]);"
+        }
+    ]
+}

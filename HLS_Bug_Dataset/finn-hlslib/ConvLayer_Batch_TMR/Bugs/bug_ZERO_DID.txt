@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned const MatrixW = ConvKernelDim * ConvKernelDim * IFMChannels;",
+            "Faulty Code": "unsigned const MatrixW = 0;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "StreamingDataWidthConverter_Batch<PE*TDstI::width, OFMChannels*TDstI::width, OFMDim * OFMDim * (OFMChannels / PE)>(mvOut, tmr_in, reps);",
+            "Faulty Code": "#pragma HLS array_partition variable=tmr_in dim=3"
+        }
+    ]
+}

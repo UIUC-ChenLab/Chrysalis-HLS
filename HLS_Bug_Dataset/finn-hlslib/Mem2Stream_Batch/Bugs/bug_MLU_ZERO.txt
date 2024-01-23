@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "rep += 16;",
+            "Faulty Code": "rep += 15;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned int repsLeft = numReps - rep;",
+            "Faulty Code": "unsigned int repsLeft = 0;"
+        }
+    ]
+}

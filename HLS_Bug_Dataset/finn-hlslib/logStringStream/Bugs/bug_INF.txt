@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "\"\"\"void logStringStream(const char *layer_name, hls::stream<ap_uint<BitWidth> > &log){\n    std::ofstream ofs(layer_name);\n    hls::stream<ap_uint<BitWidth> > tmp_stream;\n\n  while(!log.empty()){\n    ap_uint<BitWidth> tmp = (ap_uint<BitWidth>) log.read();\n    ofs << std::hex << tmp << std::endl;\n    tmp_stream.write(tmp);\n  }\n\n  while(!tmp_stream.empty()){\n    ap_uint<BitWidth> tmp = tmp_stream.read();\n    log.write((ap_uint<BitWidth>) tmp);\n  }\n\n  ofs.close();\n}\"\"\"",
+            "Faulty Code": "\"\"\"void logStringStream(const char *layer_name, hls::stream<ap_uint<BitWidth> > &log){\n    std::ofstream ofs(layer_name);\n    hls::stream<ap_uint<BitWidth> > tmp_stream;\n\n  while(1){\n    ap_uint<BitWidth> tmp = (ap_uint<BitWidth>) log.read();\n    ofs << std::hex << tmp << std::endl;\n    tmp_stream.write(tmp);\n  }\n\n  while(!tmp_stream.empty()){\n    ap_uint<BitWidth> tmp = tmp_stream.read();\n    log.write((ap_uint<BitWidth>) tmp);\n  }\n\n  ofs.close();\n}\"\"\""
+        }
+    ]
+}

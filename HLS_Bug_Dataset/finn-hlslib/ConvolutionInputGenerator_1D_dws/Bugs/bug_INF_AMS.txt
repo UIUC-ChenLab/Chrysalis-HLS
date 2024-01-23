@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(unsigned  i = 0; i < 1 + READ_CYCLES + OUTPUT_SIZE; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; i <= 1 + READ_CYCLES + OUTPUT_SIZE; i++) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void memory_resource(T inputBuf, ap_resource_lutram const&){",
+            "Faulty Code": "#pragma HLS interface port=inputBuf mode=ap_none"
+        }
+    ]
+}

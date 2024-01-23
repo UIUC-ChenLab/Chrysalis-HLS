@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "T mac(T const &a, TC const &c, TD const &d, R const &r, unsigned mmv) {",
+            "Faulty Code": "T mac(T const &a, TC const &c, TD const &d, R const &r, unsigned mmv) {#pragma HLS interface port=a ap_none"
+        }
+    ]
+}

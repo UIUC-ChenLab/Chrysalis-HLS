@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void StreamingCast(hls::stream<InT> & in, hls::stream<OutT> & out, unsigned int numReps)",
+            "Faulty Code": "#pragma HLS INTERFACE port=in mode=ap_none"
+        }
+    ]
+}

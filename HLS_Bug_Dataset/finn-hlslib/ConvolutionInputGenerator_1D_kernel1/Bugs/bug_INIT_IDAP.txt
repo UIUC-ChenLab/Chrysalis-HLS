@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_int<COUNTER_WIDTH> counter_x = -1;",
+            "Faulty Code": "ap_int<COUNTER_WIDTH> counter_x;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<ap_uint<SIMD*Input_precision> > & in",
+            "Faulty Code": "#pragma HLS interface mode=axis port=in"
+        }
+    ]
+}

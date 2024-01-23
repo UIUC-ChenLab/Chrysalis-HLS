@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "const unsigned int indsPerRep = numBytes / (DataWidth / 8);",
+            "Faulty Code": "const int indsPerRep = numBytes / (DataWidth / 8);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned  ocnt = SIMD_COUNT;",
+            "Faulty Code": "unsigned  ocnt = 0;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_S2P impl=LUTRAM",
+            "Faulty Code": "#pragma HLS array_partition variable=buffer cyclic factor=3"
+        }
+    ]
+}

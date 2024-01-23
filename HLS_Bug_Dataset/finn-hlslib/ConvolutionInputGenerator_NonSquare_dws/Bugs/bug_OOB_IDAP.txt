@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "current_block_read-= number_blocks;",
+            "Faulty Code": "current_block_read-= number_blocks + 1;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "inElem = in.read();",
+            "Faulty Code": "inElem = in;"
+        }
+    ]
+}

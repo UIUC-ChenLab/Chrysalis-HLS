@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned int count_simd = 0; count_simd < MULTIPLYING_FACTOR; count_simd++) {",
+            "Faulty Code": "for (unsigned int count_simd = 0; count_simd <= MULTIPLYING_FACTOR; count_simd++) {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS pipeline style=flp II=IFMChannels/SIMD",
+            "Faulty Code": "#pragma HLS array_partition variable=inElem dim=2 complete"
+        }
+    ]
+}

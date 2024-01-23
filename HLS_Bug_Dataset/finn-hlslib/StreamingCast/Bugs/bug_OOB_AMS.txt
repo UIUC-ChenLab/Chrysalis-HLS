@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out.write((OutT) in.read());",
+            "Faulty Code": "out.write((OutT) in.read(i)); // mistakenly passing an index to read()"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS interface port=out mode=ap_none // incorrectly specifying 'out' as a scalar port"
+        }
+    ]
+}

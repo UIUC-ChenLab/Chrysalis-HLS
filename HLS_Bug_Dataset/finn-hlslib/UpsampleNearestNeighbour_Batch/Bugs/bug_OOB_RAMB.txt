@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned int x = 0; x < OFMDim; x++) {",
+            "Faulty Code": "for (unsigned int x = 0; x <= OFMDim; x++) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "outData = RowBuf[(x-PaddingLeft)/scale_factor];",
+            "Faulty Code": "outData = RowBuf[x/scale_factor];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out.write(buffer[rp]);",
+            "Faulty Code": "out.write(buffer[wp]); // Mistakenly using wp (write pointer) instead of rp (read pointer)"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for(unsigned  i = 0; i < 1+OUTPUT_SIZE; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; i < OUTPUT_SIZE; i++) { // The loop count should be 1+OUTPUT_SIZE but is mistakenly set to OUTPUT_SIZE"
+        }
+    ]
+}

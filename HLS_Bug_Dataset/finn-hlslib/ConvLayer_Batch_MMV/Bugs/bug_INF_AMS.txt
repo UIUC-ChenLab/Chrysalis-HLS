@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "const unsigned int mmvReps = (reps * OFMDim * OFMDim) / MMV;",
+            "Faulty Code": "const unsigned int mmvReps = (reps * OFMDim * OFMDim); // Missing division by MMV could lead to an infinite loop"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<ap_uint<OutStreamW>> &out",
+            "Faulty Code": "#pragma HLS INTERFACE port=out mode=ap_none // 'out' is a stream and should not be mapped to a scalar interface like ap_none"
+        }
+    ]
+}

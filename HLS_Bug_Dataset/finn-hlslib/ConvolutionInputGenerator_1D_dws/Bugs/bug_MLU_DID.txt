@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS BIND_STORAGE variable=inputBuf type=RAM_S2P impl=LUTRAM",
+            "Faulty Code": "#pragma HLS array_partition variable=buffer dim=1"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for(unsigned  i = 0; i < 1 + READ_CYCLES + OUTPUT_SIZE; i++) {",
+            "Faulty Code": "for(unsigned  i = 0; i < READ_CYCLES + OUTPUT_SIZE; i++) {"
+        }
+    ]
+}

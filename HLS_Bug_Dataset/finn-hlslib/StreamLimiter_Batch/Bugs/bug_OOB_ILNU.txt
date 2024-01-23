@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<DataWidth> e = in.read();",
+            "Faulty Code": "ap_uint<DataWidth> e = in.read(i); // Incorrect use of read method, potentially leading to OOB if 'i' is used as an index"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS pipeline style=flp II=1",
+            "Faulty Code": "#pragma HLS unroll factor=4 // Incorrect pragma, should not partially unroll this loop without ensuring the inner loop is fully unrolled"
+        }
+    ]
+}

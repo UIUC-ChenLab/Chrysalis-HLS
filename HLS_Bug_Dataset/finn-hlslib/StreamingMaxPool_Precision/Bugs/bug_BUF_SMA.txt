@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "buf[outpix][ch] = min_value;",
+            "Faulty Code": "buf[yp][ch] = min_value;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "ActType oldMax = buf[xp][ch];",
+            "Faulty Code": "ActType oldMax = buf[yp][ch];"
+        }
+    ]
+}

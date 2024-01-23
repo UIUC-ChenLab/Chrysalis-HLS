@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (unsigned int t = 0; t < totalIters; t++) {\n#pragma HLS pipeline style=flp II=1\n// read new input word if current out count is zero\nif (o == 0) {\nei = in.read();\n}\n// pick output word from the rightmost position\nap_uint<OutWidth> eo = ei(OutWidth - 1, 0);\nout.write(eo);\n// shift input to get new output word for next iteration\nei = ei >> OutWidth;\n// increment written output count\no++;\n// wraparound indices to recreate the nested loop structure\nif (o == outPerIn) {\no = 0;\n}\n}",
+            "Faulty Code": "for (unsigned int t = 0; t < totalIters; t++) {\n#pragma HLS pipeline style=flp II=1\n#pragma HLS dataflow\n// read new input word if current out count is zero\nif (o == 0) {\nei = in.read();\n}\n// pick output word from the rightmost position\nap_uint<OutWidth> eo = ei(OutWidth - 1, 0);\nout.write(eo);\n// shift input to get new output word for next iteration\nei = ei >> OutWidth;\n// increment written output count\no++;\n// wraparound indices to recreate the nested loop structure\nif (o == outPerIn) {\no = 0;\n}\n}"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for(unsigned int i = 0; i < numReps; i++) {",
+            "Faulty Code": "for(unsigned int i = 0; i <= numReps; i++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "out.write((OutT) in.read());",
+            "Faulty Code": "out.write((int) in.read());"
+        }
+    ]
+}

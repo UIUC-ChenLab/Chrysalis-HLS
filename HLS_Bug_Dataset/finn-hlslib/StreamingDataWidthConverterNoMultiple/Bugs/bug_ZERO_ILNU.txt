@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static unsigned int      offset = 0;",
+            "Faulty Code": "static unsigned int      offset = 0xFFFFFFFF;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (; offset <= (InWidth-OutWidth) ; offset+=OutWidth){",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (; offset <= (InWidth-OutWidth) ; offset+=OutWidth){"
+        }
+    ]
+}

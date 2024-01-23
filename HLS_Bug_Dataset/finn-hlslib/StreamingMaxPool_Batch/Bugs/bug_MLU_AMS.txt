@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "//#pragma HLS UNROLL"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void StreamingMaxPool(hls::stream<ap_uint<NumChannels> > & in, hls::stream<ap_uint<NumChannels> > & out)",
+            "Faulty Code": "void StreamingMaxPool(hls::stream<ap_uint<NumChannels> > & in, hls::stream<ap_uint<NumChannels> > & out) {\n#pragma HLS INTERFACE port=out mode=ap_none\n}"
+        }
+    ]
+}
