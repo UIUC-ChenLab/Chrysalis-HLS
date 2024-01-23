@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS interface m_axi port=neighbor_table"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "int offset = neightbor_table_offsets_temp[dest];",
+            "Faulty Code": "int offset = neightbor_table_offsets_temp[dest+1];"
+        }
+    ]
+}

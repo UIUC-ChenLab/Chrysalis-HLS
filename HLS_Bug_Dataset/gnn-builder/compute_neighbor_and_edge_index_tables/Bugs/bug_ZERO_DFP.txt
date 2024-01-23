@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "neightbor_table_offsets[0] = 0;",
+            "Faulty Code": "neightbor_table_offsets[0] = in_degree_table[0];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

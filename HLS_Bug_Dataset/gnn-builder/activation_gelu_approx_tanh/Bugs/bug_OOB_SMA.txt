@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "const T tanh_arg = T(T(T(GELU_TANH_COEFF_CUBIC * x) * x) + GELU_TANH_COEFF_LINEAR) * x;",
+            "Faulty Code": "const T tanh_arg = T(T(T(GELU_TANH_COEFF_CUBIC * x) * x[x]) + GELU_TANH_COEFF_LINEAR) * x;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE port=return bram"
+        }
+    ]
+}

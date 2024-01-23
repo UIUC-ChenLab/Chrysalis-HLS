@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return m_sin(x);",
+            "Faulty Code": "return m_sin_table[x]; // assuming x is used as an index to a sine lookup table"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "return m_sin(x);",
+            "Faulty Code": "while(true){} // infinite loop introduced before return"
+        }
+    ]
+}

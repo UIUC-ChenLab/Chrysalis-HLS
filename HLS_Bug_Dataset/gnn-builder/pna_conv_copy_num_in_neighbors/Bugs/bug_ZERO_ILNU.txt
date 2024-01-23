@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "num_in_neighbors_0 = num_in_neighbors;",
+            "Faulty Code": "num_in_neighbors_0 = 0;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

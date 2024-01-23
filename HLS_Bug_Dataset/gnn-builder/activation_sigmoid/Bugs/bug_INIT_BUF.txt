@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "return T(1.0) / (T(1.0) + m_exp(-x));",
+            "Faulty Code": "T result; return result / (T(1.0) + m_exp(-x));"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "return T(1.0) / (T(1.0) + m_exp(-x));",
+            "Faulty Code": "T buffer[2]; buffer[0] = m_exp(-x); return T(1.0) / (T(1.0) + buffer[1]);"
+        }
+    ]
+}

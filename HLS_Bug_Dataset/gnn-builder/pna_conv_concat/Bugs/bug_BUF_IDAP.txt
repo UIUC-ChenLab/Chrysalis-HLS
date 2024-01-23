@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "pre_apply_emb[i + EMB_SIZE_IN * 0] = current_node_embedding_in[i];",
+            "Faulty Code": "pre_apply_emb[i + EMB_SIZE_IN * 1] = current_node_embedding_in[i];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=current_node_embedding_in"
+        }
+    ]
+}

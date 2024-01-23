@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void linear_simple(T_array_1d<T, in_size> input, T_array_1d<T, out_size> output, T_linear_weight_array<T, in_size, out_size> weight, T_linear_bias_array<T, out_size> bias) {",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=output offset=slave bundle=gmem"
+        }
+    ]
+}

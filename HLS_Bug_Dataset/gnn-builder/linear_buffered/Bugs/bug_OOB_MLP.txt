@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "output[i + k] += temp_sum[k];",
+            "Faulty Code": "output[i + k + BLOCK_SIZE_OUT] += temp_sum[k];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int j = 0; j < in_size; j += BLOCK_SIZE_IN) {",
+            "Faulty Code": "for (int j = 0; j < in_size; j++) { #pragma HLS PIPELINE"
+        }
+    ]
+}

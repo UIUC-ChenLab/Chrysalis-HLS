@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "F_TYPE output_buffer[out_size];",
+            "Faulty Code": "F_TYPE output_buffer[out_size]; // Uninitialized array"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "output[i + k] += temp_sum[k];",
+            "Faulty Code": "output[i + k] = temp_sum[k]; // This should be '+=' to accumulate the sum, not just '='"
+        }
+    ]
+}

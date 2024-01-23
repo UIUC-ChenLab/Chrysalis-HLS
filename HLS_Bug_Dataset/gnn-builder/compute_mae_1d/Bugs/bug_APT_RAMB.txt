@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "float compute_mae_1d(T arr1[M], T arr2[M])",
+            "Faulty Code": "#pragma HLS array_partition variable=arr1 type=cyclic factor=2\nfloat compute_mae_1d(T arr1[M], T arr2[M])"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "float compute_mae_1d(T arr1[M], T arr2[M])",
+            "Faulty Code": "#pragma HLS interface m_axi port=arr1 offset=slave\n#pragma HLS interface m_axi port=arr2 offset=slave\nfloat compute_mae_1d(T arr1[M], T arr2[M])"
+        }
+    ]
+}

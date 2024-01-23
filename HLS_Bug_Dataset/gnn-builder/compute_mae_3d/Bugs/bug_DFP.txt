@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (int k = 0; k < O; k++) { mae += std::abs(arr1[i][j][k] - arr2[i][j][k]); }",
+            "Faulty Code": "#pragma HLS dataflow for (int k = 0; k < O; k++) { mae += std::abs(arr1[i][j][k] - arr2[i][j][k]); }"
+        }
+    ]
+}

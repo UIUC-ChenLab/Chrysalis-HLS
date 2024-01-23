@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "void max_incremental_update(max_incremental_data<T> &data, T x)\n{\n    // #pragma HLS INLINE off\n    if (data.one_sample_processed == false)\n    {\n        data.max = x;\n        data.one_sample_processed = true;\n    }\n    else\n    {\n        if (x > data.max)\n        {\n            data.max = x;\n        }\n    }\n}",
+            "Faulty Code": "void max_incremental_update(max_incremental_data<T> &data, T x)\n{\n    // #pragma HLS INLINE off\n    while (data.one_sample_processed == false)\n    {\n        data.max = x;\n        data.one_sample_processed = true;\n    }\n    else\n    {\n        if (x > data.max)\n        {\n            data.max = x;\n        }\n    }\n}"
+        }
+    ]
+}

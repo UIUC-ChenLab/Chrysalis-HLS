@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "while(1) { #pragma HLS PIPELINE }"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "T activation_sigmoid(T x)",
+            "Faulty Code": "T activation_sigmoid(T x) { #pragma HLS INTERFACE port=x ap_none }"
+        }
+    ]
+}

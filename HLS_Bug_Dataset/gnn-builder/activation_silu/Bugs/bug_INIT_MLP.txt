@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "T activation_silu(T x)",
+            "Faulty Code": "T activation_silu(T x) {T result;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "for (int i = 0; i < N; ++i) { #pragma HLS PIPELINE"
+        }
+    ]
+}

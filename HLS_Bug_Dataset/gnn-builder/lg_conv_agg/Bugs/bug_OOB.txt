@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "int neighbor_id = neighbors[neighbor];",
+            "Faulty Code": "int neighbor_id = neighbors[num_in_neighbors];"
+        }
+    ]
+}

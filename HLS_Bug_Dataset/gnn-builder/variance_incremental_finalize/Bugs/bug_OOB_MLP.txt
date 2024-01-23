@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "data.var = data.m2 / T(data.count);",
+            "Faulty Code": "data.var = data.m2 / T(data.count - 1);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "data.std = m_sqrt(data.var + T(1e-5));",
+            "Faulty Code": "#pragma HLS pipeline\ndata.std = m_sqrt(data.var + T(1e-5));"
+        }
+    ]
+}

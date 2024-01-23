@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "T out = m_tanh(x);",
+            "Faulty Code": "T out = m_tanh(x[0]);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "T activation_tanh(T x)",
+            "Faulty Code": "T activation_tanh(T x) #pragma HLS INTERFACE port=ap_none"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "x_out_1[i][j] = x_in_buf;",
+            "Faulty Code": "x_out_1[i][N/2 + j] = x_in_buf;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "T x_in_buf = x_in[i][j];",
+            "Faulty Code": "T x_in_buf = 0;"
+        }
+    ]
+}

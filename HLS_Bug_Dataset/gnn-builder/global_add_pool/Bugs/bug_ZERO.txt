@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "sum_incremental_data<T> sum_agg[EMB_SIZE];",
+            "Faulty Code": "sum_incremental_data<T> sum_agg[EMB_SIZE] = {0};"
+        }
+    ]
+}

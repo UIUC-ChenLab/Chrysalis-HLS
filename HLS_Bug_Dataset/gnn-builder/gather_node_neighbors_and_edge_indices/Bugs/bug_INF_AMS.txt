@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < node_in_degree; i++)",
+            "Faulty Code": "for (int i = 0; i <= node_in_degree; i++)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "int node_neighbors[MAX_NODES],",
+            "Faulty Code": "int node_neighbors[MAX_NODES] #pragma HLS INTERFACE port=ap_none"
+        }
+    ]
+}

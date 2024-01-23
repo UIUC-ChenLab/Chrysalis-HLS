@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void gine_conv_agg(/*... function arguments ...*/)",
+            "Faulty Code": "#pragma HLS dataflow\nvoid gine_conv_agg(/*... function arguments ...*/)"
+        }
+    ]
+}

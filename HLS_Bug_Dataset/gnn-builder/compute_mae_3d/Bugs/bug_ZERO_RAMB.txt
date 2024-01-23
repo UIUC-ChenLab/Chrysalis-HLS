@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "float mae = 0;",
+            "Faulty Code": "float mae;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "mae += std::abs(arr1[i][j][k] - arr2[i][j][k]);",
+            "Faulty Code": "#pragma HLS interface m_axi port=arr1 offset=slave\n#pragma HLS interface m_axi port=arr2 offset=slave\nmae += std::abs(arr1[i][j][k] - arr2[i][j][k]);"
+        }
+    ]
+}

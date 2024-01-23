@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void pna_conv_copy_num_in_neighbors(...){...}",
+            "Faulty Code": "void pna_conv_copy_num_in_neighbors(T &num_in_neighbors, T &num_in_neighbors_0, T &num_in_neighbors_1, T &num_in_neighbors_2){ num_in_neighbors_0 = num_in_neighbors; ... }"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS array_partition dim=3"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "data.mean += delta / T(data.count);",
+            "Faulty Code": "data.mean += delta / T(data.count - 1);"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "data.m2 += delta * (x - data.mean);",
+            "Faulty Code": "data.m2 += delta * (x - data.mean_old);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "return m_sin(x);",
+            "Faulty Code": "while(1){ return m_sin(x); }"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "T activation_sin(T x)",
+            "Faulty Code": "int activation_sin(unsigned T x)"
+        }
+    ]
+}

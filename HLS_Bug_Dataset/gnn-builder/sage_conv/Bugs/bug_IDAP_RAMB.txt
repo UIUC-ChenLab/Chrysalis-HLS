@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS stable variable = num_nodes",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=num_nodes"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "node_neighbors[i] = neighbor_table[current_idx];",
+            "Faulty Code": "#pragma HLS interface port=neighbor_table mode=m_axi"
+        }
+    ]
+}

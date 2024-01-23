@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void variance_incremental_update(variance_incremental_data<T> &data, T x)",
+            "Faulty Code": "void variance_incremental_update(variance_incremental_data<T> &data, T x) #pragma HLS pipeline"
+        }
+    ]
+}

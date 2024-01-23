@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "\"\"\"T activation_tanh(T x)\n{\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n#if __FLOATING_POINT_MODEL__\n    T out = m_tanh(x);\n    return out;\n#else\n    T out = m_tanh(x);\n    T out_fixed = (hls::signbit(x) != hls::signbit(out)) ? T(-out) : out;\n    return out_fixed;\n#endif\n}\"\"\"",
+            "Faulty Code": "\"\"\"T activation_tanh(T x)\n{\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n#if __FLOATING_POINT_MODEL__\n#pragma HLS PIPELINE\n    T out = m_tanh(x);\n    return out;\n#else\n#pragma HLS PIPELINE\n    T out = m_tanh(x);\n    T out_fixed = (hls::signbit(x) != hls::signbit(out)) ? T(-out) : out;\n    return out_fixed;\n#endif\n}\"\"\""
+        }
+    ]
+}

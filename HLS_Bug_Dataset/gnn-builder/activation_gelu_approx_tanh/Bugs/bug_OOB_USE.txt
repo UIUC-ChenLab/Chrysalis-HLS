@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "const T GELU_APPROX_MIN = -8.31776613691702;",
+            "Faulty Code": "if (x < GELU_APPROX_MIN) return T(0.0);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "T out = (x / T(2.0)) * T(T(1.0) + tanh_fixed);",
+            "Faulty Code": "T out = (x >> 1) * T(T(1.0) + tanh_fixed);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "const T min_val = T(-1.0);",
+            "Faulty Code": "const T min_val = A[-1]; // Assuming A is an array passed to a function where this line is executed"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "return x;",
+            "Faulty Code": "return A[i*32]; // Assuming 'i' is not appropriately bounded in the calling context and A is an array with 'm_axi' interface"
+        }
+    ]
+}

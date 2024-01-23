@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "return m_cos(x);",
+            "Faulty Code": "return (int)m_cos(x);"
+        }
+    ]
+}

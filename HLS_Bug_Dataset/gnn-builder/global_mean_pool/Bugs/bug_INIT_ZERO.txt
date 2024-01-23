@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "mean_incremental_data<T> mean_agg[EMB_SIZE];",
+            "Faulty Code": "mean_incremental_data<T> mean_agg[EMB_SIZE]; // Missing initialization"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "data.mean = data.sum / T(data.count);",
+            "Faulty Code": "data.mean = 0; // Incorrectly initializing mean to zero instead of calculating it"
+        }
+    ]
+}

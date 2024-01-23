@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "return x * (T(1.0) / (T(1.0) + m_exp(-x)));",
+            "Faulty Code": "while(1) { return x * (T(1.0) / (T(1.0) + m_exp(-x))); }"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition type=wrong_type variable=x"
+        }
+    ]
+}

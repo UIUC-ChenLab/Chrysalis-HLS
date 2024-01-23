@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "return x * (T(1.0) / (T(1.0) + m_exp(-x)));",
+            "Faulty Code": "return x * (T(1.0) / (T(1.0) + m_exp(-x))); // Missing m_exp function iteration due to incorrect manual loop unrolling"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS INTERFACE port=x bram"
+        }
+    ]
+}

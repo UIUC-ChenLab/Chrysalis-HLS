@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void pna_conv_agg(...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=neighbor_emb_agg_max ap_none"
+        }
+    ]
+}

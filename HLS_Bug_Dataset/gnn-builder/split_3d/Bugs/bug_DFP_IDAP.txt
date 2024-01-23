@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void split_3d(T_array_3d<T, M, N, O> x_in, T_array_3d<T, M, N, O> x_out_1, T_array_3d<T, M, N, O> x_out_2)",
+            "Faulty Code": "void split_3d(T_array_3d<T, M, N, O> x_in, T_array_3d<T, M, N, O> x_out_1, T_array_3d<T, M, N, O> x_out_2) {\n#pragma HLS INTERFACE mode=ap_fifo port=x_in\n#pragma HLS INTERFACE mode=ap_fifo port=x_out_1\n#pragma HLS INTERFACE mode=ap_fifo port=x_out_2\n"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "void global_mean_pool(int num_nodes,\n                      int num_edges,\n                      T node_embedding_table[MAX_NODES][EMB_SIZE],\n                      T pooled_embedding[EMB_SIZE])\n{\n#pragma HLS INLINE off\n\n    mean_incremental_data<T> mean_agg[EMB_SIZE];\n    for (int i = 0; i < num_nodes; i++)\n    {\n#pragma HLS loop_tripcount min = 1 max = NUM_NODES_GUESS\n        for (int j = 0; j < EMB_SIZE; j++)\n        {\n            mean_incremental_update(mean_agg[j], node_embedding_table[i][j]);\n        }\n    }\n    for (int i = 0; i < EMB_SIZE; i++)\n    {\n        mean_incremental_finalize(mean_agg[i]);\n    }\n    for (int i = 0; i < EMB_SIZE; i++)\n    {\n        pooled_embedding[i] = mean_agg[i].mean;\n    }\n}",
+            "Faulty Code": "void global_mean_pool(int num_nodes,\n                      int num_edges,\n                      T node_embedding_table[MAX_NODES][EMB_SIZE],\n                      T pooled_embedding[EMB_SIZE])\n{\n#pragma HLS INLINE off\n\n    mean_incremental_data<T> mean_agg[EMB_SIZE];\n#pragma HLS array_partition type=cyclic\n    for (int i = 0; i < num_nodes; i++)\n    {\n#pragma HLS loop_tripcount min = 1 max = NUM_NODES_GUESS\n        for (int j = 0; j < EMB_SIZE; j++)\n        {\n            mean_incremental_update(mean_agg[j], node_embedding_table[i][j]);\n        }\n    }\n    for (int i = 0; i < EMB_SIZE; i++)\n    {\n        mean_incremental_finalize(mean_agg[i]);\n    }\n    for (int i = 0; i < EMB_SIZE; i++)\n    {\n        pooled_embedding[i] = mean_agg[i].mean;\n    }\n}"
+        }
+    ]
+}

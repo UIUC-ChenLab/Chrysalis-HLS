@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "const T tanh_fixed = (m_signbit(tanh_arg) != m_signbit(tanh)) ? T(-tanh) : tanh;",
+            "Faulty Code": "T tanh_fixed; // tanh_fixed is declared but not initialized"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow // Incorrect placement of dataflow pragma"
+        }
+    ]
+}

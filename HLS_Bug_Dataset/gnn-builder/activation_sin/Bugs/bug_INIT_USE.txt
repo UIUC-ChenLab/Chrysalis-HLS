@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "T activation_sin(T x)",
+            "Faulty Code": "T activation_sin(T x) { T result; return result; }"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "return m_sin(x);",
+            "Faulty Code": "return (int)m_sin(x);"
+        }
+    ]
+}

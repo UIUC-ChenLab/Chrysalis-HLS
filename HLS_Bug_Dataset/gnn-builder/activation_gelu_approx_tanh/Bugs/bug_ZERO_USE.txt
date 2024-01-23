@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "return x;",
+            "Faulty Code": "return 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "T out = (x / T(2.0)) * T(T(1.0) + tanh_fixed);",
+            "Faulty Code": "T out = (x >> 1) * (1 + tanh_fixed);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "const T out = x * T(0.5) * (T(1.0) + m_erf(x * sqrt_2_recip));",
+            "Faulty Code": "const T out = A[i] * T(0.5) * (T(1.0) + m_erf(A[i + non_consecutive_offset] * sqrt_2_recip)); // Assuming A is an array accessed with non-consecutive indices"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "inside_another_pipeline_function(); // Assuming this function has its own '#pragma HLS PIPELINE'"
+        }
+    ]
+}

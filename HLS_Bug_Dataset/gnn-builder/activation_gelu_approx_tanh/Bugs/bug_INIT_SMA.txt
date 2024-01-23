@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "const T tanh_fixed = (m_signbit(tanh_arg) != m_signbit(tanh)) ? T(-tanh) : tanh;",
+            "Faulty Code": "T tanh_fixed; if(m_signbit(tanh_arg) != m_signbit(tanh)) tanh_fixed = T(-tanh);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE port=return bram"
+        }
+    ]
+}

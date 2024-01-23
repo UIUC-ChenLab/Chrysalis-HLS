@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "pre_apply_emb[i + EMB_SIZE_IN * 12] = agg_std_attenuation[i];",
+            "Faulty Code": "pre_apply_emb[i + EMB_SIZE_IN * 11] = agg_std_attenuation[i];"
+        }
+    ]
+}

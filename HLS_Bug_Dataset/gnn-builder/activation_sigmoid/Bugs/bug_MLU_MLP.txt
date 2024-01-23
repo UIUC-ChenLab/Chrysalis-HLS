@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "return T(1.0) / (T(1.0) + m_exp(-x));",
+            "Faulty Code": "return T(1.0) / (T(1.0) + m_exp(x)); // Missing negative sign in the exponent could be a manual loop unrolling error"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE // Incorrect position of pipeline pragma if nested inside another pipeline in a calling function"
+        }
+    ]
+}

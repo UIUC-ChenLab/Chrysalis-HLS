@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable = input cyclic factor = BLOCK_SIZE_IN dim = 1",
+            "Faulty Code": "#pragma HLS array_partition variable = input cyclic factor = BLOCK_SIZE_IN_WRONG dim = 1"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "//#pragma HLS PIPELINE"
+        }
+    ]
+}

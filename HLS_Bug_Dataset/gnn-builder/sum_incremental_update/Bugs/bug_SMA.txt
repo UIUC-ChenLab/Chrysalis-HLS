@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void sum_incremental_update(sum_incremental_data<T> &data, T x)",
+            "Faulty Code": "#pragma HLS INTERFACE port=data bram"
+        }
+    ]
+}

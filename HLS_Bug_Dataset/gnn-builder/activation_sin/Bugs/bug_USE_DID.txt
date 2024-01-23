@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "T activation_sin(T x)",
+            "Faulty Code": "int activation_sin(T x)"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=x dim=2"
+        }
+    ]
+}

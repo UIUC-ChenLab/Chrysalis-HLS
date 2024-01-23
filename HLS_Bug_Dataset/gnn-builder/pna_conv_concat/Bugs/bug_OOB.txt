@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "pre_apply_emb[i + EMB_SIZE_IN * 12] = agg_std_attenuation[i];",
+            "Faulty Code": "pre_apply_emb[i + EMB_SIZE_IN * 13] = agg_std_attenuation[i];"
+        }
+    ]
+}

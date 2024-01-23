@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int i = 0; i < num_nodes; i++)",
+            "Faulty Code": "for (int i = 0; i <= num_nodes; i++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "data.one_sample_processed = true;",
+            "Faulty Code": "data.one_sample_processed = false;"
+        }
+    ]
+}

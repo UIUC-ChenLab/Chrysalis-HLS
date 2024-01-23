@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (x > 0)",
+            "Faulty Code": "while (x > 0)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "return 0;",
+            "Faulty Code": "return -1;"
+        }
+    ]
+}

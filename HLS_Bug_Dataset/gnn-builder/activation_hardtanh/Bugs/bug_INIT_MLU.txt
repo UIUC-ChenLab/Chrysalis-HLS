@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "const T min_val = T(-1.0);",
+            "Faulty Code": "T min_val; // Uninitialized variable"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (x < min_val) { return min_val; } else if (x > max_val) { return max_val; } else { return x; }",
+            "Faulty Code": "if (x < min_val) { return min_val; } /* Missing else */ if (x > max_val) { return max_val; } return x;"
+        }
+    ]
+}

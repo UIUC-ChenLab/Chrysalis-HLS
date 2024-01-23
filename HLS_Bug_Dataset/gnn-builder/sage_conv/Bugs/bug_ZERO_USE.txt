@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "T init = T(0.0);",
+            "Faulty Code": "T init = T();"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "output[i + k] += temp_sum[k];",
+            "Faulty Code": "output[i + k] = temp_sum[k];"
+        }
+    ]
+}

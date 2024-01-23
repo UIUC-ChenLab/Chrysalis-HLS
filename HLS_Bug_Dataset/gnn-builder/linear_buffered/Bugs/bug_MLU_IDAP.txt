@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int k = 0; k < BLOCK_SIZE_OUT; k++)",
+            "Faulty Code": "for (int k = 0; k <= BLOCK_SIZE_OUT; k++)"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS array_partition variable = input cyclic factor = BLOCK_SIZE_IN dim = 1",
+            "Faulty Code": "#pragma HLS array_partition variable = input block factor = BLOCK_SIZE_IN dim = 1"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "T activation_sin(T x) {",
+            "Faulty Code": "T activation_sin(T x) { while(1) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS INTERFACE port=return mode=ap_none"
+        }
+    ]
+}

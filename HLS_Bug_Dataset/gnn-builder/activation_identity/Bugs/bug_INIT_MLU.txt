@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "T activation_identity(T x) {\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n    return x;\n}",
+            "Faulty Code": "T activation_identity(T x) {\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n    T y;\n    return y;\n}"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "T activation_identity(T x) {\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n    return x;\n}",
+            "Faulty Code": "T activation_identity(T x) {\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n    for (int i = 0; i < N; ++i) {\n        x = x; // Incorrect manual loop supposed to do something else\n    }\n    return x;\n}"
+        }
+    ]
+}

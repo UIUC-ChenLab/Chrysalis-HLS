@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "return x / (T(1.0) + m_abs(x));",
+            "Faulty Code": "T denom = T(0); return x / (denom + m_abs(x));"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS interface port=x mode=m_axi"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void split_2d(T_array_2d<T, M, N> x_in, T_array_2d<T, M, N> x_out_1, T_array_2d<T, M, N> x_out_2)",
+            "Faulty Code": "#pragma HLS INTERFACE mode=s_axilite port=x_in"
+        }
+    ]
+}

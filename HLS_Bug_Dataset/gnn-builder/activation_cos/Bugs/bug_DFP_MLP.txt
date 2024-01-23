@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "return m_cos(x);",
+            "Faulty Code": "#pragma HLS dataflow\n    return m_cos(x);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE\n    #pragma HLS PIPELINE"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS array_partition variable=pre_apply_emb factor=5"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int i = 0; i < EMB_SIZE_IN; i++)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (int i = 0; i < EMB_SIZE_IN; i++)"
+        }
+    ]
+}

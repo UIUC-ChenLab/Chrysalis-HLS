@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "node_embedding_table_out[node][i] = agg_embedding[i];",
+            "Faulty Code": "node_embedding_table_out[node+1][i] = agg_embedding[i];"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "T current_node_embedding_in[EMB_SIZE_IN];",
+            "Faulty Code": "T current_node_embedding_in[EMB_SIZE_IN] = {0};"
+        }
+    ]
+}

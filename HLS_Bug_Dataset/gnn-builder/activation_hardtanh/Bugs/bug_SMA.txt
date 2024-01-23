@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "T activation_hardtanh(T x)",
+            "Faulty Code": "#pragma HLS INTERFACE axis port=x \n T activation_hardtanh(T x)"
+        }
+    ]
+}

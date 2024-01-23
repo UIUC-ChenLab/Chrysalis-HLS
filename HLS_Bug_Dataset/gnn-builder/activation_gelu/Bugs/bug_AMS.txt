@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "T activation_gelu(T x)",
+            "Faulty Code": "#pragma HLS INTERFACE port=x mode=ap_none"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int k = 0; k < BLOCK_SIZE_OUT; k++)",
+            "Faulty Code": "for (int k = 0; k < BLOCK_SIZE_OUT - 1; k++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "temp_sum[k] = 0;",
+            "Faulty Code": "temp_sum[k] = bias[k];"
+        }
+    ]
+}

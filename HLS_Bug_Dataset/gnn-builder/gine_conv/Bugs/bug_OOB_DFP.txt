@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "node_neighbors[i] = neighbor_table[current_idx];",
+            "Faulty Code": "node_neighbors[node_in_degree] = neighbor_table[current_idx];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void gather_node_neighbors_and_edge_indices(...)",
+            "Faulty Code": "#pragma HLS dataflow\nvoid gather_node_neighbors_and_edge_indices(...)"
+        }
+    ]
+}

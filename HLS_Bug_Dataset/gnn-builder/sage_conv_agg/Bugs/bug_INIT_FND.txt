@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "mean_incremental_data<T> neighbor_emb_aggregation_mean[EMB_SIZE_IN];",
+            "Faulty Code": "mean_incremental_data<T> neighbor_emb_aggregation_mean[EMB_SIZE_IN]; // Missing initialization"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS loop_tripcount min = 1 max = DEGREE_GUESS",
+            "Faulty Code": "#pragma HLS array_partition variable=neighbor_emb_aggregation_mean cyclic factor=4 // Assuming EMB_SIZE_IN is not divisible by 4"
+        }
+    ]
+}

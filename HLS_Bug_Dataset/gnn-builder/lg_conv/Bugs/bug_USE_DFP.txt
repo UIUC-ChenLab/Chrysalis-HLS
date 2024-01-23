@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int num_in_neighbors = in_degree_table[node];",
+            "Faulty Code": "unsigned int num_in_neighbors = in_degree_table[node];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS DATAFLOW inside the gather_node_neighbors function"
+        }
+    ]
+}

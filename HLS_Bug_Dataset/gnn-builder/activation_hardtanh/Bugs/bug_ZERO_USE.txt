@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "const T min_val = T(-1.0);",
+            "Faulty Code": "T min_val; // Implicitly initialized to zero"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "const T min_val = T(-1.0);",
+            "Faulty Code": "const int min_val = -1; // Wrong type may cause unintended sign extension"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS interface m_axi port=node_embedding_table"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int j = 0; j < EMB_SIZE; j++)",
+            "Faulty Code": "#pragma HLS unroll factor=partial_factor"
+        }
+    ]
+}

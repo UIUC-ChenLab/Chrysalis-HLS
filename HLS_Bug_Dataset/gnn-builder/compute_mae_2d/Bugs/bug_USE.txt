@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "mae += std::abs(arr1[i][j] - arr2[i][j]);",
+            "Faulty Code": "mae += std::abs((int)(arr1[i][j] - arr2[i][j]));"
+        }
+    ]
+}

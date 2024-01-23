@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "const T out = x * T(0.5) * (T(1.0) + m_erf(x * sqrt_2_recip));",
+            "Faulty Code": "const T out = x * T(0.5) * (T(1.0) + m_erf(array[x])); // Assuming array is an array that is being accessed with x, which is out of bounds"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "const T sqrt_2_recip = T(1.0) / m_sqrt(T(2.0));",
+            "Faulty Code": "const int sqrt_2_recip = 1 / m_sqrt(2); // Incorrectly uses int instead of T, causing unintended sign extension or loss of precision"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void max_incremental_finalize(max_incremental_data<T> &data)",
+            "Faulty Code": "#pragma HLS interface port=data mode=ap_none"
+        }
+    ]
+}

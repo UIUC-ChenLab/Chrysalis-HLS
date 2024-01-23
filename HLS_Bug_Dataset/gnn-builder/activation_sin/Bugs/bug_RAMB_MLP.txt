@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "return m_sin(x);",
+            "Faulty Code": "return m_sin(A[x]); // Assuming A is an array accessed with m_axi"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE // Incorrectly nested within another #pragma HLS PIPELINE in a calling function"
+        }
+    ]
+}

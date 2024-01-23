@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "T activation_hardtanh(T x)",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=x"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "T activation_hardtanh(T x)",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=return"
+        }
+    ]
+}

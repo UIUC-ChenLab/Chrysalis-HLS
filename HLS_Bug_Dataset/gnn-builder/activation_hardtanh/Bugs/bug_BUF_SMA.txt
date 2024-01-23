@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "T activation_hardtanh(T x)",
+            "Faulty Code": "T activation_hardtanh(T x, T buf[2])"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS INTERFACE port=x bram"
+        }
+    ]
+}

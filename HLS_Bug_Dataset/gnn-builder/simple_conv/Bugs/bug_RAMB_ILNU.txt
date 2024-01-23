@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS stable variable = neighbor_table",
+            "Faulty Code": "#pragma HLS interface m_axi port=neighbor_table depth=MAX_EDGES offset=direct"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int i = 0; i < EMB_SIZE_IN; i++)",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (int i = 0; i < EMB_SIZE_IN; i++)"
+        }
+    ]
+}

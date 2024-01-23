@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (x > 0)",
+            "Faulty Code": "if (x >= 0)"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "const T negative_slope = T(0.1);",
+            "Faulty Code": "T negative_slope; // Uninitialized variable"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=x // Incorrect mode for a scalar variable"
+        }
+    ]
+}

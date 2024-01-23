@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "for (int i = 0; i < EMB_SIZE_IN; i++) { sum_incremental_update(neighbor_emb_aggregation_sum[i], message_act[i]); }",
+            "Faulty Code": "for (int i = 1; i < EMB_SIZE_IN; i++) { sum_incremental_update(neighbor_emb_aggregation_sum[i], message_act[i]); }"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS pipeline inside of the SUM_OUTER and SUM_INNER loops"
+        }
+    ]
+}

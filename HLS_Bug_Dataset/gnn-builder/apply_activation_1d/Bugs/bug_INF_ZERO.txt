@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < N; i++)",
+            "Faulty Code": "for (int i = 0; i <= N; i++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "x_out[i] = T_func(x_in[i]);",
+            "Faulty Code": "x_out[i] = T_func(x_in[i] * 0);"
+        }
+    ]
+}

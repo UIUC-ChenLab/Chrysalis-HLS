@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "T activation_cos(T x) {",
+            "Faulty Code": "T activation_cos(T x = 0) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "return m_cos(x);",
+            "Faulty Code": "return (int)m_cos(x);"
+        }
+    ]
+}

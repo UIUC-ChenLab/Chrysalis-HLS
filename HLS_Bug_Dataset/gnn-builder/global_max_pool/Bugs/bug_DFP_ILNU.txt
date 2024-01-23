@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS loop_tripcount min = 1 max = NUM_NODES_GUESS",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int j = 0; j < EMB_SIZE; j++)",
+            "Faulty Code": "#pragma HLS unroll factor = 4\n        for (int j = 0; j < EMB_SIZE; j++)"
+        }
+    ]
+}

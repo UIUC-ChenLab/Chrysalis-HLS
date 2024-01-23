@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE // Incorrect placement inside another pipeline region"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS unroll",
+            "Faulty Code": "#pragma HLS unroll factor=4 // Incorrect unroll factor not fully unrolling the inner loop"
+        }
+    ]
+}

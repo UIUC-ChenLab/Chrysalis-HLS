@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int source = edge_list[i][0];",
+            "Faulty Code": "short source = edge_list[i][0];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS loop_tripcount min = 1 max = NUM_NODES_GUESS",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

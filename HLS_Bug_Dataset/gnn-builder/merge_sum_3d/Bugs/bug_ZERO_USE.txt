@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "T x_in_1_buf = x_in_1[i][j][k];",
+            "Faulty Code": "T x_in_1_buf = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "T x_in_1_buf = x_in_1[i][j][k];",
+            "Faulty Code": "T x_in_1_buf = (char)x_in_1[i][j][k];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=x dim=2"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "T activation_leakyrelu(T x)",
+            "Faulty Code": "void activation_leakyrelu(T A[32])"
+        }
+    ]
+}

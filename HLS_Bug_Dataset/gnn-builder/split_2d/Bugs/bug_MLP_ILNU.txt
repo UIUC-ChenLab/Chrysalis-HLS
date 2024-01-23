@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int j = 0; j < N; j++) {",
+            "Faulty Code": "#pragma HLS pipeline"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int i = 0; i < M; i++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

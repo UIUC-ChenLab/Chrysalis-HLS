@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void sum_incremental_finalize(sum_incremental_data<T> &data) {",
+            "Faulty Code": "#pragma HLS interface m_axi port=data depth=1"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void sum_incremental_finalize(sum_incremental_data<T> &data) {",
+            "Faulty Code": "#pragma HLS interface port=data mode=s_axilite"
+        }
+    ]
+}

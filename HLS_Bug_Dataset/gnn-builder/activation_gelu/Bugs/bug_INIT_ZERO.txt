@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "const T sqrt_2_recip = T(1.0) / m_sqrt(T(2.0));",
+            "Faulty Code": "T sqrt_2_recip; // Uninitialized variable"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "const T out = x * T(0.5) * (T(1.0) + m_erf(x * sqrt_2_recip));",
+            "Faulty Code": "const T out = 0; // Incorrectly initialized to zero"
+        }
+    ]
+}

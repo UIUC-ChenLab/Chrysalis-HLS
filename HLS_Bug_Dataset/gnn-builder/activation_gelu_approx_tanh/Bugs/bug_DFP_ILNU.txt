@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "const T tanh = m_tanh(tanh_arg);",
+            "Faulty Code": "#pragma HLS unroll factor=4\nconst T tanh = m_tanh(tanh_arg);"
+        }
+    ]
+}

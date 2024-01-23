@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int j = 0; j < N; j++)",
+            "Faulty Code": "for (int j = 0; j <= N; j++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "x_out[i][j][k] = T_func(x_in[i][j][k]);",
+            "Faulty Code": "x_out[i][j][k] = 0;"
+        }
+    ]
+}

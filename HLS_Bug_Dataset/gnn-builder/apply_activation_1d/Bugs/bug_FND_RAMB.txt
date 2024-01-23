@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "void apply_activation_1d(T_array_1d<T, N> x_in, T_array_1d<T, N> x_out)",
+            "Faulty Code": "void apply_activation_1d(T_array_1d<T, N> x_in, T_array_1d<T, N> x_out)\n{\n#pragma HLS array_partition variable=x_in cyclic factor=4\n#pragma HLS array_partition variable=x_out cyclic factor=4"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void apply_activation_1d(T_array_1d<T, N> x_in, T_array_1d<T, N> x_out)",
+            "Faulty Code": "void apply_activation_1d(T_array_1d<T, N> x_in, T_array_1d<T, N> x_out)\n{\n#pragma HLS interface m_axi port=x_in offset=slave\n#pragma HLS interface m_axi port=x_out offset=slave"
+        }
+    ]
+}

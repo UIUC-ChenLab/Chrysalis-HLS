@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void variance_incremental_finalize(variance_incremental_data<T> &data)",
+            "Faulty Code": "void variance_incremental_finalize(variance_incremental_data<T> &data) #pragma HLS INTERFACE port=data mode=s_axilite"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "data.var = data.m2 / T(data.count);",
+            "Faulty Code": "data.var = data.m2 / T(data.count - 1);"
+        }
+    ]
+}

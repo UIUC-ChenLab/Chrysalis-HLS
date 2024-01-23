@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "int neighbors[MAX_NODES];",
+            "Faulty Code": "int neighbors[num_in_neighbors];"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS array_partition variable = weight cyclic factor = BLOCK_SIZE_IN dim = 2",
+            "Faulty Code": "#pragma HLS array_partition variable = weight complete dim = 2"
+        }
+    ]
+}

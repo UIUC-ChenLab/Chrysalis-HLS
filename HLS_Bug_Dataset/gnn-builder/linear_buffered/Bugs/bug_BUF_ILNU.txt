@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "output_buffer[tmp_idx] = bias[tmp_idx];",
+            "Faulty Code": "output[tmp_idx] = bias[tmp_idx];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS unroll",
+            "Faulty Code": "#pragma HLS unroll factor = 4"
+        }
+    ]
+}

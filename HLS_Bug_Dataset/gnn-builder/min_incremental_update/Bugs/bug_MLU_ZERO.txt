@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (data.one_sample_processed == false)",
+            "Faulty Code": "if (data.one_sample_processed = false)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "data.one_sample_processed = true;",
+            "Faulty Code": "data.one_sample_processed = false;"
+        }
+    ]
+}

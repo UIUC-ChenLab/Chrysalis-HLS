@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < M; i++)",
+            "Faulty Code": "for (int i = 0; ; i++)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "x_out_2[i][j] = x_in_buf;",
+            "Faulty Code": "x_out_2[i][j] = x_out_1[i][j];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "T out = m_tanh(x);",
+            "Faulty Code": "T out; out = m_tanh(x); T out_fixed = (hls::signbit(out) != hls::signbit(out)) ? T(-out) : out;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "T out_fixed = (hls::signbit(x) != hls::signbit(out)) ? T(-out) : out;",
+            "Faulty Code": "T out_fixed = (hls::signbit(x) != hls::signbit(out)) ? T(out) : T(-out);"
+        }
+    ]
+}

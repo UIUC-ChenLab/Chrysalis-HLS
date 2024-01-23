@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < num_nodes; i++)",
+            "Faulty Code": "for (int i = 0; i <= num_nodes; i++)"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "mean_incremental_update(mean_agg[j], node_embedding_table[i][j]);",
+            "Faulty Code": "mean_incremental_update(mean_agg[i], node_embedding_table[i][j]);"
+        }
+    ]
+}

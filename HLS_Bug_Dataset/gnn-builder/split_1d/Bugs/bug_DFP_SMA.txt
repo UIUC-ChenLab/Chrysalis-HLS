@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void split_1d(T_array_1d<T, N> x_in, T_array_1d<T, N> x_out_1, T_array_1d<T, N> x_out_2)",
+            "Faulty Code": "void split_1d(T_array_1d<T, N> x_in, T_array_1d<T, N> x_out_1, T_array_1d<T, N> x_out_2) {\n#pragma HLS INTERFACE port=x_out_1 bram\n#pragma HLS INTERFACE port=x_out_2 bram\n}"
+        }
+    ]
+}

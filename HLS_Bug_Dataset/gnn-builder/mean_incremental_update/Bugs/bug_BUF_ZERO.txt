@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "data.sum += x;",
+            "Faulty Code": "data.sum = x;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "data.count++;",
+            "Faulty Code": "data.count = 0;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS stable variable = num_nodes",
+            "Faulty Code": "#pragma HLS interface port=num_nodes bram"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS unroll",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

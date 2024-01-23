@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int node_offset = neightbor_table_offsets[node];",
+            "Faulty Code": "int node_offset = 0;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS loop_tripcount min = 1 max = DEGREE_GUESS",
+            "Faulty Code": "#pragma HLS array_partition variable=node_neighbors factor=3 cyclic"
+        }
+    ]
+}

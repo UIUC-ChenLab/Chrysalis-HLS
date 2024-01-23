@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "return m_cos(x);",
+            "Faulty Code": "return m_cos(x) + m_cos(x); // Incorrect manual loop unrolling, duplicated the operation"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "return m_cos(x);",
+            "Faulty Code": "return m_cos(other_half_x); // 'other_half_x' is presumably from a split buffer, but it is the wrong half"
+        }
+    ]
+}

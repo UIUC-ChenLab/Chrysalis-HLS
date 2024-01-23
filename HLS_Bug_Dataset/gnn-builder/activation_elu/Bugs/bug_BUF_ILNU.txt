@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "return alpha * (m_exp(x) - T(1.0));",
+            "Faulty Code": "return alpha * (m_exp(x) - T(0.5)); // Using the wrong constant due to a typo could represent a buffer usage error"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS UNROLL factor=4 // Incorrectly placed or specified pragma for a function that should not be unrolled"
+        }
+    ]
+}

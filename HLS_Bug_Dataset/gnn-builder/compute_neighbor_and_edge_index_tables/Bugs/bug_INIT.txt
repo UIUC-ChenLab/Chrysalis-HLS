@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "neightbor_table_offsets_temp[0] = 0;",
+            "Faulty Code": "// neightbor_table_offsets_temp[0] = 0; // The initialization is missing"
+        }
+    ]
+}

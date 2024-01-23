@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "const T tanh = m_tanh(tanh_arg);",
+            "Faulty Code": "#pragma HLS pipeline\n    const T tanh = m_tanh(tanh_arg);"
+        }
+    ]
+}

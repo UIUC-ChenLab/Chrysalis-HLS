@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "const T alpha = T(1.0);",
+            "Faulty Code": "const T alpha = T(1);"
+        }
+    ]
+}

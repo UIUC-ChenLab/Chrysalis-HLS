@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "const T negative_slope = T(0.1);",
+            "Faulty Code": "T negative_slope; // Uninitialized variable"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (x >= 0) { return x; } else { return x * negative_slope; }",
+            "Faulty Code": "if (x > 0) { return x; } else { return x * negative_slope; } // Missing the case when x equals 0"
+        }
+    ]
+}

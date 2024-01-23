@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "return x;",
+            "Faulty Code": "return BUF[x];"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS array_partition variable=alpha type=cyclic factor=4"
+        }
+    ]
+}

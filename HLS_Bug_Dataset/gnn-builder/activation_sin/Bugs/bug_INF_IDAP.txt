@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "return m_sin(x);",
+            "Faulty Code": "while(1) { return m_sin(x); }"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE mode=s_axilite port=return"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "max_incremental_update(max_agg[j], node_embedding_table[i][j]);",
+            "Faulty Code": "max_incremental_update(max_agg[i], node_embedding_table[i][j]);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int i = 0; i < num_nodes; i++)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (int i = 0; i < num_nodes; i++)"
+        }
+    ]
+}

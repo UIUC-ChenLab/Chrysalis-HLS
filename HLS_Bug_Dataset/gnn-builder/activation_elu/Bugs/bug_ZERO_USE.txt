@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "const T alpha = T(1.0);",
+            "Faulty Code": "const T alpha = T(0.0);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "return alpha * (m_exp(x) - T(1.0));",
+            "Faulty Code": "return (int)alpha * (m_exp(x) - T(1.0));"
+        }
+    ]
+}

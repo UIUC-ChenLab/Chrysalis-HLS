@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void max_incremental_finalize(max_incremental_data<T> &data) {\n    // #pragma HLS INLINE off\n    data.finalized = true;\n}",
+            "Faulty Code": "void max_incremental_finalize(max_incremental_data<T> &data) {\n    // #pragma HLS INLINE off\n    bool someFlag;\n    if(someFlag) {\n        data.finalized = true;\n    }\n}"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "void max_incremental_finalize(max_incremental_data<T> &data) {\n    // #pragma HLS INLINE off\n    data.finalized = true;\n}",
+            "Faulty Code": "void max_incremental_finalize(max_incremental_data<T> &data) {\n    // #pragma HLS INLINE off\n    for (int i = 0; i < 10; i++) {\n        // Some processing leading to the belief that loop unrolling is needed\n    }\n    for (int i = 0; i < 9; i++) { // Incorrect unrolling by missing the last iteration\n        // Manually duplicated loop body supposed to be unrolled\n    }\n    data.finalized = true;\n}"
+        }
+    ]
+}

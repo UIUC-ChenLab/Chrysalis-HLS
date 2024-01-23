@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (x < min_val)",
+            "Faulty Code": "if (x < min_val[-1])"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (x > max_val)",
+            "Faulty Code": "if (x < max_val)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "const T min_val = T(-1.0);",
+            "Faulty Code": "T min_val; // Uninitialized variable"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "const T max_val = T(1.0);",
+            "Faulty Code": "const T max_val = T(0); // Incorrectly initialized to zero"
+        }
+    ]
+}

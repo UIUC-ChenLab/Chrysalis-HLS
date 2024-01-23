@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "return m_sin(x);",
+            "Faulty Code": "return m_sin(x) + m_sin(x+1); // Incorrectly unrolled version assuming linear behavior"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "return m_sin(x);",
+            "Faulty Code": "return (short)m_sin(x); // Unintended sign extension if m_sin returns a larger datatype"
+        }
+    ]
+}

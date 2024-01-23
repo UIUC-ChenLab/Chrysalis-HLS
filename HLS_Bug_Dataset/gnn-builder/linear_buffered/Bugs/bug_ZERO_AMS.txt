@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "temp_sum[k] = 0;",
+            "Faulty Code": "temp_sum[k] = bias[k];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS array_partition variable = output_buffer cyclic factor = BLOCK_SIZE_OUT dim = 1",
+            "Faulty Code": "#pragma HLS interface port=output_buffer ap_none"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "\"\"\"T activation_silu(T x)\n{\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n    return x * (T(1.0) / (T(1.0) + m_exp(-x)));\n}\"\"\"",
+            "Faulty Code": "\"\"\"T activation_silu(T x)\n{\n#pragma HLS INLINE off\n    #pragma HLS PIPELINE\n    return x * (T(1.0) / (T(1.0) + #pragma HLS PIPELINE m_exp(-x)));\n}\"\"\""
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "num_in_neighbors_0 = num_in_neighbors;",
+            "Faulty Code": "num_in_neighbors_0 = num_in_neighbors_1;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void pna_conv_copy_num_in_neighbors(...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=num_in_neighbors ap_none\nvoid pna_conv_copy_num_in_neighbors(...)"
+        }
+    ]
+}

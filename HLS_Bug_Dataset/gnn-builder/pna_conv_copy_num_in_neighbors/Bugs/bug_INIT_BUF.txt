@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "num_in_neighbors_0 = num_in_neighbors;",
+            "Faulty Code": "T uninitialized_var;\nnum_in_neighbors_0 = uninitialized_var;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "num_in_neighbors_1 = num_in_neighbors;",
+            "Faulty Code": "num_in_neighbors_1 = num_in_neighbors_2;"
+        }
+    ]
+}

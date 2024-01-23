@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "T out = m_tanh(x);",
+            "Faulty Code": "T out = m_tanh(x); T out = m_tanh(x); // Incorrectly duplicated line due to manual loop unrolling"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow // Incorrect pragma for this single-threaded function"
+        }
+    ]
+}

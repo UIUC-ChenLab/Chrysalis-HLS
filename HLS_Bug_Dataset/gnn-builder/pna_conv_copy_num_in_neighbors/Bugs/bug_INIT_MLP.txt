@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void pna_conv_copy_num_in_neighbors(\n    T &num_in_neighbors,\n    T &num_in_neighbors_0,\n    T &num_in_neighbors_1,\n    T &num_in_neighbors_2)\n{\n#pragma HLS INLINE off\n    num_in_neighbors_0 = num_in_neighbors;\n    num_in_neighbors_1 = num_in_neighbors;\n    num_in_neighbors_2 = num_in_neighbors;\n}",
+            "Faulty Code": "void pna_conv_copy_num_in_neighbors(\n    T &num_in_neighbors,\n    T &num_in_neighbors_0,\n    T &num_in_neighbors_1,\n    T &num_in_neighbors_2)\n{\n#pragma HLS INLINE off\n    num_in_neighbors_0 = num_in_neighbors_1;\n    num_in_neighbors_1 = num_in_neighbors;\n    num_in_neighbors_2 = num_in_neighbors;\n}"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "void pna_conv_copy_num_in_neighbors(\n    T &num_in_neighbors,\n    T &num_in_neighbors_0,\n    T &num_in_neighbors_1,\n    T &num_in_neighbors_2)\n{\n#pragma HLS INLINE off\n    num_in_neighbors_0 = num_in_neighbors;\n    num_in_neighbors_1 = num_in_neighbors;\n    num_in_neighbors_2 = num_in_neighbors;\n}",
+            "Faulty Code": "void pna_conv_copy_num_in_neighbors(\n    T &num_in_neighbors,\n    T &num_in_neighbors_0,\n    T &num_in_neighbors_1,\n    T &num_in_neighbors_2)\n{\n#pragma HLS INLINE off\n#pragma HLS pipeline\n    num_in_neighbors_0 = num_in_neighbors;\n#pragma HLS pipeline\n    num_in_neighbors_1 = num_in_neighbors;\n    num_in_neighbors_2 = num_in_neighbors;\n}"
+        }
+    ]
+}

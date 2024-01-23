@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "void pna_conv_copy_num_in_neighbors(...)",
+            "Faulty Code": "void pna_conv_copy_num_in_neighbors(...)\n#pragma HLS array_partition type=complete variable=num_in_neighbors"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void pna_conv_copy_num_in_neighbors(...)",
+            "Faulty Code": "void pna_conv_copy_num_in_neighbors(...)\n#pragma HLS interface m_axi port=num_in_neighbors depth=4"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "float mae = 0;",
+            "Faulty Code": "int mae = 0;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "float compute_mae_3d(T arr1[M][N][O], T arr2[M][N][O])",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=arr1\n#pragma HLS interface mode=ap_fifo port=arr2\nfloat compute_mae_3d(T arr1[M][N][O], T arr2[M][N][O])"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=pre_apply_emb offset=slave"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void pna_conv_concat(...)",
+            "Faulty Code": "void pna_conv_concat(T current_node_embedding_in[EMB_SIZE_IN], ...)"
+        }
+    ]
+}

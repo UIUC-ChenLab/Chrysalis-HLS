@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < EMB_SIZE_IN; i++)",
+            "Faulty Code": "for (int i = 0; i <= EMB_SIZE_IN; i++)"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < node_in_degree; i++)",
+            "Faulty Code": "for (int i = 0; i <= node_in_degree - 2; i++)"
+        }
+    ]
+}

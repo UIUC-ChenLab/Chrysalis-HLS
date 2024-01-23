@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "\"\"\"void apply_activation_3d(T_array_3d<T, M, N, O> x_in, T_array_3d<T, M, N, O> x_out)\n{\n#pragma HLS INLINE off\nfor (int i = 0; i < M; i++)\n{\nfor (int j = 0; j < N; j++)\n{\n\nfor (int k = 0; k < O; k++)\n{\nx_out[i][j][k] = T_func(x_in[i][j][k]);\n}\n}\n}\n}\"\"\"",
+            "Faulty Code": "\"\"\"void apply_activation_3d(T_array_3d<T, M, N, O> x_in, T_array_3d<T, M, N, O> x_out)\n{\n#pragma HLS INLINE off\n#pragma HLS interface m_axi port=x_in\nfor (int i = 0; i < M; i++)\n{\nfor (int j = 0; j < N; j++)\n{\n\nfor (int k = 0; k < O; k++)\n{\nx_out[i][j][k] = T_func(x_in[i][j][k]);\n}\n}\n}\n}\"\"\""
+        }
+    ]
+}

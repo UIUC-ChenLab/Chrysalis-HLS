@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int k = 0; k < O; k++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\n            for (int k = 0; k < O; k++)"
+        }
+    ]
+}

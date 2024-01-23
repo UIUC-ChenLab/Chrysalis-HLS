@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return m_cos(x);",
+            "Faulty Code": "return m_cos_table[x]; // Assuming m_cos_table is an array and x is used as an index"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "return m_cos(x);",
+            "Faulty Code": "T result; return result; // Assuming result is meant to store the result of m_cos but is not initialized"
+        }
+    ]
+}

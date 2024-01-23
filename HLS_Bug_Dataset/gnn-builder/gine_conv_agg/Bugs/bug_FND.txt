@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable = input cyclic factor = BLOCK_SIZE_IN dim = 1",
+            "Faulty Code": "#pragma HLS array_partition variable = input cyclic factor = 7 dim = 1"
+        }
+    ]
+}

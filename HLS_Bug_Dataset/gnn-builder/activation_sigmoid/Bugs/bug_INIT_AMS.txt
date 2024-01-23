@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "return T(1.0) / (T(1.0) + m_exp(-x));",
+            "Faulty Code": "T result; return result / (T(1.0) + m_exp(-x));"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "T activation_sigmoid(T x)",
+            "Faulty Code": "T activation_sigmoid(T x) {\n#pragma HLS INTERFACE port=x ap_none"
+        }
+    ]
+}

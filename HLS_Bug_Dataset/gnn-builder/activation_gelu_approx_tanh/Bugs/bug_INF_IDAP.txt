@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (x < GELU_APPROX_MIN)\n        return T(0.0);",
+            "Faulty Code": "while (x < GELU_APPROX_MIN);\n        return T(0.0);"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE II=2"
+        }
+    ]
+}

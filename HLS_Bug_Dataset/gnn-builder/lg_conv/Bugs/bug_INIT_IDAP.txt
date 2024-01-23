@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "T agg_embedding[EMB_SIZE_IN];",
+            "Faulty Code": "T agg_embedding[EMB_SIZE_IN]; // Uninitialized array, should be zero-initialized"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE II=2 // Incorrect initiation interval for sequential read/write expected for ap_fifo/axis"
+        }
+    ]
+}

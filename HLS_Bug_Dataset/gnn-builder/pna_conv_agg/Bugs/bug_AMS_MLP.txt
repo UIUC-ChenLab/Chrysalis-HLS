@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void pna_conv_agg(...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=neighbor_emb_agg_max mode=s_axilite"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE inside another #pragma HLS PIPELINE"
+        }
+    ]
+}

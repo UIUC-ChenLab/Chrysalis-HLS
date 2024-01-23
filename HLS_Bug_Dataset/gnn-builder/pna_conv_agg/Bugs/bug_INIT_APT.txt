@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "T transformed_emb[EMB_SIZE_IN] = {};",
+            "Faulty Code": "T transformed_emb[EMB_SIZE_IN];"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS array_partition variable = weight cyclic factor = BLOCK_SIZE_OUT dim = 1",
+            "Faulty Code": "#pragma HLS array_partition variable = weight type = cyclic factor = BLOCK_SIZE_OUT dim = 1"
+        }
+    ]
+}

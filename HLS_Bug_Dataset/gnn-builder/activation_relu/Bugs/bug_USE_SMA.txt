@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "T activation_relu(T x)",
+            "Faulty Code": "int activation_relu(int x)"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "T activation_relu(T x)",
+            "Faulty Code": "#pragma HLS INTERFACE port=x bram"
+        }
+    ]
+}

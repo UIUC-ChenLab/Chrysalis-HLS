@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "neightbor_table_offsets_temp[0] = 0;",
+            "Faulty Code": "int neightbor_table_offsets_temp[MAX_NODES]; // Missing initialization to 0"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "neightbor_table_offsets[0] = 0;",
+            "Faulty Code": "neightbor_table_offsets[0] = -1; // Incorrectly initialized to -1"
+        }
+    ]
+}

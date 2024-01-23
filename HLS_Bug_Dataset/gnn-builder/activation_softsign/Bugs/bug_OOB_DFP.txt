@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return x / (T(1.0) + m_abs(x));",
+            "Faulty Code": "return A[x] / (T(1.0) + m_abs(A[x])); // Assuming A is an array of size 32 and x is used as an index"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow // Incorrectly used instead of PIPELINE"
+        }
+    ]
+}

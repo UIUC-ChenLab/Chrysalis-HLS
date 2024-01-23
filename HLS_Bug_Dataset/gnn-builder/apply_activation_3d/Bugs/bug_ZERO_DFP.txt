@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "x_out[i][j][k] = T_func(x_in[i][j][k]);",
+            "Faulty Code": "x_out[i][j][k] = 0;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void apply_activation_3d(T_array_3d<T, M, N, O> x_in, T_array_3d<T, M, N, O> x_out)",
+            "Faulty Code": "#pragma HLS dataflow\nvoid apply_activation_3d(T_array_3d<T, M, N, O> x_in, T_array_3d<T, M, N, O> x_out)"
+        }
+    ]
+}

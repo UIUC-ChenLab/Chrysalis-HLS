@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int j = 0; j < N; j++)",
+            "Faulty Code": "for (int j = 0; j < N - 1; j++)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "x_out[i][j] = T_func(x_in[i][j]);",
+            "Faulty Code": "x_out[i][j] = (short)T_func(x_in[i][j]);"
+        }
+    ]
+}

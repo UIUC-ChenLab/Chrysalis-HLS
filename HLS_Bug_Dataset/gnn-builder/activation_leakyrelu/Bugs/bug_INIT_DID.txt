@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "const T negative_slope = T(0.1);",
+            "Faulty Code": "T negative_slope; // Uninitialized"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=negative_slope dim=2 // Incorrect 'dim' value for a scalar"
+        }
+    ]
+}

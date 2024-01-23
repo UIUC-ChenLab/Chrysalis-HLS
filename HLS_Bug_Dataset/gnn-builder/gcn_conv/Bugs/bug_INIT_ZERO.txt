@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "T agg_embedding[EMB_SIZE_IN];",
+            "Faulty Code": "T agg_embedding[EMB_SIZE_IN]; // Uninitialized array, should be zero-initialized to avoid undefined behavior"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "output[i + k] += temp_sum[k];",
+            "Faulty Code": "output[i + k] = temp_sum[k]; // Erroneously missing the += operator, effectively not accumulating the sum and just setting output to last temp_sum value"
+        }
+    ]
+}

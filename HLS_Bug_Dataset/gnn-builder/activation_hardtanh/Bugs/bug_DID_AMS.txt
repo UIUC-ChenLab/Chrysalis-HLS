@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=x dim=2"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "T activation_hardtanh(T x)",
+            "Faulty Code": "#pragma HLS INTERFACE port=x ap_none"
+        }
+    ]
+}

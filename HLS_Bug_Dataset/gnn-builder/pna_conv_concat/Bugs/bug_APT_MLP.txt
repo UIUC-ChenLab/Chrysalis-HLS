@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "T current_node_embedding_in[EMB_SIZE_IN],",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=current_node_embedding_in"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

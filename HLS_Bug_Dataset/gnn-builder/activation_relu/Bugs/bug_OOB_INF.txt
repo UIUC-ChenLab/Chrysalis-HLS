@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (x > 0)",
+            "Faulty Code": "if (x >= ARRAY_SIZE)"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (x > 0)",
+            "Faulty Code": "while (x > 0)"
+        }
+    ]
+}

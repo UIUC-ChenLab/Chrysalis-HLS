@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "int offset = neightbor_table_offsets_temp[dest];",
+            "Faulty Code": "int offset = neightbor_table_offsets[dest];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE off",
+            "Faulty Code": "#pragma HLS array_partition variable=neightbor_table_offsets_temp factor=10"
+        }
+    ]
+}

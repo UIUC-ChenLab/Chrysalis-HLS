@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "return x / (T(1.0) + m_abs(x));",
+            "Faulty Code": "return x / (T(1.0) + m_abs(x) + BUF_SIZE);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "return x / (T(1.0) + m_abs(x));",
+            "Faulty Code": "return (int)x / ((int)1 + m_abs(x));"
+        }
+    ]
+}

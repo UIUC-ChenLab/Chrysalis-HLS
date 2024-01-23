@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "\"\"\"void apply_activation_2d(T_array_2d<T, M, N> x_in, T_array_2d<T, M, N> x_out)\n{\n#pragma HLS INLINE off\n    for (int i = 0; i < M; i++)\n    {\n        for (int j = 0; j < N; j++)\n        {\n\n            x_out[i][j] = T_func(x_in[i][j]);\n        }\n    }\n}\"\"\"",
+            "Faulty Code": "\"\"\"void apply_activation_2d(T_array_2d<T, M, N> x_in, T_array_2d<T, M, N> x_out)\n{\n#pragma HLS INLINE off\n#pragma HLS array_partition variable=x_in block factor=3 dim=1\n    for (int i = 0; i < M; i++)\n    {\n        for (int j = 0; j < N; j++)\n        {\n\n            x_out[i][j] = T_func(x_in[i][j]);\n        }\n    }\n}\"\"\""
+        }
+    ]
+}

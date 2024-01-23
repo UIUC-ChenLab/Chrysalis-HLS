@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "current_node_embedding_in[i] = node_embedding_table_in[node][i];",
+            "Faulty Code": "#pragma HLS interface m_axi port=node_embedding_table_in offset=slave bundle=gmem0\n\tcurrent_node_embedding_in[i] = node_embedding_table_in[node][i];"
+        }
+    ]
+}

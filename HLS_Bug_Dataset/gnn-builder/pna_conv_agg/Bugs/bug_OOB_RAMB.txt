@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int i = 0; i < EMB_SIZE_IN; i++)",
+            "Faulty Code": "for (int i = 0; i <= EMB_SIZE_IN; i++)"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS array_partition variable = input cyclic factor = BLOCK_SIZE_IN dim = 1",
+            "Faulty Code": "#pragma HLS array_partition variable = input complete"
+        }
+    ]
+}

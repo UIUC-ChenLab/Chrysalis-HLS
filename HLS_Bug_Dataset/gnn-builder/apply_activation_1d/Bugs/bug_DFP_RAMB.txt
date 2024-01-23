@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "x_out[i] = T_func(x_in[i]);",
+            "Faulty Code": "#pragma HLS interface m_axi port=x_in offset=slave bundle=gmem\n#pragma HLS interface m_axi port=x_out offset=slave bundle=gmem"
+        }
+    ]
+}

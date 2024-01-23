@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS array_partition dim=3"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void linear_simple(T_array_1d<T, in_size> input, ...)",
+            "Faulty Code": "#pragma HLS interface mode=ap_hs port=input"
+        }
+    ]
+}

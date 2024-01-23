@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "data.mean += delta / T(data.count);",
+            "Faulty Code": "data.mean += delta / T(data.count+1);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "data.mean += delta / T(data.count);",
+            "Faulty Code": "data.mean += delta / int(data.count);"
+        }
+    ]
+}

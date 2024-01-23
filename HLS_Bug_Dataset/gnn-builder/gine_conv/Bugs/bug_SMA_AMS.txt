@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "T node_embedding_table_out[MAX_NODES][EMB_SIZE_OUT]",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=node_embedding_table_out"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "T edge_proj_bias[EMB_SIZE_IN]",
+            "Faulty Code": "#pragma HLS INTERFACE s_axilite port=edge_proj_bias"
+        }
+    ]
+}

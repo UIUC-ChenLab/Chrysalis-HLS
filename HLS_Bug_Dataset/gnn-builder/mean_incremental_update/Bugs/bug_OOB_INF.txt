@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "data.mean = data.sum / T(data.count);",
+            "Faulty Code": "data.mean = data.sum / T(data.count - 1);"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "data.count++;",
+            "Faulty Code": "data.count--;"
+        }
+    ]
+}

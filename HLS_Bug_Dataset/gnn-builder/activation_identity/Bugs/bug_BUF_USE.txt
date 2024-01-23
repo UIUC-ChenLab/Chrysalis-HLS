@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "return x;",
+            "Faulty Code": "return buffer[x]; // Assuming buffer is an array defined elsewhere, this may cause an out-of-bounds error or read from the wrong part of a buffer"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "T activation_identity(T x)",
+            "Faulty Code": "T activation_identity(signed char x) // If T is intended to be unsigned and wider than char, this will inadvertently sign-extend x"
+        }
+    ]
+}

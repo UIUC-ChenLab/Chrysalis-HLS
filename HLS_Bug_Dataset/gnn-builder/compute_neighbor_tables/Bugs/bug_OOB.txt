@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "neightbor_table_offsets[i] = csum;",
+            "Faulty Code": "neightbor_table_offsets[i+1] = csum;"
+        }
+    ]
+}

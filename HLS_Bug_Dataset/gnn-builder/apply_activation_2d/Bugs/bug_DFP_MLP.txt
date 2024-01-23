@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int j = 0; j < N; j++)",
+            "Faulty Code": "#pragma HLS pipeline \n\t\tfor (int j = 0; j < N; j++)"
+        }
+    ]
+}

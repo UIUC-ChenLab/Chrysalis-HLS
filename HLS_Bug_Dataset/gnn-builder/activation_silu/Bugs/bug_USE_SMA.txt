@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "return x * (T(1.0) / (T(1.0) + m_exp(-x)));",
+            "Faulty Code": "return x * (1 / (T(1.0) + m_exp(-x)));"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS INTERFACE port=return bram"
+        }
+    ]
+}

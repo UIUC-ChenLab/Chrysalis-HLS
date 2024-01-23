@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "T out = (x / T(2.0)) * T(T(1.0) + tanh_fixed);",
+            "Faulty Code": "T out = (x >> 1) * (T(1.0) + tanh_fixed);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE port=return mode=s_axilite"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "float compute_mae_2d(T arr1[M][N], T arr2[M][N]) { ... }",
+            "Faulty Code": "#pragma HLS dataflow\nfloat compute_mae_2d(T arr1[M][N], T arr2[M][N]) { ... }"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int j = 0; j < N; j++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (int j = 0; j < N; j++) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable = weight cyclic factor = BLOCK_SIZE_OUT dim = 1",
+            "Faulty Code": "#pragma HLS array_partition variable = weight cyclic factor = 3 dim = 1"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void linear(T input[in_size], T output[out_size], T weight[out_size][in_size], T bias[out_size])",
+            "Faulty Code": "#pragma HLS interface port=output bram"
+        }
+    ]
+}

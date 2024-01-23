@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int neighbor_id = neighbors[neighbor];",
+            "Faulty Code": "unsigned int neighbor_id = neighbors[neighbor];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS loop_tripcount min = 0 max = DEGREE_GUESS",
+            "Faulty Code": "#pragma HLS array_partition variable=node_embedding_table_in cyclic factor=3"
+        }
+    ]
+}

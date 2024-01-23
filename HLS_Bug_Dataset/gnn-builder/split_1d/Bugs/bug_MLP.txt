@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void split_1d(T_array_1d<T, N> x_in, T_array_1d<T, N> x_out_1, T_array_1d<T, N> x_out_2)",
+            "Faulty Code": "void split_1d(T_array_1d<T, N> x_in, T_array_1d<T, N> x_out_1, T_array_1d<T, N> x_out_2) #pragma HLS pipeline"
+        }
+    ]
+}

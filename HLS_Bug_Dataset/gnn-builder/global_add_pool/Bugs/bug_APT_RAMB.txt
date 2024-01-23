@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "void global_add_pool(int num_nodes,\n                     int num_edges,\n                     T node_embedding_table[MAX_NODES][EMB_SIZE],\n                     T pooled_embedding[EMB_SIZE])",
+            "Faulty Code": "#pragma HLS array_partition variable=node_embedding_table type=complete"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void global_add_pool(int num_nodes,\n                     int num_edges,\n                     T node_embedding_table[MAX_NODES][EMB_SIZE],\n                     T pooled_embedding[EMB_SIZE])",
+            "Faulty Code": "#pragma HLS interface m_axi port=node_embedding_table offset=slave"
+        }
+    ]
+}

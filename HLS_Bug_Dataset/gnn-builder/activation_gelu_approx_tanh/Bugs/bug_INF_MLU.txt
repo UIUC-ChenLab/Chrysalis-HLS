@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (x < GELU_APPROX_MIN)\n        return T(0.0);",
+            "Faulty Code": "while (x < GELU_APPROX_MIN);\n        return T(0.0);"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "const T tanh_arg = T(T(T(GELU_TANH_COEFF_CUBIC * x) * x) + GELU_TANH_COEFF_LINEAR) * x;",
+            "Faulty Code": "const T tanh_arg = T(T(GELU_TANH_COEFF_CUBIC * x) * x) + GELU_TANH_COEFF_LINEAR;"
+        }
+    ]
+}

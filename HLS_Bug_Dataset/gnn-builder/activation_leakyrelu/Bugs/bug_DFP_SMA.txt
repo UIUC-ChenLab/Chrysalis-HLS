@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "T activation_leakyrelu(T x)",
+            "Faulty Code": "T activation_leakyrelu(T x) #pragma HLS INTERFACE port=x bram"
+        }
+    ]
+}

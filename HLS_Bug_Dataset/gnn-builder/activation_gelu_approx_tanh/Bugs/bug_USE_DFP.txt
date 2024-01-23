@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "const T tanh_arg = T(T(T(GELU_TANH_COEFF_CUBIC * x) * x) + GELU_TANH_COEFF_LINEAR) * x;",
+            "Faulty Code": "const T tanh_arg = T(T(GELU_TANH_COEFF_CUBIC * x) * x) + GELU_TANH_COEFF_LINEAR * x;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

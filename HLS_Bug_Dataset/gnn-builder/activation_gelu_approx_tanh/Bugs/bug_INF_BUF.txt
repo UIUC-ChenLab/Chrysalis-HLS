@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (x > GELU_APPROX_MAX)\n        return x;",
+            "Faulty Code": "if (x > GELU_APPROX_MAX);\n        return x;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "T out = (x / T(2.0)) * T(T(1.0) + tanh_fixed);",
+            "Faulty Code": "T out = (x / T(2.0)) * T(T(1.0) + tanh_fixed_half);"
+        }
+    ]
+}

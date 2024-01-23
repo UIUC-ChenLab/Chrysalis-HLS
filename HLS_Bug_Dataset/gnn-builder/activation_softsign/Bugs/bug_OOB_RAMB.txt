@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return x / (T(1.0) + m_abs(x));",
+            "Faulty Code": "return x / (A[0] + m_abs(x)); // Assuming A is an array passed to this function"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "\"\"\"T activation_softsign(T x) { #pragma HLS INLINE off #pragma HLS PIPELINE return x / (T(1.0) + m_abs(x)); }\"\"\"",
+            "Faulty Code": "\"\"\"void activation_softsign(T A[32]) { #pragma HLS INLINE off #pragma HLS interface m_axi port=A T x = A[15]; // Incorrect use of m_axi for non-consecutive access for (int i = 0; i < 32; i += 2) { // Non-consecutive access A[i] = x / (T(1.0) + m_abs(A[i])); // RAMB error due to non-consecutive access } }\"\"\""
+        }
+    ]
+}

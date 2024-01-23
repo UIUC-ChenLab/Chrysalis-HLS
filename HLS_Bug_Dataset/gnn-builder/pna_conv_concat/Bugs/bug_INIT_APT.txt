@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "T pre_apply_emb[CONCAT_SIZE]",
+            "Faulty Code": "T pre_apply_emb[CONCAT_SIZE]; // Missing initialization"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "pre_apply_emb[i + EMB_SIZE_IN * 0] = current_node_embedding_in[i];",
+            "Faulty Code": "#pragma HLS array_partition variable=pre_apply_emb type=cyclic factor=2 // Faulty partitioning type or factor"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic factor=4 variable=x_out"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void apply_activation_1d(T_array_1d<T, N> x_in, T_array_1d<T, N> x_out)",
+            "Faulty Code": "#pragma HLS interface m_axi port=x_in depth=32"
+        }
+    ]
+}

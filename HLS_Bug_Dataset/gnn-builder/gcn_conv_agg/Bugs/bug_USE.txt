@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "T d_i_prime = T(1.0) + T(in_degree_node);",
+            "Faulty Code": "T d_i_prime = T(1.0) + in_degree_node;"
+        }
+    ]
+}

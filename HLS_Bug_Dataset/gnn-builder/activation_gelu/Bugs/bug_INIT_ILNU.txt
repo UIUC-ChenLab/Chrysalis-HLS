@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "const T sqrt_2_recip = T(1.0) / m_sqrt(T(2.0));",
+            "Faulty Code": "T sqrt_2_recip; // Uninitialized usage"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS unroll factor=4 // Misplaced and incorrect unrolling factor"
+        }
+    ]
+}

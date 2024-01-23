@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "const T out = x * T(0.5) * (T(1.0) + m_erf(x * sqrt_2_recip));",
+            "Faulty Code": "while (x * T(0.5) * (T(1.0) + m_erf(x * sqrt_2_recip))){ // This could create an infinite loop if the condition is always true"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "const T sqrt_2_recip = T(1.0) / m_sqrt(T(2.0));",
+            "Faulty Code": "const T sqrt_2_recip = T(0.0) / m_sqrt(T(2.0)); // Incorrectly initializing to zero"
+        }
+    ]
+}

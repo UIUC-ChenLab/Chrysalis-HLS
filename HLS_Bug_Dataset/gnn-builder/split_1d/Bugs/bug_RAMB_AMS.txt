@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS interface m_axi port=x_in depth=32"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS interface port=x_out_1 mode=ap_none"
+        }
+    ]
+}

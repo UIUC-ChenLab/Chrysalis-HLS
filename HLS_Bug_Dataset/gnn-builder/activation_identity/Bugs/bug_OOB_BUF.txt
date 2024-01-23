@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return x;",
+            "Faulty Code": "return arr[i]; // Assuming arr is an array and i is out of bounds"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "return x;",
+            "Faulty Code": "return buffer[index]; // Assuming buffer is split and index points to the wrong half"
+        }
+    ]
+}

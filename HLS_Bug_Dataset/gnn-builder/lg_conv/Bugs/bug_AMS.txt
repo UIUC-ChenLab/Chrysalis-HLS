@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void lg_conv(...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=node_embedding_table_out mode=ap_none"
+        }
+    ]
+}

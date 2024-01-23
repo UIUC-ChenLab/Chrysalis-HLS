@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "void global_max_pool(int num_nodes, ...",
+            "Faulty Code": "void global_max_pool(short num_nodes, ..."
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void global_max_pool(int num_nodes, ...",
+            "Faulty Code": "void global_max_pool(int num_nodes, int num_edges, T node_embedding_table[MAX_NODES][EMB_SIZE], T pooled_embedding[EMB_SIZE]) {\n#pragma HLS INTERFACE m_axi port=node_embedding_table offset=slave bundle=gmem\n#pragma HLS INTERFACE m_axi port=pooled_embedding offset=slave bundle=gmem\n..."
+        }
+    ]
+}

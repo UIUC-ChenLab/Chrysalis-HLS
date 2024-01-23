@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return x;",
+            "Faulty Code": "return x[some_index]; // Assuming 'x' is not an array"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS pipeline // Inside another pipelined loop"
+        }
+    ]
+}

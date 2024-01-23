@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "num_in_neighbors_1 = num_in_neighbors;",
+            "Faulty Code": "num_in_neighbors_1 = num_in_neighbors[1];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "num_in_neighbors_0 = num_in_neighbors;",
+            "Faulty Code": "num_in_neighbors_0 = 0;"
+        }
+    ]
+}

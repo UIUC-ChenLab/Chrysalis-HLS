@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int j = 0; j < N; j++)",
+            "Faulty Code": "#pragma HLS pipeline // Incorrectly placed inside the outer loop"
+        }
+    ]
+}

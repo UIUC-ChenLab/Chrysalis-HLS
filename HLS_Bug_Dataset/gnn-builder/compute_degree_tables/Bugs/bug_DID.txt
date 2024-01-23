@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "int source = edge_list[i][0];",
+            "Faulty Code": "#pragma HLS array_partition variable=edge_list dim=3\nint source = edge_list[i][0];"
+        }
+    ]
+}

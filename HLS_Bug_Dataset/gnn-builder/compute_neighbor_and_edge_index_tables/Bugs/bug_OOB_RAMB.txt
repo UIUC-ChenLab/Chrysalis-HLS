@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "neightbor_table_offsets[0] = 0;",
+            "Faulty Code": "neightbor_table_offsets[num_nodes] = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "int offset = neightbor_table_offsets_temp[dest];",
+            "Faulty Code": "int offset = neightbor_table_offsets_temp[source];"
+        }
+    ]
+}

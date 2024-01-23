@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "return m_cos(x);",
+            "Faulty Code": "#pragma HLS unroll complete\n    return m_cos(x);"
+        }
+    ]
+}

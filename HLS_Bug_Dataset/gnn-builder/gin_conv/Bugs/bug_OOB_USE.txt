@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "node_neighbors[i] = neighbor_table[current_idx];",
+            "Faulty Code": "node_neighbors[i + 1] = neighbor_table[current_idx];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "self_emb_scaled[i] = current_node_embedding_in[i] * (T(1) + gin_eps);",
+            "Faulty Code": "self_emb_scaled[i] = current_node_embedding_in[i] * (1 + gin_eps);"
+        }
+    ]
+}

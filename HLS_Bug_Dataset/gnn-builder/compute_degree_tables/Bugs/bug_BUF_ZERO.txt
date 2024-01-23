@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out_degree_table[source]++;",
+            "Faulty Code": "out_degree_table[dest]++;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "in_degree_table[i] = 0;",
+            "Faulty Code": "in_degree_table[i] = in_degree_table[i];"
+        }
+    ]
+}

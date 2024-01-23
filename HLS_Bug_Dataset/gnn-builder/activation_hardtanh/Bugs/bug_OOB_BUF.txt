@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "const T min_val = T(-1.0);",
+            "Faulty Code": "const T min_val = T(-1.0); // Imagine there is an array access here that is out of bounds"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "const T max_val = T(1.0);",
+            "Faulty Code": "const T max_val = T(1.0); // Imagine there is a buffer operation here that accesses the wrong half"
+        }
+    ]
+}

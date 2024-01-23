@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "\"\"\"T activation_leakyrelu(T x)\n{\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n    const T negative_slope = T(0.1);\n\n    if (x >= 0)\n    {\n        return x;\n    }\n    else\n    {\n        return x * negative_slope;\n    }\n}\"\"\"",
+            "Faulty Code": "\"\"\"T activation_leakyrelu(T x)\n{\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n    const T negative_slope = T(0.1);\n\n    if (x >= 0)\n    {\n#pragma HLS PIPELINE\n        return x;\n    }\n    else\n    {\n#pragma HLS PIPELINE\n        return x * negative_slope;\n    }\n}\"\"\""
+        }
+    ]
+}

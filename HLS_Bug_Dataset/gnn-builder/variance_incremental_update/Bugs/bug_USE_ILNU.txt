@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "data.mean += delta / T(data.count);",
+            "Faulty Code": "data.mean += delta / data.count;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "data.mean += delta / T(data.count);",
+            "Faulty Code": "#pragma HLS UNROLL factor=4\n\t\tdata.mean += delta / T(data.count);"
+        }
+    ]
+}

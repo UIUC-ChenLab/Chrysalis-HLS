@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int num_in_neighbors = in_degree_table[node];",
+            "Faulty Code": "char num_in_neighbors = in_degree_table[node];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "node_neighbors[i] = neighbor_table[current_idx];",
+            "Faulty Code": "node_neighbors[node_offset] = neighbor_table[current_idx];"
+        }
+    ]
+}

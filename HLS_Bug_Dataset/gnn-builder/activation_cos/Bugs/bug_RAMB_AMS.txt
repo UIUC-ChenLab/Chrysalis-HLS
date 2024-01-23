@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE port=x mode=ap_none"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "return m_cos(x);",
+            "Faulty Code": "return A[i]; // Assuming A is some array defined elsewhere with pragma HLS INTERFACE port=A mode=m_axi"
+        }
+    ]
+}

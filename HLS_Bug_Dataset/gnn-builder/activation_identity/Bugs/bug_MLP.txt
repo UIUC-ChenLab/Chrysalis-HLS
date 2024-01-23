@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "T activation_identity(T x)\n{\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n    return x;\n}",
+            "Faulty Code": "T activation_identity(T x)\n{\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n#pragma HLS PIPELINE\n    return x;\n}"
+        }
+    ]
+}

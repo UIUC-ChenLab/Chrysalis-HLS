@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "output[i] = bias[i];",
+            "Faulty Code": "T temp = output[i]; // Assuming output[i] is used without being initialized"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "output[i] += weight[i][j] * input[j];",
+            "Faulty Code": "output[i] += weight[i][j] * static_cast<int>(input[j]); // Assuming T is unsigned and input[j] is signed"
+        }
+    ]
+}

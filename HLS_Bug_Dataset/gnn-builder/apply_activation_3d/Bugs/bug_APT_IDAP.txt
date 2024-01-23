@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=x_in"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void apply_activation_3d(T_array_3d<T, M, N, O> x_in, T_array_3d<T, M, N, O> x_out)",
+            "Faulty Code": "#pragma HLS interface mode=ap_none port=x_out"
+        }
+    ]
+}

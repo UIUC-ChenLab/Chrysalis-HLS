@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "T x_in_buf = x_in[i];",
+            "Faulty Code": "T x_in_buf = x_in[i + N/2];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS interface m_axi port=x_in offset=slave bundle=gmem0"
+        }
+    ]
+}

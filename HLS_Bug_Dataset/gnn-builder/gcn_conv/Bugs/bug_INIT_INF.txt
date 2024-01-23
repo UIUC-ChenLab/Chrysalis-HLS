@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "T agg_embedding[EMB_SIZE_IN];",
+            "Faulty Code": "T agg_embedding[EMB_SIZE_IN]; // The error is that the array is not initialized."
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < out_size; i += BLOCK_SIZE_OUT)",
+            "Faulty Code": "for (int i = 0; i <= out_size; i += BLOCK_SIZE_OUT) // The error is using <= instead of < which can cause an infinite loop if out_size is a multiple of BLOCK_SIZE_OUT."
+        }
+    ]
+}

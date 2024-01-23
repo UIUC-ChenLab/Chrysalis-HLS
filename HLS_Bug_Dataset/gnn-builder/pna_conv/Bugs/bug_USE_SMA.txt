@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "T delta = x - data.mean;",
+            "Faulty Code": "T delta = x - (int)data.mean;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "T node_embedding_table_in[MAX_NODES][EMB_SIZE_IN],",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=node_embedding_table_in"
+        }
+    ]
+}

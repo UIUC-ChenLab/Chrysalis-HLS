@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "return T(1.0) / (T(1.0) + m_exp(-x));",
+            "Faulty Code": "return 1 / (1 + m_exp(-x));"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=x"
+        }
+    ]
+}

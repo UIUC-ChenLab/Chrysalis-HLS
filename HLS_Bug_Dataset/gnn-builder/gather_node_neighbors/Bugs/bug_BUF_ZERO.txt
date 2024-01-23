@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "int node_offset = neightbor_table_offsets[node];",
+            "Faulty Code": "int node_offset = neightbor_table_offsets[node + MAX_NODES];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int node_offset = neightbor_table_offsets[node];",
+            "Faulty Code": "int node_offset = 0;"
+        }
+    ]
+}

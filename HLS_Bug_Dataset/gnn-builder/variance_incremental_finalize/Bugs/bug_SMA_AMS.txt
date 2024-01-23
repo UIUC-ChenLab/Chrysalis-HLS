@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void variance_incremental_finalize(variance_incremental_data<T> &data)",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=data\nvoid variance_incremental_finalize(variance_incremental_data<T> &data)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "data.finalized = true;",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=data.finalized\ndata.finalized = true;"
+        }
+    ]
+}

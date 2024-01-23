@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int num_in_neighbors_clamped;",
+            "Faulty Code": "int num_in_neighbors_clamped = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "for (int i = 0; i < EMB_SIZE_OUT; i++) { #pragma HLS PIPELINE node_embedding_table_out[node][i] = new_node_embedding[i]; }"
+        }
+    ]
+}

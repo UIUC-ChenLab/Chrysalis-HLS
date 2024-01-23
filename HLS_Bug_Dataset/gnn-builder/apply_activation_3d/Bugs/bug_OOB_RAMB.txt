@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "x_out[i][j][k] = T_func(x_in[i][j][k]);",
+            "Faulty Code": "x_out[i][j][k+1] = T_func(x_in[i][j][k]);"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "x_out[i][j][k] = T_func(x_in[i][j][k]);",
+            "Faulty Code": "x_out[i][k][j] = T_func(x_in[i][j][k]);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "neightbor_table_offsets[0] = 0;",
+            "Faulty Code": "neightbor_table_offsets[num_nodes] = 0;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "int source = edge_list[i][0];",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=edge_list"
+        }
+    ]
+}

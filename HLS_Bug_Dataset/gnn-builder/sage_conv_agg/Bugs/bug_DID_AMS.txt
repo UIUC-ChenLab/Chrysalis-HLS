@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS array_partition dim=3 variable=neighbor_emb_aggregation_mean"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void sage_conv_agg(...)",
+            "Faulty Code": "#pragma HLS interface port=agg_embedding ap_none"
+        }
+    ]
+}

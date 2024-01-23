@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "T out = m_tanh(x);",
+            "Faulty Code": "T out; out = m_tanh(x);"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic"
+        }
+    ]
+}

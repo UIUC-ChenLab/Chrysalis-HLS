@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "output[i] += weight[i][j] * input[j];",
+            "Faulty Code": "output[i] += weight[j][i] * input[j];"
+        }
+    ]
+}

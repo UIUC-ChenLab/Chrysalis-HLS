@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "output[i + k] += temp_sum[k];",
+            "Faulty Code": "output[i + k + BLOCK_SIZE_OUT] += temp_sum[k];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS array_partition variable = output cyclic factor = BLOCK_SIZE_OUT dim = 1",
+            "Faulty Code": "#pragma HLS INTERFACE port=output bram"
+        }
+    ]
+}

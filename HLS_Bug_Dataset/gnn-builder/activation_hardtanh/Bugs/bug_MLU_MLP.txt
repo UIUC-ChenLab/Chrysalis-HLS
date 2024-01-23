@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "const T min_val = T(-1.0);",
+            "Faulty Code": "const T min_val = T(-1.0); T max_val = T(1.0); // Missing unrolling, should be const for both"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE\n#pragma HLS PIPELINE // Nested pipeline pragma which is incorrect"
+        }
+    ]
+}

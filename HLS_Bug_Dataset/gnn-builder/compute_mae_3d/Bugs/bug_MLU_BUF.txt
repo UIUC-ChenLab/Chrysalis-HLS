@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int k = 0; k < O; k++)",
+            "Faulty Code": "for (int k = 0; k < O - 1; k++)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "mae += std::abs(arr1[i][j][k] - arr2[i][j][k]);",
+            "Faulty Code": "mae += std::abs(arr1[i][j][k] - arr2[i][j][(k + O/2) % O]);"
+        }
+    ]
+}

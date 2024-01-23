@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void gin_conv_agg(\n    int num_in_neighbors,\n    int neighbors[MAX_NODES],\n    T node_embedding_table_in[MAX_NODES][EMB_SIZE_IN],\n    T agg_embedding[EMB_SIZE_IN])",
+            "Faulty Code": "void gin_conv_agg(\n    int num_in_neighbors,\n    int neighbors,\n    T node_embedding_table_in[MAX_NODES][EMB_SIZE_IN],\n    T agg_embedding[EMB_SIZE_IN])"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void linear(T input[in_size],\n            T output[out_size],\n            T weight[out_size][in_size],\n            T bias[out_size])",
+            "Faulty Code": "void linear(T input,\n            T output[out_size],\n            T weight[out_size][in_size],\n            T bias[out_size])"
+        }
+    ]
+}

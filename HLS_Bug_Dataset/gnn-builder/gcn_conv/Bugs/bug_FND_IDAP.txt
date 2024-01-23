@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable = weight cyclic factor = BLOCK_SIZE_OUT dim = 1",
+            "Faulty Code": "#pragma HLS array_partition variable = weight cyclic factor = BLOCK_SIZE_IN dim = 1"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS unroll off = true"
+        }
+    ]
+}

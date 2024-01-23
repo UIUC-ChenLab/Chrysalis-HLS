@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "void apply_activation_2d(T_array_2d<T, M, N> x_in, T_array_2d<T, M, N> x_out)\n{\n#pragma HLS INLINE off\nfor (int i = 0; i < M; i++)\n{\nfor (int j = 0; j < N; j++)\n{\nx_out[i][j] = T_func(x_in[i][j]);\n}\n}\n}",
+            "Faulty Code": "void apply_activation_2d(T_array_2d<T, M, N> x_in, T_array_2d<T, M, N> x_out)\n{\n#pragma HLS INLINE off\nfor (int i = 0; i < M; i++)\n{\nfor (int j = 0; j <= N; j++)\n{\nx_out[i][j] = T_func(x_in[i][j]);\n}\n}\n}"
+        }
+    ]
+}

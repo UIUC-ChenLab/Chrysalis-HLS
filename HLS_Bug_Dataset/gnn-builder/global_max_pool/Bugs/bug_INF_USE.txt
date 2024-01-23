@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < num_nodes; i++)",
+            "Faulty Code": "for (int i = 0; i <= num_nodes; i++)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "T node_embedding_table[MAX_NODES][EMB_SIZE]",
+            "Faulty Code": "int node_embedding_table[MAX_NODES][EMB_SIZE]"
+        }
+    ]
+}

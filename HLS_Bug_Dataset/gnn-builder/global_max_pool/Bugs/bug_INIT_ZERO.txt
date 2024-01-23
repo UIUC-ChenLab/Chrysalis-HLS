@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "max_incremental_data<T> max_agg[EMB_SIZE];",
+            "Faulty Code": "max_incremental_data<T> max_agg[EMB_SIZE] = {}; // Incorrectly initializes all members to zero"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "data.one_sample_processed = true;",
+            "Faulty Code": "data.one_sample_processed = false; // Incorrectly keeps the flag unset"
+        }
+    ]
+}

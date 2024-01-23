@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "T x_in_1_buf = x_in_1[i][j][k];",
+            "Faulty Code": "T x_in_1_buf; // Missing initialization"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "T x_in_2_buf = x_in_2[i][j][k];",
+            "Faulty Code": "T x_in_2_buf = x_in_2[i][k][j]; // Swapped indices"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void gin_conv(..., T node_embedding_table_in[MAX_NODES][EMB_SIZE_IN], ...)",
+            "Faulty Code": "#pragma HLS interface port=node_embedding_table_in ap_none"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "return x;",
+            "Faulty Code": "// return x; // Incorrectly commented out during manual loop unrolling"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS INTERFACE port=x bram"
+        }
+    ]
+}

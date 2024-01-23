@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "node_embedding_table_in_0[node][i] = x_in;",
+            "Faulty Code": "node_embedding_table_in_0[node + NUM_NODES_GUESS][i] = x_in;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS array_partition variable = weight cyclic factor = BLOCK_SIZE_OUT dim = 1",
+            "Faulty Code": "#pragma HLS array_partition variable = weight complete dim = 1"
+        }
+    ]
+}

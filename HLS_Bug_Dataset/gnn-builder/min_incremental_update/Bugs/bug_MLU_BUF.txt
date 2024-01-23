@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "data.min = x;",
+            "Faulty Code": "data.min = x + 1;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (x < data.min)",
+            "Faulty Code": "if (x < data.min_wrong_half)"
+        }
+    ]
+}

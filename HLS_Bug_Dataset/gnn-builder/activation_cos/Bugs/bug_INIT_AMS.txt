@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "T activation_cos(T x) {",
+            "Faulty Code": "T activation_cos(T x) { T result;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS INTERFACE port=return mode=ap_none"
+        }
+    ]
+}

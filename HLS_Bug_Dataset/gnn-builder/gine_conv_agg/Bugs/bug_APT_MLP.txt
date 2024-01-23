@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS array_partition variable = weight cyclic factor = BLOCK_SIZE_OUT dim = 1",
+            "Faulty Code": "#pragma HLS array_partition variable = weight complete dim = 1"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS unroll off = true",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

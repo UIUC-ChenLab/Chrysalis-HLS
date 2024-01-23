@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void lg_conv_agg(",
+            "Faulty Code": "#pragma HLS INTERFACE port=agg_embedding mode=s_axilite"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int i = 0; i < EMB_SIZE_IN; i++)",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

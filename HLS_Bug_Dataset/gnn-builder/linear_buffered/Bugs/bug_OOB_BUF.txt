@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "output_buffer[i + k] += temp_sum[k];",
+            "Faulty Code": "output_buffer[i + k + 1] += temp_sum[k];"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "output[i] = output_buffer[i];",
+            "Faulty Code": "output[i] = output_buffer[i + BLOCK_SIZE_OUT];"
+        }
+    ]
+}

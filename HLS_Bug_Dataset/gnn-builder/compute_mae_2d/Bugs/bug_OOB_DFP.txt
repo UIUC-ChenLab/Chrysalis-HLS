@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "mae += std::abs(arr1[i][j] - arr2[i][j]);",
+            "Faulty Code": "mae += std::abs(arr1[i][j+1] - arr2[i][j]);"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (int i = 0; i < M; i++) {",
+            "Faulty Code": "#pragma HLS dataflow\nfor (int i = 0; i < M; i++) {"
+        }
+    ]
+}

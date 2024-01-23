@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=alpha"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "T activation_elu(T x)",
+            "Faulty Code": "#pragma HLS INTERFACE port=x mode=s_axilite"
+        }
+    ]
+}

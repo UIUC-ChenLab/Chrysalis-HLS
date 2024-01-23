@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "T x_in_buf = x_in[i][j];",
+            "Faulty Code": "char x_in_buf = x_in[i][j];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void split_2d(T_array_2d<T, M, N> x_in, T_array_2d<T, M, N> x_out_1, T_array_2d<T, M, N> x_out_2)",
+            "Faulty Code": "void split_2d(T_array_2d<T, M, N> x_in, T_array_2d<T, M, N> &x_out_1, T_array_2d<T, M, N> &x_out_2)"
+        }
+    ]
+}

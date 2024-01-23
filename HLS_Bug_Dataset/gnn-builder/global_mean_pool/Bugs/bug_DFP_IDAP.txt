@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void global_mean_pool(int num_nodes,",
+            "Faulty Code": "#pragma HLS dataflow\nvoid global_mean_pool(int num_nodes,"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "T node_embedding_table[MAX_NODES][EMB_SIZE],",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=node_embedding_table"
+        }
+    ]
+}

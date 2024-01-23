@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "const T min_val = T(-1.0);",
+            "Faulty Code": "const T min_val = T(-1);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS INTERFACE port=return mode=ap_none"
+        }
+    ]
+}

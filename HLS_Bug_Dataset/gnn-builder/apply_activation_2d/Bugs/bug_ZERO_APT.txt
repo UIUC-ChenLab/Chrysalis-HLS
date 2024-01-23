@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "x_out[i][j] = T_func(x_in[i][j]);",
+            "Faulty Code": "x_out[i][j] = 0;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "void apply_activation_2d(T_array_2d<T, M, N> x_in, T_array_2d<T, M, N> x_out)",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic variable=x_out"
+        }
+    ]
+}

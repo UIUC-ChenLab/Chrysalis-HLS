@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "x_out_1[i][j][k] = x_in_buf;",
+            "Faulty Code": "x_out_1[i][j][k+O/2] = x_in_buf;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=x_in depth=O"
+        }
+    ]
+}

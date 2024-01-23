@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "sum_incremental_data<T> neighbor_emb_aggregation_sum[EMB_SIZE_IN];",
+            "Faulty Code": "sum_incremental_data<T> neighbor_emb_aggregation_sum[EMB_SIZE_IN]; // Missing initialization"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS array_partition variable = input cyclic factor = BLOCK_SIZE_IN dim = 1",
+            "Faulty Code": "#pragma HLS array_partition variable = input complete // This will prevent burst transfers"
+        }
+    ]
+}

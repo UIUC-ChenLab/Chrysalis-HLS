@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS loop_tripcount min = 1 max = NUM_EDGES_GUESS",
+            "Faulty Code": "#pragma HLS array_partition variable=edge_list cyclic factor=5"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "in_degree_table[dest]++; out_degree_table[source]++;",
+            "Faulty Code": "#pragma HLS interface m_axi port=in_degree_table offset=slave"
+        }
+    ]
+}

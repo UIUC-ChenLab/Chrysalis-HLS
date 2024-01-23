@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "return T(1.0) / (T(1.0) + m_exp(-x));",
+            "Faulty Code": "return T(1.0) / (m_exp(-x)); // Incorrectly removed the addition to 1.0 during manual loop unrolling"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "return T(1.0) / (T(1.0) + m_exp(-x));",
+            "Faulty Code": "return T(0.0) / (T(1.0) + m_exp(-x)); // Incorrectly initialized the numerator to zero"
+        }
+    ]
+}

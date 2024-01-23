@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "const T out = x * T(0.5) * (T(1.0) + m_erf(x * sqrt_2_recip));",
+            "Faulty Code": "const T out = x * T(0.5) * (T(1.0) + m_erf((x * sqrt_2_recip) - T(1))); // Incorrect manual loop unrolling caused by subtracting 1"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "const T out = x * T(0.5) * (T(1.0) + m_erf(x * sqrt_2_recip));",
+            "Faulty Code": "const T out = temp_half_buffer * (T(1.0) + m_erf(x * sqrt_2_recip)); // Incorrectly using a 'temp_half_buffer' instead of 'x'"
+        }
+    ]
+}

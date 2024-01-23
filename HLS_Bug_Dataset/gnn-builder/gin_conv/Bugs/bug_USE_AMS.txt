@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "for (int i = 0; i < EMB_SIZE_IN; i++)",
+            "Faulty Code": "for (int i = 0; i <= EMB_SIZE_IN; i++)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE port=apply_mlp_0_bias ap_none"
+        }
+    ]
+}

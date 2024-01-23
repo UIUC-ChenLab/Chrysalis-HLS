@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "T pre_apply_emb[CONCAT_SIZE]",
+            "Faulty Code": "T pre_apply_emb[CONCAT_SIZE]; // Uninitialized array"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS unroll factor=4 // Incorrectly placed and non-innermost loop not fully unrolled"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "T out = (x >> 1) * T(T(1.0) + tanh_fixed);",
+            "Faulty Code": "T out = (x >> 33) * T(T(1.0) + tanh_fixed);"
+        }
+    ]
+}

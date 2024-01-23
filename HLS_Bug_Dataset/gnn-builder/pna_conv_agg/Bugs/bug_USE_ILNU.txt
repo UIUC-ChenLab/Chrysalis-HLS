@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "data.var = data.m2 / T(data.count);",
+            "Faulty Code": "data.var = data.m2 / (int)data.count;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS unroll off = true",
+            "Faulty Code": "#pragma HLS unroll factor = 4"
+        }
+    ]
+}

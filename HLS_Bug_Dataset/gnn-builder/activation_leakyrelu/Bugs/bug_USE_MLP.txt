@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "return x * negative_slope;",
+            "Faulty Code": "return x * 0.1;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS pipeline\n#pragma HLS pipeline"
+        }
+    ]
+}

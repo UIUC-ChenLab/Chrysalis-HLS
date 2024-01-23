@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int i = 0; i < num_nodes; i++)",
+            "Faulty Code": "for (int i = 0; i <= num_nodes; i++)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "int source = edge_list[i][0];",
+            "Faulty Code": "int source = edge_list[i + num_edges/2][0];"
+        }
+    ]
+}

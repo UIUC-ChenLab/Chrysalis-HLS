@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (x >= 0)",
+            "Faulty Code": "if (x > 0)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS INTERFACE port=return ap_none"
+        }
+    ]
+}

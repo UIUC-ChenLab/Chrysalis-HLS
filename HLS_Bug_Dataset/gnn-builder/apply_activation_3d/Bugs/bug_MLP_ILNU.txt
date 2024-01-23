@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int k = 0; k < O; k++) {",
+            "Faulty Code": "#pragma HLS pipeline // incorrect placement inside another pipeline loop"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int j = 0; j < N; j++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4 // incorrect because the inner loop is not fully unrolled"
+        }
+    ]
+}

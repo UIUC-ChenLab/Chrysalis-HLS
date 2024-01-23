@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE\n    #pragma HLS PIPELINE"
+        },
+        {
+            "Error Type": "OOB",
+            "Original Code": "return m_sin(x);",
+            "Faulty Code": "return m_sin(x_array[i]); // Assuming x_array is defined outside and i is out-of-bounds"
+        }
+    ]
+}

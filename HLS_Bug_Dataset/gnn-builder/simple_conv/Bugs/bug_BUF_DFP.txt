@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "int neighbors[MAX_NODES];",
+            "Faulty Code": "int neighbors[MAX_EDGES];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS DATAFLOW inside the for loop of gather_node_neighbors"
+        }
+    ]
+}

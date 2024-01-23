@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return m_cos(x);",
+            "Faulty Code": "return m_cos(x+1); // Assuming x+1 goes out of bounds for the m_cos function's domain"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "return m_cos(x);",
+            "Faulty Code": "return m_cos_half_buffer(x); // Assuming m_cos_half_buffer accesses only half of the necessary buffer for computation"
+        }
+    ]
+}

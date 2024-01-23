@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "node_embedding_table_in[node][i];",
+            "Faulty Code": "#pragma HLS interface m_axi port=node_embedding_table_in offset=slave bundle=gmem0"
+        }
+    ]
+}

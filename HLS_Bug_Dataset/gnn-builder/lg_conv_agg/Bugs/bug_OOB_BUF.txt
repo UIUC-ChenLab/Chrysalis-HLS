@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "neighbor_emb[i] = node_embedding_table_in[neighbor_id][i];",
+            "Faulty Code": "neighbor_emb[i] = node_embedding_table_in[neighbor_id][EMB_SIZE_IN];"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "int in_degree_neighbor = in_degree_table[neighbor_id];",
+            "Faulty Code": "int in_degree_neighbor = in_degree_table[num_in_neighbors];"
+        }
+    ]
+}

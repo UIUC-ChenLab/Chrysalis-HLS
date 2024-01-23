@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS loop_tripcount min = 1 max = NUM_NODES_GUESS",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=in_degree_table dim=2"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void compute_degree_tables(int edge_list[MAX_EDGES][2], ...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=edge_list mode=s_axilite"
+        }
+    ]
+}

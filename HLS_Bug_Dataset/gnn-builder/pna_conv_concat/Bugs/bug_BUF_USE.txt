@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "pre_apply_emb[i + EMB_SIZE_IN * 10] = agg_min_attenuation[i];",
+            "Faulty Code": "pre_apply_emb[i + EMB_SIZE_IN * 5] = agg_min_attenuation[i];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "pre_apply_emb[i + EMB_SIZE_IN * 0] = current_node_embedding_in[i];",
+            "Faulty Code": "pre_apply_emb[i + EMB_SIZE_IN * 0] = (short)current_node_embedding_in[i];"
+        }
+    ]
+}

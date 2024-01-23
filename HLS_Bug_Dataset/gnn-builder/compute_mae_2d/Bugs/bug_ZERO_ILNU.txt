@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "float mae = 0;",
+            "Faulty Code": "float mae;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int j = 0; j < N; j++)",
+            "Faulty Code": "#pragma HLS unroll factor = 4\n        for (int j = 0; j < N; j++)"
+        }
+    ]
+}

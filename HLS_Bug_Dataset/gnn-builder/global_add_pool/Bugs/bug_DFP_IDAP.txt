@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void global_add_pool(int num_nodes, int num_edges, T node_embedding_table[MAX_NODES][EMB_SIZE], T pooled_embedding[EMB_SIZE])",
+            "Faulty Code": "void global_add_pool(int num_nodes, int num_edges, T node_embedding_table[MAX_NODES][EMB_SIZE], T pooled_embedding[EMB_SIZE]) {\n#pragma HLS interface mode=ap_fifo port=node_embedding_table"
+        }
+    ]
+}

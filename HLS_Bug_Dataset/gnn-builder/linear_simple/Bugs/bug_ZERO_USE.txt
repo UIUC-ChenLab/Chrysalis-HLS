@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "output[i] = bias[i];",
+            "Faulty Code": "output[i] = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "for (int i = 0; i < out_size; i++)",
+            "Faulty Code": "for (int i = 0; i <= out_size; i++)"
+        }
+    ]
+}

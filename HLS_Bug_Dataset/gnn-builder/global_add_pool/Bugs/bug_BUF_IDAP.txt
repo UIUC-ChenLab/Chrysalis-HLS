@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "for (int i = 0; i < num_nodes; i++)",
+            "Faulty Code": "for (int i = 0; i <= num_nodes; i++)"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void global_add_pool(int num_nodes, int num_edges, T node_embedding_table[MAX_NODES][EMB_SIZE], T pooled_embedding[EMB_SIZE])",
+            "Faulty Code": "void global_add_pool(int num_nodes, int num_edges, T node_embedding_table[MAX_NODES][EMB_SIZE], T pooled_embedding[EMB_SIZE]) { #pragma HLS INTERFACE mode=ap_fifo port=node_embedding_table"
+        }
+    ]
+}

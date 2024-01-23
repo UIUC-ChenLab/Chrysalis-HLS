@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "T d_i_prime = T(1.0) + T(in_degree_node);",
+            "Faulty Code": "T d_i_prime = T(1.0) + in_degree_node;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "node_neighbors[i] = neighbor_table[current_idx];",
+            "Faulty Code": "node_neighbors[node_offset + i] = neighbor_table[current_idx];"
+        }
+    ]
+}

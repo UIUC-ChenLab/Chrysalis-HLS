@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "return x / (T(1.0) + m_abs(x));",
+            "Faulty Code": "return x / (T(0) + m_abs(x));"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE port=ap_none"
+        }
+    ]
+}

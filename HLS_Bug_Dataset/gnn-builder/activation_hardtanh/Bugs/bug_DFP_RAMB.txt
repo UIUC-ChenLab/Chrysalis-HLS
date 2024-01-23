@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "T activation_hardtanh(T x)",
+            "Faulty Code": "#pragma HLS interface m_axi port=x offset=slave"
+        }
+    ]
+}

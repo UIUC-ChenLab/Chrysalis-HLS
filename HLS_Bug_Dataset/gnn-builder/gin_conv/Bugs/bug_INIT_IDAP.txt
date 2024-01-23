@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "T agg_embedding[EMB_SIZE_IN];",
+            "Faulty Code": "T agg_embedding[EMB_SIZE_IN]; // Missing initialization"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "for (int i = 0; i < EMB_SIZE_IN; i++)",
+            "Faulty Code": "for (int i = 1; i < EMB_SIZE_IN; i++) // Incorrect loop start leading to uninitialized access"
+        }
+    ]
+}

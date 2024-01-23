@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "T activation_softsign(T x)",
+            "Faulty Code": "T activation_softsign(T x) { T result;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "return x / (T(1.0) + m_abs(x));",
+            "Faulty Code": "return x / (1 + m_abs(x));"
+        }
+    ]
+}

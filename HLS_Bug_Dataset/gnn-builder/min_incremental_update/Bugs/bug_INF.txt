@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "\"\"\"void min_incremental_update(min_incremental_data<T> &data, T x)\n{\n    if (data.one_sample_processed == false)\n    {\n        data.min = x;\n        data.one_sample_processed = true;\n    }\n    else\n    {\n        if (x < data.min)\n        {\n            data.min = x;\n        }\n    }\n}\"\"\"",
+            "Faulty Code": "\"\"\"void min_incremental_update(min_incremental_data<T> &data, T x)\n{\n    while (data.one_sample_processed == false)\n    {\n        data.min = x;\n        data.one_sample_processed = true;\n    }\n    else\n    {\n        if (x < data.min)\n        {\n            data.min = x;\n        }\n    }\n}\"\"\""
+        }
+    ]
+}

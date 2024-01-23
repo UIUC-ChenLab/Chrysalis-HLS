@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "neighbor_emb[i] = node_embedding_table_in[neighbor_id][i];",
+            "Faulty Code": "neighbor_emb[i] = node_embedding_table_in[i][neighbor_id];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS loop_tripcount min = 0 max = DEGREE_GUESS",
+            "Faulty Code": "#pragma HLS array_partition variable=neighbor_emb_aggregation_sum factor=3 cyclic"
+        }
+    ]
+}

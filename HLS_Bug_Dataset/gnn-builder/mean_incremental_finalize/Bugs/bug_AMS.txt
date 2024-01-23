@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void mean_incremental_finalize(mean_incremental_data<T> &data)",
+            "Faulty Code": "#pragma HLS interface port=data mode=s_axilite"
+        }
+    ]
+}

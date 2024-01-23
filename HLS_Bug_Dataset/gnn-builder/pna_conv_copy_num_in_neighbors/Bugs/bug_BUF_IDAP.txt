@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "num_in_neighbors_0 = num_in_neighbors;",
+            "Faulty Code": "num_in_neighbors_0 = num_in_neighbors_1;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=num_in_neighbors"
+        }
+    ]
+}

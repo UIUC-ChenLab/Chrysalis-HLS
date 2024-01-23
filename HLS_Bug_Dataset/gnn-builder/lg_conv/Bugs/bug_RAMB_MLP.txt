@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS stable variable = neightbor_table_offsets",
+            "Faulty Code": "#pragma HLS interface m_axi port=neightbor_table_offsets offset=slave"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int i = 0; i < out_size; i += BLOCK_SIZE_OUT) {",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

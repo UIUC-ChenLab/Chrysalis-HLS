@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void gather_node_neighbors(...)",
+            "Faulty Code": "void gather_node_neighbors(\n    int node,\n    int node_in_degree,\n    int node_neighbors[MAX_NODES],\n    int neightbor_table_offsets[MAX_NODES],\n    int neighbor_table[MAX_EDGES])\n{\n#pragma HLS INTERFACE m_axi port=node_neighbors\n    ..."
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int i = 0; i < out_size; i += BLOCK_SIZE_OUT)\n    {\n        ...",
+            "Faulty Code": "for (int i = 0; i < out_size; i += BLOCK_SIZE_OUT)\n    {\n        #pragma HLS pipeline\n        ..."
+        }
+    ]
+}

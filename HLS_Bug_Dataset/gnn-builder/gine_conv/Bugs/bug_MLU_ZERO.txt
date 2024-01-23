@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < EMB_SIZE_IN; i++)",
+            "Faulty Code": "for (int i = 0; i < EMB_SIZE_IN - 1; i++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "temp_sum[k] = 0;",
+            "Faulty Code": "temp_sum[k] = bias[k];"
+        }
+    ]
+}

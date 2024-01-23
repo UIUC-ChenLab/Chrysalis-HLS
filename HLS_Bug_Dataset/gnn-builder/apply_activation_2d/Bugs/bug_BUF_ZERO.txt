@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "x_out[i][j] = T_func(x_in[i][j]);",
+            "Faulty Code": "x_out[i][j] = T_func(x_in[i][N - j - 1]);"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "x_out[i][j] = T_func(x_in[i][j]);",
+            "Faulty Code": "x_out[i][j] = 0;"
+        }
+    ]
+}

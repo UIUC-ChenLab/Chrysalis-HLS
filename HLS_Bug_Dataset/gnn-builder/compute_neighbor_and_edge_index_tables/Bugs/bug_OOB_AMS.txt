@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "neightbor_table_offsets_temp[0] = 0;",
+            "Faulty Code": "neightbor_table_offsets_temp[num_nodes] = 0;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS INTERFACE port=neighbor_table ap_none"
+        }
+    ]
+}

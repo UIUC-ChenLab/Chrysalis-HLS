@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void pna_conv_copy_num_in_neighbors(...)",
+            "Faulty Code": "#pragma HLS dataflow\nvoid pna_conv_copy_num_in_neighbors(...)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "num_in_neighbors_0 = num_in_neighbors;",
+            "Faulty Code": "#pragma HLS pipeline\nnum_in_neighbors_0 = num_in_neighbors;"
+        }
+    ]
+}

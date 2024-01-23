@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void merge_sum_1d(T_array_1d<T, N> x_in_1, T_array_1d<T, N> x_in_2, T_array_1d<T, N> x_out)",
+            "Faulty Code": "#pragma HLS dataflow\nvoid merge_sum_1d(T_array_1d<T, N> x_in_1, T_array_1d<T, N> x_in_2, T_array_1d<T, N> x_out)"
+        }
+    ]
+}

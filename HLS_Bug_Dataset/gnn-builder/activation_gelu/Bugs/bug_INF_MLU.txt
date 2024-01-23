@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "const T out = x * T(0.5) * (T(1.0) + m_erf(x * sqrt_2_recip));",
+            "Faulty Code": "while(true) { const T out = x * T(0.5) * (T(1.0) + m_erf(x * sqrt_2_recip)); }"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "const T out = x * T(0.5) * (T(1.0) + m_erf(x * sqrt_2_recip));",
+            "Faulty Code": "for (int i = 0; i < 10; ++i) { const T out = x * T(0.5) * (T(1.0) + m_erf(x * sqrt_2_recip)); }"
+        }
+    ]
+}

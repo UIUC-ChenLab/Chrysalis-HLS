@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "T activation_identity(T x)",
+            "Faulty Code": "#pragma HLS interface bram port=x\nT activation_identity(T x)"
+        }
+    ]
+}

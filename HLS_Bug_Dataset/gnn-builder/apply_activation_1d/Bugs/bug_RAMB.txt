@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void apply_activation_1d(T_array_1d<T, N> x_in, T_array_1d<T, N> x_out)",
+            "Faulty Code": "#pragma HLS interface m_axi port=x_in mode=read\n#pragma HLS interface m_axi port=x_out mode=write\nvoid apply_activation_1d(T_array_1d<T, N> x_in, T_array_1d<T, N> x_out)"
+        }
+    ]
+}

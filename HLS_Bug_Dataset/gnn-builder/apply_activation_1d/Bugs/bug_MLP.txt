@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void apply_activation_1d(T_array_1d<T, N> x_in, T_array_1d<T, N> x_out)\n{\n#pragma HLS INLINE off\n    for (int i = 0; i < N; i++)\n    {\n        x_out[i] = T_func(x_in[i]);\n    }\n}",
+            "Faulty Code": "void apply_activation_1d(T_array_1d<T, N> x_in, T_array_1d<T, N> x_out)\n{\n#pragma HLS INLINE off\n#pragma HLS pipeline\n    for (int i = 0; i < N; i++)\n    {\n#pragma HLS pipeline\n        x_out[i] = T_func(x_in[i]);\n    }\n}"
+        }
+    ]
+}

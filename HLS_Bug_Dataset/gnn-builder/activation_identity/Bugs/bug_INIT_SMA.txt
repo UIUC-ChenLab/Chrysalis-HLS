@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "T activation_identity(T x)",
+            "Faulty Code": "T activation_identity(T x);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE port=x bram"
+        }
+    ]
+}

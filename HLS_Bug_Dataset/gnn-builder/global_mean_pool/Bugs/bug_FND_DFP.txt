@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS loop_tripcount min = 1 max = NUM_NODES_GUESS",
+            "Faulty Code": "#pragma HLS array_partition variable=mean_agg factor=7 cyclic"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

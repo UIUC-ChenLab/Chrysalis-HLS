@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "const T alpha = T(1.0);",
+            "Faulty Code": "#pragma HLS INTERFACE port=alpha bram"
+        }
+    ]
+}

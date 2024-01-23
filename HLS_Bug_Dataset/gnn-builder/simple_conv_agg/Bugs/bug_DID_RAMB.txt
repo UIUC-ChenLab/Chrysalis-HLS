@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS loop_tripcount min = 0 max = DEGREE_GUESS",
+            "Faulty Code": "#pragma HLS array_partition dim=3 variable=node_embedding_table_in cyclic factor=4"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "neighbor_emb[i] = node_embedding_table_in[neighbor_id][i];",
+            "Faulty Code": "#pragma HLS interface m_axi port=node_embedding_table_in offset=slave bundle=gmem0"
+        }
+    ]
+}

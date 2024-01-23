@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "data.var = data.m2 / T(data.count);",
+            "Faulty Code": "data.var = data.m2 / T(data.count - 1);"
+        }
+    ]
+}

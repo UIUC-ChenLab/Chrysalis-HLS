@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "T degree_scaling_factor = T(m_recip(T(m_sqrt(T(in_degree_node * in_degree_neighbor)))));",
+            "Faulty Code": "T degree_scaling_factor = T(m_recip(T(m_sqrt(T(in_degree_node) * in_degree_neighbor))));"
+        }
+    ]
+}

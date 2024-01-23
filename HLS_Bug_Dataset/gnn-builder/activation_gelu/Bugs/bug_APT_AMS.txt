@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE port=x mode=ap_none"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "const T sqrt_2_recip = T(1.0) / m_sqrt(T(2.0));",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=sqrt_2_recip type=complete"
+        }
+    ]
+}

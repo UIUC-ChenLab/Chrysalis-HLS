@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < out_size; i += BLOCK_SIZE_OUT)",
+            "Faulty Code": "for (int i = 0; i <= out_size; i += BLOCK_SIZE_OUT)"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = temp_sum complete",
+            "Faulty Code": "#pragma HLS array_partition variable = temp_sum cyclic factor = BLOCK_SIZE_OUT"
+        }
+    ]
+}

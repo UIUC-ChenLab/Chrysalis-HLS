@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "\"\"\"void apply_activation_3d(T_array_3d<T, M, N, O> x_in, T_array_3d<T, M, N, O> x_out)\n{\n#pragma HLS INLINE off\n    for (int i = 0; i < M; i++)\n    {\n        for (int j = 0; j < N; j++)\n        {\n\n            for (int k = 0; k < O; k++)\n            {\n                x_out[i][j][k] = T_func(x_in[i][j][k]);\n            }\n        }\n    }\n}\"\"\"",
+            "Faulty Code": "\"\"\"void apply_activation_3d(T_array_3d<T, M, N, O> x_in, T_array_3d<T, M, N, O> x_out)\n{\n#pragma HLS INLINE off\n    for (int i = 0; i < M; i++)\n    {\n        #pragma HLS unroll factor=4\n        for (int j = 0; j < N; j++)\n        {\n\n            for (int k = 0; k < O; k++)\n            {\n                x_out[i][j][k] = T_func(x_in[i][j][k]);\n            }\n        }\n    }\n}\"\"\""
+        }
+    ]
+}

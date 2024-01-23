@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "const T negative_slope = T(0.1);",
+            "Faulty Code": "T negative_slope; // Uninitialized variable"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "const T negative_slope = T(0.1);",
+            "Faulty Code": "const T negative_slope = T(0); // Incorrectly initialized to zero"
+        }
+    ]
+}

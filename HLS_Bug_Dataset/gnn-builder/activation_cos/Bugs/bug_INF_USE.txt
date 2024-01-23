@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "return m_cos(x);",
+            "Faulty Code": "while(1) { return m_cos(x); }"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "return m_cos(x);",
+            "Faulty Code": "return (int)m_cos(x);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "const T tanh = m_tanh(tanh_arg);",
+            "Faulty Code": "const T tanh = m_tanh(A[i]); // Assuming A is an array passed to the function and incorrectly used here"
+        }
+    ]
+}

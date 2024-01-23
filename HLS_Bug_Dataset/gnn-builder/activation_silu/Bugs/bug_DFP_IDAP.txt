@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "T activation_silu(T x)",
+            "Faulty Code": "T activation_silu(T x) #pragma HLS interface mode=ap_fifo"
+        }
+    ]
+}

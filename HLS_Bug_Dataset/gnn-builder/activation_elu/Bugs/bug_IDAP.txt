@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "T activation_elu(T x)",
+            "Faulty Code": "T activation_elu(T x) #pragma HLS interface mode=ap_fifo"
+        }
+    ]
+}

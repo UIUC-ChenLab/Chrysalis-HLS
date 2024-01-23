@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return alpha * (m_exp(x) - T(1.0));",
+            "Faulty Code": "return alpha * (m_exp(x) - T(1.5)); // Assuming m_exp is only defined for inputs up to 1.0"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (x > 0)",
+            "Faulty Code": "while (x > 0) // Mistakenly using a loop instead of a conditional"
+        }
+    ]
+}

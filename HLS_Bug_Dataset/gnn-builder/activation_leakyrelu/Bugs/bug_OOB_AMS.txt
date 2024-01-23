@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "T activation_leakyrelu(T x)",
+            "Faulty Code": "T activation_leakyrelu(T x, int index, T array[10])"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS INTERFACE port=return mode=ap_none"
+        }
+    ]
+}

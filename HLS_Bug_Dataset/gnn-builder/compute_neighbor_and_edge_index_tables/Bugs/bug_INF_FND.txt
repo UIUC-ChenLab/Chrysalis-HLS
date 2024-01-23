@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 1; i < num_nodes; i++)",
+            "Faulty Code": "for (int i = 1; i <= num_nodes; i++)"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "int neightbor_table_offsets_temp[MAX_NODES];",
+            "Faulty Code": "#pragma HLS array_partition variable=neightbor_table_offsets_temp factor=3 cyclic"
+        }
+    ]
+}

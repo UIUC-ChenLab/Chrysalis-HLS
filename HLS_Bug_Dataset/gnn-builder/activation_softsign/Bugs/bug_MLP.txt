@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "\"\"\"T activation_softsign(T x)\n{\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n   return x / (T(1.0) + m_abs(x));\n}\"\"\"",
+            "Faulty Code": "\"\"\"T activation_softsign(T x)\n{\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n   #pragma HLS PIPELINE\n   return x / (T(1.0) + m_abs(x));\n}\"\"\""
+        }
+    ]
+}

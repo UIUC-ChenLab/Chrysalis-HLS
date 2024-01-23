@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return alpha * (m_exp(x) - T(1.0));",
+            "Faulty Code": "return alpha * (m_exp(x) - T(1.5)); // Assuming m_exp() is implemented such that it expects an array indexed by integers [0,1], using 1.5 can cause OOB."
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "T activation_elu(T x)",
+            "Faulty Code": "T activation_elu(T x) {\n#pragma HLS INTERFACE port=return ap_none\n // Incorrectly labeling the return port which should not be specified with a pragma."
+        }
+    ]
+}

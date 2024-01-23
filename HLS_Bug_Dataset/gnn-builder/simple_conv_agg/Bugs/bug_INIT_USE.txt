@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "sum_incremental_data<T> neighbor_emb_aggregation_sum[EMB_SIZE_IN];",
+            "Faulty Code": "sum_incremental_data<T> neighbor_emb_aggregation_sum[EMB_SIZE_IN]; // missing initialization, may contain garbage values"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "data.sum += x;",
+            "Faulty Code": "data.sum += static_cast<short>(x); // unintended sign extension if T is wider than short"
+        }
+    ]
+}

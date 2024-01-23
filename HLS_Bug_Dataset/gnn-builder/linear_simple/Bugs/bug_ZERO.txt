@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "output[i] = bias[i];",
+            "Faulty Code": "output[i] = 0;"
+        }
+    ]
+}

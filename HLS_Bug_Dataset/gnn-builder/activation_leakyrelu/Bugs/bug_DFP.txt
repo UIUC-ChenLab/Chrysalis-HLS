@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "T activation_leakyrelu(T x)\n{\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\nconst T negative_slope = T(0.1);\n\nif (x >= 0)\n{\nreturn x;\n}\nelse\n{\nreturn x * negative_slope;\n}\n}",
+            "Faulty Code": "T activation_leakyrelu(T x)\n{\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n#pragma HLS dataflow\nconst T negative_slope = T(0.1);\n\nif (x >= 0)\n{\nreturn x;\n}\nelse\n{\nreturn x * negative_slope;\n}\n}"
+        }
+    ]
+}

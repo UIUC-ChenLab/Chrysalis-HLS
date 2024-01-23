@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "void merge_sum_1d(T_array_1d<T, N> x_in_1, T_array_1d<T, N> x_in_2, T_array_1d<T, N> x_out)",
+            "Faulty Code": "void merge_sum_1d(T_array_1d<T, N> x_in_1 = {}, T_array_1d<T, N> x_in_2, T_array_1d<T, N> x_out)"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=x_in_1 offset=slave"
+        }
+    ]
+}

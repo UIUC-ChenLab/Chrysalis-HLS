@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "T self_emb_scaled[EMB_SIZE_IN];",
+            "Faulty Code": "T self_emb_scaled[EMB_SIZE_IN] = {0};"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS PIPELINE"
+        }
+    ]
+}

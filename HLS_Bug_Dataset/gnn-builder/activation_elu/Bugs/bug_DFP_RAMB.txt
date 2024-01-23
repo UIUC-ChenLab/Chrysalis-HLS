@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "return x;",
+            "Faulty Code": "return alpha * (m_exp(x) - T(1.0));"
+        }
+    ]
+}

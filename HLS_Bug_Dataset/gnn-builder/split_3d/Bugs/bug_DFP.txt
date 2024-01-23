@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void split_3d(T_array_3d<T, M, N, O> x_in, T_array_3d<T, M, N, O> x_out_1, T_array_3d<T, M, N, O> x_out_2) {",
+            "Faulty Code": "#pragma HLS dataflow void split_3d(T_array_3d<T, M, N, O> x_in, T_array_3d<T, M, N, O> x_out_1, T_array_3d<T, M, N, O> x_out_2) {"
+        }
+    ]
+}

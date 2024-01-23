@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < EMB_SIZE_IN; i++)",
+            "Faulty Code": "for (int i = 0; ; i++)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS unroll",
+            "Faulty Code": "#pragma HLS unroll factor=8"
+        }
+    ]
+}

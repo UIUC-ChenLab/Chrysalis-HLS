@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int neighbor = 0; neighbor < num_in_neighbors; neighbor++)",
+            "Faulty Code": "for (int neighbor = 0; neighbor <= num_in_neighbors; neighbor++)"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS loop_tripcount min = 0 max = DEGREE_GUESS",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=node_embedding_table_in"
+        }
+    ]
+}

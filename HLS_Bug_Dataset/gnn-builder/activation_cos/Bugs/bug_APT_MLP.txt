@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "return m_cos(x);",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=x\n    return m_cos(x);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE\n#pragma HLS PIPELINE"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "int neighbors[MAX_NODES];",
+            "Faulty Code": "int neighbors[num_in_neighbors];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS interface port=node_embedding_table_out mode=m_axi"
+        }
+    ]
+}

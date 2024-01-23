@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void apply_activation_1d(T_array_1d<T, N> x_in, T_array_1d<T, N> x_out)",
+            "Faulty Code": "#pragma HLS interface port=x_in bram"
+        }
+    ]
+}

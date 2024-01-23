@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void apply_activation_2d(T_array_2d<T, M, N> x_in, T_array_2d<T, M, N> x_out)",
+            "Faulty Code": "void apply_activation_2d(T_array_2d<T, M, N> x_in, T_array_2d<T, M, N>& x_out)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "x_out[i][j] = T_func(x_in[i][j]);",
+            "Faulty Code": "x_out[i][j] = (T)((char)x_in[i][j]);"
+        }
+    ]
+}

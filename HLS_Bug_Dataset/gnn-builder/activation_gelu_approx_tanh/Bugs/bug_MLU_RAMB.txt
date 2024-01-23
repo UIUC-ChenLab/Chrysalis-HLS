@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "const T tanh_arg = T(T(T(GELU_TANH_COEFF_CUBIC * x) * x) + GELU_TANH_COEFF_LINEAR) * x;",
+            "Faulty Code": "const T tanh_arg = T(T(GELU_TANH_COEFF_CUBIC * x) * x) + GELU_TANH_COEFF_LINEAR) * x;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "const T tanh = m_tanh(tanh_arg);",
+            "Faulty Code": "const T tanh = m_tanh(A[i]); // Assuming A is an m_axi port and i is not consecutive"
+        }
+    ]
+}

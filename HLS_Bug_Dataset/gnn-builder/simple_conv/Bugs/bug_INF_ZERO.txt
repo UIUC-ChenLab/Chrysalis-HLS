@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < EMB_SIZE_IN; i++)",
+            "Faulty Code": "for (int i = 0; ; i++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int num_in_neighbors = in_degree_table[node];",
+            "Faulty Code": "int num_in_neighbors = 0;"
+        }
+    ]
+}

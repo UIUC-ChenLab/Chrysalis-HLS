@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int i = 0; i < M; i++)",
+            "Faulty Code": "for (int i = 0; i <= M; i++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "T x_in_buf = x_in[i][j][k];",
+            "Faulty Code": "T x_in_buf = 0;"
+        }
+    ]
+}

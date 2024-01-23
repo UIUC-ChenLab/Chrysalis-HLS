@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void apply_activation_1d(T_array_1d<T, N> x_in, T_array_1d<T, N> x_out)",
+            "Faulty Code": "void apply_activation_1d(T_array_1d<T, N> x_in, T_array_1d<T, N> &x_out)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "x_out[i] = T_func(x_in[i]);",
+            "Faulty Code": "x_out[i] = x_in[i] >> 1;"
+        }
+    ]
+}

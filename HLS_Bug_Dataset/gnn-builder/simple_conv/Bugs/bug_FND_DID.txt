@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS array_partition variable=current_node_embedding_in factor=10"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS stable variable = edge_list",
+            "Faulty Code": "#pragma HLS array_partition variable=node_embedding_table_in dim=3"
+        }
+    ]
+}

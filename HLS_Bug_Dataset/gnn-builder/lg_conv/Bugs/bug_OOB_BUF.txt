@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int i = 0; i < EMB_SIZE_IN; i++)",
+            "Faulty Code": "for (int i = 0; i <= EMB_SIZE_IN; i++)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "output[i + k] += temp_sum[k];",
+            "Faulty Code": "output[i + j] += temp_sum[k];"
+        }
+    ]
+}

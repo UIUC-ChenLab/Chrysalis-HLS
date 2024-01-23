@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "output[tmp_idx] = bias[tmp_idx];",
+            "Faulty Code": "output[i + j] = bias[tmp_idx];"
+        }
+    ]
+}

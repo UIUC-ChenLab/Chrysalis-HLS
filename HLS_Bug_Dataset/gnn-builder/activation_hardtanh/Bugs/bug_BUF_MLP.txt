@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "const T min_val = T(-1.0);",
+            "Faulty Code": "const T min_val = T(1.0); // Mistakenly copied the positive value instead of negative"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "// Faulty code missing as there is no nested loop with pipeline pragma inside"
+        }
+    ]
+}

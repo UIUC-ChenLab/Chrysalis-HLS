@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE port=x m_axi"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "T activation_identity(T x)",
+            "Faulty Code": "#pragma HLS INTERFACE port=x ap_none"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "temp_sum[k] += weight[i + k][j + l] * input[j + l];",
+            "Faulty Code": "temp_sum[k] += weight[i + k][j + l] * (input[j + l] << (32 - BLOCK_SIZE_IN));"
+        }
+    ]
+}

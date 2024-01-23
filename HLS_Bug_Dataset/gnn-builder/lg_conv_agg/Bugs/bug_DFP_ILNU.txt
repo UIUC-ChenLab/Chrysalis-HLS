@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int neighbor = 0; neighbor < num_in_neighbors; neighbor++)",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (int neighbor = 0; neighbor < num_in_neighbors; neighbor++)"
+        }
+    ]
+}

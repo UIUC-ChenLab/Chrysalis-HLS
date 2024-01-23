@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "current_node_embedding_in[i] = node_embedding_table_in_0[node][i];",
+            "Faulty Code": "current_node_embedding_in[i] = node_embedding_table_in_1[node][i];"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS array_partition variable = weight cyclic factor = BLOCK_SIZE_IN dim = 2",
+            "Faulty Code": "#pragma HLS array_partition variable = weight block factor = BLOCK_SIZE_IN dim = 2"
+        }
+    ]
+}

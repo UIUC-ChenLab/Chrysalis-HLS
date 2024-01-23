@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int a = 0; a < out_size; a += BLOCK_SIZE_OUT)",
+            "Faulty Code": "for (int a = 0; a <= out_size; a += BLOCK_SIZE_OUT)"
+        }
+    ]
+}

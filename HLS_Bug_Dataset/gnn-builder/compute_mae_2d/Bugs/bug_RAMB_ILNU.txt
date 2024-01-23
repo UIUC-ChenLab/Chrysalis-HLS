@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "float compute_mae_2d(T arr1[M][N], T arr2[M][N]) { ... }",
+            "Faulty Code": "float compute_mae_2d(T arr1[M][N], T arr2[M][N]) { #pragma HLS interface m_axi port=arr1 depth=32 #pragma HLS interface m_axi port=arr2 depth=32 ... }"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int j = 0; j < N; j++) { mae += std::abs(arr1[i][j] - arr2[i][j]); }",
+            "Faulty Code": "#pragma HLS unroll factor=2 for (int j = 0; j < N; j++) { mae += std::abs(arr1[i][j] - arr2[i][j]); }"
+        }
+    ]
+}

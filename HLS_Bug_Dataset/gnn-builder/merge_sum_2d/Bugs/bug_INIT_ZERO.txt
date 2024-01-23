@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "T x_in_1_buf = x_in_1[i][j];",
+            "Faulty Code": "T x_in_1_buf;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "T x_in_1_buf = x_in_1[i][j];",
+            "Faulty Code": "T x_in_1_buf = 0;"
+        }
+    ]
+}

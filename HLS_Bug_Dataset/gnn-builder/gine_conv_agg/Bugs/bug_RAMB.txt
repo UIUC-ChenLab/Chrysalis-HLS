@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "neighbor_emb[i] = node_embedding_table_in[neighbor_id][i];",
+            "Faulty Code": "#pragma HLS interface m_axi port=node_embedding_table_in offset=slave bundle=gmem"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void variance_incremental_finalize(variance_incremental_data<T> &data) {",
+            "Faulty Code": "void variance_incremental_finalize(variance_incremental_data<T> &data) { data.finalized = false; }"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "data.var = data.m2 / T(data.count);",
+            "Faulty Code": "data.var = (int)(data.m2 / data.count);"
+        }
+    ]
+}

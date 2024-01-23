@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "x_out[i][j][k] = T_func(x_in[i][j][k]);",
+            "Faulty Code": "x_out[i][j][k] = T_func((short)x_in[i][j][k]);"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void merge_sum_2d(T_array_2d<T, M, N> x_in_1, T_array_2d<T, M, N> x_in_2, T_array_2d<T, M, N> x_out)",
+            "Faulty Code": "#pragma HLS dataflow\nvoid merge_sum_2d(T_array_2d<T, M, N> x_in_1, T_array_2d<T, M, N> x_in_2, T_array_2d<T, M, N> x_out)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int j = 0; j < N; j++)",
+            "Faulty Code": "#pragma HLS pipeline\n    for (int j = 0; j < N; j++)"
+        }
+    ]
+}

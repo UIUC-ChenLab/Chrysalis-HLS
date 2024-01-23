@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "node_neighbors[i] = neighbor_table[current_idx];",
+            "Faulty Code": "node_neighbors[i] = neighbor_table[i];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void lg_conv_agg(...)",
+            "Faulty Code": "#pragma HLS interface port=agg_embedding mode=ap_none"
+        }
+    ]
+}

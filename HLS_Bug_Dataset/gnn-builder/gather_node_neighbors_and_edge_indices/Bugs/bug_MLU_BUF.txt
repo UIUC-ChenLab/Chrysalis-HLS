@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "int current_idx = node_offset + i;",
+            "Faulty Code": "int current_idx = node_offset + (i << 1);"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "node_neighbors[i] = neighbor_table[current_idx];",
+            "Faulty Code": "node_neighbors[i] = neighbor_table[current_idx + MAX_NODES];"
+        }
+    ]
+}

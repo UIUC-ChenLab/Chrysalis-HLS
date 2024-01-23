@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void pna_conv_copy_num_in_neighbors(...){...}",
+            "Faulty Code": "#pragma HLS INTERFACE port=num_in_neighbors bram\nvoid pna_conv_copy_num_in_neighbors(...){...}"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "void pna_conv_copy_num_in_neighbors(...){...}",
+            "Faulty Code": "#pragma HLS UNROLL\nvoid pna_conv_copy_num_in_neighbors(...){...}"
+        }
+    ]
+}

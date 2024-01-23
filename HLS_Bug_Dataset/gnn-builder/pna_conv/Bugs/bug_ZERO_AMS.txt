@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "T neighbor_and_self_concat_emb[EMB_SIZE_IN * 2];",
+            "Faulty Code": "T neighbor_and_self_concat_emb[EMB_SIZE_IN * 2] = {0};"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void gather_node_neighbors(...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=neightbor_table_offsets mode=s_axilite"
+        }
+    ]
+}

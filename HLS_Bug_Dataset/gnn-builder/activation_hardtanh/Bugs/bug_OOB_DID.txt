@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (x < min_val)",
+            "Faulty Code": "if (x < min_array[i])"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=min_array dim=2"
+        }
+    ]
+}

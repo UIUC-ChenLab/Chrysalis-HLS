@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void min_incremental_update(min_incremental_data<T> &data, T x)",
+            "Faulty Code": "#pragma HLS pipeline\nvoid min_incremental_update(min_incremental_data<T> &data, T x)"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "if (x < data.min)",
+            "Faulty Code": "#pragma HLS unroll factor=2\nif (x < data.min)"
+        }
+    ]
+}

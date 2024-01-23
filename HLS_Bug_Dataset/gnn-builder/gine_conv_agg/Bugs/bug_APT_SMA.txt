@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS array_partition variable = weight cyclic factor = BLOCK_SIZE_IN dim = 2",
+            "Faulty Code": "#pragma HLS array_partition variable = weight complete dim = 2"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void gine_conv_agg(..., T agg_embedding[EMB_SIZE_IN], ...)",
+            "Faulty Code": "#pragma HLS interface port=agg_embedding bram"
+        }
+    ]
+}

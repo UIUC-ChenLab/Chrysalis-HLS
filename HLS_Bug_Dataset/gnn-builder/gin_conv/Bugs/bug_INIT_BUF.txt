@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "T agg_embedding[EMB_SIZE_IN];",
+            "Faulty Code": "T agg_embedding[EMB_SIZE_IN]; // missing initialization"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "node_neighbors[i] = neighbor_table[current_idx];",
+            "Faulty Code": "node_neighbors[node_offset + i] = neighbor_table[current_idx]; // incorrect buffer access"
+        }
+    ]
+}

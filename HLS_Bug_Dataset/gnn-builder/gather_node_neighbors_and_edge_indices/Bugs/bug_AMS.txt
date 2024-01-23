@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "int node_neighbors[MAX_NODES]",
+            "Faulty Code": "#pragma HLS interface port=ap_none mode=s_axilite"
+        }
+    ]
+}

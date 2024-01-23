@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "mean_incremental_data<T> neighbor_emb_aggregation_mean[EMB_SIZE_IN];",
+            "Faulty Code": "mean_incremental_data<T> neighbor_emb_aggregation_mean[EMB_SIZE_IN] = {0};"
+        }
+    ]
+}

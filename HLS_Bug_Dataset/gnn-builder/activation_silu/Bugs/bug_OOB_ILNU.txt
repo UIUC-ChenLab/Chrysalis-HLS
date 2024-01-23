@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return x * (T(1.0) / (T(1.0) + m_exp(-x)));",
+            "Faulty Code": "return x * (T(1.0) / (T(1.0) + m_exp(-x[0]))); // Assuming x is not an array"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS unroll factor=2 // Incorrectly placed unroll pragma with no loop present"
+        }
+    ]
+}

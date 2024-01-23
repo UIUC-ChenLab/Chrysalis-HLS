@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "return m_sin(x);",
+            "Faulty Code": "return m_sin(x); // Assuming m_sin is manually unrolled somewhere else incorrectly"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "return m_sin(x);",
+            "Faulty Code": "return 0; // Incorrectly initializes the return value to zero instead of calling m_sin"
+        }
+    ]
+}

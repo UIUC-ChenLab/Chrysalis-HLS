@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "mean_incremental_update(mean_agg[j], node_embedding_table[i][j]);",
+            "Faulty Code": "mean_incremental_update(mean_agg[j], node_embedding_table[j][i]);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for (int i = 0; i < EMB_SIZE; i++)",
+            "Faulty Code": "#pragma HLS array_partition variable=mean_agg factor=3"
+        }
+    ]
+}

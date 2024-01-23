@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "T out_fixed = (hls::signbit(x) != hls::signbit(out)) ? T(-out) : out;",
+            "Faulty Code": "T out_fixed = (hls::signbit(x) != hls::signbit(out)) ? T(out) : out;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (x > 0)",
+            "Faulty Code": "while (x > 0)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "const T alpha = T(1.0);",
+            "Faulty Code": "const T alpha = T(0);"
+        }
+    ]
+}

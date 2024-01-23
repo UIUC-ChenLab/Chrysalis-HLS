@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "return T(1.0) / (T(1.0) + m_exp(-x));",
+            "Faulty Code": "while(true) { return T(1.0) / (T(1.0) + m_exp(-x)); }"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "return T(1.0) / (T(1.0) + m_exp(-x));",
+            "Faulty Code": "return (int)1.0 / ((int)1.0 + m_exp(-x));"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int csum = neightbor_table_offsets[i - 1] + in_degree_table[i - 1];",
+            "Faulty Code": "int csum = neightbor_table_offsets[i] + in_degree_table[i - 1];"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS loop_tripcount min = 1 max = NUM_EDGES_GUESS",
+            "Faulty Code": "#pragma HLS array_partition variable=edge_list dim=3"
+        }
+    ]
+}

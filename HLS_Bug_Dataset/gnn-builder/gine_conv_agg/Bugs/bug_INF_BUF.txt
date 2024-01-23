@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int neighbor = 0; neighbor < num_in_neighbors; neighbor++)",
+            "Faulty Code": "for (int neighbor = 0; neighbor <= num_in_neighbors; neighbor++)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "output[i + k] += temp_sum[k];",
+            "Faulty Code": "output[j + k] += temp_sum[k];"
+        }
+    ]
+}

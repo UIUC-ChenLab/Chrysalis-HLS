@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (data.one_sample_processed == false)",
+            "Faulty Code": "while (data.one_sample_processed == false)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "if (x < data.min)",
+            "Faulty Code": "#pragma HLS pipeline\nif (x < data.min)"
+        }
+    ]
+}

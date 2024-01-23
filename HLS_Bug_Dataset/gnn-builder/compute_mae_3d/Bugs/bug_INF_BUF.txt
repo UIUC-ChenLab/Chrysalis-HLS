@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < M; i++)",
+            "Faulty Code": "for (int i = 0; i <= M; i++)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "mae += std::abs(arr1[i][j][k] - arr2[i][j][k]);",
+            "Faulty Code": "mae += std::abs(arr1[i][j][k] - arr2[i][M - j - 1][k]);"
+        }
+    ]
+}

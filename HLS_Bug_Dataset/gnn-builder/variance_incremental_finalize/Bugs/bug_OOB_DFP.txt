@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "data.var = data.m2 / T(data.count);",
+            "Faulty Code": "data.var = data.m2[T(data.count)];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void variance_incremental_finalize(variance_incremental_data<T> &data)",
+            "Faulty Code": "#pragma HLS dataflow\nvoid variance_incremental_finalize(variance_incremental_data<T> &data)"
+        }
+    ]
+}

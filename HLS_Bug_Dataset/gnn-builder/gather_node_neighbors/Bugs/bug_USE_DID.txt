@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int current_idx = node_offset + i;",
+            "Faulty Code": "short current_idx = node_offset + i;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS loop_tripcount min = 1 max = DEGREE_GUESS",
+            "Faulty Code": "#pragma HLS array_partition variable=node_neighbors dim=1"
+        }
+    ]
+}

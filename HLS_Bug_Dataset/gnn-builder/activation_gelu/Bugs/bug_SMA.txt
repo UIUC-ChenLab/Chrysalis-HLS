@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "T activation_gelu(T x)",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=x"
+        }
+    ]
+}

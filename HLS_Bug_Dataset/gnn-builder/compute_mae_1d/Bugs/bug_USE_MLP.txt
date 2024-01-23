@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "mae += std::abs(arr1[i] - arr2[i]);",
+            "Faulty Code": "mae += std::abs((int)(arr1[i] - arr2[i]));"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int i = 0; i < M; i++)",
+            "Faulty Code": "for (int i = 0; i < M; i++) #pragma HLS pipeline"
+        }
+    ]
+}

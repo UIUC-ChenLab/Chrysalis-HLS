@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "pre_apply_emb[i + EMB_SIZE_IN * 0] = current_node_embedding_in[i];",
+            "Faulty Code": "pre_apply_emb[i + EMB_SIZE_IN * 1] = current_node_embedding_in[i];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "T delta = x - data.mean;",
+            "Faulty Code": "int delta = x - data.mean;"
+        }
+    ]
+}

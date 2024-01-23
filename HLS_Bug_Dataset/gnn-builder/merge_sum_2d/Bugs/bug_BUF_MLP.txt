@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "T x_in_1_buf = x_in_1[i][j];",
+            "Faulty Code": "T x_in_1_buf = x_in_1[i][N];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int j = 0; j < N; j++)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (int j = 0; j < N; j++)"
+        }
+    ]
+}

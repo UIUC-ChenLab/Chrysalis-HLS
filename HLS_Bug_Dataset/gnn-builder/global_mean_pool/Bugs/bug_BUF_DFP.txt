@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "for (int i = 0; i < EMB_SIZE; i++) { pooled_embedding[i] = mean_agg[i].mean; }",
+            "Faulty Code": "for (int i = 0; i < EMB_SIZE; i++) { pooled_embedding[i] = mean_agg[i+EMB_SIZE].mean; }"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void global_mean_pool(int num_nodes, int num_edges, T node_embedding_table[MAX_NODES][EMB_SIZE], T pooled_embedding[EMB_SIZE])",
+            "Faulty Code": "#pragma HLS dataflow void global_mean_pool(int num_nodes, int num_edges, T node_embedding_table[MAX_NODES][EMB_SIZE], T pooled_embedding[EMB_SIZE])"
+        }
+    ]
+}

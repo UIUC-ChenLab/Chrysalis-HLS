@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "return x * (T(1.0) / (T(1.0) + m_exp(-x)));",
+            "Faulty Code": "return x * (T(0.0) / (T(1.0) + m_exp(-x)));"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "return x * (T(1.0) / (T(1.0) + m_exp(-x)));",
+            "Faulty Code": "return x * (T(1.0) / (T(0.0) + m_exp(-x)));"
+        }
+    ]
+}

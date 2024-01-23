@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS loop_tripcount min = 0 max = DEGREE_GUESS",
+            "Faulty Code": "#pragma HLS array_partition variable=neighbor_emb_aggregation_sum factor=num_in_neighbors cyclic"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void lg_conv_agg(...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=neighbor_emb_aggregation_sum bram"
+        }
+    ]
+}

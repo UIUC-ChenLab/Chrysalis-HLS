@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "output[i] = bias[i];",
+            "Faulty Code": "T tmp_output; output[i] = tmp_output;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int j = 0; j < in_size; j++)",
+            "Faulty Code": "#pragma HLS pipeline\nfor (int j = 0; j < in_size; j++)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void pna_conv_concat(...)",
+            "Faulty Code": "void pna_conv_concat(#pragma HLS interface mode=ap_fifo T current_node_embedding_in[EMB_SIZE_IN], ...)"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "pre_apply_emb[i + EMB_SIZE_IN * 0] = current_node_embedding_in[i];",
+            "Faulty Code": "pre_apply_emb[i * EMB_SIZE_IN * 0] = current_node_embedding_in[i + 1];"
+        }
+    ]
+}

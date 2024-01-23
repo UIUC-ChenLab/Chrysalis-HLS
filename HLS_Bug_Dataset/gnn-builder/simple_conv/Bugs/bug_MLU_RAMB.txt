@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < EMB_SIZE_IN; i++)",
+            "Faulty Code": "for (int i = 0; i <= EMB_SIZE_IN; i++)"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "current_node_embedding_in[i] = node_embedding_table_in[node][i];",
+            "Faulty Code": "current_node_embedding_in[i] = node_embedding_table_in[i][node];"
+        }
+    ]
+}

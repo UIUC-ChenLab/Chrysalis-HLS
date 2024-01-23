@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int j = 0; j < N; j++)",
+            "Faulty Code": "for (int j = 0; j <= N; j++)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "float mae = 0;",
+            "Faulty Code": "float mae;"
+        }
+    ]
+}

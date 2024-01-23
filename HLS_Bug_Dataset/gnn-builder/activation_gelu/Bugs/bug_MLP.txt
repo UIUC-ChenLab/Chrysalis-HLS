@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "\nT activation_gelu(T x)\n{\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n    const T sqrt_2_recip = T(1.0) / m_sqrt(T(2.0));\n    const T out = x * T(0.5) * (T(1.0) + m_erf(x * sqrt_2_recip));\n    return out;\n}",
+            "Faulty Code": "\nT activation_gelu(T x)\n{\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n    const T sqrt_2_recip = T(1.0) / m_sqrt(T(2.0));\n#pragma HLS PIPELINE // Incorrect: Nested pipeline pragma\n    const T out = x * T(0.5) * (T(1.0) + m_erf(x * sqrt_2_recip));\n    return out;\n}"
+        }
+    ]
+}

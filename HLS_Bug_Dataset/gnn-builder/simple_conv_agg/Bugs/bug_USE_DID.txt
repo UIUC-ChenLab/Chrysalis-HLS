@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int neighbor_id = neighbors[neighbor];",
+            "Faulty Code": "unsigned int neighbor_id = neighbors[neighbor];"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS INLINE off",
+            "Faulty Code": "#pragma HLS array_partition dim=3"
+        }
+    ]
+}

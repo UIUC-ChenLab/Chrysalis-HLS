@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "T activation_sin(T x) {\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n    return m_sin(x);\n}",
+            "Faulty Code": "T activation_sin(T x) {\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n    T result;\n    return result;\n}"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "T activation_sin(T x) {\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n    return m_sin(x);\n}",
+            "Faulty Code": "T activation_sin(T x) {\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n    for (int i = 0; i < 4; ++i) {\n        x = m_sin(x);\n    }\n    return x;\n}"
+        }
+    ]
+}

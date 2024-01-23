@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "sum_incremental_data<T> neighbor_emb_aggregation_sum[EMB_SIZE_IN];",
+            "Faulty Code": "sum_incremental_data<T> neighbor_emb_aggregation_sum[EMB_SIZE_IN] = {0};"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "neighbor_emb[i] = node_embedding_table_in[neighbor_id][i];",
+            "Faulty Code": "neighbor_emb[i] = node_embedding_table_in[neighbor_id][EMB_SIZE_IN];"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "mean_incremental_update(neighbor_emb_aggregation_mean[i], neighbor_emb[i]);",
+            "Faulty Code": "mean_incremental_update(neighbor_emb_aggregation_mean[EMB_SIZE_IN/2 + i], neighbor_emb[i]);"
+        }
+    ]
+}

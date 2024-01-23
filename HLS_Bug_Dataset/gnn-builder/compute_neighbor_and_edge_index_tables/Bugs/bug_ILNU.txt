@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "// compute neighbor table offsets\n    // cumulative sum of in_degree_table\n    // also store values temp array for later\n    int neightbor_table_offsets_temp[MAX_NODES];\n    neightbor_table_offsets[0] = 0;\n    neightbor_table_offsets_temp[0] = 0;\n    for (int i = 1; i < num_nodes; i++)\n    {\n#pragma HLS loop_tripcount min = 1 max = NUM_NODES_GUESS\n        int csum = neightbor_table_offsets[i - 1] + in_degree_table[i - 1];\n        neightbor_table_offsets[i] = csum;\n        neightbor_table_offsets_temp[i] = csum;\n    }",
+            "Faulty Code": "// compute neighbor table offsets\n    // cumulative sum of in_degree_table\n    // also store values temp array for later\n    int neightbor_table_offsets_temp[MAX_NODES];\n    neightbor_table_offsets[0] = 0;\n    neightbor_table_offsets_temp[0] = 0;\n    for (int i = 1; i < num_nodes; i++)\n    {\n#pragma HLS UNROLL factor=4\n#pragma HLS loop_tripcount min = 1 max = NUM_NODES_GUESS\n        int csum = neightbor_table_offsets[i - 1] + in_degree_table[i - 1];\n        neightbor_table_offsets[i] = csum;\n        neightbor_table_offsets_temp[i] = csum;\n    }"
+        }
+    ]
+}

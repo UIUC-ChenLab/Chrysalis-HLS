@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "sum_incremental_data<T> neighbor_emb_aggregation_sum[EMB_SIZE_IN];",
+            "Faulty Code": "sum_incremental_data<T> neighbor_emb_aggregation_sum[EMB_SIZE_IN]; // Missing initialization"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int neighbor = 0; neighbor < num_in_neighbors; neighbor++)",
+            "Faulty Code": "for (int neighbor = 0; neighbor <= num_in_neighbors; neighbor++) // Off-by-one error leading to potential infinite loop"
+        }
+    ]
+}

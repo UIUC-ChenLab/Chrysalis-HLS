@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS array_partition variable = weight cyclic factor = BLOCK_SIZE_IN dim = 2",
+            "Faulty Code": "#pragma HLS array_partition variable = weight cyclic factor = BLOCK_SIZE_IN dim = 3"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS pipeline inside of another #pragma HLS pipeline"
+        }
+    ]
+}

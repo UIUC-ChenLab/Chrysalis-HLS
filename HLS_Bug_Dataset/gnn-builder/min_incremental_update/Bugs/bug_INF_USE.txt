@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "else",
+            "Faulty Code": "while (x < data.min)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "data.min = x;",
+            "Faulty Code": "data.min = (unsigned int)x;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "int node_offset = neightbor_table_offsets[node];",
+            "Faulty Code": "int node_offset = neightbor_table_offsets[node + 1];"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "int node_offset = neightbor_table_offsets[node];",
+            "Faulty Code": "int node_offset; // Missing initialization"
+        }
+    ]
+}

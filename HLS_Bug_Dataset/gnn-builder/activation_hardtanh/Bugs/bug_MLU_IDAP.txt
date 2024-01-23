@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (x < min_val)\n    {\n        return min_val;\n    }\n    else if (x > max_val)\n    {\n        return max_val;\n    }\n    else\n    {\n        return x;\n    }",
+            "Faulty Code": "if (x <= min_val)\n    {\n        return min_val;\n    }\n    else if (x >= max_val)\n    {\n        return max_val;\n    }"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo"
+        }
+    ]
+}

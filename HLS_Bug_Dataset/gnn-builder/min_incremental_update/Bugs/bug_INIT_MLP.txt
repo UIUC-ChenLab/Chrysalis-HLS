@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "data.one_sample_processed = true;",
+            "Faulty Code": "//data.one_sample_processed = true;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "void min_incremental_update(min_incremental_data<T> &data, T x)",
+            "Faulty Code": "#pragma HLS pipeline\nvoid min_incremental_update(min_incremental_data<T> &data, T x)"
+        }
+    ]
+}

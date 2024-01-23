@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void mean_incremental_finalize(mean_incremental_data<T> &data)",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=data"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void mean_incremental_finalize(mean_incremental_data<T> &data)",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=data.finalized"
+        }
+    ]
+}

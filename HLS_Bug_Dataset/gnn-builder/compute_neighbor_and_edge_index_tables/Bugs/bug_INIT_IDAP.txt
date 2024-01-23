@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "neightbor_table_offsets[0] = 0;",
+            "Faulty Code": "// neightbor_table_offsets[0] = 0; // This line is commented out, causing an uninitialized value"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE off",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=neighbor_table"
+        }
+    ]
+}

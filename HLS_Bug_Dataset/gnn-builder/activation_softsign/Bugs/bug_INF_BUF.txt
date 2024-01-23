@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "return x / (T(1.0) + m_abs(x));",
+            "Faulty Code": "while(1) {} // Infinite loop inserted by mistake"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "return x / (T(1.0) + m_abs(x));",
+            "Faulty Code": "return x / (T(1.0) + m_abs(buffer_half[x])); // Incorrect buffer access"
+        }
+    ]
+}

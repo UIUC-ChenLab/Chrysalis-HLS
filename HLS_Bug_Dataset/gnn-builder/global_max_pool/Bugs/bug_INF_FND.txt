@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < num_nodes; i++)",
+            "Faulty Code": "for (int i = 0; i <= num_nodes; i++)"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS loop_tripcount min = 1 max = NUM_NODES_GUESS",
+            "Faulty Code": "#pragma HLS array_partition variable=node_embedding_table cyclic factor=3"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "T activation_identity(T x)",
+            "Faulty Code": "T activation_identity(T x = 0)"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "return x;",
+            "Faulty Code": "return (int)x;"
+        }
+    ]
+}

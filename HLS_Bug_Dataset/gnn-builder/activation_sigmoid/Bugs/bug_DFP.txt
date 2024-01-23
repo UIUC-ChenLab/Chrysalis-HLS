@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "\"\"\"T activation_sigmoid(T x)\n{\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n    return T(1.0) / (T(1.0) + m_exp(-x));\n}\"\"\"",
+            "Faulty Code": "\"\"\"T activation_sigmoid(T x)\n{\n#pragma HLS INLINE off\n#pragma HLS PIPELINE\n#pragma HLS dataflow\n    return T(1.0) / (T(1.0) + m_exp(-x));\n}\"\"\""
+        }
+    ]
+}

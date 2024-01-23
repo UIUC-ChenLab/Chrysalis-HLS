@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void variance_incremental_finalize(variance_incremental_data<T> &data)",
+            "Faulty Code": "#pragma HLS INTERFACE port=data bram variance_incremental_data<T> &data"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "data.std = m_sqrt(data.var + T(1e-5));",
+            "Faulty Code": "#pragma HLS PIPELINE\ndata.std = m_sqrt(data.var + T(1e-5));"
+        }
+    ]
+}

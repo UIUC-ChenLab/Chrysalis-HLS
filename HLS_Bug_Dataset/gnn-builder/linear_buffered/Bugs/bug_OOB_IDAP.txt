@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "output[i + k] += temp_sum[k];",
+            "Faulty Code": "output[i + k + 1] += temp_sum[k];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS array_partition variable = weight cyclic factor = BLOCK_SIZE_IN dim = 2",
+            "Faulty Code": "#pragma HLS array_partition variable = weight block factor = BLOCK_SIZE_IN dim = 2"
+        }
+    ]
+}

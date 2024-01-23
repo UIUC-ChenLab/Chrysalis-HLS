@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "data.mean += delta / T(data.count);",
+            "Faulty Code": "data.mean += delta / data.count;"
+        }
+    ]
+}

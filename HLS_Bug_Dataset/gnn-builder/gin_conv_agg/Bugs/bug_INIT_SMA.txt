@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "sum_incremental_data<T> neighbor_emb_aggregation_sum[EMB_SIZE_IN];",
+            "Faulty Code": "sum_incremental_data<T> neighbor_emb_aggregation_sum[EMB_SIZE_IN]; // Missing initialization"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void gin_conv_agg(...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=neighbor_emb_aggregation_sum bram"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE port=x ap_none"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "const T tanh = m_tanh(tanh_arg);",
+            "Faulty Code": "#pragma HLS PIPELINE\nconst T tanh = m_tanh(tanh_arg);"
+        }
+    ]
+}

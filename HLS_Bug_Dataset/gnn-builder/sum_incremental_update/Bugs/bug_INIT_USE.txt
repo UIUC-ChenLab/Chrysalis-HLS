@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void sum_incremental_update(sum_incremental_data<T> &data, T x)\n{\n    // #pragma HLS INLINE off\n    data.sum += x;\n}",
+            "Faulty Code": "void sum_incremental_update(sum_incremental_data<T> &data, T x)\n{\n    // #pragma HLS INLINE off\n    T uninitialized_var;\n    data.sum += uninitialized_var;\n}"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "void sum_incremental_update(sum_incremental_data<T> &data, T x)\n{\n    // #pragma HLS INLINE off\n    data.sum += x;\n}",
+            "Faulty Code": "void sum_incremental_update(sum_incremental_data<T> &data, int x)\n{\n    // #pragma HLS INLINE off\n    data.sum += x;\n}"
+        }
+    ]
+}

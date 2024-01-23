@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int neighbor_id = neighbors[neighbor];",
+            "Faulty Code": "char neighbor_id = neighbors[neighbor];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void gin_conv_agg(...)",
+            "Faulty Code": "#pragma HLS dataflow\nvoid gin_conv_agg(...)"
+        }
+    ]
+}

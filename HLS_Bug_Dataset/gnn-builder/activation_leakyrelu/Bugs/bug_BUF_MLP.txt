@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "return x * negative_slope;",
+            "Faulty Code": "return x * negative_buffer;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "for (i = 0; i < N; i++) { #pragma HLS PIPELINE // incorrect nested pipeline"
+        }
+    ]
+}

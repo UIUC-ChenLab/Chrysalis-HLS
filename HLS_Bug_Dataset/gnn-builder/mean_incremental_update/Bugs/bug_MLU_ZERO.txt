@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "data.count++;",
+            "Faulty Code": "data.count += 2;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "data.mean = data.sum / T(data.count);",
+            "Faulty Code": "data.mean = data.sum / T(0);"
+        }
+    ]
+}

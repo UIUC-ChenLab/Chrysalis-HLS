@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "neighbor_emb[i] = node_embedding_table_in[neighbor_id][i];",
+            "Faulty Code": "neighbor_emb[i] = node_embedding_table_in[neighbor_id + 1][i];"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "T transformed_emb[EMB_SIZE_IN] = {};",
+            "Faulty Code": "T transformed_emb[EMB_SIZE_IN];"
+        }
+    ]
+}

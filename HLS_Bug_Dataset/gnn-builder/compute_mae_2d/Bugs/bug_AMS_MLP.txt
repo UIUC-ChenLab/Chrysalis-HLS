@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "float compute_mae_2d(T arr1[M][N], T arr2[M][N])",
+            "Faulty Code": "#pragma HLS INTERFACE port=arr1 mode=ap_none\n#pragma HLS INTERFACE port=arr2 mode=ap_none\nfloat compute_mae_2d(T arr1[M][N], T arr2[M][N])"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int i = 0; i < M; i++)",
+            "Faulty Code": "#pragma HLS pipeline\n    for (int i = 0; i < M; i++)"
+        }
+    ]
+}

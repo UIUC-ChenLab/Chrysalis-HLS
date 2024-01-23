@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void variance_incremental_update(variance_incremental_data<T> &data, T x)",
+            "Faulty Code": "void variance_incremental_update(variance_incremental_data<T> &data, T x) { T delta; // Uninitialized usage"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "data.mean += delta / T(data.count);",
+            "Faulty Code": "#pragma HLS array_partition variable=data.mean factor=3 // Assuming data.count is not a multiple of 3"
+        }
+    ]
+}

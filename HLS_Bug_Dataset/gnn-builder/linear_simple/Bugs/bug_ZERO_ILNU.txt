@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "output[i] = bias[i];",
+            "Faulty Code": "output[i] = 0;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int j = 0; j < in_size; j++)",
+            "Faulty Code": "#pragma HLS unroll factor = 4\nfor (int j = 0; j < in_size; j++)"
+        }
+    ]
+}

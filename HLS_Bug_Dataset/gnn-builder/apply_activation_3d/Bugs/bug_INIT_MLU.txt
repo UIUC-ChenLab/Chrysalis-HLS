@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void apply_activation_3d(T_array_3d<T, M, N, O> x_in, T_array_3d<T, M, N, O> x_out)",
+            "Faulty Code": "void apply_activation_3d(T_array_3d<T, M, N, O> x_in, T_array_3d<T, M, N, O>& x_out)"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int k = 0; k < O; k++)",
+            "Faulty Code": "for (int k = 0; k < O-1; k++)"
+        }
+    ]
+}

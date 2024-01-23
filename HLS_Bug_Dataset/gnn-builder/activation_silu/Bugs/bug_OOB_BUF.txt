@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "return x * (T(1.0) / (T(1.0) + m_exp(-x)));",
+            "Faulty Code": "return x * (T(1.0) / (T(1.0) + m_exp(-x[0])));"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "return x * (T(1.0) / (T(1.0) + m_exp(-x)));",
+            "Faulty Code": "T buffer[2]; buffer[1] = x; return buffer[0] * (T(1.0) / (T(1.0) + m_exp(-buffer[0])));"
+        }
+    ]
+}

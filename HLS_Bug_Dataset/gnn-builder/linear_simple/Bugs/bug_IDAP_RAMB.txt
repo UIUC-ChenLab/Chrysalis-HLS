@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void linear_simple(T_array_1d<T, in_size> input, ...",
+            "Faulty Code": "void linear_simple(T_array_1d<T, in_size> input, #pragma HLS interface ap_fifo port=input ..."
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "output[i] += weight[i][j] * input[j];",
+            "Faulty Code": "output[i] += weight[j][i] * input[j];"
+        }
+    ]
+}

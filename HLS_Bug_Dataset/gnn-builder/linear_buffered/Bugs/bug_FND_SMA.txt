@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable = weight cyclic factor = BLOCK_SIZE_IN dim = 2",
+            "Faulty Code": "#pragma HLS array_partition variable = weight cyclic factor = BLOCK_SIZE_OUT dim = 2"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void linear_buffered(T input[in_size], T output[out_size], T weight[out_size][in_size], T bias[out_size])",
+            "Faulty Code": "void linear_buffered(T input, T output[out_size], T weight[out_size][in_size], T bias[out_size])"
+        }
+    ]
+}

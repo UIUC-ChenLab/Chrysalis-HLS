@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "const T min_val = T(-1.0);",
+            "Faulty Code": "T min_val = T(0);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "T activation_hardtanh(T x)",
+            "Faulty Code": "T activation_hardtanh(T x) #pragma HLS INTERFACE port=x mode=s_axilite"
+        }
+    ]
+}

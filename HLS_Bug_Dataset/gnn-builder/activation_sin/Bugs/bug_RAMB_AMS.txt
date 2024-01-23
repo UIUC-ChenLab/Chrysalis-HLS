@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE port=x ap_none"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "return m_sin(x);",
+            "Faulty Code": "return A[i + j]; // Assuming A is an array with m_axi and i, j are indices from a loop"
+        }
+    ]
+}

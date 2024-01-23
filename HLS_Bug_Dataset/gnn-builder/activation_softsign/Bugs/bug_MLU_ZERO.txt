@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "return x / (T(1.0) + m_abs(x));",
+            "Faulty Code": "return x / (T(1.0) + m_abs(x + T(1.0))); // Incorrect manual loop unrolling adding an extra term"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "return x / (T(1.0) + m_abs(x));",
+            "Faulty Code": "return x / (T(0.0) + m_abs(x)); // Inadvertently initializing to zero instead of one"
+        }
+    ]
+}

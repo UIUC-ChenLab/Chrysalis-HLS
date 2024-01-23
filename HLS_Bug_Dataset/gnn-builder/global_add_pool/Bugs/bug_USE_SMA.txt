@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "void sum_incremental_update(sum_incremental_data<T> &data, T x)",
+            "Faulty Code": "void sum_incremental_update(sum_incremental_data<int> &data, T x)"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "T node_embedding_table[MAX_NODES][EMB_SIZE],",
+            "Faulty Code": "#pragma HLS INTERFACE port=node_embedding_table bram"
+        }
+    ]
+}

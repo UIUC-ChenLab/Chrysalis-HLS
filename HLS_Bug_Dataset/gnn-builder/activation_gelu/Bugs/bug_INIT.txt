@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "const T out = x * T(0.5) * (T(1.0) + m_erf(x * sqrt_2_recip));",
+            "Faulty Code": "T out; out = x * T(0.5) * (T(1.0) + m_erf(x * sqrt_2_recip));"
+        }
+    ]
+}

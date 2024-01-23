@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "self_emb_scaled[i] = current_node_embedding_in[i] * (T(1) + gin_eps);",
+            "Faulty Code": "self_emb_scaled[i] = current_node_embedding_in[i] * (1 + gin_eps);"
+        }
+    ]
+}

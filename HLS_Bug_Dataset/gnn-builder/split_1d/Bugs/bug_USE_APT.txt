@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "T x_in_buf = x_in[i];",
+            "Faulty Code": "char x_in_buf = x_in[i];"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "void split_1d(T_array_1d<T, N> x_in, T_array_1d<T, N> x_out_1, T_array_1d<T, N> x_out_2)",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=x_in"
+        }
+    ]
+}

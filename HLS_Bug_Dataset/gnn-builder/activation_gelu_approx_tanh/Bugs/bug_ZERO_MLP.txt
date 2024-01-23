@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "const T GELU_APPROX_MIN = -8.31776613691702;",
+            "Faulty Code": "const T GELU_APPROX_MIN = 0.0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "for (int i = 0; i < N; ++i) { #pragma HLS PIPELINE // Incorrect nesting"
+        }
+    ]
+}

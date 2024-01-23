@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int k = 0; k < O; k++)",
+            "Faulty Code": "for (int k = 0; k < O - 1; k++)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int j = 0; j < N; j++)",
+            "Faulty Code": "#pragma HLS pipeline // This pragma is incorrect as it is placed within an outer loop that should also be pipelined"
+        }
+    ]
+}

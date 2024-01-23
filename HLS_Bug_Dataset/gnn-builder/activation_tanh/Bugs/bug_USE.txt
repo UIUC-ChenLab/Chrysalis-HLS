@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "T out_fixed = (hls::signbit(x) != hls::signbit(out)) ? T(-out) : out;",
+            "Faulty Code": "T out_fixed = (hls::signbit(x) != hls::signbit(out)) ? -out : out;"
+        }
+    ]
+}

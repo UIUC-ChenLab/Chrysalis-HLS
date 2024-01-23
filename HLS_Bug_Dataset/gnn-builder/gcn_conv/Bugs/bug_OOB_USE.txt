@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "node_neighbors[i] = neighbor_table[current_idx];",
+            "Faulty Code": "node_neighbors[node_in_degree] = neighbor_table[current_idx];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "T d_i_prime = T(1.0) + T(in_degree_node);",
+            "Faulty Code": "int d_i_prime = 1 + in_degree_node;"
+        }
+    ]
+}

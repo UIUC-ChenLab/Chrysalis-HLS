@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "return x / (T(1.0) + m_abs(x));",
+            "Faulty Code": "T result; return result / (T(1.0) + m_abs(x));"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "return x / (T(1.0) + m_abs(x));",
+            "Faulty Code": "while(true){}"
+        }
+    ]
+}

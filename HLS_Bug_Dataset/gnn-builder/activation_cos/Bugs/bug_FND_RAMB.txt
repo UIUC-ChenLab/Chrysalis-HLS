@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=x factor=2 complete"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "return m_cos(x);",
+            "Faulty Code": "return m_cos(A[i]); // Assuming A is an array passed to the function and i is not a consecutive index"
+        }
+    ]
+}

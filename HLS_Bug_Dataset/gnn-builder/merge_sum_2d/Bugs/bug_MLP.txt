@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void merge_sum_2d(T_array_2d<T, M, N> x_in_1, T_array_2d<T, M, N> x_in_2, T_array_2d<T, M, N> x_out)\n{\n#pragma HLS INLINE off\n    for (int i = 0; i < M; i++)\n    {\n        for (int j = 0; j < N; j++)\n        {\n\n            T x_in_1_buf = x_in_1[i][j];\n            T x_in_2_buf = x_in_2[i][j];\n            x_out[i][j] = x_in_1_buf + x_in_2_buf;\n        }\n    }\n}",
+            "Faulty Code": "void merge_sum_2d(T_array_2d<T, M, N> x_in_1, T_array_2d<T, M, N> x_in_2, T_array_2d<T, M, N> x_out)\n{\n#pragma HLS INLINE off\n    for (int i = 0; i < M; i++)\n    {\n#pragma HLS pipeline\n        for (int j = 0; j < N; j++)\n        {\n#pragma HLS pipeline\n            T x_in_1_buf = x_in_1[i][j];\n            T x_in_2_buf = x_in_2[i][j];\n            x_out[i][j] = x_in_1_buf + x_in_2_buf;\n        }\n    }\n}"
+        }
+    ]
+}

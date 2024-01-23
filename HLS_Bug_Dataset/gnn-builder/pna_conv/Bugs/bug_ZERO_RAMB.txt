@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "T agg_std_identity_emb[EMB_SIZE_IN];",
+            "Faulty Code": "T agg_std_identity_emb[EMB_SIZE_IN] = {0};"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "node_neighbors[i] = neighbor_table[current_idx];",
+            "Faulty Code": "node_neighbors[current_idx] = neighbor_table[current_idx];"
+        }
+    ]
+}
