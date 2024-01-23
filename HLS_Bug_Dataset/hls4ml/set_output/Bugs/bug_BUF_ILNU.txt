@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "acc += arrays.edge_weight_mean[ia] * aggr;",
+            "Faulty Code": "acc += arrays.edge_weight_mean[io] * aggr;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

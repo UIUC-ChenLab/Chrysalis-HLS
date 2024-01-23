@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "static const int lastheight = (CONFIG_T::filt_width - 1) * CONFIG_T::n_chan;",
+            "Faulty Code": "static const int lastheight = CONFIG_T::filt_width * CONFIG_T::n_chan;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i_iw = 0; i_iw < filt_width; i_iw++) {",
+            "Faulty Code": "for (int i_iw = 0; i_iw <= filt_width; i_iw++) {"
+        }
+    ]
+}

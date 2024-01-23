@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < CONFIG_T::height * CONFIG_T::width / data_T::size; i++) {",
+            "Faulty Code": "for (int i = 0; i <= CONFIG_T::height * CONFIG_T::width / data_T::size; i++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "out_data[j] = typename res_T::value_type(data_array[j * data_T::size + i]);",
+            "Faulty Code": "out_data[j] = typename res_T::value_type(data_array[j * CONFIG_T::width + i]);"
+        }
+    ]
+}

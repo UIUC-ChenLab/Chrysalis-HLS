@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned i_part = 0; i_part < CONFIG_T::n_partitions; i_part++) {",
+            "Faulty Code": "for (unsigned i_part = 0; ; i_part++) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II=1 rewind",
+            "Faulty Code": "#pragma HLS PIPELINE II=1"
+        }
+    ]
+}

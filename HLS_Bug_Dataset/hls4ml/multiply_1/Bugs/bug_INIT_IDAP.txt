@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T out_data;",
+            "Faulty Code": "res_T out_data = res_T();"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=data1"
+        }
+    ]
+}

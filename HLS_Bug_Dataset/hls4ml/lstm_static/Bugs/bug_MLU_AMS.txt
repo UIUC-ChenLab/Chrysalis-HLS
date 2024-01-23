@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int iacc = 0; iacc < (3 * CONFIG_T::n_state); iacc++) {",
+            "Faulty Code": "for (int iacc = 0; iacc < (2 * CONFIG_T::n_state); iacc++) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void lstm_static(bool reset_state, data_T data[CONFIG_T::n_in], res_T h_newstate[CONFIG_T::n_state],",
+            "Faulty Code": "void lstm_static(bool reset_state, data_T data[CONFIG_T::n_in], res_T h_newstate[CONFIG_T::n_state]) { #pragma HLS INTERFACE port=h_newstate ap_none"
+        }
+    ]
+}

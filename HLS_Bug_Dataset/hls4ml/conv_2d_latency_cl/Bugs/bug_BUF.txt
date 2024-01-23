@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "CONFIG_T::template fill_buffer<data_T, CONFIG_T>::fill_buffer(data, data_buf, i_part);",
+            "Faulty Code": "CONFIG_T::template fill_buffer<data_T, CONFIG_T>::fill_buffer(data + i_part * (CONFIG_T::in_height * CONFIG_T::in_width * CONFIG_T::n_chan / CONFIG_T::n_partitions), data_buf, i_part);"
+        }
+    ]
+}

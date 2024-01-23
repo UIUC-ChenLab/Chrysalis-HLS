@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "for (unsigned i_ih = 0; i_ih < CONFIG_T::in_height; i_ih++) { #pragma HLS PIPELINE II=CONFIG_T::reuse_factor for (unsigned i_iw = 0; i_iw < CONFIG_T::in_width / (data_T::size / CONFIG_T::n_chan); i_iw++) {"
+        }
+    ]
+}

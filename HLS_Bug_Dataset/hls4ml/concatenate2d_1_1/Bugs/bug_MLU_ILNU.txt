@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=15"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int k = 0; k < input1_T::size; k++) {",
+            "Faulty Code": "for (int k = 0; k < input1_T::size + 1; k++) {"
+        }
+    ]
+}

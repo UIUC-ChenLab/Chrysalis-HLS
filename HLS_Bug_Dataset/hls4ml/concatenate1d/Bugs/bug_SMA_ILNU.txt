@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE port=res bram"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::n_elem1_0; ii++) {\n        res[ii] = data1[ii];\n    }\n    for (int ii = 0; ii < CONFIG_T::n_elem2_0; ii++) {\n        res[CONFIG_T::n_elem1_0 + ii] = data2[ii];\n    }",
+            "Faulty Code": "#pragma HLS UNROLL factor=2\n    for (int ii = 0; ii < CONFIG_T::n_elem1_0; ii++) {\n        res[ii] = data1[ii];\n    }\n    for (int ii = 0; ii < CONFIG_T::n_elem2_0; ii++) {\n        res[CONFIG_T::n_elem1_0 + ii] = data2[ii];\n    }"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "if (reset_state) {\n    for (int i_state = 0; i_state < (CONFIG_T::n_state); i_state++) {\n        #pragma HLS UNROLL\n        s_state[i_state] = 0;\n        h_state[i_state] = 0;\n    }\n}",
+            "Faulty Code": "if (!reset_state) {\n    for (int i_state = 0; i_state < (CONFIG_T::n_state); i_state++) {\n        #pragma HLS UNROLL\n        s_state[i_state] = 0;\n        h_state[i_state] = 0;\n    }\n}"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=h_newstate   complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=h_newstate   type=block factor=2"
+        }
+    ]
+}

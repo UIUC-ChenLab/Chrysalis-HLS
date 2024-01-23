@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "res[ii] = (res_T)softplus_table[index];",
+            "Faulty Code": "res[ii] = (res_T)softplus_table[ii];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=res"
+        }
+    ]
+}

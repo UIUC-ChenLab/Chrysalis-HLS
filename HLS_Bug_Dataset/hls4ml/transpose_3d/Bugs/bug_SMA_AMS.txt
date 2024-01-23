@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void transpose_3d(data_T data[CONFIG_T::depth * CONFIG_T::height * CONFIG_T::width], res_T data_t[CONFIG_T::depth * CONFIG_T::height * CONFIG_T::width]) {",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=data\nvoid transpose_3d(data_T data, res_T data_t[CONFIG_T::depth * CONFIG_T::height * CONFIG_T::width]) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void transpose_3d(data_T data[CONFIG_T::depth * CONFIG_T::height * CONFIG_T::width], res_T data_t[CONFIG_T::depth * CONFIG_T::height * CONFIG_T::width]) {",
+            "Faulty Code": "#pragma HLS INTERFACE s_axilite port=data_t bundle=control\nvoid transpose_3d(data_T data[CONFIG_T::depth * CONFIG_T::height * CONFIG_T::width], res_T data_t) {"
+        }
+    ]
+}

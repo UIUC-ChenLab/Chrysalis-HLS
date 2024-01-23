@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T acc = output_transform_biases.output_biases[io];",
+            "Faulty Code": "res_T acc;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE\n            #pragma HLS PIPELINE"
+        }
+    ]
+}

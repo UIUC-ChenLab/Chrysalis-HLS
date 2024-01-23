@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int i = 1; i < res_T::size; i++) {",
+            "Faulty Code": "for (int i = 1; i <= res_T::size; i++) {"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "typename data_T::value_type maximum = in_data[0];",
+            "Faulty Code": "typename data_T::value_type maximum;"
+        }
+    ]
+}

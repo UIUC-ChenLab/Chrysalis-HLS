@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "void hard_sigmoid(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {",
+            "Faulty Code": "#pragma HLS array_partition variable=data dim=2 complete"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void hard_sigmoid(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {\n    #pragma HLS PIPELINE\n\n    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid hard_sigmoid(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {\n    #pragma HLS PIPELINE\n\n    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {"
+        }
+    ]
+}

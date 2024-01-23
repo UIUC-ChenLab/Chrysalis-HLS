@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = kernel_data complete dim = 0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = kernel_data complete dim = 1"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void pooling1d_buffer_cl(hls::stream<data_T> &data, hls::stream<res_T> &res)",
+            "Faulty Code": "void pooling1d_buffer_cl(hls::stream<data_T> &data, hls::stream<res_T> &res) #pragma HLS INTERFACE mode=s_axilite port=data bundle=input_bundle"
+        }
+    ]
+}

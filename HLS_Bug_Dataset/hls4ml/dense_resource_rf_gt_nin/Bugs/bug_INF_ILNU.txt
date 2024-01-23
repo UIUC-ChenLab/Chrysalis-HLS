@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int iacc = 0; iacc < nout; iacc++) {",
+            "Faulty Code": "for (int iacc = 0; ; iacc++) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=tmpmult complete",
+            "Faulty Code": "#pragma HLS UNROLL factor=block_factor"
+        }
+    ]
+}

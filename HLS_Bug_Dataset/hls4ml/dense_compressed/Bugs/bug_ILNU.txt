@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned i = 0; i < CONFIG_T::n_out; i++) {\n    #pragma HLS UNROLL\n    acc[i] = (typename CONFIG_T::accum_t)(biases[i]);\n}",
+            "Faulty Code": "for (unsigned i = 0; i < CONFIG_T::n_out; i++) {\n    #pragma HLS UNROLL factor=4\n    for (unsigned j = 0; j < 4; j++) {\n        acc[i] = (typename CONFIG_T::accum_t)(biases[i]);\n    }\n}"
+        }
+    ]
+}

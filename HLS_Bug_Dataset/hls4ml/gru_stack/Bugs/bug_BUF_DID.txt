@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "res[i] = h_state[i];",
+            "Faulty Code": "res[i] = h_state[j];"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=tmpres complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=tmpres dim=3"
+        }
+    ]
+}

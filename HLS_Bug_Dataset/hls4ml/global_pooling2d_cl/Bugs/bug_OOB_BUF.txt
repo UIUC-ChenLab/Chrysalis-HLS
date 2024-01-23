@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "pool[i] = data[i * CONFIG_T::n_filt + filt];",
+            "Faulty Code": "pool[i] = data[(i + 1) * CONFIG_T::n_filt + filt];"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "res[filt] = static_cast<res_T>(pool_op<data_T, CONFIG_T::in_height * CONFIG_T::in_width, CONFIG_T::pool_op>(pool));",
+            "Faulty Code": "res[filt] = static_cast<res_T>(pool_op<data_T, CONFIG_T::in_height * (CONFIG_T::in_width / 2), CONFIG_T::pool_op>(&pool[CONFIG_T::in_width / 2]));"
+        }
+    ]
+}

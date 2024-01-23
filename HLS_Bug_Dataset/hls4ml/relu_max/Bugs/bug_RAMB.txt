@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void relu_max(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {",
+            "Faulty Code": "void relu_max(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {\n#pragma HLS interface m_axi port=data offset=slave\n#pragma HLS interface m_axi port=res offset=slave"
+        }
+    ]
+}

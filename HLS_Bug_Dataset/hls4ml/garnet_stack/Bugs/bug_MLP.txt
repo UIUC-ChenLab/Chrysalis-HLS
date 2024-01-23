@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "VerticesOuter:\nfor (unsigned ivv = 0; ivv < CONFIG_T::reuse_factor; ++ivv) {\n#pragma HLS PIPELINE\n\nif (ivv * unroll_factor >= nvtx)\nbreak;\n\nMeans<CONFIG_T, typename CONFIG_T::edge_weight_aggr_t> means_local;\n\nVerticesInner:\nfor (unsigned ir = 0; ir < unroll_factor; ++ir) {\nunsigned iv = ivv * unroll_factor + ir;\n\nif (iv == nvtx)\nbreak;\n\ncompute_weights_aggregates<CONFIG_T>(data_getter, iv, means_local, arrays);\n}\n\nmeans_accum.add_means_normalized(means_local);\n}\n",
+            "Faulty Code": "VerticesOuter:\nfor (unsigned ivv = 0; ivv < CONFIG_T::reuse_factor; ++ivv) {\n#pragma HLS PIPELINE\n\nif (ivv * unroll_factor >= nvtx)\nbreak;\n\nMeans<CONFIG_T, typename CONFIG_T::edge_weight_aggr_t> means_local;\n\nVerticesInner:\nfor (unsigned ir = 0; ir < unroll_factor; ++ir) {\n#pragma HLS PIPELINE\nunsigned iv = ivv * unroll_factor + ir;\n\nif (iv == nvtx)\nbreak;\n\ncompute_weights_aggregates<CONFIG_T>(data_getter, iv, means_local, arrays);\n}\n\nmeans_accum.add_means_normalized(means_local);\n}\n"
+        }
+    ]
+}

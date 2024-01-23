@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "void pointwise_conv_2d_cl(data_T data[CONFIG_T::in_height * CONFIG_T::in_width * CONFIG_T::n_chan],",
+            "Faulty Code": "void pointwise_conv_2d_cl(data_T data[CONFIG_T::in_height * CONFIG_T::in_width],"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS INLINE region",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=data dim=1"
+        }
+    ]
+}

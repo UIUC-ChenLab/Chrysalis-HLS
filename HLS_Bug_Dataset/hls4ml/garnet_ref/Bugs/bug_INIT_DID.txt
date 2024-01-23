@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "propagated_features[ivp] = CONFIG_T::input_transform_biases[ip];",
+            "Faulty Code": "typename CONFIG_T::aggr_t propagated_features[CONFIG_T::n_vertices * CONFIG_T::n_propagate];"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "unsigned const iap = ia * CONFIG_T::n_propagate + ip;",
+            "Faulty Code": "#pragma HLS array_partition variable=aggregated_features dim=3 complete"
+        }
+    ]
+}

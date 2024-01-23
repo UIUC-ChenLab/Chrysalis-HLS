@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "input1_T in_data1 = data1.read();",
+            "Faulty Code": "#pragma HLS array_partition type=block variable=in_data1 factor=2"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

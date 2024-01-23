@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "pool_window[i_iw] = kernel_data[i_iw * CONFIG_T::n_filt + i_ic];",
+            "Faulty Code": "pool_window[i_iw] = kernel_data[(i_iw+1) * CONFIG_T::n_filt + i_ic];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE"
+        }
+    ]
+}

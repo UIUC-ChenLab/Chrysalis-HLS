@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "data_round = data[ii] * CONFIG_T::table_size / 16;",
+            "Faulty Code": "data_round = (int)data[ii] * (CONFIG_T::table_size / 16);"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=softplus_table offset=slave bundle=gmem0"
+        }
+    ]
+}

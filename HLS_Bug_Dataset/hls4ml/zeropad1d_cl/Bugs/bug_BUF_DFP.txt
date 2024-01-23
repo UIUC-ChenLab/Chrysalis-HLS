@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "*(res++) = (res_T) * (data++);",
+            "Faulty Code": "*(res++) = (res_T) * (data++); // Assuming CONFIG_T::n_chan * CONFIG_T::out_width is larger than CONFIG_T::n_chan * CONFIG_T::in_width"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow // This pragma is incorrect because this loop structure does not support dataflow optimization"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned i_pxl = 0; i_pxl < CONFIG_T::n_pixels; i_pxl++) {",
+            "Faulty Code": "for (unsigned i_pxl = 0; ; i_pxl++) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II=1 rewind",
+            "Faulty Code": "#pragma HLS PIPELINE II=1 rewind\n#pragma HLS PIPELINE II=1 rewind"
+        }
+    ]
+}

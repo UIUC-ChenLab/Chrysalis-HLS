@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "res[ires] = CONFIG_T::template product<data_T, typename CONFIG_T::scale_t>::product(data[ires], scale[norm_index]) + bias[norm_index];",
+            "Faulty Code": "res[ires] = CONFIG_T::template product<data_T, typename CONFIG_T::scale_t>::product(data[norm_index], scale[norm_index]) + bias[norm_index];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "data_T cache;",
+            "Faulty Code": "data_T cache = 0;"
+        }
+    ]
+}

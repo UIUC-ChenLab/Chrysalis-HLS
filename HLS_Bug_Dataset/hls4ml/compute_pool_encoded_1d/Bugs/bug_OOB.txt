@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (wp_idx + p < nW) {\n    filt_mask = pool_table_width[wp_idx + p] + 1;\n}",
+            "Faulty Code": "if (wp_idx + p < CONFIG_T::n_in) {\n    filt_mask = pool_table_width[wp_idx + p] + 1;\n}"
+        }
+    ]
+}

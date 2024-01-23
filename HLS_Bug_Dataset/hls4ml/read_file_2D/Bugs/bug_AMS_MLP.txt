@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "int read_file_2D(const char *filename, dataType data[nrows][ncols]) {",
+            "Faulty Code": "#pragma HLS interface port=data mode=ap_none int read_file_2D(const char *filename, dataType data[nrows][ncols]) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int ii = 0; ii < nrows; ii++) {",
+            "Faulty Code": "#pragma HLS pipeline for (int ii = 0; ii < nrows; ii++) {"
+        }
+    ]
+}

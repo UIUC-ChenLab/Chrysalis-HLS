@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=data complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=data dim=2"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

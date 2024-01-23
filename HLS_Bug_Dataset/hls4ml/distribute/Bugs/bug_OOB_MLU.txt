@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (iv == nvtx)\n    break;",
+            "Faulty Code": "if (iv >= nvtx)\n    break;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned ia = 0; ia < CONFIG_T::n_aggregators; ++ia) {",
+            "Faulty Code": "for (unsigned ia = 0; ia <= CONFIG_T::n_aggregators; ++ia) {"
+        }
+    ]
+}

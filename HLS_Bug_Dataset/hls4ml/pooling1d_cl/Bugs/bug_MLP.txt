@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void average(hls::stream<input1_T> &data1, hls::stream<input2_T> &data2, hls::stream<res_T> &res) {\n assert(input1_T::size == input2_T::size && input1_T::size == res_T::size);\n\nAverageLoop:\n for (int i = 0; i < CONFIG_T::n_elem / input1_T::size; i++) {\n #pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "void average(hls::stream<input1_T> &data1, hls::stream<input2_T> &data2, hls::stream<res_T> &res) {\n assert(input1_T::size == input2_T::size && input1_T::size == res_T::size);\n\nAverageLoop:\n for (int i = 0; i < CONFIG_T::n_elem / input1_T::size; i++) {\n #pragma HLS PIPELINE II=CONFIG_T::reuse_factor\n AveragePack:\n for (int j = 0; j < res_T::size; j++) {\n #pragma HLS PIPELINE II=CONFIG_T::reuse_factor\n out_data[j] = (in_data1[j] + in_data2[j]) / (typename res_T::value_type)2;\n }\n\n res.write(out_data);\n }"
+        }
+    ]
+}

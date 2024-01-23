@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned iw = 1; iw < table_size; ++iw) {",
+            "Faulty Code": "for (unsigned iw = 1; ; ++iw) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "edge_weights_table[iw] = hls::exp(-distance * distance);",
+            "Faulty Code": "edge_weights_table[iw-1] = hls::exp(-distance * distance);"
+        }
+    ]
+}

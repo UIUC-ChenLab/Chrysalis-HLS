@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "pixel_idx[p] = CONFIG_T::pixels[sw_idx];",
+            "Faulty Code": "pixel_idx[p] = CONFIG_T::pixels[sw_idx + 1];"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<CONFIG_T::filt_width> *pixel_idx",
+            "Faulty Code": "ap_uint<CONFIG_T::filt_width> *pixel_idx = nullptr;"
+        }
+    ]
+}

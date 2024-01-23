@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (datareg > threshold_hi[norm_index])",
+            "Faulty Code": "if (datareg > threshold_hi[ii])"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=res complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=res dim=2 complete"
+        }
+    ]
+}

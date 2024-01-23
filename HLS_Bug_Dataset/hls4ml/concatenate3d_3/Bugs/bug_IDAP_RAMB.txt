@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "input1_T in_data1 = data1.read();",
+            "Faulty Code": "input1_T in_data1 = data1.read(i); // Incorrect indexing for stream"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "input2_T in_data2 = data2.read();",
+            "Faulty Code": "input2_T in_data2 = data2[i % CONFIG_T::n_elem2_1]; // Incorrect access pattern for stream"
+        }
+    ]
+}

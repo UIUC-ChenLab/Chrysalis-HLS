@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "edge_weights_table[iw] = std::exp(-v * v);",
+            "Faulty Code": "edge_weights_table[iw + table_size] = std::exp(-v * v);"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (unsigned iw = 0; iw < table_size; ++iw) {",
+            "Faulty Code": "#pragma HLS dataflow\nfor (unsigned iw = 0; iw < table_size; ++iw) {"
+        }
+    ]
+}

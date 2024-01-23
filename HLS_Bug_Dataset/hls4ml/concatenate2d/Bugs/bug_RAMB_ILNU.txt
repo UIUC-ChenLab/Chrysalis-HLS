@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "res[ii * (CONFIG_T::n_elem1_1 + CONFIG_T::n_elem2_1) + jj] = data1[ii * CONFIG_T::n_elem1_1 + jj];",
+            "Faulty Code": "res[jj * (CONFIG_T::n_elem1_1 + CONFIG_T::n_elem2_1) + ii] = data1[jj * CONFIG_T::n_elem1_1 + ii];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

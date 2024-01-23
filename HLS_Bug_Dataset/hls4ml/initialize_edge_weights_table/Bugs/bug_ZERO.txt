@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "edge_weights_table[0] = ap_ufixed<CONFIG_T::edge_weight_t::width, 0, AP_TRN, AP_SAT>(1.);",
+            "Faulty Code": "edge_weights_table[0] = ap_ufixed<CONFIG_T::edge_weight_t::width, 0, AP_TRN, AP_SAT>(0.);"
+        }
+    ]
+}

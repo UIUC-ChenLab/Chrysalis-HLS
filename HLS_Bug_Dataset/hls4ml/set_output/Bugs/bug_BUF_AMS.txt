@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "res_T acc = output_transform_biases.output_biases[io];",
+            "Faulty Code": "res_T acc = output_transform_biases.output_biases[CONFIG_T::n_out_features + io];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE port=res mode=s_axilite"
+        }
+    ]
+}

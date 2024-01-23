@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void normalize_ternary_tanh(hls::stream<data_T> &data, hls::stream<nnet::array<ap_int<2>, CONFIG_T::n_scale_bias>> &res, typename data_T::value_type threshold_hi[CONFIG_T::n_scale_bias], typename data_T::value_type threshold_lo[CONFIG_T::n_scale_bias])",
+            "Faulty Code": "void normalize_ternary_tanh(#pragma HLS interface bram port=data hls::stream<data_T> &data, #pragma HLS interface bram port=res hls::stream<nnet::array<ap_int<2>, CONFIG_T::n_scale_bias>> &res, typename data_T::value_type threshold_hi[CONFIG_T::n_scale_bias], typename data_T::value_type threshold_lo[CONFIG_T::n_scale_bias])"
+        }
+    ]
+}

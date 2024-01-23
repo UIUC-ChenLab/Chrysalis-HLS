@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned iw = 1; iw < table_size; ++iw) {",
+            "Faulty Code": "for (unsigned iw = 1; iw < table_size-1; ++iw) {"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned jj = 0; jj < CONFIG_T::n_filt; jj++)",
+            "Faulty Code": "for (unsigned jj = 0; jj < CONFIG_T::n_filt-1; jj++)"
+        }
+    ]
+}

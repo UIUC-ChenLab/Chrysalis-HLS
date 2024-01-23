@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out_data[k] = in_data[0];",
+            "Faulty Code": "out_data[k] = in_data[k];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=out_data cyclic factor=3"
+        }
+    ]
+}

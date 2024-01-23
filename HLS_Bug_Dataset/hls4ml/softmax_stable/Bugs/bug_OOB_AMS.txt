@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "exp_sum = reduce<typename CONFIG_T::exp_table_t, CONFIG_T::n_in, Op_add<typename CONFIG_T::exp_table_t>>(exp_res, op_add);",
+            "Faulty Code": "typename CONFIG_T::inv_table_t inv_exp_sum = invert_table[softmax_idx_from_real_val<typename CONFIG_T::exp_table_t, CONFIG_T>(exp_sum)];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void softmax_stable(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {",
+            "Faulty Code": "void softmax_stable(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) { #pragma HLS interface port=res ap_none }"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T res_pack;",
+            "Faulty Code": "res_T res_pack = {0};"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int im = 0; im < block_factor; im++) {",
+            "Faulty Code": "for (int im = 0; im <= block_factor; im++) {"
+        }
+    ]
+}

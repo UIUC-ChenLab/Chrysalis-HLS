@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pool complete dim=0",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

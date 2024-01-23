@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "for (int filt = 0; filt < CONFIG_T::n_filt; filt++) {",
+            "Faulty Code": "for (int filt = 0; filt < CONFIG_T::n_filt / 2; filt++) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS INTERFACE port=res bram"
+        }
+    ]
+}

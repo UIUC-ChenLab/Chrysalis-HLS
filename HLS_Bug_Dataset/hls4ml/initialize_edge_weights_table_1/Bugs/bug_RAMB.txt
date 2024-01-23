@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "\"\"\"initialize_edge_weights_table(typename CONFIG_T::edge_weight_t edge_weights_table[]) {\n    unsigned const table_size = (1 << CONFIG_T::distance_width);\n    double const step = 64. / table_size;\n\n    typename CONFIG_T::distance_t v = -32.;\n    for (unsigned iw = 0; iw < table_size; ++iw) {\n        edge_weights_table[iw] = std::exp(-v * v);\n        v += step;\n    }\n}\"\"\"",
+            "Faulty Code": "\"\"\"#pragma HLS INTERFACE m_axi port=edge_weights_table depth=table_size offset=slave\ninitialize_edge_weights_table(typename CONFIG_T::edge_weight_t edge_weights_table[]) {\n    unsigned const table_size = (1 << CONFIG_T::distance_width);\n    double const step = 64. / table_size;\n\n    typename CONFIG_T::distance_t v = -32.;\n    for (unsigned iw = 0; iw < table_size; ++iw) {\n        edge_weights_table[iw] = std::exp(-v * v);\n        v += step;\n    }\n}\"\"\""
+        }
+    ]
+}

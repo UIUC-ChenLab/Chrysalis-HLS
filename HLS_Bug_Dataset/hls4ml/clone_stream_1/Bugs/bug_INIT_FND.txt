@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T out_data1;\nres_T out_data2;\nres_T out_data3;",
+            "Faulty Code": "// Missing initialization of out_data variables"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=out_data1 factor=2"
+        }
+    ]
+}

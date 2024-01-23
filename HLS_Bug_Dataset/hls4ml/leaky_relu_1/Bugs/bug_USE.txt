@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "out_data[j] = alpha * in_data[j];",
+            "Faulty Code": "out_data[j] = alpha * (typename data_T::value_type)in_data[j];"
+        }
+    ]
+}

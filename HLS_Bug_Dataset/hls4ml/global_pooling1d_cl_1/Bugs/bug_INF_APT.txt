@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned i_iw = 0; i_iw < CONFIG_T::n_in / (data_T::size / CONFIG_T::n_filt); i_iw++) {",
+            "Faulty Code": "for (unsigned i_iw = 0; i_iw <= CONFIG_T::n_in / (data_T::size / CONFIG_T::n_filt); i_iw++) {"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=data_window complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=data_window type=cyclic"
+        }
+    ]
+}

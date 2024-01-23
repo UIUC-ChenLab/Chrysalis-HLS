@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=h_state complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=h_state bram"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int ir = 0; ir < rufactor; ir++) { #pragma HLS PIPELINE II=1 rewind",
+            "Faulty Code": "for (int ir = 0; ir < rufactor; ir++) { #pragma HLS PIPELINE II=1 #pragma HLS PIPELINE II=1 rewind"
+        }
+    ]
+}

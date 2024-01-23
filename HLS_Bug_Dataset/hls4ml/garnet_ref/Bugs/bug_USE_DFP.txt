@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned const ivp = iv * CONFIG_T::n_propagate + ip;",
+            "Faulty Code": "int ivp = iv * CONFIG_T::n_propagate + ip;"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "garnet_ref(data_T const data[CONFIG_T::n_vertices * CONFIG_T::n_in_features], nvtx_T const nvtx[1], res_T res[CONFIG_T::n_vertices * CONFIG_T::n_out_features]) {",
+            "Faulty Code": "garnet_ref(data_T const data[CONFIG_T::n_vertices * CONFIG_T::n_in_features], nvtx_T const nvtx[1], res_T res[CONFIG_T::n_vertices * CONFIG_T::n_out_features]) {\n#pragma HLS dataflow"
+        }
+    ]
+}

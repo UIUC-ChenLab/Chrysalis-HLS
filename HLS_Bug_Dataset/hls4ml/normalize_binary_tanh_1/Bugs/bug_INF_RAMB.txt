@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < CONFIG_T::n_in / data_T::size; i++) {",
+            "Faulty Code": "for (int i = 0; ; i++) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "out_data[j] = (in_data[j] >= threshold[norm_index]) ? 1 : 0;",
+            "Faulty Code": "out_data[j] = (in_data[i * data_T::size + j] >= threshold[i * data_T::size + j]) ? 1 : 0;"
+        }
+    ]
+}

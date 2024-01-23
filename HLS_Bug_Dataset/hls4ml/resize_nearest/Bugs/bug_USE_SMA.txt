@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int y_ratio = (int)((CONFIG_T::height << 16) / CONFIG_T::new_height) + 1;",
+            "Faulty Code": "short y_ratio = (short)((CONFIG_T::height << 16) / CONFIG_T::new_height) + 1;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void resize_nearest(data_T image[CONFIG_T::height * CONFIG_T::width * CONFIG_T::n_chan],",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=image"
+        }
+    ]
+}

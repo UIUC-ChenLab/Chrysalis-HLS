@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "input1_T in_data1 = data1.read();",
+            "Faulty Code": "input1_T in_data1 = data2.read();"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "out_data[j] = (in_data1[j] > in_data2[j]) ? in_data1[j] : in_data2[j];",
+            "Faulty Code": "out_data[j] = (in_data1[j] > (input2_T)(in_data2[j])) ? in_data1[j] : (res_T)(in_data2[j]);"
+        }
+    ]
+}

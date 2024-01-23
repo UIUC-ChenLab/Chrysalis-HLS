@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (idx[0] = 0; idx[0] < dims[0]; idx[0]++) {",
+            "Faulty Code": "for (idx[0] = 0; idx[0] <= dims[0]; idx[0]++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "int idx[3] = {0}, idx_t[3] = {0};",
+            "Faulty Code": "int idx[3] = {0}, idx_t[3] = {1};"
+        }
+    ]
+}

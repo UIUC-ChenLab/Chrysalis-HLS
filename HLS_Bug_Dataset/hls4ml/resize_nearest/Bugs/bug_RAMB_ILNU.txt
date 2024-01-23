@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS interface m_axi port=image"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int k = 0; k < CONFIG_T::n_chan; k++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4 for (int k = 0; k < CONFIG_T::n_chan; k++) {"
+        }
+    ]
+}

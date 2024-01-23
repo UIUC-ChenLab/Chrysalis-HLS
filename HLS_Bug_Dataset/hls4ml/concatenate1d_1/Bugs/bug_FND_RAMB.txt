@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition factor=2"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "out_data[j + (i * input1_T::size)] = in_data1[j];",
+            "Faulty Code": "out_data[i + j] = in_data1[j];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "acc[iacc] = (typename CONFIG_T::accum_t)biases[iacc];",
+            "Faulty Code": "acc[iacc] = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ARRAY_RESHAPE   variable=weights block factor=block_factor",
+            "Faulty Code": "#pragma HLS ARRAY_RESHAPE   variable=weights block factor=multfactor"
+        }
+    ]
+}

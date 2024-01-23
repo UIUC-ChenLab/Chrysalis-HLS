@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "edge_weights[ia] = arrays.edge_weights[iva];",
+            "Faulty Code": "#pragma HLS interface m_axi port=edge_weights offset=direct"
+        }
+    ]
+}

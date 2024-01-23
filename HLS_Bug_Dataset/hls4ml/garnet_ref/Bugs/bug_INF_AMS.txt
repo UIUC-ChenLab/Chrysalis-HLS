@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (iv == nvtx[0]) break;",
+            "Faulty Code": "if (iv != nvtx[0]) break;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "res_T res[CONFIG_T::n_vertices * CONFIG_T::n_out_features])",
+            "Faulty Code": "#pragma HLS INTERFACE port=res mode=ap_none"
+        }
+    ]
+}

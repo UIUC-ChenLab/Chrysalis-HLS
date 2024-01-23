@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "for (unsigned i_ih = 0; i_ih < CONFIG_T::in_height; i_ih++) {",
+            "Faulty Code": "for (unsigned i_ih = 1; i_ih < CONFIG_T::in_height; i_ih++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "pointwise_mult_buffer<data_T, res_T, CONFIG_T>(data.read(), res, weights, biases);",
+            "Faulty Code": "data_T tmp_data = data.read(); pointwise_mult_buffer<data_T, res_T, CONFIG_T>(tmp_data, res, weights, biases);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=mult complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=data cyclic factor=2"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void dense_latency(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_out],",
+            "Faulty Code": "void dense_latency(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_out] #pragma HLS INTERFACE port=res ap_none,"
+        }
+    ]
+}

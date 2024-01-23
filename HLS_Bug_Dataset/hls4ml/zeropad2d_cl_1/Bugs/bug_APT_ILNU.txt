@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "for (int j = 0; j < CONFIG_T::out_width; j++) {",
+            "Faulty Code": "#pragma HLS array_partition variable=res type=cyclic factor=4\n        for (int j = 0; j < CONFIG_T::out_width; j++) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int j = 0; j < CONFIG_T::pad_right; j++) {",
+            "Faulty Code": "for (int j = 0; j < CONFIG_T::pad_right; j++) {\n            #pragma HLS unroll factor=2"
+        }
+    ]
+}

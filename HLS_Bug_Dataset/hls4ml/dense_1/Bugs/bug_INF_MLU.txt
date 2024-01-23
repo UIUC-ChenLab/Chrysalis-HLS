@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int ir = 0; ir < rufactor; ir++) {",
+            "Faulty Code": "for (int ir = 0; ir <= rufactor; ir++) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i_pack = 0; i_pack < data_T::size; i_pack++) {",
+            "Faulty Code": "for (int i_pack = 0; i_pack <= data_T::size; i_pack++) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "auto datareg = CONFIG_T::slope * data[ii] + CONFIG_T::shift;",
+            "Faulty Code": "auto datareg; // Missing initialization"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "if (datareg > 1)",
+            "Faulty Code": "if ((int)datareg > 1) // Unintended sign extension if datareg is of a smaller signed type"
+        }
+    ]
+}

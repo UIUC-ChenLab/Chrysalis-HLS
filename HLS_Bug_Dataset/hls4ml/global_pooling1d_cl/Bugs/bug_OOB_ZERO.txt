@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "pool[jj] = data[jj * CONFIG_T::n_filt + ff];",
+            "Faulty Code": "pool[jj] = data[(jj + 1) * CONFIG_T::n_filt + ff];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "data_T pool[CONFIG_T::n_in];",
+            "Faulty Code": "data_T pool[CONFIG_T::n_in] = {0};"
+        }
+    ]
+}

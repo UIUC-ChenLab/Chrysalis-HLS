@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "typename CONFIG_T::table_t elu_table[CONFIG_T::table_size];",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=elu_table"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "out_data[j] = alpha * elu_table[index];",
+            "Faulty Code": "out_data[j] = alpha * elu_table[i + j];"
+        }
+    ]
+}

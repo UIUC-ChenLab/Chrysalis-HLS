@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i_in = 0; i_in < mult_n_in; i_in++) {",
+            "Faulty Code": "for (int i_in = 0; i_in <= mult_n_in; i_in++) {"
+        }
+    ]
+}

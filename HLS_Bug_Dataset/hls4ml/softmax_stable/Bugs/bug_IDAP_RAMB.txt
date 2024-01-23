@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS array_partition variable=exp_res complete",
+            "Faulty Code": "#pragma HLS interface m_axi port=exp_res depth=CONFIG_T::n_in"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS unroll",
+            "Faulty Code": "#pragma HLS interface axis port=exp_res"
+        }
+    ]
+}

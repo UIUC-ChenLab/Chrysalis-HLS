@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS array_partition variable=weights dim=3"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS LOOP_FLATTEN",
+            "Faulty Code": "#pragma HLS unroll factor=CONFIG_T::n_filt"
+        }
+    ]
+}

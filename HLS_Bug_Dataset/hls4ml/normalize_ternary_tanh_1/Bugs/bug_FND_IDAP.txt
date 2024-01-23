@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=threshold_hi complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=threshold_hi cyclic factor=4"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<data_T> &data",
+            "Faulty Code": "hls::stream<data_T> &data #pragma HLS INTERFACE mode=s_axilite port=data"
+        }
+    ]
+}

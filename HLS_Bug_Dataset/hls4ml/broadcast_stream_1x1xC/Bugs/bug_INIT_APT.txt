@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T out_data;",
+            "Faulty Code": "res_T out_data; // out_data is uninitialized here, should be initialized before use"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic"
+        }
+    ]
+}

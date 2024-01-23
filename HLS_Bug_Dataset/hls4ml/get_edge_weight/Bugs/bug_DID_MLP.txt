@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "return edge_weights_table[index];",
+            "Faulty Code": "#pragma HLS array_partition variable=edge_weights_table dim=2 complete\n    return edge_weights_table[index];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "return edge_weights_table[index];",
+            "Faulty Code": "#pragma HLS pipeline\n    return edge_weights_table[index];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int k = 0; k < input2_T::size; k++) {",
+            "Faulty Code": "for (int k = 0; k < input2_T::size - 1; k++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "out_data[input1_T::size + k] = in_data2[k];",
+            "Faulty Code": "out_data[input1_T::size + k] = (res_T::element_type)in_data2[k];"
+        }
+    ]
+}

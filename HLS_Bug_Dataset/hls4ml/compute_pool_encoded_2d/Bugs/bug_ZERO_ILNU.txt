@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if (!initialized) {",
+            "Faulty Code": "if (initialized) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned c = 0; c < CONFIG_T::n_filt; c++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (unsigned c = 0; c < CONFIG_T::n_filt; c++) {"
+        }
+    ]
+}

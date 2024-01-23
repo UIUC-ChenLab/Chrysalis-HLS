@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "ReadInputHeight:\nfor (unsigned i_ih = 0; i_ih < CONFIG_T::in_height; i_ih++) {\nReadInputWidth:\nfor (unsigned i_iw = 0; i_iw < CONFIG_T::in_width; i_iw++) {\n#pragma HLS LOOP_FLATTEN\nif (CONFIG_T::strategy == nnet::latency) {\n#pragma HLS PIPELINE II=CONFIG_T::reuse_factor\n}\nif (CONFIG_T::filt_height > 1) {\ncompute_depthwise_output_buffer_2d<data_T, res_T, CONFIG_T>(data.read(), line_buffer, res, weights, biases);\n} else {\ncompute_depthwise_output_buffer_1d<data_T, res_T, CONFIG_T>(data.read(), res, weights, biases);\n}\n}\n}",
+            "Faulty Code": "ReadInputHeight:\nfor (unsigned i_ih = 0; i_ih <= CONFIG_T::in_height; i_ih++) {\nReadInputWidth:\nfor (unsigned i_iw = 0; i_iw < CONFIG_T::in_width; i_iw++) {\n#pragma HLS LOOP_FLATTEN\nif (CONFIG_T::strategy == nnet::latency) {\n#pragma HLS PIPELINE II=CONFIG_T::reuse_factor\n}\nif (CONFIG_T::filt_height > 1) {\ncompute_depthwise_output_buffer_2d<data_T, res_T, CONFIG_T>(data.read(), line_buffer, res, weights, biases);\n} else {\ncompute_depthwise_output_buffer_1d<data_T, res_T, CONFIG_T>(data.read(), res, weights, biases);\n}\n}\n}"
+        }
+    ]
+}

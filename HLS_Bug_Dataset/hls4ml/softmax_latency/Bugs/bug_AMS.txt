@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void softmax_latency(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {",
+            "Faulty Code": "void softmax_latency(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {\n#pragma HLS interface port=data mode=s_axilite\n#pragma HLS interface port=res mode=ap_vld"
+        }
+    ]
+}

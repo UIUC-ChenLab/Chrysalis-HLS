@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "res_T out_data;",
+            "Faulty Code": "res_T out_data = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS interface m_axi port=res depth=32"
+        }
+    ]
+}

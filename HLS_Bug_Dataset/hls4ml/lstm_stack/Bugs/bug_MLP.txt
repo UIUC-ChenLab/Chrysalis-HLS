@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int i_in = 0; i_in < CONFIG_T::n_in / data_T::size; i_in++) {\n\tif (CONFIG_T::n_in / data_T::size > 1) {\n\t\t#pragma HLS PIPELINE\n\t}\n\tdata_T data_pack = data_stream.read();\n\tDataPack:\n\tfor (int i_pack = 0; i_pack < data_T::size; i_pack++) {\n\t\t#pragma HLS UNROLL\n\t\tdata[i_in * data_T::size + i_pack] = data_pack[i_pack];\n\t}\n}",
+            "Faulty Code": "for (int i_in = 0; i_in < CONFIG_T::n_in / data_T::size; i_in++) {\n\tif (CONFIG_T::n_in / data_T::size > 1) {\n\t\t#pragma HLS PIPELINE\n\t}\n\tdata_T data_pack = data_stream.read();\n\tDataPack:\n\tfor (int i_pack = 0; i_pack < data_T::size; i_pack++) {\n\t\t#pragma HLS PIPELINE\n\t\tdata[i_in * data_T::size + i_pack] = data_pack[i_pack];\n\t}\n}"
+        }
+    ]
+}

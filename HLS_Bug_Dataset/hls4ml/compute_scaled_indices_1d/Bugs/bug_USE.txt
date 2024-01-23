@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned wp_idx = w_idx * (data_T::size / CONFIG_T::n_chan);",
+            "Faulty Code": "int wp_idx = w_idx * (data_T::size / CONFIG_T::n_chan);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (w_index >= CONFIG_T::n_in * CONFIG_T::n_out) break;",
+            "Faulty Code": "if (w_index >= CONFIG_T::n_in * CONFIG_T::n_out) continue;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II=1 rewind",
+            "Faulty Code": "#pragma HLS PIPELINE II=block_factor rewind"
+        }
+    ]
+}

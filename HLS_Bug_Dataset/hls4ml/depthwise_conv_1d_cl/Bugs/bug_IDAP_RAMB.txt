@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable=data_window[i_out] depth=win_depth",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=data_window[i_out] type=complete"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "compute_depthwise_output_encoded<data_T, res_T, CONFIG_T>(data.read(), data_window, res, res_pack, outputs_ready, weights, biases, pixel_idx);",
+            "Faulty Code": "compute_depthwise_output_encoded<data_T, res_T, CONFIG_T>(data.read(), data_window, res, res_pack, outputs_ready, weights[i_out % CONFIG_T::n_chan], biases[i_out % CONFIG_T::n_chan], pixel_idx);"
+        }
+    ]
+}

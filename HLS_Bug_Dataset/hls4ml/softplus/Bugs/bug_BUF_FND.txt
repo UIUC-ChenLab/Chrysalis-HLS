@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "data_round = data[ii] * CONFIG_T::table_size / 16;",
+            "Faulty Code": "data_round = data[ii + CONFIG_T::n_in] * CONFIG_T::table_size / 16;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=softplus_table cyclic factor=5"
+        }
+    ]
+}

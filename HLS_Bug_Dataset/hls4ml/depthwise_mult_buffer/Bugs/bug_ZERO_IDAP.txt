@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "acc[iacc] = (typename CONFIG_T::accum_t)biases[iacc];",
+            "Faulty Code": "acc[iacc] = 0;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "data[id] = data_window[id].read();",
+            "Faulty Code": "data[id] = data_window[id];"
+        }
+    ]
+}

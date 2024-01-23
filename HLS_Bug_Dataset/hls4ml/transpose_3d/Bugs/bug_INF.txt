@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (idx[1] = 0; idx[1] < dims[1]; idx[1]++)",
+            "Faulty Code": "for (idx[1] = 0; idx[1] < dims[1]; idx[1]--)"
+        }
+    ]
+}

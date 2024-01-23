@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (datareg >= threshold[norm_index])",
+            "Faulty Code": "if (datareg >= threshold[ii])"
+        }
+    ]
+}

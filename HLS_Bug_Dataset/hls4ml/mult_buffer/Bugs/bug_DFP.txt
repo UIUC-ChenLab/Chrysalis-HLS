@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "InitData:\n    for (int id = 0; id < CONFIG_T::kernel_size * CONFIG_T::n_chan; id++) {\n        #pragma HLS UNROLL\n        data[id] = data_window[id].read();\n    }",
+            "Faulty Code": "InitData:\n    for (int id = 0; id < CONFIG_T::kernel_size * CONFIG_T::n_chan; id++) {\n        #pragma HLS dataflow\n        data[id] = data_window[id].read();\n    }"
+        }
+    ]
+}

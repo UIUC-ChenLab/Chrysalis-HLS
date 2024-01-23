@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "bool initialized = false;",
+            "Faulty Code": "bool initialized;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned outputs_ready = 0;",
+            "Faulty Code": "unsigned outputs_ready;"
+        }
+    ]
+}

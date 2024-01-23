@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "typename CONFIG_T::bias_t biases[CONFIG_T::n_filt]",
+            "Faulty Code": "typename CONFIG_T::bias_t biases[CONFIG_T::n_filt] = {0}"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=weights complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=weights bram"
+        }
+    ]
+}

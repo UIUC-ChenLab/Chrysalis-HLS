@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS INLINE region",
+            "Faulty Code": "#pragma HLS array_partition factor=3 dimension=1"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE region",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

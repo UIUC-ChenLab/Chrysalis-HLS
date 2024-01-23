@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=CONFIG_T::pixels complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=CONFIG_T::pixels dim=2 complete"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS STREAM variable=data_window[i_out] depth=win_depth",
+            "Faulty Code": "#pragma HLS INTERFACE port=data_window[i_out] mode=s_axilite"
+        }
+    ]
+}

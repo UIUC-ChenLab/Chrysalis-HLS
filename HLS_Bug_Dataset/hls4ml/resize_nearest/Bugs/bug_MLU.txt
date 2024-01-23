@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int k = 0; k < CONFIG_T::n_chan; k++) {",
+            "Faulty Code": "for (int k = 0; k < CONFIG_T::n_chan - 1; k++) {"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "typename CONFIG_T::inv_table_t inv_x = 1 / x;",
+            "Faulty Code": "typename CONFIG_T::inv_table_t inv_x = 1 / (int)x;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "Means<CONFIG_T, typename CONFIG_T::edge_weight_aggr_t> means_accum;",
+            "Faulty Code": "Means<CONFIG_T, typename CONFIG_T::edge_weight_aggr_t> means_accum = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "if (iv == nvtx) break;",
+            "Faulty Code": "if ((int)iv == nvtx) break;"
+        }
+    ]
+}

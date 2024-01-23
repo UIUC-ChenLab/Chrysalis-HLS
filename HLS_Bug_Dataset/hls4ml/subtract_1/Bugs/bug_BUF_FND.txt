@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "input1_T in_data1 = data1.read();",
+            "Faulty Code": "input2_T in_data1 = data1.read();"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition factor=3"
+        }
+    ]
+}

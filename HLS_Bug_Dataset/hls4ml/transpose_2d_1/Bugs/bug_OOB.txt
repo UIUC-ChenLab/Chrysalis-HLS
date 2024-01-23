@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out_data[j] = typename res_T::value_type(data_array[j * data_T::size + i]);",
+            "Faulty Code": "out_data[j] = typename res_T::value_type(data_array[j * res_T::size + i]);"
+        }
+    ]
+}

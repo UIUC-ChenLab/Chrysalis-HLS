@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (w_index >= CONFIG_T::n_in * CONFIG_T::n_out) break;",
+            "Faulty Code": "if (w_index > CONFIG_T::n_in * CONFIG_T::n_out) break;"
+        }
+    ]
+}

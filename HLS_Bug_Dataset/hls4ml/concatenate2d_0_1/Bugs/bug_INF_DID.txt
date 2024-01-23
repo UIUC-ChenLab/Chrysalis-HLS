@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < CONFIG_T::n_elem1_0; i++) {",
+            "Faulty Code": "for (int i = 0; i <= CONFIG_T::n_elem1_0; i++) {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=0"
+        }
+    ]
+}

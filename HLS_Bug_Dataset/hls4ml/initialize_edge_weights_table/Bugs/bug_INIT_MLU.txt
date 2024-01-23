@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "index_t index;",
+            "Faulty Code": "index_t index = 0;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned iw = 1; iw < table_size; ++iw)",
+            "Faulty Code": "for (unsigned iw = 1; iw <= table_size; ++iw)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out_data[k] = in_data1[k];",
+            "Faulty Code": "out_data[k] = in_data2[k];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

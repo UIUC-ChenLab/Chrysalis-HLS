@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS interface m_axi port=data1 offset=slave"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS interface bram port=res"
+        }
+    ]
+}

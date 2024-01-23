@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T res_pack;",
+            "Faulty Code": "res_T res_pack = 0;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "h_state[i_h_state] = 0;",
+            "Faulty Code": "h_state[i_h_state];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (CONFIG_T::strategy == nnet::latency) {",
+            "Faulty Code": "while (CONFIG_T::strategy == nnet::latency) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS INLINE region",
+            "Faulty Code": "#pragma HLS array_partition variable=weights factor=3 cyclic"
+        }
+    ]
+}

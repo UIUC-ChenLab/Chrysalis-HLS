@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "res[ii] = (data1[ii] + data2[ii]) / (res_T)2;",
+            "Faulty Code": "res[ii] = 0;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=res dim=2"
+        }
+    ]
+}

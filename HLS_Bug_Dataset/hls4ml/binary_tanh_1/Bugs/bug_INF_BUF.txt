@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < CONFIG_T::n_in / res_T::size; i++) {",
+            "Faulty Code": "for (int i = 0; i <= CONFIG_T::n_in / res_T::size; i++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (in_data[j] > 0)",
+            "Faulty Code": "if (in_data[res_T::size + j] > 0)"
+        }
+    ]
+}

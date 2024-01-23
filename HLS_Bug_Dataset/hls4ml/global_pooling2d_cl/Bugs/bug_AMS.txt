@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void global_pooling2d_cl(data_T data[CONFIG_T::in_height * CONFIG_T::in_width * CONFIG_T::n_filt], res_T res[CONFIG_T::n_filt]) {",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=data\n #pragma HLS INTERFACE ap_none port=res\n void global_pooling2d_cl(data_T data[CONFIG_T::in_height * CONFIG_T::in_width * CONFIG_T::n_filt], res_T res[CONFIG_T::n_filt]) {"
+        }
+    ]
+}

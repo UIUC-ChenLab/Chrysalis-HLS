@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS STREAM variable=depthwise_res depth=res_depth",
+            "Faulty Code": "#pragma HLS STREAM variable=depthwise_res"
+        }
+    ]
+}

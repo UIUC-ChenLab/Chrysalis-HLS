@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_RESHAPE variable=weights block factor=multiplier_limit",
+            "Faulty Code": "#pragma HLS ARRAY_RESHAPE variable=weights block factor=multiplier_limit_dim"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "data_T data_cache = data[row];",
+            "Faulty Code": "data_T data_cache = data[w];"
+        }
+    ]
+}

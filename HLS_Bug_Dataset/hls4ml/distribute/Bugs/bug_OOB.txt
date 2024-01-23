@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "unsigned const iva = iv * CONFIG_T::n_aggregators + ia;",
+            "Faulty Code": "unsigned const iva = iv * CONFIG_T::n_out_features + ia;"
+        }
+    ]
+}

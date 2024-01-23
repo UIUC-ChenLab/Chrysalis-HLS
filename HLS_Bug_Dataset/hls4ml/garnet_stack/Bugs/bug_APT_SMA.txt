@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=output_base complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=output_base cyclic"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void aggregate(data_T const data[CONFIG_T::n_vertices * CONFIG_T::n_in_features], nvtx_T const nvtx, arrays_T &arrays)",
+            "Faulty Code": "#pragma HLS INTERFACE port=arrays bram"
+        }
+    ]
+}

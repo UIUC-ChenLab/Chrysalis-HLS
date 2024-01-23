@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "out_index += outscale;",
+            "Faulty Code": "// out_index += outscale;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_RESHAPE variable=weights block factor=block_factor",
+            "Faulty Code": "#pragma HLS INTERFACE port=weights bram"
+        }
+    ]
+}

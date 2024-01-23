@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "pointwise_mult_buffer<data_T, res_T, CONFIG_T>(data.read(), res, weights, biases);",
+            "Faulty Code": "pointwise_mult_buffer<data_T, res_T, CONFIG_T>(data.read(), res, (typename CONFIG_T::weight_t)weights, biases);"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

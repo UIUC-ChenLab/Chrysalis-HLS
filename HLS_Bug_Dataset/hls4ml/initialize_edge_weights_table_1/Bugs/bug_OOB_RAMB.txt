@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned iw = 0; iw < table_size; ++iw) {",
+            "Faulty Code": "for (unsigned iw = 0; iw <= table_size; ++iw) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "edge_weights_table[iw] = std::exp(-v * v);",
+            "Faulty Code": "edge_weights_table[iw * 2] = std::exp(-v * v);"
+        }
+    ]
+}

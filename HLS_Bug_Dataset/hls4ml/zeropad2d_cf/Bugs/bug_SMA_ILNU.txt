@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "data_T res[CONFIG_T::n_chan * CONFIG_T::out_height * CONFIG_T::out_width]) {",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=res"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int k = 0; k < CONFIG_T::n_chan; k++) {",
+            "Faulty Code": "#pragma HLS UNROLL factor=2\n    for (int k = 0; k < CONFIG_T::n_chan; k++) {"
+        }
+    ]
+}

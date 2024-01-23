@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "void init_invert_table(typename CONFIG_T::inv_table_t table_out[CONFIG_T::table_size]) {",
+            "Faulty Code": "#pragma HLS array_partition dim=2 variable=table_out complete"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void init_invert_table(typename CONFIG_T::inv_table_t table_out[CONFIG_T::table_size]) {",
+            "Faulty Code": "#pragma HLS interface mode=s_axilite port=table_out"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "acc += arrays.edge_weight_mean[ia] * aggr;",
+            "Faulty Code": "acc += arrays.edge_weight_mean[ia + 1] * aggr;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=res factor=3"
+        }
+    ]
+}

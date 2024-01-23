@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "data_T in_data = data.read();",
+            "Faulty Code": "data_T in_data = data.read().range(DATA_T_BITWIDTH - 1, 0);"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=data"
+        }
+    ]
+}

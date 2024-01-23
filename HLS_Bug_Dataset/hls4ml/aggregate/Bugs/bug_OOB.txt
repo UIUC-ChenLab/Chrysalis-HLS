@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (iv == nvtx) break;",
+            "Faulty Code": "if (iv >= nvtx) break;"
+        }
+    ]
+}

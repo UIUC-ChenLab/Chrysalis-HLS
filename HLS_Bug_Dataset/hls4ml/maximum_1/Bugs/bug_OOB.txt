@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out_data[j] = (in_data1[j] > in_data2[j]) ? in_data1[j] : in_data2[j];",
+            "Faulty Code": "out_data[j+1] = (in_data1[j] > in_data2[j]) ? in_data1[j] : in_data2[j];"
+        }
+    ]
+}

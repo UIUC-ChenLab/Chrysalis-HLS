@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=mult complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=mult cyclic factor=3"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void multiply(hls::stream<input1_T> &data1, hls::stream<input2_T> &data2, hls::stream<res_T> &res) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=mult ap_none"
+        }
+    ]
+}

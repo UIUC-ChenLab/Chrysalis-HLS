@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int im = 0; im < block_factor; im++) {",
+            "Faulty Code": "for (int im = 0; im < block_factor - 1; im++) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_RESHAPE   variable=weights block factor=block_factor",
+            "Faulty Code": "#pragma HLS INTERFACE port=weights bram"
+        }
+    ]
+}

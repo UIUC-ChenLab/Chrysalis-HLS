@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "data_cache[ii] = data[ii];",
+            "Faulty Code": "data_cache[ii] = data[(ii + CONFIG_T::n_in/2) % CONFIG_T::n_in]; // wrong half"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "for (int jj = 0; jj < CONFIG_T::n_in; jj++) { #pragma HLS PIPELINE // MLP error"
+        }
+    ]
+}

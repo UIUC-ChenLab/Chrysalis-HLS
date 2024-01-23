@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL\nout_data[j] = in_data1[j] * in_data2[j];",
+            "Faulty Code": "#pragma HLS UNROLL factor=4\nfor (int k = 0; k < input1_T::size; k++) {\n#pragma HLS UNROLL\nout_data[j] = in_data1[j] * in_data2[j];\n}"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ARRAY_RESHAPE   variable=weights block factor=block_factor",
+            "Faulty Code": "#pragma HLS INTERFACE port=weights mode=m_axi depth=CONFIG_T::filt_width*CONFIG_T::n_chan*CONFIG_T::n_filt"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=biases complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=biases mode=ap_memory depth=1"
+        }
+    ]
+}

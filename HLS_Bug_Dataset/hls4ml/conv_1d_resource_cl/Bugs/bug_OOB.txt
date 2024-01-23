@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (i_in >= mult_n_in) { i_in = i_rf; }",
+            "Faulty Code": "if (i_in > mult_n_in) { i_in = i_rf; }"
+        }
+    ]
+}

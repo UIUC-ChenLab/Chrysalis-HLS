@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "res[j * CONFIG_T::n_out + i] = embeddings[data[j] * CONFIG_T::n_out + i];",
+            "Faulty Code": "res[j * CONFIG_T::n_out + i] = 0;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=res cyclic factor=3"
+        }
+    ]
+}

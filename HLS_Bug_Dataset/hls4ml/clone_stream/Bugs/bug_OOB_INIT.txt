@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out_data1[j] = in_data[j];",
+            "Faulty Code": "out_data1[j+1] = in_data[j];"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T out_data1;",
+            "Faulty Code": "res_T out_data1; out_data1[j] = in_data[j];"
+        }
+    ]
+}

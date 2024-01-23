@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned f = 0; f < CONFIG_T::pool_width; f++) {\n                    pool_window[f] = data_window[c * CONFIG_T::pool_width + f].read();\n                }",
+            "Faulty Code": "#pragma HLS unroll factor=2\n                for (unsigned f = 0; f < CONFIG_T::pool_width; f++) {\n                    pool_window[f] = data_window[c * CONFIG_T::pool_width + f].read();\n                }"
+        }
+    ]
+}

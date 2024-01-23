@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "data[i_in * data_T::size + i_pack] = data_pack[i_pack];",
+            "Faulty Code": "data[i_pack] = data_pack[i_pack]; // Error: Ignoring i_in leads to writing to the wrong buffer index"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=acc complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=acc dim=0 complete // Error: 'dim=0' is invalid since dim should be >= 1"
+        }
+    ]
+}

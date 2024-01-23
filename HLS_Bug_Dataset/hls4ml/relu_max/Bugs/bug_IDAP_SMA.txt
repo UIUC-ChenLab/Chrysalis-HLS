@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=data"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void relu_max(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {",
+            "Faulty Code": "void relu_max(data_T data, res_T res[CONFIG_T::n_in]) {"
+        }
+    ]
+}

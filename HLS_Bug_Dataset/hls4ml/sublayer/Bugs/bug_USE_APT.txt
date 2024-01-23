@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "if (ivv * unroll_factor >= nvtx)",
+            "Faulty Code": "if (ivv * unroll_factor > nvtx)"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=prev_output_base complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=prev_output_base cyclic factor=prev_layer_t::n_aggregators"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int ii = 0; ii < padded_width; ii += CONFIG_T::stride_width) { ... }",
+            "Faulty Code": "for (int ii = 0; ii != padded_width; ii += CONFIG_T::stride_width) { ... }"
+        }
+    ]
+}

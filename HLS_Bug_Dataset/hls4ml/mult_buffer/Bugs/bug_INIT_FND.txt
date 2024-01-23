@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "for (int id = 0; id < CONFIG_T::kernel_size * CONFIG_T::n_chan; id++) {\n        #pragma HLS UNROLL\n        data[id] = data_window[id].read();\n    }",
+            "Faulty Code": "for (int id = 0; id < CONFIG_T::kernel_size * CONFIG_T::n_chan; id++) {\n        #pragma HLS UNROLL\n        // Faulty: Missing data initialization\n    }"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = res complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = res cyclic factor=3"
+        }
+    ]
+}

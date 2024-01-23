@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "const unsigned sh_idx = pool_table_height[h_idx] * CONFIG_T::pool_width;",
+            "Faulty Code": "const unsigned sh_idx = pool_table_height[h_idx + 1] * CONFIG_T::pool_width;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE II=2"
+        }
+    ]
+}

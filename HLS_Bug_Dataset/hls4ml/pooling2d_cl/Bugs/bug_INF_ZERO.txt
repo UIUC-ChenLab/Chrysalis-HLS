@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int ii = 0; ii < padded_height; ii += CONFIG_T::stride_height) {",
+            "Faulty Code": "for (int ii = 0; ii <= padded_height; ii += CONFIG_T::stride_height) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "data_T rescale = static_cast<data_T>(CONFIG_T::pool_height) * static_cast<data_T>(CONFIG_T::pool_width) / img_overlap;",
+            "Faulty Code": "data_T rescale = 0;"
+        }
+    ]
+}

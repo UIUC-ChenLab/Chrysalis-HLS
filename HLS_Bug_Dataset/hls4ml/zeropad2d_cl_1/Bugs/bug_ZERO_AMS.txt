@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "fill_zero<res_T, CONFIG_T>(res);",
+            "Faulty Code": "res_T tmp = 0; res.write(tmp);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void zeropad2d_cl(hls::stream<data_T> &data, hls::stream<res_T> &res) {",
+            "Faulty Code": "void zeropad2d_cl(hls::stream<data_T> &data, hls::stream<res_T> &res) { #pragma HLS INTERFACE port=res mode=scalar}"
+        }
+    ]
+}

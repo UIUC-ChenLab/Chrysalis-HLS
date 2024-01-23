@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "res[ires] = CONFIG_T::template product<data_T, typename CONFIG_T::scale_t>::product(data[ires], scale[ires]) + bias[ires];",
+            "Faulty Code": "res[ires] = (res_T)(CONFIG_T::template product<data_T, typename CONFIG_T::scale_t>::product(data[ires], scale[ires])) + bias[ires];"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=scale complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=scale cyclic"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int iloop = 0; iloop < CONFIG_T::n_sequence; iloop++)",
+            "Faulty Code": "for (int iloop = 0; iloop <= CONFIG_T::n_sequence; iloop++)"
+        }
+    ]
+}

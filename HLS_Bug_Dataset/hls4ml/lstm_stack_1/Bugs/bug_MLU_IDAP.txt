@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int iacc = 0; iacc < CONFIG_T::n_state; iacc++) {",
+            "Faulty Code": "for (int iacc = 0; iacc < CONFIG_T::n_state - 1; iacc++) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=h_newstate complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=h_newstate cyclic factor=2"
+        }
+    ]
+}

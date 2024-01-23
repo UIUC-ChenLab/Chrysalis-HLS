@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "acc[i_acc] = (typename CONFIG_T::accum_t)biases[i_acc];",
+            "Faulty Code": "acc[i_acc] = biases[i_acc];"
+        }
+    ]
+}

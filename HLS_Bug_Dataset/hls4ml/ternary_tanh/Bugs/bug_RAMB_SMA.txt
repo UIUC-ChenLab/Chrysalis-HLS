@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "datareg = 2 * data[ii];",
+            "Faulty Code": "datareg = 2 * data[i + j]; // Assuming loop variables i, j exist and are incorrectly used"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE port=data bram"
+        }
+    ]
+}

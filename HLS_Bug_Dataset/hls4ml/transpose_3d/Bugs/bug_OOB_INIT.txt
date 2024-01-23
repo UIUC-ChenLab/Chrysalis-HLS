@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "data_t[idx_t[0] * dims_t[1] * dims_t[2] + idx_t[1] * dims_t[2] + idx_t[2]] =",
+            "Faulty Code": "data_t[idx_t[0] * dims_t[1] * dims_t[2] + idx_t[1] * dims_t[2] + idx_t[2] + 1] ="
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned dims_t[3];",
+            "Faulty Code": "unsigned dims_t[3]; // Missing initialization may lead to using garbage values"
+        }
+    ]
+}

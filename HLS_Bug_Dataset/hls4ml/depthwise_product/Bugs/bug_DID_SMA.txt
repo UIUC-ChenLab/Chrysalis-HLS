@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=mult complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=mult dim=3"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void depthwise_product(data_T data[CONFIG_T::kernel_size * CONFIG_T::n_chan], res_T res[CONFIG_T::n_chan], ...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=acc bram"
+        }
+    ]
+}

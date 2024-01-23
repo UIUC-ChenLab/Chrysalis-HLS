@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int iacc = 0; iacc < nout; iacc++)",
+            "Faulty Code": "for (int iacc = 0; iacc < nout-1; iacc++)"
+        }
+    ]
+}

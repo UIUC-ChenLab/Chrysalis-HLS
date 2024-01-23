@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "if (ivv * unroll_factor >= nvtx)",
+            "Faulty Code": "if ((int)(ivv * unroll_factor) >= nvtx)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE\n            #pragma HLS PIPELINE"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS array_partition variable=exp_res complete",
+            "Faulty Code": "#pragma HLS array_partition variable=exp_res dim=2"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II=ii",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

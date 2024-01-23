@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void kernel_shift_1d(const data_T &in_elem,\n typename data_T::value_type kernel_window[CONFIG_T::filt_width * CONFIG_T::n_chan]) {",
+            "Faulty Code": "#pragma HLS interface port=in_elem bram\nvoid kernel_shift_1d(const data_T &in_elem,\n typename data_T::value_type kernel_window[CONFIG_T::filt_width * CONFIG_T::n_chan]) {"
+        }
+    ]
+}

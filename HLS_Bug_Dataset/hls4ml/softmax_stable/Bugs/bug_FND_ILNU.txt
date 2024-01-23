@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS array_partition variable=exp_res complete",
+            "Faulty Code": "#pragma HLS array_partition variable=exp_res factor=3"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS unroll",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

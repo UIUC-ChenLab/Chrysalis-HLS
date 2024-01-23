@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=data1 offset=slave"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void multiply(input1_T data1[CONFIG_T::n_elem], input2_T data2[CONFIG_T::n_elem], res_T res[CONFIG_T::n_elem]) {",
+            "Faulty Code": "void multiply(input1_T data1[CONFIG_T::n_elem], input2_T data2, res_T res[CONFIG_T::n_elem]) {"
+        }
+    ]
+}

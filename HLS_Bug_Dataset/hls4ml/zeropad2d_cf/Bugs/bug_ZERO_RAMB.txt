@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "*(res++) = 0;",
+            "Faulty Code": "*(res++) = some_nonzero_value;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "*(res++) = (res_T) * (data++);",
+            "Faulty Code": "*(res) = (res_T) * (data[i * CONFIG_T::in_width + j]);"
+        }
+    ]
+}

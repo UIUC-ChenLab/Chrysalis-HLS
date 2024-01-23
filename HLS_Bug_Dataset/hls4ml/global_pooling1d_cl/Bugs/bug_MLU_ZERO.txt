@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int jj = 0; jj < CONFIG_T::n_in; jj++) {",
+            "Faulty Code": "for (int jj = 0; jj < CONFIG_T::n_in - 1; jj++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "res[ff] = pool_op<data_T, CONFIG_T::n_in, CONFIG_T::pool_op>(pool);",
+            "Faulty Code": "res[ff] = 0;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned k = 0; k < CONFIG_T::n_out; k++) {",
+            "Faulty Code": "for (unsigned k = 0; k <= CONFIG_T::n_out; k++) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=mult factor=2 cyclic"
+        }
+    ]
+}

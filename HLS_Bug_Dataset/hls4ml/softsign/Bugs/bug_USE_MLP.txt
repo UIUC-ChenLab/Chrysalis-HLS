@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "data_round = data[ii] * CONFIG_T::table_size / 16;",
+            "Faulty Code": "data_round = data[ii] << (CONFIG_T::table_size / 16);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "for (int jj = 0; jj < CONFIG_T::n_in; jj++) { #pragma HLS PIPELINE"
+        }
+    ]
+}

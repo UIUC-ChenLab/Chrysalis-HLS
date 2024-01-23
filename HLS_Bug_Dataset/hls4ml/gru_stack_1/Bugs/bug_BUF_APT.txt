@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "h_state[i_h_state] = 0;",
+            "Faulty Code": "h_newstate[i_h_state] = 0;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=tmpres complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=tmpres cyclic factor=2"
+        }
+    ]
+}

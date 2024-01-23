@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned i_iw = 0; i_iw < CONFIG_T::in_width / (pack_factor); i_iw++) {",
+            "Faulty Code": "for (unsigned i_iw = 0; i_iw <= CONFIG_T::in_width / (pack_factor); i_iw++) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS STREAM variable=data_window[i_out] depth=win_depth",
+            "Faulty Code": "#pragma HLS STREAM variable=data_window[i_out] depth=win_depth-1"
+        }
+    ]
+}

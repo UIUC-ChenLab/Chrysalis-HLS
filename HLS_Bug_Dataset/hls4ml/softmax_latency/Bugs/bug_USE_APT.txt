@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned x = softmax_idx_from_real_val<data_T, CONFIG_T>(data[i]);",
+            "Faulty Code": "int x = softmax_idx_from_real_val<data_T, CONFIG_T>(data[i]);"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS array_partition variable=exp_res complete",
+            "Faulty Code": "#pragma HLS array_partition variable=exp_res type=cyclic factor=2"
+        }
+    ]
+}

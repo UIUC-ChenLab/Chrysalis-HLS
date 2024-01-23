@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "outputs_ready = 0;",
+            "Faulty Code": "// outputs_ready = 0; // Uninitialized variable error by commenting out the initialization"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "data[id] = data_window[id].read();",
+            "Faulty Code": "// data[id] = data_window[id].read(); // IDAP error by not reading data from the stream"
+        }
+    ]
+}

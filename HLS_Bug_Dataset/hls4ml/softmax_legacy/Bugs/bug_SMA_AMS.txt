@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void softmax_legacy(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=data"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "res[ii] = (res_T)invert_table[exp_res_index];",
+            "Faulty Code": "#pragma HLS INTERFACE s_axilite port=res"
+        }
+    ]
+}

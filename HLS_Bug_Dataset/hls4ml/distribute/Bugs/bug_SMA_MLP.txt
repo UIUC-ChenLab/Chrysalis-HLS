@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void distribute(nvtx_T const nvtx, arrays_T const &arrays, res_T res[CONFIG_T::n_vertices * CONFIG_T::n_out_features]) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=res bram"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE inside Aggregators2 loop"
+        }
+    ]
+}

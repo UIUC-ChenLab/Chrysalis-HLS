@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "res[res_idx] = data2[data_idx];",
+            "Faulty Code": "res[res_idx] = data1[data_idx];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int jj = 0; jj < CONFIG_T::n_elem1_1; jj++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (int jj = 0; jj < CONFIG_T::n_elem1_1; jj++) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < CONFIG_T::n_elem / input1_T::size; i++) {",
+            "Faulty Code": "for (int i = 0; ; i++) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "out_data[j] = (in_data1[j] + in_data2[j]) / (typename res_T::value_type)2;",
+            "Faulty Code": "out_data[i] = (in_data1[i] + in_data2[i]) / (typename res_T::value_type)2;"
+        }
+    ]
+}

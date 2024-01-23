@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE recursive",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "res_stream.write(res_pack);",
+            "Faulty Code": "#pragma HLS INTERFACE mode=s_axilite port=res_stream"
+        }
+    ]
+}

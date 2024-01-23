@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=out_data dim=1"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "res.write(out_data);",
+            "Faulty Code": "res.write(out_data[i]);"
+        }
+    ]
+}

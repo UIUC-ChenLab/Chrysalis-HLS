@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_int<2> cache;",
+            "Faulty Code": "ap_int<2> cache = 0;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::n_in; ii++) {",
+            "Faulty Code": "for (int ii = 0; ii <= CONFIG_T::n_in; ii++) {"
+        }
+    ]
+}

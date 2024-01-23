@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "compute_depthwise_output_buffer_1d<data_T, res_T, CONFIG_T>(data.read(), res, weights, biases);",
+            "Faulty Code": "compute_depthwise_output_buffer_1d<data_T, res_T, CONFIG_T>(data.read(), res, weights[i_iw], biases);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void depthwise_conv_1d_buffer_cl(hls::stream<data_T> &data, hls::stream<res_T> &res, ...)",
+            "Faulty Code": "#pragma HLS INTERFACE port=weights bram"
+        }
+    ]
+}

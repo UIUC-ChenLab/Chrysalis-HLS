@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pool complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=pool complete dim=3"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void average(hls::stream<input1_T> &data1, hls::stream<input2_T> &data2, hls::stream<res_T> &res)",
+            "Faulty Code": "#pragma HLS INTERFACE port=data1 bram"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int ires = 0; ires < CONFIG_T::n_in; ires++) {",
+            "Faulty Code": "for (int ires = 0; ires < CONFIG_T::n_in - 1; ires++) {"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

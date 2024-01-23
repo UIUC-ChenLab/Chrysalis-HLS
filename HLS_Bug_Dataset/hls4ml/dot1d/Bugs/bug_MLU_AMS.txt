@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=CONFIG_T::n_in-1"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=mult complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=mult complete dim=0"
+        }
+    ]
+}

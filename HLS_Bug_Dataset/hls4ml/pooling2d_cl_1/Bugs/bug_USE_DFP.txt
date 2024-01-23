@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "if (filt_mask == CONFIG_T::pool_height * CONFIG_T::pool_width) {",
+            "Faulty Code": "if (filt_mask == CONFIG_T::pool_height * CONFIG_T::pool_width - 1) {"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

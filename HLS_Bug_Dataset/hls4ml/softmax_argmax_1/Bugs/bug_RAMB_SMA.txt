@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS interface m_axi port=in_data"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<data_T> &data",
+            "Faulty Code": "data_T data[CONFIG_T::n_in]"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=biases complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=biases cyclic factor=2"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS ALLOCATION operation instances=mul limit=CONFIG_T::multiplier_limit",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=weights"
+        }
+    ]
+}

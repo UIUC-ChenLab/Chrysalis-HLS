@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (index > CONFIG_T::table_size - 1)\n            index = CONFIG_T::table_size - 1;",
+            "Faulty Code": "if (index >= CONFIG_T::table_size)\n            index = CONFIG_T::table_size;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "int index;",
+            "Faulty Code": "int index = 8 * CONFIG_T::table_size / 16;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void zeropad2d_cl(hls::stream<data_T> &data, hls::stream<res_T> &res) { ... }",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=data\n#pragma HLS interface mode=s_axilite port=res\nvoid zeropad2d_cl(hls::stream<data_T> &data, hls::stream<res_T> &res) { ... }"
+        }
+    ]
+}

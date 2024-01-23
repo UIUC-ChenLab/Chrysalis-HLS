@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int j = 0; j < data_T::size; j++) {",
+            "Faulty Code": "for (int j = 0; j < data_T::size - 1; j++) {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=data_array complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=data_array complete dim=2"
+        }
+    ]
+}

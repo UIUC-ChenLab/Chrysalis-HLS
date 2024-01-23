@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS STREAM variable=data_window[i_out] depth=win_depth",
+            "Faulty Code": "#pragma HLS STREAM variable=data_window dim=2 depth=win_depth"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void pooling1d_encoded_cl(hls::stream<data_T> &data, hls::stream<res_T> &res) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=data bram"
+        }
+    ]
+}

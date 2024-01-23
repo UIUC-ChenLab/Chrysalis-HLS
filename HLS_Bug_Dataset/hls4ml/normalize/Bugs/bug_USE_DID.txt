@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int norm_index = ires % CONFIG_T::n_filt;",
+            "Faulty Code": "int norm_index = ires % CONFIG_T::n_scale_bias;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=scale complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=scale dim=2"
+        }
+    ]
+}

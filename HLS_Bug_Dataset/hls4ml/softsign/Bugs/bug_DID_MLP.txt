@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "int data_round;",
+            "Faulty Code": "#pragma HLS array_partition variable=softsign_table dim=2 complete"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS pipeline II=2"
+        }
+    ]
+}

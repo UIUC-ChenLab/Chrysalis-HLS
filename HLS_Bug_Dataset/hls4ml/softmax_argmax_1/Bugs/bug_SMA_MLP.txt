@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void softmax_argmax(hls::stream<data_T> &data, hls::stream<res_T> &res) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=data bram"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int i = 0; i < res_T::size; i++) {",
+            "Faulty Code": "#pragma HLS PIPELINE"
+        }
+    ]
+}

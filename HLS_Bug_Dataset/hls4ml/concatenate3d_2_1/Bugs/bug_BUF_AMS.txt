@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "input1_T in_data1 = data1.read();",
+            "Faulty Code": "input1_T in_data1 = data2.read();"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "PRAGMA_DATA_PACK(out_data)",
+            "Faulty Code": "#pragma HLS INTERFACE port=out_data ap_none"
+        }
+    ]
+}

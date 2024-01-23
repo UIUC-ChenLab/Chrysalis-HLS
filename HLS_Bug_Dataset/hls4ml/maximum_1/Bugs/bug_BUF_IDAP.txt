@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "input1_T in_data1 = data1.read();",
+            "Faulty Code": "input1_T in_data1 = data2.read();"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=data1"
+        }
+    ]
+}

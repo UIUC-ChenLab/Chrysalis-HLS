@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "#ifdef __SYNTHESIS__\n    bool initialized = false;\n    unsigned pool_table_height[CONFIG_T::in_height];\n    unsigned pool_table_width[CONFIG_T::in_width];\n#else\n    static bool initialized = false;\n    static unsigned pool_table_height[CONFIG_T::in_height];\n    static unsigned pool_table_width[CONFIG_T::in_width];\n#endif",
+            "Faulty Code": "#ifdef __SYNTHESIS__\n    bool initialized;\n    unsigned pool_table_height[CONFIG_T::in_height];\n    unsigned pool_table_width[CONFIG_T::in_width];\n#else\n    static bool initialized;\n    static unsigned pool_table_height[CONFIG_T::in_height];\n    static unsigned pool_table_width[CONFIG_T::in_width];\n#endif"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pool_window complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=pool_window mode=ap_none"
+        }
+    ]
+}

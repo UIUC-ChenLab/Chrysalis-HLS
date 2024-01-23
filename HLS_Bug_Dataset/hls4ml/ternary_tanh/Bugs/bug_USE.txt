@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "datareg = 2 * data[ii];",
+            "Faulty Code": "datareg = 2 * (char)data[ii];"
+        }
+    ]
+}

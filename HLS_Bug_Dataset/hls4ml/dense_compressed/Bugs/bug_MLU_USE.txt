@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned im = 0; im < multiplier_limit; im++) {",
+            "Faulty Code": "for (unsigned im = 0; im <= multiplier_limit; im++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "if (k == index)",
+            "Faulty Code": "if ((int)k == index)"
+        }
+    ]
+}

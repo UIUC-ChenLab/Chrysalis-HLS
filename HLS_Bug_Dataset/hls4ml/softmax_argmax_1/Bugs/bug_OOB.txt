@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "typename data_T::value_type maximum = in_data[0];",
+            "Faulty Code": "typename data_T::value_type maximum = in_data[res_T::size];"
+        }
+    ]
+}

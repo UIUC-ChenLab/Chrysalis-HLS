@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "for (unsigned i_pack = 0; i_pack < res_T::size; i_pack++) {",
+            "Faulty Code": "for (unsigned i_pack = 0; i_pack < data_T::size; i_pack++) {"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

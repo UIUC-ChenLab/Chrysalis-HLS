@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned ir = 0; ir < rufactor; ir++) {",
+            "Faulty Code": "for (unsigned ir = 0; ir <= rufactor; ir++) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS ARRAY_RESHAPE   variable=weights block factor=multiplier_limit",
+            "Faulty Code": "#pragma HLS ARRAY_RESHAPE   variable=weights cyclic factor=multiplier_limit"
+        }
+    ]
+}

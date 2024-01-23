@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int ll = 0; ll < CONFIG_T::stride_width; ll++) {",
+            "Faulty Code": "for (int ll = 0; ll < CONFIG_T::stride_width - 1; ll++) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=res1"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void clone_stream(hls::stream<data_T> &data, hls::stream<res_T> &res1, hls::stream<res_T> &res2, hls::stream<res_T> &res3) {",
+            "Faulty Code": "void clone_stream(hls::stream<data_T> &data, res_T res1[N], res_T res2[N], res_T res3[N]) {"
+        }
+    ]
+}

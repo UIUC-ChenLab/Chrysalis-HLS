@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "static typename data_T::value_type kernel_data[CONFIG_T::filt_width * CONFIG_T::n_chan];",
+            "Faulty Code": "typename data_T::value_type kernel_data[CONFIG_T::filt_width * CONFIG_T::n_chan];"
+        }
+    ]
+}

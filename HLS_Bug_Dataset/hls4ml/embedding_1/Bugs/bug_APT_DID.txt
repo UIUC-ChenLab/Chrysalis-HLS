@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "embeddings[in_data[j] * CONFIG_T::n_out + i]",
+            "Faulty Code": "#pragma HLS array_partition variable=embeddings dim=3"
+        }
+    ]
+}

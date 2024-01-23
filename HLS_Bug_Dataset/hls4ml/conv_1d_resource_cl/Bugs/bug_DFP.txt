@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (unsigned i_rf = 0; i_rf < CONFIG_T::reuse_factor; i_rf++) {",
+            "Faulty Code": "#pragma HLS dataflow\n        for (unsigned i_rf = 0; i_rf < CONFIG_T::reuse_factor; i_rf++) {"
+        }
+    ]
+}

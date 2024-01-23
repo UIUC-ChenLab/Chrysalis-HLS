@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void copy_data(std::vector<src_T> src, hls::stream<dst_T> &dst) {",
+            "Faulty Code": "#pragma HLS interface m_axi port=src offset=slave"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void copy_data(std::vector<src_T> src, hls::stream<dst_T> &dst) {",
+            "Faulty Code": "#pragma HLS interface port=dst mode=ap_none"
+        }
+    ]
+}

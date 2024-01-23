@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "res[idx] = (res_T)1;",
+            "Faulty Code": "res[CONFIG_T::n_in] = (res_T)1;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE\n        #pragma HLS PIPELINE"
+        }
+    ]
+}

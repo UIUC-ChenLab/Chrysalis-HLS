@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_RESHAPE   variable=weights block factor=multiplier_limit",
+            "Faulty Code": "#pragma HLS ARRAY_RESHAPE   variable=weights block factor=CONFIG_T::n_in"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void dense_compressed(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_out], ...",
+            "Faulty Code": "#pragma HLS INTERFACE port=data bram"
+        }
+    ]
+}

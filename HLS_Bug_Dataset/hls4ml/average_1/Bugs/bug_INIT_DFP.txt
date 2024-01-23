@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T out_data;",
+            "Faulty Code": "res_T out_data = in_data1; // Incorrect initialization, as out_data should be a separate instance, not a copy of in_data1"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS dataflow // Incorrect placement of dataflow pragma"
+        }
+    ]
+}

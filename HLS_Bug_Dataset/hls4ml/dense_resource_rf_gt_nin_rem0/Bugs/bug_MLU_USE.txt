@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int im = 0; im < block_factor; im++) {",
+            "Faulty Code": "for (int im = 1; im < block_factor; im++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "acc[iacc] = (typename CONFIG_T::accum_t)biases[iacc];",
+            "Faulty Code": "acc[iacc] = biases[iacc];"
+        }
+    ]
+}

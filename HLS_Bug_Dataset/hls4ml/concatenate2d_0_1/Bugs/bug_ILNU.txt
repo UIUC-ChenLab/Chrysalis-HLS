@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int k = 0; k < input1_T::size; k++) {\n            #pragma HLS UNROLL\n            out_data[k] = in_data1[k];\n        }",
+            "Faulty Code": "for (int i = 0; i < CONFIG_T::n_elem1_0; i++) {\n        #pragma HLS UNROLL\n        #pragma HLS PIPELINE II=1\n        input1_T in_data1 = data1.read();\n        res_T out_data;\n        PRAGMA_DATA_PACK(out_data)\n    ConcatPackInput1:\n        for (int k = 0; k < input1_T::size; k++) {\n            out_data[k] = in_data1[k];\n        }\n        res.write(out_data);\n    }"
+        }
+    ]
+}

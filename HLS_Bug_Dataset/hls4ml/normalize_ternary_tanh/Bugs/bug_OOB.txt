@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (datareg > threshold_hi[norm_index])\n cache = 1;\n else if (datareg <= threshold_lo[norm_index])\n cache = -1;",
+            "Faulty Code": "if (datareg > threshold_hi[norm_index+1])\n cache = 1;\n else if (datareg <= threshold_lo[norm_index+1])\n cache = -1;"
+        }
+    ]
+}

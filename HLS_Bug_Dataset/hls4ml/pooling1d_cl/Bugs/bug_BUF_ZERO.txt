@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "pool[jj] = data[(ii + jj - CONFIG_T::pad_left) * CONFIG_T::n_filt + ff];",
+            "Faulty Code": "pool[jj] = data[(ii + jj) * CONFIG_T::n_filt + ff];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "res[(ii / CONFIG_T::stride_width) * CONFIG_T::n_filt + ff] *= rescale;",
+            "Faulty Code": "res[(ii / CONFIG_T::stride_width) * CONFIG_T::n_filt + ff] = 0;"
+        }
+    ]
+}

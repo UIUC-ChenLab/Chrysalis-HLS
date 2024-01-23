@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "compute_output_buffer_1d<data_T, res_T, CONFIG_T>(data.read(), res, weights, biases);",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo\ncompute_output_buffer_1d<data_T, res_T, CONFIG_T>(data.read(), res, weights, biases);"
+        }
+    ]
+}

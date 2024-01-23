@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "res[ii] = (data1[ii] + data2[ii]) / (res_T)2;",
+            "Faulty Code": "res[ii] = 0;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=data1\n#pragma HLS INTERFACE mode=ap_fifo port=data2"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II=1 rewind",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=data_buf complete dim=0",
+            "Faulty Code": "#pragma HLS interface m_axi port=data_buf offset=slave bundle=gmem0"
+        }
+    ]
+}

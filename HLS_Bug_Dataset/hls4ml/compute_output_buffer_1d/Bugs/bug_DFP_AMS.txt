@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE recursive",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<res_T> &res_stream",
+            "Faulty Code": "hls::stream<res_T> &res_stream #pragma HLS INTERFACE port=res_stream ap_none"
+        }
+    ]
+}

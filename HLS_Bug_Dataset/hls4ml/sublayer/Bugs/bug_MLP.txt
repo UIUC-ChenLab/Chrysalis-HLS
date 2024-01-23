@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "VerticesOuter:\n    for (unsigned ivv = 0; ivv < current_layer_t::reuse_factor; ++ivv) {\n        #pragma HLS PIPELINE",
+            "Faulty Code": "VerticesOuter:\n    for (unsigned ivv = 0; ivv < current_layer_t::reuse_factor; ++ivv) {\n        #pragma HLS PIPELINE\n\n    VerticesInner:\n        for (unsigned ir = 0; ir < unroll_factor; ++ir) {\n            #pragma HLS PIPELINE"
+        }
+    ]
+}

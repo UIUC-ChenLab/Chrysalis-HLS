@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned i_iw = 0; i_iw < CONFIG_T::in_width; i_iw++) {",
+            "Faulty Code": "for (unsigned i_iw = 0; i_iw <= CONFIG_T::in_width; i_iw++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "compute_output_buffer_1d<data_T, res_T, CONFIG_T>(data.read(), res, weights, biases);",
+            "Faulty Code": "compute_output_buffer_1d<data_T, res_T, CONFIG_T>(data.read(), res, weights + CONFIG_T::filt_width, biases);"
+        }
+    ]
+}

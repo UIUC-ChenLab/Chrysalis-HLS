@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "out_data[j] = in_data1[j] - in_data2[j];",
+            "Faulty Code": "out_data[j] = (int)in_data1[j] - (int)in_data2[j];"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=out_data type=cyclic factor=2"
+        }
+    ]
+}

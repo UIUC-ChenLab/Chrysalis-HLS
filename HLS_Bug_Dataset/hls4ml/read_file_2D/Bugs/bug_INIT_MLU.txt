@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "float newval;",
+            "Faulty Code": "float newval = 0;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int jj = 0; jj < ncols; jj++) {",
+            "Faulty Code": "for (int jj = 0; jj < ncols - 1; jj++) {"
+        }
+    ]
+}

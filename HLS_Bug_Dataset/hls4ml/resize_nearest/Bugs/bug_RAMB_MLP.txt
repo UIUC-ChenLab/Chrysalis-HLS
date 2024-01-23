@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=image offset=slave // Incorrect because it does not specify burst mode"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE inside the 'for (int k = 0; k < CONFIG_T::n_chan; k++)' loop // Incorrect because it would be a pipeline pragma inside another pipeline region"
+        }
+    ]
+}

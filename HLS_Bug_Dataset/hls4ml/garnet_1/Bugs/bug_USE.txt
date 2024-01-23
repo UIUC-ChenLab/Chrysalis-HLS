@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "res_T acc = output_transform_biases.output_biases[io];",
+            "Faulty Code": "int acc = output_transform_biases.output_biases[io];"
+        }
+    ]
+}

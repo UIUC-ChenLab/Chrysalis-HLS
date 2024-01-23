@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "aggregated_features[iap] = 0.;",
+            "Faulty Code": "//aggregated_features[iap] = 0.;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (unsigned iv = 0; iv < CONFIG_T::n_vertices; ++iv) {",
+            "Faulty Code": "for (unsigned iv = 0; iv < CONFIG_T::n_vertices; ++iv) { #pragma HLS pipeline"
+        }
+    ]
+}

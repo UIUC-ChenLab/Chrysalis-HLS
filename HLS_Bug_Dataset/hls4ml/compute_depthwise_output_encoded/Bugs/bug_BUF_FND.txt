@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "data_window[f * CONFIG_T::n_chan + c].write(in_elem[p * CONFIG_T::n_chan + c]);",
+            "Faulty Code": "data_window[f * CONFIG_T::n_chan + c].write(in_elem[f * CONFIG_T::n_chan + c]);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS PIPELINE II=CONFIG_T::n_chan"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "res_stream.write(res_pack);",
+            "Faulty Code": "res_stream.read(res_pack);"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE II=1 rewind",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=res_stream"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i_mult = 0; i_mult < CONFIG_T::n_in; i_mult++)",
+            "Faulty Code": "for (int i_mult = 0; ; i_mult++)"
+        }
+    ]
+}

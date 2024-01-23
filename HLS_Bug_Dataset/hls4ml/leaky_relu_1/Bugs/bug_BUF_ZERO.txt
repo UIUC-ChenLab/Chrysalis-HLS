@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "data_T in_data = data.read();",
+            "Faulty Code": "res_T out_data = data.read();"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "res_T out_data;",
+            "Faulty Code": "res_T out_data = 0;"
+        }
+    ]
+}

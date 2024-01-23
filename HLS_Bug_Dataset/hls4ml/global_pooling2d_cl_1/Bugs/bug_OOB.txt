@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "res_pack[i_pack] = data_window[i_pack];",
+            "Faulty Code": "res_pack[i_pack] = data_window[i_pack + 1];"
+        }
+    ]
+}

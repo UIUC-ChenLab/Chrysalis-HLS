@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out_data[input1_T::size + k] = in_data2[k];",
+            "Faulty Code": "out_data[input1_T::size + k + 1] = in_data2[k];"
+        }
+    ]
+}

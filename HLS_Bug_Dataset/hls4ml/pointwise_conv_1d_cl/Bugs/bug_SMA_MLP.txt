@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS INLINE region",
+            "Faulty Code": "#pragma HLS INTERFACE port=data bram"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "if (CONFIG_T::strategy == nnet::latency) {",
+            "Faulty Code": "if (CONFIG_T::strategy == nnet::latency) { #pragma HLS pipeline"
+        }
+    ]
+}

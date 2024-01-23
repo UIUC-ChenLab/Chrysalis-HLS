@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < CONFIG_T::n_elem / input1_T::size; i++) {",
+            "Faulty Code": "for (int i = 0; i <= CONFIG_T::n_elem / input1_T::size; i++) {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=res_out complete dim = 0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=res_out complete dim = 1"
+        }
+    ]
+}

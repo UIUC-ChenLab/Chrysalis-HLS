@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out_data[k] = in_data1[k];",
+            "Faulty Code": "out_data[k+1] = in_data1[k];"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < CONFIG_T::n_elem1_0; i++) {",
+            "Faulty Code": "for (int i = 0; i <= CONFIG_T::n_elem1_0; i++) {"
+        }
+    ]
+}

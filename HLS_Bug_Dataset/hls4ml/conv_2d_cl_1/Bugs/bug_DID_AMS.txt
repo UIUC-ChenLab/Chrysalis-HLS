@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = line_buffer complete dim = 2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = line_buffer complete dim = 0"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS STREAM variable=data_window[i_out] depth=win_depth",
+            "Faulty Code": "#pragma HLS INTERFACE port=data_window mode=ap_none"
+        }
+    ]
+}

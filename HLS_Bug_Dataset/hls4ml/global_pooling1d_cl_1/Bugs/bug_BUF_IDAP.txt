@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "res_T res_pack;",
+            "Faulty Code": "typename CONFIG_T::accum_t res_pack;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=res"
+        }
+    ]
+}

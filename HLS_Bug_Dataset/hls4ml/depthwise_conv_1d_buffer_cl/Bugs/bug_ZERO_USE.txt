@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "typename CONFIG_T::bias_t biases[CONFIG_T::n_chan]",
+            "Faulty Code": "typename CONFIG_T::bias_t biases[CONFIG_T::n_chan] = {0}"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "typename CONFIG_T::weight_t weights[CONFIG_T::filt_width * CONFIG_T::n_chan]",
+            "Faulty Code": "int weights[CONFIG_T::filt_width * CONFIG_T::n_chan]"
+        }
+    ]
+}

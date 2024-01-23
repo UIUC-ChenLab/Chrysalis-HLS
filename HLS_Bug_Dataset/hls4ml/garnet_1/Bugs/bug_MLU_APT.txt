@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (ivv * unroll_factor >= nvtx)",
+            "Faulty Code": "if ((ivv + 1) * unroll_factor >= nvtx)"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "res_T acc = output_transform_biases.output_biases[io];",
+            "Faulty Code": "#pragma HLS array_partition variable=output_transform_biases.output_biases type=cyclic factor=4\n        res_T acc = output_transform_biases.output_biases[io];"
+        }
+    ]
+}

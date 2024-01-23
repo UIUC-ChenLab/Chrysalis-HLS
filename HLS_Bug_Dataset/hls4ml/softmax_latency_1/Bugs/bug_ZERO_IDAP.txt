@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "typename CONFIG_T::exp_table_t exp_sum(0);",
+            "Faulty Code": "typename CONFIG_T::exp_table_t exp_sum;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE II=ii",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=data"
+        }
+    ]
+}

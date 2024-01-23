@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=pixel_idx factor=5 cyclic"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void compute_scaled_indices_2d(const unsigned h_idx, const unsigned w_idx, ap_uint<CONFIG_T::filt_height * CONFIG_T::filt_width> *pixel_idx) {",
+            "Faulty Code": "#pragma HLS dataflow\nvoid compute_scaled_indices_2d(const unsigned h_idx, const unsigned w_idx, ap_uint<CONFIG_T::filt_height * CONFIG_T::filt_width> *pixel_idx) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned i_ih = 0; i_ih < CONFIG_T::in_height; i_ih++) {",
+            "Faulty Code": "for (unsigned i_ih = 0; i_ih <= CONFIG_T::in_height; i_ih++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned sw_idx = CONFIG_T::template scale_index_width<CONFIG_T::filt_width, CONFIG_T::stride_width, CONFIG_T::in_width>::scale_index(wp_idx + p);",
+            "Faulty Code": "int sw_idx = CONFIG_T::template scale_index_width<CONFIG_T::filt_width, CONFIG_T::stride_width, CONFIG_T::in_width>::scale_index(wp_idx + p);"
+        }
+    ]
+}

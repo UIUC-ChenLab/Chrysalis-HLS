@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "data_t[j * CONFIG_T::height + i] = data[i * CONFIG_T::width + j];",
+            "Faulty Code": "data_t[(j - 1) * CONFIG_T::height + i] = data[i * CONFIG_T::width + j];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE port=data_t bram"
+        }
+    ]
+}

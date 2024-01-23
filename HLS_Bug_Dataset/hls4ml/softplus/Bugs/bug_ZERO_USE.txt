@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "bool initialized = false;",
+            "Faulty Code": "bool initialized;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "data_round = data[ii] * CONFIG_T::table_size / 16;",
+            "Faulty Code": "data_round = (short)data[ii] * CONFIG_T::table_size / 16;"
+        }
+    ]
+}

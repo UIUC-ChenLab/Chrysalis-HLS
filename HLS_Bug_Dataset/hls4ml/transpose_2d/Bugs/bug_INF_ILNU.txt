@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < CONFIG_T::height; i++) {",
+            "Faulty Code": "for (int i = 0; i <= CONFIG_T::height; i++) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int j = 0; j < CONFIG_T::width; j++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (int j = 0; j < CONFIG_T::width; j++) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < CONFIG_T::n_elem / input1_T::size; i++) {",
+            "Faulty Code": "for (int i = 0; i <= CONFIG_T::n_elem / input1_T::size; i++) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition factor=3"
+        }
+    ]
+}

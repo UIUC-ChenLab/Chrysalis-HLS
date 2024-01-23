@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "VerticesInner:\nfor (unsigned ir = 0; ir < unroll_factor; ++ir) {\nunsigned iv = ivv * unroll_factor + ir;\nif (iv == nvtx)\nbreak;\ndata_T data[prev_layer_t::n_out_features];\n#pragma HLS ARRAY_PARTITION variable=data complete\nSingleVertexResSetter<prev_layer_t, data_T> res_setter(data);\ncompute_vertex_output<prev_layer_t>(prev_arrays, iv, prev_output_base, res_setter);\nSingleVertexDataGetter<current_layer_t, data_T> data_getter(data);\ncompute_weights_aggregates<current_layer_t>(data_getter, iv, means_local, current_arrays);\n}",
+            "Faulty Code": "VerticesInner:\nfor (unsigned ir = 0; ir < unroll_factor; ++ir) {\n#pragma HLS PIPELINE\nunsigned iv = ivv * unroll_factor + ir;\nif (iv == nvtx)\nbreak;\ndata_T data[prev_layer_t::n_out_features];\n#pragma HLS ARRAY_PARTITION variable=data complete\nSingleVertexResSetter<prev_layer_t, data_T> res_setter(data);\ncompute_vertex_output<prev_layer_t>(prev_arrays, iv, prev_output_base, res_setter);\nSingleVertexDataGetter<current_layer_t, data_T> data_getter(data);\ncompute_weights_aggregates<current_layer_t>(data_getter, iv, means_local, current_arrays);\n}"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "typename res_setter_T::res_t acc = CONFIG_T::output_transform_biases[io];",
+            "Faulty Code": "typename res_setter_T::res_t acc = 0;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=edge_weights complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=edge_weights bram"
+        }
+    ]
+}

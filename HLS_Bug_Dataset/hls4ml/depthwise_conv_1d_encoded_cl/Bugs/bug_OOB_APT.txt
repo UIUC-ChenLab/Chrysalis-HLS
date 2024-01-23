@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "pixel_idx[p] = CONFIG_T::pixels[sw_idx];",
+            "Faulty Code": "pixel_idx[p] = CONFIG_T::pixels[sw_idx % CONFIG_T::n_chan];"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=CONFIG_T::pixels complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=CONFIG_T::pixels type=cyclic factor=2"
+        }
+    ]
+}

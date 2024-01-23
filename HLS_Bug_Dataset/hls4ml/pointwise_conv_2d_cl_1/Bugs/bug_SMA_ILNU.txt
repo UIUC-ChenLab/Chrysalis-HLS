@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void pointwise_conv_2d_cl(hls::stream<data_T> &data, hls::stream<res_T> &res,",
+            "Faulty Code": "#pragma HLS INTERFACE port=data bram"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS UNROLL factor=4"
+        }
+    ]
+}

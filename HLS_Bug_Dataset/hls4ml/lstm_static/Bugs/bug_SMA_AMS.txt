@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<data_T> &data_stream",
+            "Faulty Code": "data_T data_stream"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "typename CONFIG_T::weight_t weights[CONFIG_T::n_in * CONFIG_T::n_out]",
+            "Faulty Code": "hls::stream<typename CONFIG_T::weight_t> weights"
+        }
+    ]
+}

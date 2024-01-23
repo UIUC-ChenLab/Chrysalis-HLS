@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=data_buf complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=data_buf cyclic dim=0"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_RESHAPE variable=weights block factor=block_factor",
+            "Faulty Code": "#pragma HLS ARRAY_RESHAPE variable=weights block factor=mult_n_out"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "pixel_idx[p] = CONFIG_T::pixels[sw_idx];",
+            "Faulty Code": "pixel_idx[wp_idx + p] = CONFIG_T::pixels[sw_idx];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (unsigned p = 0; p < data_T::size / CONFIG_T::n_chan; p++) {\n        #pragma HLS UNROLL",
+            "Faulty Code": "for (unsigned p = 0; p < data_T::size / CONFIG_T::n_chan; p++) {\n        #pragma HLS pipeline"
+        }
+    ]
+}

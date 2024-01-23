@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void zeropad2d_cl(hls::stream<data_T> &data, hls::stream<res_T> &res) {",
+            "Faulty Code": "void zeropad2d_cl(hls::stream<data_T> &data, hls::stream<res_T> &res) {\n    data_T temp_data;"
+        }
+    ]
+}

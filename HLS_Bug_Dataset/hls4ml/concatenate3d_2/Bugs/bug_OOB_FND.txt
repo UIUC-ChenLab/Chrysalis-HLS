@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "int data_idx = ii * CONFIG_T::n_elem1_1 * CONFIG_T::n_elem1_2 + jj * CONFIG_T::n_elem1_2 + kk;",
+            "Faulty Code": "int data_idx = ii * CONFIG_T::n_elem2_1 * CONFIG_T::n_elem2_2 + jj * CONFIG_T::n_elem2_2 + kk;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for (int kk = 0; kk < CONFIG_T::n_elem1_2; kk++) {",
+            "Faulty Code": "for (int kk = 0; kk < CONFIG_T::n_elem1_2 + 1; kk++) {"
+        }
+    ]
+}

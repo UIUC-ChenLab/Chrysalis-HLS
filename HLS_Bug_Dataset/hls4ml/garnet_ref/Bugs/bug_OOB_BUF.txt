@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "unsigned const ivx = iv * CONFIG_T::n_in_features + ix;",
+            "Faulty Code": "unsigned const ivx = iv * (CONFIG_T::n_in_features + 1) + ix;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "aggregated_features[iap] += edge_weights[iva] * propagated_features[ivp];",
+            "Faulty Code": "aggregated_features[ivp] += edge_weights[iva] * propagated_features[ivp];"
+        }
+    ]
+}

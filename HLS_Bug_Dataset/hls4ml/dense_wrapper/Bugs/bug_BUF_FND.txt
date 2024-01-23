@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "int out_index = w_index / multfactor;",
+            "Faulty Code": "int out_index = w_index / nin;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_RESHAPE   variable=weights block factor=block_factor",
+            "Faulty Code": "#pragma HLS ARRAY_RESHAPE   variable=weights block factor=multfactor"
+        }
+    ]
+}

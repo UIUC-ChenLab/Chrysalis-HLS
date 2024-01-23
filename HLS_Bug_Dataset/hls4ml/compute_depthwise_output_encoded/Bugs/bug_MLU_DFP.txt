@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned p = 0; p < data_T::size / CONFIG_T::n_chan; p++) {",
+            "Faulty Code": "for (unsigned p = 0; p < data_T::size / CONFIG_T::n_chan - 1; p++) {"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS DATAFLOW"
+        }
+    ]
+}

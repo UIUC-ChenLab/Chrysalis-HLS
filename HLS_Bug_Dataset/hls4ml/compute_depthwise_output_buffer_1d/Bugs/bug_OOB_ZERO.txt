@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "kernel_window[i_iw * CONFIG_T::n_chan + i_ic] = kernel_window[(i_iw + 1) * CONFIG_T::n_chan + i_ic];",
+            "Faulty Code": "kernel_window[i_iw + i_ic] = kernel_window[(i_iw + 1) + i_ic];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "acc[iacc] = (typename CONFIG_T::accum_t)biases[iacc];",
+            "Faulty Code": "acc[iacc] = 0;"
+        }
+    ]
+}

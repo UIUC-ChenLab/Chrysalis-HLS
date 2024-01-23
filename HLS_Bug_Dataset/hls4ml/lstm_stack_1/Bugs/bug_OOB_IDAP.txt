@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int i_pack = 0; i_pack < data_T::size; i_pack++) {",
+            "Faulty Code": "for (int i_pack = 0; i_pack <= data_T::size; i_pack++) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "res_T res_pack;",
+            "Faulty Code": "res_T res_pack; #pragma HLS STREAM variable=res_pack depth=1"
+        }
+    ]
+}

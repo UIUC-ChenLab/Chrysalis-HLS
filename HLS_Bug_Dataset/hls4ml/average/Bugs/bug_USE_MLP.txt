@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "res[ii] = (data1[ii] + data2[ii]) / (res_T)2;",
+            "Faulty Code": "res[ii] = (data1[ii] + data2[ii]) >> 1;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "for (int jj = 0; jj < CONFIG_T::n_elem; jj++) { #pragma HLS PIPELINE"
+        }
+    ]
+}

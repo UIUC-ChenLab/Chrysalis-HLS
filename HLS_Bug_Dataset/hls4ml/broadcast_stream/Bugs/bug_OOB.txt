@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int k = 0; k < res_T::size; k++) {\n    #pragma HLS UNROLL\n    out_data[k] = in_data[0];\n}",
+            "Faulty Code": "for (int k = 0; k < res_T::size; k++) {\n    #pragma HLS UNROLL\n    out_data[k] = in_data[k];\n}"
+        }
+    ]
+}

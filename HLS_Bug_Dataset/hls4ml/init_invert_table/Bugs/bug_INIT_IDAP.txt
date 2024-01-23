@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "float x = softmax_real_val_from_idx<data_T, CONFIG_T>(i);",
+            "Faulty Code": "float x; // Uninitialized variable"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void init_invert_table(typename CONFIG_T::inv_table_t table_out[CONFIG_T::table_size]) {",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=table_out\nvoid init_invert_table(typename CONFIG_T::inv_table_t table_out[CONFIG_T::table_size]) {"
+        }
+    ]
+}

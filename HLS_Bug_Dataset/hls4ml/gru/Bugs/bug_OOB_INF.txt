@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (w_index >= CONFIG_T::n_in * CONFIG_T::n_out) break;",
+            "Faulty Code": "if (w_index > CONFIG_T::n_in * CONFIG_T::n_out) break;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i_in = 0; i_in < CONFIG_T::n_in / data_T::size; i_in++) {",
+            "Faulty Code": "for (int i_in = 0; i_in <= CONFIG_T::n_in / data_T::size; i_in++) {"
+        }
+    ]
+}

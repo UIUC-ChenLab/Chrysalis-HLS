@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "if (CONFIG_T::strategy == nnet::latency) {",
+            "Faulty Code": "if (strategy == nnet::latency) { // Assuming 'strategy' is an uninitialized variable"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "conv_1d_latency_cl<data_T, res_T, CONFIG_T>(data, res, weights, biases);",
+            "Faulty Code": "conv_1d_latency_cl<data_T, res_T, CONFIG_T>(data, res, weights_half, biases); // Assuming weights_half is the wrong half of a split buffer"
+        }
+    ]
+}

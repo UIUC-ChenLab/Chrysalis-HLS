@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (iv == nvtx)",
+            "Faulty Code": "if (iv >= nvtx)"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "unsigned const ioa = io * CONFIG_T::n_aggregators + ia;",
+            "Faulty Code": "unsigned const ioa = ia * CONFIG_T::n_out_features + io;"
+        }
+    ]
+}

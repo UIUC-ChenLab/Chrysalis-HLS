@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "cache = data_buf[i_pxl][i_in];",
+            "Faulty Code": "cache = data_buf[i_in][i_pxl];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "acc[i_acc] = (typename CONFIG_T::accum_t)biases[i_acc];",
+            "Faulty Code": "acc[i_acc] = 0;"
+        }
+    ]
+}

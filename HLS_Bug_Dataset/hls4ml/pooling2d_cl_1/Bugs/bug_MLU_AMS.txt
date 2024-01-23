@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned i_ih = 0; i_ih < CONFIG_T::in_height; i_ih++) {",
+            "Faulty Code": "for (unsigned i_ih = 0; i_ih <= CONFIG_T::in_height; i_ih++) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void compute_pool_encoded_2d(",
+            "Faulty Code": "#pragma HLS INTERFACE port=data_window mode=ap_none"
+        }
+    ]
+}

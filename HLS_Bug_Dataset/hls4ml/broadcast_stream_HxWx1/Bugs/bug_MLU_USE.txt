@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < CONFIG_T::in_height * CONFIG_T::in_width * CONFIG_T::in_chan / data_T::size; i++) {",
+            "Faulty Code": "for (int i = 0; i < (CONFIG_T::in_height * CONFIG_T::in_width * CONFIG_T::in_chan / data_T::size) - 1; i++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "out_data[k] = in_data[0];",
+            "Faulty Code": "out_data[k] = (res_T::size > data_T::size) ? (res_T)in_data[0] : in_data[0];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 1\nkernel_window[i_ih * CONFIG_T::filt_width * CONFIG_T::n_chan + (i_iw + 1) * CONFIG_T::n_chan + i_ic] =\nkernel_window[i_ih * CONFIG_T::filt_width * CONFIG_T::n_chan + i_iw * CONFIG_T::n_chan + i_ic];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void kernel_shift_2d(\ntypename data_T::value_type shift_buffer[CONFIG_T::filt_height][CONFIG_T::n_chan],\ntypename data_T::value_type kernel_window[CONFIG_T::filt_width * CONFIG_T::filt_height * CONFIG_T::n_chan]) {",
+            "Faulty Code": "void kernel_shift_2d(\ntypename data_T::value_type shift_buffer[CONFIG_T::filt_height][CONFIG_T::n_chan],\ntypename data_T::value_type kernel_window[CONFIG_T::filt_width * CONFIG_T::filt_height * CONFIG_T::n_chan]) {\n#pragma HLS interface port=kernel_window mode=s_axilite"
+        }
+    ]
+}

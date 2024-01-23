@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "pool[kk * CONFIG_T::stride_width + ll] = pad_val<data_T, CONFIG_T::pool_op>();",
+            "Faulty Code": "pool[kk * CONFIG_T::pool_width + ll] = pad_val<data_T, CONFIG_T::pool_op>();"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pool complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=pool complete dim=2"
+        }
+    ]
+}

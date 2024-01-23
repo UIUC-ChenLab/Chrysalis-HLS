@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "out_data[j] = typename res_T::value_type(data_array[j * data_T::size + i]);",
+            "Faulty Code": "out_data[j] = typename res_T::value_type(data_array[i * data_T::size + j]);"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

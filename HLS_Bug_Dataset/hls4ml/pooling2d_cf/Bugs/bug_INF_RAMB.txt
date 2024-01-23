@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < CONFIG_T::n_elem / input1_T::size; i++) {",
+            "Faulty Code": "for (int i = 0; i <= CONFIG_T::n_elem / input1_T::size; i++) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "pool[kk * CONFIG_T::stride_width + ll] =\n    data[(ii + kk - CONFIG_T::pad_top) * CONFIG_T::in_width +\n         ff * CONFIG_T::in_width * CONFIG_T::in_height + ll + jj - CONFIG_T::pad_left];",
+            "Faulty Code": "pool[kk * CONFIG_T::stride_width + ll] =\n    data[(ii * CONFIG_T::in_width) + (jj * CONFIG_T::in_height) + ff];"
+        }
+    ]
+}

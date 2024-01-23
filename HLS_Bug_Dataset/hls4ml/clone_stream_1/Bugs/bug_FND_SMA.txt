@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=out_data1 cyclic factor=3"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void clone_stream(hls::stream<data_T> &data, hls::stream<res_T> &res1, hls::stream<res_T> &res2, hls::stream<res_T> &res3) {",
+            "Faulty Code": "#pragma HLS interface port=res1 bram"
+        }
+    ]
+}

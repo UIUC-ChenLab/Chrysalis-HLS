@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (index > CONFIG_T::table_size - 1) index = CONFIG_T::table_size - 1;",
+            "Faulty Code": "if (index >= CONFIG_T::table_size) index = CONFIG_T::table_size - 1;"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "if (!initialized) { init_elu_table<CONFIG_T, CONFIG_T::table_size>(elu_table); initialized = true; }",
+            "Faulty Code": "// if (!initialized) { init_elu_table<CONFIG_T, CONFIG_T::table_size>(elu_table); initialized = true; }"
+        }
+    ]
+}

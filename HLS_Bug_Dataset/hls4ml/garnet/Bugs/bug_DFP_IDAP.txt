@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=output_base complete",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=output_base"
+        }
+    ]
+}

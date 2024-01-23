@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "pool[i] = data[i * CONFIG_T::n_filt + filt];",
+            "Faulty Code": "pool[i] = data[filt * CONFIG_T::in_height * CONFIG_T::in_width + i];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS UNROLL factor=4\n    for (int filt = 0; filt < CONFIG_T::n_filt; filt++) {"
+        }
+    ]
+}

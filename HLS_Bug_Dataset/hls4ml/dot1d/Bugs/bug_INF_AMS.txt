@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i_mult = 0; i_mult < CONFIG_T::n_in; i_mult++) {",
+            "Faulty Code": "for (int i_mult = 0; i_mult <= CONFIG_T::n_in; i_mult++) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void dot1d(input1_T data1[CONFIG_T::n_in], input2_T data2[CONFIG_T::n_in], res_T res[CONFIG_T::n_out]) {",
+            "Faulty Code": "void dot1d(input1_T data1, input2_T data2[CONFIG_T::n_in], res_T res[CONFIG_T::n_out]) {"
+        }
+    ]
+}

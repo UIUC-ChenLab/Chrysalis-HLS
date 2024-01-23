@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=weights complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=weights cyclic factor=2"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "if (i_ih % CONFIG_T::stride_height == 0 && i_iw % CONFIG_T::stride_width == 0) {\n                pointwise_mult_buffer<data_T, res_T, CONFIG_T>(data.read(), res, weights, biases);\n            } else {\n                data.read();\n            }",
+            "Faulty Code": "pointwise_mult_buffer<data_T, res_T, CONFIG_T>(data.read(), res, weights, biases);"
+        }
+    ]
+}

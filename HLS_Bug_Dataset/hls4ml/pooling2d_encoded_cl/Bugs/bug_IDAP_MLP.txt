@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS STREAM variable=data_window[i_out] depth=win_depth",
+            "Faulty Code": "#pragma HLS STREAM variable=data_window[i_out] depth=1"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pool_window complete",
+            "Faulty Code": "#pragma HLS PIPELINE"
+        }
+    ]
+}

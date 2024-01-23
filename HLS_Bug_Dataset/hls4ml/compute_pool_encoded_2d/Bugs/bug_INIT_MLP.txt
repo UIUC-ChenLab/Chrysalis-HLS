@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "if (!initialized) {\n    init_pool_table<CONFIG_T::in_height, CONFIG_T::pool_height>(pool_table_height);\n    init_pool_table<CONFIG_T::in_width, CONFIG_T::pool_width>(pool_table_width);\n    initialized = true;\n}",
+            "Faulty Code": "if (initialized) {\n    init_pool_table<CONFIG_T::in_height, CONFIG_T::pool_height>(pool_table_height);\n    init_pool_table<CONFIG_T::in_width, CONFIG_T::pool_width>(pool_table_width);\n    initialized = true;\n}"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE\n    FiltLoop:\n        for (unsigned c = 0; c < CONFIG_T::n_filt; c++) {\n        #pragma HLS PIPELINE\n        PoolLoop:\n            for (unsigned f = 0; f < CONFIG_T::pool_height * CONFIG_T::pool_width; f++) {\n                pool_window[f] = data_window[c * CONFIG_T::pool_height * CONFIG_T::pool_width + f].read();\n            }\n        }"
+        }
+    ]
+}

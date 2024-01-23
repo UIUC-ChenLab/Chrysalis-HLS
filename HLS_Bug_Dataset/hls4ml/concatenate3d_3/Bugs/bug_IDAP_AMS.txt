@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void concatenate3d(hls::stream<input1_T> &data1, hls::stream<input2_T> &data2, hls::stream<res_T> &res) {",
+            "Faulty Code": "void concatenate3d(hls::stream<input1_T> &data1, hls::stream<input2_T> &data2, hls::stream<res_T> &res) {\n#pragma HLS INTERFACE mode=ap_none port=data1"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "input1_T in_data1 = data1.read();",
+            "Faulty Code": "input1_T in_data1 = data1.read();\n#pragma HLS INTERFACE port=in_data1"
+        }
+    ]
+}

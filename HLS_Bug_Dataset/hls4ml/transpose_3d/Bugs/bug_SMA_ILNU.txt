@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void transpose_3d(data_T data[CONFIG_T::depth * CONFIG_T::height * CONFIG_T::width], res_T data_t[CONFIG_T::depth * CONFIG_T::height * CONFIG_T::width]) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=data bram"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (idx[1] = 0; idx[1] < dims[1]; idx[1]++) {",
+            "Faulty Code": "#pragma HLS UNROLL factor=4"
+        }
+    ]
+}

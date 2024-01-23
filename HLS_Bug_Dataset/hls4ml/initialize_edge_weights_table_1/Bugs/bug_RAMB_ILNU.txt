@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "edge_weights_table[iw] = std::exp(-v * v);",
+            "Faulty Code": "#pragma HLS interface m_axi port=edge_weights_table offset=slave bundle=gmem\nedge_weights_table[iw + 1] = std::exp(-v * v);"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned iw = 0; iw < table_size; ++iw) {",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (unsigned iw = 0; iw < table_size; ++iw) {"
+        }
+    ]
+}

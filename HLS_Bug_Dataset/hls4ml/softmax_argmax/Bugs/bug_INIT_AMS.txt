@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "data_T maximum = data[0];",
+            "Faulty Code": "data_T maximum;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void softmax_argmax(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {",
+            "Faulty Code": "void softmax_argmax(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) { #pragma HLS INTERFACE port=res mode=ap_none }"
+        }
+    ]
+}

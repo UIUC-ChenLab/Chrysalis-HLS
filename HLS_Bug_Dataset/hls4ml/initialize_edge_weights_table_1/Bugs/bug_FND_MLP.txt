@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "unsigned const table_size = (1 << CONFIG_T::distance_width);",
+            "Faulty Code": "#pragma HLS array_partition factor=3 complete"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (unsigned iw = 0; iw < table_size; ++iw) {",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

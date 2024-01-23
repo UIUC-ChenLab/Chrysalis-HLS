@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS array_partition dim=3"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void concatenate2d_1(hls::stream<input1_T> &data1, hls::stream<input2_T> &data2, hls::stream<res_T> &res)",
+            "Faulty Code": "#pragma HLS interface port=data1 ap_none"
+        }
+    ]
+}

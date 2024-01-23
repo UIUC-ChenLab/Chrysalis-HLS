@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "else\n                out_data[j] = alpha * in_data[j];",
+            "Faulty Code": "else\n                out_data[j] = alpha * (typename res_T::value_type) in_data[j];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=data"
+        }
+    ]
+}

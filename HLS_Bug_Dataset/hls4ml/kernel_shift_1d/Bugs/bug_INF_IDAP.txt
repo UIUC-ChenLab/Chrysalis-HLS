@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i_iw = 0; i_iw < filt_width; i_iw++) {",
+            "Faulty Code": "for (int i_iw = 0; i_iw <= filt_width; i_iw++) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "kernel_window[lastheight + i_ic] = in_elem[i_ic];",
+            "Faulty Code": "kernel_window[lastheight * i_ic] = in_elem[i_ic];"
+        }
+    ]
+}

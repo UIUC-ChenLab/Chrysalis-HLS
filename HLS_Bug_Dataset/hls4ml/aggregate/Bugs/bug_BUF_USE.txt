@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "unsigned iv = ivv * unroll_factor + ir;",
+            "Faulty Code": "unsigned iv = ivv * (unroll_factor + ir);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "if (iv == nvtx)",
+            "Faulty Code": "if ((int)iv == nvtx)"
+        }
+    ]
+}

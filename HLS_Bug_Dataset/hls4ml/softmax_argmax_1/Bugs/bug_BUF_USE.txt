@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "typename data_T::value_type maximum = in_data[0];",
+            "Faulty Code": "typename data_T::value_type maximum = in_data[res_T::size / 2];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "out_data[i] = (typename res_T::value_type)0;",
+            "Faulty Code": "out_data[i] = -1;"
+        }
+    ]
+}

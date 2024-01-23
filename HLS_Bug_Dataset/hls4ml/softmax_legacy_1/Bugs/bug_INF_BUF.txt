@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned s = 0; s < CONFIG_T::n_in / data_T::size; s++) {",
+            "Faulty Code": "for (unsigned s = 0; s <= CONFIG_T::n_in / data_T::size; s++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "int data_round = (data_cache[j] - data_cache[i]) * CONFIG_T::table_size / 16;",
+            "Faulty Code": "int data_round = (data_cache[i] - data_cache[i]) * CONFIG_T::table_size / 16;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "res[ii] = (data1[ii] + data2[ii]) / (res_T)2;",
+            "Faulty Code": "res_T accumulator = 0; res[ii] = (accumulator + data1[ii] + data2[ii]) / (res_T)2;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=res factor=10"
+        }
+    ]
+}

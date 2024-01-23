@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "filt_mask = sh_idx + pool_table_width[wp_idx + p] + 1;",
+            "Faulty Code": "filt_mask = sh_idx + pool_table_width[wp_idx + p];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pool_window complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=pool_window bram"
+        }
+    ]
+}

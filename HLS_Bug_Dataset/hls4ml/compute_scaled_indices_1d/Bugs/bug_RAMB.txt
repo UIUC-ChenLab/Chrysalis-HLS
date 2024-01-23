@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "pixel_idx[p] = CONFIG_T::pixels[sw_idx];",
+            "Faulty Code": "#pragma HLS interface m_axi port=pixel_idx offset=slave bundle=gmem"
+        }
+    ]
+}

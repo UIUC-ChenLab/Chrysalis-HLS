@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "compute_output_encoded<data_T, res_T, CONFIG_T>(data.read(), data_window, res, res_pack, outputs_ready, weights, biases, pixel_idx);",
+            "Faulty Code": "compute_output_encoded<data_T, res_T, CONFIG_T>(data.read(), data_window[i_out], res, res_pack, outputs_ready, weights, biases, pixel_idx);"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned outputs_ready = 0;",
+            "Faulty Code": "unsigned outputs_ready;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "assert(CONFIG_T::filt_width == 1);",
+            "Faulty Code": "static int init_flag = 1;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=biases complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=biases complete dim=2"
+        }
+    ]
+}

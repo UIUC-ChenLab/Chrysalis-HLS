@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=threshold_hi complete\n    #pragma HLS ARRAY_PARTITION variable=threshold_lo complete",
+            "Faulty Code": "#pragma HLS interface m_axi port=threshold_hi\n    #pragma HLS interface m_axi port=threshold_lo"
+        }
+    ]
+}

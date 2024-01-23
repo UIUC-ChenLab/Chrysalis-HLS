@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = line_buffer complete dim = 2",
+            "Faulty Code": "#pragma HLS INTERFACE port=line_buffer bram"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "if (CONFIG_T::strategy == nnet::latency) {\n    #pragma HLS PIPELINE II=CONFIG_T::reuse_factor\n}",
+            "Faulty Code": "if (CONFIG_T::strategy == nnet::latency) {\n    #pragma HLS PIPELINE II=CONFIG_T::reuse_factor\n    #pragma HLS PIPELINE\n}"
+        }
+    ]
+}

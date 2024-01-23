@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = line_buffer complete dim = 2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable = line_buffer cyclic dim = 2"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS UNROLL factor=CONFIG_T::reuse_factor"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::n_elem1_0; ii++) {",
+            "Faulty Code": "for (int ii = 0; ii <= CONFIG_T::n_elem1_0; ii++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "res[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 + ii] = data2[ii];",
+            "Faulty Code": "res[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 + 0] = data2[ii];"
+        }
+    ]
+}

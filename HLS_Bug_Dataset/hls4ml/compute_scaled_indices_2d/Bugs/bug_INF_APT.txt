@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned p = 0; p < data_T::size / CONFIG_T::n_chan; p++) {",
+            "Faulty Code": "for (unsigned p = 0; p <= data_T::size / CONFIG_T::n_chan; p++) {"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition type=complete"
+        }
+    ]
+}

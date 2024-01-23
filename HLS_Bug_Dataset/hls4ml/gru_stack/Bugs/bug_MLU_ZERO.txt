@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int iacc = 0; iacc < (2 * CONFIG_T::n_state); iacc++) {",
+            "Faulty Code": "for (int iacc = 0; iacc < (2 * CONFIG_T::n_state - 1); iacc++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "h_state[i_h_state] = 0;",
+            "Faulty Code": "h_state[i_h_state] = some_non_zero_value;"
+        }
+    ]
+}

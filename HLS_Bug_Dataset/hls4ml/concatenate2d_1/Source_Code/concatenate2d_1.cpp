@@ -1,0 +1,15 @@
+void concatenate2d_1(input1_T data1[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1],
+                     input2_T data2[CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1],
+                     res_T res[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 + CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1]) {
+    #pragma HLS PIPELINE
+
+    for (int ii = 0; ii < CONFIG_T::n_elem1_0; ii++) {
+        for (int jj = 0; jj < CONFIG_T::n_elem1_1; jj++) {
+            res[ii * (CONFIG_T::n_elem1_1 + CONFIG_T::n_elem2_1) + jj] = data1[ii * CONFIG_T::n_elem1_1 + jj];
+        }
+        for (int jj = 0; jj < CONFIG_T::n_elem2_1; jj++) {
+            res[ii * (CONFIG_T::n_elem1_1 + CONFIG_T::n_elem2_1) + CONFIG_T::n_elem1_1 + jj] =
+                data2[ii * CONFIG_T::n_elem2_1 + jj];
+        }
+    }
+}

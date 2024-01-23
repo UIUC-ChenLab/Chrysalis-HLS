@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "return edge_weights_table[index];",
+            "Faulty Code": "#pragma HLS interface port=edge_weights_table ap_none"
+        }
+    ]
+}

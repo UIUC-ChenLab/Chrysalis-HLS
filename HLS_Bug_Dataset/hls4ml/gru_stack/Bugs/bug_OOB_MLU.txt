@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int im = 0; im < block_factor; im++) {",
+            "Faulty Code": "for (int im = 0; im <= block_factor; im++) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "int index = ii * CONFIG_T::n_out + jj;",
+            "Faulty Code": "int index = ii * (CONFIG_T::n_out - 1) + jj;"
+        }
+    ]
+}

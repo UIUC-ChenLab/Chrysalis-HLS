@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "compute_output_buffer_2d<data_T, res_T, CONFIG_T>(data.read(), line_buffer, res, weights, biases);",
+            "Faulty Code": "compute_output_buffer_2d<data_T, res_T, CONFIG_T>(data.read(), uninitialized_buffer, res, weights, biases);"
+        }
+    ]
+}

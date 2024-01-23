@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "void ternary_tanh(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {",
+            "Faulty Code": "#pragma HLS array_partition variable=data type=cyclic factor=2"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void ternary_tanh(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {",
+            "Faulty Code": "#pragma HLS interface m_axi port=data offset=slave"
+        }
+    ]
+}

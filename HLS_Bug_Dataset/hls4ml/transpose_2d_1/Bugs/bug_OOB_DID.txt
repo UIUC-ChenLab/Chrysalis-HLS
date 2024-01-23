@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int i = 0; i < CONFIG_T::height * CONFIG_T::width / data_T::size; i++) {",
+            "Faulty Code": "for (int i = 0; i <= CONFIG_T::height * CONFIG_T::width / data_T::size; i++) {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=data_array complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=data_array complete dim=2"
+        }
+    ]
+}

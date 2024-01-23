@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "*(res++) = (res_T) * (data++);",
+            "Faulty Code": "*(res++) = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void zeropad2d_cl(data_T data[CONFIG_T::n_chan * CONFIG_T::in_height * CONFIG_T::in_width],\n                  res_T res[CONFIG_T::n_chan * CONFIG_T::out_height * CONFIG_T::out_width])",
+            "Faulty Code": "void zeropad2d_cl(data_T data[CONFIG_T::n_chan * CONFIG_T::in_height * CONFIG_T::in_width],\n                  res_T res[CONFIG_T::n_chan * CONFIG_T::out_height * CONFIG_T::out_width]) {\n    #pragma HLS interface m_axi port=data offset=slave \n    #pragma HLS interface m_axi port=res offset=slave"
+        }
+    ]
+}

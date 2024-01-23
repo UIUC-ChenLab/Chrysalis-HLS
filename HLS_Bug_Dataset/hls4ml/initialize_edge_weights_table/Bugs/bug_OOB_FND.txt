@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "edge_weights_table[0] = ap_ufixed<CONFIG_T::edge_weight_t::width, 0, AP_TRN, AP_SAT>(1.);",
+            "Faulty Code": "edge_weights_table[table_size] = ap_ufixed<CONFIG_T::edge_weight_t::width, 0, AP_TRN, AP_SAT>(1.);"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for (unsigned iw = 1; iw < table_size; ++iw) {",
+            "Faulty Code": "#pragma HLS array_partition variable=edge_weights_table cyclic factor=9"
+        }
+    ]
+}

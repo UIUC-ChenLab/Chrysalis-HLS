@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "res_pack[jj] = res[jj];",
+            "Faulty Code": "res_pack[jj] = data[jj];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ARRAY_RESHAPE variable=weights block factor=block_factor",
+            "Faulty Code": "#pragma HLS ARRAY_RESHAPE variable=weights cyclic factor=block_factor"
+        }
+    ]
+}

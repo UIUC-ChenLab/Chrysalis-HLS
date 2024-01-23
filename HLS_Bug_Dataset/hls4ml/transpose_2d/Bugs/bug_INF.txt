@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < CONFIG_T::height; i++) { for (int j = 0; j < CONFIG_T::width; j++) { data_t[j * CONFIG_T::height + i] = data[i * CONFIG_T::width + j]; } }",
+            "Faulty Code": "for (int i = 0; ; i++) { for (int j = 0; ; j++) { data_t[j * CONFIG_T::height + i] = data[i * CONFIG_T::width + j]; if (j == CONFIG_T::width) break; } if (i == CONFIG_T::height) break; }"
+        }
+    ]
+}

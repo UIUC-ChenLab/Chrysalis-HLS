@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "if (CONFIG_T::filt_height > 1) {\n    compute_output_buffer_2d<data_T, res_T, CONFIG_T>(data.read(), line_buffer, res, weights, biases);\n} else {\n    compute_output_buffer_1d<data_T, res_T, CONFIG_T>(data.read(), res, weights, biases);\n}",
+            "Faulty Code": "#pragma HLS dataflow\nif (CONFIG_T::filt_height > 1) {\n    compute_output_buffer_2d<data_T, res_T, CONFIG_T>(data.read(), line_buffer, res, weights, biases);\n} else {\n    compute_output_buffer_1d<data_T, res_T, CONFIG_T>(data.read(), res, weights, biases);\n}"
+        }
+    ]
+}

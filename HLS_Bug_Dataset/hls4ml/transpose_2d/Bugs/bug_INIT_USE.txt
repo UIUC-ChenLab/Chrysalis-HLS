@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void transpose_2d(data_T data[CONFIG_T::height * CONFIG_T::width], res_T data_t[CONFIG_T::height * CONFIG_T::width]) {",
+            "Faulty Code": "void transpose_2d(data_T data[CONFIG_T::height * CONFIG_T::width], res_T data_t[CONFIG_T::height * CONFIG_T::width]);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "data_t[j * CONFIG_T::height + i] = data[i * CONFIG_T::width + j];",
+            "Faulty Code": "int temp = (int)data[i * CONFIG_T::width + j]; data_t[j * CONFIG_T::height + i] = (res_T)(temp);"
+        }
+    ]
+}

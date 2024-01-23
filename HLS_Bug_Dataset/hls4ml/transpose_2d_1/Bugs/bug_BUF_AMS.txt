@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "data_array[i * data_T::size + j] = typename data_T::value_type(in_data[j]);",
+            "Faulty Code": "data_array[i * CONFIG_T::width + j] = typename data_T::value_type(in_data[j]);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "PRAGMA_DATA_PACK(out_data)",
+            "Faulty Code": "#pragma HLS INTERFACE port=out_data ap_none"
+        }
+    ]
+}

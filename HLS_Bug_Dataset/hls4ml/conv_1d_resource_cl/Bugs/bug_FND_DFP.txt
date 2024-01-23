@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_RESHAPE variable=weights block factor=block_factor",
+            "Faulty Code": "#pragma HLS ARRAY_RESHAPE variable=weights block factor=block_factor+1"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (unsigned i_part = 0; i_part < CONFIG_T::n_partitions; i_part++) {",
+            "Faulty Code": "#pragma HLS dataflow\nfor (unsigned i_part = 0; i_part < CONFIG_T::n_partitions; i_part++) {"
+        }
+    ]
+}

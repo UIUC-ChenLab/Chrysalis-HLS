@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "exp_sum =\n        reduce<typename CONFIG_T::exp_table_t, CONFIG_T::n_in, Op_add<typename CONFIG_T::exp_table_t>>(exp_res, op_add);",
+            "Faulty Code": "exp_sum =\n        reduce<typename CONFIG_T::exp_table_t, CONFIG_T::n_in + 1, Op_add<typename CONFIG_T::exp_table_t>>(exp_res, op_add);"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "typename CONFIG_T::exp_table_t exp_sum(0);",
+            "Faulty Code": "typename CONFIG_T::exp_table_t exp_sum;"
+        }
+    ]
+}

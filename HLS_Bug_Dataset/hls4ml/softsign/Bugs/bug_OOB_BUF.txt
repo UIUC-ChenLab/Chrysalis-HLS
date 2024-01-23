@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "data_round = data[ii] * CONFIG_T::table_size / 16;",
+            "Faulty Code": "data_round = data[ii] * (CONFIG_T::table_size + 1) / 16;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "index = data_round + 8 * CONFIG_T::table_size / 16;",
+            "Faulty Code": "index = data_round + 8 * (CONFIG_T::table_size / 2) / 16;"
+        }
+    ]
+}

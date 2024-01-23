@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pool complete dim=0",
+            "Faulty Code": "#pragma HLS interface port=pool ap_none"
+        }
+    ]
+}

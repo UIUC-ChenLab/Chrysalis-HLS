@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "ReadInputHeight: for (unsigned i_ih = 0; i_ih < CONFIG_T::in_height; i_ih++) { ReadInputWidth: for (unsigned i_iw = 0; i_iw < CONFIG_T::in_width / (data_T::size / CONFIG_T::n_filt); i_iw++) { #pragma HLS LOOP_FLATTEN compute_global_pool<data_T, res_T, CONFIG_T>(data.read(), data_window); } }",
+            "Faulty Code": "ReadInputHeight: for (unsigned i_ih = 0; i_ih < CONFIG_T::in_height; i_ih++) { #pragma HLS dataflow ReadInputWidth: for (unsigned i_iw = 0; i_iw < CONFIG_T::in_width / (data_T::size / CONFIG_T::n_filt); i_iw++) { #pragma HLS LOOP_FLATTEN compute_global_pool<data_T, res_T, CONFIG_T>(data.read(), data_window); } }"
+        }
+    ]
+}

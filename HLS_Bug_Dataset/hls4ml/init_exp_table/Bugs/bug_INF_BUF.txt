@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned i = 0; i < CONFIG_T::table_size; i++) {",
+            "Faulty Code": "for (unsigned i = 0; i <= CONFIG_T::table_size; i++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "typename CONFIG_T::exp_table_t exp_x = exp_fcn_float(x);",
+            "Faulty Code": "typename CONFIG_T::exp_table_t exp_x = exp_fcn_float(i);"
+        }
+    ]
+}

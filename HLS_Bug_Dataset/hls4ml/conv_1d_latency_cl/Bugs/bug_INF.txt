@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i_part = 0; i_part < CONFIG_T::n_partitions; i_part++)",
+            "Faulty Code": "for (int i_part = 0; ; i_part++)"
+        }
+    ]
+}

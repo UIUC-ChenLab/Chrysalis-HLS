@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=out_data"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<data_T> &data",
+            "Faulty Code": "data_T data[CONFIG_T::n_in / res_T::size]"
+        }
+    ]
+}

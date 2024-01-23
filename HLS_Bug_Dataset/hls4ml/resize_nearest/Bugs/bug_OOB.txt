@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "resized[(i * CONFIG_T::new_width * CONFIG_T::n_chan) + j * CONFIG_T::n_chan + k] =\n    image[(y2 * CONFIG_T::width * CONFIG_T::n_chan) + x2 * CONFIG_T::n_chan + k];",
+            "Faulty Code": "resized[(i * CONFIG_T::new_width * CONFIG_T::n_chan) + (j + 1) * CONFIG_T::n_chan + k] =\n    image[(y2 * CONFIG_T::width * CONFIG_T::n_chan) + (x2 + 1) * CONFIG_T::n_chan + k];"
+        }
+    ]
+}

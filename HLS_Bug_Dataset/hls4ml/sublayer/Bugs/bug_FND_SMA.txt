@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=prev_output_base cyclic factor=unroll_factor"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS INTERFACE port=prev_output_base bram"
+        }
+    ]
+}

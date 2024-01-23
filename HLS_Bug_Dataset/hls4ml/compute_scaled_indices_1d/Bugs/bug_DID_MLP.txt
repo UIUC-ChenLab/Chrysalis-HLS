@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "ap_uint<CONFIG_T::filt_width> *pixel_idx",
+            "Faulty Code": "#pragma HLS array_partition dim=2 variable=pixel_idx"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

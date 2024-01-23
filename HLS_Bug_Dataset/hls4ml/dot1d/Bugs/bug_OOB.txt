@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int i_acc = 0; i_acc < CONFIG_T::n_in; i_acc++) { #pragma HLS UNROLL acc += mult[i_acc]; }",
+            "Faulty Code": "for (int i_acc = 0; i_acc <= CONFIG_T::n_in; i_acc++) { #pragma HLS UNROLL acc += mult[i_acc]; }"
+        }
+    ]
+}

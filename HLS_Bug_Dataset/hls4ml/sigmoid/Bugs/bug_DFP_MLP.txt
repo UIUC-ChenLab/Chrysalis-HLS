@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::n_in; ii++) {",
+            "Faulty Code": "#pragma HLS pipeline // Incorrectly nested inside another pipeline pragma"
+        }
+    ]
+}

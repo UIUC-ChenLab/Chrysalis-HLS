@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "DataPropagation:\nfor (int i_in = 0; i_in < CONFIG_T::n_sequence * CONFIG_T::n_in / data_T::size; i_in++) {...}",
+            "Faulty Code": "DataPropagation:\nfor (int i_in = 0; i_in <= CONFIG_T::n_sequence * CONFIG_T::n_in / data_T::size; i_in++) {...}"
+        }
+    ]
+}

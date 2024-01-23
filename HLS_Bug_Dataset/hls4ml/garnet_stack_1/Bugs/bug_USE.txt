@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned const unroll_factor = current_layer_t::n_vertices >> current_layer_t::log2_reuse_factor;",
+            "Faulty Code": "int const unroll_factor = current_layer_t::n_vertices >> current_layer_t::log2_reuse_factor;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "res_pack[i_pack] = data_window[i_pack] / (CONFIG_T::in_height * CONFIG_T::in_width);",
+            "Faulty Code": "res_pack[i_pack] = data_window[i_pack] >> (CONFIG_T::in_height * CONFIG_T::in_width);"
+        }
+    ]
+}

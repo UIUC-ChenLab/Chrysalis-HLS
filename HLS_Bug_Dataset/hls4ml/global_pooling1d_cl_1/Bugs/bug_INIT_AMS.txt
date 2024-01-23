@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "typename CONFIG_T::accum_t init = 0;",
+            "Faulty Code": "typename CONFIG_T::accum_t init;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void compute_global_pool(const data_T &in_elem, typename CONFIG_T::accum_t data_window[CONFIG_T::n_filt])",
+            "Faulty Code": "#pragma HLS INTERFACE port=data_window ap_none\nvoid compute_global_pool(const data_T &in_elem, typename CONFIG_T::accum_t data_window[CONFIG_T::n_filt])"
+        }
+    ]
+}

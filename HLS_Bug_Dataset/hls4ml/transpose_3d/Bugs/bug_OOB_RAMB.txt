@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "data_t[idx_t[0] * dims_t[1] * dims_t[2] + idx_t[1] * dims_t[2] + idx_t[2]] =",
+            "Faulty Code": "data_t[idx_t[0] * dims_t[1] * dims_t[0] + idx_t[1] * dims_t[0] + idx_t[2]] ="
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (idx[2] = 0; idx[2] < dims[2]; idx[2]++) {",
+            "Faulty Code": "for (idx[2] = 0; idx[2] < dims[0]; idx[2]++) {"
+        }
+    ]
+}

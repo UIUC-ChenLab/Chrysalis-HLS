@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "filt_mask = pool_table_width[wp_idx + p] + 1;",
+            "Faulty Code": "filt_mask = (ap_uint<CONFIG_T::pool_width>)(pool_table_width[wp_idx + p]) + 1;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "data_window[c * CONFIG_T::pool_width + f].read();",
+            "Faulty Code": "data_window[c + f].read();"
+        }
+    ]
+}

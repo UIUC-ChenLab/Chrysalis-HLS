@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned const iva = iv * CONFIG_T::n_aggregators + ia;",
+            "Faulty Code": "int iva = iv * CONFIG_T::n_aggregators + ia;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "edge_weights[ia] = arrays.edge_weights[iva];",
+            "Faulty Code": "edge_weights[ia] = arrays.edge_weights[iv + ia];"
+        }
+    ]
+}

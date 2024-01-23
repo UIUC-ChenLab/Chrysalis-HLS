@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "typename res_setter_T::res_t incr = edge_weights[ia] * output_base[ioa];",
+            "Faulty Code": "typename res_setter_T::res_t incr = (signed)edge_weights[ia] * output_base[ioa];"
+        }
+    ]
+}

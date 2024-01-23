@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pixel_idx complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=pixel_idx cyclic factor=2"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned p = 0; p < data_T::size / CONFIG_T::n_chan; p++) {",
+            "Faulty Code": "for (unsigned p = 0; p <= data_T::size / CONFIG_T::n_chan; p++) {"
+        }
+    ]
+}

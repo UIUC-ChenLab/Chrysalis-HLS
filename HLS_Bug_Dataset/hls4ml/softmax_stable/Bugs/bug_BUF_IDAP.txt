@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "exp_res[i] = exp_table[x];",
+            "Faulty Code": "exp_res[i] = exp_table[i];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS array_partition variable=exp_res complete",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=exp_res"
+        }
+    ]
+}

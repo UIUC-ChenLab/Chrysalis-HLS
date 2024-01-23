@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=h_newstate complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=h_newstate cyclic factor=4"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<data_T> &data_stream",
+            "Faulty Code": "hls::stream<data_T, 1> &data_stream"
+        }
+    ]
+}

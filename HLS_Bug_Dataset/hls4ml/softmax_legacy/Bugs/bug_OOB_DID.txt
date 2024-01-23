@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (index > CONFIG_T::table_size - 1)\n    index = CONFIG_T::table_size - 1;",
+            "Faulty Code": "if (index >= CONFIG_T::table_size)\n    index = CONFIG_T::table_size - 1;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=exp_table dim=0 complete"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned img_overlap = 0;",
+            "Faulty Code": "unsigned img_overlap = CONFIG_T::pool_width;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pool complete dim=0",
+            "Faulty Code": "#pragma HLS INTERFACE port=pool ap_none"
+        }
+    ]
+}

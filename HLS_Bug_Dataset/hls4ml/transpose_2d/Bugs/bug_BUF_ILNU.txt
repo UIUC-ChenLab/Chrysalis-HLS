@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "data_t[j * CONFIG_T::height + i] = data[i * CONFIG_T::width + j];",
+            "Faulty Code": "data_t[i * CONFIG_T::height + j] = data[i * CONFIG_T::width + j];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

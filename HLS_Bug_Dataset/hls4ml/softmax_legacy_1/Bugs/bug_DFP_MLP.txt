@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (unsigned s = 0; s < CONFIG_T::n_in / data_T::size; s++) { #pragma HLS PIPELINE",
+            "Faulty Code": "for (unsigned s = 0; s < CONFIG_T::n_in / data_T::size; s++) { #pragma HLS pipeline for (unsigned j = 0; j < data_T::size; j++) { #pragma HLS pipeline"
+        }
+    ]
+}

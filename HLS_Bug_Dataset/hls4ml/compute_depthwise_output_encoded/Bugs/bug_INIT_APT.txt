@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "outputs_ready = 0;",
+            "Faulty Code": "// outputs_ready = 0;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=mult complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=mult cyclic factor=CONFIG_T::n_chan"
+        }
+    ]
+}

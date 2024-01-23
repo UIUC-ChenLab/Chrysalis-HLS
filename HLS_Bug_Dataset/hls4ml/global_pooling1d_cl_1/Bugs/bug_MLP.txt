@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "\"\"\"MaxPoolRes:\n    for (unsigned i_res = 0; i_res < CONFIG_T::n_filt / res_T::size; i_res++) {\n        #pragma HLS PIPELINE\n\n        res_T res_pack;\n        PRAGMA_DATA_PACK(res_pack)\n    MaxPoolPack:\n        for (unsigned i_pack = 0; i_pack < res_T::size; i_pack++) {\n            #pragma HLS UNROLL\n            res_pack[i_pack] = data_window[i_pack];\n        }\n        res.write(res_pack);\n    }\"\"\"",
+            "Faulty Code": "\"\"\"MaxPoolRes:\n    for (unsigned i_res = 0; i_res < CONFIG_T::n_filt / res_T::size; i_res++) {\n        #pragma HLS PIPELINE\n\n        res_T res_pack;\n        PRAGMA_DATA_PACK(res_pack)\n    MaxPoolPack:\n        for (unsigned i_pack = 0; i_pack < res_T::size; i_pack++) {\n            #pragma HLS UNROLL\n            #pragma HLS PIPELINE\n            res_pack[i_pack] = data_window[i_pack];\n        }\n        res.write(res_pack);\n    }\"\"\""
+        }
+    ]
+}

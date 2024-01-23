@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pixel_idx complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=pixel_idx cyclic factor=2"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS STREAM variable=depthwise_res depth=res_depth",
+            "Faulty Code": "#pragma HLS INTERFACE port=depthwise_res ap_none"
+        }
+    ]
+}

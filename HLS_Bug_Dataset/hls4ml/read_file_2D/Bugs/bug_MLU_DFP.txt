@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int jj = 0; jj < ncols; jj++) {",
+            "Faulty Code": "for (int jj = 0; jj < ncols - 1; jj++) {"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (int ii = 0; ii < nrows; ii++) {",
+            "Faulty Code": "#pragma HLS dataflow \nfor (int ii = 0; ii < nrows; ii++) {"
+        }
+    ]
+}

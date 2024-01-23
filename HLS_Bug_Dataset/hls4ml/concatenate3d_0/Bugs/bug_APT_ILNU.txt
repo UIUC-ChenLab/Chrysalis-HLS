@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 * CONFIG_T::n_elem1_2; ii++) {",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=data1"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1 * CONFIG_T::n_elem2_2; ii++) {",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

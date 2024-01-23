@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned iw = 0; iw < table_size; ++iw) {",
+            "Faulty Code": "for (unsigned iw = 0; ; ++iw) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "double const step = 64. / table_size;",
+            "Faulty Code": "double const step = 64. / (table_size / 2);"
+        }
+    ]
+}

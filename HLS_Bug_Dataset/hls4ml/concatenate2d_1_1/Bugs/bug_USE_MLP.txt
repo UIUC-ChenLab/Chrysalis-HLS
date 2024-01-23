@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "out_data[input1_T::size + k] = in_data2[k];",
+            "Faulty Code": "out_data[input1_T::size + k] = (input1_T::size + in_data2[k]);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS PIPELINE"
+        }
+    ]
+}

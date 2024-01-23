@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void fill_mult(typename CONFIG_T::index_t index, typename CONFIG_T::accum_t mult[CONFIG_T::n_out], typename CONFIG_T::accum_t weight)",
+            "Faulty Code": "void fill_mult(typename CONFIG_T::index_t index, typename CONFIG_T::accum_t mult, typename CONFIG_T::accum_t weight)"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

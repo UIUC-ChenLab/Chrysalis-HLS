@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned i_iw = 0; i_iw < CONFIG_T::in_width / (data_T::size / CONFIG_T::n_chan); i_iw++) {",
+            "Faulty Code": "for (unsigned i_iw = 0; i_iw <= CONFIG_T::in_width / (data_T::size / CONFIG_T::n_chan); i_iw++) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned i_iw = 0; i_iw < CONFIG_T::in_width; i_iw++) {",
+            "Faulty Code": "for (unsigned i_iw = 0; i_iw < CONFIG_T::in_width - 1; i_iw++) {"
+        }
+    ]
+}

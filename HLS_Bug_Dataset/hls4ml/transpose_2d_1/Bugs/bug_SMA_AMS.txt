@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<data_T> &data",
+            "Faulty Code": "#pragma HLS INTERFACE port=data bram"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<res_T> &res",
+            "Faulty Code": "#pragma HLS INTERFACE port=res ap_none"
+        }
+    ]
+}

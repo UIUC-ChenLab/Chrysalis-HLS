@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int im = 0; im < block_factor; im++) { #pragma HLS UNROLL ",
+            "Faulty Code": "for (int ir = 0; ir < rufactor; ir++) { #pragma HLS UNROLL factor=4 for (int im = 0; im < block_factor; im++) {"
+        }
+    ]
+}

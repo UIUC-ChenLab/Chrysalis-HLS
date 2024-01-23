@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::n_in; ii++) {",
+            "Faulty Code": "for (int ii = 0; ii <= CONFIG_T::n_in; ii++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "mult[index] = CONFIG_T::template product<data_T, typename CONFIG_T::weight_t>::product(cache, weights[index]);",
+            "Faulty Code": "mult[index] = CONFIG_T::template product<data_T, typename CONFIG_T::weight_t>::product(cache, weights[ii]);"
+        }
+    ]
+}

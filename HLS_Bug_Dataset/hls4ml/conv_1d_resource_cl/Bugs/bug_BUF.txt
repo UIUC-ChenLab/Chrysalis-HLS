@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "*(res++) = cast<data_T, res_T, typename CONFIG_T::mult_config>(acc[i_pxl][i_res]);",
+            "Faulty Code": "*(res++) = cast<data_T, res_T, typename CONFIG_T::mult_config>(data_buf[i_pxl][i_res]);"
+        }
+    ]
+}

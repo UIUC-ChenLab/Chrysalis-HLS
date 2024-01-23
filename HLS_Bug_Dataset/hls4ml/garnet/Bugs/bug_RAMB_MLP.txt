@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "compute_weights_aggregates<CONFIG_T>(data_getter, iv, means_local, arrays);",
+            "Faulty Code": "compute_weights_aggregates<CONFIG_T>(data_getter, iv + j, means_local, arrays); // assuming j is some loop variable introduced erroneously"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE II=2 // Incorrectly setting pipeline initiation interval inside an already pipelined loop"
+        }
+    ]
+}

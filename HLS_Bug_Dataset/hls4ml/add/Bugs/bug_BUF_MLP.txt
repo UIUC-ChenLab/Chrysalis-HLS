@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "res[ii] = data1[ii] + data2[ii];",
+            "Faulty Code": "res[ii] = data1[ii + CONFIG_T::n_elem] + data2[ii];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE\n\t#pragma HLS PIPELINE"
+        }
+    ]
+}

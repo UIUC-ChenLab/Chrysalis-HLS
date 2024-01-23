@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "acc += arrays.edge_weight_mean[ia] * aggr;",
+            "Faulty Code": "acc += arrays.edge_weight_mean[io] * aggr;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "res_T acc = output_transform_biases.output_biases[io];",
+            "Faulty Code": "res_T acc = 0;"
+        }
+    ]
+}

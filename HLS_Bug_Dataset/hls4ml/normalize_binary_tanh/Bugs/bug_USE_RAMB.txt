@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "if (datareg >= threshold[norm_index])",
+            "Faulty Code": "if ((int)datareg >= threshold[norm_index])"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "data_T datareg;",
+            "Faulty Code": "data_T datareg = data[ii];"
+        }
+    ]
+}

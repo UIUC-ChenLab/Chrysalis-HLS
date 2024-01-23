@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS array_partition variable=embeddings factor=CONFIG_T::n_out cyclic"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void embedding(hls::stream<data_T> &data, hls::stream<res_T> &res,\n               typename CONFIG_T::embeddings_t embeddings[CONFIG_T::vocab_size * CONFIG_T::n_out]) {",
+            "Faulty Code": "void embedding(hls::stream<data_T> &data, hls::stream<res_T> &res,\n               typename CONFIG_T::embeddings_t embeddings[CONFIG_T::vocab_size * CONFIG_T::n_out]) {\n#pragma HLS interface mode=ap_fifo port=embeddings"
+        }
+    ]
+}

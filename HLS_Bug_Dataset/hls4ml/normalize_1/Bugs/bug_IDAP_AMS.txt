@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=scale complete",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=scale"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void normalize(hls::stream<data_T> &data, hls::stream<res_T> &res, typename CONFIG_T::scale_t scale[CONFIG_T::n_scale_bias],",
+            "Faulty Code": "void normalize(hls::stream<data_T> &data, hls::stream<res_T> &res, typename CONFIG_T::scale_t &scale,"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned iv = 0; iv < CONFIG_T::n_vertices; ++iv) {",
+            "Faulty Code": "#pragma HLS unroll factor=4 \nfor (unsigned iv = 0; iv < CONFIG_T::n_vertices; ++iv) {"
+        }
+    ]
+}

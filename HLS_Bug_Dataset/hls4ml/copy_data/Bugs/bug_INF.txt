@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (typename std::vector<src_T>::const_iterator i = in_begin; i != in_end; ++i)",
+            "Faulty Code": "for (typename std::vector<src_T>::const_iterator i = in_begin; i != in_end; i)"
+        }
+    ]
+}

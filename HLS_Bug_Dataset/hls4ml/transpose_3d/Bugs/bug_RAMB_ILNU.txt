@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "data_t[idx_t[0] * dims_t[1] * dims_t[2] + idx_t[1] * dims_t[2] + idx_t[2]] =\n    data[idx[0] * dims[1] * dims[2] + idx[1] * dims[2] + idx[2]];",
+            "Faulty Code": "data_t[idx_t[2] * dims_t[1] * dims_t[0] + idx_t[1] * dims_t[0] + idx_t[0]] =\n    data[idx[2] * dims[1] * dims[0] + idx[1] * dims[0] + idx[0]];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (idx[0] = 0; idx[0] < dims[0]; idx[0]++) {\n        for (idx[1] = 0; idx[1] < dims[1]; idx[1]++) {\n            for (idx[2] = 0; idx[2] < dims[2]; idx[2]++) {",
+            "Faulty Code": "for (idx[0] = 0; idx[0] < dims[0]; idx[0]++) {\n        #pragma HLS unroll factor=2\n        for (idx[1] = 0; idx[1] < dims[1]; idx[1]++) {\n            for (idx[2] = 0; idx[2] < dims[2]; idx[2]++) {"
+        }
+    ]
+}

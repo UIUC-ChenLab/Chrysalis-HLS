@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "compute_depthwise_output_buffer_2d<data_T, res_T, CONFIG_T>(data.read(), line_buffer, res, weights, biases);",
+            "Faulty Code": "compute_depthwise_output_buffer_2d<data_T, res_T, CONFIG_T>((res_T)data.read(), line_buffer, res, weights, biases);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor\n#pragma HLS PIPELINE"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned x = softmax_idx_from_real_val<data_T, CONFIG_T>(data[i]);",
+            "Faulty Code": "int x = softmax_idx_from_real_val<data_T, CONFIG_T>(data[i]);"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "typename CONFIG_T::exp_table_t exp_sum(0);",
+            "Faulty Code": "typename CONFIG_T::exp_table_t exp_sum;"
+        }
+    ]
+}

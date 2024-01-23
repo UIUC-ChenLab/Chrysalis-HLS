@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE\n    #pragma HLS array_partition variable=res cyclic factor=5"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void maximum(input1_T data1[CONFIG_T::n_elem], input2_T data2[CONFIG_T::n_elem], res_T res[CONFIG_T::n_elem]) {\n    #pragma HLS PIPELINE\n\n    for (int ii = 0; ii < CONFIG_T::n_elem; ii++) {\n        res[ii] = (data1[ii] > data2[ii]) ? data1[ii] : data2[ii];\n    }\n}",
+            "Faulty Code": "void maximum(input1_T data1[CONFIG_T::n_elem], input2_T data2[CONFIG_T::n_elem], res_T res[CONFIG_T::n_elem]) {\n    #pragma HLS INTERFACE m_axi port=data1 offset=slave\n    #pragma HLS INTERFACE m_axi port=data2 offset=slave\n    #pragma HLS INTERFACE m_axi port=res offset=slave\n    #pragma HLS PIPELINE\n\n    for (int ii = 0; ii < CONFIG_T::n_elem; ii++) {\n        res[ii] = (data1[2*ii] > data2[2*ii]) ? data1[2*ii] : data2[2*ii];\n    }\n}"
+        }
+    ]
+}

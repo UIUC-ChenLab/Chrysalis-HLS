@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "typename data_T::value_type threshold_hi[CONFIG_T::n_scale_bias]",
+            "Faulty Code": "#pragma HLS interface port=threshold_hi s_axilite"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "data_T cache;",
+            "Faulty Code": "data_T cache = 0;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=scale complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=scale dim=2"
+        }
+    ]
+}

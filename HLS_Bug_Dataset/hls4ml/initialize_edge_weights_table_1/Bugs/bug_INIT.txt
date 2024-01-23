@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "typename CONFIG_T::distance_t v = -32.;",
+            "Faulty Code": "typename CONFIG_T::distance_t v;"
+        }
+    ]
+}

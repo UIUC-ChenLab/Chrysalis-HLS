@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "res_pack[i_pack] = data_window[i_pack];",
+            "Faulty Code": "res_pack[i_pack] = data_window[i_res * res_T::size + i_pack];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE inside another #pragma HLS PIPELINE block"
+        }
+    ]
+}

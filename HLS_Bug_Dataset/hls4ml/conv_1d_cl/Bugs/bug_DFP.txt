@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "conv_1d_latency_cl<data_T, res_T, CONFIG_T>(data, res, weights, biases);",
+            "Faulty Code": "#pragma HLS dataflow \n conv_1d_latency_cl<data_T, res_T, CONFIG_T>(data, res, weights, biases);"
+        }
+    ]
+}

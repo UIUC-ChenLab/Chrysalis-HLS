@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "typename CONFIG_T::exp_table_t exp_sum(0);",
+            "Faulty Code": "typename CONFIG_T::exp_table_t exp_sum;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void softmax_latency(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {",
+            "Faulty Code": "void softmax_latency(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {\n#pragma HLS INTERFACE bram port=res"
+        }
+    ]
+}

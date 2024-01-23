@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "for (unsigned p = 0; p < data_T::size / CONFIG_T::n_chan; p++) {\n    #pragma HLS LOOP_FLATTEN\n    #pragma HLS UNROLL\n\n    unsigned sw_idx = CONFIG_T::template scale_index_width<CONFIG_T::filt_width, CONFIG_T::stride_width, CONFIG_T::in_width>::scale_index(wp_idx + p);\n    pixel_idx[p] = CONFIG_T::pixels[sh_idx * CONFIG_T::min_width + sw_idx];\n}"
+        }
+    ]
+}

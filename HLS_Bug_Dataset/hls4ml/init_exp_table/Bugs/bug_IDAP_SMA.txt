@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void init_exp_table(typename CONFIG_T::exp_table_t table_out[CONFIG_T::table_size]) {",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=table_out"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void init_exp_table(typename CONFIG_T::exp_table_t table_out[CONFIG_T::table_size]) {",
+            "Faulty Code": "#pragma HLS interface port=table_out"
+        }
+    ]
+}

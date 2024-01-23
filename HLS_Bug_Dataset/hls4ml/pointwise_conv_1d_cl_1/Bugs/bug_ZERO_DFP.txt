@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "pointwise_mult_buffer<data_T, res_T, CONFIG_T>(data.read(), res, weights, biases);",
+            "Faulty Code": "pointwise_mult_buffer<data_T, res_T, CONFIG_T>(0, res, weights, biases);"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=weights complete",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

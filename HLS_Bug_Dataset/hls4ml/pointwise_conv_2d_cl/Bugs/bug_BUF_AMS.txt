@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "data_T data[CONFIG_T::in_height * CONFIG_T::in_width * CONFIG_T::n_chan]",
+            "Faulty Code": "data_T data[CONFIG_T::out_height * CONFIG_T::out_width * CONFIG_T::n_chan]"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INLINE region",
+            "Faulty Code": "#pragma HLS INTERFACE port=data mode=s_axilite"
+        }
+    ]
+}

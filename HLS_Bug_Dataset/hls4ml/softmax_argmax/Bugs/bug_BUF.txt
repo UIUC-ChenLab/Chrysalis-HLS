@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "maximum = data[i];",
+            "Faulty Code": "maximum = data[i + CONFIG_T::n_in / 2];"
+        }
+    ]
+}

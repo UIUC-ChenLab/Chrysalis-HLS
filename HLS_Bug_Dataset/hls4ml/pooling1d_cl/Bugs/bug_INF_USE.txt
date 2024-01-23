@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int ii = 0; ii < padded_width; ii += CONFIG_T::stride_width) {",
+            "Faulty Code": "for (int ii = 0; ii <= padded_width; ii += CONFIG_T::stride_width) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "res[(ii / CONFIG_T::stride_width) * CONFIG_T::n_filt + ff] *= rescale;",
+            "Faulty Code": "res[(ii / CONFIG_T::stride_width) * CONFIG_T::n_filt + ff] *= (int)rescale;"
+        }
+    ]
+}

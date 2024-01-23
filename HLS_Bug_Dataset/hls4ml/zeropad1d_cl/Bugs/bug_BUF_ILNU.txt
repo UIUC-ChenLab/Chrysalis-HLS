@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "*(res++) = (res_T) * (data++);",
+            "Faulty Code": "*(res++) = (res_T) * (data + CONFIG_T::n_chan); // Incorrectly jumps ahead by n_chan elements"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS unroll factor=4 // Incorrect pragma, should not unroll the outer loop"
+        }
+    ]
+}

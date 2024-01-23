@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::n_in; ii++) {\n    datareg = 2 * data[ii];\n    if (datareg > 1)\n        cache = 1;\n    else if (datareg > -1 && datareg <= 1)\n        cache = 0;\n    else\n        cache = -1;\n\n    res[ii] = (res_T)cache;\n}",
+            "Faulty Code": "for (int ii = 0; ii <= CONFIG_T::n_in; ii++) {\n    datareg = 2 * data[ii];\n    if (datareg > 1)\n        cache = 1;\n    else if (datareg > -1 && datareg <= 1)\n        cache = 0;\n    else\n        cache = -1;\n\n    res[ii] = (res_T)cache;\n}"
+        }
+    ]
+}

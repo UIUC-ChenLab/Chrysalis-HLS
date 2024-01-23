@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pool_window complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=pool_window block factor=2"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void pooling1d_buffer_cl(hls::stream<data_T> &data, hls::stream<res_T> &res) {",
+            "Faulty Code": "void pooling1d_buffer_cl(hls::stream<data_T> &data, hls::stream<res_T> &res) {\n#pragma HLS INTERFACE port=res ap_none"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "unsigned iv = ivv * unroll_factor + ir;",
+            "Faulty Code": "unsigned iv = ivv * (unroll_factor + 1) + ir;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=means_local type=cyclic factor=unroll_factor"
+        }
+    ]
+}

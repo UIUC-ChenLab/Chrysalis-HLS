@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (ivv * unroll_factor >= nvtx)\n    break;",
+            "Faulty Code": "if (ivv * unroll_factor > nvtx)\n    continue;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=output_base complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=output_base factor=5"
+        }
+    ]
+}

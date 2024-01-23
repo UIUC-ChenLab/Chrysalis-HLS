@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void ternary_tanh(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {\n    #pragma HLS PIPELINE\n\n    data_T datareg;\n    res_T cache;\n    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {\n        datareg = 2 * data[ii];\n        if (datareg > 1)\n            cache = 1;\n        else if (datareg > -1 && datareg <= 1)\n            cache = 0;\n        else\n            cache = -1;\n\n        res[ii] = (res_T)cache;\n    }\n}",
+            "Faulty Code": "void ternary_tanh(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {\n    #pragma HLS INTERFACE port=res mode=ap_none\n    #pragma HLS PIPELINE\n\n    data_T datareg;\n    res_T cache;\n    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {\n        datareg = 2 * data[ii];\n        if (datareg > 1)\n            cache = 1;\n        else if (datareg > -1 && datareg <= 1)\n            cache = 0;\n        else\n            cache = -1;\n\n        res[ii] = (res_T)cache;\n    }\n}"
+        }
+    ]
+}

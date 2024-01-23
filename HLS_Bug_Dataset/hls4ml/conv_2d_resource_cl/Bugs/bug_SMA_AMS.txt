@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=biases complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=biases bram"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=data_buf complete dim=0",
+            "Faulty Code": "#pragma HLS INTERFACE port=data_buf ap_none"
+        }
+    ]
+}

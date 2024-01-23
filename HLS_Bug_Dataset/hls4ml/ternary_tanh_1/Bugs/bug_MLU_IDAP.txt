@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "data_T in_data = data.read();",
+            "Faulty Code": "data_T in_data; for(int k = 0; k < 2; k++) in_data[k] = data.read();"
+        }
+    ]
+}

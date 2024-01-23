@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T out_data;",
+            "Faulty Code": "res_T out_data = {0}; // Assuming res_T is an array type, this initializes all elements to zero"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int j = 0; j < res_T::size; j++) {",
+            "Faulty Code": "for (int j = 0; j < res_T::size - 1; j++) { // Incorrectly unrolls one iteration less"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "dataType data[nrows][ncols]",
+            "Faulty Code": "dataType data[nrows/2][ncols]"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if (fscanf(fp, \"%f\\n\", &newval) != 0) {",
+            "Faulty Code": "if (fscanf(fp, \"%f\\n\", &newval) != 1) {"
+        }
+    ]
+}

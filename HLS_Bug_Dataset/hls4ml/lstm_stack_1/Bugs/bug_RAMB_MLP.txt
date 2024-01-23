@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=h_newstate complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=h_newstate mode=m_axi"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "for (int ir = 0; ir < rufactor; ir++) { #pragma HLS PIPELINE II=CONFIG_T::reuse_factor"
+        }
+    ]
+}

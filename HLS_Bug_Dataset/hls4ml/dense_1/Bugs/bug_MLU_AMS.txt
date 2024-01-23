@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i_pack = 0; i_pack < data_T::size; i_pack++) {",
+            "Faulty Code": "for (int i_pack = 0; i_pack < data_T::size - 1; i_pack++) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=res complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=res ap_none"
+        }
+    ]
+}

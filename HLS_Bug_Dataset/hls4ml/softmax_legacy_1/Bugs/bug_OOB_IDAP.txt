@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "int index = data_round + 8 * CONFIG_T::table_size / 16;",
+            "Faulty Code": "int index = data_round + 8 * (CONFIG_T::table_size + 1) / 16;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=data"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned k = 0; k < CONFIG_T::n_out; k++) {",
+            "Faulty Code": "for (unsigned k = 0; k <= CONFIG_T::n_out; k++) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "if (k == index)\n            mult[k] += weight;",
+            "Faulty Code": "if (k % 2 == index % 2)\n            mult[k] += weight;"
+        }
+    ]
+}

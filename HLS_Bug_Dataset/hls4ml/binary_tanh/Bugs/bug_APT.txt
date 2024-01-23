@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "void binary_tanh(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {\n    #pragma HLS PIPELINE\n\n    data_T datareg;\n    res_T cache;\n    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {\n        datareg = data[ii];\n        if (datareg > 0)\n            cache = 1;\n        else\n            cache = -1;\n\n        res[ii] = (res_T)cache;\n    }\n}",
+            "Faulty Code": "void binary_tanh(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {\n    #pragma HLS PIPELINE\n    #pragma HLS array_partition type=cyclic\n\n    data_T datareg;\n    res_T cache;\n    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {\n        datareg = data[ii];\n        if (datareg > 0)\n            cache = 1;\n        else\n            cache = -1;\n\n        res[ii] = (res_T)cache;\n    }\n}"
+        }
+    ]
+}

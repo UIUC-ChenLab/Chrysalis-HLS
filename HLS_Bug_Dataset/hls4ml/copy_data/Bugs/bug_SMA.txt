@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void copy_data(std::vector<src_T> src, hls::stream<dst_T> &dst)",
+            "Faulty Code": "#pragma HLS interface port=src bram"
+        }
+    ]
+}

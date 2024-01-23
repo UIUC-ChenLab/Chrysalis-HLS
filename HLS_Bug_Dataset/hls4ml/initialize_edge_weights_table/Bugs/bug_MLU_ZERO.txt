@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned iw = 1; iw < table_size; ++iw) {",
+            "Faulty Code": "for (unsigned iw = 1; iw <= table_size; ++iw) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "edge_weights_table[0] = ap_ufixed<CONFIG_T::edge_weight_t::width, 0, AP_TRN, AP_SAT>(1.);",
+            "Faulty Code": "edge_weights_table[0] = ap_ufixed<CONFIG_T::edge_weight_t::width, 0, AP_TRN, AP_SAT>(0.);"
+        }
+    ]
+}

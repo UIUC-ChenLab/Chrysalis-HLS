@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < CONFIG_T::n_elem / input1_T::size; i++) {",
+            "Faulty Code": "for (int i = 0; i <= CONFIG_T::n_elem / input1_T::size; i++) {"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "PRAGMA_DATA_PACK(out_data)",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=out_data type=wrong_type"
+        }
+    ]
+}

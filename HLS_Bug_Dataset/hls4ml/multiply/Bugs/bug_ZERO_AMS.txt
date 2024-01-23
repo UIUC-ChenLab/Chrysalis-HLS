@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "void multiply(input1_T data1[CONFIG_T::n_elem], input2_T data2[CONFIG_T::n_elem], res_T res[CONFIG_T::n_elem]) {",
+            "Faulty Code": "void multiply(input1_T data1[CONFIG_T::n_elem] = {}, input2_T data2[CONFIG_T::n_elem], res_T res[CONFIG_T::n_elem]) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void multiply(input1_T data1[CONFIG_T::n_elem], input2_T data2[CONFIG_T::n_elem], res_T res[CONFIG_T::n_elem]) {",
+            "Faulty Code": "void multiply(input1_T data1[CONFIG_T::n_elem], input2_T data2[CONFIG_T::n_elem], res_T res[CONFIG_T::n_elem]) { #pragma HLS INTERFACE port=res ap_none }"
+        }
+    ]
+}

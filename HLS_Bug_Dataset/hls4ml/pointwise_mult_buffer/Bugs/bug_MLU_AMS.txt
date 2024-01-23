@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int ir = 0; ir < rufactor; ir++) {",
+            "Faulty Code": "for (int ir = 0; ir <= rufactor; ir++) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void pointwise_mult_buffer(const data_T &data_pack, hls::stream<res_T> &res_stream, ...)",
+            "Faulty Code": "void pointwise_mult_buffer(const data_T &data_pack, hls::stream<res_T> &res_stream, ...)\n#pragma HLS INTERFACE port=res_stream ap_none"
+        }
+    ]
+}

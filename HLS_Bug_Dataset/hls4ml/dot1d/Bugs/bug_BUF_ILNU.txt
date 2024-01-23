@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "res[0] = cast<input1_T, res_T, CONFIG_T>(acc);",
+            "Faulty Code": "res[CONFIG_T::n_out] = cast<input1_T, res_T, CONFIG_T>(acc);"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=4"
+        }
+    ]
+}

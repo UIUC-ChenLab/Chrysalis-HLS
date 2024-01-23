@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "h_state[i_h_state] = 0;",
+            "Faulty Code": "h_state[i_h_state] = some_non_zero_value;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=h_newstate complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=h_newstate bram"
+        }
+    ]
+}

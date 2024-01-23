@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < N / data_T::size; i++) {",
+            "Faulty Code": "for (int i = 0; i < N / data_T::size - 1; i++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "res_T out_data1;",
+            "Faulty Code": "res_T out_data1 = 0;"
+        }
+    ]
+}

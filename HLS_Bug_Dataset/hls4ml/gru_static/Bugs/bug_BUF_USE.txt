@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "inputacc_zr[iacc] = tmpres[index] + tmpres_state_zr[index];",
+            "Faulty Code": "inputacc_zr[iacc] = tmpres[index + CONFIG_T::n_state] + tmpres_state_zr[index];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "h_state[iacc] = (res_T)(tmpres_h[iacc] * (1 - tmpres_zr[iacc]) + h_state[iacc] * tmpres_zr[iacc]);",
+            "Faulty Code": "h_state[iacc] = tmpres_h[iacc] * (1 - tmpres_zr[iacc]) + h_state[iacc] * tmpres_zr[iacc];"
+        }
+    ]
+}

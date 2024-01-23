@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "    for (int i = 0; i < CONFIG_T::n_elem1_0 / input1_T::size; i++) {\n        #pragma HLS PIPELINE\n        input1_T in_data1 = data1.read();\n    ConcatPack1:\n        for (int j = 0; j < input1_T::size; j++) {\n            #pragma HLS UNROLL\n            #pragma HLS PIPELINE\n            out_data[j + (i * input1_T::size)] = in_data1[j];\n        }\n    }"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "res_T out_data;",
+            "Faulty Code": "res_T out_data = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (int j = 0; j < res_T::size; j++) {",
+            "Faulty Code": "for (int j = 0; j < res_T::size; j += 2) {"
+        }
+    ]
+}

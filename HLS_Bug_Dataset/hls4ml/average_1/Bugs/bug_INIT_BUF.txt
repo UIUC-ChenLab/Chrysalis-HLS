@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T out_data;",
+            "Faulty Code": "res_T out_data = {}; // Assuming default initialization is not done and it's required to zero initialize"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "out_data[j] = (in_data1[j] + in_data2[j]) / (typename res_T::value_type)2;",
+            "Faulty Code": "out_data[j + res_T::size/2] = (in_data1[j] + in_data2[j]) / (typename res_T::value_type)2; // Incorrectly accessing the wrong half of the buffer"
+        }
+    ]
+}

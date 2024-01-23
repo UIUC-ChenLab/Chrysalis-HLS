@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "res_T res_pack;",
+            "Faulty Code": "res_T res_pack = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "res_pack[i] = embeddings[in_data[j] * CONFIG_T::n_out + i];",
+            "Faulty Code": "res_pack[i] = (int8_t)embeddings[in_data[j] * CONFIG_T::n_out + i];"
+        }
+    ]
+}

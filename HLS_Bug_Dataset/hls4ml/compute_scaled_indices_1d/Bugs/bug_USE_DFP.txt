@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned wp_idx = w_idx * (data_T::size / CONFIG_T::n_chan);",
+            "Faulty Code": "int wp_idx = w_idx * (data_T::size / CONFIG_T::n_chan);"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

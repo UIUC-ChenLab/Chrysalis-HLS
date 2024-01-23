@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void transpose_2d(data_T data[CONFIG_T::height * CONFIG_T::width], res_T data_t[CONFIG_T::height * CONFIG_T::width]) {",
+            "Faulty Code": "#pragma HLS interface m_axi port=data offset=slave bundle=gmem0\n#pragma HLS interface m_axi port=data_t offset=slave bundle=gmem1\nvoid transpose_2d(data_T data[CONFIG_T::height * CONFIG_T::width], res_T data_t[CONFIG_T::height * CONFIG_T::width]) {"
+        }
+    ]
+}

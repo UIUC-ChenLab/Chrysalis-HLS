@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::kernel_size * CONFIG_T::n_chan; ii++) {",
+            "Faulty Code": "for (int ii = 0; ii < CONFIG_T::kernel_size * CONFIG_T::n_chan - 1; ii++) {"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=mult complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=mult cyclic factor=2"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "sX = ((sX - lShiftX) == 0) ? sX - CONFIG_T::stride_width + 1 : sX + 1;",
+            "Faulty Code": "sX = ((sX - lShiftX) == 0) ? sX - CONFIG_T::stride_width : sX + 1;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=kernel_data complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=kernel_data cyclic factor=2"
+        }
+    ]
+}

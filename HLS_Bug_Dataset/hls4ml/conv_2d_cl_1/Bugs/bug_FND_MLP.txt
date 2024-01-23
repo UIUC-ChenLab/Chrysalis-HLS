@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = line_buffer complete dim = 2",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=line_buffer cyclic factor=3 dim=2"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS PIPELINE"
+        }
+    ]
+}

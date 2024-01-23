@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned i_iw = 0; i_iw < CONFIG_T::in_width; i_iw++) {",
+            "Faulty Code": "for (unsigned i_iw = 0; ; i_iw++) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "for (unsigned i_iw = 0; i_iw < CONFIG_T::in_width; i_iw++) { #pragma HLS PIPELINE"
+        }
+    ]
+}

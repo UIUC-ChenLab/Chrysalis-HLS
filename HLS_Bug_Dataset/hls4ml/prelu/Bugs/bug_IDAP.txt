@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "\"\"\"void prelu(data_T data[CONFIG_T::n_in], data_T alpha[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {\n#pragma HLS PIPELINE\n\ndata_T datareg;\nfor (int ii = 0; ii < CONFIG_T::n_in; ii++) {\ndatareg = data[ii];\nif (datareg > 0)\nres[ii] = datareg;\nelse\nres[ii] = alpha[ii] * datareg;\n}\n}\"\"\"",
+            "Faulty Code": "\"\"\"void prelu(data_T data[CONFIG_T::n_in], data_T alpha[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {\n#pragma HLS INTERFACE ap_fifo port=data\n#pragma HLS INTERFACE ap_fifo port=alpha\n#pragma HLS INTERFACE ap_fifo port=res\n#pragma HLS PIPELINE\n\ndata_T datareg;\nfor (int ii = 0; ii < CONFIG_T::n_in; ii++) {\ndatareg = data[ii];\nif (datareg > 0)\nres[ii] = datareg;\nelse\nres[ii] = alpha[ii] * datareg;\n}\n}\"\"\""
+        }
+    ]
+}

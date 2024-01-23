@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "void conv_1d_cl(data_T data[CONFIG_T::in_width * CONFIG_T::n_chan], ...)",
+            "Faulty Code": "void conv_1d_cl(int data[CONFIG_T::in_width * CONFIG_T::n_chan], ...)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INLINE region",
+            "Faulty Code": "#pragma HLS INTERFACE port=weights mode=s_axilite"
+        }
+    ]
+}

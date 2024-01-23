@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out_data[k] = in_data1[k];",
+            "Faulty Code": "out_data[input1_T::size + k] = in_data1[k];"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=input1_T::size+1"
+        }
+    ]
+}

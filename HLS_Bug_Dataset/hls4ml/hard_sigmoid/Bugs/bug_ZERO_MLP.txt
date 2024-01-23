@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "auto datareg = CONFIG_T::slope * data[ii] + CONFIG_T::shift;",
+            "Faulty Code": "auto datareg = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "    #pragma HLS pipeline // Incorrectly nested inside the for loop"
+        }
+    ]
+}

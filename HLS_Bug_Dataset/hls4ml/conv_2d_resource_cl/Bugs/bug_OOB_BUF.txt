@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (i_in >= mult_n_in) { i_in = i_rf; }",
+            "Faulty Code": "if (i_in > mult_n_in) { i_in = i_rf; }"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "acc[i_pxl][i_acc] = (typename CONFIG_T::accum_t)biases[i_acc];",
+            "Faulty Code": "acc[i_pxl][i_acc] = (typename CONFIG_T::accum_t)biases[i_pxl];"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "compute_depthwise_output_buffer_1d<data_T, res_T, CONFIG_T>(data.read(), res, weights, biases);",
+            "Faulty Code": "data_T data_in; compute_depthwise_output_buffer_1d<data_T, res_T, CONFIG_T>(data_in, res, weights, biases);"
+        }
+    ]
+}

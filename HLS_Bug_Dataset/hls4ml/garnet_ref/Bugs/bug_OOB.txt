@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "unsigned const ivx = iv * CONFIG_T::n_in_features + ix;",
+            "Faulty Code": "unsigned const ivx = (iv+1) * CONFIG_T::n_in_features + ix;"
+        }
+    ]
+}

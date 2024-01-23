@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int norm_index;",
+            "Faulty Code": "short norm_index;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=scale complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=scale type=cyclic"
+        }
+    ]
+}

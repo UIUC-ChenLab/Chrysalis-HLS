@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::n_in; ii++) {",
+            "Faulty Code": "for (int ii = 0; ii < CONFIG_T::n_in - 1; ii++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "index = data_round + 8 * CONFIG_T::table_size / 16;",
+            "Faulty Code": "index = data_round + 8 * (CONFIG_T::table_size / 16 - 1);"
+        }
+    ]
+}

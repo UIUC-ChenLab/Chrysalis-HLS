@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "img_overlap++;",
+            "Faulty Code": "img_overlap = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "pool[kk * CONFIG_T::stride_width + ll] = pad_val<data_T, CONFIG_T::pool_op>();",
+            "Faulty Code": "pool[ll] = pad_val<data_T, CONFIG_T::pool_op>();"
+        }
+    ]
+}

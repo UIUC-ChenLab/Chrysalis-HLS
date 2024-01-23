@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void compute_pool_encoded_1d(const unsigned w_idx, const data_T &in_elem, hls::stream<typename data_T::value_type> data_window[CONFIG_T::pool_width * CONFIG_T::n_filt], hls::stream<res_T> &res, res_T &res_pack, unsigned &outputs_ready) {",
+            "Faulty Code": "#pragma HLS dataflow void compute_pool_encoded_1d(const unsigned w_idx, const data_T &in_elem, hls::stream<typename data_T::value_type> data_window[CONFIG_T::pool_width * CONFIG_T::n_filt], hls::stream<res_T> &res, res_T &res_pack, unsigned &outputs_ready) {"
+        }
+    ]
+}

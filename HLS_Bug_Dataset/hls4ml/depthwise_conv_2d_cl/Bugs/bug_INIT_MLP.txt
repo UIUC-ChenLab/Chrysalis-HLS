@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T res_pack;",
+            "Faulty Code": "res_T res_pack = res_T(); // Assuming res_T() does not initialize the variable to zero or default state which is often the case in hardware synthesis."
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "if (CONFIG_T::strategy == nnet::latency) {\n    #pragma HLS PIPELINE II=CONFIG_T::reuse_factor\n}",
+            "Faulty Code": "if (CONFIG_T::strategy == nnet::latency) {\n    #pragma HLS PIPELINE II=CONFIG_T::reuse_factor\n    for (unsigned i = 0; i < CONFIG_T::n_chan; i++) {\n        #pragma HLS PIPELINE\n    }\n}"
+        }
+    ]
+}

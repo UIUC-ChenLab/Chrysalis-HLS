@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned pool_table_width[CONFIG_T::n_in];",
+            "Faulty Code": "unsigned pool_table_width[CONFIG_T::n_in] = {0};"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pool_window complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=pool_window cyclic factor=2"
+        }
+    ]
+}

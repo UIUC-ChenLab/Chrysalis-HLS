@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "ReadInputWidth:\nfor (unsigned i_iw = 0; i_iw < CONFIG_T::in_width / (data_T::size / CONFIG_T::n_chan); i_iw++) {\n#pragma HLS LOOP_FLATTEN\nif (CONFIG_T::strategy == nnet::latency && data_T::size / CONFIG_T::n_chan == 1) {\n#pragma HLS PIPELINE II=CONFIG_T::reuse_factor\n}\ncompute_scaled_indices_1d<data_T, CONFIG_T>(i_iw, pixel_idx);\ncompute_depthwise_output_encoded<data_T, res_T, CONFIG_T>(data.read(), data_window, res, res_pack, outputs_ready, weights, biases, pixel_idx);\n}",
+            "Faulty Code": "ReadInputWidth:\nfor (unsigned i_iw = 0; i_iw < CONFIG_T::in_width / (data_T::size / CONFIG_T::n_chan); ) {\n#pragma HLS LOOP_FLATTEN\nif (CONFIG_T::strategy == nnet::latency && data_T::size / CONFIG_T::n_chan == 1) {\n#pragma HLS PIPELINE II=CONFIG_T::reuse_factor\n}\ncompute_scaled_indices_1d<data_T, CONFIG_T>(i_iw, pixel_idx);\ncompute_depthwise_output_encoded<data_T, res_T, CONFIG_T>(data.read(), data_window, res, res_pack, outputs_ready, weights, biases, pixel_idx);\n}"
+        }
+    ]
+}

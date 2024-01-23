@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "unsigned pool_table_width[CONFIG_T::n_in];",
+            "Faulty Code": "unsigned pool_table_width[CONFIG_T::pool_width];"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "static typename data_T::value_type kernel_data[CONFIG_T::pool_width * CONFIG_T::n_filt];",
+            "Faulty Code": "static typename data_T::value_type kernel_data[CONFIG_T::n_filt];"
+        }
+    ]
+}

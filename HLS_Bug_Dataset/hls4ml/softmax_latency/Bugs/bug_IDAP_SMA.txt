@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=data"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "typename CONFIG_T::exp_table_t exp_res[CONFIG_T::n_in];",
+            "Faulty Code": "#pragma HLS interface port=exp_res bram"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "out_data[k] = in_data1[k];",
+            "Faulty Code": "out_data[k] = (res_T)in_data1[k];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=out_data factor=3"
+        }
+    ]
+}

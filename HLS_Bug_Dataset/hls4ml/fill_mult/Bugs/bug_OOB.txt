@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "void fill_mult(typename CONFIG_T::index_t index, typename CONFIG_T::accum_t mult[CONFIG_T::n_out],\n               typename CONFIG_T::accum_t weight) {\n    for (unsigned k = 0; k < CONFIG_T::n_out; k++) {\n        #pragma HLS UNROLL\n        if (k == index)\n            mult[k] += weight;\n    }\n}",
+            "Faulty Code": "void fill_mult(typename CONFIG_T::index_t index, typename CONFIG_T::accum_t mult[CONFIG_T::n_out],\n               typename CONFIG_T::accum_t weight) {\n    for (unsigned k = 0; k <= CONFIG_T::n_out; k++) {\n        #pragma HLS UNROLL\n        if (k == index)\n            mult[k] += weight;\n    }\n}"
+        }
+    ]
+}

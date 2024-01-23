@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "h_state[i_h_state] = 0;",
+            "Faulty Code": "h_state[i_h_state] = 1;"
+        }
+    ]
+}

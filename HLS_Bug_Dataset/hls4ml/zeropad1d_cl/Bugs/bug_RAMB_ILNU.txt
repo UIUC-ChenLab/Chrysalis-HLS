@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "*(res++) = (res_T) * (data++);",
+            "Faulty Code": "*(res + i * CONFIG_T::n_chan + j) = (res_T) *(data + i * CONFIG_T::n_chan + j);"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int j = 0; j < CONFIG_T::n_chan; j++) { *(res++) = 0; }",
+            "Faulty Code": "#pragma HLS unroll factor=4 for (int j = 0; j < CONFIG_T::n_chan; j++) { *(res++) = 0; }"
+        }
+    ]
+}

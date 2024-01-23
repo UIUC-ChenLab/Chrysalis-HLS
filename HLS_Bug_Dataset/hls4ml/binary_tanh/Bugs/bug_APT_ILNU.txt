@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "void binary_tanh(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=data cyclic factor=2"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::n_in; ii++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

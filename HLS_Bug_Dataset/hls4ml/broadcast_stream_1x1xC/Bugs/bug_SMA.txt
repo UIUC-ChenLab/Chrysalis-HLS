@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void broadcast_stream_1x1xC(hls::stream<data_T> &data, hls::stream<res_T> &res) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=data bram"
+        }
+    ]
+}

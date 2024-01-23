@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "for (int k = 0; k < input1_T::size; k++) {",
+            "Faulty Code": "for (int k = 0; k < input2_T::size; k++) {"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic factor=2 dim=1"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "void ternary_tanh(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {",
+            "Faulty Code": "void ternary_tanh(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) { #pragma HLS array_partition variable=data dim=2 complete"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "void ternary_tanh(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {",
+            "Faulty Code": "void ternary_tanh(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) { #pragma HLS unroll factor=4"
+        }
+    ]
+}

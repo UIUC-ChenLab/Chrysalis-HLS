@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int j = 0; j < CONFIG_T::width; j++) {",
+            "Faulty Code": "for (int j = 0; j < CONFIG_T::width - 1; j++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "data_T data[CONFIG_T::height * CONFIG_T::width], res_T data_t[CONFIG_T::height * CONFIG_T::width]",
+            "Faulty Code": "data_T data[CONFIG_T::height * CONFIG_T::width] = {0}, res_T data_t[CONFIG_T::height * CONFIG_T::width] = {0}"
+        }
+    ]
+}

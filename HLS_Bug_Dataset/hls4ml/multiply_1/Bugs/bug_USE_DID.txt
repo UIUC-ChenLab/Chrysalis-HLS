@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "out_data[j] = in_data1[j] * in_data2[j];",
+            "Faulty Code": "out_data[j] = (short)(in_data1[j] * in_data2[j]);"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS PIPELINE II=CONFIG_T::n_elem"
+        }
+    ]
+}

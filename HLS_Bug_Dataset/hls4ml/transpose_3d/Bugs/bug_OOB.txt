@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "data_t[idx_t[0] * dims_t[1] * dims_t[2] + idx_t[1] * dims_t[2] + idx_t[2]] =\n    data[idx[0] * dims[1] * dims[2] + idx[1] * dims[2] + idx[2]];",
+            "Faulty Code": "data_t[idx_t[0] * dims_t[0] * dims_t[1] + idx_t[1] * dims_t[2] + idx_t[2]] =\n    data[idx[0] * dims[0] * dims[1] + idx[1] * dims[2] + idx[2]];"
+        }
+    ]
+}

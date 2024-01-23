@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition factor=3"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void concatenate3d_0(input1_T data1[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 * CONFIG_T::n_elem1_2],",
+            "Faulty Code": "#pragma HLS interface mode=ap_memory port=data1"
+        }
+    ]
+}

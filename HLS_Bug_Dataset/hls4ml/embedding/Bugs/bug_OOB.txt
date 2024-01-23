@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "res[j * CONFIG_T::n_out + i] = embeddings[data[j] * CONFIG_T::n_out + i];",
+            "Faulty Code": "res[j * CONFIG_T::n_out + i] = embeddings[data[j+1] * CONFIG_T::n_out + i];"
+        }
+    ]
+}

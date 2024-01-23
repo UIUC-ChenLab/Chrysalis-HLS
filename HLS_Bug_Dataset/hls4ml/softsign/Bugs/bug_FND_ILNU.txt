@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=softsign_table factor=3 cyclic"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::n_in; ii++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (int ii = 0; ii < CONFIG_T::n_in; ii++) {"
+        }
+    ]
+}

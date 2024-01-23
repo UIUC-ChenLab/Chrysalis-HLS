@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "res[j * CONFIG_T::n_out + i] = embeddings[data[j] * CONFIG_T::n_out + i];",
+            "Faulty Code": "res[j * CONFIG_T::n_out + i] = embeddings[(data[j] + 1) * CONFIG_T::n_out + i];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

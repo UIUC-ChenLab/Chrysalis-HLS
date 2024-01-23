@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (pX + 1 == CONFIG_T::in_width) // Includes padding, end of line (padded)",
+            "Faulty Code": "if (pX == CONFIG_T::in_width) // Includes padding, end of line (padded)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::n_in; ii++) {",
+            "Faulty Code": "for (int ii = 0; ii <= CONFIG_T::n_in; ii++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "res[ii] = alpha[ii] * datareg;",
+            "Faulty Code": "res[ii] = 0;"
+        }
+    ]
+}

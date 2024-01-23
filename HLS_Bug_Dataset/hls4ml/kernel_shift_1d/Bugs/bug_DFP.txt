@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "\"\"\"KernelPushChannel:\nfor (int i_ic = 0; i_ic < CONFIG_T::n_chan; i_ic++) {\n#pragma HLS UNROLL\nkernel_window[lastheight + i_ic] = in_elem[i_ic];\n}\"\"\"",
+            "Faulty Code": "\"\"\"KernelPushChannel:\nfor (int i_ic = 0; i_ic < CONFIG_T::n_chan; i_ic++) {\n#pragma HLS dataflow\n#pragma HLS UNROLL\nkernel_window[lastheight + i_ic] = in_elem[i_ic];\n}\"\"\""
+        }
+    ]
+}

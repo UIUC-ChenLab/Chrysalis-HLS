@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int j = 0; j < res_T::size; j++) {",
+            "Faulty Code": "for (int j = 0; j < res_T::size - 1; j++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "typename CONFIG_T::table_t elu_table[CONFIG_T::table_size];",
+            "Faulty Code": "typename CONFIG_T::table_t elu_table[CONFIG_T::table_size] = {0};"
+        }
+    ]
+}

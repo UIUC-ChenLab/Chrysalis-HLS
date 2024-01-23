@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "kernel_window[lastheight + i_ih * CONFIG_T::filt_width * CONFIG_T::n_chan + i_ic] = shift_buffer[i_ih][i_ic];",
+            "Faulty Code": "kernel_window[i_ih * CONFIG_T::filt_width * CONFIG_T::n_chan + i_ic] = shift_buffer[i_ih][i_ic];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static const int filt_width = CONFIG_T::filt_width - 1;",
+            "Faulty Code": "static const int filt_width = 0;"
+        }
+    ]
+}

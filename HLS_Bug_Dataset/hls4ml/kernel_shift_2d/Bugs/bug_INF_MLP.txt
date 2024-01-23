@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i_iw = 0; i_iw < filt_width; i_iw++) {",
+            "Faulty Code": "for (int i_iw = 0; i_iw <= filt_width; i_iw++) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

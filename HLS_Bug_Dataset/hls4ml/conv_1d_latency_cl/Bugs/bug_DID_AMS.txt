@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=data_buf complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=data_buf complete dim=2"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "typename CONFIG_T::accum_t mult[mult_n_in * mult_n_out];",
+            "Faulty Code": "#pragma HLS INTERFACE port=mult ap_none"
+        }
+    ]
+}

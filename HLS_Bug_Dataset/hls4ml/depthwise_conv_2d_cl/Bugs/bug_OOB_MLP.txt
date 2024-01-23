@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned i_out = 0; i_out < CONFIG_T::filt_height * CONFIG_T::filt_width * CONFIG_T::n_chan; i_out++) {",
+            "Faulty Code": "for (unsigned i_out = 0; i_out <= CONFIG_T::filt_height * CONFIG_T::filt_width * CONFIG_T::n_chan; i_out++) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "if (CONFIG_T::strategy == nnet::latency) {\n                #pragma HLS PIPELINE II=CONFIG_T::reuse_factor\n            }",
+            "Faulty Code": "if (CONFIG_T::strategy == nnet::latency) {\n                #pragma HLS PIPELINE II=CONFIG_T::reuse_factor\n                #pragma HLS PIPELINE\n            }"
+        }
+    ]
+}

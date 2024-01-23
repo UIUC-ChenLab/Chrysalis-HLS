@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "for (unsigned i_iw = 0; i_iw < CONFIG_T::n_in / (data_T::size / CONFIG_T::n_filt); i_iw++) {\n#pragma HLS LOOP_FLATTEN\ncompute_global_pool<data_T, res_T, CONFIG_T>(data.read(), data_window);\n}",
+            "Faulty Code": "for (unsigned i_iw = 0; i_iw < CONFIG_T::n_in / (data_T::size / CONFIG_T::n_filt); i_iw++) {\n#pragma HLS dataflow\ncompute_global_pool<data_T, res_T, CONFIG_T>(data.read(), data_window);\n}"
+        }
+    ]
+}

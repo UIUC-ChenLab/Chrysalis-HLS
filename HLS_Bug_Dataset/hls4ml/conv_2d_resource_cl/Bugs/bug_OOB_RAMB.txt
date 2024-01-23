@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "acc[i_pxl][i_acc] = (typename CONFIG_T::accum_t)biases[i_acc];",
+            "Faulty Code": "acc[i_pxl][i_out] = (typename CONFIG_T::accum_t)biases[i_out];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "*(res++) = cast<data_T, res_T, typename CONFIG_T::mult_config>(acc[i_pxl][i_res]);",
+            "Faulty Code": "res[i_pxl * mult_n_out + i_res] = cast<data_T, res_T, typename CONFIG_T::mult_config>(acc[i_pxl][i_res]);"
+        }
+    ]
+}

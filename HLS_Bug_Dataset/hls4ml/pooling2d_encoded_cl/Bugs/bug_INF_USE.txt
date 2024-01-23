@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned i_out = 0; i_out < CONFIG_T::pool_height * CONFIG_T::pool_width * CONFIG_T::n_filt; i_out++) {",
+            "Faulty Code": "for (unsigned i_out = 0; i_out <= CONFIG_T::pool_height * CONFIG_T::pool_width * CONFIG_T::n_filt; i_out++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "filt_mask = sh_idx + pool_table_width[wp_idx + p] + 1;",
+            "Faulty Code": "filt_mask = sh_idx + (int)pool_table_width[wp_idx + p] + 1;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "tmpres_c[iacc] * tmpres_ifo[iacc]",
+            "Faulty Code": "tmpres_c[iacc] * tmpres_ifo[iacc + CONFIG_T::n_state]"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=h_newstate complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=h_newstate cyclic factor=2"
+        }
+    ]
+}

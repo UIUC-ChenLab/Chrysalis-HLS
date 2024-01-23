@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "data_pack[p] = in_elem[p * CONFIG_T::n_filt + c];",
+            "Faulty Code": "data_pack[p] = in_elem[(p + 1) * CONFIG_T::n_filt + c];"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned p = 0; p < data_T::size / CONFIG_T::n_filt; p++) {",
+            "Faulty Code": "for (unsigned p = 0; p <= data_T::size / CONFIG_T::n_filt; p++) {"
+        }
+    ]
+}

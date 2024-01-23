@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "index = datareg * CONFIG_T::table_size / -8;",
+            "Faulty Code": "index = (datareg * CONFIG_T::table_size) >> 3;"
+        }
+    ]
+}

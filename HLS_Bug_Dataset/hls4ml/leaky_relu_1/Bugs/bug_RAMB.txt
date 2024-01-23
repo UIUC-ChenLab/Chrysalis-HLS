@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "data_T in_data = data.read();",
+            "Faulty Code": "#pragma HLS interface m_axi port=in_data data_T in_data = data.read();"
+        }
+    ]
+}

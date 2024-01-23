@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "garnet_ref<CONFIG_T>(data, nvtx, vertex_res);",
+            "Faulty Code": "#pragma HLS interface mode=burst garnet_ref<CONFIG_T>(data, nvtx, vertex_res);"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned iv = 0; iv < CONFIG_T::n_vertices; ++iv) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (unsigned iv = 0; iv < CONFIG_T::n_vertices; ++iv) {"
+        }
+    ]
+}

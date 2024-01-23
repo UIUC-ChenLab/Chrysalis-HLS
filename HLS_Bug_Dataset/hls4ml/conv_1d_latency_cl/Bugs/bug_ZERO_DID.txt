@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "acc[i_acc] = (typename CONFIG_T::accum_t)biases[i_acc];",
+            "Faulty Code": "acc[i_acc] = 0;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=data_buf complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=data_buf complete dim=1"
+        }
+    ]
+}

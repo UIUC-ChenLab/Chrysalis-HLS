@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "data[id] = data_window[id].read();",
+            "Faulty Code": "data[id] = data_window[id + offset].read();"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "res_pack[outputs_ready * CONFIG_T::n_filt + jj] = res[jj];",
+            "Faulty Code": "res_pack[outputs_ready + jj] = res[jj];"
+        }
+    ]
+}

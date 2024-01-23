@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "for (int j = 0; j < data_T::size; j++) {",
+            "Faulty Code": "#pragma HLS UNROLL factor=data_T::dimension"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void clone_stream(hls::stream<data_T> &data, hls::stream<res_T> &res1, hls::stream<res_T> &res2, hls::stream<res_T> &res3) {",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_memory port=data"
+        }
+    ]
+}

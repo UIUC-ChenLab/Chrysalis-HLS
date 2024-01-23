@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (w_index >= CONFIG_T::n_in * CONFIG_T::n_out) continue;",
+            "Faulty Code": "if (w_index > CONFIG_T::n_in * CONFIG_T::n_out) continue;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int iacc = 0; iacc < (3 * CONFIG_T::n_state); iacc++) {",
+            "Faulty Code": "for (int iacc = 0; iacc <= (3 * CONFIG_T::n_state); iacc++) {"
+        }
+    ]
+}

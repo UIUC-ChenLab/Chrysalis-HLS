@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned wp_idx = w_idx * (data_T::size / CONFIG_T::n_chan);",
+            "Faulty Code": "unsigned wp_idx = 0;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=pixel_idx dim=2"
+        }
+    ]
+}

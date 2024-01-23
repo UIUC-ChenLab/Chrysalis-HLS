@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=image"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void resize_nearest(data_T image[CONFIG_T::height * CONFIG_T::width * CONFIG_T::n_chan],",
+            "Faulty Code": "#pragma HLS INTERFACE port=image"
+        }
+    ]
+}

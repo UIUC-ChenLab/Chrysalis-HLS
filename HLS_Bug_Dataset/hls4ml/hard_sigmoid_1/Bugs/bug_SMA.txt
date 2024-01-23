@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "data_T in_data = data.read();",
+            "Faulty Code": "#pragma HLS interface port=in_data"
+        }
+    ]
+}

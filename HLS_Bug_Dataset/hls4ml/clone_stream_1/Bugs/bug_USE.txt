@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "res_T out_data1;",
+            "Faulty Code": "res_T out_data1 = 0;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "hls::stream<data_T> &data",
+            "Faulty Code": "hls::stream<data_T> data"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "pointwise_mult_buffer<data_T, res_T, CONFIG_T>(data.read(), res, weights, biases);",
+            "Faulty Code": "res_T tmp_res = 0; pointwise_mult_buffer<data_T, res_T, CONFIG_T>(data.read(), tmp_res, weights, biases);"
+        }
+    ]
+}

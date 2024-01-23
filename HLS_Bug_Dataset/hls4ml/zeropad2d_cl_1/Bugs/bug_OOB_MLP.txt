@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int j = 0; j < CONFIG_T::in_width; j++) {",
+            "Faulty Code": "for (int j = 0; j <= CONFIG_T::in_width; j++) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int i = 0; i < CONFIG_T::pad_top; i++) {",
+            "Faulty Code": "#pragma HLS pipeline\nfor (int i = 0; i < CONFIG_T::pad_top; i++) {"
+        }
+    ]
+}

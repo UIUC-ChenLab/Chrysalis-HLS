@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if (fscanf(fp, \"%f\\n\", &newval) != 0) {",
+            "Faulty Code": "if (fscanf(fp, \"%f\\n\", &newval) != 1) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "for (int ii = 0; ii < nrows; ii++) {",
+            "Faulty Code": "#pragma HLS array_partition variable=data cyclic factor=3\nfor (int ii = 0; ii < nrows; ii++) {"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "if (CONFIG_T::strategy == nnet::latency) {\n #pragma HLS PIPELINE II=CONFIG_T::reuse_factor\n}",
+            "Faulty Code": "if (CONFIG_T::strategy == nnet::latency) {\n #pragma HLS PIPELINE II=CONFIG_T::reuse_factor\n\n #pragma HLS PIPELINE\n}"
+        }
+    ]
+}

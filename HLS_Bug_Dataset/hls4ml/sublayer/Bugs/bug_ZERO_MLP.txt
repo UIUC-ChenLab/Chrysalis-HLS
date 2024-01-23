@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "Means<current_layer_t, typename current_layer_t::edge_weight_aggr_t> means_accum;",
+            "Faulty Code": "Means<current_layer_t, typename current_layer_t::edge_weight_aggr_t> means_accum = 0;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "    #pragma HLS PIPELINE\n    #pragma HLS PIPELINE"
+        }
+    ]
+}

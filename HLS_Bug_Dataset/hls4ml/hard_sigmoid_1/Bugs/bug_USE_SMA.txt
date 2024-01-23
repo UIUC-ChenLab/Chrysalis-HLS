@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "auto datareg = CONFIG_T::slope * in_data[j] + CONFIG_T::shift;",
+            "Faulty Code": "int datareg = CONFIG_T::slope * in_data[j] + CONFIG_T::shift;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void hard_sigmoid(hls::stream<data_T> &data, hls::stream<res_T> &res) {",
+            "Faulty Code": "void hard_sigmoid(hls::stream<data_T> &data, hls::stream<res_T> &res) {\n#pragma HLS INTERFACE bram port=res"
+        }
+    ]
+}

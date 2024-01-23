@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "data_T pool[CONFIG_T::in_height * CONFIG_T::in_width];",
+            "Faulty Code": "data_T pool[CONFIG_T::in_height * CONFIG_T::in_width]; // Missing initialization can lead to using uninitialized values"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "res[filt] = static_cast<res_T>(pool_op<data_T, CONFIG_T::in_height * CONFIG_T::in_width, CONFIG_T::pool_op>(pool));",
+            "Faulty Code": "res[filt] = 0; // Incorrectly initializing the result to zero"
+        }
+    ]
+}

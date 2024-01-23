@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "Means<CONFIG_T, typename CONFIG_T::edge_weight_aggr_t> means_local;",
+            "Faulty Code": "Means<CONFIG_T, typename CONFIG_T::edge_weight_aggr_t> means_local = Means<CONFIG_T, typename CONFIG_T::edge_weight_aggr_t>();"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "unsigned const ioa = io * CONFIG_T::n_aggregators + ia;",
+            "Faulty Code": "unsigned const ioa = ia * CONFIG_T::n_out_features + io;"
+        }
+    ]
+}

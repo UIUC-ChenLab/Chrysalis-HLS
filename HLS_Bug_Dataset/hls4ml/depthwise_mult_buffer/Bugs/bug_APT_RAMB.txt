@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=data complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=data cyclic factor=2"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "data[id] = data_window[id].read();",
+            "Faulty Code": "data[i + j] = data_window[i + j].read(); // Assuming i and j are loop variables defined in an outer context"
+        }
+    ]
+}

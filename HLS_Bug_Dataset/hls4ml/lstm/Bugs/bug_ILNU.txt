@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int iacc = 0; iacc < (3 * CONFIG_T::n_state); iacc++) { ... }",
+            "Faulty Code": "#pragma HLS UNROLL factor=2 \nfor (int iacc = 0; iacc < (3 * CONFIG_T::n_state); iacc++) { ... }"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pool complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=pool cyclic dim=1"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "// do the pooling\n        res[ff] = pool_op<data_T, CONFIG_T::n_in, CONFIG_T::pool_op>(pool);",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=res"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned img_overlap = 0;",
+            "Faulty Code": "// unsigned img_overlap = 0; // This line is commented out, leading to use of uninitialized variable"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor // Incorrect placement inside another pipeline pragma"
+        }
+    ]
+}

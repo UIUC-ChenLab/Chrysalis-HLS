@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "bool initialized = false;",
+            "Faulty Code": "bool initialized;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION type=complete VARIABLE=sigmoid_table"
+        }
+    ]
+}

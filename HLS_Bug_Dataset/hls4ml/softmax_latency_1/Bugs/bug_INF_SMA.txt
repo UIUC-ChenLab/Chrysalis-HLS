@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned i = 0; i < CONFIG_T::n_in / data_T::size; i++) {",
+            "Faulty Code": "for (unsigned i = 0; i <= CONFIG_T::n_in / data_T::size; i++) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "typename CONFIG_T::inv_table_t invert_table[CONFIG_T::table_size];",
+            "Faulty Code": "typename CONFIG_T::inv_table_t invert_table[CONFIG_T::inv_table_size];"
+        }
+    ]
+}

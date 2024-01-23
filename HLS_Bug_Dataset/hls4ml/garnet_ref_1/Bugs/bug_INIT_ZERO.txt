@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "typename CONFIG_T::aggr_t acc = 0.;",
+            "Faulty Code": "typename CONFIG_T::aggr_t acc;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "acc /= CONFIG_T::n_vertices;",
+            "Faulty Code": "acc /= 0;"
+        }
+    ]
+}

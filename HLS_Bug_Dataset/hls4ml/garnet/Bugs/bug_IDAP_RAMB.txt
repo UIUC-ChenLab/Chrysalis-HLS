@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS interface ap_fifo port=data"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "res_setter.set(iv, io, acc);",
+            "Faulty Code": "res[iv * CONFIG_T::n_out_features + io] = acc;"
+        }
+    ]
+}

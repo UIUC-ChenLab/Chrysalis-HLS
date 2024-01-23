@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "*(res++) = (res_T) * (data++);",
+            "Faulty Code": "*(res++) = (res_T) * (data + CONFIG_T::n_chan * CONFIG_T::in_width);"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic variable=data factor=4"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < CONFIG_T::pad_top; i++) {",
+            "Faulty Code": "for (int i = 0; i <= CONFIG_T::pad_top; i++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "for (int j = 0; j < CONFIG_T::pad_left; j++) {",
+            "Faulty Code": "for (int j = 1; j < CONFIG_T::pad_left; j++) {"
+        }
+    ]
+}

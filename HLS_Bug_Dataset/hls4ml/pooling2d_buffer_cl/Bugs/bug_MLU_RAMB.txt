@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "// Missing #pragma HLS PIPELINE"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "compute_pool_buffer_2d<data_T, res_T, CONFIG_T>(data.read(), line_buffer, res);",
+            "Faulty Code": "compute_pool_buffer_2d<data_T, res_T, CONFIG_T>(data.read(), line_buffer[i_ih % CONFIG_T::pool_height], res);"
+        }
+    ]
+}

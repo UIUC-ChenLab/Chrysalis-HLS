@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=h_state complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=h_state dim=0"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "if (CONFIG_T::reuse_factor <= CONFIG_T::n_in) {",
+            "Faulty Code": "if (CONFIG_T::reuse_factor <= CONFIG_T::n_in) { #pragma HLS PIPELINE II=1}"
+        }
+    ]
+}

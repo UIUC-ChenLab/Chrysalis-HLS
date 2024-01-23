@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "compute_output_buffer_2d<data_T, res_T, CONFIG_T>(data.read(), line_buffer, res, weights, biases);",
+            "Faulty Code": "compute_output_buffer_2d<data_T, res_T, CONFIG_T>(data.read(), line_buffer[i_iw % CONFIG_T::filt_height], res, weights, biases);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable = line_buffer complete dim = 2",
+            "Faulty Code": "#pragma HLS INTERFACE port=line_buffer bram"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "data_T in_data = data.read();",
+            "Faulty Code": "data_T in_data = 0;"
+        }
+    ]
+}

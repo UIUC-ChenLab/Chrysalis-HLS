@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "void pointwise_conv_1d_cl(data_T data[CONFIG_T::in_width * CONFIG_T::n_chan], ...",
+            "Faulty Code": "void pointwise_conv_1d_cl(data_T data[CONFIG_T::in_width], ..."
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INLINE region",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=data"
+        }
+    ]
+}

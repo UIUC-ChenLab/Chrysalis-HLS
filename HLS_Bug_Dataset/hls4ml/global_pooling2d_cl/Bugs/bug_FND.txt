@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "data_T pool[CONFIG_T::in_height * CONFIG_T::in_width];",
+            "Faulty Code": "#pragma HLS array_partition variable=pool factor=10\n data_T pool[CONFIG_T::in_height * CONFIG_T::in_width];"
+        }
+    ]
+}

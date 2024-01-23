@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=weights"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "compute_output_buffer_1d<data_T, res_T, CONFIG_T>(data.read(), res, weights, biases);",
+            "Faulty Code": "compute_output_buffer_1d<data_T, res_T, CONFIG_T>(data.read(), res, weights[i_iw], biases);"
+        }
+    ]
+}

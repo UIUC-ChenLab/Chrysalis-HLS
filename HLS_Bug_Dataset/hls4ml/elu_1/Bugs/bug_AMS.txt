@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "init_elu_table<CONFIG_T, CONFIG_T::table_size>(elu_table);",
+            "Faulty Code": "#pragma HLS interface port=elu_table s_axilite"
+        }
+    ]
+}

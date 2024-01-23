@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pool complete dim=0",
+            "Faulty Code": "for (int ll = 0; ll < CONFIG_T::stride_width; ll++) {\n#pragma HLS UNROLL factor=2\nif (ii + kk < CONFIG_T::pad_top || ii + kk >= (padded_height - CONFIG_T::pad_bottom) ||\njj + ll < CONFIG_T::pad_left || jj + ll >= (padded_width - CONFIG_T::pad_right)) {\n// Add padding\npool[kk * CONFIG_T::stride_width + ll] = pad_val<data_T, CONFIG_T::pool_op>();\nif (CONFIG_T::count_pad)\nimg_overlap++;\n} else {\npool[kk * CONFIG_T::stride_width + ll] =\ndata[(ii + kk - CONFIG_T::pad_top) * CONFIG_T::in_width +\nff * CONFIG_T::in_width * CONFIG_T::in_height + ll + jj - CONFIG_T::pad_left];\nimg_overlap++;\n}\n}"
+        }
+    ]
+}

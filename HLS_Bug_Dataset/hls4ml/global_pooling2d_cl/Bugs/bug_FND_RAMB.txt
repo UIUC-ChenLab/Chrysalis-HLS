@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS array_partition variable=pool cyclic factor=CONFIG_T::n_filt"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "pool[i] = data[i * CONFIG_T::n_filt + filt];",
+            "Faulty Code": "#pragma HLS interface m_axi port=data offset=slave bundle=gmem"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "table_out[i] = inv_x;",
+            "Faulty Code": "table_out[i + CONFIG_T::table_size / 2] = inv_x;"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (unsigned i = 0; i < CONFIG_T::table_size; i++) {",
+            "Faulty Code": "#pragma HLS pipeline\nfor (unsigned i = 0; i < CONFIG_T::table_size; i++) {"
+        }
+    ]
+}

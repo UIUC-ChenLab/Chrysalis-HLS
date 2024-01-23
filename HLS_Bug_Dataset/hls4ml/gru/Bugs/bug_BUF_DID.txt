@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "int index = iacc;",
+            "Faulty Code": "int index = iacc + (CONFIG_T::n_state);"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=tmpres complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=tmpres dim=2"
+        }
+    ]
+}

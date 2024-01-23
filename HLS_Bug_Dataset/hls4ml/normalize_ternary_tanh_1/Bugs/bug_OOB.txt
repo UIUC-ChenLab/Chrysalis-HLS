@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (in_data[j] > threshold_hi[norm_index]) {\n    out_data[j] = 1;\n} else if (in_data[j] <= threshold_lo[norm_index]) {\n    out_data[j] = -1;\n} else {\n    out_data[j] = 0;\n}",
+            "Faulty Code": "if (in_data[j] > threshold_hi[norm_index+1]) {\n    out_data[j] = 1;\n} else if (in_data[j] <= threshold_lo[norm_index+1]) {\n    out_data[j] = -1;\n} else {\n    out_data[j] = 0;\n}"
+        }
+    ]
+}

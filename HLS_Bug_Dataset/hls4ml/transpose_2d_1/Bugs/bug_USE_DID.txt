@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "out_data[j] = typename res_T::value_type(data_array[j * data_T::size + i]);",
+            "Faulty Code": "out_data[j] = data_array[j * data_T::size + i];"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=data_array complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=data_array dim=2 complete"
+        }
+    ]
+}

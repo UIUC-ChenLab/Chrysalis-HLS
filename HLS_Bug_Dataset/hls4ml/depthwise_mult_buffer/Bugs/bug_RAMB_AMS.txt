@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=res complete",
+            "Faulty Code": "#pragma HLS interface port=res mode=m_axi"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "res_T &res_pack",
+            "Faulty Code": "#pragma HLS interface port=res_pack mode=s_axilite"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II=1 rewind",
+            "Faulty Code": "#pragma HLS PIPELINE"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned i_acc = 0; i_acc < mult_n_out; i_acc++) {",
+            "Faulty Code": "for (unsigned i_acc = 0; i_acc < mult_n_out; i_acc+=2) {"
+        }
+    ]
+}

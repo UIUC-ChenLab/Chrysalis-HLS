@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned const iva = iv * CONFIG_T::n_aggregators + ia;",
+            "Faulty Code": "int const iva = iv * CONFIG_T::n_aggregators + ia;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=edge_weights complete",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

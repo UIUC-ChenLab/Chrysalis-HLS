@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "dst_pack[i_pack++] = typename dst_T::value_type(*i);",
+            "Faulty Code": "dst_pack[i_pack++] = typename dst_T::value_type(*(i+1));"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int ii = 0; ii < padded_height; ii += CONFIG_T::stride_height) {",
+            "Faulty Code": "for (int ii = 0; ; ii += CONFIG_T::stride_height) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS PIPELINE"
+        }
+    ]
+}

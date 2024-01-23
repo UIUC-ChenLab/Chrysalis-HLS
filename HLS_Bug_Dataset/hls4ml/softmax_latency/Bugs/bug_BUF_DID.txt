@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "typename CONFIG_T::exp_table_t exp_table[CONFIG_T::table_size];",
+            "Faulty Code": "typename CONFIG_T::exp_table_t exp_table[CONFIG_T::n_in];"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS array_partition variable=exp_res complete",
+            "Faulty Code": "#pragma HLS array_partition variable=exp_res dim=2"
+        }
+    ]
+}

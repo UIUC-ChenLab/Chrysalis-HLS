@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int idx[3] = {0}, idx_t[3] = {0};",
+            "Faulty Code": "signed char idx[3] = {0}, idx_t[3] = {0};"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "exp_sum =\n            reduce<typename CONFIG_T::exp_table_t, data_T::size, Op_add<typename CONFIG_T::exp_table_t>>(exp_res, op_add);",
+            "Faulty Code": "exp_sum =\n            reduce<typename CONFIG_T::exp_table_t, data_T::size + 1, Op_add<typename CONFIG_T::exp_table_t>>(exp_res, op_add);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned x = softmax_idx_from_real_val<typename data_T::value_type, CONFIG_T>(in_pack[j]);",
+            "Faulty Code": "int x = softmax_idx_from_real_val<typename data_T::value_type, CONFIG_T>(in_pack[j]);"
+        }
+    ]
+}

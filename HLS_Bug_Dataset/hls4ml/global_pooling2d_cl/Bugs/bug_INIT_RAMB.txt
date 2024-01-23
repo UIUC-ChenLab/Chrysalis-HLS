@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res[filt] = static_cast<res_T>(pool_op<data_T, CONFIG_T::in_height * CONFIG_T::in_width, CONFIG_T::pool_op>(pool));",
+            "Faulty Code": "res_T pool_result; res[filt] = pool_result;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "pool[i] = data[i * CONFIG_T::n_filt + filt];",
+            "Faulty Code": "pool[i] = data[filt * CONFIG_T::in_height * CONFIG_T::in_width + i];"
+        }
+    ]
+}

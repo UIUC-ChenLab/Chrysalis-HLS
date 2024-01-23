@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int j = 0; j < CONFIG_T::n_in; j++) {",
+            "Faulty Code": "for (int j = 0; j <= CONFIG_T::n_in; j++) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void embedding(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in * CONFIG_T::n_out],\n               typename CONFIG_T::embeddings_t embeddings[CONFIG_T::vocab_size * CONFIG_T::n_out]) {",
+            "Faulty Code": "void embedding(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in * CONFIG_T::n_out],\n               typename CONFIG_T::embeddings_t embeddings[CONFIG_T::vocab_size * CONFIG_T::n_out]) {\n    #pragma HLS INTERFACE bram port=embeddings"
+        }
+    ]
+}

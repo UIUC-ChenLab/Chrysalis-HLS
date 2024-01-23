@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "typename CONFIG_T::exp_table_t exp_sum(0);",
+            "Faulty Code": "typename CONFIG_T::exp_table_t exp_sum;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "out_pack[j] = exp_res[j] * inv_exp_sum;",
+            "Faulty Code": "out_pack[j] = exp_res[data_T::size / 2 + j] * inv_exp_sum;"
+        }
+    ]
+}

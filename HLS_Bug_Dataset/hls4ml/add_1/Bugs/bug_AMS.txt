@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void add(hls::stream<input1_T> &data1, hls::stream<input2_T> &data2, hls::stream<res_T> &res) { ... }",
+            "Faulty Code": "#pragma HLS INTERFACE port=data1 ap_none\n#pragma HLS INTERFACE port=data2 ap_none\n#pragma HLS INTERFACE port=res ap_none\nvoid add(hls::stream<input1_T> &data1, hls::stream<input2_T> &data2, hls::stream<res_T> &res) { ... }"
+        }
+    ]
+}

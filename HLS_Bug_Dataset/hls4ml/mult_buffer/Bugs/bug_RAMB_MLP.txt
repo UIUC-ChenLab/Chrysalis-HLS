@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "data[id] = data_window[id].read();",
+            "Faulty Code": "data[id] = data_window[i * CONFIG_T::n_chan + j].read();"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

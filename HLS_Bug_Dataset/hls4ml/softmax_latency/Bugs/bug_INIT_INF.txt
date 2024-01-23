@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "typename CONFIG_T::exp_table_t exp_sum(0);",
+            "Faulty Code": "typename CONFIG_T::exp_table_t exp_sum;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned i = 0; i < CONFIG_T::n_in; i++) {",
+            "Faulty Code": "for (unsigned i = 0; i <= CONFIG_T::n_in; i++) {"
+        }
+    ]
+}

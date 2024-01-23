@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out_data[j + (i * input1_T::size)] = in_data1[j];",
+            "Faulty Code": "out_data[j + (i * input1_T::size) + 1] = in_data1[j];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "for (int i = 0; i < CONFIG_T::n_elem1_0 / input1_T::size; i++) {",
+            "Faulty Code": "for (int i = 1; i < CONFIG_T::n_elem1_0 / input1_T::size; i++) {"
+        }
+    ]
+}

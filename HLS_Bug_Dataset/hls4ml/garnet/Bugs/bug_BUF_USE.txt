@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (ivv * unroll_factor >= nvtx)\n            break;",
+            "Faulty Code": "if (ivv * unroll_factor + ir >= nvtx)\n            break;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned const iva = iv * CONFIG_T::n_aggregators + ia;",
+            "Faulty Code": "int const iva = iv * CONFIG_T::n_aggregators + ia;"
+        }
+    ]
+}

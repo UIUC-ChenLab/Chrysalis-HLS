@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "data_T data_pack = data_stream.read();",
+            "Faulty Code": "data_T data_pack = data_stream.read(); data[i_in * data_T::size + i_pack] = data_pack[i_pack];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=res complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=res ap_none"
+        }
+    ]
+}

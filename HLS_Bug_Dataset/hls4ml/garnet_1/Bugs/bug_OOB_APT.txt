@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (iv == nvtx)\n    break;",
+            "Faulty Code": "if (iv >= nvtx)\n    break;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=means_local.edge_weight_mean"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=threshold_hi complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=threshold_hi cyclic"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<nnet::array<ap_int<2>, CONFIG_T::n_scale_bias>> &res",
+            "Faulty Code": "hls::stream<nnet::array<ap_int<2>, CONFIG_T::n_scale_bias>> &res #pragma HLS INTERFACE port=res bram"
+        }
+    ]
+}

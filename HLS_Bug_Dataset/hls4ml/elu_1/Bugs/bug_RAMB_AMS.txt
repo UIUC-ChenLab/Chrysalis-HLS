@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "typename CONFIG_T::table_t elu_table[CONFIG_T::table_size];",
+            "Faulty Code": "typename CONFIG_T::table_t elu_table[CONFIG_T::table_size / 2];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE port=elu_table mode=s_axilite"
+        }
+    ]
+}

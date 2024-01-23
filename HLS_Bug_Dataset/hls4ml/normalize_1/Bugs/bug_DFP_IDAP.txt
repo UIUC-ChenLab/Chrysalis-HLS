@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II=ii",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "data_T in_data = data.read();",
+            "Faulty Code": "data_T in_data = data.read(); #pragma HLS INTERFACE mode=ap_fifo port=data"
+        }
+    ]
+}

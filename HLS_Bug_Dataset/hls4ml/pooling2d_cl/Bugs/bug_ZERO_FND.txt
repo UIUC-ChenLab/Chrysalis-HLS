@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "data_T pool[CONFIG_T::pool_height * CONFIG_T::pool_width];",
+            "Faulty Code": "data_T pool[CONFIG_T::pool_height * CONFIG_T::pool_width] = {0};"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pool complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=pool factor=CONFIG_T::reuse_factor dim=0"
+        }
+    ]
+}

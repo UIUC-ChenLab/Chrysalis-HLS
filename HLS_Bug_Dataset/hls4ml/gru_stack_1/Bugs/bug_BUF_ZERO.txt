@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "res_pack[i_pack] = h_newstate[i_pack];",
+            "Faulty Code": "res_pack[i_pack] = h_newstate[i_pack + res_T::size];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "h_state[i_h_state] = 0;",
+            "Faulty Code": "h_state[i_h_state] = (res_T)(0);"
+        }
+    ]
+}

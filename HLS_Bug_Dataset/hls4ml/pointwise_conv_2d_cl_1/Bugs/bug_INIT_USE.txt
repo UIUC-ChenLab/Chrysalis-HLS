@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "pointwise_mult_buffer<data_T, res_T, CONFIG_T>(data.read(), res, weights, biases);",
+            "Faulty Code": "res_T tmp_result; pointwise_mult_buffer<data_T, res_T, CONFIG_T>(data.read(), tmp_result, weights, biases);"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "for (unsigned i_iw = 0; i_iw < CONFIG_T::in_width / (data_T::size / CONFIG_T::n_chan); i_iw++) {",
+            "Faulty Code": "int i_iw = -1; for (i_iw = 0; i_iw < CONFIG_T::in_width / (data_T::size / CONFIG_T::n_chan); i_iw++) {"
+        }
+    ]
+}

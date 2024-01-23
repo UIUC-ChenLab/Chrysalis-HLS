@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void compute_scaled_indices_1d(const unsigned w_idx, ap_uint<CONFIG_T::filt_width> *pixel_idx) {",
+            "Faulty Code": "void compute_scaled_indices_1d(const unsigned w_idx, ap_uint<CONFIG_T::filt_width> *pixel_idx) { #pragma HLS pipeline"
+        }
+    ]
+}

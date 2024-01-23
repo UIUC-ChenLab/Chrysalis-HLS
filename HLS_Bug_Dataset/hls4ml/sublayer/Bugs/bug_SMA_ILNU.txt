@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void distribute_aggregate(nvtx_T const nvtx, prev_arrays_T const &prev_arrays, current_arrays_T &current_arrays)",
+            "Faulty Code": "#pragma HLS INTERFACE port=prev_output_base bram"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

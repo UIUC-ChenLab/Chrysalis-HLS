@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "nnet::array<ap_int<2>, CONFIG_T::n_scale_bias> out_data;",
+            "Faulty Code": "nnet::array<int, CONFIG_T::n_scale_bias> out_data;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        }
+    ]
+}

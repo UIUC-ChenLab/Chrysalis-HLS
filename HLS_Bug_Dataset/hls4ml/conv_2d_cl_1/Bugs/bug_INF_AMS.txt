@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned i_iw = 0; i_iw < CONFIG_T::in_width; i_iw++) {",
+            "Faulty Code": "for (unsigned i_iw = 0; i_iw <= CONFIG_T::in_width; i_iw++) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS STREAM variable=data_window[i_out] depth=win_depth",
+            "Faulty Code": "#pragma HLS INTERFACE port=data_window[i_out] mode=ap_none"
+        }
+    ]
+}

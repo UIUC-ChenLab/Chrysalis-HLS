@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=edge_weights depth=CONFIG_T::n_aggregators"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "typename CONFIG_T::aggr_t output_base[CONFIG_T::n_out_features * CONFIG_T::n_aggregators];\n#pragma HLS ARRAY_PARTITION variable=output_base complete",
+            "Faulty Code": "typename CONFIG_T::aggr_t output_base;\n#pragma HLS INTERFACE bram port=output_base"
+        }
+    ]
+}

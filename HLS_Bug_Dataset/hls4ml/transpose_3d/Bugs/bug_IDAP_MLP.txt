@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void transpose_3d(data_T data[CONFIG_T::depth * CONFIG_T::height * CONFIG_T::width], ...",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=data\nvoid transpose_3d(data_T data[CONFIG_T::depth * CONFIG_T::height * CONFIG_T::width], ..."
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (idx[2] = 0; idx[2] < dims[2]; idx[2]++) { ...",
+            "Faulty Code": "#pragma HLS pipeline\n    for (idx[2] = 0; idx[2] < dims[2]; idx[2]++) { ..."
+        }
+    ]
+}

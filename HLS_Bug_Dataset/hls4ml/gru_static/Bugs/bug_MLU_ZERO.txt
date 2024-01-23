@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i_h_state = 0; i_h_state < (CONFIG_T::n_state); i_h_state++) {",
+            "Faulty Code": "for (int i_h_state = 0; i_h_state < (CONFIG_T::n_state - 1); i_h_state++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "acc[iacc] = (typename CONFIG_T::accum_t)biases[iacc];",
+            "Faulty Code": "acc[iacc] = (typename CONFIG_T::accum_t)0;"
+        }
+    ]
+}

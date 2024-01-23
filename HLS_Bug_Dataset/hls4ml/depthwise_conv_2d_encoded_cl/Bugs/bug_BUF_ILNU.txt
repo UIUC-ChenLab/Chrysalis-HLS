@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "compute_depthwise_output_encoded<data_T, res_T, CONFIG_T>(data.read(), data_window, res, res_pack, outputs_ready, weights, biases, pixel_idx);",
+            "Faulty Code": "compute_depthwise_output_encoded<data_T, res_T, CONFIG_T>(data.read(), data_window, res, data_window[0], outputs_ready, weights, biases, pixel_idx);"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pixel_idx complete",
+            "Faulty Code": "#pragma HLS UNROLL factor=2 variable=pixel_idx"
+        }
+    ]
+}

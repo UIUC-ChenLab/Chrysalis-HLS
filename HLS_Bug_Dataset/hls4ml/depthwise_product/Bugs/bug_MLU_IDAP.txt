@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::kernel_size * CONFIG_T::n_chan; ii++) {",
+            "Faulty Code": "for (int ii = 0; ii < CONFIG_T::kernel_size * CONFIG_T::n_chan - 1; ii++) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "input1_T in_data1 = data1.read();",
+            "Faulty Code": "input1_T in_data1 = data1.read();\ninput1_T in_data2 = data1.read();"
+        }
+    ]
+}

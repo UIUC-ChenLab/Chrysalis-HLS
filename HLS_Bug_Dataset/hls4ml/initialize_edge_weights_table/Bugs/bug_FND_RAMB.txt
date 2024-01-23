@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "edge_weights_table[0] = ap_ufixed<CONFIG_T::edge_weight_t::width, 0, AP_TRN, AP_SAT>(1.);",
+            "Faulty Code": "for (unsigned iw = 0; iw < table_size; iw += 2) {\n        edge_weights_table[iw] = ap_ufixed<CONFIG_T::edge_weight_t::width, 0, AP_TRN, AP_SAT>(1.);\n    }"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "edge_weights_table[iw] = hls::exp(-distance * distance);",
+            "Faulty Code": "edge_weights_table[(iw * iw) % table_size] = hls::exp(-distance * distance);"
+        }
+    ]
+}

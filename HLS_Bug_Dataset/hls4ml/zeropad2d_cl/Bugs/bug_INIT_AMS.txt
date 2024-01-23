@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "*(res++) = (res_T) * (data++);",
+            "Faulty Code": "res_T temp = *data; *(res++) = temp;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void zeropad2d_cl(data_T data[CONFIG_T::n_chan * CONFIG_T::in_height * CONFIG_T::in_width], res_T res[CONFIG_T::n_chan * CONFIG_T::out_height * CONFIG_T::out_width]) {",
+            "Faulty Code": "void zeropad2d_cl(data_T data[CONFIG_T::n_chan * CONFIG_T::in_height * CONFIG_T::in_width], res_T res[CONFIG_T::n_chan * CONFIG_T::out_height * CONFIG_T::out_width]) { #pragma HLS INTERFACE port=res ap_none"
+        }
+    ]
+}

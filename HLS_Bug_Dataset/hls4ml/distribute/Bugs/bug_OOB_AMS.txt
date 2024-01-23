@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "unsigned const iva = iv * CONFIG_T::n_aggregators + ia;",
+            "Faulty Code": "unsigned const iva = iv * (CONFIG_T::n_aggregators + 1) + ia;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=output_base complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=output_base mode=ap_none"
+        }
+    ]
+}

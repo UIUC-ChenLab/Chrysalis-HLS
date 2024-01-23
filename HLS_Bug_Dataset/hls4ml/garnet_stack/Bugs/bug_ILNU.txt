@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned ir = 0; ir < unroll_factor; ++ir) { unsigned iv = ivv * unroll_factor + ir; if (iv == nvtx) break; compute_weights_aggregates<CONFIG_T>(data_getter, iv, means_local, arrays); }",
+            "Faulty Code": "#pragma HLS unroll factor=4 for (unsigned ir = 0; ir < unroll_factor; ++ir) { unsigned iv = ivv * unroll_factor + ir; if (iv == nvtx) break; compute_weights_aggregates<CONFIG_T>(data_getter, iv, means_local, arrays); }"
+        }
+    ]
+}

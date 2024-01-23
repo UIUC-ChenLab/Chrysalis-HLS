@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned outputs_ready = 0;",
+            "Faulty Code": "unsigned outputs_ready;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "filt_mask = sh_idx + pool_table_width[wp_idx + p] + 1;",
+            "Faulty Code": "filt_mask = sh_idx + (int)pool_table_width[wp_idx + p] + 1;"
+        }
+    ]
+}

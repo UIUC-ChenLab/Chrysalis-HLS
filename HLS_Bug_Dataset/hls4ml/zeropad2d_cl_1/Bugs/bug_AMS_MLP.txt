@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void zeropad2d_cl(hls::stream<data_T> &data, hls::stream<res_T> &res) {",
+            "Faulty Code": "void zeropad2d_cl(hls::stream<data_T> &data, res_T &res) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (int j = 0; j < CONFIG_T::out_width; j++) {",
+            "Faulty Code": "#pragma HLS pipeline\nfor (int j = 0; j < CONFIG_T::out_width; j++) {"
+        }
+    ]
+}

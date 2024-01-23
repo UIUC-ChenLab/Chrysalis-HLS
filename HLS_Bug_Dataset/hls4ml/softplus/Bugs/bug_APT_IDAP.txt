@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=softplus_table"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void softplus(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in])",
+            "Faulty Code": "#pragma HLS interface mode=s_axilite port=data bundle=input_bundle"
+        }
+    ]
+}

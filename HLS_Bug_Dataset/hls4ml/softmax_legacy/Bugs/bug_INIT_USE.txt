@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "exp_res[ii] = 0;",
+            "Faulty Code": "// exp_res[ii] = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "index = data_round + 8 * CONFIG_T::table_size / 16;",
+            "Faulty Code": "index = (data_round + 8) * CONFIG_T::table_size / 16;"
+        }
+    ]
+}

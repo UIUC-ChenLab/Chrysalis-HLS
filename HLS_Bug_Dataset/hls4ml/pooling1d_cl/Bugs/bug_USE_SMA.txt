@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned img_overlap = 0;",
+            "Faulty Code": "int img_overlap = 0;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void average(hls::stream<input1_T> &data1, hls::stream<input2_T> &data2, hls::stream<res_T> &res) {",
+            "Faulty Code": "void average(hls::stream<input1_T> &data1, hls::stream<input2_T> &data2, hls::stream<res_T> &res) { #pragma HLS INTERFACE port=res bram"
+        }
+    ]
+}

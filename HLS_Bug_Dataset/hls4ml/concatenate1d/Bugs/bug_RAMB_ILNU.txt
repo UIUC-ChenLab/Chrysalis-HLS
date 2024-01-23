@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE\n\n    for (int ii = 0; ii < CONFIG_T::n_elem1_0; ii++) {\n        res[ii] = data1[ii];\n    }",
+            "Faulty Code": "#pragma HLS PIPELINE\n\n    for (int ii = 0; ii < CONFIG_T::n_elem1_0; ii++) {\n        res[ii*2] = data1[ii]; // This introduces non-consecutive memory access\n    }"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE\n\n    for (int ii = 0; ii < CONFIG_T::n_elem1_0; ii++) {\n        res[ii] = data1[ii];\n    }\n    for (int ii = 0; ii < CONFIG_T::n_elem2_0; ii++) {\n        res[CONFIG_T::n_elem1_0 + ii] = data2[ii];\n    }",
+            "Faulty Code": "#pragma HLS PIPELINE\n\n    for (int ii = 0; ii < CONFIG_T::n_elem1_0; ii++) {\n        #pragma HLS UNROLL factor=2 // This is incorrect because it does not fully unroll the innermost loop\n        res[ii] = data1[ii];\n    }\n    for (int ii = 0; ii < CONFIG_T::n_elem2_0; ii++) {\n        res[CONFIG_T::n_elem1_0 + ii] = data2[ii];\n    }"
+        }
+    ]
+}

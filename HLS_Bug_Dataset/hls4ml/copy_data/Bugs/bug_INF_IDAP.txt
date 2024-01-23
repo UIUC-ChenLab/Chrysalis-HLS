@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (typename std::vector<src_T>::const_iterator i = in_begin; i != in_end; ++i) {",
+            "Faulty Code": "for (typename std::vector<src_T>::const_iterator i = in_begin; ; ++i) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "dst.write(dst_pack);",
+            "Faulty Code": "if (condition) dst.write(dst_pack);"
+        }
+    ]
+}

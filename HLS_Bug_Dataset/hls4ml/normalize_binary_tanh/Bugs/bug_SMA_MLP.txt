@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void normalize_binary_tanh(data_T data[CONFIG_T::n_in], ap_uint<1> res[CONFIG_T::n_in],",
+            "Faulty Code": "void normalize_binary_tanh(data_T data, ap_uint<1> res[CONFIG_T::n_in],"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "    #pragma HLS PIPELINE // inside the for-loop"
+        }
+    ]
+}

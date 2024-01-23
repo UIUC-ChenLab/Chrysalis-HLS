@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "hls::stream<typename data_T::value_type> data_window[CONFIG_T::filt_width * CONFIG_T::n_chan];",
+            "Faulty Code": "hls::stream<typename data_T::value_type> data_window[CONFIG_T::filt_width];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pixel_idx complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=pixel_idx factor=3"
+        }
+    ]
+}

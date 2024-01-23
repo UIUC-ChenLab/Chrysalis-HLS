@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "data_T cache;",
+            "Faulty Code": "data_T cache; // cache is declared but not initialized. If used later in the code, it could lead to an INIT error."
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "res[ires] = CONFIG_T::template product<data_T, typename CONFIG_T::scale_t>::product(data[ires], scale[ires]) + bias[ires];",
+            "Faulty Code": "res[ires] = (data_T)(CONFIG_T::template product<data_T, typename CONFIG_T::scale_t>::product(data[ires], scale[ires])) + bias[ires]; // Casting to data_T might inadvertently cause sign extension if res_T is a larger type than data_T, leading to a USE error."
+        }
+    ]
+}

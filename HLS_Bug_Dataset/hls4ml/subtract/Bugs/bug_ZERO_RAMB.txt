@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "void subtract(input1_T data1[CONFIG_T::n_elem], input2_T data2[CONFIG_T::n_elem], res_T res[CONFIG_T::n_elem]) {",
+            "Faulty Code": "void subtract(input1_T data1[CONFIG_T::n_elem] = {0}, input2_T data2[CONFIG_T::n_elem], res_T res[CONFIG_T::n_elem]) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS interface m_axi port=data1 offset=slave bundle=gmem0\n#pragma HLS interface m_axi port=data2 offset=slave bundle=gmem1\n#pragma HLS interface m_axi port=res offset=slave bundle=gmem2"
+        }
+    ]
+}

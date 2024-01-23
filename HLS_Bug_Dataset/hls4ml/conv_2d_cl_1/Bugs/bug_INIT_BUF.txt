@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T res_pack;",
+            "Faulty Code": "res_T res_pack = res_T(); // Assuming res_T is a class or struct that requires initialization"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "for (unsigned i_ih = 0; i_ih < CONFIG_T::in_height; i_ih++) {",
+            "Faulty Code": "for (unsigned i_ih = 0; i_ih <= CONFIG_T::in_height; i_ih++) { // Off-by-one error leading to buffer overflow"
+        }
+    ]
+}

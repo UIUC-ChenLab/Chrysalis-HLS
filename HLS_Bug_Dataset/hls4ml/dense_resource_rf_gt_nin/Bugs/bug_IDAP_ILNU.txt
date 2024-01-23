@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=mult complete",
+            "Faulty Code": "#pragma HLS UNROLL factor=4"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "if (w_index >= CONFIG_T::n_in * CONFIG_T::n_out) continue;",
+            "Faulty Code": "if (w_index >= CONFIG_T::n_in * CONFIG_T::n_out) tmpmult[im] = 0;"
+        }
+    ]
+}

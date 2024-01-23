@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static int pX = 0;",
+            "Faulty Code": "static int pX;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pool_window complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=pool_window cyclic factor=2"
+        }
+    ]
+}

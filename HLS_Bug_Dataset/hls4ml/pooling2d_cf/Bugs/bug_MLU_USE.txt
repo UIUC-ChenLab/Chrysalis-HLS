@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int kk = 0; kk < CONFIG_T::stride_height; kk++) {",
+            "Faulty Code": "for (int kk = 0; kk <= CONFIG_T::stride_height; kk++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "out_data[j] = (in_data1[j] + in_data2[j]) / (typename res_T::value_type)2;",
+            "Faulty Code": "out_data[j] = (in_data1[j] + in_data2[j]) >> 1;"
+        }
+    ]
+}

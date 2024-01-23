@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "Means<CONFIG_T, typename CONFIG_T::edge_weight_aggr_t> means_accum;",
+            "Faulty Code": "Means<CONFIG_T, typename CONFIG_T::edge_weight_aggr_t> means_accum = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "edge_weights[ia] = arrays.edge_weights[iva];",
+            "Faulty Code": "edge_weights[ia] = arrays.edge_weights[iv];"
+        }
+    ]
+}

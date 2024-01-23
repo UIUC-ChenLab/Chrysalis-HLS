@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=res complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=res cyclic factor=4"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void normalize_binary_tanh(data_T data[CONFIG_T::n_in], ap_uint<1> res[CONFIG_T::n_in], data_T threshold[CONFIG_T::n_scale_bias]) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=res bram"
+        }
+    ]
+}

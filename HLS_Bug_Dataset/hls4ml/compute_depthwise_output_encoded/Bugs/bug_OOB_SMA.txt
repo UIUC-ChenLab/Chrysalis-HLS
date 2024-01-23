@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "data_window[f * CONFIG_T::n_chan + c].write(in_elem[p * CONFIG_T::n_chan + c]);",
+            "Faulty Code": "data_window[f * CONFIG_T::n_chan + c].write(in_elem[p * CONFIG_T::n_chan + c + 1]);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void depthwise_mult_buffer(hls::stream<typename data_T::value_type> data_window[CONFIG_T::kernel_size * CONFIG_T::n_chan], ...",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=data_window"
+        }
+    ]
+}

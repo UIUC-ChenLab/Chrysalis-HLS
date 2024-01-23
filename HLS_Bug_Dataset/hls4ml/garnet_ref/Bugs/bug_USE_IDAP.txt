@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned const iap = ia * CONFIG_T::n_propagate + ip;",
+            "Faulty Code": "int const iap = ia * CONFIG_T::n_propagate + ip;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "res_T res[CONFIG_T::n_vertices * CONFIG_T::n_out_features]",
+            "Faulty Code": "#pragma HLS interface mode=ap_memory port=res"
+        }
+    ]
+}

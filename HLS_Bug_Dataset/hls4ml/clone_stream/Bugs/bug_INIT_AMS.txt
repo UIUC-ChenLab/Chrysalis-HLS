@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T out_data1;",
+            "Faulty Code": "res_T out_data1 = res_T();"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void clone_stream(hls::stream<data_T> &data, hls::stream<res_T> &res1, hls::stream<res_T> &res2) {",
+            "Faulty Code": "void clone_stream(hls::stream<data_T> &data, hls::stream<res_T> &res1, hls::stream<res_T> &res2) {\n#pragma HLS INTERFACE port=res1 ap_none\n#pragma HLS INTERFACE port=res2 ap_none"
+        }
+    ]
+}

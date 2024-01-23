@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "ap_uint<CONFIG_T::filt_height * CONFIG_T::filt_width> pixel_idx[data_T::size / CONFIG_T::n_chan];",
+            "Faulty Code": "ap_uint<CONFIG_T::filt_height * CONFIG_T::filt_width> pixel_idx[CONFIG_T::n_chan];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned i_ih = 0; i_ih < CONFIG_T::in_height; i_ih++) {",
+            "Faulty Code": "#pragma HLS UNROLL\nfor (unsigned i_ih = 0; i_ih < CONFIG_T::in_height; i_ih++) {"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "data[(ii + kk - CONFIG_T::pad_top) * CONFIG_T::in_width + ff * CONFIG_T::in_width * CONFIG_T::in_height + ll + jj - CONFIG_T::pad_left];",
+            "Faulty Code": "#pragma HLS interface m_axi port=data[(ii + kk - CONFIG_T::pad_top) * CONFIG_T::in_width + ff * CONFIG_T::in_width * CONFIG_T::in_height + ll + jj - CONFIG_T::pad_left];"
+        }
+    ]
+}

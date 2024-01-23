@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (pixel_idx[p][f])",
+            "Faulty Code": "if (pixel_idx[p * CONFIG_T::kernel_size + f])"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=data_window"
+        }
+    ]
+}

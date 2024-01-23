@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE port=res mode=s_axilite"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::n_elem; ii++) {",
+            "Faulty Code": "#pragma HLS UNROLL factor=4\n    for (int ii = 0; ii < CONFIG_T::n_elem; ii++) {"
+        }
+    ]
+}

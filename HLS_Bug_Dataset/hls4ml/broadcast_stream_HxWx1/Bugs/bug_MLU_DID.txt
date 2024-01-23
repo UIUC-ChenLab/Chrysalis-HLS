@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < CONFIG_T::in_height * CONFIG_T::in_width * CONFIG_T::in_chan / data_T::size; i++) {",
+            "Faulty Code": "for (int i = 0; i < CONFIG_T::in_height * CONFIG_T::in_width * CONFIG_T::in_chan / data_T::size - 1; i++) {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "PRAGMA_DATA_PACK(out_data)",
+            "Faulty Code": "#pragma HLS array_partition variable=out_data dim=2"
+        }
+    ]
+}

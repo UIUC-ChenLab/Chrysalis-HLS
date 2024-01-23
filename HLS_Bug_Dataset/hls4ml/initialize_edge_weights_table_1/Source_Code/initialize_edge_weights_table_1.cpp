@@ -1,0 +1,10 @@
+initialize_edge_weights_table(typename CONFIG_T::edge_weight_t edge_weights_table[]) {
+    unsigned const table_size = (1 << CONFIG_T::distance_width);
+    double const step = 64. / table_size;
+
+    typename CONFIG_T::distance_t v = -32.;
+    for (unsigned iw = 0; iw < table_size; ++iw) {
+        edge_weights_table[iw] = std::exp(-v * v);
+        v += step;
+    }
+}

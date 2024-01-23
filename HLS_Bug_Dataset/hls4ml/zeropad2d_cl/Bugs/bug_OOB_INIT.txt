@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int j = 0; j < CONFIG_T::in_width; j++) {",
+            "Faulty Code": "for (int j = 0; j <= CONFIG_T::in_width; j++) {"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "*(res++) = (res_T) * (data++);",
+            "Faulty Code": "*(res++) = *(data++);"
+        }
+    ]
+}

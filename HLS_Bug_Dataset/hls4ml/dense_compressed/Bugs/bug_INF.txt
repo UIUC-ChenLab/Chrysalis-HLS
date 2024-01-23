@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned im = 0; im < multiplier_limit; im++)",
+            "Faulty Code": "for (unsigned im = 0; ; im++)"
+        }
+    ]
+}

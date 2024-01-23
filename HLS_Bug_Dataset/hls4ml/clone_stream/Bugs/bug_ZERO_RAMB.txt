@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "res_T out_data1;\n        res_T out_data2;",
+            "Faulty Code": "res_T out_data1 = 0;\n        res_T out_data2 = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void clone_stream(hls::stream<data_T> &data, hls::stream<res_T> &res1, hls::stream<res_T> &res2) {",
+            "Faulty Code": "void clone_stream(hls::stream<data_T> &data, hls::stream<res_T> &res1, hls::stream<res_T> &res2) {\n#pragma HLS INTERFACE m_axi port=res1 mode=read_write\n#pragma HLS INTERFACE m_axi port=res2 mode=read_write"
+        }
+    ]
+}

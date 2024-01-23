@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "unsigned sw_idx =\n            CONFIG_T::template scale_index<CONFIG_T::filt_width, CONFIG_T::stride_width, CONFIG_T::in_width>::scale_index(\n                wp_idx + p);",
+            "Faulty Code": "unsigned sw_idx =\n            wp_idx + p;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=CONFIG_T::pixels complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=pixel_idx cyclic factor=2"
+        }
+    ]
+}

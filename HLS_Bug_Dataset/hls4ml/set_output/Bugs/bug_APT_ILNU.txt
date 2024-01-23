@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=res"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned ia = 0; ia < CONFIG_T::n_aggregators; ++ia) {",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

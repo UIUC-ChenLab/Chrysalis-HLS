@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T out_data;",
+            "Faulty Code": "res_T out_data = res_T(); // Assuming that res_T has a default constructor, this would initialize out_data. Without this, out_data may contain uninitialized garbage values."
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS pipeline // Nested incorrectly inside the ThresholdedReLUPackLoop"
+        }
+    ]
+}

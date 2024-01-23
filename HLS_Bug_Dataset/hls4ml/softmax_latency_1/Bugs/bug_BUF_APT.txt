@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "data_T in_pack = data.read();",
+            "Faulty Code": "data_T in_pack = res.read();"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS array_partition variable=exp_res complete",
+            "Faulty Code": "#pragma HLS array_partition variable=exp_res cyclic factor=2"
+        }
+    ]
+}

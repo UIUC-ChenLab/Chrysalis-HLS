@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "edge_weights_table[iw] = std::exp(-v * v);",
+            "Faulty Code": "edge_weights_table[iw + table_size] = std::exp(-v * v);"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "typename CONFIG_T::distance_t v = -32.;",
+            "Faulty Code": "typename CONFIG_T::distance_t v = 0;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "for (int j = 0; j < data_T::size; j++) {",
+            "Faulty Code": "#pragma HLS array_partition dim=3"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "res1.write(out_data1);",
+            "Faulty Code": "#pragma HLS interface port=res1 m_axi"
+        }
+    ]
+}

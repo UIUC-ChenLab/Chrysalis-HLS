@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=res_pack dim=2"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "res_pack[i] = embeddings[in_data[j] * CONFIG_T::n_out + i];",
+            "Faulty Code": "res_pack[i] = embeddings[j * CONFIG_T::n_out + i];"
+        }
+    ]
+}

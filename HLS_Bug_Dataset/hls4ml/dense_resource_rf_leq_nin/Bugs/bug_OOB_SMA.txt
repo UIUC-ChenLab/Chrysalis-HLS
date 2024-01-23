@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (in_index >= nin) { in_index = ir; }",
+            "Faulty Code": "if (in_index > nin) { in_index = ir; }"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=biases complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=biases bram"
+        }
+    ]
+}

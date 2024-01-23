@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "i_w += CONFIG_T::reuse_factor;",
+            "Faulty Code": "i_w++;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (i_acc + 1 >= multscale) {",
+            "Faulty Code": "if (i_acc >= multscale) {"
+        }
+    ]
+}

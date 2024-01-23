@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T res_pack;",
+            "Faulty Code": "res_T res_pack; res_pack.some_member = some_value;"
+        }
+    ]
+}

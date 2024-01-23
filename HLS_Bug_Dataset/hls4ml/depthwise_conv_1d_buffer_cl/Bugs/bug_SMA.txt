@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "typename CONFIG_T::weight_t weights[CONFIG_T::filt_width * CONFIG_T::n_chan]",
+            "Faulty Code": "#pragma HLS interface port=weights"
+        }
+    ]
+}

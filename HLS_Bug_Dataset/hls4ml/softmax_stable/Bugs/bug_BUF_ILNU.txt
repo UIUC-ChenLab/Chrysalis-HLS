@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "typename CONFIG_T::inv_table_t inv_exp_sum = invert_table[softmax_idx_from_real_val<typename CONFIG_T::exp_table_t, CONFIG_T>(exp_sum)];",
+            "Faulty Code": "typename CONFIG_T::inv_table_t inv_exp_sum = invert_table[softmax_idx_from_real_val<data_T, CONFIG_T>(exp_sum)];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned i = 0; i < CONFIG_T::n_in; i++) {\n        #pragma HLS unroll\n        d_xi_xmax[i] = data[i] - x_max;\n    }",
+            "Faulty Code": "for (unsigned i = 0; i < CONFIG_T::n_in; i++) {\n        #pragma HLS unroll factor=4\n        d_xi_xmax[i] = data[i] - x_max;\n    }"
+        }
+    ]
+}

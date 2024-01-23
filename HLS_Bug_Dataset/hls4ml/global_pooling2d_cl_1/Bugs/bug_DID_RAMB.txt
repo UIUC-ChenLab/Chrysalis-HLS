@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=data_pack complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=data_pack complete dim=1"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "res.write(res_pack);",
+            "Faulty Code": "res.write(data_window[i_res]);"
+        }
+    ]
+}

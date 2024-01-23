@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "filt_mask = sh_idx + pool_table_width[wp_idx + p] + 1;",
+            "Faulty Code": "filt_mask = sh_idx + pool_table_width[wp_idx + p];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (unsigned p = 0; p < data_T::size / CONFIG_T::n_filt; p++) {",
+            "Faulty Code": "for (unsigned p = 0; p < data_T::size; p++) {"
+        }
+    ]
+}

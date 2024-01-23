@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "cache = data_buf[i_pxl][i_in];",
+            "Faulty Code": "cache = data_buf[i_in][i_pxl];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor rewind",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=data_buf cyclic factor=3 dim=1"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (iv == nvtx) break;",
+            "Faulty Code": "if (iv != nvtx) continue;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "unsigned const iva = iv * CONFIG_T::n_aggregators + ia;",
+            "Faulty Code": "unsigned const iva = ia * CONFIG_T::n_aggregators + iv;"
+        }
+    ]
+}

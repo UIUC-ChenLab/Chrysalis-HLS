@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "input1_T in_data1 = data1.read();",
+            "Faulty Code": "#pragma HLS interface mode=ap_memory\ninput1_T in_data1 = data1.read();"
+        }
+    ]
+}

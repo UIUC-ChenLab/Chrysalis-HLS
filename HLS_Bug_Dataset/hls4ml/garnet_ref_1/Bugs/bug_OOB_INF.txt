@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "unsigned const ivo = iv * CONFIG_T::n_out_features + io;",
+            "Faulty Code": "unsigned const ivo = iv * (CONFIG_T::n_out_features + 1) + io;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (iv == nvtx[0]) break;",
+            "Faulty Code": "if (iv != nvtx[0]) continue;"
+        }
+    ]
+}

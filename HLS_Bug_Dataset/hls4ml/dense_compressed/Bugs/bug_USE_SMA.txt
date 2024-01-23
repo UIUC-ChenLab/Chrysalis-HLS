@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "acc[i] = (typename CONFIG_T::accum_t)(biases[i]);",
+            "Faulty Code": "acc[i] = biases[i];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=acc complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=acc bram"
+        }
+    ]
+}

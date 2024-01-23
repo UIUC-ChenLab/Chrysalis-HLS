@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "typename CONFIG_T::bias_t biases[CONFIG_T::n_filt]",
+            "Faulty Code": "typename CONFIG_T::bias_t biases[CONFIG_T::n_filt] = {0}"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned i_iw = 0; i_iw < CONFIG_T::in_width / (data_T::size / CONFIG_T::n_chan); i_iw++) {",
+            "Faulty Code": "for (unsigned i_iw = 0; ; i_iw++) {"
+        }
+    ]
+}

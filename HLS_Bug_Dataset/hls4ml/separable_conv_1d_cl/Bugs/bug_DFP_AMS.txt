@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS DATAFLOW",
+            "Faulty Code": "#pragma HLS DATAFLOW inside depthwise_conv_1d_encoded_cl loop"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS STREAM variable=depthwise_res depth=res_depth",
+            "Faulty Code": "#pragma HLS INTERFACE port=depthwise_res ap_none"
+        }
+    ]
+}

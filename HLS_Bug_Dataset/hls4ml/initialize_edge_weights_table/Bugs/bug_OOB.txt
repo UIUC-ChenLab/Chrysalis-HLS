@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "unsigned const table_size = (1 << CONFIG_T::distance_width);",
+            "Faulty Code": "unsigned const table_size = (1 << (CONFIG_T::distance_width - 1));"
+        }
+    ]
+}

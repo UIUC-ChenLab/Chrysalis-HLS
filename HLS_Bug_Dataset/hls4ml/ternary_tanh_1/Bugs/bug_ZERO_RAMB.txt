@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "else if (in_data[j] <= -1)\n    out_data[j] = (typename res_T::value_type) - 1;",
+            "Faulty Code": "else if (in_data[j] <= -1)\n    out_data[j] = (typename res_T::value_type)0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS interface m_axi port=in_data"
+        }
+    ]
+}

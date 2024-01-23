@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int norm_index = CONFIG_T::n_filt == -1 ? ii : ii % CONFIG_T::n_filt;",
+            "Faulty Code": "int norm_index = CONFIG_T::n_filt == -1 ? ii : ii % threshold[norm_index];"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=res complete",
+            "Faulty Code": "#pragma HLS UNROLL factor=2"
+        }
+    ]
+}

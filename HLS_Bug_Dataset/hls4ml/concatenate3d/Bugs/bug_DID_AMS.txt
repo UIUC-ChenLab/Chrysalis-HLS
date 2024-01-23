@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition dim=4"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void concatenate3d_0(input1_T data1[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 * CONFIG_T::n_elem1_2], ...)",
+            "Faulty Code": "#pragma HLS interface port=data1 ap_none"
+        }
+    ]
+}

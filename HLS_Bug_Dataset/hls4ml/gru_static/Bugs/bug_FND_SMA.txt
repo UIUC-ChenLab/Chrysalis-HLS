@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=inputacc_h factor=3"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "res_T res_pack;",
+            "Faulty Code": "#pragma HLS INTERFACE port=res_pack bram"
+        }
+    ]
+}

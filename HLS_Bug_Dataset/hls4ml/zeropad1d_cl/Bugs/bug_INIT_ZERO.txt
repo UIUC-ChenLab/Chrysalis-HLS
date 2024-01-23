@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "*(res++) = (res_T) * (data++);",
+            "Faulty Code": "res_T temp; *(res++) = temp = (res_T) * (data++);"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "*(res++) = 0;",
+            "Faulty Code": "*(res++) = (res_T)(0);"
+        }
+    ]
+}

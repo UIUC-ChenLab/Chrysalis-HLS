@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS array_partition dim=3"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "typename data_T::value_type shift_buffer[CONFIG_T::filt_height][CONFIG_T::n_chan],",
+            "Faulty Code": "#pragma HLS INTERFACE port=shift_buffer bram"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "Accum1:\nfor (int ii = 0; ii < CONFIG_T::kernel_size; ii++) {\nAccum2:\n    for (int jj = 0; jj < CONFIG_T::n_chan; jj++) {\n        int index = ii * CONFIG_T::n_chan + jj;\n        acc[jj] += mult[index];\n    }\n}",
+            "Faulty Code": "Accum1:\n#pragma HLS UNROLL factor=2\nfor (int ii = 0; ii < CONFIG_T::kernel_size; ii++) {\nAccum2:\n    for (int jj = 0; jj < CONFIG_T::n_chan; jj++) {\n        int index = ii * CONFIG_T::n_chan + jj;\n        acc[jj] += mult[index];\n    }\n}"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "data_T datareg;",
+            "Faulty Code": "data_T datareg = data[0]; // Incorrectly assumes data[0] is always the initial value"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=data factor=4 cyclic // 'factor' not necessarily divisible by CONFIG_T::n_in"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "void compute_global_pool(const data_T &in_elem, typename CONFIG_T::accum_t data_window[CONFIG_T::n_filt]) {",
+            "Faulty Code": "void compute_global_pool(const data_T &in_elem, typename CONFIG_T::accum_t data_window[CONFIG_T::n_filt/2]) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (unsigned i_iw = 0; i_iw < CONFIG_T::in_width / (data_T::size / CONFIG_T::n_filt); i_iw++) {",
+            "Faulty Code": "for (unsigned i_iw = 0; i_iw < CONFIG_T::in_width; i_iw++) {"
+        }
+    ]
+}

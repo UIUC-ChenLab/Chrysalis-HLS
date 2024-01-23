@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "float newval;",
+            "Faulty Code": "float newval = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "if (fscanf(fp, \"%f\\n\", &newval) != 0) {",
+            "Faulty Code": "if (fscanf(fp, \"%f\\n\", &newval) != 1) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (acc_step + 1 >= multscale) {",
+            "Faulty Code": "if (acc_step >= multscale) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "w_index += rufactor;",
+            "Faulty Code": "w_index += multfactor;"
+        }
+    ]
+}

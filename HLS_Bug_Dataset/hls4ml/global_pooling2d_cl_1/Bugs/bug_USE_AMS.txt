@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "res_pack[i_pack] = data_window[i_pack] / (CONFIG_T::in_height * CONFIG_T::in_width);",
+            "Faulty Code": "res_pack[i_pack] = data_window[i_pack] / CONFIG_T::in_height * CONFIG_T::in_width;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=data_window complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=data_window complete dim=1"
+        }
+    ]
+}

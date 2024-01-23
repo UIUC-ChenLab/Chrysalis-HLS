@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "res_pack[i_pack] = data_window[i_pack] / CONFIG_T::n_in;",
+            "Faulty Code": "res_pack[i_pack] = data_window[i_pack] / (int)CONFIG_T::n_in;"
+        }
+    ]
+}

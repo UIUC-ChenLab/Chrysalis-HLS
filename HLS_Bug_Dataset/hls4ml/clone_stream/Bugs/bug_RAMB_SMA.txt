@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS interface port=data mode=ap_memory"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "data_T in_data = data.read();",
+            "Faulty Code": "#pragma HLS interface port=in_data mode=ap_memory"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<data_T> &data",
+            "Faulty Code": "#pragma HLS INTERFACE port=data bram"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "typename CONFIG_T::bias_t biases[CONFIG_T::n_filt]",
+            "Faulty Code": "#pragma HLS INTERFACE port=biases ap_none"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "if (iv == nvtx)",
+            "Faulty Code": "if (iv = nvtx)"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void aggregate(data_T const data[CONFIG_T::n_vertices * CONFIG_T::n_in_features], nvtx_T const nvtx, arrays_T &arrays)",
+            "Faulty Code": "#pragma HLS INTERFACE port=arrays mode=ap_none"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (res_T::size / CONFIG_T::n_filt == 1) {",
+            "Faulty Code": "if (res_T::size / CONFIG_T::n_filt == 0) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "filt_mask = sh_idx + pool_table_width[wp_idx + p] + 1;",
+            "Faulty Code": "filt_mask = sh_idx + pool_table_width[wp_idx + p];"
+        }
+    ]
+}

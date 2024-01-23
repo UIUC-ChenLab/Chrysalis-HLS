@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "datareg = data[ii];",
+            "Faulty Code": "datareg = data[ii + CONFIG_T::n_in];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS interface m_axi port=data offset=slave bundle=gmem0"
+        }
+    ]
+}

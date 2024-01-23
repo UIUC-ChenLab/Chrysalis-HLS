@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "res_T out_data;",
+            "Faulty Code": "res_T out_data[2]; // Incorrectly declaring out_data as an array"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=2 // Incorrectly applying partial unroll"
+        }
+    ]
+}

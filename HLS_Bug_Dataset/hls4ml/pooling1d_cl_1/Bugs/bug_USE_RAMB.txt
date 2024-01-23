@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "res_T res_pack;",
+            "Faulty Code": "res_T res_pack = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS STREAM variable=data_window[i_out] depth=win_depth",
+            "Faulty Code": "#pragma HLS STREAM variable=data_window depth=win_depth"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "exp_res[j] = 0;",
+            "Faulty Code": "exp_res[j] = exp_table[0];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=data"
+        }
+    ]
+}

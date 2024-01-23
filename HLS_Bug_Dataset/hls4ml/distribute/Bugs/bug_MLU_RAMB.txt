@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned ivv = 0; ivv < CONFIG_T::reuse_factor; ++ivv) {",
+            "Faulty Code": "for (unsigned ivv = 1; ivv < CONFIG_T::reuse_factor; ++ivv) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "edge_weights[ia] = arrays.edge_weights[iva];",
+            "Faulty Code": "edge_weights[ia] = arrays.edge_weights[iv + ia];"
+        }
+    ]
+}

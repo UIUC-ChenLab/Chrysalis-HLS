@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i_mult = 0; i_mult < CONFIG_T::n_in; i_mult++) {",
+            "Faulty Code": "for (int i_mult = 0; i_mult <= CONFIG_T::n_in; i_mult++) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=mult complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=mult cyclic factor=3"
+        }
+    ]
+}

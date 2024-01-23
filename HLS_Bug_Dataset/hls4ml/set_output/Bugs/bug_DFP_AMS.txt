@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void set_output(output_biases_T const &output_transform_biases, arrays_T const &arrays, res_T res[CONFIG_T::n_out_features]) {",
+            "Faulty Code": "void set_output(output_biases_T const &output_transform_biases, arrays_T const &arrays, res_T res) { #pragma HLS INTERFACE port=res ap_none"
+        }
+    ]
+}

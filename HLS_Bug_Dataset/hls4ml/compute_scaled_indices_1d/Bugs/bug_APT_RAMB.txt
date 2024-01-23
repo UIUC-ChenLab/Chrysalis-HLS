@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "unsigned sw_idx =\n            CONFIG_T::template scale_index<CONFIG_T::filt_width, CONFIG_T::stride_width, CONFIG_T::in_width>::scale_index(\n                wp_idx + p);",
+            "Faulty Code": "unsigned sw_idx =\n            CONFIG_T::template scale_index<CONFIG_T::filt_width, CONFIG_T::stride_width, CONFIG_T::in_width>::scale_index(\n                wp_idx * p);"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void compute_scaled_indices_1d(const unsigned w_idx, ap_uint<CONFIG_T::filt_width> *pixel_idx)",
+            "Faulty Code": "void compute_scaled_indices_1d(const unsigned w_idx, ap_uint<CONFIG_T::filt_width> *pixel_idx) {\n    #pragma HLS INTERFACE m_axi port=pixel_idx offset=slave bundle=gmem"
+        }
+    ]
+}

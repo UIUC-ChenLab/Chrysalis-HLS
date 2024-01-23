@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (unsigned io = 0; io < CONFIG_T::n_out_features; ++io) {",
+            "Faulty Code": "#pragma HLS pipeline for (unsigned io = 0; io < CONFIG_T::n_out_features; ++io) {"
+        }
+    ]
+}

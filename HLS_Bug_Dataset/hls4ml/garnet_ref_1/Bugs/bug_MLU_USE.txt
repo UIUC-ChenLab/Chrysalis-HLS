@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned iv = 0; iv < CONFIG_T::n_vertices; ++iv) {",
+            "Faulty Code": "for (unsigned iv = 0; iv <= CONFIG_T::n_vertices; ++iv) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "acc /= CONFIG_T::n_vertices;",
+            "Faulty Code": "acc /= (int)CONFIG_T::n_vertices;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "*(res++) = 0;",
+            "Faulty Code": "*(res++) = res_T();"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int j = 0; j < CONFIG_T::n_chan; j++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (int j = 0; j < CONFIG_T::n_chan; j++) {"
+        }
+    ]
+}

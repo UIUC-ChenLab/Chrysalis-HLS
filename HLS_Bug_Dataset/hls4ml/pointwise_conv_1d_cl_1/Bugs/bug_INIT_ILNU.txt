@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "data.read();",
+            "Faulty Code": "res_T result = data.read(); // Assuming 'result' is used later without initialization"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS UNROLL factor=CONFIG_T::unroll_factor // Assuming CONFIG_T::unroll_factor is a valid config not equal to the full unrolling factor of the innermost loop"
+        }
+    ]
+}

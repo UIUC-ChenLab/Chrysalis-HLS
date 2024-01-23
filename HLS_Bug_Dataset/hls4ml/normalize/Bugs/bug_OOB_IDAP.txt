@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "res[ires] = CONFIG_T::template product<data_T, typename CONFIG_T::scale_t>::product(data[ires], scale[ires]) + bias[ires];",
+            "Faulty Code": "res[ires] = CONFIG_T::template product<data_T, typename CONFIG_T::scale_t>::product(data[ires + 1], scale[ires]) + bias[ires];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=scale complete",
+            "Faulty Code": "#pragma HLS INTERFACE mode=s_axilite port=scale"
+        }
+    ]
+}

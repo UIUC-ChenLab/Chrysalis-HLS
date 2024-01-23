@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "data_window[c * CONFIG_T::pool_width + filt_mask.to_uint() - 1].write(in_elem[p * CONFIG_T::n_filt + c]);",
+            "Faulty Code": "data_window[c * CONFIG_T::pool_width + filt_mask.to_uint()].write(in_elem[p * CONFIG_T::n_filt + c]);"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pool_table_width complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=pool_table_width cyclic factor=2"
+        }
+    ]
+}

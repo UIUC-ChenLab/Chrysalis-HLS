@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T res_pack;",
+            "Faulty Code": "res_T res_pack; // Missing initialization here, should be initialized as res_T res_pack = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "compute_depthwise_output_encoded<data_T, res_T, CONFIG_T>(data.read(), data_window, res, res_pack, outputs_ready, weights, biases, pixel_idx);",
+            "Faulty Code": "compute_depthwise_output_encoded<data_T, res_T, CONFIG_T>(data.read(), data_window, res, weights, biases, pixel_idx); // Incorrect order of arguments, 'outputs_ready' is missing which can cause a RAMB issue since the function may rely on this variable to determine the access pattern in memory."
+        }
+    ]
+}

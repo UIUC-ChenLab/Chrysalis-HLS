@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "exp_diff_res = exp_table[index];",
+            "Faulty Code": "exp_diff_res = exp_table[data_round]; // Incorrect indexing causes non-consecutive memory access"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "res[ii] = (res_T)invert_table[exp_res_index];",
+            "Faulty Code": "res = (res_T)invert_table[exp_res_index]; // Incorrectly assigning a scalar to an array port"
+        }
+    ]
+}

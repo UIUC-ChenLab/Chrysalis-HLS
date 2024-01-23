@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (iv == nvtx) break;",
+            "Faulty Code": "if (iv == CONFIG_T::n_vertices) break;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "typename res_setter_T::res_t acc = CONFIG_T::output_transform_biases[io];",
+            "Faulty Code": "typename res_setter_T::res_t acc = 0;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (res_T::size / CONFIG_T::n_filt == 1) { res_stream.write(res_pack); }",
+            "Faulty Code": "if (res_T::size / CONFIG_T::n_filt == 1) { res_stream.write(res_pack[outputs_ready]); }"
+        }
+    ]
+}

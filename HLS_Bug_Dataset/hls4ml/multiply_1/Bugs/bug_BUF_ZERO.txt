@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "res_T out_data;",
+            "Faulty Code": "res_T out_data[2]; // Incorrectly declaring an array instead of a single variable"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "res_T out_data;",
+            "Faulty Code": "res_T out_data = 0; // Incorrectly initializing a complex data type that may not be zero-initialized"
+        }
+    ]
+}

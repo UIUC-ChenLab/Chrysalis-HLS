@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS array_partition factor=2 variable=out_data"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "res.write(out_data);",
+            "Faulty Code": "#pragma HLS interface mode=ap_hs port=res"
+        }
+    ]
+}

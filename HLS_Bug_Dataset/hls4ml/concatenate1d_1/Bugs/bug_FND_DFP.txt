@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "for (int i = 0; i < CONFIG_T::n_elem1_0 / input1_T::size; i++) {",
+            "Faulty Code": "for (int i = 0; i < CONFIG_T::n_elem1_0; i++) {"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

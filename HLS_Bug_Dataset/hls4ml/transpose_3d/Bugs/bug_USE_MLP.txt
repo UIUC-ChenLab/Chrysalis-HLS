@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "for (idx[2] = 0; idx[2] < dims[2]; idx[2]++) {",
+            "Faulty Code": "for (idx[2] = 0; idx[2] < dims[2]; idx[2]--) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (idx[1] = 0; idx[1] < dims[1]; idx[1]++) {",
+            "Faulty Code": "#pragma HLS pipeline\nfor (idx[1] = 0; idx[1] < dims[1]; idx[1]++) {"
+        }
+    ]
+}

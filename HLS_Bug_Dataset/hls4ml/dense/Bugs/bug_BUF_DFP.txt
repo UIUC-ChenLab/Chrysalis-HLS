@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "void dense(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_out],",
+            "Faulty Code": "void dense(data_T data[CONFIG_T::n_out], res_T res[CONFIG_T::n_in],"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS inline",
+            "Faulty Code": "#pragma HLS dataflow"
+        }
+    ]
+}

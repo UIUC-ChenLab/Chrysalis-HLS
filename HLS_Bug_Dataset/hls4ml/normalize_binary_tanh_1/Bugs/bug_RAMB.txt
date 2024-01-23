@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "out_data[j] = (in_data[j] >= threshold[norm_index]) ? 1 : 0;",
+            "Faulty Code": "#pragma HLS interface m_axi port=threshold # out_data[j] = (in_data[j] >= threshold[norm_index]) ? 1 : 0;"
+        }
+    ]
+}

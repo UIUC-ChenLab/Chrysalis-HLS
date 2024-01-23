@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=prev_output_base complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=prev_output_base factor=2"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "edge_weights[ia] = arrays.edge_weights[iva];",
+            "Faulty Code": "edge_weights[ia] = arrays.edge_weights[iv + ia];"
+        }
+    ]
+}

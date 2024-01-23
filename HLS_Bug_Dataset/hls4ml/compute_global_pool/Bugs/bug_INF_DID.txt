@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned p = 0; p < data_T::size / CONFIG_T::n_filt; p++) {",
+            "Faulty Code": "for (unsigned p = 0; p <= data_T::size / CONFIG_T::n_filt; p++) {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=data_pack complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=data_pack complete dim=1"
+        }
+    ]
+}

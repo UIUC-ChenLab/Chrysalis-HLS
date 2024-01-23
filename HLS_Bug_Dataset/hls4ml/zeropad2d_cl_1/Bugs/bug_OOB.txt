@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "void zeropad2d_cl(hls::stream<data_T> &data, hls::stream<res_T> &res) {\n\nPadTop:\n    for (int i = 0; i < CONFIG_T::pad_top; i++) {\n    PadTopWidth:\n        for (int j = 0; j < CONFIG_T::out_width; j++) {\n            fill_zero<res_T, CONFIG_T>(res);\n        }\n    }\n\nPadMain:\n    for (int i = 0; i < CONFIG_T::in_height; i++) {\n    PadLeft:\n        for (int j = 0; j < CONFIG_T::pad_left; j++) {\n            fill_zero<res_T, CONFIG_T>(res);\n        }\n    CopyMain:\n        for (int j = 0; j < CONFIG_T::in_width; j++) {\n            fill_data<data_T, res_T, CONFIG_T>(data, res);\n        }\n    PadRight:\n        for (int j = 0; j < CONFIG_T::pad_right; j++) {\n            fill_zero<res_T, CONFIG_T>(res);\n        }\n    }\n\nPadBottom:\n    for (int i = 0; i < CONFIG_T::pad_bottom; i++) {\n    PadBottomWidth:\n        for (int j = 0; j < CONFIG_T::out_width; j++) {\n            fill_zero<res_T, CONFIG_T>(res);\n        }\n    }\n}",
+            "Faulty Code": "void zeropad2d_cl(hls::stream<data_T> &data, hls::stream<res_T> &res) {\n\nPadTop:\n    for (int i = 0; i <= CONFIG_T::pad_top; i++) {\n    PadTopWidth:\n        for (int j = 0; j < CONFIG_T::out_width; j++) {\n            fill_zero<res_T, CONFIG_T>(res);\n        }\n    }\n\nPadMain:\n    for (int i = 0; i < CONFIG_T::in_height; i++) {\n    PadLeft:\n        for (int j = 0; j < CONFIG_T::pad_left; j++) {\n            fill_zero<res_T, CONFIG_T>(res);\n        }\n    CopyMain:\n        for (int j = 0; j < CONFIG_T::in_width; j++) {\n            fill_data<data_T, res_T, CONFIG_T>(data, res);\n        }\n    PadRight:\n        for (int j = 0; j < CONFIG_T::pad_right; j++) {\n            fill_zero<res_T, CONFIG_T>(res);\n        }\n    }\n\nPadBottom:\n    for (int i = 0; i < CONFIG_T::pad_bottom; i++) {\n    PadBottomWidth:\n        for (int j = 0; j < CONFIG_T::out_width; j++) {\n            fill_zero<res_T, CONFIG_T>(res);\n        }\n    }\n}"
+        }
+    ]
+}

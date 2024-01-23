@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 1; i < CONFIG_T::n_in; i++) {",
+            "Faulty Code": "for (int i = 1; i <= CONFIG_T::n_in; i++) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=data"
+        }
+    ]
+}

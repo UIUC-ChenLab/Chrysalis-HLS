@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "int index = ii * CONFIG_T::n_out + jj;",
+            "Faulty Code": "int index = ii * CONFIG_T::n_in + jj;"
+        }
+    ]
+}

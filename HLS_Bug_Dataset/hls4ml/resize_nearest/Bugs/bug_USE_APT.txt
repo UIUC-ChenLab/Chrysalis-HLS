@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "int y_ratio = (int)((CONFIG_T::height << 16) / CONFIG_T::new_height) + 1;",
+            "Faulty Code": "int y_ratio = (int)(((unsigned int)CONFIG_T::height << 16) / CONFIG_T::new_height) + 1;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic variable=image factor=2"
+        }
+    ]
+}

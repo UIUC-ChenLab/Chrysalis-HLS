@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "auto datareg = CONFIG_T::slope * data[ii] + CONFIG_T::shift;",
+            "Faulty Code": "int datareg = CONFIG_T::slope * data[ii] + CONFIG_T::shift;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void hard_sigmoid(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {",
+            "Faulty Code": "void hard_sigmoid(data_T data[CONFIG_T::n_in], res_T res) {"
+        }
+    ]
+}

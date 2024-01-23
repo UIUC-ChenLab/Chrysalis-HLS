@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS INLINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "data[id] = data_window[id].read();",
+            "Faulty Code": "#pragma HLS interface m_axi port=data_window offset=slave"
+        }
+    ]
+}

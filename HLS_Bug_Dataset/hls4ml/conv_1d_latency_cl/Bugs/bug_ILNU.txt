@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "Product1:\nfor (int i_in = 0; i_in < mult_n_in; i_in++) {\n#pragma HLS UNROLL\n...",
+            "Faulty Code": "Product1:\nfor (int i_in = 0; i_in < mult_n_in; i_in++) {\n#pragma HLS UNROLL factor=2\n..."
+        }
+    ]
+}

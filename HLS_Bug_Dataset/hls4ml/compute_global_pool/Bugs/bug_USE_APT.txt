@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "data_pack[p] = in_elem[p * CONFIG_T::n_filt + c];",
+            "Faulty Code": "data_pack[p] = in_elem[(int16_t)(p * CONFIG_T::n_filt) + c];"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=data_pack complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=data_pack cyclic dim=0"
+        }
+    ]
+}

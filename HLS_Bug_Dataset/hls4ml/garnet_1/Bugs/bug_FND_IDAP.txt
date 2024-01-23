@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=means_local factor=unroll_factor"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void aggregate(data_T const data[CONFIG_T::n_vertices * CONFIG_T::n_in_features], nvtx_T const nvtx, arrays_T &arrays)",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=data"
+        }
+    ]
+}

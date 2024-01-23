@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "sX = ((sX - lShiftX) == 0) ? sX - CONFIG_T::stride_width + 1 : sX + 1;",
+            "Faulty Code": "sX = ((sX - lShiftX) == 0) ? sX - CONFIG_T::stride_width - 1 : sX + 1;"
+        }
+    ]
+}

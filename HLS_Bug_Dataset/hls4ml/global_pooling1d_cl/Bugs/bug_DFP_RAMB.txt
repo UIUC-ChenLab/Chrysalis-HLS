@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "pool[jj] = data[jj * CONFIG_T::n_filt + ff];",
+            "Faulty Code": "pool[jj] = data[ff * CONFIG_T::n_in + jj];"
+        }
+    ]
+}

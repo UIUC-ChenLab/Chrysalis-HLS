@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "res[(ii / CONFIG_T::stride_height) * CONFIG_T::out_width * CONFIG_T::n_filt +\n                    (jj / CONFIG_T::stride_width) * CONFIG_T::n_filt + ff] =\n                    pool_op<data_T, CONFIG_T::pool_height * CONFIG_T::pool_width, CONFIG_T::pool_op>(pool);",
+            "Faulty Code": "res[(ii / CONFIG_T::stride_height) * CONFIG_T::out_width +\n                    (jj / CONFIG_T::stride_width) + ff] =\n                    pool_op<data_T, CONFIG_T::pool_height * CONFIG_T::pool_width, CONFIG_T::pool_op>(pool);"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pool complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=pool complete dim=1"
+        }
+    ]
+}

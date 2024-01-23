@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned ir = 0; ir < unroll_factor; ++ir)",
+            "Faulty Code": "for (unsigned ir = 0; ir <= unroll_factor; ++ir)"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned i_ih = 0; i_ih < CONFIG_T::in_height; i_ih++) {",
+            "Faulty Code": "for (unsigned i_ih = 0; ; i_ih++) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned p = 0; p < data_T::size / CONFIG_T::n_chan; p++) {",
+            "Faulty Code": "for (unsigned p = 0; p <= data_T::size / CONFIG_T::n_chan; p++) {"
+        }
+    ]
+}

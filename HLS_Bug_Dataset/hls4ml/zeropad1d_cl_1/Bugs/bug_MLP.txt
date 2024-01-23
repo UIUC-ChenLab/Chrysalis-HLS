@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "void zeropad1d_cl(hls::stream<data_T> &data, hls::stream<res_T> &res) { ... }",
+            "Faulty Code": "void zeropad1d_cl(hls::stream<data_T> &data, hls::stream<res_T> &res) {\n    #pragma HLS pipeline\n    PadLeft: for (int i = 0; i < CONFIG_T::pad_left; i++) { ... }\n}"
+        }
+    ]
+}

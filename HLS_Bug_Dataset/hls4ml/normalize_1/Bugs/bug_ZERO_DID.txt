@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "constexpr unsigned ii = CONFIG_T::n_in / CONFIG_T::multiplier_limit;",
+            "Faulty Code": "constexpr unsigned ii = 0;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=scale complete",
+            "Faulty Code": "#pragma HLS array_partition variable=scale dim=2 complete"
+        }
+    ]
+}

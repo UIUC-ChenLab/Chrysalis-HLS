@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "inputacc_h[iacc] = tmpres[index] + tmpres_state_h[iacc];",
+            "Faulty Code": "inputacc_h[iacc] = tmpres[iacc] + tmpres_state_h[iacc];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "acc[iacc] = (typename CONFIG_T::accum_t)biases[iacc];",
+            "Faulty Code": "acc[iacc] = 0;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "if (CONFIG_T::n_in / data_T::size > 1) {",
+            "Faulty Code": "if (CONFIG_T::n_in > 1) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "data_T data_pack = data_stream.read();",
+            "Faulty Code": "data_T data_pack; data_stream >> data_pack;"
+        }
+    ]
+}

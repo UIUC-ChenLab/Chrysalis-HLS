@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<1> cache;",
+            "Faulty Code": "ap_uint<1> cache = cache;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=res complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=res type=invalid"
+        }
+    ]
+}

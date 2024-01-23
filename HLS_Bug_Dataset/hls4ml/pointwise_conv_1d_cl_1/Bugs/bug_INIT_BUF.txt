@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "pointwise_mult_buffer<data_T, res_T, CONFIG_T>(data.read(), res, weights, biases);",
+            "Faulty Code": "data_T buffer; pointwise_mult_buffer<data_T, res_T, CONFIG_T>(buffer, res, weights, biases);"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "data.read();",
+            "Faulty Code": "pointwise_mult_buffer<data_T, res_T, CONFIG_T>(data.read(), res, weights, biases);"
+        }
+    ]
+}

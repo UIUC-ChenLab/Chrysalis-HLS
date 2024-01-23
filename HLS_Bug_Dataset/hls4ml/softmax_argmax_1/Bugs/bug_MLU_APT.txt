@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 1; i < res_T::size; i++) {",
+            "Faulty Code": "for (int i = 1; i <= res_T::size; i++) {"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=out_data"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=data_buf complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=data_buf complete dim=1"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned i_pxl = 0; i_pxl < CONFIG_T::n_pixels; i_pxl++) {\n            #pragma HLS UNROLL\n",
+            "Faulty Code": "for (int i_part = 0; i_part < CONFIG_T::n_partitions; i_part++) {\n        #pragma HLS UNROLL\n"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned x = softmax_idx_from_real_val<data_T, CONFIG_T>(data[i]);",
+            "Faulty Code": "int x = softmax_idx_from_real_val<data_T, CONFIG_T>(data[i]);"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS unroll",
+            "Faulty Code": "#pragma HLS unroll factor=2"
+        }
+    ]
+}

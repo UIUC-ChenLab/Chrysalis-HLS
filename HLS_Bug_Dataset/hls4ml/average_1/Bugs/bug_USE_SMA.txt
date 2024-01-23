@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "out_data[j] = (in_data1[j] + in_data2[j]) / (typename res_T::value_type)2;",
+            "Faulty Code": "out_data[j] = (in_data1[j] + in_data2[j]) / 2;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void average(hls::stream<input1_T> &data1, hls::stream<input2_T> &data2, hls::stream<res_T> &res) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=res bram"
+        }
+    ]
+}

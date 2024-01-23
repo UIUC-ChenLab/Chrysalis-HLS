@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (outputs_ready == (res_T::size / CONFIG_T::n_chan) - 1) {",
+            "Faulty Code": "while (outputs_ready == (res_T::size / CONFIG_T::n_chan) - 1) {"
+        }
+    ]
+}

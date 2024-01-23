@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "acc += arrays.edge_weight_mean[ia] * aggr;",
+            "Faulty Code": "acc += arrays.edge_weight_mean[io] * aggr;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "void set_output(output_biases_T const &output_transform_biases, arrays_T const &arrays, res_T res[CONFIG_T::n_out_features]) {",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=res"
+        }
+    ]
+}

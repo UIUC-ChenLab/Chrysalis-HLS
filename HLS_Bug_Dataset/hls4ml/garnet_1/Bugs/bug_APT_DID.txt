@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition type=complete"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "for (unsigned io = 0; io < CONFIG_T::n_out_features; ++io) {",
+            "Faulty Code": "#pragma HLS array_partition dim=3"
+        }
+    ]
+}

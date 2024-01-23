@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static const int filt_width = CONFIG_T::filt_width - 1;",
+            "Faulty Code": "static const int filt_width = 0;"
+        }
+    ]
+}

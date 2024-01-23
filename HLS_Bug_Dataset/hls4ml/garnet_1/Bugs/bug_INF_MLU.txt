@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (iv == nvtx)\n    break;",
+            "Faulty Code": "if (iv != nvtx)\n    continue;"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned ivv = 0; ivv < CONFIG_T::reuse_factor; ++ivv) {",
+            "Faulty Code": "for (unsigned ivv = 0; ivv <= CONFIG_T::reuse_factor; ++ivv) {"
+        }
+    ]
+}

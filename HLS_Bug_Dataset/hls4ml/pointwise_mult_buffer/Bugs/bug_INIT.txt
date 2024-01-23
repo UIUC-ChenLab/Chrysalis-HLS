@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "for (int iacc = 0; iacc < nout; iacc++) {\n    #pragma HLS UNROLL\n    acc[iacc] = (typename CONFIG_T::accum_t)biases[iacc];\n}",
+            "Faulty Code": "for (int iacc = 0; iacc < nout; iacc++) {\n    #pragma HLS UNROLL\n    acc[iacc] += (typename CONFIG_T::accum_t)biases[iacc];\n}"
+        }
+    ]
+}

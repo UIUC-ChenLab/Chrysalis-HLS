@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned iw = 0; iw < table_size; ++iw) {",
+            "Faulty Code": "for (unsigned iw = 0; ; ++iw) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "typename CONFIG_T::distance_t v = -32.;",
+            "Faulty Code": "typename CONFIG_T::distance_t v = 0xFFFFE0;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void depthwise_conv_1d_buffer_cl(hls::stream<data_T> &data, hls::stream<res_T> &res,",
+            "Faulty Code": "void depthwise_conv_1d_buffer_cl(hls::stream<data_T> &data, hls::stream<res_T, 2> &res,"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor nested_pipeline"
+        }
+    ]
+}

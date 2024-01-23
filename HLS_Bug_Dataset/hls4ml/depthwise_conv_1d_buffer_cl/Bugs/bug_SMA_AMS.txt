@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<data_T> &data",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=data"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "typename CONFIG_T::weight_t weights[CONFIG_T::filt_width * CONFIG_T::n_chan]",
+            "Faulty Code": "#pragma HLS INTERFACE ap_none port=weights"
+        }
+    ]
+}

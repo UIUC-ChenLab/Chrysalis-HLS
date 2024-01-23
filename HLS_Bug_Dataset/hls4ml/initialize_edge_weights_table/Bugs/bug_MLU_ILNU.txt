@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned iw = 1; iw < table_size; ++iw) {",
+            "Faulty Code": "for (unsigned iw = 1; iw < table_size - 1; ++iw) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned iw = 1; iw < table_size; ++iw) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\nfor (unsigned iw = 1; iw < table_size; ++iw) {"
+        }
+    ]
+}

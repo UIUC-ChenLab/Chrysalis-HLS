@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned iv = 0; iv < CONFIG_T::n_vertices; ++iv) {",
+            "Faulty Code": "for (unsigned iv = 0; iv <= CONFIG_T::n_vertices; ++iv) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "aggregated_features[iap] += edge_weights[iva] * propagated_features[ivp];",
+            "Faulty Code": "aggregated_features[iap] += edge_weights[iv] * propagated_features[ivp];"
+        }
+    ]
+}

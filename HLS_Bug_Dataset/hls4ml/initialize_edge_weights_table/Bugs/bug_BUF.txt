@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "edge_weights_table[iw] = hls::exp(-distance * distance);",
+            "Faulty Code": "edge_weights_table[table_size / 2 + iw] = hls::exp(-distance * distance);"
+        }
+    ]
+}

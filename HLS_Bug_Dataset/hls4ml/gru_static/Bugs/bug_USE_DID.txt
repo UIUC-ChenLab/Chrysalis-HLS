@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "h_state[i_h_state] = 0;",
+            "Faulty Code": "h_state[i_h_state] = -1;"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=tmpres_state_h complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=tmpres_state_h dim=2"
+        }
+    ]
+}

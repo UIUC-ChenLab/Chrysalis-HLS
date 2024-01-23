@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static int pX = 0;",
+            "Faulty Code": "static int pX;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "res_stream.write(res_pack);",
+            "Faulty Code": "#pragma HLS interface mode=ap_none port=res_stream\nres_stream.write(res_pack);"
+        }
+    ]
+}

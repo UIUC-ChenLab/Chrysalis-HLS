@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "auto datareg = CONFIG_T::slope * data[ii] + CONFIG_T::shift;",
+            "Faulty Code": "auto datareg; // Missing initialization"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "res[ii] = datareg;",
+            "Faulty Code": "res[ii + CONFIG_T::n_in] = datareg; // Wrong index, beyond the allocated buffer"
+        }
+    ]
+}

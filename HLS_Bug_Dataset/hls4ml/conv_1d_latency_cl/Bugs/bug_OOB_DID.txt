@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "cache = data_buf[i_pxl][i_in];",
+            "Faulty Code": "cache = data_buf[i_pxl][mult_n_in];"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=data_buf complete dim=0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=data_buf complete dim=2"
+        }
+    ]
+}

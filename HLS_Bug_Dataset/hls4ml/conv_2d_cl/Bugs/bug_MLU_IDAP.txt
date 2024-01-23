@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "conv_2d_latency_cl<data_T, res_T, CONFIG_T>(data, res, weights, biases);",
+            "Faulty Code": "for (int i = 0; i < CONFIG_T::out_height * CONFIG_T::out_width * CONFIG_T::n_filt; i+=2) {\n    conv_2d_latency_cl<data_T, res_T, CONFIG_T>(&data[i], &res[i], weights, biases);\n}"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INLINE region",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=data"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "for (int i = 0; i < CONFIG_T::pad_top; i++) {",
+            "Faulty Code": "for (int i = 0; i < CONFIG_T::pad_top; i--) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void zeropad2d_cl(hls::stream<data_T> &data, hls::stream<res_T> &res) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=res ap_none\nvoid zeropad2d_cl(hls::stream<data_T> &data, hls::stream<res_T> &res) {"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (in_index >= nin) { in_index = ir; }",
+            "Faulty Code": "if (in_index > nin) { in_index = ir; }"
+        }
+    ]
+}

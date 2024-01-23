@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "*(res++) = 0;",
+            "Faulty Code": "*(res++) = 1;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "*(res++) = (res_T) * (data++);",
+            "Faulty Code": "*(res++) = (data_T) * (data++);"
+        }
+    ]
+}

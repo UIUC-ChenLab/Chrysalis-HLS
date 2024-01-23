@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=edge_weights complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=edge_weights cyclic factor=3"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned ia = 0; ia < CONFIG_T::n_aggregators; ++ia) {",
+            "Faulty Code": "#pragma HLS unroll factor=4\n    for (unsigned ia = 0; ia < CONFIG_T::n_aggregators; ++ia) {"
+        }
+    ]
+}

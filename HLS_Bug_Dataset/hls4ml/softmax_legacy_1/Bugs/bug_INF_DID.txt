@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned s = 0; s < CONFIG_T::n_in / data_T::size; s++) {",
+            "Faulty Code": "for (unsigned s = 0; s <= CONFIG_T::n_in / data_T::size; s++) {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=exp_res dim=1"
+        }
+    ]
+}

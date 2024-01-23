@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "exp_res[i] = exp_table[x];",
+            "Faulty Code": "exp_res[i] = exp_table[i]; // Incorrectly using 'i' instead of 'x' for accessing exp_table."
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS interface m_axi port=exp_res offset=slave // Incorrectly specifying the interface pragma here can cause non-burst RAMB."
+        }
+    ]
+}

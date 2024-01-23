@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=h_state complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=h_state dim=2 complete"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<data_T> &data_stream, hls::stream<res_T> &res_stream",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_memory port=data_stream"
+        }
+    ]
+}

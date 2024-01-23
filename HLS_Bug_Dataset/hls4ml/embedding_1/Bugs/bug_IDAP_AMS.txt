@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void embedding(hls::stream<data_T> &data, hls::stream<res_T> &res, typename CONFIG_T::embeddings_t embeddings[CONFIG_T::vocab_size * CONFIG_T::n_out]) {",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_none port=embeddings"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void embedding(hls::stream<data_T> &data, hls::stream<res_T> &res, typename CONFIG_T::embeddings_t embeddings[CONFIG_T::vocab_size * CONFIG_T::n_out]) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=embeddings"
+        }
+    ]
+}

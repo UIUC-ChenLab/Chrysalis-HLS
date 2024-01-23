@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "index = datareg * CONFIG_T::table_size / -8;\nif (index > CONFIG_T::table_size - 1)\n    index = CONFIG_T::table_size - 1;\nres[ii] = alpha * elu_table[index];",
+            "Faulty Code": "index = datareg * CONFIG_T::table_size / -8;\nres[ii] = alpha * elu_table[index];"
+        }
+    ]
+}

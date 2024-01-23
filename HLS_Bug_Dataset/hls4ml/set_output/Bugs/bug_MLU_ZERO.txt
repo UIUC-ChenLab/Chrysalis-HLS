@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned io = 0; io < CONFIG_T::n_out_features; ++io) {",
+            "Faulty Code": "for (unsigned io = 1; io < CONFIG_T::n_out_features; ++io) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "res_T acc = output_transform_biases.output_biases[io];",
+            "Faulty Code": "res_T acc = 0;"
+        }
+    ]
+}

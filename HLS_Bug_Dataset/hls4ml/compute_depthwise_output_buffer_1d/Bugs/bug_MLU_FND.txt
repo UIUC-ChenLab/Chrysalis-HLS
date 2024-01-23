@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "pX = pX + 1;",
+            "Faulty Code": "pX++; // Assuming developer forgot to account for pX == CONFIG_T::in_width - 1"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=mult complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=mult cyclic factor=4 // Assuming CONFIG_T::kernel_size * CONFIG_T::n_chan is not divisible by 4"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "res_T res_pack;\nPRAGMA_DATA_PACK(res_pack)",
+            "Faulty Code": "#pragma HLS dataflow\nres_T res_pack;\nPRAGMA_DATA_PACK(res_pack)"
+        }
+    ]
+}

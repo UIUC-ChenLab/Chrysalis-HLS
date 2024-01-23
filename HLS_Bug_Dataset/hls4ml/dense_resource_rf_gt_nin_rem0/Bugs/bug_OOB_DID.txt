@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (w_index >= CONFIG_T::n_in * CONFIG_T::n_out)",
+            "Faulty Code": "if (w_index > CONFIG_T::n_in * CONFIG_T::n_out)"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=biases complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=biases complete dim=2"
+        }
+    ]
+}

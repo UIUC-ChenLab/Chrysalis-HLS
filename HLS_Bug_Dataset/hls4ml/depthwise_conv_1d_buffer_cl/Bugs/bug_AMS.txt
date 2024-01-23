@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void depthwise_conv_1d_buffer_cl(hls::stream<data_T> &data, hls::stream<res_T> &res, typename CONFIG_T::weight_t weights[CONFIG_T::filt_width * CONFIG_T::n_chan], typename CONFIG_T::bias_t biases[CONFIG_T::n_chan])",
+            "Faulty Code": "#pragma HLS interface port=weights ap_none"
+        }
+    ]
+}

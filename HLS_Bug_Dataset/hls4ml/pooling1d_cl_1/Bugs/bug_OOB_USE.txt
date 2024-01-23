@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (wp_idx + p < nW) {",
+            "Faulty Code": "if (wp_idx + p <= nW) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "pool_window[f] = data_window[c * CONFIG_T::pool_width + f].read();",
+            "Faulty Code": "pool_window[f] = (typename CONFIG_T::accum_t)data_window[c * CONFIG_T::pool_width + f].read();"
+        }
+    ]
+}

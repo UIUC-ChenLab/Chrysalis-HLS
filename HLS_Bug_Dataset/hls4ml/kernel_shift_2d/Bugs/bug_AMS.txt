@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void kernel_shift_2d( typename data_T::value_type shift_buffer[CONFIG_T::filt_height][CONFIG_T::n_chan], typename data_T::value_type kernel_window[CONFIG_T::filt_width * CONFIG_T::filt_height * CONFIG_T::n_chan])",
+            "Faulty Code": "#pragma HLS interface port=shift_buffer ap_none"
+        }
+    ]
+}

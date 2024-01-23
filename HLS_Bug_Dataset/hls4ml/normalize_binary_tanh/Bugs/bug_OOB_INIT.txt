@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (datareg >= threshold[norm_index])",
+            "Faulty Code": "if (datareg >= threshold[ii])"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "ap_uint<1> cache;",
+            "Faulty Code": "ap_uint<1> cache = res[ii];"
+        }
+    ]
+}

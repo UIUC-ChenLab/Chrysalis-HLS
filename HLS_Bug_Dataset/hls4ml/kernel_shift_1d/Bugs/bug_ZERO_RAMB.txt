@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static const int lastheight = (CONFIG_T::filt_width - 1) * CONFIG_T::n_chan;",
+            "Faulty Code": "static const int lastheight = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "kernel_window[lastheight + i_ic] = in_elem[i_ic];",
+            "Faulty Code": "kernel_window[i_ic] = in_elem[i_ic];"
+        }
+    ]
+}

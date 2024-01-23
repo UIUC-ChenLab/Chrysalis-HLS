@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic factor=2"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<data_T> &data",
+            "Faulty Code": "#pragma HLS interface port=data bram"
+        }
+    ]
+}

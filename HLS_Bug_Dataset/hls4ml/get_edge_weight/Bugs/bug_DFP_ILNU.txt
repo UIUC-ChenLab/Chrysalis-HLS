@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "get_edge_weight(typename CONFIG_T::distance_t distance, typename CONFIG_T::edge_weight_t edge_weights_table[]) {",
+            "Faulty Code": "#pragma HLS dataflow\ncget_edge_weight(typename CONFIG_T::distance_t distance, typename CONFIG_T::edge_weight_t edge_weights_table[]) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "index_t index(distance.range(CONFIG_T::distance_width - 1, 0));",
+            "Faulty Code": "#pragma HLS unroll factor=4\nindex_t index(distance.range(CONFIG_T::distance_width - 1, 0));"
+        }
+    ]
+}

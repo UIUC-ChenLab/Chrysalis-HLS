@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "out_data[j] = in_data1[j] + in_data2[j];",
+            "Faulty Code": "#pragma HLS array_partition dim=2 complete\nout_data[j] = in_data1[j] + in_data2[j];"
+        }
+    ]
+}

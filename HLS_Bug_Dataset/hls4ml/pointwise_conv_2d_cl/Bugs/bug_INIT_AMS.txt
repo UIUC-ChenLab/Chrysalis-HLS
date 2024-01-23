@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T res[CONFIG_T::out_height * CONFIG_T::out_width * CONFIG_T::n_filt],",
+            "Faulty Code": "res_T res;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS INLINE region",
+            "Faulty Code": "#pragma HLS INTERFACE port=res mode=ap_none"
+        }
+    ]
+}

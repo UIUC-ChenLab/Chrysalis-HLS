@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "unsigned pool_table_width[CONFIG_T::n_in];",
+            "Faulty Code": "unsigned pool_table_width[CONFIG_T::n_in - 1];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "filt_mask = pool_table_width[wp_idx + p] + 1;",
+            "Faulty Code": "filt_mask = pool_table_width[wp_idx + p] - 1;"
+        }
+    ]
+}

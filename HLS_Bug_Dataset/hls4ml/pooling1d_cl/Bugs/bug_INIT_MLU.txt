@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "data_T pool[CONFIG_T::pool_width];",
+            "Faulty Code": "data_T pool[CONFIG_T::pool_width]; // Missing initialization, could be uninitialized"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int jj = 0; jj < CONFIG_T::stride_width; jj++) {",
+            "Faulty Code": "for (int jj = 0; jj < CONFIG_T::stride_width-1; jj++) { // Incorrect loop unrolling, missing one iteration"
+        }
+    ]
+}

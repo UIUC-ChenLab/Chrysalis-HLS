@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=data_t dim=3"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "data_t[j * CONFIG_T::height + i] = data[i * CONFIG_T::width + j];",
+            "Faulty Code": "data_t[i * CONFIG_T::width + j] = data[j * CONFIG_T::height + i];"
+        }
+    ]
+}

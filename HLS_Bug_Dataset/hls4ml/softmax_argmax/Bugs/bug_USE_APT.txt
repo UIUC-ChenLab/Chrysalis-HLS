@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "data_T maximum = data[0];",
+            "Faulty Code": "data_T maximum = (data_T)(data[0] << 1) >> 1;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic variable=res"
+        }
+    ]
+}

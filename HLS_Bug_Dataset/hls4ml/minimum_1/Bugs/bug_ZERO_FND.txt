@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "assert(input1_T::size == input2_T::size && input1_T::size == res_T::size);",
+            "Faulty Code": "res_T out_data = 0;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS array_partition variable=out_data factor=3"
+        }
+    ]
+}

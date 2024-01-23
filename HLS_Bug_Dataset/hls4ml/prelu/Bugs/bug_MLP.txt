@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "\"\"\"void prelu(data_T data[CONFIG_T::n_in], data_T alpha[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]){\n    #pragma HLS PIPELINE\n\n    data_T datareg;\n    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {\n        datareg = data[ii];\n        if (datareg > 0)\n            res[ii] = datareg;\n        else\n            res[ii] = alpha[ii] * datareg;\n    }\n}\"\"\"",
+            "Faulty Code": "\"\"\"void prelu(data_T data[CONFIG_T::n_in], data_T alpha[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]){\n    #pragma HLS PIPELINE\n\n    data_T datareg;\n    for (int ii = 0; ii < CONFIG_T::n_in; ii++) {\n        #pragma HLS PIPELINE\n        datareg = data[ii];\n        if (datareg > 0)\n            res[ii] = datareg;\n        else\n            res[ii] = alpha[ii] * datareg;\n    }\n}\"\"\""
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "input1_T in_data1 = data1.read();",
+            "Faulty Code": "#pragma HLS dataflow\ninput1_T in_data1 = data1.read();"
+        }
+    ]
+}

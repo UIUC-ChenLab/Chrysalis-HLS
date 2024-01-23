@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void embedding(hls::stream<data_T> &data, hls::stream<res_T> &res, typename CONFIG_T::embeddings_t embeddings[CONFIG_T::vocab_size * CONFIG_T::n_out]) {",
+            "Faulty Code": "void embedding(hls::stream<data_T> &data, hls::stream<res_T> &res, typename CONFIG_T::embeddings_t embeddings[CONFIG_T::vocab_size * CONFIG_T::n_out]) { #pragma HLS INTERFACE port=embeddings mode=s_axilite"
+        }
+    ]
+}

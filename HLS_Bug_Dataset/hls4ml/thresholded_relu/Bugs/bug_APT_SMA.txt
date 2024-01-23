@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=data"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void thresholded_relu(data_T data[CONFIG_T::n_in], data_T theta, res_T res[CONFIG_T::n_in]) {",
+            "Faulty Code": "#pragma HLS interface port=res bram"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "res[0] = cast<input1_T, res_T, CONFIG_T>(acc);",
+            "Faulty Code": "res[CONFIG_T::n_out] = cast<input1_T, res_T, CONFIG_T>(acc);"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=mult complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=mult type=cyclic factor=2"
+        }
+    ]
+}

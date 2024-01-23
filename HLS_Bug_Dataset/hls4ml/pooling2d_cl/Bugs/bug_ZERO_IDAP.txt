@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned img_overlap = 0;",
+            "Faulty Code": "unsigned img_overlap;"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "input1_T in_data1 = data1.read();",
+            "Faulty Code": "input1_T in_data1; data1 >> in_data1;"
+        }
+    ]
+}

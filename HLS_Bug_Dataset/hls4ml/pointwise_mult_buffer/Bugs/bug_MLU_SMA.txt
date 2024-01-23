@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int im = 0; im < block_factor; im++) {",
+            "Faulty Code": "for (int im = 0; im < block_factor - 1; im++) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void dense_latency(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_out],",
+            "Faulty Code": "void dense_latency(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_out], #pragma HLS INTERFACE port=res ap_fifo)"
+        }
+    ]
+}

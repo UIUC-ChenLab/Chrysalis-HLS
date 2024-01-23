@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "if (iv == nvtx)\n    break;",
+            "Faulty Code": "if (iv != nvtx)\n    continue;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=edge_weights complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=edge_weights cyclic factor=3"
+        }
+    ]
+}

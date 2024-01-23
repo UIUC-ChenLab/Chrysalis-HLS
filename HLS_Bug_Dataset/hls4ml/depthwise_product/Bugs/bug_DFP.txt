@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "void depthwise_product(data_T data[CONFIG_T::kernel_size * CONFIG_T::n_chan], res_T res[CONFIG_T::n_chan],\n                       typename CONFIG_T::weight_t weights[CONFIG_T::kernel_size * CONFIG_T::n_chan],\n                       typename CONFIG_T::bias_t biases[CONFIG_T::n_chan]) {\n    #pragma HLS INLINE",
+            "Faulty Code": "void depthwise_product(data_T data[CONFIG_T::kernel_size * CONFIG_T::n_chan], res_T res[CONFIG_T::n_chan],\n                       typename CONFIG_T::weight_t weights[CONFIG_T::kernel_size * CONFIG_T::n_chan],\n                       typename CONFIG_T::bias_t biases[CONFIG_T::n_chan]) {\n    #pragma HLS INLINE\n    #pragma HLS dataflow"
+        }
+    ]
+}

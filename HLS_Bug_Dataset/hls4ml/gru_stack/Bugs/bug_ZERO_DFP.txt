@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if (reset_state) {\n    for (int i_h_state = 0; i_h_state < (CONFIG_T::n_state); i_h_state++) {\n        #pragma HLS UNROLL\n        h_state[i_h_state] = 0;\n    }\n}",
+            "Faulty Code": "if (reset_state) {\n    for (int i_h_state = 0; i_h_state < (CONFIG_T::n_state); i_h_state++) {\n        #pragma HLS UNROLL\n        h_state[i_h_state] = 1;\n    }\n}"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "nnet::dense<data_T, typename CONFIG_T::accum_t, typename CONFIG_T::mult_config1>(data, tmpres, param, param_b);",
+            "Faulty Code": "#pragma HLS dataflow\nnnet::dense<data_T, typename CONFIG_T::accum_t, typename CONFIG_T::mult_config1>(data, tmpres, param, param_b);"
+        }
+    ]
+}

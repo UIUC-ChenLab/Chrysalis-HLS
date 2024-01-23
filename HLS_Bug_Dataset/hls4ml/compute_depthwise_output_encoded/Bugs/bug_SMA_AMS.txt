@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<res_T> &res",
+            "Faulty Code": "res_T res"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<typename data_T::value_type> data_window[CONFIG_T::kernel_size * CONFIG_T::n_chan]",
+            "Faulty Code": "typename data_T::value_type data_window"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "data_T data[prev_layer_t::n_out_features];",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=data data_T data[prev_layer_t::n_out_features];"
+        }
+    ]
+}

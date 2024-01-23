@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "kernel_window[lastheight + i_ic] = in_elem[i_ic];",
+            "Faulty Code": "kernel_window[lastheight + i_ic] = kernel_window[i_ic];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static int pX = 0;",
+            "Faulty Code": "static int pX;"
+        }
+    ]
+}

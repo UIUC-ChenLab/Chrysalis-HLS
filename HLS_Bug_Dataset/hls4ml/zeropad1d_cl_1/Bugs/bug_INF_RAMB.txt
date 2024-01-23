@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < CONFIG_T::pad_left; i++) {",
+            "Faulty Code": "for (int i = 0; i <= CONFIG_T::pad_left; i++) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void zeropad1d_cl(hls::stream<data_T> &data, hls::stream<res_T> &res) {",
+            "Faulty Code": "void zeropad1d_cl(data_T A[32], res_T res[32]) {"
+        }
+    ]
+}

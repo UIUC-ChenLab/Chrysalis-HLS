@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "void concatenate2d_0(input1_T data1[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1], input2_T data2[CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1], res_T res[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 + CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1]) {",
+            "Faulty Code": "#pragma HLS array_partition variable=res dim=3 complete"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1; ii++) { res[ii] = data1[ii]; }",
+            "Faulty Code": "for (int ii = 0; ii < CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1; ii+=2) { res[ii + 1] = data1[ii]; }"
+        }
+    ]
+}

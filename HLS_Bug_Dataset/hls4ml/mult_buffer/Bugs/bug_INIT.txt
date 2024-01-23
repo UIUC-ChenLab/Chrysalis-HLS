@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "outputs_ready = 0;",
+            "Faulty Code": "/* Missing initialization of outputs_ready */"
+        }
+    ]
+}

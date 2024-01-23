@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int jj = 0; jj < CONFIG_T::n_elem1_1; jj++) {",
+            "Faulty Code": "#pragma HLS unroll factor=2\nfor (int jj = 0; jj < CONFIG_T::n_elem1_1; jj++) {"
+        }
+    ]
+}

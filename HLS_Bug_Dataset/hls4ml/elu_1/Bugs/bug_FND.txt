@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "typename CONFIG_T::table_t elu_table[CONFIG_T::table_size];",
+            "Faulty Code": "#pragma HLS array_partition variable=elu_table cyclic factor=5 dim=1 \n typename CONFIG_T::table_t elu_table[CONFIG_T::table_size];"
+        }
+    ]
+}

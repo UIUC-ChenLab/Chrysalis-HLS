@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS PIPELINE II = 1",
+            "Faulty Code": "#pragma HLS PIPELINE II = 2"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "typename data_T::value_type shift_buffer[CONFIG_T::filt_height][CONFIG_T::n_chan]",
+            "Faulty Code": "typename data_T::value_type shift_buffer[CONFIG_T::filt_height]"
+        }
+    ]
+}

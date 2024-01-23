@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (w_index >= CONFIG_T::n_in * CONFIG_T::n_out) break;",
+            "Faulty Code": "if (w_index > CONFIG_T::n_in * CONFIG_T::n_out) break;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "acc[iacc] = (typename CONFIG_T::accum_t)biases[iacc];",
+            "Faulty Code": "acc[iacc] = 0;"
+        }
+    ]
+}

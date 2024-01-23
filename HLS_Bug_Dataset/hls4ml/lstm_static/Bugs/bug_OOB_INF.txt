@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (w_index >= CONFIG_T::n_in * CONFIG_T::n_out) break;",
+            "Faulty Code": "if (w_index >= CONFIG_T::n_in * CONFIG_T::n_out) continue;"
+        },
+        {
+            "Error Type": "INF",
+            "Original Code": "if (in_index >= nin) { in_index = ir; }",
+            "Faulty Code": "if (in_index >= nin) { in_index = in_index; }"
+        }
+    ]
+}

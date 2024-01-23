@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "res_T out_data1;",
+            "Faulty Code": "res_T out_data1 = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "out_data1[j] = in_data[j];",
+            "Faulty Code": "out_data1[j] = (short)in_data[j];"
+        }
+    ]
+}

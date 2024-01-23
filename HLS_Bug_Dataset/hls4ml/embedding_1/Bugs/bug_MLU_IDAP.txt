@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=CONFIG_T::n_out-1"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "res.write(res_pack);",
+            "Faulty Code": "if(j != data_T::size - 1) res.write(res_pack);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "cache = data[ii];",
+            "Faulty Code": "cache = data[ii + CONFIG_T::n_out];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "acc[jj] += mult[index];",
+            "Faulty Code": "acc[jj] += mult[ii];"
+        }
+    ]
+}

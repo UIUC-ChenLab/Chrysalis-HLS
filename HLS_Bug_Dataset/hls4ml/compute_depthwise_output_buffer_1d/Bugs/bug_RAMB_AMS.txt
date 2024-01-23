@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=res_out complete dim = 0",
+            "Faulty Code": "#pragma HLS INTERFACE port=res_out mode=m_axi depth=CONFIG_T::n_chan"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void compute_depthwise_output_buffer_1d(const data_T &in_elem, hls::stream<res_T> &res_stream, ...)",
+            "Faulty Code": "void compute_depthwise_output_buffer_1d(const data_T &in_elem, hls::stream<res_T> &res_stream, typename CONFIG_T::weight_t weights[CONFIG_T::kernel_size * CONFIG_T::n_chan], ...)"
+        }
+    ]
+}

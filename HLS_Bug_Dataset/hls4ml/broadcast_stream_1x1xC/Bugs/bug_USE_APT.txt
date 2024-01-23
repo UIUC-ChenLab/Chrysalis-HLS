@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "for (int k = 0; k < res_T::size; k++) {",
+            "Faulty Code": "for (int k = 0; k <= res_T::size; k++) {"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition type=cyclic"
+        }
+    ]
+}

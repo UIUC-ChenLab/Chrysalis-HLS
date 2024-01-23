@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "return edge_weights_table[index];",
+            "Faulty Code": "#pragma HLS interface bram port=edge_weights_table"
+        }
+    ]
+}

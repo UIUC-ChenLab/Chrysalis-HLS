@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < CONFIG_T::n_in / res_T::size; i++) {",
+            "Faulty Code": "for (int i = 0; i < (CONFIG_T::n_in / res_T::size) - 1; i++) {"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void thresholded_relu(hls::stream<data_T> &data, typename data_T::value_type theta, hls::stream<res_T> &res) {",
+            "Faulty Code": "void thresholded_relu(hls::stream<data_T> &data, typename data_T::value_type theta, hls::stream<res_T> &res) {\n#pragma HLS INTERFACE port=bram"
+        }
+    ]
+}

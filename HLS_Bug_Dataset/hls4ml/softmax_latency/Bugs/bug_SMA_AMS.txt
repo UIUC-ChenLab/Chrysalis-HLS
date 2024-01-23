@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS array_partition variable=exp_res complete",
+            "Faulty Code": "#pragma HLS interface port=exp_res bram"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "typename CONFIG_T::exp_table_t exp_table[CONFIG_T::table_size];",
+            "Faulty Code": "#pragma HLS interface port=exp_table ap_none"
+        }
+    ]
+}

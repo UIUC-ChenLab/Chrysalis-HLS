@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "datareg = data[ii];",
+            "Faulty Code": "datareg = data[ii + CONFIG_T::n_in / 2];"
+        }
+    ]
+}

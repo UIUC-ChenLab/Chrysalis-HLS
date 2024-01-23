@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "typename CONFIG_T::table_t sigmoid_table[CONFIG_T::table_size];",
+            "Faulty Code": "typename CONFIG_T::table_t sigmoid_table[CONFIG_T::table_size] = {0};"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "for (int ii = 0; ii < CONFIG_T::n_in; ii++) { #pragma HLS PIPELINE"
+        }
+    ]
+}

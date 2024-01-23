@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "index = data_round + 8 * CONFIG_T::table_size / 16;",
+            "Faulty Code": "index = data_round + (8 * CONFIG_T::table_size) >> 16;"
+        }
+    ]
+}

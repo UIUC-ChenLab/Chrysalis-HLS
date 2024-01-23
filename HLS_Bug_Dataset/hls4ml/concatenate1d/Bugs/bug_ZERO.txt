@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::n_elem2_0; ii++) {",
+            "Faulty Code": "for (int ii = 0; ii < CONFIG_T::n_elem2_0; ii = 0) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i_in = 0; i_in < CONFIG_T::n_sequence * CONFIG_T::n_in / data_T::size; i_in++) {",
+            "Faulty Code": "for (int i_in = 0; i_in <= CONFIG_T::n_sequence * CONFIG_T::n_in / data_T::size; i_in++) {"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "int index = iacc + CONFIG_T::n_state * 2;",
+            "Faulty Code": "int index = iacc + 2;"
+        }
+    ]
+}

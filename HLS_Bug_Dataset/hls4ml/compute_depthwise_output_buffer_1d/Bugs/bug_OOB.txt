@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "res_pack[i_ic] = res_out[i_ic];",
+            "Faulty Code": "res_pack[i_ic] = res_out[i_ic + CONFIG_T::n_chan];"
+        }
+    ]
+}

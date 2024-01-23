@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < CONFIG_T::in_height * CONFIG_T::in_width * CONFIG_T::in_chan / data_T::size; i++) {",
+            "Faulty Code": "for (int i = 0; i <= CONFIG_T::in_height * CONFIG_T::in_width * CONFIG_T::in_chan / data_T::size; i++) {"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void broadcast_stream_1x1xC(hls::stream<data_T> &data, hls::stream<res_T> &res) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=data mode=ap_none\nvoid broadcast_stream_1x1xC(hls::stream<data_T> &data, hls::stream<res_T> &res) {"
+        }
+    ]
+}

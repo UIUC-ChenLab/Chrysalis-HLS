@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T res_pack;",
+            "Faulty Code": "res_T res_pack = res_T();"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "#pragma HLS STREAM variable=depthwise_res depth=res_depth",
+            "Faulty Code": "#pragma HLS STREAM variable=depthwise_res depth=depthwise_res_depth"
+        }
+    ]
+}

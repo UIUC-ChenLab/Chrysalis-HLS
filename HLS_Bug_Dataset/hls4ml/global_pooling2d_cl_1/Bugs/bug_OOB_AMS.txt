@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "res_pack[i_pack] = data_window[i_pack];",
+            "Faulty Code": "res_pack[i_pack] = data_window[i_pack + i_res * res_T::size];"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS INTERFACE port=res_pack ap_none"
+        }
+    ]
+}

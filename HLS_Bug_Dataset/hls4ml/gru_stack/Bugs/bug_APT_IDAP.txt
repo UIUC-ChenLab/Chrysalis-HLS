@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=h_state complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=h_state cyclic factor=2"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "if (CONFIG_T::n_in / data_T::size > 1) {\n            #pragma HLS PIPELINE\n        }",
+            "Faulty Code": "if (CONFIG_T::n_in / data_T::size > 1) {\n            #pragma HLS INTERFACE mode=ap_hs port=data\n        }"
+        }
+    ]
+}

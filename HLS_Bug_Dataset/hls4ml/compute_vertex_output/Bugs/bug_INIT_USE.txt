@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "typename res_setter_T::res_t acc = CONFIG_T::output_transform_biases[io];",
+            "Faulty Code": "typename res_setter_T::res_t acc;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "typename res_setter_T::res_t incr = edge_weights[ia] * output_base[ioa];",
+            "Faulty Code": "typename res_setter_T::res_t incr = (typename res_setter_T::res_t)(edge_weights[ia]) * output_base[ioa];"
+        }
+    ]
+}

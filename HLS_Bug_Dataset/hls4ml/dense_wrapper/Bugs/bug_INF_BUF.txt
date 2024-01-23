@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int ir = 0; ir < rufactor; ir++) {",
+            "Faulty Code": "for (int ir = 0; ir <= rufactor; ir++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "int index = ii * CONFIG_T::n_out + jj;",
+            "Faulty Code": "int index = ii * CONFIG_T::n_in + jj;"
+        }
+    ]
+}

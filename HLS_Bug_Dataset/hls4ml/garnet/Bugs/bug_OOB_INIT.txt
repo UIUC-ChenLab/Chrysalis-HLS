@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (ivv * unroll_factor >= nvtx)\n            break;",
+            "Faulty Code": "if (ivv * unroll_factor > nvtx)\n            break;"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "Means<CONFIG_T, typename CONFIG_T::edge_weight_aggr_t> means_accum;",
+            "Faulty Code": "Means<CONFIG_T, typename CONFIG_T::edge_weight_aggr_t> means_accum = Means<CONFIG_T, typename CONFIG_T::edge_weight_aggr_t>();"
+        }
+    ]
+}

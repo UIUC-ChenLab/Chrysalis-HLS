@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "initialize_edge_weights_table(typename CONFIG_T::edge_weight_t edge_weights_table[]) {",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=edge_weights_table"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (unsigned iw = 0; iw < table_size; ++iw) {",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}

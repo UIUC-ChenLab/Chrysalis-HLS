@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out_data[j + (i * input1_T::size)] = in_data1[j];",
+            "Faulty Code": "out_data[j + (i * (input1_T::size + 1))] = in_data1[j];"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=out_data factor=3"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "VerticesOuter: for (unsigned ivv = 0; ivv < CONFIG_T::reuse_factor; ++ivv) { #pragma HLS PIPELINE ... VerticesInner: for (unsigned ir = 0; ir < unroll_factor; ++ir) {...} }",
+            "Faulty Code": "VerticesOuter: for (unsigned ivv = 0; ivv < CONFIG_T::reuse_factor; ++ivv) { #pragma HLS unroll factor = 4 ... VerticesInner: for (unsigned ir = 0; ir < unroll_factor; ++ir) { #pragma HLS unroll factor = 2 ... } }"
+        }
+    ]
+}

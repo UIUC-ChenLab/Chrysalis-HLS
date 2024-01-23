@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "res_T res[CONFIG_T::out_height * CONFIG_T::out_width * CONFIG_T::n_filt]",
+            "Faulty Code": "res_T res[CONFIG_T::out_height * CONFIG_T::out_width]"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS INLINE region",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=res"
+        }
+    ]
+}

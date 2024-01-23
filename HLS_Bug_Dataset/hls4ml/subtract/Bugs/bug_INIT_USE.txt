@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void subtract(input1_T data1[CONFIG_T::n_elem], input2_T data2[CONFIG_T::n_elem], res_T res[CONFIG_T::n_elem]) {",
+            "Faulty Code": "void subtract(input1_T data1[CONFIG_T::n_elem], input2_T data2[CONFIG_T::n_elem], res_T res[CONFIG_T::n_elem]) { res_T tmp; res[0] = tmp; }"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "res[ii] = data1[ii] - data2[ii];",
+            "Faulty Code": "res[ii] = data1[ii] - (int8_t)data2[ii];"
+        }
+    ]
+}

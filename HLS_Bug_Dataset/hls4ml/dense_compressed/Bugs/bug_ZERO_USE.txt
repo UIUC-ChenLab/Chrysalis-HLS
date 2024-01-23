@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "acc[i] = (typename CONFIG_T::accum_t)(biases[i]);",
+            "Faulty Code": "acc[i] = 0;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "data_T data_cache = data[row];",
+            "Faulty Code": "data_T data_cache = (data_T)(data[row] << 1);"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition dim=2"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void leaky_relu(data_T data[CONFIG_T::n_in], data_T alpha, res_T res[CONFIG_T::n_in]) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=data ap_none"
+        }
+    ]
+}

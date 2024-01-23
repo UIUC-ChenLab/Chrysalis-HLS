@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "res[j * CONFIG_T::n_out + i] = embeddings[data[j] * CONFIG_T::n_out + i];",
+            "Faulty Code": "res[j * CONFIG_T::n_out + i] = embeddings[data[j + 1] * CONFIG_T::n_out + i];"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "res[j * CONFIG_T::n_out + i] = embeddings[data[j] * CONFIG_T::n_out + i];",
+            "Faulty Code": "res[(j + CONFIG_T::n_in / 2) * CONFIG_T::n_out + i] = embeddings[data[j] * CONFIG_T::n_out + i];"
+        }
+    ]
+}

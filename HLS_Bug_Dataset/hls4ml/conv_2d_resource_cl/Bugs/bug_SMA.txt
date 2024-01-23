@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "data_T data_buf[CONFIG_T::n_pixels][mult_n_in];",
+            "Faulty Code": "#pragma HLS interface port=data_buf bram"
+        }
+    ]
+}

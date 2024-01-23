@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out_data[input1_T::size + k] = in_data2[k];",
+            "Faulty Code": "out_data[input1_T::size + k + 1] = in_data2[k];"
+        },
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T out_data;",
+            "Faulty Code": "res_T out_data; for (int j = 0; j < res_T::size; j++) out_data[j] = 0;"
+        }
+    ]
+}

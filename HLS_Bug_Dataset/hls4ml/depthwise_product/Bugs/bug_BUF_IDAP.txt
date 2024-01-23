@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "acc[iacc] = (typename CONFIG_T::accum_t)biases[iacc];",
+            "Faulty Code": "acc[iacc] = (typename CONFIG_T::accum_t)biases[iacc + CONFIG_T::n_chan];"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "input1_T in_data1 = data1.read();",
+            "Faulty Code": "input1_T in_data1; for(int k = 0; k < input1_T::size; k++) { in_data1[k] = data1.read(); }"
+        }
+    ]
+}

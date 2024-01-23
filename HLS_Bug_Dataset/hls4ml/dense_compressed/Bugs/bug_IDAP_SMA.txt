@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS ARRAY_RESHAPE   variable=weights block factor=multiplier_limit",
+            "Faulty Code": "#pragma HLS ARRAY_RESHAPE   variable=weights cyclic factor=multiplier_limit"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void fill_mult(typename CONFIG_T::index_t index, typename CONFIG_T::accum_t mult[CONFIG_T::n_out], typename CONFIG_T::accum_t weight)",
+            "Faulty Code": "void fill_mult(typename CONFIG_T::index_t index, typename CONFIG_T::accum_t mult, typename CONFIG_T::accum_t weight)"
+        }
+    ]
+}

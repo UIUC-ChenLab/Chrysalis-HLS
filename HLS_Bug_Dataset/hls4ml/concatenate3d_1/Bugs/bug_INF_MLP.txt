@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::n_elem1_0; ii++) {",
+            "Faulty Code": "for (int ii = 0; ii <= CONFIG_T::n_elem1_0; ii++) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE\n                #pragma HLS PIPELINE"
+        }
+    ]
+}

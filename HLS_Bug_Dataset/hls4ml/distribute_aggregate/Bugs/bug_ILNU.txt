@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "VerticesInner:\n for (unsigned ir = 0; ir < unroll_factor; ++ir) {\n unsigned iv = ivv * unroll_factor + ir;\n if (iv == nvtx)\n break;\n data_T data[prev_layer_t::n_out_features];\n #pragma HLS ARRAY_PARTITION variable=data complete\n SingleVertexResSetter<prev_layer_t, data_T> res_setter(data);\n compute_vertex_output<prev_layer_t>(prev_arrays, iv, prev_output_base, res_setter);\n SingleVertexDataGetter<current_layer_t, data_T> data_getter(data);\n compute_weights_aggregates<current_layer_t>(data_getter, iv, means_local, current_arrays);\n }",
+            "Faulty Code": "VerticesInner:\n for (unsigned ir = 0; ir < unroll_factor; ++ir) {\n #pragma HLS unroll factor=2\n unsigned iv = ivv * unroll_factor + ir;\n if (iv == nvtx)\n break;\n data_T data[prev_layer_t::n_out_features];\n #pragma HLS ARRAY_PARTITION variable=data complete\n SingleVertexResSetter<prev_layer_t, data_T> res_setter(data);\n compute_vertex_output<prev_layer_t>(prev_arrays, iv, prev_output_base, res_setter);\n SingleVertexDataGetter<current_layer_t, data_T> data_getter(data);\n compute_weights_aggregates<current_layer_t>(data_getter, iv, means_local, current_arrays);\n }"
+        }
+    ]
+}

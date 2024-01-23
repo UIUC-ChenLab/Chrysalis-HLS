@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned p = 0; p < data_T::size / CONFIG_T::n_filt; p++) {",
+            "Faulty Code": "for (unsigned p = 0; p <= data_T::size / CONFIG_T::n_filt; p++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "res_pack[i_pack] = data_window[i_pack];",
+            "Faulty Code": "res_pack[i_pack] = data_window[i_res * res_T::size + i_pack];"
+        }
+    ]
+}

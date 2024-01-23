@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "data_t[idx_t[0] * dims_t[1] * dims_t[2] + idx_t[1] * dims_t[2] + idx_t[2]] =",
+            "Faulty Code": "data_t[idx_t[0] * dims[1] * dims[2] + idx_t[1] * dims[2] + idx_t[2]] ="
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void transpose_3d(data_T data[CONFIG_T::depth * CONFIG_T::height * CONFIG_T::width],",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=data"
+        }
+    ]
+}

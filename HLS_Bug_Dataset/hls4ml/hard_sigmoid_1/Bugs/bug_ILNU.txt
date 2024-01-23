@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL\nauto datareg = CONFIG_T::slope * in_data[j] + CONFIG_T::shift;",
+            "Faulty Code": "#pragma HLS UNROLL factor=2\nauto datareg = CONFIG_T::slope * in_data[j] + CONFIG_T::shift;"
+        }
+    ]
+}

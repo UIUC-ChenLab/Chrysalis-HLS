@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "\"\"\"void init_exp_table(typename CONFIG_T::exp_table_t table_out[CONFIG_T::table_size]) {\n    // The template data_T is the data type used to address the table\n    for (unsigned i = 0; i < CONFIG_T::table_size; i++) {\n        // Slicing bits for address is going to round towards 0, so take the central value\n        float x = softmax_real_val_from_idx<data_T, CONFIG_T>(i);\n        typename CONFIG_T::exp_table_t exp_x = exp_fcn_float(x);\n        table_out[i] = exp_x;\n    }\n}\"\"\"",
+            "Faulty Code": "\"\"\"void init_exp_table(typename CONFIG_T::exp_table_t table_out[CONFIG_T::table_size]) {\n    // The template data_T is the data type used to address the table\n    for (unsigned i = 0; i < CONFIG_T::table_size; i++) {\n        #pragma HLS dataflow\n        // Slicing bits for address is going to round towards 0, so take the central value\n        float x = softmax_real_val_from_idx<data_T, CONFIG_T>(i);\n        typename CONFIG_T::exp_table_t exp_x = exp_fcn_float(x);\n        table_out[i] = exp_x;\n    }\n}\"\"\""
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out_data1[j] = in_data[j];\n            out_data2[j] = in_data[j];\n            out_data3[j] = in_data[j];",
+            "Faulty Code": "out_data1[j] = in_data[j];\n            out_data2[j] = in_data[j+1];\n            out_data3[j] = in_data[j];"
+        }
+    ]
+}

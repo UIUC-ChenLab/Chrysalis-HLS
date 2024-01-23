@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T out_data;",
+            "Faulty Code": "res_T out_data = res_T(); // Assuming this does not initialize the object correctly"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (int k = 0; k < input1_T::size; k++) { ... }",
+            "Faulty Code": "for (int k = 1; k <= input1_T::size; k++) { ... } // This changes the access pattern, potentially breaking burst access"
+        }
+    ]
+}

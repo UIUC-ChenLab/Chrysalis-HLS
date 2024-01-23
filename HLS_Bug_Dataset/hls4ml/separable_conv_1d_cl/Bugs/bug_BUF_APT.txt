@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "depthwise_conv_1d_cl<data_T, dw_res_T, typename CONFIG_T::depthwise_config>(data, depthwise_res, depthwise_weights, depthwise_biases);",
+            "Faulty Code": "depthwise_conv_1d_cl<data_T, dw_res_T, typename CONFIG_T::depthwise_config>(data, res, depthwise_weights, depthwise_biases);"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=weights complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=weights cyclic factor=CONFIG_T::n_chan"
+        }
+    ]
+}

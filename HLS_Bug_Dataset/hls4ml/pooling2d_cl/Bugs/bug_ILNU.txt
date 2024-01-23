@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int j = 0; j < res_T::size; j++) {\n#pragma HLS UNROLL\nout_data[j] = (in_data1[j] + in_data2[j]) / (typename res_T::value_type)2;\n}",
+            "Faulty Code": "for (int i = 0; i < CONFIG_T::n_elem / input1_T::size; i++) {\n#pragma HLS UNROLL\nfor (int j = 0; j < res_T::size; j++) {out_data[j] = (in_data1[j] + in_data2[j]) / (typename res_T::value_type)2;}\n}"
+        }
+    ]
+}

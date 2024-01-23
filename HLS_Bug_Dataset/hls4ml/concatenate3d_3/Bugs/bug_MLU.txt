@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int k = 0; k < input1_T::size; k++) {\n    #pragma HLS UNROLL\n    out_data[k] = in_data1[k];\n}",
+            "Faulty Code": "for (int k = 0; k < input1_T::size - 1; k++) {\n    #pragma HLS UNROLL\n    out_data[k] = in_data1[k];\n}"
+        }
+    ]
+}

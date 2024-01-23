@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "filt_mask = pool_table_width[wp_idx + p] + 1;",
+            "Faulty Code": "filt_mask = pool_table_width[p] + 1;"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pool_window complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=pool_window cyclic factor=2"
+        }
+    ]
+}

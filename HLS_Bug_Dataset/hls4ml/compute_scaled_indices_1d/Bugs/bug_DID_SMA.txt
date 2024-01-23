@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition dim=2"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void compute_scaled_indices_1d(const unsigned w_idx, ap_uint<CONFIG_T::filt_width> *pixel_idx) {",
+            "Faulty Code": "#pragma HLS INTERFACE port=pixel_idx bram"
+        }
+    ]
+}

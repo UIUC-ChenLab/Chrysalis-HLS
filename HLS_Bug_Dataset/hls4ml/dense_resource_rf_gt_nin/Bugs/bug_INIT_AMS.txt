@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "acc[iacc] = (typename CONFIG_T::accum_t)biases[iacc];",
+            "Faulty Code": "acc[iacc]; // Missing initialization from biases, assumes 'acc' will be zero-initialized which might not be the case"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=biases complete",
+            "Faulty Code": "#pragma HLS INTERFACE port=biases ap_none // Incorrectly maps 'biases' to a scalar port instead of an array interface"
+        }
+    ]
+}

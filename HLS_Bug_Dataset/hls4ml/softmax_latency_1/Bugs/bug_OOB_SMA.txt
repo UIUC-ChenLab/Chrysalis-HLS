@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "typename CONFIG_T::exp_table_t exp_table[CONFIG_T::table_size];",
+            "Faulty Code": "typename CONFIG_T::exp_table_t exp_table[CONFIG_T::table_size - 1];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "#pragma HLS PIPELINE II=ii",
+            "Faulty Code": "#pragma HLS INTERFACE port=exp_res bram"
+        }
+    ]
+}

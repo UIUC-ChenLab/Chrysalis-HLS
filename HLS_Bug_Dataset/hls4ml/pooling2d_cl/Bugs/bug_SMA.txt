@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "data_T pool[CONFIG_T::pool_height * CONFIG_T::pool_width];",
+            "Faulty Code": "#pragma HLS interface bram port=pool"
+        }
+    ]
+}

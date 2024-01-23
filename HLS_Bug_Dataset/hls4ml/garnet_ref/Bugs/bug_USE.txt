@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "unsigned const ivp = iv * CONFIG_T::n_propagate + ip;",
+            "Faulty Code": "int const ivp = iv * CONFIG_T::n_propagate + ip;"
+        }
+    ]
+}

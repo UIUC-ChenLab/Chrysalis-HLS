@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "if (k == index)",
+            "Faulty Code": "if ((int)k == index)"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "mult[k] += weight;",
+            "Faulty Code": "mult[k*CONFIG_T::n_out] += weight;"
+        }
+    ]
+}

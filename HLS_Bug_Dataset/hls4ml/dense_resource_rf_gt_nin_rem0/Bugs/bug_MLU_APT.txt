@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int ir = 0; ir < rufactor; ir++) {",
+            "Faulty Code": "for (int ir = 0; ir < rufactor - 1; ir++) {"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=biases complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=biases cyclic"
+        }
+    ]
+}

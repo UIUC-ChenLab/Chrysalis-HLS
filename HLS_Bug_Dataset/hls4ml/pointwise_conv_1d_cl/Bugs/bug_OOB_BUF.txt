@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "void pointwise_conv_1d_cl(data_T data[CONFIG_T::in_width * CONFIG_T::n_chan],",
+            "Faulty Code": "void pointwise_conv_1d_cl(data_T data[CONFIG_T::in_width * (CONFIG_T::n_chan+1)],"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "conv_1d_latency_cl<data_T, res_T, CONFIG_T>(data, res, weights, biases);",
+            "Faulty Code": "conv_1d_latency_cl<data_T, res_T, CONFIG_T>(data + CONFIG_T::in_width, res, weights, biases);"
+        }
+    ]
+}

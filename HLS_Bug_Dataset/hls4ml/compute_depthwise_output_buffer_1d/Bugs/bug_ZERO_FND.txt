@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "static int pX = 0;",
+            "Faulty Code": "static int pX;"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=res_out complete dim = 0",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=res_out cyclic factor=2 dim = 0"
+        }
+    ]
+}

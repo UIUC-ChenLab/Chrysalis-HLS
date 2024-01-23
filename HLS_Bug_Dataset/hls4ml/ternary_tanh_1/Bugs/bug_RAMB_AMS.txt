@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "hls::stream<data_T> &data",
+            "Faulty Code": "data_T data[CONFIG_T::n_in]"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "if (in_data[j] > 1)",
+            "Faulty Code": "if (in_data[i*res_T::size + j] > 1)"
+        }
+    ]
+}

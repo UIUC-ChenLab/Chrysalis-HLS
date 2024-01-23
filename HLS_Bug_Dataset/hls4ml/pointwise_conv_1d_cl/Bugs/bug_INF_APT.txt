@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "assert(CONFIG_T::filt_width == 1);",
+            "Faulty Code": "// assert(CONFIG_T::filt_width == 1); // Faulty line where the assertion is commented out, potentially allowing the function to run with an incorrect filt_width, leading to an infinite loop if the filter width is unexpectedly set to zero or a negative value."
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS INLINE region",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=weights type=complete // Faulty line where the 'type' is incorrectly set as 'complete' instead of the correct type which could be 'cyclic', 'block', or 'complete' depending on the user's intention and the design requirements."
+        }
+    ]
+}

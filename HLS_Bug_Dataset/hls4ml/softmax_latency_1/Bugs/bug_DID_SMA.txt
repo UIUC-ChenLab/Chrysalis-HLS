@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS array_partition variable=exp_res complete",
+            "Faulty Code": "#pragma HLS array_partition variable=exp_res dim=0"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void softmax_latency(hls::stream<data_T> &data, hls::stream<res_T> &res)",
+            "Faulty Code": "void softmax_latency(data_T data[10], res_T res[10])"
+        }
+    ]
+}

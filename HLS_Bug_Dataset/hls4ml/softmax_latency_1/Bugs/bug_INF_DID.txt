@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned i = 0; i < CONFIG_T::n_in / data_T::size; i++) {",
+            "Faulty Code": "for (unsigned i = 0; i <= CONFIG_T::n_in / data_T::size; i++) {"
+        },
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS array_partition variable=exp_res complete",
+            "Faulty Code": "#pragma HLS array_partition variable=exp_res dim=0"
+        }
+    ]
+}

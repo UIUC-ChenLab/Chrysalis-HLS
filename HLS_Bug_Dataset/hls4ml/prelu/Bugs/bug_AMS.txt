@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void prelu(data_T data[CONFIG_T::n_in], data_T alpha[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {",
+            "Faulty Code": "#pragma HLS INTERFACE s_axilite port=data\n#pragma HLS INTERFACE s_axilite port=alpha\n#pragma HLS INTERFACE s_axilite port=res\nvoid prelu(data_T data[CONFIG_T::n_in], data_T alpha[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {"
+        }
+    ]
+}

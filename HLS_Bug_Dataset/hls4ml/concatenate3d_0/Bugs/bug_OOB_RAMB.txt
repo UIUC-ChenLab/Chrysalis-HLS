@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "res[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 * CONFIG_T::n_elem1_2 + ii] = data2[ii];",
+            "Faulty Code": "res[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 * (CONFIG_T::n_elem1_2 + ii)] = data2[ii];"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1 * CONFIG_T::n_elem2_2; ii++) {\n        res[CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 * CONFIG_T::n_elem1_2 + ii] = data2[ii];\n    }",
+            "Faulty Code": "for (int ii = 0; ii < CONFIG_T::n_elem2_0 * CONFIG_T::n_elem2_1; ii++) {\n        for (int jj = 0; jj < CONFIG_T::n_elem2_2; jj++) {\n            res[(CONFIG_T::n_elem1_0 * CONFIG_T::n_elem1_1 * CONFIG_T::n_elem1_2) + ii + jj] = data2[ii * CONFIG_T::n_elem2_2 + jj];\n        }\n    }"
+        }
+    ]
+}

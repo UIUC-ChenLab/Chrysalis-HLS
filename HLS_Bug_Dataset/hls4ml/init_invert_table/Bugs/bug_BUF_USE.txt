@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "table_out[i] = inv_x;",
+            "Faulty Code": "table_out[i + CONFIG_T::table_size / 2] = inv_x;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "typename CONFIG_T::inv_table_t inv_x = 1 / x;",
+            "Faulty Code": "typename CONFIG_T::inv_table_t inv_x = 1 / (int)x;"
+        }
+    ]
+}

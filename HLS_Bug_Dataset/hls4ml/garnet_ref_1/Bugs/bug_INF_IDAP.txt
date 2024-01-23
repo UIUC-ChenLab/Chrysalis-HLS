@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned io = 0; io < CONFIG_T::n_out_features; ++io) {",
+            "Faulty Code": "for (unsigned io = 0; io <= CONFIG_T::n_out_features; ++io) {"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "if (iv == nvtx[0]) break;",
+            "Faulty Code": "if (nvtx[iv] == nvtx[0]) break;"
+        }
+    ]
+}

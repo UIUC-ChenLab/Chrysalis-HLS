@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res_T out_data1;",
+            "Faulty Code": "res_T out_data1 = res_T();"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "out_data1[j] = in_data[j];",
+            "Faulty Code": "out_data1[j] = (res_T)(in_data[j]);"
+        }
+    ]
+}

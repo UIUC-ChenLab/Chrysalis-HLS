@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "out_data[j] = typename res_T::value_type(data_array[j * data_T::size + i]);",
+            "Faulty Code": "out_data[j] = typename res_T::value_type(data_array[j * CONFIG_T::width + i]);"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS PIPELINE\n        #pragma HLS PIPELINE"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int j = 0; j < data_T::size; j++) {",
+            "Faulty Code": "for (int j = 0; j <= data_T::size; j++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "res_pack[i] = embeddings[in_data[j] * CONFIG_T::n_out + i];",
+            "Faulty Code": "res_pack[i] = embeddings[(in_data[j] + 1) * CONFIG_T::n_out + i];"
+        }
+    ]
+}

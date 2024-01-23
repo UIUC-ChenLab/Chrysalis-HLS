@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "\"\"\"void init_invert_table(typename CONFIG_T::inv_table_t table_out[CONFIG_T::table_size]) {\n    // The template data_T is the data type used to address the table\n    for (unsigned i = 0; i < CONFIG_T::table_size; i++) {\n        float x = softmax_real_val_from_idx<data_T, CONFIG_T>(i);\n        typename CONFIG_T::inv_table_t inv_x = 1 / x;\n        table_out[i] = inv_x;\n    }\n}\"\"\"",
+            "Faulty Code": "\"\"\"void init_invert_table(typename CONFIG_T::inv_table_t table_out[CONFIG_T::table_size]) {\n    #pragma HLS array_partition variable=table_out cyclic factor=5\n    // The template data_T is the data type used to address the table\n    for (unsigned i = 0; i < CONFIG_T::table_size; i++) {\n        float x = softmax_real_val_from_idx<data_T, CONFIG_T>(i);\n        typename CONFIG_T::inv_table_t inv_x = 1 / x;\n        table_out[i] = inv_x;\n    }\n}\"\"\""
+        }
+    ]
+}

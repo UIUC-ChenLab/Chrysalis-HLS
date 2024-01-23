@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "void relu_max(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {",
+            "Faulty Code": "void relu_max(data_T data, res_T res) { #pragma HLS INTERFACE port=data mode=ap_none"
+        }
+    ]
+}

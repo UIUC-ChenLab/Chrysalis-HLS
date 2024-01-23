@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "void fill_mult(typename CONFIG_T::index_t index, typename CONFIG_T::accum_t mult[CONFIG_T::n_out], typename CONFIG_T::accum_t weight) {",
+            "Faulty Code": "void fill_mult(typename CONFIG_T::index_t index = 0, typename CONFIG_T::accum_t mult[CONFIG_T::n_out] = {0}, typename CONFIG_T::accum_t weight) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "void fill_mult(typename CONFIG_T::index_t index, typename CONFIG_T::accum_t mult[CONFIG_T::n_out], typename CONFIG_T::accum_t weight) {\n    for (unsigned k = 0; k < CONFIG_T::n_out; k++) {",
+            "Faulty Code": "void fill_mult(typename CONFIG_T::index_t index, typename CONFIG_T::accum_t mult[CONFIG_T::n_out], typename CONFIG_T::accum_t weight) {\n    #pragma HLS interface m_axi port=mult\n    for (unsigned k = 0; k < CONFIG_T::n_out; k++) {"
+        }
+    ]
+}

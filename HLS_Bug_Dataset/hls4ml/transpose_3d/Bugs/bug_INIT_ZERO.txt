@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int idx[3] = {0}, idx_t[3] = {0};",
+            "Faulty Code": "int idx[3], idx_t[3];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "unsigned dims[3] = {CONFIG_T::depth, CONFIG_T::height, CONFIG_T::width};",
+            "Faulty Code": "unsigned dims[3] = {0};"
+        }
+    ]
+}

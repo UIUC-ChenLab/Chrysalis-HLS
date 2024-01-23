@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=tmpres complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=tmpres dim=4 complete"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int iacc = 0; iacc < (2 * CONFIG_T::n_state); iacc++) {\n        #pragma HLS UNROLL\n        int index = iacc;\n        inputacc_zr[iacc] = tmpres[index] + tmpres_state_zr[index];\n    }",
+            "Faulty Code": "for (int iacc = 0; iacc < (2 * CONFIG_T::n_state); iacc += 2) {\n        #pragma HLS UNROLL factor=2\n        int index = iacc;\n        inputacc_zr[iacc] = tmpres[index] + tmpres_state_zr[index];\n    }"
+        }
+    ]
+}

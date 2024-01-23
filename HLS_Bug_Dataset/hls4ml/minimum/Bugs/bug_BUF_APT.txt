@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "res[ii] = (data1[ii] < data2[ii]) ? data1[ii] : data2[ii];",
+            "Faulty Code": "res[ii] = (data1[ii + CONFIG_T::n_elem/2] < data2[ii]) ? data1[ii + CONFIG_T::n_elem/2] : data2[ii];"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=data1 type=cyclic factor=2"
+        }
+    ]
+}

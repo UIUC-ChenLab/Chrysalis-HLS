@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (index > CONFIG_T::table_size - 1)",
+            "Faulty Code": "if (index >= CONFIG_T::table_size)"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=sigmoid_table factor=10 cyclic"
+        }
+    ]
+}

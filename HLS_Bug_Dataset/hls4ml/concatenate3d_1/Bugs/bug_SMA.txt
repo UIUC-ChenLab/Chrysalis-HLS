@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "res[res_idx] = data1[data_idx];",
+            "Faulty Code": "#pragma HLS interface port=res bram"
+        }
+    ]
+}

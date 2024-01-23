@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "void multiply(input1_T data1[CONFIG_T::n_elem], input2_T data2[CONFIG_T::n_elem], res_T res[CONFIG_T::n_elem]) {",
+            "Faulty Code": "void multiply(input1_T data1[CONFIG_T::n_elem], input2_T data2[CONFIG_T::n_elem], res_T res[CONFIG_T::n_elem]); // Missing function body, res array could be uninitialized"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE\n\n    for (int ii = 0; ii < CONFIG_T::n_elem; ii++) {\n        res[ii] = data1[ii] * data2[ii];\n    }",
+            "Faulty Code": "#pragma HLS PIPELINE\n\n    for (int ii = 0; ii < CONFIG_T::n_elem; ii += 2) { // Non-consecutive access\n        res[ii] = data1[ii] * data2[ii];\n    }"
+        }
+    ]
+}

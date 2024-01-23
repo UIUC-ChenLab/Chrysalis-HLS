@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "out_data[k] = in_data1[k];",
+            "Faulty Code": "out_data[k] = (int)in_data1[k];"
+        }
+    ]
+}

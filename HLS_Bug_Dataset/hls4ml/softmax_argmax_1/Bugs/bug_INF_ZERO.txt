@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i = 0; i < CONFIG_T::n_in / res_T::size; i++) {",
+            "Faulty Code": "for (int i = 0; i <= CONFIG_T::n_in / res_T::size; i++) {"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "typename data_T::value_type maximum = in_data[0];",
+            "Faulty Code": "typename data_T::value_type maximum = 0;"
+        }
+    ]
+}

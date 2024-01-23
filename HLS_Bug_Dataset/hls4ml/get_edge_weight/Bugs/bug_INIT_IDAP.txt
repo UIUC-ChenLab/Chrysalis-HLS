@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "typename CONFIG_T::edge_weight_t edge_weights_table[]",
+            "Faulty Code": "typename CONFIG_T::edge_weight_t edge_weights_table"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "return edge_weights_table[index];",
+            "Faulty Code": "return edge_weights_table[index++];"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (unsigned iw = 0; iw < table_size; ++iw) {",
+            "Faulty Code": "for (unsigned iw = 0; iw <= table_size; ++iw) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "v += step;",
+            "Faulty Code": "v += 2 * step;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "acc[i_acc] = (typename CONFIG_T::accum_t)biases[i_acc];",
+            "Faulty Code": "acc[i_acc + 1] = (typename CONFIG_T::accum_t)biases[i_acc];"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "acc[i_acc] = (typename CONFIG_T::accum_t)biases[i_acc];",
+            "Faulty Code": "acc[i_acc] = 0;"
+        }
+    ]
+}

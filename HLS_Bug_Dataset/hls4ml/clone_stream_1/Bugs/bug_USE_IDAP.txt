@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "data_T in_data = data.read();",
+            "Faulty Code": "int in_data = data.read();"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "res1.write(out_data1);",
+            "Faulty Code": "res1.write(in_data);"
+        }
+    ]
+}

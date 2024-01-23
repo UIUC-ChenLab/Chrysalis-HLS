@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition variable=data dim=2 complete"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "res[ii] = datareg;",
+            "Faulty Code": "#pragma HLS INTERFACE m_axi port=res offset=slave bundle=gmem0"
+        }
+    ]
+}

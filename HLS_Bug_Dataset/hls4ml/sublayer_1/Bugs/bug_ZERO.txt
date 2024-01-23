@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "Means<current_layer_t, typename current_layer_t::edge_weight_aggr_t> means_accum;",
+            "Faulty Code": "Means<current_layer_t, typename current_layer_t::edge_weight_aggr_t> means_accum = 0;"
+        }
+    ]
+}

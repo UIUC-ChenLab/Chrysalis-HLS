@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "index_t index(distance.range(CONFIG_T::distance_width - 1, 0));",
+            "Faulty Code": "index_t index;"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "typedef ap_uint<CONFIG_T::distance_width> index_t;",
+            "Faulty Code": "typedef ap_int<CONFIG_T::distance_width> index_t;"
+        }
+    ]
+}

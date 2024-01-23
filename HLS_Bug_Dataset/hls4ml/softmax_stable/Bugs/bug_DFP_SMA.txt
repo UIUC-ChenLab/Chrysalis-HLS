@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "#pragma HLS pipeline",
+            "Faulty Code": "#pragma HLS dataflow"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void softmax_stable(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in])",
+            "Faulty Code": "void softmax_stable(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_in]) {\n#pragma HLS INTERFACE bram port=res"
+        }
+    ]
+}

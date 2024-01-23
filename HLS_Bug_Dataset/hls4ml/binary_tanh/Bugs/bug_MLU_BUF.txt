@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::n_in; ii++) {",
+            "Faulty Code": "for (int ii = 0; ii < CONFIG_T::n_in-1; ii++) {"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "res[ii] = (res_T)cache;",
+            "Faulty Code": "res[ii+CONFIG_T::n_in/2] = (res_T)cache;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "compute_weights_aggregates<CONFIG_T>(data_getter, iv, means_local, arrays);",
+            "Faulty Code": "compute_weights_aggregates<CONFIG_T>(data_getter, iv + unroll_factor, means_local, arrays);"
+        }
+    ]
+}

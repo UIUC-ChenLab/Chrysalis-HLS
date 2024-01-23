@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "IDAP",
+            "Original Code": "void copy_data(std::vector<src_T> src, hls::stream<dst_T> &dst) {",
+            "Faulty Code": "#pragma HLS interface mode=ap_fifo port=src\nvoid copy_data(std::vector<src_T> src, hls::stream<dst_T> &dst) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (typename std::vector<src_T>::const_iterator i = in_begin; i != in_end; ++i) {",
+            "Faulty Code": "#pragma HLS unroll factor=8\nfor (typename std::vector<src_T>::const_iterator i = in_begin; i != in_end; ++i) {"
+        }
+    ]
+}

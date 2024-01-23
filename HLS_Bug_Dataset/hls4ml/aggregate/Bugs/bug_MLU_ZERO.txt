@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "if (iv == nvtx)",
+            "Faulty Code": "if (iv >= nvtx)"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "Means<CONFIG_T, typename CONFIG_T::edge_weight_aggr_t> means_local;",
+            "Faulty Code": "Means<CONFIG_T, typename CONFIG_T::edge_weight_aggr_t> means_local = 0;"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "typename std::vector<src_T>::const_iterator in_end = in_begin + SIZE;",
+            "Faulty Code": "typename std::vector<src_T>::const_iterator in_end = in_begin + SIZE + 1;"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (i_pack == dst_T::size) {",
+            "Faulty Code": "if (i_pack == dst_T::size / 2) {"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "for (int j = 0; j < res_T::size; j++) {",
+            "Faulty Code": "for (int j = 0; j <= res_T::size; j++) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i = 0; i < CONFIG_T::n_in / res_T::size; i++) {",
+            "Faulty Code": "for (int i = 0; i <= CONFIG_T::n_in / res_T::size; i++) {"
+        }
+    ]
+}

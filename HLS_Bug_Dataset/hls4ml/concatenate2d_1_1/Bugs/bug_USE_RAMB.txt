@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "out_data[k] = in_data1[k];",
+            "Faulty Code": "out_data[k] = (res_T)(in_data1[k]);"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "#pragma HLS interface m_axi port=data1 offset=slave bundle=gmem"
+        }
+    ]
+}

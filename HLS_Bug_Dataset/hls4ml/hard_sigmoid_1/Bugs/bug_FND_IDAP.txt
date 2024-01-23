@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=out_data factor=3"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "hls::stream<data_T> &data",
+            "Faulty Code": "#pragma HLS INTERFACE mode=s_axilite port=data"
+        }
+    ]
+}

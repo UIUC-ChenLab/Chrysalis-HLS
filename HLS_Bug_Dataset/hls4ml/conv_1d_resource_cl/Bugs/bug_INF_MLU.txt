@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (unsigned i_part = 0; i_part < CONFIG_T::n_partitions; i_part++) {",
+            "Faulty Code": "for (unsigned i_part = 0; ; i_part++) {"
+        },
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (unsigned i_blk = 0; i_blk < block_factor; i_blk++) {",
+            "Faulty Code": "for (unsigned i_blk = 0; i_blk <= block_factor; i_blk++) {"
+        }
+    ]
+}

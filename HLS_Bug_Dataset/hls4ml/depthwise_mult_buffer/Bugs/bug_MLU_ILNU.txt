@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=15"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int ii = 0; ii < CONFIG_T::kernel_size; ii++) {",
+            "Faulty Code": "#pragma HLS UNROLL factor=4\n    for (int ii = 0; ii < CONFIG_T::kernel_size; ii++) {"
+        }
+    ]
+}

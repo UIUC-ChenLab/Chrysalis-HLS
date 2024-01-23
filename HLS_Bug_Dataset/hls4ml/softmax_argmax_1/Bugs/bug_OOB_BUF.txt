@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "data_T in_data = data.read();",
+            "Faulty Code": "data_T in_data = data.read(); // Assuming data_T has less elements than res_T::size"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "for (int i = 1; i < res_T::size; i++) {",
+            "Faulty Code": "for (int i = 1; i < data_T::size; i++) { // Incorrectly using data_T::size instead of res_T::size"
+        }
+    ]
+}

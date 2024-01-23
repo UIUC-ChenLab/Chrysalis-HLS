@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II=1",
+            "Faulty Code": "for (int k = 0; k < input1_T::size; k++) {\n #pragma HLS PIPELINE II=1\n out_data[k] = in_data1[k];\n}"
+        }
+    ]
+}

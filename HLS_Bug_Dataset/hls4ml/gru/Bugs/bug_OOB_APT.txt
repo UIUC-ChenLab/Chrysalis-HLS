@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (w_index >= CONFIG_T::n_in * CONFIG_T::n_out) continue;",
+            "Faulty Code": "if (w_index > CONFIG_T::n_in * CONFIG_T::n_out) continue;"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=acc complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=acc cyclic factor=block_factor"
+        }
+    ]
+}

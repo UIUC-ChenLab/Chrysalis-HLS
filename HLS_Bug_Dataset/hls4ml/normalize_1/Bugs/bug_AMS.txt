@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "AMS",
+            "Original Code": "typename CONFIG_T::scale_t scale[CONFIG_T::n_scale_bias]",
+            "Faulty Code": "#pragma HLS interface port=scale s_axilite"
+        }
+    ]
+}

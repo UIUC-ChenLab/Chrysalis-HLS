@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=weights complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=weights dim=3"
+        },
+        {
+            "Error Type": "AMS",
+            "Original Code": "void pointwise_conv_1d_cl(hls::stream<data_T> &data, hls::stream<res_T> &res,",
+            "Faulty Code": "#pragma HLS INTERFACE port=data mode=s_axilite"
+        }
+    ]
+}

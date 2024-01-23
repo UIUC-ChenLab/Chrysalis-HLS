@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SHFT",
+            "Original Code": "x2 = ((j * x_ratio) >> 16);",
+            "Faulty Code": "x2 = ((j * x_ratio) >> 32);"
+        }
+    ]
+}

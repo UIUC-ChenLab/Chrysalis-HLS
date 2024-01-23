@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=data_array complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=data_array type=block factor=2"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<data_T> &data, hls::stream<res_T> &res",
+            "Faulty Code": "hls::stream<data_T> &data, res_T res[CONFIG_T::height * CONFIG_T::width]"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void compute_depthwise_output_encoded(...)",
+            "Faulty Code": "void compute_depthwise_output_encoded(#pragma HLS INTERFACE port=data_window bram) ..."
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor #pragma HLS pipeline"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "acc[iacc] = (typename CONFIG_T::accum_t)biases[iacc];",
+            "Faulty Code": "acc[iacc] = biases[iacc];"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "res[ires] = cast<data_T, res_T, CONFIG_T>(acc[ires]);",
+            "Faulty Code": "#pragma HLS INTERFACE port=acc bram"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (k == index)",
+            "Faulty Code": "if (k == CONFIG_T::n_out)"
+        },
+        {
+            "Error Type": "IDAP",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS INTERFACE mode=ap_fifo port=mult"
+        }
+    ]
+}

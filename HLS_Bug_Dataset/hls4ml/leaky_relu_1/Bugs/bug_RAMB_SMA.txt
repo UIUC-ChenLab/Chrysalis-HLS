@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "data_T in_data = data.read();",
+            "Faulty Code": "data_T in_data = data.read(i); // Assuming a hypothetical API that allows indexed reads"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "hls::stream<data_T> &data",
+            "Faulty Code": "data_T data[CONFIG_T::n_in / res_T::size]"
+        }
+    ]
+}

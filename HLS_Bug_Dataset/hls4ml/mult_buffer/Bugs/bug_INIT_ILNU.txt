@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "data[id] = data_window[id].read();",
+            "Faulty Code": "typename data_T::value_type tmp; data[id] = tmp;"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor = 2"
+        }
+    ]
+}

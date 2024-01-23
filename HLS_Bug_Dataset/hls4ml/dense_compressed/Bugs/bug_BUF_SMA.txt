@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "auto row = weights[w].row_index;",
+            "Faulty Code": "auto row = weights[w + CONFIG_T::n_out].row_index;"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void dense_compressed(data_T data[CONFIG_T::n_in], res_T res[CONFIG_T::n_out],",
+            "Faulty Code": "#pragma HLS INTERFACE bram port=res"
+        }
+    ]
+}

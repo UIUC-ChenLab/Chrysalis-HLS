@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "int idx[3] = {0}, idx_t[3] = {0};",
+            "Faulty Code": "int idx[3], idx_t[3];"
+        },
+        {
+            "Error Type": "DFP",
+            "Original Code": "void transpose_3d(data_T data[CONFIG_T::depth * CONFIG_T::height * CONFIG_T::width],...",
+            "Faulty Code": "void transpose_3d(data_T data[CONFIG_T::depth * CONFIG_T::height * CONFIG_T::width],...\n#pragma HLS dataflow"
+        }
+    ]
+}

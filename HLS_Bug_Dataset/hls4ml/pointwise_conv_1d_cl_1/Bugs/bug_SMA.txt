@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "SMA",
+            "Original Code": "void pointwise_conv_1d_cl(hls::stream<data_T> &data, hls::stream<res_T> &res...",
+            "Faulty Code": "#pragma HLS interface bram port=data\nvoid pointwise_conv_1d_cl(hls::stream<data_T> &data, hls::stream<res_T> &res..."
+        }
+    ]
+}

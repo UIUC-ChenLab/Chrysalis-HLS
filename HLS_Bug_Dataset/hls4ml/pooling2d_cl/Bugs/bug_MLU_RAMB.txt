@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int kk = 0; kk < CONFIG_T::stride_height; kk++) {",
+            "Faulty Code": "for (int kk = 0; kk <= CONFIG_T::stride_height; kk++) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "pool[kk * CONFIG_T::stride_width + ll] = pad_val<data_T, CONFIG_T::pool_op>();",
+            "Faulty Code": "pool[(kk+1) * CONFIG_T::stride_width + ll] = pad_val<data_T, CONFIG_T::pool_op>();"
+        }
+    ]
+}

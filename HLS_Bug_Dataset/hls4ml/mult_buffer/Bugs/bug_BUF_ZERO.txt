@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "data[id] = data_window[id].read();",
+            "Faulty Code": "data[id] = data_window[id + CONFIG_T::kernel_size * CONFIG_T::n_chan].read();"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "if (outputs_ready == (res_T::size / CONFIG_T::n_filt) - 1) {",
+            "Faulty Code": "outputs_ready = 0;"
+        }
+    ]
+}

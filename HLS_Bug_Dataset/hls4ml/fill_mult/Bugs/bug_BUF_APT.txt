@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "if (k == index)",
+            "Faulty Code": "if (k == index%CONFIG_T::n_out/2)"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS array_partition variable=mult type=cyclic factor=2"
+        }
+    ]
+}

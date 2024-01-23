@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "*(res++) = (res_T) * (data++);",
+            "Faulty Code": "for (int j = 0; j < CONFIG_T::in_width - 1; j++) { *(res++) = (res_T) * (data++); }"
+        },
+        {
+            "Error Type": "APT",
+            "Original Code": "void zeropad2d_cf(data_T data[CONFIG_T::n_chan * CONFIG_T::in_height * CONFIG_T::in_width],",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=data"
+        }
+    ]
+}

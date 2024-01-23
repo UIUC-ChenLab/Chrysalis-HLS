@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "MLU",
+            "Original Code": "for (int i_iw = 0; i_iw < filt_width; i_iw++) {",
+            "Faulty Code": "for (int i_iw = 0; i_iw <= filt_width; i_iw++) {"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "for (unsigned i_ic = 0; i_ic < CONFIG_T::n_filt; i_ic++) {",
+            "Faulty Code": "for (unsigned i_ic = 0; i_ic < CONFIG_T::n_filt; i_ic+=2) {"
+        }
+    ]
+}

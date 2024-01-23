@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int i_mult = 0; i_mult < CONFIG_T::n_in; i_mult++) {",
+            "Faulty Code": "for (int i_mult = 0; i_mult <= CONFIG_T::n_in; i_mult++) {"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS UNROLL factor=4"
+        }
+    ]
+}

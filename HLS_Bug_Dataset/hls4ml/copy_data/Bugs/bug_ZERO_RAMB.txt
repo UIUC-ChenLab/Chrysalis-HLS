@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "ZERO",
+            "Original Code": "dst_T dst_pack;",
+            "Faulty Code": "dst_T dst_pack = 0;"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "dst.write(dst_pack);",
+            "Faulty Code": "dst.write(dst_pack[i_pack]);"
+        }
+    ]
+}

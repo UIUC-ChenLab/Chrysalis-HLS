@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "data_T in_data = data.read();",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=in_data"
+        },
+        {
+            "Error Type": "SMA",
+            "Original Code": "void binary_tanh(hls::stream<data_T> &data, hls::stream<res_T> &res) {",
+            "Faulty Code": "#pragma HLS interface port=data bram"
+        }
+    ]
+}

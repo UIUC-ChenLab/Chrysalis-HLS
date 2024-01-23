@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "for (int ires = 0; ires < CONFIG_T::n_in; ires++) { #pragma HLS PIPELINE II=CONFIG_T::reuse_factor"
+        }
+    ]
+}

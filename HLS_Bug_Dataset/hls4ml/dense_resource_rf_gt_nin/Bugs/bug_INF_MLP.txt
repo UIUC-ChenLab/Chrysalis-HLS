@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INF",
+            "Original Code": "for (int ir = 0; ir < rufactor; ir++) {",
+            "Faulty Code": "for (int ir = 0; ir <= rufactor; ir++) {"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II=1 rewind",
+            "Faulty Code": "#pragma HLS PIPELINE II=1"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "BUF",
+            "Original Code": "res[ii] = alpha * datareg;",
+            "Faulty Code": "res[ii] = alpha * data[ii];"
+        },
+        {
+            "Error Type": "USE",
+            "Original Code": "data_T datareg;",
+            "Faulty Code": "int datareg;"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "res[ii] = (data1[ii] + data2[ii]) / (res_T)2;",
+            "Faulty Code": "res_T temp; res[ii] = (data1[ii] + data2[ii] + temp) / (res_T)2;"
+        }
+    ]
+}

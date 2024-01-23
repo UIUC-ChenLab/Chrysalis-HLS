@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "USE",
+            "Original Code": "if (CONFIG_T::strategy == nnet::latency && data_T::size / CONFIG_T::n_chan == 1) {",
+            "Faulty Code": "if (CONFIG_T::strategy == nnet::latency && data_T::size == 1) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pixel_idx complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=pixel_idx cyclic factor=3"
+        }
+    ]
+}

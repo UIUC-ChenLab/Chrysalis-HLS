@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "res_pack[i] = embeddings[in_data[j] * CONFIG_T::n_out + i];",
+            "Faulty Code": "res_pack[i] = embeddings[in_data[j] * CONFIG_T::n_out + CONFIG_T::n_out];"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor",
+            "Faulty Code": "#pragma HLS PIPELINE II=CONFIG_T::reuse_factor\n        #pragma HLS PIPELINE II=CONFIG_T::reuse_factor"
+        }
+    ]
+}

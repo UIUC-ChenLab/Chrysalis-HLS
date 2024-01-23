@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "if (in_data[j] > threshold_hi[norm_index]) {",
+            "Faulty Code": "if (in_data[j] > threshold_hi[i * data_T::size + j]) {"
+        },
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS UNROLL",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=out_data factor=3 complete"
+        }
+    ]
+}

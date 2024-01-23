@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "DID",
+            "Original Code": "initialize_edge_weights_table(typename CONFIG_T::edge_weight_t edge_weights_table[]) {",
+            "Faulty Code": "#pragma HLS array_partition variable=edge_weights_table dim=2 complete"
+        },
+        {
+            "Error Type": "MLP",
+            "Original Code": "for (unsigned iw = 0; iw < table_size; ++iw) {",
+            "Faulty Code": "#pragma HLS pipeline"
+        }
+    ]
+}

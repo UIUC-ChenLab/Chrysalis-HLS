@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "FND",
+            "Original Code": "#pragma HLS ARRAY_PARTITION variable=pool_table_height complete",
+            "Faulty Code": "#pragma HLS ARRAY_PARTITION variable=pool_table_height cyclic factor=3"
+        },
+        {
+            "Error Type": "RAMB",
+            "Original Code": "data_window[c * CONFIG_T::pool_height * CONFIG_T::pool_width + f].read()",
+            "Faulty Code": "data_window[(c + 1) % CONFIG_T::n_filt * CONFIG_T::pool_height * CONFIG_T::pool_width + f].read()"
+        }
+    ]
+}

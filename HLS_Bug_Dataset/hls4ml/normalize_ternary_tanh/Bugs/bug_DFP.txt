@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "DFP",
+            "Original Code": "if (datareg > threshold_hi[norm_index])",
+            "Faulty Code": "#pragma HLS dataflow \n if (datareg > threshold_hi[norm_index])"
+        }
+    ]
+}

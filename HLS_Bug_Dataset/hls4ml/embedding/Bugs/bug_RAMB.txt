@@ -1,0 +1,10 @@
+{
+    "Error Size": 1,
+    "Error Specification": [
+        {
+            "Error Type": "RAMB",
+            "Original Code": "res[j * CONFIG_T::n_out + i] = embeddings[data[j] * CONFIG_T::n_out + i];",
+            "Faulty Code": "#pragma HLS interface m_axi port=embeddings data[j * CONFIG_T::n_out + i] = embeddings[data[j] * CONFIG_T::n_out + i];"
+        }
+    ]
+}

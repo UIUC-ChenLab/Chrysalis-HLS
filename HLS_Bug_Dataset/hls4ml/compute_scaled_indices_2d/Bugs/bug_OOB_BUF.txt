@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "OOB",
+            "Original Code": "pixel_idx[p] = CONFIG_T::pixels[sh_idx * CONFIG_T::min_width + sw_idx];",
+            "Faulty Code": "pixel_idx[p] = CONFIG_T::pixels[sh_idx * CONFIG_T::filt_width + sw_idx];"
+        },
+        {
+            "Error Type": "BUF",
+            "Original Code": "unsigned wp_idx = w_idx * (data_T::size / CONFIG_T::n_chan);",
+            "Faulty Code": "unsigned wp_idx = w_idx * (data_T::size / (CONFIG_T::n_chan * 2));"
+        }
+    ]
+}

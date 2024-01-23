@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "INIT",
+            "Original Code": "unsigned outputs_ready = 0;",
+            "Faulty Code": "unsigned outputs_ready;"
+        },
+        {
+            "Error Type": "ZERO",
+            "Original Code": "res_T res_pack;",
+            "Faulty Code": "res_T res_pack = 0;"
+        }
+    ]
+}

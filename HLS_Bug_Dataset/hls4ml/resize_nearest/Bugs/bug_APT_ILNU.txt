@@ -1,0 +1,15 @@
+{
+    "Error Size": 2,
+    "Error Specification": [
+        {
+            "Error Type": "APT",
+            "Original Code": "#pragma HLS PIPELINE",
+            "Faulty Code": "#pragma HLS array_partition type=complete variable=image"
+        },
+        {
+            "Error Type": "ILNU",
+            "Original Code": "for (int k = 0; k < CONFIG_T::n_chan; k++) {",
+            "Faulty Code": "#pragma HLS unroll factor=4"
+        }
+    ]
+}
